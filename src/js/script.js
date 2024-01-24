@@ -1,40 +1,32 @@
-console.log("It works!");
+/**
+ * Updates the copyright information in the specified HTML element with the current year.
+ * The copyright format is "&copy; 2024-currentYear Karl Horning".
+ */
+(() => {
+    /**
+     * @function updateCopyrightInfo
+     * @description Updates the copyright information dynamically based on the current year.
+     */
+    const updateCopyrightInfo = () => {
+        // Create a new Date object
+        const currentDate = new Date();
 
-// const counter = document.getElementById("counter");
-// counter.innerText = "New text!";
+        // Get the current year
+        const currentYear = currentDate.getFullYear();
 
-const showAlert = () => {
-    const testButton = document.getElementById("test-button");
-    testButton.onclick = () => alert("Test!");
-};
+        // Copyright text
+        const copyrightText = `&copy; 2024-${currentYear} Karl Horning`;
 
-// Set the date we're counting down to
-const countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
+        // Update copyright info only if the element is found
+        const copyrightElement = document.getElementById("copyright-info");
 
-// Update the count down every 1 second
-const interval = setInterval(function () {
-    // Get today's date and time
-    const now = new Date().getTime();
+        if (copyrightElement) {
+            copyrightElement.innerHTML = copyrightText;
+        } else {
+            console.error("Element with ID 'copyright-info' not found.");
+        }
+    };
 
-    // Find the distance between now and the count down date
-    const distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="demo"
-    document.getElementById(
-        "counter"
-    ).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(interval);
-        document.getElementById("counter").innerHTML = "EXPIRED";
-    }
-}, 1000);
+    // Call the function to update copyright info
+    updateCopyrightInfo();
+})();
