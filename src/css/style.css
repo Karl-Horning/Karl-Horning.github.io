@@ -1,4 +1,59 @@
+/* Custom styles */
+:root {
+    --main-red: #da4453;
+    --dark-red: #6d222a;
+    --site-black: #2d292d;
+    --site-white: #fffef5;
+    --font-size: 16px;
+}
+
+/* Layout */
 body,
 html {
     height: 100%;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+/* Fonts */
+body {
+    color: var(--site-black);
+    font-family: "Roboto Regular", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--site-black);
+    font-family: "Retroma Vibes Regular", sans-serif;
+}
+
+.btn {
+    color: var(--main-red);
+    font-family: "Permanent Marker Regular", sans-serif;
+}
+
+.btn:hover {
+    color: var(--dark-red);
+}
+
+/* Background colours */
+.red-bg {
+    background-color: var(--main-red);
+}
+
+.black-bg {
+    background-color: var(--site-black);
+}
+
+.white-bg {
+    background-color: var(--site-white);
 }
