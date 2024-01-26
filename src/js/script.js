@@ -15,7 +15,11 @@
         const currentYear = currentDate.getFullYear();
 
         // Copyright text
-        const copyrightText = `&copy; 2024-${currentYear} Karl Horning`;
+        let copyrightText = `&copy; 2024-${currentYear} Karl Horning`;
+
+        if (currentYear === 2024) {
+            copyrightText = `&copy; ${currentYear} Karl Horning`;
+        }
 
         // Update copyright info only if the element is found
         const copyrightElement = document.getElementById("copyright-info");
