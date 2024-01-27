@@ -23,6 +23,12 @@ html {
     text-align: left !important;
 }
 
+.form-control {
+    background-color: var(--dark-red);
+    border: 3px solid white;
+    border-radius: 3px;
+}
+
 /* Fonts */
 body {
     color: var(--site-black);
@@ -43,6 +49,11 @@ h3 {
 
 .btn:hover {
     color: var(--dark-red);
+}
+
+label {
+    font-family: "Permanent Marker Regular", sans-serif;
+    font-size: 1.5rem;
 }
 
 /* Background colours */
