@@ -87,99 +87,373 @@
 
                     <div class="row">
                         <div class="col text-center">
-                            <h3 class="display-3 pb-5">Skills</h3>
+                            <h3 class="display-4 pb-5">Skills</h3>
+                            <p class="pb-5">
+                                Below are the skills that I use regularly and
+                                the frequency of use.
+                            </p>
                         </div>
                     </div>
-                    <div class="row pb-5">
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/Git_icon.svg"
-                                alt="Git logo"
-                            />
+
+                    <div id="skills" class="pb-5 mb-5">
+                        <!-- Markdown -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/Markdown-mark.svg"
+                                    alt="Markdown logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="Markdown usage level"
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-success"
+                                        style="width: 100%"
+                                    >
+                                        Daily
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/GraphQL_Logo.svg"
-                                alt="GraphQL logo"
-                            />
+
+                        <!-- Git -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/Git_icon.svg"
+                                    alt="Git logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="Git usage level"
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-success"
+                                        style="width: 100%"
+                                    >
+                                        Daily
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/Node.js_logo.svg"
-                                alt="Node.js logo"
-                            />
+
+                        <!-- GraphQL -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/GraphQL_Logo.svg"
+                                    alt="GraphQL logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="GraphQL usage level"
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-success"
+                                        style="width: 100%"
+                                    >
+                                        Daily
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/Npm-logo.svg"
-                                alt="NPM logo"
-                            />
+
+                        <!-- Node.js -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/Node.js_logo.svg"
+                                    alt="Node.js logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="Node.js usage level"
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-success"
+                                        style="width: 100%"
+                                    >
+                                        Daily
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/Postgresql_elephant.svg"
-                                alt="PostgreSQL logo"
-                            />
+
+                        <!-- NPM -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/Npm-logo.svg"
+                                    alt="NPM logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="NPM usage level"
+                                    aria-valuenow="80"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-info"
+                                        style="width: 80%"
+                                    >
+                                        Biweekly
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/Electron_Software_Framework_Logo.svg"
-                                alt="Electron logo"
-                            />
+
+                        <!-- PostgreSQL -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/Postgresql_elephant.svg"
+                                    alt="PostgreSQL logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="PostgreSQL usage level"
+                                    aria-valuenow="80"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-info"
+                                        style="width: 80%"
+                                    >
+                                        Biweekly
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/Markdown-mark.svg"
-                                alt="Markdown logo"
-                            />
+
+                        <!-- Bootstrap -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/Bootstrap_logo.svg"
+                                    alt="Bootstrap logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="Bootstrap usage level"
+                                    aria-valuenow="40"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-warning"
+                                        style="width: 40%"
+                                    >
+                                        Weekly
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/Bootstrap_logo.svg"
-                                alt="Bootstrap logo"
-                            />
+
+                        <!-- HTML5 -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/HTML5_Badge.svg"
+                                    alt="HTML5 logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="HTML5 usage level"
+                                    aria-valuenow="40"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-warning"
+                                        style="width: 40%"
+                                    >
+                                        Weekly
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/CSS3_logo.svg"
-                                alt="CSS3 logo"
-                            />
+
+                        <!-- CSS3 -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/CSS3_logo.svg"
+                                    alt="CSS3 logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="CSS3 usage level"
+                                    aria-valuenow="40"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-warning"
+                                        style="width: 40%"
+                                    >
+                                        Weekly
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="col text-center d-flex flex-column justify-content-center"
-                        >
-                            <img
-                                class="img-fluid pb-3"
-                                src="./src/img/icons/HTML5_Badge.svg"
-                                alt="HTML5 logo"
-                            />
+
+                        <!-- Electron -->
+                        <div class="row pb-3">
+                            <!-- Icon -->
+                            <div
+                                class="col-md-1 col-2 text-center d-flex flex-column justify-content-center"
+                            >
+                                <img
+                                    class="img-fluid"
+                                    src="./src/img/icons/Electron_Software_Framework_Logo.svg"
+                                    alt="Electron logo"
+                                />
+                            </div>
+
+                            <!-- Frequency of use -->
+                            <div
+                                class="col-md-11 col-10 text-center d-flex flex-column justify-content-center"
+                            >
+                                <div
+                                    class="progress"
+                                    role="progressbar"
+                                    aria-label="Electron usage level"
+                                    aria-valuenow="20"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="height: 30px"
+                                >
+                                    <div
+                                        class="progress-bar bg-danger"
+                                        style="width: 20%"
+                                    >
+                                        Monthly
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
