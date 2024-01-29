@@ -17,6 +17,14 @@ main section {
     min-height: 100vh;
 }
 
+img {
+    min-height: 86px;
+}
+
+#hero-img {
+    transform: rotate(-2deg);
+}
+
 .text-left {
     text-align: left !important;
 }
@@ -42,7 +50,9 @@ h3 {
 
 #into-text,
 .display-2,
-.display-3 {
+.display-3,
+.display-4,
+.display-5 {
     font-weight: bold !important;
 }
 
@@ -86,15 +96,4 @@ label {
     box-shadow: 0px -10px 26px 5px rgba(0, 0, 0, 0.76);
     -webkit-box-shadow: 0px -10px 26px 5px rgba(0, 0, 0, 0.76);
     -moz-box-shadow: 0px -10px 26px 5px rgba(0, 0, 0, 0.76);
-}
-
-#hero-img {
-    transform: rotate(-2deg);
-}
-
-.svg-image {
-    fill: var(--white);
-    height: 80px;
-    padding: 5px;
-    width: 80px;
 }
