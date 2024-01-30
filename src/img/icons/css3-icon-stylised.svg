@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="Artboard1" x="0" y="0" width="800" height="800" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="Artboard11" serif:id="Artboard1" x="0" y="0" width="800" height="800"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g id="CSS3" transform="matrix(1,0,0,1,-560,-140)">
+            <rect x="0" y="0" width="1920" height="1080" style="fill:none;"/>
+            <g transform="matrix(1.03834,0,0,1.03834,-36.8084,-20.7047)">
+                <circle cx="960" cy="540" r="385.23" style="fill:rgb(218,68,83);"/>
+            </g>
+            <g id="CSS3-B-W-Icon" serif:id="CSS3 B&amp;W Icon" transform="matrix(1,0,0,1,704,284)">
+                <path d="M71.357,460.819L30.272,0L481.728,0L440.599,460.746L255.724,512L71.357,460.819Z" style="fill:rgb(45,41,45);fill-rule:nonzero;"/>
+                <path d="M405.388,431.408L440.536,37.678L256,37.678L256,472.824L405.388,431.408Z" style="fill:rgb(96,86,96);fill-rule:nonzero;"/>
+                <path d="M124.46,208.59L129.525,265.107L256,265.107L256,208.59L124.46,208.59ZM119.419,150.715L256,150.715L256,94.197L114.281,94.197L119.419,150.715ZM256,355.372L255.752,355.438L192.808,338.442L188.785,293.366L132.049,293.366L139.968,382.107L255.74,414.247L256,414.174L256,355.372Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+                <path d="M255.805,208.59L255.805,265.107L325.4,265.107L318.84,338.406L255.805,355.419L255.805,414.219L371.669,382.107L372.519,372.558L385.799,223.766L387.179,208.59L397.382,94.197L255.805,94.197L255.805,150.715L335.444,150.715L330.3,208.59L255.805,208.59Z" style="fill:white;fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
