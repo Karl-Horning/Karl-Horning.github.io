@@ -118,6 +118,14 @@ a:hover {
     color: var(--main-red);
 }
 
+.img-link {
+    box-shadow: none;
+}
+
+.img-link:hover {
+    box-shadow: none;
+}
+
 /* Selection styles */
 /* Selection styles for Safari and other browsers */
 ::selection {
