@@ -74,6 +74,10 @@ label {
     font-weight: 500;
 }
 
+.white-bg .btn-light {
+    color: var(--site-white);
+}
+
 /* Background colours */
 .red-bg {
     background-color: var(--main-red);
@@ -85,6 +89,14 @@ label {
 
 .white-bg {
     background-color: var(--site-white);
+}
+
+.white-bg .btn-light {
+    background-color: var(--main-red);
+}
+
+.white-bg .btn-light:hover {
+    background-color: var(--dark-red);
 }
 
 /* Misc */
