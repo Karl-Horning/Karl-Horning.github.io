@@ -1,13 +1,13 @@
-/**
- * Updates the copyright information in the specified HTML element with the current year.
- * The copyright format is "&copy; 2024-currentYear Karl Horning".
- */
 (() => {
     /**
-     * @function updateCopyrightInfo
+     * Updates the copyright information in the specified HTML element with the current year.
+     * The copyright format is "&copy; 2024-currentYear Karl Horning".
+     * @function
      * @description Updates the copyright information dynamically based on the current year.
      */
     const updateCopyrightInfo = () => {
+        const siteCreatedYear = 2024;
+
         // Create a new Date object
         const currentDate = new Date();
 
@@ -15,9 +15,10 @@
         const currentYear = currentDate.getFullYear();
 
         // Copyright text
-        let copyrightText = `&copy; 2024-${currentYear} Karl Horning`;
+        let copyrightText = `&copy; ${siteCreatedYear}-${currentYear} Karl Horning`;
 
-        if (currentYear === 2024) {
+        // Display only the current year if it's the site's creation year
+        if (currentYear === siteCreatedYear) {
             copyrightText = `&copy; ${currentYear} Karl Horning`;
         }
 
@@ -49,27 +50,34 @@
     };
 
     /**
-     * Check if an element is in the viewport.
+     * Checks if an element is in the viewport.
      *
      * @param {HTMLElement} element - The HTML element to check.
      * @returns {boolean} - True if the element is in the viewport, false otherwise.
      */
-    const isInViewport = (element) => {
-        const rect = element.getBoundingClientRect();
+    const isElementInViewport = (el) => {
+        const rect = el.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <=
+            (rect.top <= 0 && rect.bottom >= 0) ||
+            (rect.bottom >=
                 (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <=
-                (window.innerWidth || document.documentElement.clientWidth)
+                rect.top <=
+                    (window.innerHeight ||
+                        document.documentElement.clientHeight)) ||
+            (rect.top >= 0 &&
+                rect.bottom <=
+                    (window.innerHeight ||
+                        document.documentElement.clientHeight))
         );
     };
 
     /**
-     * Handle the scroll event and update styles for elements with the "progress" class to increase the progress bar width.
+     * Handles the scroll event and updates styles for elements with the:
+     * - "show-on-scroll" class (used to make the images grow and appear)
+     * - "progress" class (used to increase the progress bar width)
      */
     const handleScroll = () => {
+        // Show/hide elements with the "show-on-scroll" class based on visibility in the viewport
         document.querySelectorAll(".show-on-scroll").forEach((element) => {
             if (isElementInViewport(element)) {
                 element.classList.add("is-visible");
@@ -78,10 +86,11 @@
             }
         });
 
+        // Update progress bars based on visibility in the viewport
         document.querySelectorAll(".progress").forEach((element) => {
             const progressBar = element.lastElementChild;
 
-            if (isInViewport(element)) {
+            if (isElementInViewport(element)) {
                 // Update width and add "in-viewport" class if in the viewport
                 progressBar.style.width = `${element.ariaValueNow}%`;
                 element.classList.add("in-viewport");
@@ -99,31 +108,19 @@
     // Call the function to update copyright info
     updateCopyrightInfo();
 
-    const isElementInViewport = (el) => {
-        const rect = el.getBoundingClientRect();
-        return (
-            (rect.top <= 0 && rect.bottom >= 0) ||
-            (rect.bottom >=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.top <=
-                    (window.innerHeight ||
-                        document.documentElement.clientHeight)) ||
-            (rect.top >= 0 &&
-                rect.bottom <=
-                    (window.innerHeight ||
-                        document.documentElement.clientHeight))
-        );
-    };
-
     // Smooth scroll function
     const headerBtn = document.getElementById("header-btn");
     const contactForm = document.getElementById("contact");
 
+    /**
+     * Scrolls to the contact form with smooth behavior when the header button is clicked
+     */
     const scrollToForm = () => {
         contactForm.scrollIntoView({ behavior: "smooth" }); // Top
     };
 
     headerBtn.addEventListener("click", scrollToForm);
 
+    // Initial invocation of handleScroll to apply styles based on the initial scroll position
     handleScroll();
 })();
