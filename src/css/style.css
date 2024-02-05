@@ -37,6 +37,7 @@ main section {
 
 .white-border {
     border: 5px solid var(--site-white);
+    border-radius: 15px;
 }
 
 /* Fonts */
