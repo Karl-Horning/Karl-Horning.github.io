@@ -18,7 +18,7 @@ main section {
 }
 
 #hero-img {
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) scale(0.8);
 }
 
 .text-left {
@@ -78,6 +78,13 @@ label {
     color: var(--site-white);
 }
 
+textarea:not(:focus):not(:placeholder-shown),
+input:not(:focus):not(:placeholder-shown),
+input::placeholder,
+textarea::placeholder {
+    color: var(--site-white);
+}
+
 /* Background colours */
 .red-bg {
     background-color: var(--main-red);
@@ -104,19 +111,19 @@ label {
 }
 
 .bg-git {
-    background-color: #F05133 !important;
+    background-color: #f05133 !important;
 }
 
 .bg-graphql {
-    background-color: #E535AB !important;
+    background-color: #e535ab !important;
 }
 
 .bg-node {
-    background-color: #689F63 !important;
+    background-color: #689f63 !important;
 }
 
 .bg-npm {
-    background-color: #CB3837 !important;
+    background-color: #cb3837 !important;
 }
 
 .bg-postgresql {
@@ -124,27 +131,20 @@ label {
 }
 
 .bg-bootstrap {
-    background-color: #9013FE !important;
+    background-color: #9013fe !important;
 }
 
 .bg-html {
-    background-color: #E34F26 !important;
+    background-color: #e34f26 !important;
 }
 
 .bg-css {
-    background-color: #264DE4 !important;
+    background-color: #264de4 !important;
 }
 
 .bg-electron {
     background-color: #00d5ff !important;
 }
-
-/* Misc */
-/* #footer-bg {
-    box-shadow: 0px -10px 26px 5px rgba(0, 0, 0, 0.76);
-    -webkit-box-shadow: 0px -10px 26px 5px rgba(0, 0, 0, 0.76);
-    -moz-box-shadow: 0px -10px 26px 5px rgba(0, 0, 0, 0.76);
-} */
 
 /* Link styles */
 a {
@@ -183,4 +183,22 @@ a:hover {
 ::selection {
     background: var(--dark-red);
     color: var(--site-white);
+}
+
+/* Animation styles */
+.show-on-scroll {
+    opacity: 0;
+    transform: scale(0.8); /* Initial scale, you can adjust this value */
+    -webkit-transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+    transition-delay: 0.25s; /* Add a 0.25s delay */
+}
+
+.show-on-scroll.is-visible {
+    opacity: 1;
+    transform: scale(1); /* Final scale when visible */
+}
+
+#hero-img.show-on-scroll.is-visible {
+    transform: rotate(-2deg) scale(1);
 }
