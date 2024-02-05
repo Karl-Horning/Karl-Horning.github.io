@@ -99,6 +99,46 @@ label {
     background-color: var(--dark-red);
 }
 
+.bg-markdown {
+    background-color: var(--site-black) !important;
+}
+
+.bg-git {
+    background-color: #F05133 !important;
+}
+
+.bg-graphql {
+    background-color: #E535AB !important;
+}
+
+.bg-node {
+    background-color: #689F63 !important;
+}
+
+.bg-npm {
+    background-color: #CB3837 !important;
+}
+
+.bg-postgresql {
+    background-color: #336791 !important;
+}
+
+.bg-bootstrap {
+    background-color: #9013FE !important;
+}
+
+.bg-html {
+    background-color: #E34F26 !important;
+}
+
+.bg-css {
+    background-color: #264DE4 !important;
+}
+
+.bg-electron {
+    background-color: #00d5ff !important;
+}
+
 /* Misc */
 /* #footer-bg {
     box-shadow: 0px -10px 26px 5px rgba(0, 0, 0, 0.76);
