@@ -31,6 +31,63 @@
         }
     };
 
+    /**
+     * Debounce function to limit the rate at which a function is called.
+     *
+     * @param {Function} func - The function to be debounced.
+     * @param {number} delay - The delay in milliseconds.
+     * @returns {Function} - The debounced function.
+     */
+    const debounce = (func, delay) => {
+        let timeoutId;
+        return (...args) => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                func(...args);
+            }, delay);
+        };
+    };
+
+    /**
+     * Check if an element is in the viewport.
+     *
+     * @param {HTMLElement} element - The HTML element to check.
+     * @returns {boolean} - True if the element is in the viewport, false otherwise.
+     */
+    const isInViewport = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+                (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    /**
+     * Handle the scroll event and update styles for elements with the "progress" class to increase the progress bar width.
+     */
+    const handleScroll = () => {
+        document.querySelectorAll(".progress").forEach((element) => {
+            const progressBar = element.lastElementChild;
+
+            if (isInViewport(element)) {
+                // Update width and add "in-viewport" class if in the viewport
+                progressBar.style.width = `${element.ariaValueNow}%`;
+                element.classList.add("in-viewport");
+            } else {
+                // Set width to 0 and remove "in-viewport" class if not in the viewport
+                progressBar.style.width = 0;
+                element.classList.remove("in-viewport");
+            }
+        });
+    };
+
+    // Debounced scroll event listener with a 10ms delay
+    document.addEventListener("scroll", debounce(handleScroll, 10));
+
     // Call the function to update copyright info
     updateCopyrightInfo();
 })();
