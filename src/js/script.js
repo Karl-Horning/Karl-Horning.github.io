@@ -72,7 +72,7 @@
     };
 
     /**
-     * Handles the scroll event and updates styles for elements with the:
+     * Handles the scroll event and updates styles for elements with the specified classes:
      * - "show-on-scroll" class (used to make the images grow and appear)
      * - "progress" class (used to increase the progress bar width)
      */
@@ -113,7 +113,7 @@
     const contactForm = document.getElementById("contact");
 
     /**
-     * Scrolls to the contact form with smooth behavior when the header button is clicked
+     * Scrolls to the contact form with smooth behavior when the header button is clicked.
      */
     const scrollToForm = () => {
         contactForm.scrollIntoView({ behavior: "smooth" }); // Top
