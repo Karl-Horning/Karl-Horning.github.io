@@ -1,5 +1,6 @@
 /* Custom styles */
 :root {
+    /* Color variables */
     --main-red: #da4453;
     --dark-red: #6d222a;
     --site-black: #2d292d;
@@ -18,14 +19,17 @@ main section {
 }
 
 #hero-img {
+    /* Initial rotation and scale for hero image */
     transform: rotate(-2deg) scale(0.8);
 }
 
 .text-left {
+    /* Force text alignment to left */
     text-align: left !important;
 }
 
 .form-control {
+    /* Styling for form controls */
     background-color: var(--dark-red);
     border: 3px solid white;
     border-radius: 3px;
@@ -49,6 +53,7 @@ h3 {
 .display-3,
 .display-4,
 .display-5 {
+    /* Font weight for specific elements */
     font-weight: 900 !important;
 }
 
@@ -57,24 +62,29 @@ h3 {
 }
 
 .btn {
+    /* Styling for buttons */
     color: var(--main-red);
     font-family: "Permanent Marker Regular", sans-serif;
 }
 
 .btn:hover {
+    /* Button hover effect */
     color: var(--dark-red);
 }
 
 label {
+    /* Styling for labels */
     font-family: "Permanent Marker Regular", sans-serif;
     font-size: 1.5rem;
 }
 
 .lead {
+    /* Font weight for lead text */
     font-weight: 500;
 }
 
 .white-bg .btn-light {
+    /* Styling for buttons on white background */
     color: var(--site-white);
 }
 
@@ -82,6 +92,7 @@ textarea:not(:focus):not(:placeholder-shown),
 input:not(:focus):not(:placeholder-shown),
 input::placeholder,
 textarea::placeholder {
+    /* Styling for inactive input and textarea text */
     color: var(--site-white);
 }
 
@@ -148,6 +159,7 @@ textarea::placeholder {
 
 /* Link styles */
 a {
+    /* General link styling */
     box-shadow: inset 0 -0.5em var(--main-red);
     color: var(--site-black);
     font-weight: bold;
@@ -156,25 +168,30 @@ a {
 }
 
 a:hover {
+    /* Link hover effect */
     box-shadow: inset 0 -1.5em var(--main-red);
     color: var(--site-white);
 }
 
 .red-bg a {
+    /* Link styling on red background */
     box-shadow: inset 0 -0.5em var(--site-black);
     color: var(--site-white);
 }
 
 .red-bg a:hover {
+    /* Link hover effect on red background */
     box-shadow: inset 0 -1.5em var(--site-black);
     color: var(--main-red);
 }
 
 .img-link {
+    /* Styling for image links */
     box-shadow: none;
 }
 
 .img-link:hover {
+    /* Image link hover effect */
     box-shadow: none;
 }
 
@@ -187,18 +204,21 @@ a:hover {
 
 /* Animation styles */
 .show-on-scroll {
+    /* Initial opacity and scale for animation */
     opacity: 0;
-    transform: scale(0.8); /* Initial scale, you can adjust this value */
+    transform: scale(0.8);
     -webkit-transition: opacity 0.5s ease-out, transform 0.3s ease-out;
     transition: opacity 0.5s ease-out, transform 0.3s ease-out;
     transition-delay: 0.25s; /* Add a 0.25s delay */
 }
 
 .show-on-scroll.is-visible {
+    /* Final opacity and scale for animation when visible */
     opacity: 1;
-    transform: scale(1); /* Final scale when visible */
+    transform: scale(1);
 }
 
 #hero-img.show-on-scroll.is-visible {
+    /* Additional transformation for hero image when visible */
     transform: rotate(-2deg) scale(1);
 }
