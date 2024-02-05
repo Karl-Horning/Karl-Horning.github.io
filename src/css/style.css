@@ -35,6 +35,10 @@ main section {
     border-radius: 3px;
 }
 
+.white-border {
+    border: 5px solid var(--site-white);
+}
+
 /* Fonts */
 body {
     color: var(--site-black);
@@ -193,6 +197,21 @@ a:hover {
 .img-link:hover {
     /* Image link hover effect */
     box-shadow: none;
+}
+
+a img {
+    /* Skills icons styles */
+    border: none;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0, 1, 0.3, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-origin: center center;
+}
+
+a img:hover {
+    /* Skills icons hover effects */
+    transform: scale(1.2) rotate(360deg);
 }
 
 /* Selection styles */
