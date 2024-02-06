@@ -50,7 +50,7 @@ h1,
 h2,
 h3 {
     color: var(--site-black);
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins Black", sans-serif;
 }
 
 #into-text,
@@ -60,6 +60,7 @@ h3 {
 .display-5 {
     /* Font weight for specific elements */
     font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased; 
 }
 
 .display-6 {
