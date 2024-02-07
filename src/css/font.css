@@ -4,6 +4,7 @@
         url("../fonts/roboto-medium-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
         url("../fonts/roboto-regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
         url("../fonts/retromavibesregular-rgwxb-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -28,6 +31,7 @@
         url("../fonts/permanentmarker-regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -36,6 +40,7 @@
         url("../fonts/poppins-black-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -44,4 +49,5 @@
         url("../fonts/poppins-regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
