@@ -8,7 +8,10 @@ import HeaderText from "@/components/Header/HeaderText";
  */
 export default function Header() {
     return (
-        <header id="header" className="bg-red min-h-screen px-10 text-white">
+        <header
+            id="header"
+            className="bg-red min-h-screen px-10 py-20 text-white"
+        >
             <div className="container mx-auto">
                 <div className="py-5 md:grid md:grid-cols-2 md:gap-4">
                     <div className="flex items-center justify-center md:min-h-screen">
