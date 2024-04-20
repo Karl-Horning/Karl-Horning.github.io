@@ -18,3 +18,31 @@
 .bg-red {
     background-color: var(--main-red);
 }
+
+/* Link styles */
+.link {
+    /* General link styling */
+    box-shadow: inset 0 -0.5em var(--main-red);
+    color: var(--site-black);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0, 1, 0.3, 1);
+}
+
+.link:hover {
+    /* Link hover effect */
+    box-shadow: inset 0 -1.5em var(--main-red);
+    color: var(--site-white);
+}
+
+.red-bg .link {
+    /* Link styling on red background */
+    box-shadow: inset 0 -0.5em var(--site-black);
+    color: var(--site-white);
+}
+
+.red-bg .link:hover {
+    /* Link hover effect on red background */
+    box-shadow: inset 0 -1.5em var(--site-black);
+    color: var(--main-red);
+}
