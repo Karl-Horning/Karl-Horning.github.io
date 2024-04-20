@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* Colour variables */
+    --main-red: #da4453;
+    --dark-red: #6d222a;
+    --site-black: #2d292d;
+    --site-white: #fffef5;
+    --font-size: 16px;
+}
+
+.text-black {
+    color: var(--site-black);
+}
+
+.bg-red {
+    background-color: var(--main-red);
+}
