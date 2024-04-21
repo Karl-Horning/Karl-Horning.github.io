@@ -16,17 +16,15 @@ import { GrGraphQl } from "react-icons/gr";
 import { IoLogoElectron } from "react-icons/io5";
 import { TbBrandNextjs } from "react-icons/tb";
 
-import {
-    CircularProgress,
-    Card,
-    CardBody,
-    CardFooter,
-    Link,
-} from "@nextui-org/react";
+import { Card, CardBody, Link } from "@nextui-org/react";
 
-interface CircularProgressBarProps {
-    value?: number;
-    link: string;
+/**
+ * Props for SkillItem component
+ * @typedef {Object} SkillItemProps
+ * @property {string} skill - The skill to display, must be one of "bootstrap", "css3", "electron", "git", "graphQl", "html5", "markdown", "mongoDb", "nextJs", "nodeJs", "npm", "postgreSql", "python", "tailwindCss"
+ * @property {string} link - The link associated with the skill
+ */
+interface SkillItemProps {
     skill:
         | "bootstrap"
         | "css3"
@@ -42,14 +40,18 @@ interface CircularProgressBarProps {
         | "postgreSql"
         | "python"
         | "tailwindCss";
+    link: string;
 }
 
-export default function CircularProgressBar({
-    skill,
-    link,
-    value = 100,
-}: CircularProgressBarProps) {
-    const skills = {
+/**
+ * SkillItem component displays a skill card with its icon and title
+ * @param {Object} props - The props for SkillItem component
+ * @param {string} props.skill - The skill to display, must be one of "bootstrap", "css3", "electron", "git", "graphQl", "html5", "markdown", "mongoDb", "nextJs", "nodeJs", "npm", "postgreSql", "python", "tailwindCss"
+ * @param {string} props.link - The link associated with the skill
+ * @returns {JSX.Element} JSX Element representing the SkillItem
+ */
+export default function SkillItem({ skill, link }: Readonly<SkillItemProps>) {
+    const skillIcons = {
         bootstrap: {
             icon: FaBootstrap,
             title: "Bootstrap",
@@ -108,33 +110,19 @@ export default function CircularProgressBar({
         },
     };
 
-    const selectedSkill = skills[skill];
+    const selectedSkill = skillIcons[skill];
 
     return (
-        <Card className="mb-10 h-[240px] w-[240px] border-none bg-gradient-to-br from-violet-500 to-fuchsia-500">
-            <CardBody className="items-center justify-center pb-0">
-                <CircularProgress
-                    classNames={{
-                        svg: "w-36 h-36 drop-shadow-md",
-                        indicator: "stroke-white",
-                        track: "stroke-white/10",
-                        value: "text-3xl font-semibold text-white",
-                    }}
-                    value={value}
-                    strokeWidth={4}
-                    showValueLabel={true}
-                />
-            </CardBody>
-            <CardFooter className="items-center justify-center pt-0 text-white">
-                <Link
-                    href={link}
-                    target="_blank"
-                    className="text-white"
-                >
-                    <selectedSkill.icon className="mr-1 text-4xl" />
+        <Link href={link} target="_blank">
+            <Card
+                className="mb-10 h-[240px] w-[240px] border-none bg-white"
+                isPressable
+            >
+                <CardBody className="items-center justify-center pb-0">
+                    <selectedSkill.icon className="mr-1 text-8xl" />
                     <span className="text-2xl">{selectedSkill.title}</span>
-                </Link>
-            </CardFooter>
-        </Card>
+                </CardBody>
+            </Card>
+        </Link>
     );
 }
