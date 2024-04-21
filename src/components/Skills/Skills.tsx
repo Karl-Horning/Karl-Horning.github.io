@@ -3,6 +3,7 @@ import SkillItem from "@/components/Skills/SkillItem";
 
 /**
  * Skills component displays a section containing skills and their corresponding links
+ * @component
  * @returns {JSX.Element} JSX Element representing the Skills component
  */
 export default function Skills() {
