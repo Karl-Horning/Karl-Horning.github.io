@@ -1,22 +1,5 @@
-import {
-    BiLogoMongodb,
-    BiLogoPostgresql,
-    BiLogoTailwindCss,
-} from "react-icons/bi";
-import { FaBootstrap, FaMarkdown } from "react-icons/fa";
-import {
-    FaCss3,
-    FaGitAlt,
-    FaHtml5,
-    FaNode,
-    FaNpm,
-    FaPython,
-} from "react-icons/fa6";
-import { GrGraphQl } from "react-icons/gr";
-import { IoLogoElectron } from "react-icons/io5";
-import { TbBrandNextjs } from "react-icons/tb";
-
 import { Card, CardBody, Link } from "@nextui-org/react";
+import * as Icons from "@/components/Icons/Icons";
 
 /**
  * Props for SkillItem component
@@ -53,59 +36,59 @@ interface SkillItemProps {
 export default function SkillItem({ skill, link }: Readonly<SkillItemProps>) {
     const skillIcons = {
         bootstrap: {
-            icon: FaBootstrap,
+            icon: Icons.BootstrapIcon,
             title: "Bootstrap",
         },
         css3: {
-            icon: FaCss3,
+            icon: Icons.Css3Icon,
             title: "CSS3",
         },
         electron: {
-            icon: IoLogoElectron,
+            icon: Icons.ElectronIcon,
             title: "Electron",
         },
         git: {
-            icon: FaGitAlt,
+            icon: Icons.GitIcon,
             title: "Git",
         },
         graphQl: {
-            icon: GrGraphQl,
+            icon: Icons.GraphQlIcon,
             title: "GraphQL",
         },
         html5: {
-            icon: FaHtml5,
+            icon: Icons.Html5Icon,
             title: "HTML5",
         },
         markdown: {
-            icon: FaMarkdown,
+            icon: Icons.MarkdownIcon,
             title: "Markdown",
         },
         mongoDb: {
-            icon: BiLogoMongodb,
+            icon: Icons.MongoDbIcon,
             title: "MongoDB",
         },
         nextJs: {
-            icon: TbBrandNextjs,
+            icon: Icons.NextJsIcon,
             title: "Next.js",
         },
         nodeJs: {
-            icon: FaNode,
+            icon: Icons.NodeJsIcon,
             title: "Node.js",
         },
         npm: {
-            icon: FaNpm,
+            icon: Icons.NpmIcon,
             title: "NPM",
         },
         postgreSql: {
-            icon: BiLogoPostgresql,
+            icon: Icons.PostgreSqlIcon,
             title: "PostgreSQL",
         },
         python: {
-            icon: FaPython,
+            icon: Icons.PythonIcon,
             title: "Python",
         },
         tailwindCss: {
-            icon: BiLogoTailwindCss,
+            icon: Icons.TailwindCssIcon,
             title: "Tailwind CSS",
         },
     };

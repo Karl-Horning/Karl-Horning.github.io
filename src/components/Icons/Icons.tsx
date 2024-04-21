@@ -1,0 +1,23 @@
+import * as BiIcons from "react-icons/bi";
+import * as FaIcons from "react-icons/fa";
+import { GrGraphQl } from "react-icons/gr";
+import { IoLogoElectron } from "react-icons/io5";
+import { SiApollographql, SiExpress } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+
+export const ApolloServerIcon = SiApollographql;
+export const BootstrapIcon = FaIcons.FaBootstrap;
+export const Css3Icon = FaIcons.FaCss3;
+export const ElectronIcon = IoLogoElectron;
+export const ExpressIcon = SiExpress;
+export const GitIcon = FaIcons.FaGitAlt;
+export const GraphQlIcon = GrGraphQl;
+export const Html5Icon = FaIcons.FaHtml5;
+export const MarkdownIcon = FaIcons.FaMarkdown;
+export const MongoDbIcon = BiIcons.BiLogoMongodb;
+export const NextJsIcon = TbBrandNextjs;
+export const NodeJsIcon = FaIcons.FaNode;
+export const NpmIcon = FaIcons.FaNpm;
+export const PostgreSqlIcon = BiIcons.BiLogoPostgresql;
+export const PythonIcon = FaIcons.FaPython;
+export const TailwindCssIcon = BiIcons.BiLogoTailwindCss;
