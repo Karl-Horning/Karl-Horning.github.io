@@ -27,13 +27,13 @@ export default function PageSection({
     header,
     bgColour = "bg-white",
     children,
-}: PageSectionProps) {
+}: Readonly<PageSectionProps>) {
     return (
         <section id={id} className={`${bgColour} min-h-screen`}>
             <div className="container mx-auto">
                 <div className="px-10 py-20">
                     <h2
-                        className={`${Poppins900.className} pb-20 text-center text-7xl text-black`}
+                        className={`${Poppins900.className} pb-20 text-center text-5xl text-black md:text-7xl`}
                     >
                         {header}
                     </h2>
