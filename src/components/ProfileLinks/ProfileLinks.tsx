@@ -60,3 +60,7 @@ export const learnlightIosAppLink =
 // Learnlight Android App
 export const learnlightPlayAppLink =
     "https://play.google.com/store/apps/details?id=com.ct.learnlight";
+
+// Trainer Trainee List App
+export const trainerTraineeListLink =
+    "https://github.com/Karl-Horning/trainer-trainee-list";
