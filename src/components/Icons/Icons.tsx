@@ -6,11 +6,14 @@ import { SiApollographql, SiExpress } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
 export const ApolloServerIcon = SiApollographql;
+export const AppStoreIosIcon = FaIcons.FaAppStoreIos;
 export const BootstrapIcon = FaIcons.FaBootstrap;
 export const Css3Icon = FaIcons.FaCss3;
 export const ElectronIcon = IoLogoElectron;
 export const ExpressIcon = SiExpress;
 export const GitIcon = FaIcons.FaGitAlt;
+export const GitHubIcon = FaIcons.FaGithub;
+export const GooglePlayIcon = FaIcons.FaGooglePlay;
 export const GraphQlIcon = GrGraphQl;
 export const Html5Icon = FaIcons.FaHtml5;
 export const MarkdownIcon = FaIcons.FaMarkdown;
