@@ -1,5 +1,6 @@
 import PageSection from "@/components/PageSection/PageSection";
 import SkillItem from "@/components/Skills/SkillItem";
+import * as ProfileLinks from "@/components/ProfileLinks/ProfileLinks";
 
 /**
  * Skills component displays a section containing skills and their corresponding links
@@ -35,51 +36,51 @@ export default function Skills() {
     const skillsWithLinks = [
         {
             skill: "markdown",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=markdown&type=&language=&sort=",
+            link: ProfileLinks.gitHubMarkdownTagLink,
         },
         {
             skill: "git",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=git&type=&language=&sort=",
+            link: ProfileLinks.gitHubGitTagLink,
         },
         {
             skill: "graphQl",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=graphql&type=&language=&sort=",
+            link: ProfileLinks.gitHubGraphQlTagLink,
         },
         {
             skill: "nodeJs",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=node-js&type=&language=&sort=",
+            link: ProfileLinks.gitHubNodeJsTagLink,
         },
         {
             skill: "nextJs",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=next-js&type=&language=&sort=",
+            link: ProfileLinks.gitHubNextJsTagLink,
         },
         {
             skill: "postgreSql",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=sql&type=&language=&sort=",
+            link: ProfileLinks.gitHubPostgreSqlTagLink,
         },
         {
             skill: "mongoDb",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=mongodb&type=&language=&sort=",
+            link: ProfileLinks.gitHubMongoDbTagLink,
         },
         {
             skill: "html5",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=html&type=&language=&sort=",
+            link: ProfileLinks.gitHubHtmlTagLink,
         },
         {
             skill: "css3",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=css&type=&language=&sort=",
+            link: ProfileLinks.gitHubCssServerTagLink,
         },
         {
             skill: "bootstrap",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=bootstrap&type=&language=&sort=",
+            link: ProfileLinks.gitHubBootstrapTagLink,
         },
         {
             skill: "electron",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=electron&type=&language=&sort=",
+            link: ProfileLinks.gitHubElectronTagLink,
         },
         {
             skill: "python",
-            link: "https://github.com/Karl-Horning?tab=repositories&q=python&type=&language=&sort=",
+            link: ProfileLinks.gitHubPythonTagLink,
         },
     ];
 

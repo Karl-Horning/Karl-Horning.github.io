@@ -1,6 +1,7 @@
 import { Poppins500 } from "@/app/styles/fonts";
 import { Link } from "@nextui-org/react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { gitHubLink } from "@/components/ProfileLinks/ProfileLinks";
 
 export default function AboutBody() {
     return (
@@ -52,11 +53,7 @@ export default function AboutBody() {
 
             <p className="pb-4">
                 You can view my current contributions here:{" "}
-                <Link
-                    href="https://github.com/Karl-Horning"
-                    target="_blank"
-                    className="link"
-                >
+                <Link href={gitHubLink} target="_blank" className="link">
                     github.com/Karl-Horning{" "}
                     <FaArrowUpRightFromSquare className="ml-1" />
                 </Link>
