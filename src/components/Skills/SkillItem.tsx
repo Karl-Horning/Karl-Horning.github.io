@@ -11,21 +11,7 @@ import { GrowPlusHover } from "@/components/Animations/Animations";
  * @property {string} link - The link associated with the skill
  */
 interface SkillItemProps {
-    skill:
-        | "bootstrap"
-        | "css3"
-        | "electron"
-        | "git"
-        | "graphQl"
-        | "html5"
-        | "markdown"
-        | "mongoDb"
-        | "nextJs"
-        | "nodeJs"
-        | "npm"
-        | "postgreSql"
-        | "python"
-        | "tailwindCss";
+    skill: string;
     link: string;
 }
 
@@ -96,7 +82,8 @@ export default function SkillItem({ skill, link }: Readonly<SkillItemProps>) {
         },
     };
 
-    const selectedSkill = skillIcons[skill];
+    // Assert that skill is a valid key of skillIcons
+    const selectedSkill = skillIcons[skill as keyof typeof skillIcons];
 
     return (
         <GrowPlusHover>
