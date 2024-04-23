@@ -19,6 +19,10 @@
     background-color: var(--main-red);
 }
 
+.bg-black {
+    background-color: var(--site-black);
+}
+
 /* Link styles */
 .link {
     /* General link styling */
