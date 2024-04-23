@@ -55,7 +55,7 @@ export default function WorkAndProjectsText({
             className={`${order === 1 ? "order-1" : "order-2"} mb-20 md:col-span-4`}
         >
             <div className="flex h-full items-center justify-center">
-                <div>
+                <div className="text-black">
                     <h3 className={`${Poppins900.className} mb-2 text-3xl`}>
                         {title}
                     </h3>
