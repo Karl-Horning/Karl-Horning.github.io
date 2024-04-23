@@ -8,7 +8,7 @@ import MainButton from "@/components/Buttons/MainButton";
  */
 export default function HeaderText() {
     return (
-        <div>
+        <div className="pb-20">
             <h1
                 className={`${Poppins900.className} mb-7 text-6xl text-black md:text-8xl`}
             >
