@@ -6,6 +6,9 @@ export const gitHubApolloServerTagLink =
 export const gitHubBootstrapTagLink =
     "https://github.com/Karl-Horning?tab=repositories&q=bootstrap&type=&language=&sort=";
 
+// CodePen profile
+export const codePenLink = "https://codepen.io/karlhorning";
+
 // CSS3
 export const gitHubCssServerTagLink =
     "https://github.com/Karl-Horning?tab=repositories&q=css&type=&language=&sort=";
@@ -60,6 +63,9 @@ export const learnlightIosAppLink =
 // Learnlight Android App
 export const learnlightPlayAppLink =
     "https://play.google.com/store/apps/details?id=com.ct.learnlight";
+
+// LinkedIn profile
+export const linkedInLink = "https://www.linkedin.com/in/karl-horning/";
 
 // Trainer Trainee List App
 export const trainerTraineeListLink =
