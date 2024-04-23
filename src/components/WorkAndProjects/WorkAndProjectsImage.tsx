@@ -1,4 +1,7 @@
+"use client";
+
 import { Image } from "@nextui-org/react";
+import { Grow } from "@/components/Animations/Animations";
 
 /**
  * Props for the WorkAndProjectsImage component.
@@ -35,13 +38,15 @@ export default function WorkAndProjectsImage({
             className={`${order === 1 ? "order-1" : "order-2"} mb-20 md:col-span-8`}
         >
             <div className="flex h-full items-center justify-center">
-                <Image
-                    src={src}
-                    alt={alt}
-                    height={700}
-                    width={700}
-                    className={`w-full drop-shadow-lg ${className}`}
-                />
+                <Grow>
+                    <Image
+                        src={src}
+                        alt={alt}
+                        height={700}
+                        width={700}
+                        className={`w-full drop-shadow-lg ${className}`}
+                    />
+                </Grow>
             </div>
         </div>
     );

@@ -1,5 +1,8 @@
+"use client";
+
 import { Card, CardBody, Link } from "@nextui-org/react";
 import * as Icons from "@/components/Icons/Icons";
+import { GrowPlusHover } from "@/components/Animations/Animations";
 
 /**
  * Props for SkillItem component
@@ -96,16 +99,18 @@ export default function SkillItem({ skill, link }: Readonly<SkillItemProps>) {
     const selectedSkill = skillIcons[skill];
 
     return (
-        <Link href={link} target="_blank">
-            <Card
-                className="mb-10 h-[240px] w-[240px] border-none bg-white"
-                isPressable
-            >
-                <CardBody className="items-center justify-center pb-0">
-                    <selectedSkill.icon className="mr-1 text-8xl" />
-                    <span className="text-2xl">{selectedSkill.title}</span>
-                </CardBody>
-            </Card>
-        </Link>
+        <GrowPlusHover>
+            <Link href={link} target="_blank">
+                <Card
+                    className="mb-10 h-[240px] w-[240px] border-none bg-white"
+                    isPressable
+                >
+                    <CardBody className="items-center justify-center pb-0">
+                        <selectedSkill.icon className="mr-1 text-8xl" />
+                        <span className="text-2xl">{selectedSkill.title}</span>
+                    </CardBody>
+                </Card>
+            </Link>
+        </GrowPlusHover>
     );
 }
