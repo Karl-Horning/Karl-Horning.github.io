@@ -39,7 +39,7 @@ export default function WorkAndProjectsTag({
 }: Readonly<WorkAndProjectsTagProps>) {
     return (
         <Link href={link} target="_blank" className="m-2">
-            <Chip variant="flat" color={color} avatar={icon} size="lg">
+            <Chip variant="solid" color={color} avatar={icon} size="lg">
                 {name}
             </Chip>
         </Link>

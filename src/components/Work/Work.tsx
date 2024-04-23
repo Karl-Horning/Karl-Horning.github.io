@@ -19,7 +19,7 @@ export default function Work() {
         },
         {
             link: ProfileLinks.learnlightPlayAppLink,
-            colour: "secondary",
+            colour: "primary",
             icon: <Icons.GooglePlayIcon />,
             name: "Play Store",
         },
@@ -34,13 +34,13 @@ export default function Work() {
         },
         {
             link: ProfileLinks.gitHubNodeJsTagLink,
-            colour: "success",
+            colour: "secondary",
             icon: <Icons.NodeJsIcon />,
             name: "Node.js",
         },
         {
             link: ProfileLinks.gitHubPostgreSqlTagLink,
-            colour: "primary",
+            colour: "secondary",
             icon: <Icons.PostgreSqlIcon />,
             name: "PostgreSQL",
         },
@@ -52,7 +52,7 @@ export default function Work() {
         },
         {
             link: ProfileLinks.gitHubMongoDbTagLink,
-            colour: "success",
+            colour: "secondary",
             icon: <Icons.MongoDbIcon />,
             name: "MongoDB",
         },
@@ -70,7 +70,7 @@ export default function Work() {
     const ttlAppBuiltUsingTags = [
         {
             link: ProfileLinks.gitHubElectronTagLink,
-            colour: "primary",
+            colour: "secondary",
             icon: <Icons.ElectronIcon />,
             name: "Electron",
         },
@@ -83,8 +83,8 @@ export default function Work() {
     ];
 
     return (
-        <PageSection id="work" header="Work" bgColour="bg-white">
-            <p className="mb-20 text-center">
+        <PageSection id="work" header="Work Projects" bgColour="bg-white">
+            <p className="mb-20 text-center text-black">
                 Embark on a journey through my professional endeavours. Explore
                 the projects that showcase my skills and dedication in action.
             </p>
