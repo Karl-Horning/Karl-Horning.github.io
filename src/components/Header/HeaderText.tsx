@@ -1,5 +1,6 @@
 import { Poppins900 } from "@/fonts";
 import MainButton from "@/components/Buttons/MainButton";
+import { Link } from "@nextui-org/react";
 
 /**
  * HeaderText component renders the header text and a call-to-action button.
@@ -21,7 +22,9 @@ export default function HeaderText() {
                 Passionate about the limitless possibilities of GraphQL.
             </p>
 
-            <MainButton text="Contact Me!" fullWidth />
+            <Link href="#contact-form" className="w-full">
+                <MainButton text="Contact Me!" fullWidth />
+            </Link>
         </div>
     );
 }
