@@ -11,7 +11,7 @@ import { Poppins900 } from "@/fonts";
  */
 interface Tag {
     link: string;
-    colour: string;
+    colour: "secondary" | "default" | "primary" | "success" | "warning" | "danger";
     icon: JSX.Element;
     name: string;
 }
