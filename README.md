@@ -1,8 +1,10 @@
 # Karl Horning's Portfolio Site
 
-Welcome to Karl Horning's Portfolio Site—a platform showcasing my journey, projects, and expertise in web development and design.
+Welcome to Karl Horning's Portfolio Site — a platform showcasing my journey, projects, and expertise in web development and design.
 
 <img src="./public/work-and-projects/portfolio-site.webp" alt="Portfolio site" width="100%" height="auto">
+
+The full site is available at [karl-horning.github.io/](https://karl-horning.github.io/).
 
 ## About
 
