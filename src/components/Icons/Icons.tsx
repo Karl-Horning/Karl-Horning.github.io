@@ -26,3 +26,4 @@ export const NpmIcon = FaIcons.FaNpm;
 export const PostgreSqlIcon = BiIcons.BiLogoPostgresql;
 export const PythonIcon = FaIcons.FaPython;
 export const TailwindCssIcon = BiIcons.BiLogoTailwindCss;
+export const TypeScriptIcon = BiIcons.BiLogoTypescript;
