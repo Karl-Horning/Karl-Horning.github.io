@@ -52,9 +52,21 @@ export const gitHubNodeJsTagLink =
 export const gitHubPostgreSqlTagLink =
     "https://github.com/Karl-Horning?tab=repositories&q=sql&type=&language=&sort=";
 
+// Portfolio site
+export const portfolioSiteLink =
+    "https://github.com/Karl-Horning/Karl-Horning.github.io";
+
 // Python
 export const gitHubPythonTagLink =
     "https://github.com/Karl-Horning?tab=repositories&q=python&type=&language=&sort=";
+
+// Tailwind CSS
+export const gitHubTailwindTagLink =
+    "https://github.com/Karl-Horning?tab=repositories&q=tailwind&type=&language=&sort=";
+
+// TypeScript
+export const gitHubTypeScriptTagLink =
+    "https://github.com/Karl-Horning?tab=repositories&q=typescript&type=&language=&sort=";
 
 // Learnlight iOS App
 export const learnlightIosAppLink =
