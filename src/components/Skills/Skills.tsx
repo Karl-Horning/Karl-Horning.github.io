@@ -96,15 +96,12 @@ export default function Skills() {
 
     return (
         <PageSection id="skills" header="Skills & Experience" bgColour="bg-red">
-            <p className="pb-5 text-center text-white">
-                I predominantly work on the back end, but a number of my
-                projects include front ends developed by me.
-            </p>
-
             <p className="pb-20 text-center text-white">
-                Below are the skills that I use regularly. Each skill is a link
-                to my GitHub filtered by the skill as a tag. Please note that
-                much of my back end work is in private repositories.
+                Diving into the intricacies of backend development while also
+                crafting intuitive frontend interfaces. Discover my expertise
+                through the linked skills below, each guiding you to GitHub
+                repositories filtered by relevant tags. Please be aware that
+                some of my backend work is housed in private repositories.
             </p>
 
             <div className="grid place-items-center gap-1 md:grid-cols-4">

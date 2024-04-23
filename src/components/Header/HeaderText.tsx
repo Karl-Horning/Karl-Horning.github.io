@@ -16,8 +16,9 @@ export default function HeaderText() {
             </h1>
 
             <p className="mb-7 text-xl">
-                Full-Stack Software Engineer | Backend Developer | GraphQL
-                Enthusiast
+                Empowering digital dreams with cutting-edge technology.
+                Specializing in full-stack development and backend wizardry.
+                Passionate about the limitless possibilities of GraphQL.
             </p>
 
             <MainButton text="Contact Me!" fullWidth />

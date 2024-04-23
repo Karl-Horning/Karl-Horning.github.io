@@ -85,13 +85,14 @@ export default function Work() {
     return (
         <PageSection id="work" header="Work" bgColour="bg-white">
             <p className="mb-20 text-center">
-                Things I&apos;ve been working on at work.
+                Embark on a journey through my professional endeavours. Explore
+                the projects that showcase my skills and dedication in action.
             </p>
 
             <div className="gap-4 md:grid md:grid-cols-12">
                 <WorkAndProjectsText
                     title="Learnlight App"
-                    description="I am currently responsible for developing and maintaining the GraphQL API used by the Learnlight app's frontend. Leveraging Sequelize as the ORM, my role involves crafting efficient raw SQL queries to extract pertinent business data."
+                    description="Driving the backend engine of the Learnlight app, I meticulously sculpt and maintain its GraphQL API, ensuring seamless communication with the frontend. With Sequelize as my trusty ORM, I orchestrate efficient SQL queries, extracting crucial business data to power the app's functionality. Additionally, I've seamlessly integrated the Oxford Learner's Dictionaries API, enriching the app's offerings with premium language resources."
                     order={1}
                     availableFromTags={llAppAvailableFromTags}
                     builtUsingTags={llAppBuiltUsingTags}
@@ -107,7 +108,7 @@ export default function Work() {
             <div className="gap-4 md:grid md:grid-cols-12">
                 <WorkAndProjectsText
                     title="Trainer Trainee List"
-                    description="This app monitors trainers undergoing training, retrieving job and applicant data from the JazzHR API through chained promises. It utilises the exceljs library to export this data into an Excel file, which is then utilised in the onboarding process."
+                    description="Introducing the Trainer Trainee List app, a robust tool tailored to empower onboarder staff in tracking the progress of trainers. Seamlessly interfacing with the JazzHR API through Axios, this application efficiently retrieves and organizes job and applicant data. Leveraging Electron and Bootstrap for a seamless user experience, it employs the exceljs library to export comprehensive reports, enabling onboarder staff to monitor trainer progress with ease."
                     order={2}
                     availableFromTags={ttlAppAvailableFromTags}
                     builtUsingTags={ttlAppBuiltUsingTags}
