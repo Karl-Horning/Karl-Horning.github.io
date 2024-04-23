@@ -3,6 +3,7 @@ import * as Icons from "@/components/Icons/Icons";
 import * as ProfileLinks from "@/components/ProfileLinks/ProfileLinks";
 import WorkAndProjectsImage from "@/components/WorkAndProjects/WorkAndProjectsImage";
 import WorkAndProjectsText from "@/components/WorkAndProjects/WorkAndProjectsText";
+import { Tag } from "@/components/WorkAndProjects/Tag";
 
 /**
  * Work component displays work projects completed.
@@ -10,7 +11,7 @@ import WorkAndProjectsText from "@/components/WorkAndProjects/WorkAndProjectsTex
  * @returns {JSX.Element} JSX Element representing the Work component.
  */
 export default function Work() {
-    const llAppAvailableFromTags = [
+    const llAppAvailableFromTags: Tag[] = [
         {
             link: ProfileLinks.learnlightIosAppLink,
             colour: "primary",
@@ -25,7 +26,7 @@ export default function Work() {
         },
     ];
 
-    const llAppBuiltUsingTags = [
+    const llAppBuiltUsingTags: Tag[] = [
         {
             link: ProfileLinks.gitHubGraphQlTagLink,
             colour: "secondary",
@@ -58,7 +59,7 @@ export default function Work() {
         },
     ];
 
-    const ttlAppAvailableFromTags = [
+    const ttlAppAvailableFromTags: Tag[] = [
         {
             link: ProfileLinks.trainerTraineeListLink,
             colour: "primary",
@@ -67,7 +68,7 @@ export default function Work() {
         },
     ];
 
-    const ttlAppBuiltUsingTags = [
+    const ttlAppBuiltUsingTags: Tag[] = [
         {
             link: ProfileLinks.gitHubElectronTagLink,
             colour: "secondary",

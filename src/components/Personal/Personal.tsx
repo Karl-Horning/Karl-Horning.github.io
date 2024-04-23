@@ -3,6 +3,7 @@ import * as Icons from "@/components/Icons/Icons";
 import * as ProfileLinks from "@/components/ProfileLinks/ProfileLinks";
 import WorkAndProjectsImage from "@/components/WorkAndProjects/WorkAndProjectsImage";
 import WorkAndProjectsText from "@/components/WorkAndProjects/WorkAndProjectsText";
+import { Tag } from "@/components/WorkAndProjects/Tag";
 
 /**
  * Personal component displays personal projects completed.
@@ -10,16 +11,16 @@ import WorkAndProjectsText from "@/components/WorkAndProjects/WorkAndProjectsTex
  * @returns {JSX.Element} JSX Element representing the Personal component.
  */
 export default function Personal() {
-    const portfolioAppAvailableFromTags = [
+    const portfolioAppAvailableFromTags: Tag[] = [
         {
             link: ProfileLinks.portfolioSiteLink,
-            colour: "primary",
+            colour: "primary", // Or any other color value from the expected ones
             icon: <Icons.GitHubIcon />,
             name: "GitHub",
         },
     ];
 
-    const portfolioAppBuiltUsingTags = [
+    const portfolioAppBuiltUsingTags: Tag[] = [
         {
             link: ProfileLinks.gitHubNextJsTagLink,
             colour: "secondary",
