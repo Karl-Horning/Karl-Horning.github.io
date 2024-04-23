@@ -6,11 +6,13 @@ import { Image } from "@nextui-org/react";
  * @property {string} src - The source URL of the image.
  * @property {string} alt - The alternative text for the image.
  * @property {1 | 2} order - The order of the image (1 or 2).
+ * @property {string} className - Additional classes to be added to the image.
  */
 interface WorkAndProjectsImageProps {
     src: string;
     alt: string;
     order: 1 | 2;
+    className?: string;
 }
 
 /**
@@ -19,12 +21,14 @@ interface WorkAndProjectsImageProps {
  * @property {string} props.src - The source URL of the image.
  * @property {string} props.alt - The alternative text for the image.
  * @property {1 | 2} props.order - The order of the image (1 or 2).
+ * @property {string} props.className - Additional classes to be added to the image.
  * @returns {JSX.Element} The rendered WorkAndProjectsImage component.
  */
 export default function WorkAndProjectsImage({
     src,
     alt,
     order,
+    className,
 }: Readonly<WorkAndProjectsImageProps>) {
     return (
         <div
@@ -36,7 +40,7 @@ export default function WorkAndProjectsImage({
                     alt={alt}
                     height={700}
                     width={700}
-                    className="w-full drop-shadow-lg"
+                    className={`w-full drop-shadow-lg ${className}`}
                 />
             </div>
         </div>
