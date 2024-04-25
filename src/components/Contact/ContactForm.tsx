@@ -14,12 +14,14 @@ export default function ContactForm() {
             <div className="mb-20 flex justify-center">
                 <form
                     id="contact-form"
-                    action=""
+                    action="https://fabform.io/f/d6S6WtJ"
+                    method="post"
                     className="max-w-6xl rounded-2xl bg-black p-3 md:w-2/3 md:p-20"
                 >
                     <Input
                         type="text"
                         label="Name"
+                        name="name"
                         radius="none"
                         size="lg"
                         variant="underlined"
@@ -28,8 +30,19 @@ export default function ContactForm() {
                     />
 
                     <Input
+                        type="text"
+                        label="Company"
+                        name="company"
+                        radius="none"
+                        size="lg"
+                        variant="underlined"
+                        className="mb-4 bg-white"
+                    />
+
+                    <Input
                         type="email"
                         label="Email"
+                        name="email"
                         radius="none"
                         size="lg"
                         variant="underlined"
@@ -39,6 +52,7 @@ export default function ContactForm() {
 
                     <Textarea
                         label="Message"
+                        name="message"
                         radius="none"
                         size="lg"
                         variant="underlined"
