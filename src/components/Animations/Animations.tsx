@@ -76,7 +76,7 @@ export function GrowPlusHover({ children }: GrowPlusHoverProps): JSX.Element {
         <motion.div
             initial="hidden"
             whileInView="visible"
-            variants={growVariants}
+            variants={{ ...growVariants, ...hoverVariants }}
             whileHover="hover" // Reference the hover variant label
         >
             {children}
