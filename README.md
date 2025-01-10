@@ -1,32 +1,22 @@
 # Karl Horning's Portfolio Site
 
-Welcome to Karl Horning's Portfolio Site — a platform showcasing my journey, projects, and expertise in web development and design.
+- [Karl Horning's Portfolio Site](#karl-hornings-portfolio-site)
+  - [Description](#description)
+  - [Demo](#demo)
+  - [Getting Started](#getting-started)
+  - [Feedback and Contributions](#feedback-and-contributions)
+  - [Author](#author)
+  - [License](#license)
 
-<img src="./public/work-and-projects/portfolio-site.webp" alt="Portfolio site" width="100%" height="auto">
+## Description
 
-The full site is available at [karl-horning.github.io/](https://karl-horning.github.io/).
+This repository holds the source code for my 2024 portfolio website, designed to showcase my skills, projects, and experiences as a web developer. The portfolio is structured with a modern and responsive design, featuring media queries to ensure optimal viewing across various devices.
 
-## About
+## Demo
 
-This portfolio site serves as a comprehensive overview of my skills, experiences, and projects. From frontend development to backend wizardry, explore a diverse range of creations crafted with passion and precision.
+![Preview Image](./public/work-and-projects/portfolio-site.webp)
 
-## Technologies Used
-
-- Next.js
-- Tailwind CSS
-- TypeScript
-- GitHub
-- GitHub Actions
-- YAML
-
-## Features
-
-- Clean and modern design
-- Responsive layout for seamless browsing across devices
-- Integration with GitHub, LinkedIn, and CodePen for easy access to my profiles
-- Portfolio section highlighting personal and professional projects
-- Learn more about me section providing insights into my background and interests
-- Message me section for direct communication
+[View the live demo on GitHub](https://karl-horning.github.io/).
 
 ## Getting Started
 
@@ -57,10 +47,14 @@ npm run dev
 
 Feedback, suggestions, and contributions are highly appreciated! If you encounter any issues or have ideas for improvements, feel free to [open an issue](https://github.com/Karl-Horning/Karl-Horning.github.io/issues) or submit a pull request.
 
-## Contact
+## Author
 
-- LinkedIn: [Karl Horning](https://www.linkedin.com/in/karl-horning)
-- GitHub: [Karl Horning](https://github.com/Karl-Horning)
-- CodePen: [Karl Horning](https://codepen.io/karlhorning)
+Karl Horning
 
-Thank you for visiting my portfolio site! I hope you enjoy exploring my projects and learning more about my journey in web development and design.
+- [GitHub](https://github.com/Karl-Horning/)
+- [LinkedIn](https://www.linkedin.com/in/karl-horning/)
+- [CodePen](https://codepen.io/karlhorning)
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE).
