@@ -33,7 +33,7 @@ export default function Footer() {
 
     return (
         <footer
-            className="text-muted mt-12 bg-background py-8"
+            className="text-muted mt-12 bg-black py-8"
             role="contentinfo"
         >
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
@@ -49,7 +49,7 @@ export default function Footer() {
                             key={label}
                             href={href}
                             aria-label={label}
-                            className="text-muted hover:text-text transition-colors duration-300"
+                            className="text-muted hover:text-primary transition-colors duration-300"
                             target={
                                 href.startsWith("http") ? "_blank" : undefined
                             }
