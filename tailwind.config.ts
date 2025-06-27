@@ -9,25 +9,40 @@ const config: Config = {
         "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        colors: {
-            black: "#2d292d",
-            red: "#da4453",
-            transparent: "transparent",
-            current: "currentColor",
-            white: "#ffffff",
-            purple: "#3f3cbb",
-            midnight: "#121063",
-            metal: "#565584",
-            tahiti: "#3ab7bf",
-            silver: "#ecebff",
-            "bubble-gum": "#ff77e9",
-            bermuda: "#78dcca",
-        },
         extend: {
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+            },
+            fontFamily: {
+                sans: ["var(--font-inter)", "sans-serif"], // body text
+                heading: ["var(--font-poppins)", "sans-serif"], // headings
+                glitch: ["var(--font-rubik-glitch)", "cursive"], // logo
+            },
+            colors: {
+                black: "#2d292d",
+                red: "#da4453",
+                transparent: "transparent",
+                current: "currentColor",
+                white: "#ffffff",
+                purple: "#3f3cbb",
+                midnight: "#121063",
+                metal: "#565584",
+                tahiti: "#3ab7bf",
+                silver: "#ecebff",
+                "bubble-gum": "#ff77e9",
+                bermuda: "#78dcca",
+                // TODO: Remove the colours above after update
+                primary: "#e93681", // vibrant pink/red
+                accent: "#14a098", // teal accent
+                highlight: "#fee300", // yellow for emphasis
+                background: "#0f292f", // main background
+                "background-subtle": "#254c4f", // slight contrast
+                surface: "#1a3b3d", // card background
+                hero: "#0b1d21", // strong background (header/hero)
+                text: "#cccccc", // default light text
+                muted: "#b3b3b3", // for secondary text, icons etc.
             },
         },
     },

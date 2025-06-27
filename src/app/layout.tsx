@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Rubik_Glitch } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-inter",
+});
+
+const poppins = Poppins({
+    subsets: ["latin"],
+    weight: ["700"], // Bold
+    variable: "--font-poppins",
+});
+
+const rubikGlitch = Rubik_Glitch({
+    subsets: ["latin"],
+    weight: "400", // Only weight available
+    variable: "--font-rubik-glitch",
+});
 
 export const metadata: Metadata = {
     title: "Karl Horning's Portfolio Site",
@@ -48,10 +63,10 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className="scroll-smooth"
+            className={`${inter.variable} ${poppins.variable} ${rubikGlitch.variable} scroll-smooth`}
             style={{ scrollBehavior: "smooth" }}
         >
-            <body className={inter.className}>{children}</body>
+            <body className={`${inter.className} font-sans`}>{children}</body>
         </html>
     );
 }
