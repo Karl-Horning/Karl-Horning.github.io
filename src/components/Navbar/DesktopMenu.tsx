@@ -23,7 +23,7 @@ export default function DesktopMenu({
     ],
 }: DesktopMenuProps): JSX.Element {
     return (
-        <div className="hidden space-x-6 md:flex">
+        <div className="text-text hidden space-x-6 md:flex">
             {links.map(({ label, href }) => (
                 <Link
                     key={label}
