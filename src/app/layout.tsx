@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Rubik_Glitch } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -66,7 +68,11 @@ export default function RootLayout({
             className={`${inter.variable} ${poppins.variable} ${rubikGlitch.variable} scroll-smooth`}
             style={{ scrollBehavior: "smooth" }}
         >
-            <body className={`${inter.className} font-sans`}>{children}</body>
+            <body className={`${inter.className} min-h-screen font-sans`}>
+                <Navbar />
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }
