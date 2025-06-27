@@ -30,7 +30,7 @@ export default function Header({
         6: "text-lg",
     };
 
-    const combinedClasses = `mb-12 text-center font-heading font-black text-primary ${sizeClasses[level]} ${className}`;
+    const combinedClasses = `mb-6 text-center font-heading font-black text-primary ${sizeClasses[level]} ${className}`;
 
     return <Tag className={combinedClasses}>{text}</Tag>;
 }
