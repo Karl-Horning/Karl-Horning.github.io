@@ -48,10 +48,10 @@ export default function ButtonLink({
     const mergedClass = twMerge(baseStyles, typeStyles[type], className);
 
     const content = (
-        <>
+        <span className="inline-flex items-center gap-2">
             {text}
-            {icon && <span className="ml-1">{icon}</span>}
-        </>
+            {icon && <span className="inline-block">{icon}</span>}
+        </span>
     );
 
     return isExternal ? (
