@@ -1,15 +1,36 @@
 "use client";
 
 import { useState } from "react";
-import CloseIcon from "../Icons/CloseIcon";
-import HamburgerIcon from "../Icons/HamburgerIcon";
 import DesktopMenu from "./DesktopMenu";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
+import MobileToggleButton from "./MobileToggleButton";
 
+/**
+ * Navigation bar component.
+ *
+ * Displays a fixed navigation bar with a logo, desktop navigation links,
+ * and a responsive mobile toggle that reveals a collapsible mobile menu.
+ *
+ * Features:
+ * - Uses `useState` to manage mobile menu open/closed state
+ * - Renders `MobileToggleButton` which switches icons and toggles state
+ * - Shows `DesktopMenu` on medium+ screens and `MobileMenu` on small screens
+ *
+ * Accessibility:
+ * - Uses ARIA roles and labels for navigation and toggle buttons
+ *
+ * @returns The rendered navigation bar component
+ */
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    /**
+     * Toggles the mobile menu open/closed.
+     *
+     * Updates the `isMenuOpen` state and triggers re-rendering of
+     * the toggle button and collapsible menu.
+     */
     const toggleMenu = () => {
         setIsMenuOpen((prev) => !prev);
     };
@@ -26,34 +47,10 @@ export default function Navbar() {
                     <Logo />
 
                     {/* Mobile toggle button */}
-                    <div className="md:hidden">
-                        <button
-                            id="menu-btn"
-                            className="text-text rounded focus:outline-none focus:ring-2 focus:ring-primary"
-                            aria-label="Toggle menu"
-                            aria-controls="mobile-menu"
-                            aria-expanded={isMenuOpen}
-                            aria-haspopup="true"
-                            type="button"
-                            onClick={toggleMenu}
-                        >
-                            {isMenuOpen ? (
-                                <CloseIcon
-                                    id="icon-close"
-                                    className="h-6 w-6"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                />
-                            ) : (
-                                <HamburgerIcon
-                                    id="icon-hamburger"
-                                    className="h-6 w-6"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                />
-                            )}
-                        </button>
-                    </div>
+                    <MobileToggleButton
+                        isOpen={isMenuOpen}
+                        onToggle={toggleMenu}
+                    />
 
                     {/* Desktop Menu */}
                     <DesktopMenu />
