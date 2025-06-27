@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import CloseIcon from "../Icons/CloseIcon";
 import HamburgerIcon from "../Icons/HamburgerIcon";
 import DesktopMenu from "./DesktopMenu";
@@ -5,6 +8,12 @@ import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen((prev) => !prev);
+    };
+
     return (
         <nav
             role="navigation"
@@ -16,31 +25,33 @@ export default function Navbar() {
                     {/* Logo */}
                     <Logo />
 
+                    {/* Mobile toggle button */}
                     <div className="md:hidden">
                         <button
                             id="menu-btn"
                             className="text-text rounded focus:outline-none focus:ring-2 focus:ring-primary"
                             aria-label="Toggle menu"
                             aria-controls="mobile-menu"
-                            aria-expanded="false"
+                            aria-expanded={isMenuOpen}
                             aria-haspopup="true"
                             type="button"
+                            onClick={toggleMenu}
                         >
-                            {/* Hamburger Icon */}
-                            <HamburgerIcon
-                                id="icon-hamburger"
-                                className="block h-6 w-6"
-                                aria-hidden="true"
-                                focusable="false"
-                            />
-
-                            {/* Close Icon */}
-                            <CloseIcon
-                                id="icon-close"
-                                className="hidden h-6 w-6"
-                                aria-hidden="true"
-                                focusable="false"
-                            />
+                            {isMenuOpen ? (
+                                <CloseIcon
+                                    id="icon-close"
+                                    className="h-6 w-6"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                />
+                            ) : (
+                                <HamburgerIcon
+                                    id="icon-hamburger"
+                                    className="h-6 w-6"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                />
+                            )}
                         </button>
                     </div>
 
@@ -50,7 +61,10 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu */}
-            <MobileMenu />
+            <MobileMenu
+                isOpen={isMenuOpen}
+                onClose={() => setIsMenuOpen(false)}
+            />
         </nav>
     );
 }

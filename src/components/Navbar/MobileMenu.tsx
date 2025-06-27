@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type NavLink = {
     label: string;
@@ -8,12 +9,16 @@ type NavLink = {
 interface MobileMenuProps {
     links?: NavLink[];
     isOpen?: boolean;
+    onClose?: () => void;
 }
 
 /**
  * Mobile navigation menu component.
  *
- * @param {MobileMenuProps} props - Menu visibility state and link data.
+ * Displays a collapsible mobile navigation panel with accessible attributes.
+ *
+ * @component
+ * @param {MobileMenuProps} props - Menu visibility state, link data, and optional close handler.
  * @returns {JSX.Element} The rendered mobile menu.
  */
 export default function MobileMenu({
@@ -23,11 +28,16 @@ export default function MobileMenu({
         { label: "Contact", href: "/contact" },
     ],
     isOpen = false,
+    onClose,
 }: MobileMenuProps): JSX.Element {
+    const pathname = usePathname();
+
     return (
         <div
             id="mobile-menu"
-            className={`bg-surface absolute left-0 top-16 z-10 w-full overflow-hidden shadow-md transition-[max-height] duration-500 ease-in-out md:hidden ${
+            role="menu"
+            aria-hidden={!isOpen}
+            className={`absolute left-0 top-16 z-10 w-full overflow-hidden bg-background shadow-md transition-[max-height] duration-500 ease-in-out md:hidden ${
                 isOpen ? "max-h-screen" : "max-h-0"
             }`}
         >
@@ -36,7 +46,13 @@ export default function MobileMenu({
                     <Link
                         key={label}
                         href={href}
-                        className="block transition-colors duration-300 hover:text-primary"
+                        aria-current={pathname === href ? "page" : undefined}
+                        onClick={onClose}
+                        className={`block transition-colors duration-300 hover:text-primary ${
+                            pathname === href
+                                ? "font-semibold text-primary"
+                                : ""
+                        }`}
                     >
                         {label}
                     </Link>
