@@ -29,7 +29,7 @@ export default function MobileMenu({
     ],
     isOpen = false,
     onClose,
-}: MobileMenuProps): JSX.Element {
+}: MobileMenuProps) {
     const pathname = usePathname();
 
     return (

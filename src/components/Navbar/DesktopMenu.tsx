@@ -22,7 +22,7 @@ export default function DesktopMenu({
         { label: "Blog", href: "/blog" },
         { label: "Contact", href: "/contact" },
     ],
-}: DesktopMenuProps): JSX.Element {
+}: DesktopMenuProps) {
     return (
         <div className="text-text hidden space-x-6 md:flex">
             {links.map(({ label, href }) => (
