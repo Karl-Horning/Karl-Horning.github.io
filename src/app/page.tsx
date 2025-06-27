@@ -1,6 +1,6 @@
 import Header from "@/components/Header/Header";
 import About from "@/components/About/About";
-import Skills from "@/components/Skills/Skills";
+import Skills from "@/components/Skills";
 import Work from "@/components/Work/Work";
 import Personal from "@/components/Personal/Personal";
 import Contact from "@/components/Contact/Contact";
