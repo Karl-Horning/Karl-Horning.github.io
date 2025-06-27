@@ -2,10 +2,9 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-export type ButtonType = "primary" | "secondary" | "small";
+type ButtonType = "primary" | "secondary" | "small";
 
-export interface ButtonLinkProps {
-    /** The link URL. */
+interface ButtonLinkProps {
     href: string;
     text: string;
     type?: ButtonType;
