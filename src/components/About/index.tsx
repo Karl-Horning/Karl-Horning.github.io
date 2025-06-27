@@ -1,5 +1,6 @@
 import ButtonLink from "../Buttons/ButtonLink";
 import Header from "../Header";
+import Section from "../Section";
 
 /**
  * A section component that introduces the user with a heading, description, and a call-to-action button.
@@ -9,9 +10,8 @@ import Header from "../Header";
  */
 export default function About() {
     return (
-        <section className="bg-background px-6 py-16">
+        <Section id="about" header="About Me">
             <div className="mx-auto max-w-4xl text-center">
-                <Header text="About Me" />
                 <p className="mx-auto mb-6 max-w-3xl text-lg text-text transition-colors duration-300 md:text-xl">
                     I&apos;m a Full-Stack JavaScript Developer and Learning
                     Technologist with over 15 years&apos; experience in EdTech,
@@ -25,6 +25,6 @@ export default function About() {
                     type="secondary"
                 />
             </div>
-        </section>
+        </Section>
     );
 }

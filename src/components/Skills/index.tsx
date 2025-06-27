@@ -1,6 +1,7 @@
 import { FaDatabase, FaJs, FaReact, FaUniversalAccess } from "react-icons/fa6";
 import Header from "../Header";
 import SkillsCard from "./SkillsCard";
+import Section from "../Section";
 
 /**
  * A section component that displays a grid of skill cards with icons.
@@ -32,9 +33,8 @@ export default function Skills() {
         },
     ];
     return (
-        <section className="bg-background px-6 py-16">
+        <Section id="skills" header="Skills">
             <div className="mx-auto max-w-6xl">
-                <Header text="Skills" />
                 <div className="mx-auto grid max-w-4xl grid-cols-2 gap-10 text-center sm:grid-cols-3 md:grid-cols-4">
                     {skills.map(({ text, icon, colour }) => (
                         <SkillsCard
@@ -46,6 +46,6 @@ export default function Skills() {
                     ))}
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
