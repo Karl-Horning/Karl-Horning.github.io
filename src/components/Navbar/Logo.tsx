@@ -7,6 +7,7 @@ import styles from "./Logo.module.css";
  * custom glitch effect classes and Tailwind utility classes.
  *
  * @component
+ * @returns The logo for the website
  */
 export default function Logo() {
     return (

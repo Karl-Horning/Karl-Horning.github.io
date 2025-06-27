@@ -20,6 +20,7 @@ import MobileToggleButton from "./MobileToggleButton";
  * Accessibility:
  * - Uses ARIA roles and labels for navigation and toggle buttons
  *
+ * @component
  * @returns The rendered navigation bar component
  */
 export default function Navbar() {

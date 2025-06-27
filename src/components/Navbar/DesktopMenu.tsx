@@ -12,8 +12,9 @@ interface DesktopMenuProps {
 /**
  * Desktop navigation menu component for larger viewports.
  *
+ * @component
  * @param {DesktopMenuProps} props - Optional array of nav links (label and href).
- * @returns {JSX.Element} The rendered desktop menu.
+ * @returns The rendered desktop menu.
  */
 export default function DesktopMenu({
     links = [

@@ -11,6 +11,7 @@ interface MobileToggleButtonProps {
 /**
  * Button to toggle the mobile navigation menu.
  *
+ * @component
  * @param {MobileToggleButtonProps} props - Contains `isOpen` flag and `onToggle` handler.
  * @returns Toggle button with correct icon.
  */

@@ -19,7 +19,7 @@ interface MobileMenuProps {
  *
  * @component
  * @param {MobileMenuProps} props - Menu visibility state, link data, and optional close handler.
- * @returns {JSX.Element} The rendered mobile menu.
+ * @returns The rendered mobile menu.
  */
 export default function MobileMenu({
     links = [
