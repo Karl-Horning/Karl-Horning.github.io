@@ -48,5 +48,15 @@ const config: Config = {
     },
     plugins: [nextui()],
     darkMode: "class",
+    safelist: [
+        "bg-yellow-600",
+        "bg-green-700",
+        "bg-blue-700",
+        "bg-pink-700",
+        "bg-blue-900",
+        "bg-amber-600",
+        "bg-violet-800",
+        "bg-orange-700",
+    ],
 };
 export default config;
