@@ -3,6 +3,9 @@
  * Useful for maintaining consistent URLs for social profiles, apps, and repositories.
  */
 export const externalLinks = {
+    /** The blog subdomain */
+    blog: "https://karl-horning.github.io/dev-blog/blog/",
+
     /** Karl Horning's CodePen profile link */
     codePen: "https://codepen.io/karlhorning",
 

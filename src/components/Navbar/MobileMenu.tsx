@@ -1,4 +1,4 @@
-import { internalRoutes } from "@/constants/links";
+import { externalLinks, internalRoutes } from "@/constants/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -25,7 +25,7 @@ interface MobileMenuProps {
 export default function MobileMenu({
     links = [
         { label: "About", href: internalRoutes.about },
-        { label: "Blog", href: internalRoutes.blog },
+        { label: "Blog", href: externalLinks.blog },
         { label: "Contact", href: internalRoutes.contact },
     ],
     isOpen = false,
