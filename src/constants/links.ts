@@ -15,8 +15,11 @@ export const externalLinks = {
     /** Karl Horning's LinkedIn profile link */
     linkedIn: "https://www.linkedin.com/in/karl-horning/",
 
+    /** Karl Horning's portfolio site */
+    portfolio: "https://karl-horning.github.io/",
+
     /** Karl Horning's portfolio site repo */
-    portfolio: "https://github.com/Karl-Horning/Karl-Horning.github.io",
+    portfolioRepo: "https://github.com/Karl-Horning/Karl-Horning.github.io",
 
     /** Learnlight iOS App link */
     learnlight: {
