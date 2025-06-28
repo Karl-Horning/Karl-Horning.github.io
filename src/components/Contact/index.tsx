@@ -1,5 +1,6 @@
 import ButtonLink from "@/components/Buttons/ButtonLink";
 import Section from "@/components/Section";
+import { internalRoutes } from "@/constants/links";
 
 /**
  * Contact section inviting collaboration, with a brief message and call-to-action button.
@@ -21,7 +22,7 @@ export default function Contact() {
                     full-stack development. Let&apos;s build something great
                     together.
                 </p>
-                <ButtonLink text="Get in Touch" href="/contact" />
+                <ButtonLink text="Get in Touch" href={internalRoutes.contact} />
             </div>
         </Section>
     );

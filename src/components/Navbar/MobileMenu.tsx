@@ -1,3 +1,4 @@
+import { internalRoutes } from "@/constants/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -23,9 +24,9 @@ interface MobileMenuProps {
  */
 export default function MobileMenu({
     links = [
-        { label: "About", href: "/about" },
-        { label: "Blog", href: "/blog" },
-        { label: "Contact", href: "/contact" },
+        { label: "About", href: internalRoutes.about },
+        { label: "Blog", href: internalRoutes.blog },
+        { label: "Contact", href: internalRoutes.contact },
     ],
     isOpen = false,
     onClose,
@@ -41,7 +42,7 @@ export default function MobileMenu({
                 isOpen ? "max-h-screen" : "max-h-0"
             }`}
         >
-            <div className="text-text flex flex-col items-center space-y-8 px-4 py-8 text-center text-lg">
+            <div className="flex flex-col items-center space-y-8 px-4 py-8 text-center text-lg text-text">
                 {links.map(({ label, href }) => (
                     <Link
                         key={label}

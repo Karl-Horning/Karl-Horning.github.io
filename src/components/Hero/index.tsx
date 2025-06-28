@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ButtonLink from "@/components/Buttons/ButtonLink";
+import { internalRoutes } from "@/constants/links";
 
 /**
  * Hero section displayed at the top of the homepage, introducing the developer with an image,
@@ -35,7 +36,7 @@ export default function Hero() {
                 </p>
                 <ButtonLink
                     text="Work With Me"
-                    href="/contact"
+                    href={internalRoutes.contact}
                     className="mt-8"
                 />
             </div>

@@ -1,3 +1,4 @@
+import { externalLinks, internalRoutes } from "@/constants/links";
 import Link from "next/link";
 import { FaEnvelope, FaGithub, FaLinkedin, FaRss } from "react-icons/fa6";
 
@@ -11,31 +12,28 @@ export default function Footer() {
     const links = [
         {
             label: "GitHub",
-            href: "https://github.com/Karl-Horning/",
+            href: externalLinks.gitHub,
             icon: FaGithub,
         },
         {
             label: "LinkedIn",
-            href: "https://www.linkedin.com/in/karl-horning/",
+            href: externalLinks.linkedIn,
             icon: FaLinkedin,
         },
         {
             label: "Contact",
-            href: "/contact",
+            href: internalRoutes.contact,
             icon: FaEnvelope,
         },
         {
             label: "RSS Feed",
-            href: "/rss",
+            href: internalRoutes.rss,
             icon: FaRss,
         },
     ];
 
     return (
-        <footer
-            className="text-muted mt-12 bg-black py-8"
-            role="contentinfo"
-        >
+        <footer className="mt-12 bg-black py-8 text-muted" role="contentinfo">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
                 <p className="text-sm" aria-label="Copyright notice">
                     &copy; 2025 Karl Horning. All rights reserved.
@@ -49,7 +47,7 @@ export default function Footer() {
                             key={label}
                             href={href}
                             aria-label={label}
-                            className="text-muted hover:text-primary transition-colors duration-300"
+                            className="text-muted transition-colors duration-300 hover:text-primary"
                             target={
                                 href.startsWith("http") ? "_blank" : undefined
                             }

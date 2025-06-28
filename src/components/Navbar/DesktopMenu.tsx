@@ -1,3 +1,4 @@
+import { internalRoutes } from "@/constants/links";
 import Link from "next/link";
 
 type NavLink = {
@@ -18,13 +19,13 @@ interface DesktopMenuProps {
  */
 export default function DesktopMenu({
     links = [
-        { label: "About", href: "/about" },
-        { label: "Blog", href: "/blog" },
-        { label: "Contact", href: "/contact" },
+        { label: "About", href: internalRoutes.about },
+        { label: "Blog", href: internalRoutes.blog },
+        { label: "Contact", href: internalRoutes.contact },
     ],
 }: DesktopMenuProps) {
     return (
-        <div className="text-text hidden space-x-6 md:flex">
+        <div className="hidden space-x-6 text-text md:flex">
             {links.map(({ label, href }) => (
                 <Link
                     key={label}
