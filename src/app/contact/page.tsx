@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import { externalLinks, internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
+import Script from "next/script";
 
 export const metadata = createMetadata({
     title: "Contact",
@@ -39,12 +40,15 @@ export default function Contact() {
                             value="Portfolio Form"
                         />
 
+                        <h2 className="sr-only">Contact Form</h2>
+
                         {/* Name */}
                         <div className="relative">
                             <input
                                 id="name"
                                 name="name"
                                 type="text"
+                                autoComplete="name"
                                 required
                                 placeholder=" "
                                 className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -71,6 +75,7 @@ export default function Contact() {
                                 id="email"
                                 name="email"
                                 type="email"
+                                autoComplete="email"
                                 required
                                 placeholder=" "
                                 className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -86,19 +91,20 @@ export default function Contact() {
                                 </span>
                             </label>
                             <span
-                                id="nameHint"
+                                id="emailHint"
                                 className="mt-1 block text-sm text-primary opacity-0 transition-opacity duration-200 peer-placeholder-shown:opacity-0 peer-focus:opacity-100"
                             >
                                 Enter a valid email.
                             </span>
                         </div>
 
-                        {/* Name */}
+                        {/* Company */}
                         <div className="relative">
                             <input
                                 id="company"
                                 name="company"
                                 type="text"
+                                autoComplete="organization"
                                 placeholder=" "
                                 className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:outline-none focus:ring-2 focus:ring-primary"
                                 aria-describedby="companyHint"
@@ -131,7 +137,7 @@ export default function Contact() {
 
                             <label
                                 htmlFor="message"
-                                className="primary absolute left-3 top-2 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-muted peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary"
+                                className="absolute left-3 top-2 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-muted peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary"
                             >
                                 Message
                                 <span className="text-primary">*</span>
@@ -171,6 +177,21 @@ export default function Contact() {
                     </p>
                 </div>
             </section>
+
+            <Script
+                id="contact-ld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ContactPage",
+                        url: `${externalLinks.portfolio}${internalRoutes.contact}`,
+                        name: "Contact - Karl Horning",
+                        description:
+                            "Use the form to contact Karl Horning or connect on LinkedIn.",
+                    }),
+                }}
+            />
         </main>
     );
 }
