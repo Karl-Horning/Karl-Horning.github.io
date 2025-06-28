@@ -29,8 +29,19 @@ export const externalLinks = {
  * A collection of internal route paths for use in navigation and routing.
  */
 export const internalRoutes = {
+    /** The home page */
     home: "/",
+
+    /** The about page */
+
     about: "/about",
+
+    /** The blog subdomain */
     blog: "/blog",
+
+    /** The contact page */
     contact: "/contact",
+
+    /** The RSS feed for the blog subdomain */
+    rss: "/rss",
 };
