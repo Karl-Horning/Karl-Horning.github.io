@@ -42,7 +42,7 @@ export default function ButtonLink({
             "bg-primary text-white px-6 py-3 text-xl hover:bg-highlight shadow",
         secondary:
             "border-4 border-primary text-primary px-6 py-2 text-xl hover:bg-primary hover:text-white",
-        small: "bg-primary text-white text-sm px-3 py-1 shadow hover:bg-highlight hover:text-hero",
+        small: "bg-primary text-white text-sm px-3 py-1 shadow hover:bg-highlight",
     };
 
     const mergedClass = twMerge(baseStyles, typeStyles[type], className);
