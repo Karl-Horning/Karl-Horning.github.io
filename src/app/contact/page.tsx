@@ -47,7 +47,7 @@ export default function Contact() {
                                 type="text"
                                 required
                                 placeholder=" "
-                                className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:border-primary focus:ring-2 focus:ring-primary"
+                                className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:outline-none focus:ring-2 focus:ring-primary"
                                 aria-describedby="nameHint"
                             />
                             <label
@@ -73,7 +73,7 @@ export default function Contact() {
                                 type="email"
                                 required
                                 placeholder=" "
-                                className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:border-primary focus:ring-2 focus:ring-primary"
+                                className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:outline-none focus:ring-2 focus:ring-primary"
                                 aria-describedby="emailHint"
                             />
                             <label
@@ -100,7 +100,7 @@ export default function Contact() {
                                 name="company"
                                 type="text"
                                 placeholder=" "
-                                className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:border-primary focus:ring-2 focus:ring-primary"
+                                className="peer w-full rounded-lg border border-transparent bg-surface p-3 pt-6 focus:outline-none focus:ring-2 focus:ring-primary"
                                 aria-describedby="companyHint"
                             />
                             <label
@@ -126,7 +126,7 @@ export default function Contact() {
                                 required
                                 placeholder=" "
                                 aria-describedby="messageHint"
-                                className="peer mt-1 w-full resize-none rounded-lg border border-transparent bg-surface p-3 pt-6 focus:border-primary focus:ring-2 focus:ring-primary"
+                                className="peer mt-1 w-full resize-none rounded-lg border border-transparent bg-surface p-3 pt-6 focus:outline-none focus:ring-2 focus:ring-primary"
                             ></textarea>
 
                             <label
@@ -148,7 +148,7 @@ export default function Contact() {
                         {/* Submit */}
                         <button
                             type="submit"
-                            className="mb-4 inline-block w-full cursor-pointer rounded-lg bg-primary px-8 py-4 text-xl font-semibold text-white shadow transition-colors duration-300 hover:bg-highlight hover:text-hero"
+                            className="mb-4 inline-block w-full cursor-pointer rounded-lg bg-primary px-8 py-4 text-xl font-semibold text-white shadow transition-colors duration-300 hover:bg-highlight hover:text-hero focus:outline-none focus:ring-2 focus:ring-white"
                         >
                             Send Message
                         </button>

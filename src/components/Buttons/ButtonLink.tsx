@@ -35,7 +35,7 @@ export default function ButtonLink({
     const isExternal = external ?? href.startsWith("http");
 
     const baseStyles =
-        "inline-block font-bold rounded transition-colors duration-300";
+        "inline-block font-bold rounded transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white";
 
     const typeStyles = {
         primary:

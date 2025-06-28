@@ -47,7 +47,7 @@ export default function Footer() {
                             key={label}
                             href={href}
                             aria-label={label}
-                            className="text-muted transition-colors duration-300 hover:text-primary"
+                            className="text-muted transition-colors duration-300 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
                             target={
                                 href.startsWith("http") ? "_blank" : undefined
                             }

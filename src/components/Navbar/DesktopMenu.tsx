@@ -30,7 +30,7 @@ export default function DesktopMenu({
                 <Link
                     key={label}
                     href={href}
-                    className="transition-colors duration-300 hover:text-primary"
+                    className="transition-colors duration-300 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                     {label}
                 </Link>
