@@ -1,39 +1,49 @@
 [
     {
-        "title": "Exploring Static Site Generators",
-        "date": "26 June 2025",
-        "snippet": "A look at how tools like Eleventy and Next.js help streamline web development through pre-rendering and modular components.",
+        "title": "Testing, Testing",
+        "href": "https://karl-horning.github.io/dev-blog/posts/testing-testing/",
+        "img": "https://karl-horning.github.io/dev-blog/img/pexels-mali-63238.jpg",
+        "imgAlt": "Graffiti of a monkey wearing sunglasses (placeholder image)",
+        "date": "23 June 2025",
+        "snippet": " A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together. ",
         "tags": [
             {
-                "title": "Eleventy",
-                "href": "/blog"
+                "title": "meta",
+                "href": "https://karl-horning.github.io/dev-blog/tags/meta/"
             },
             {
-                "title": "Jamstack",
-                "href": "/blog"
+                "title": "blog",
+                "href": "https://karl-horning.github.io/dev-blog/tags/blog/"
             },
             {
-                "title": "Next.js",
-                "href": "/blog"
+                "title": "testing",
+                "href": "https://karl-horning.github.io/dev-blog/tags/testing/"
             }
         ]
     },
     {
-        "title": "Mastering the Async Request API",
-        "date": "18 June 2025",
-        "snippet": "A walkthrough of the new Async Request API in Next.js 15 and how it improves server-side data loading.",
+        "title": "Hello, World!",
+        "href": "https://karl-horning.github.io/dev-blog/posts/hello-world/",
+        "img": "https://karl-horning.github.io/dev-blog/img/pexels-meruyert-gonullu-7317281.jpg",
+        "imgAlt": "A neon sign saying 'hello'",
+        "date": "22 June 2025",
+        "snippet": "A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.",
         "tags": [
             {
-                "title": "Next.js",
-                "href": "/blog"
+                "title": "meta",
+                "href": "https://karl-horning.github.io/dev-blog/tags/meta/"
             },
             {
-                "title": "React",
-                "href": "/blog"
+                "title": "blog",
+                "href": "https://karl-horning.github.io/dev-blog/tags/blog/"
             },
             {
-                "title": "SSR",
-                "href": "/blog"
+                "title": "personal",
+                "href": "https://karl-horning.github.io/dev-blog/tags/personal/"
+            },
+            {
+                "title": "technology",
+                "href": "https://karl-horning.github.io/dev-blog/tags/technology/"
             }
         ]
     }
