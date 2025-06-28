@@ -36,7 +36,7 @@ const config: Config = {
                 // TODO: Remove the colours above after update
                 primary: "#e93681", // vibrant pink/red
                 accent: "#14a098", // teal accent
-                highlight: "#fee300", // yellow for emphasis
+                highlight: "#148aad", // teal for emphasis
                 background: "#0f292f", // main background
                 "background-subtle": "#254c4f", // slight contrast
                 surface: "#1a3b3d", // card background
