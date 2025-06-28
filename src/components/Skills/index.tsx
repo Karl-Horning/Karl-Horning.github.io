@@ -1,6 +1,6 @@
 import { FaDatabase, FaJs, FaReact, FaUniversalAccess } from "react-icons/fa6";
-import SkillsCard from "./SkillsCard";
-import Section from "../Section";
+import SkillsCard from "@/components/Skills/SkillsCard";
+import Section from "@/components/Section";
 
 /**
  * A section component that displays a grid of skill cards with icons.
