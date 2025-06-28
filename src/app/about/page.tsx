@@ -9,7 +9,7 @@ export const metadata = createMetadata({
     path: internalRoutes.about,
 });
 
-export default function Contact() {
+export default function About() {
     const values = [
         {
             title: "Accessibility",
@@ -233,7 +233,7 @@ export default function Contact() {
                     <li className="flex h-28 items-center justify-center rounded-lg bg-surface p-4 shadow-sm">
                         <Image
                             src="/img/badges/uni-credential-emblem-jirafundamentals.png"
-                            alt="Jira Fundamentals Badge from Atlassian"
+                            alt="Atlassian Jira Fundamentals digital badge"
                             title="Jira Fundamentals Badge"
                             className="pointer-events-none max-h-16 select-none object-contain"
                             loading="lazy"
@@ -246,7 +246,7 @@ export default function Contact() {
                     <li className="flex h-28 items-center justify-center rounded-lg bg-surface p-4 shadow-sm">
                         <Image
                             src="/img/badges/DyslexiaAwarenessBadge.svg"
-                            alt="Dyslexia Awareness Badge"
+                            alt="Dyslexia Awareness digital badge"
                             title="Dyslexia Awareness Badge"
                             className="pointer-events-none max-h-16 select-none object-contain"
                             loading="lazy"
@@ -265,7 +265,7 @@ export default function Contact() {
                             <Image
                                 src="/img/badges/AppleTeacher_black.svg"
                                 alt="Apple Teacher Badge from Apple"
-                                title="Apple Teacher Badge"
+                                title="Apple Teacher digital badge"
                                 className="pointer-events-none h-16 select-none"
                                 loading="lazy"
                                 height={200}
