@@ -2,8 +2,34 @@ import Image from "next/image";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 import { icons } from "@/constants/icons";
 
+type Tag = {
+    title: string;
+    href: string;
+};
 
-export default function BlogCard() {
+interface BlogCardProps {
+    title: string;
+    date: string;
+    snippet: string;
+    tags: Tag[];
+}
+
+/**
+ * A card component to display a blog post preview including title, date, snippet,
+ * tags, and a thumbnail image. Includes a "Read More" button linking to the blog.
+ *
+ * @component
+ * @param {string} title - The title of the blog post.
+ * @param {string} date - The publication date of the blog post.
+ * @param {string} snippet - A short excerpt or summary of the blog post content.
+ * @param {Array<{ title: string, href: string }>} tags - An array of tags related to the post, each with a label and URL.
+ */
+export default function BlogCard({
+    title,
+    date,
+    snippet,
+    tags,
+}: BlogCardProps) {
     return (
         <article className="rounded-lg bg-surface p-8 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <Image
@@ -13,33 +39,19 @@ export default function BlogCard() {
                 width={1200}
                 height={400}
             />
-            <h3 className="mb-2 text-2xl font-semibold text-text">
-                Exploring Static Site Generators
-            </h3>
-            <p className="mb-2 text-sm text-muted">26 June 2025</p>
-            <p className="mb-4 text-text">
-                A look at how tools like Eleventy and Next.js help streamline
-                web development through pre-rendering and modular components.
-            </p>
+            <h3 className="mb-2 text-2xl font-semibold text-text">{title}</h3>
+            <p className="mb-2 text-sm text-muted">{date}</p>
+            <p className="mb-4 text-text">{snippet}</p>
             <div className="mb-4 flex flex-wrap gap-2">
-                <a
-                    href="./blog.html"
-                    className="rounded bg-hero px-2 py-1 text-sm text-muted transition-colors duration-300 hover:bg-primary hover:text-white"
-                >
-                    Eleventy
-                </a>
-                <a
-                    href="./blog.html"
-                    className="rounded bg-hero px-2 py-1 text-sm text-muted transition-colors duration-300 hover:bg-primary hover:text-white"
-                >
-                    Jamstack
-                </a>
-                <a
-                    href="./blog.html"
-                    className="rounded bg-hero px-2 py-1 text-sm text-muted transition-colors duration-300 hover:bg-primary hover:text-white"
-                >
-                    Next.js
-                </a>
+                {tags.map(({ title, href }, index) => (
+                    <a
+                        key={`${title}-${index}`}
+                        href={href}
+                        className="rounded bg-hero px-2 py-1 text-sm text-muted transition-colors duration-300 hover:bg-primary hover:text-white"
+                    >
+                        {title}
+                    </a>
+                ))}
             </div>
             <ButtonLink
                 text="Read More"
