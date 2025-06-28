@@ -16,7 +16,7 @@ import { BlogPost } from "@/types/blog";
 export default function BlogCard({
     title,
     href,
-    img,
+    imgUrl,
     imgAlt,
     date,
     snippet,
@@ -25,7 +25,7 @@ export default function BlogCard({
     return (
         <article className="rounded-lg bg-surface p-8 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <Image
-                src={img}
+                src={imgUrl}
                 alt={imgAlt}
                 className="mb-4 h-48 w-full rounded-md object-cover"
                 width={1200}

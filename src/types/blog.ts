@@ -21,7 +21,7 @@ export type Tag = {
 export interface BlogPost {
     title: string;
     href: string;
-    img: string;
+    imgUrl: string;
     imgAlt: string;
     date: string;
     snippet: string;

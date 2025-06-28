@@ -17,11 +17,11 @@ export default async function Blog() {
         <Section id="blog" header="From the Blog">
             <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
                 {blogPosts.map(
-                    ({ title, href, img, imgAlt, date, snippet, tags }) => (
+                    ({ title, href, imgUrl, imgAlt, date, snippet, tags }) => (
                         <BlogCard
                             key={title}
                             title={title}
-                            img={img}
+                            imgUrl={imgUrl}
                             imgAlt={imgAlt}
                             href={href}
                             date={date}
