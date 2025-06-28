@@ -1,4 +1,5 @@
 import {
+    FaArrowRight,
     FaCodepen,
     FaDatabase,
     FaEnvelope,
@@ -38,6 +39,9 @@ export const icons = {
 
     /** React icon  */
     react: FaReact,
+
+    /** Read more (for blog buttons)  */
+    readMore: FaArrowRight,
 
     /** RSS feed  */
     rss: FaRss,

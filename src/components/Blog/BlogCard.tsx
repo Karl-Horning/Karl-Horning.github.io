@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ButtonLink from "@/components/Buttons/ButtonLink";
-import { FaArrowRight } from "react-icons/fa6";
+import { icons } from "@/constants/icons";
+
 
 export default function BlogCard() {
     return (
@@ -44,7 +45,7 @@ export default function BlogCard() {
                 text="Read More"
                 href="/blog"
                 type="small"
-                icon={<FaArrowRight />}
+                icon={<icons.readMore />}
             />
         </article>
     );

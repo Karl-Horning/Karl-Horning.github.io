@@ -1,6 +1,6 @@
+import { icons } from "@/constants/icons";
 import { externalLinks, internalRoutes } from "@/constants/links";
 import Link from "next/link";
-import { FaEnvelope, FaGithub, FaLinkedin, FaRss } from "react-icons/fa6";
 
 /**
  * Footer component displaying copyright and social media/contact links.
@@ -13,22 +13,22 @@ export default function Footer() {
         {
             label: "GitHub",
             href: externalLinks.gitHub,
-            icon: FaGithub,
+            icon: icons.gitHub,
         },
         {
             label: "LinkedIn",
             href: externalLinks.linkedIn,
-            icon: FaLinkedin,
+            icon: icons.linkedIn,
         },
         {
             label: "Contact",
             href: internalRoutes.contact,
-            icon: FaEnvelope,
+            icon: icons.contact,
         },
         {
             label: "RSS Feed",
             href: internalRoutes.rss,
-            icon: FaRss,
+            icon: icons.rss,
         },
     ];
 

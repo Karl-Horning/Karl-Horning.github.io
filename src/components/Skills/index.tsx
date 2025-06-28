@@ -1,6 +1,6 @@
-import { FaDatabase, FaJs, FaReact, FaUniversalAccess } from "react-icons/fa6";
 import SkillsCard from "@/components/Skills/SkillsCard";
 import Section from "@/components/Section";
+import { icons } from "@/constants/icons";
 
 /**
  * A section component that displays a grid of skill cards with icons.
@@ -12,22 +12,22 @@ export default function Skills() {
     const skills = [
         {
             text: "JavaScript",
-            icon: FaJs,
+            icon: icons.javaScript,
             colour: "text-yellow-400",
         },
         {
             text: "React",
-            icon: FaReact,
+            icon: icons.react,
             colour: "text-blue-400",
         },
         {
             text: "Accessibility",
-            icon: FaUniversalAccess,
+            icon: icons.accessibility,
             colour: "text-red",
         },
         {
             text: "SQL & APIs",
-            icon: FaDatabase,
+            icon: icons.database,
             colour: "text-orange-400",
         },
     ];
