@@ -1,18 +1,7 @@
 import Image from "next/image";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 import { icons } from "@/constants/icons";
-
-type Tag = {
-    title: string;
-    href: string;
-};
-
-interface BlogCardProps {
-    title: string;
-    date: string;
-    snippet: string;
-    tags: Tag[];
-}
+import { BlogPost } from "@/types/blog";
 
 /**
  * A card component to display a blog post preview including title, date, snippet,
@@ -24,12 +13,7 @@ interface BlogCardProps {
  * @param {string} snippet - A short excerpt or summary of the blog post content.
  * @param {Array<{ title: string, href: string }>} tags - An array of tags related to the post, each with a label and URL.
  */
-export default function BlogCard({
-    title,
-    date,
-    snippet,
-    tags,
-}: BlogCardProps) {
+export default function BlogCard({ title, date, snippet, tags }: BlogPost) {
     return (
         <article className="rounded-lg bg-surface p-8 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <Image
