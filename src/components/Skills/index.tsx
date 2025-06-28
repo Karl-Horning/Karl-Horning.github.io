@@ -1,5 +1,4 @@
 import { FaDatabase, FaJs, FaReact, FaUniversalAccess } from "react-icons/fa6";
-import Header from "../Header";
 import SkillsCard from "./SkillsCard";
 import Section from "../Section";
 
