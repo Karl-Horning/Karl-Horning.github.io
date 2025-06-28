@@ -1,4 +1,4 @@
-import styles from "./Logo.module.css";
+import styles from "@/components/Navbar/Logo.module.css";
 
 /**
  * Logo component displaying the site logo with a glitch hover effect.

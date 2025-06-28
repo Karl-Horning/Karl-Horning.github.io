@@ -1,5 +1,5 @@
-import ButtonLink from "../Buttons/ButtonLink";
-import Section from "../Section";
+import ButtonLink from "@/components/Buttons/ButtonLink";
+import Section from "@/components/Section";
 
 /**
  * Contact section inviting collaboration, with a brief message and call-to-action button.

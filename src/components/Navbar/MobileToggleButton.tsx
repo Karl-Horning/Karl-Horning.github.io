@@ -1,7 +1,7 @@
 "use client";
 
-import CloseIcon from "../Icons/CloseIcon";
-import HamburgerIcon from "../Icons/HamburgerIcon";
+import CloseIcon from "@/components/Icons/CloseIcon";
+import HamburgerIcon from "@/components/Icons/HamburgerIcon";
 
 interface MobileToggleButtonProps {
     isOpen: boolean;

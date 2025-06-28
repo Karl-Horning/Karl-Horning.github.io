@@ -1,5 +1,5 @@
-import Section from "../Section";
-import BlogCard from "./BlogCard";
+import Section from "@/components/Section";
+import BlogCard from "@/components/Blog/BlogCard";
 
 export default function Blog() {
     return (

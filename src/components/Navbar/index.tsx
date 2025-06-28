@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import DesktopMenu from "./DesktopMenu";
-import Logo from "./Logo";
-import MobileMenu from "./MobileMenu";
-import MobileToggleButton from "./MobileToggleButton";
+import DesktopMenu from "@/components/Navbar/DesktopMenu";
+import Logo from "@/components/Navbar/Logo";
+import MobileMenu from "@/components/Navbar/MobileMenu";
+import MobileToggleButton from "@/components/Navbar/MobileToggleButton";
 
 /**
  * Navigation bar component.

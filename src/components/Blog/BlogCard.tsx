@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonLink from "../Buttons/ButtonLink";
+import ButtonLink from "@/components/Buttons/ButtonLink";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function BlogCard() {
