@@ -1,3 +1,4 @@
+import Button from "@/components/Buttons/Button";
 import Header from "@/components/Header";
 import { externalLinks, internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
@@ -165,12 +166,9 @@ export default function Contact() {
                         </div>
 
                         {/* Submit */}
-                        <button
-                            type="submit"
-                            className="mb-4 inline-block w-full cursor-pointer rounded-lg bg-primary px-8 py-4 text-xl font-semibold text-white shadow transition-colors duration-300 hover:bg-highlight focus:outline-none focus:ring-2 focus:ring-white"
-                        >
+                        <Button type="submit" className="mb-4 w-full">
                             Send Message
-                        </button>
+                        </Button>
 
                         {/* TODO: redirect */}
                         {/* <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you"> */}

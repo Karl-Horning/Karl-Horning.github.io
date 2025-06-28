@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import { twMerge } from "tailwind-merge";
-
-type ButtonType = "primary" | "secondary" | "small";
+import { getButtonClasses, ButtonType } from "@/components/Buttons/buttonStyles";
 
 interface ButtonLinkProps {
     href: string;
@@ -34,18 +32,7 @@ export default function ButtonLink({
 }: ButtonLinkProps) {
     const isExternal = external ?? href.startsWith("http");
 
-    const baseStyles =
-        "inline-block font-bold rounded transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white";
-
-    const typeStyles = {
-        primary:
-            "bg-primary text-white px-6 py-3 text-xl hover:bg-highlight shadow",
-        secondary:
-            "border-4 border-primary text-primary px-6 py-2 text-xl hover:bg-primary hover:text-white",
-        small: "bg-primary text-white text-sm px-3 py-1 shadow hover:bg-highlight",
-    };
-
-    const mergedClass = twMerge(baseStyles, typeStyles[type], className);
+    const mergedClass = getButtonClasses(type, className);
 
     const content = (
         <span className="inline-flex items-center gap-2">
