@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 import { internalRoutes } from "@/constants/links";
+import { assets } from "@/constants/assets";
 
 /**
  * Hero section displayed at the top of the homepage, introducing the developer with an image,
@@ -15,7 +16,7 @@ export default function Hero() {
             {/* Image container */}
             <div className="relative left-0 top-0 flex h-48 w-full items-center justify-center overflow-hidden md:absolute md:h-full md:w-1/2 md:justify-start">
                 <Image
-                    src="/karl.png"
+                    src={assets.profileImage}
                     alt=""
                     className="pointer-events-none h-40 w-40 select-none rounded-full border-4 border-white object-cover object-top opacity-50 md:h-full md:w-full md:rounded-none md:border-0"
                     aria-hidden="true"

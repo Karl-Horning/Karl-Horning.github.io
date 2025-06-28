@@ -1,3 +1,4 @@
+import { assets } from "@/constants/assets";
 import Image from "next/image";
 
 /**
@@ -14,7 +15,7 @@ export default function AboutPhotoCard() {
     return (
         <section className="group relative">
             <Image
-                src="/karl.png"
+                src={assets.profileImage}
                 alt="Karl: JavaScript developer and learning technologist"
                 className="h-full w-full transform rounded-xl bg-primary object-cover transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
