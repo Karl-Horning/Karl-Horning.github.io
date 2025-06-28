@@ -16,15 +16,20 @@ export default async function Blog() {
     return (
         <Section id="blog" header="From the Blog">
             <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-                {blogPosts.map(({ title, date, snippet, tags }) => (
-                    <BlogCard
-                        key={title}
-                        title={title}
-                        date={date}
-                        snippet={snippet}
-                        tags={tags}
-                    />
-                ))}
+                {blogPosts.map(
+                    ({ title, href, img, imgAlt, date, snippet, tags }) => (
+                        <BlogCard
+                            key={title}
+                            title={title}
+                            img={img}
+                            imgAlt={imgAlt}
+                            href={href}
+                            date={date}
+                            snippet={snippet}
+                            tags={tags}
+                        />
+                    )
+                )}
             </div>
         </Section>
     );

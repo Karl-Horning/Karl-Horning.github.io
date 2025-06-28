@@ -13,12 +13,20 @@ import { BlogPost } from "@/types/blog";
  * @param {string} snippet - A short excerpt or summary of the blog post content.
  * @param {Array<{ title: string, href: string }>} tags - An array of tags related to the post, each with a label and URL.
  */
-export default function BlogCard({ title, date, snippet, tags }: BlogPost) {
+export default function BlogCard({
+    title,
+    href,
+    img,
+    imgAlt,
+    date,
+    snippet,
+    tags,
+}: BlogPost) {
     return (
         <article className="rounded-lg bg-surface p-8 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <Image
-                src="/work-and-projects/computer-svg-animation-preview.webp"
-                alt="Preview of computer SVG animation project"
+                src={img}
+                alt={imgAlt}
                 className="mb-4 h-48 w-full rounded-md object-cover"
                 width={1200}
                 height={400}
@@ -39,7 +47,7 @@ export default function BlogCard({ title, date, snippet, tags }: BlogPost) {
             </div>
             <ButtonLink
                 text="Read More"
-                href="/blog"
+                href={href}
                 type="small"
                 icon={<icons.readMore />}
             />

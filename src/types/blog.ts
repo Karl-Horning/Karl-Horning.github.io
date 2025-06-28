@@ -20,6 +20,9 @@ export type Tag = {
  */
 export interface BlogPost {
     title: string;
+    href: string;
+    img: string;
+    imgAlt: string;
     date: string;
     snippet: string;
     tags: Tag[];
