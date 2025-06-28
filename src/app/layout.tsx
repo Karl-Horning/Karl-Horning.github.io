@@ -68,7 +68,9 @@ export default function RootLayout({
             className={`${inter.variable} ${poppins.variable} ${rubikGlitch.variable} scroll-smooth`}
             style={{ scrollBehavior: "smooth" }}
         >
-            <body className={`${inter.className} min-h-screen font-sans`}>
+            <body
+                className={`${inter.className} min-h-screen bg-background font-sans`}
+            >
                 <Navbar />
                 {children}
                 <Footer />
