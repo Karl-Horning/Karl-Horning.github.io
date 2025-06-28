@@ -8,6 +8,8 @@ interface SectionProps {
     header: string;
     /** The content to be rendered within the section. */
     children?: ReactNode;
+    /** Any additional classes for the section */
+    className?: string;
 }
 
 /**
@@ -17,11 +19,17 @@ interface SectionProps {
  * @param {string} id - The unique identifier for the section.
  * @param {string} header - The header text of the section.
  * @param {ReactNode} [children] - The content to be rendered within the section.
+ * @param {string} [className] - Additional Tailwind CSS classes to apply.
  * @returns Section component
  */
-export default function Section({ id, header, children }: SectionProps) {
+export default function Section({
+    id,
+    header,
+    children,
+    className = "",
+}: SectionProps) {
     return (
-        <section id={id} className="bg-background px-6 py-16">
+        <section id={id} className={`bg-background px-6 py-16 ${className}`}>
             <Header text={header} />
             {children}
         </section>
