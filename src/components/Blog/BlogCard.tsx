@@ -1,6 +1,4 @@
 import Image from "next/image";
-import ButtonLink from "@/components/Buttons/ButtonLink";
-import { icons } from "@/constants/icons";
 import { BlogPost } from "@/types/blog";
 
 /**
@@ -26,13 +24,23 @@ export default function BlogCard({
         <article className="rounded-lg bg-surface p-8 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <Image
                 src={imgUrl}
-                alt={imgAlt}
+                alt={imgAlt || ""}
+                aria-hidden={!imgAlt ? "true" : undefined}
                 className="mb-4 h-48 w-full rounded-md object-cover"
-                width={1200}
-                height={400}
+                width={400}
+                height={200}
             />
-            <h3 className="mb-2 text-2xl font-semibold text-text">{title}</h3>
-            <p className="mb-2 text-sm text-muted">{date}</p>
+            <h3 className="mb-2 text-2xl font-semibold text-text hover:text-primary hover:underline">
+                <a href={href} aria-label={`Read more: ${title}`}>
+                    {title}
+                </a>
+            </h3>
+            <time
+                dateTime={new Date(date).toISOString()}
+                className="mb-2 block text-sm text-muted"
+            >
+                {date}
+            </time>
             <p className="mb-4 text-text">{snippet}</p>
             <div className="mb-4 flex flex-wrap gap-2">
                 {tags.map(({ title, href }, index) => (
@@ -45,12 +53,6 @@ export default function BlogCard({
                     </a>
                 ))}
             </div>
-            <ButtonLink
-                text="Read More"
-                href={href}
-                type="small"
-                icon={<icons.readMore />}
-            />
         </article>
     );
 }
