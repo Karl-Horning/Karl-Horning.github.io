@@ -1,6 +1,6 @@
 import SkillsCard from "@/components/Skills/SkillsCard";
 import Section from "@/components/Section";
-import { icons } from "@/constants/icons";
+import { homeSkills } from "@/constants/home";
 
 /**
  * A section component that displays a grid of skill cards with icons.
@@ -9,28 +9,6 @@ import { icons } from "@/constants/icons";
  * @returns A section containing a heading and a responsive grid of `SkillsCard` components.
  */
 export default function Skills() {
-    const skills = [
-        {
-            text: "JavaScript",
-            icon: icons.javaScript,
-            colour: "text-yellow-400",
-        },
-        {
-            text: "React",
-            icon: icons.react,
-            colour: "text-blue-400",
-        },
-        {
-            text: "Accessibility",
-            icon: icons.accessibility,
-            colour: "text-red",
-        },
-        {
-            text: "SQL & APIs",
-            icon: icons.database,
-            colour: "text-orange-400",
-        },
-    ];
     return (
         <Section id="skills" header="Skills">
             <div className="mx-auto max-w-6xl">
@@ -39,7 +17,7 @@ export default function Skills() {
                     data-aos="zoom-in"
                     data-aos-delay="300"
                 >
-                    {skills.map(({ text, icon, colour }, index) => (
+                    {homeSkills.map(({ text, icon, colour }, index) => (
                         <div
                             key={text}
                             data-aos="zoom-in"
