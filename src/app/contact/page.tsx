@@ -1,13 +1,13 @@
 import ContactForm from "@/components/ContactPage/ContactForm";
 import ContactIntro from "@/components/ContactPage/ContactIntro";
 import { internalRoutes } from "@/constants/links";
-import JsonLdSchema from "@/lib/JsonLdSchema";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdContact } from "@/constants/jsonLd";
 
 export const metadata = createMetadata({
     title: "Contact",
     path: internalRoutes.contact,
+    jsonLd: jsonLdContact,
 });
 
 /**
@@ -26,13 +26,9 @@ export const metadata = createMetadata({
  */
 export default function Contact() {
     return (
-        <>
-            <JsonLdSchema jsonLdData={jsonLdContact} />
-
-            <main className="mx-auto max-w-6xl pt-16 md:pt-36">
-                <ContactIntro />
-                <ContactForm />
-            </main>
-        </>
+        <main className="mx-auto max-w-6xl pt-16 md:pt-36">
+            <ContactIntro />
+            <ContactForm />
+        </main>
     );
 }

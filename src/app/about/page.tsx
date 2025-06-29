@@ -3,7 +3,6 @@ import AboutIntro from "@/components/AboutPage/AboutIntro";
 import AboutValues from "@/components/AboutPage/AboutValues";
 import AboutSkills from "@/components/AboutPage/AboutSkills";
 import AboutBadges from "@/components/AboutPage/AboutBadges";
-import JsonLdSchema from "@/lib/JsonLdSchema";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdAbout } from "@/constants/jsonLd";
@@ -11,6 +10,7 @@ import { jsonLdAbout } from "@/constants/jsonLd";
 export const metadata = createMetadata({
     title: "About",
     path: internalRoutes.about,
+    jsonLd: jsonLdAbout,
 });
 
 /**
@@ -28,16 +28,12 @@ export const metadata = createMetadata({
  */
 export default function About() {
     return (
-        <>
-            <JsonLdSchema jsonLdData={jsonLdAbout} />
-
-            <main className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 pt-16 text-text sm:grid-cols-2 md:pt-36 lg:grid-cols-3">
-                <AboutPhotoCard />
-                <AboutIntro />
-                <AboutValues />
-                <AboutSkills />
-                <AboutBadges />
-            </main>
-        </>
+        <main className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 pt-16 text-text sm:grid-cols-2 md:pt-36 lg:grid-cols-3">
+            <AboutPhotoCard />
+            <AboutIntro />
+            <AboutValues />
+            <AboutSkills />
+            <AboutBadges />
+        </main>
     );
 }

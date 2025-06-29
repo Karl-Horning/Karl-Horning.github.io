@@ -7,25 +7,21 @@ import Hero from "@/components/Hero";
 import { createMetadata } from "@/lib/metadata";
 import { internalRoutes } from "@/constants/links";
 import { jsonLdHome } from "@/constants/jsonLd";
-import JsonLdSchema from "@/lib/JsonLdSchema";
 
 export const metadata = createMetadata({
     title: "Home",
     path: internalRoutes.home,
+    jsonLd: jsonLdHome,
 });
 
 export default function Home() {
     return (
-        <>
-            <JsonLdSchema jsonLdData={jsonLdHome} />
-
-            <main>
-                <Hero />
-                <About />
-                <Skills />
-                <Blog />
-                <Contact />
-            </main>
-        </>
+        <main>
+            <Hero />
+            <About />
+            <Skills />
+            <Blog />
+            <Contact />
+        </main>
     );
 }
