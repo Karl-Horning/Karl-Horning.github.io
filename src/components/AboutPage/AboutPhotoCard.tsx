@@ -13,7 +13,11 @@ import Image from "next/image";
  */
 export default function AboutPhotoCard() {
     return (
-        <section className="group relative">
+        <section
+            className="group relative"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+        >
             <Image
                 src={assets.profileImage}
                 alt="Karl: JavaScript developer and learning technologist"
