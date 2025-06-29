@@ -21,7 +21,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative flex min-h-screen flex-col items-center overflow-hidden bg-hero px-6 py-24 text-white md:flex-row">
+        <section className="relative flex flex-col items-center overflow-hidden bg-hero px-6 py-24 text-white md:min-h-screen md:flex-row">
             {/* Image container */}
             <div
                 className="relative left-0 top-0 flex h-48 w-full items-center justify-center overflow-hidden md:absolute md:h-full md:w-1/2 md:justify-start"
@@ -31,7 +31,7 @@ export default function Hero() {
                 <Image
                     src={assets.profileImage}
                     alt=""
-                    className="pointer-events-none h-40 w-40 select-none rounded-full border-4 border-white object-cover object-top opacity-50 md:h-full md:w-full md:rounded-none md:border-0"
+                    className="pointer-events-none h-40 w-40 select-none rounded-full border-4 border-white object-cover object-top opacity-100 md:h-full md:w-full md:rounded-none md:border-0 md:opacity-50"
                     aria-hidden="true"
                     width={3024}
                     height={4032}
