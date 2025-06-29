@@ -31,7 +31,11 @@ export default function NotFound() {
                 </Section>
 
                 {/* Terminal */}
-                <div className="border-border w-full max-w-xl rounded-2xl border bg-muted shadow-lg">
+                <div
+                    className="border-border w-full max-w-xl rounded-2xl border bg-muted shadow-lg"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                >
                     {/* Terminal Header */}
                     <div className="border-border flex items-center gap-2 rounded-t-2xl border-b bg-muted/80 px-4 py-2">
                         <span className="bg-red-500 h-3 w-3 rounded-full" />
