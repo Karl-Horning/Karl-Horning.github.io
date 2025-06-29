@@ -1,11 +1,9 @@
-import Button from "@/components/Buttons/Button";
 import ContactForm from "@/components/ContactPage/ContactForm";
 import ContactIntro from "@/components/ContactPage/ContactIntro";
-import Header from "@/components/Header";
-import { jsonLdContact } from "@/constants/jsonLd";
-import { externalLinks, internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/constants/links";
+import JsonLdSchema from "@/lib/JsonLdSchema";
 import { createMetadata } from "@/lib/metadata";
-import Head from "next/head";
+import { jsonLdContact } from "@/constants/jsonLd";
 
 export const metadata = createMetadata({
     title: "Contact",
@@ -29,15 +27,8 @@ export const metadata = createMetadata({
 export default function Contact() {
     return (
         <>
-            <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(jsonLdContact),
-                    }}
-                    key="jsonld-person"
-                />
-            </Head>
+            <JsonLdSchema jsonLdData={jsonLdContact} />
+
             <main className="mx-auto max-w-6xl pt-16 md:pt-36">
                 <ContactIntro />
                 <ContactForm />

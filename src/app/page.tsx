@@ -6,8 +6,8 @@ import Hero from "@/components/Hero";
 
 import { createMetadata } from "@/lib/metadata";
 import { internalRoutes } from "@/constants/links";
-import Head from "next/head";
 import { jsonLdHome } from "@/constants/jsonLd";
+import JsonLdSchema from "@/lib/JsonLdSchema";
 
 export const metadata = createMetadata({
     title: "Home",
@@ -17,15 +17,8 @@ export const metadata = createMetadata({
 export default function Home() {
     return (
         <>
-            <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(jsonLdHome),
-                    }}
-                    key="jsonld-home"
-                />
-            </Head>
+            <JsonLdSchema jsonLdData={jsonLdHome} />
+
             <main>
                 <Hero />
                 <About />
