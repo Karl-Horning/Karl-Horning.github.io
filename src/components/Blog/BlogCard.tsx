@@ -27,6 +27,7 @@ export default function BlogCard({
                 alt={imgAlt || ""}
                 aria-hidden={!imgAlt ? "true" : undefined}
                 className="mb-4 h-48 w-full rounded-md object-cover"
+                loading="lazy"
                 width={400}
                 height={200}
             />

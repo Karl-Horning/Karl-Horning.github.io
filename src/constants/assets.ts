@@ -2,5 +2,5 @@
  * Central location for static asset paths.
  */
 export const assets = {
-    profileImage: "/img/karl.png",
+    profileImage: "/img/karl.optimised.webp",
 };

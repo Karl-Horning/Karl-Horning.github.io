@@ -33,8 +33,9 @@ export default function Hero() {
                     alt=""
                     className="pointer-events-none h-40 w-40 select-none rounded-full border-4 border-white object-cover object-top opacity-100 md:h-full md:w-full md:rounded-none md:border-0 md:opacity-50"
                     aria-hidden="true"
-                    width={3024}
-                    height={4032}
+                    priority={true}
+                    width={960}
+                    height={960}
                 />
                 <div className="absolute inset-0 hidden md:block"></div>
             </div>

@@ -18,9 +18,9 @@ export default function AboutPhotoCard() {
                 src={assets.profileImage}
                 alt="Karl: JavaScript developer and learning technologist"
                 className="h-full w-full transform rounded-xl bg-primary object-cover transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                width={3024}
-                height={4032}
+                priority={true}
+                width={480}
+                height={480}
             />
             <div className="absolute inset-0 transform rounded-xl bg-black/60  p-4 text-white opacity-0 transition-transform duration-300 group-hover:scale-105 group-hover:opacity-100">
                 <h2 className="text-xl font-bold">Karl Horning</h2>
