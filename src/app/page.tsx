@@ -11,17 +11,23 @@ import { jsonLdHome } from "@/constants/jsonLd";
 export const metadata = createMetadata({
     title: "Home",
     path: internalRoutes.home,
-    jsonLd: jsonLdHome,
 });
 
 export default function Home() {
     return (
-        <main>
-            <Hero />
-            <About />
-            <Skills />
-            <Blog />
-            <Contact />
-        </main>
+        <>
+            <main>
+                <Hero />
+                <About />
+                <Skills />
+                <Blog />
+                <Contact />
+            </main>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHome) }}
+            />
+        </>
     );
 }
