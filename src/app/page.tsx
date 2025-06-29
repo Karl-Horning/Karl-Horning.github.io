@@ -1,22 +1,27 @@
-import About from "@/components/About/About";
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
-import Personal from "@/components/Personal/Personal";
-import Skills from "@/components/Skills/Skills";
-import Work from "@/components/Work/Work";
-import { Poppins500 } from "@/fonts";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Blog from "@/components/Blog";
+import Contact from "@/components/Contact";
+import Hero from "@/components/Hero";
+
+import { createMetadata } from "@/lib/metadata";
+import { internalRoutes } from "@/constants/links";
+import { jsonLdHome } from "@/constants/jsonLd";
+
+export const metadata = createMetadata({
+    title: "Home",
+    path: internalRoutes.home,
+    jsonLd: jsonLdHome,
+});
 
 export default function Home() {
     return (
-        <main className={Poppins500.className}>
-            <Header />
+        <main>
+            <Hero />
             <About />
             <Skills />
-            <Work />
-            <Personal />
+            <Blog />
             <Contact />
-            <Footer />
         </main>
     );
 }
