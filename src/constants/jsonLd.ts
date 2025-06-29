@@ -1,4 +1,16 @@
 import { externalLinks, internalRoutes } from "./links";
+import { seo } from "@/constants/seo";
+
+const { contact } = internalRoutes;
+const { codePen, gitHub, linkedIn } = externalLinks;
+const {
+    defaultDescription,
+    defaultEmail,
+    defaultImage,
+    defaultJobTitle,
+    siteName,
+    siteUrl,
+} = seo;
 
 /**
  * JSON-LD structured data describing Karl Horning as a Person,
@@ -7,20 +19,12 @@ import { externalLinks, internalRoutes } from "./links";
 export const jsonLdAbout = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Karl Horning",
-    jobTitle: [
-        "Full-Stack JavaScript & TypeScript Developer",
-        "Learning Technologist",
-    ],
-    email: "karl.h@me.com",
-    url: externalLinks.portfolio,
-    sameAs: [
-        externalLinks.gitHub,
-        externalLinks.codePen,
-        externalLinks.linkedIn,
-    ],
-    description:
-        "Self-taught Full-Stack JavaScript and TypeScript developer and Learning Technologist with over 15 years of cross-sector experience, specialising in scalable APIs, LMS platforms, and educational technology.",
+    name: siteName,
+    jobTitle: defaultJobTitle,
+    email: defaultEmail,
+    url: siteUrl,
+    sameAs: [gitHub, codePen, linkedIn],
+    description: defaultDescription,
     knowsAbout: [
         "JavaScript",
         "TypeScript",
@@ -47,23 +51,16 @@ export const jsonLdAbout = {
 export const jsonLdHome = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    url: externalLinks.portfolio,
-    name: "Karl Horning Portfolio",
-    description:
-        "Portfolio site of Karl Horning: Self-taught Full-Stack JavaScript and TypeScript developer and Learning Technologist with over 15 years of cross-sector experience, specialising in scalable APIs, LMS platforms, and educational technology.",
+    url: siteUrl,
+    name: `${siteName} Portfolio`,
+    description: defaultDescription,
     publisher: {
         "@type": "Person",
-        name: "Karl Horning",
-        url: externalLinks.portfolio,
-        sameAs: [
-            externalLinks.linkedIn,
-            externalLinks.gitHub,
-            externalLinks.codePen,
-        ],
-        jobTitle: [
-            "Full-Stack JavaScript & TypeScript Developer",
-            "Learning Technologist",
-        ],
+        name: siteName,
+        url: siteUrl,
+        sameAs: [linkedIn, gitHub, codePen],
+        jobTitle: defaultJobTitle,
+        image: defaultImage,
     },
 };
 
@@ -75,8 +72,8 @@ export const jsonLdHome = {
 export const jsonLdContact = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    url: `${externalLinks.portfolio}${internalRoutes.contact}`,
-    name: "Karl Horning",
+    url: `${siteUrl}${contact}`,
+    name: siteName,
     description: "Use the form to contact Karl Horning or connect on LinkedIn.",
     address: [
         {
@@ -93,29 +90,25 @@ export const jsonLdContact = {
     contactPoint: [
         {
             "@type": "ContactPoint",
-            contactType: "customer support",
+            contactType: "personal",
             description: "Contact form available on the website",
-            url: `${externalLinks.portfolio}${internalRoutes.contact}`,
+            url: `${siteUrl}${contact}`,
             availableLanguage: ["English", "Portuguese"],
         },
         {
             "@type": "ContactPoint",
             contactType: "professional",
-            email: "karl.h@me.com",
+            email: defaultEmail,
             description: "Email Karl Horning",
             availableLanguage: ["English", "Portuguese"],
         },
         {
             "@type": "ContactPoint",
             contactType: "professional",
-            url: externalLinks.linkedIn,
+            url: linkedIn,
             description: "Connect with Karl on LinkedIn",
             availableLanguage: ["English", "Portuguese"],
         },
     ],
-    sameAs: [
-        externalLinks.linkedIn,
-        externalLinks.gitHub,
-        externalLinks.codePen,
-    ],
+    sameAs: [linkedIn, gitHub, codePen],
 };

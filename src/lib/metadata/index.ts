@@ -1,11 +1,7 @@
-import { externalLinks } from "@/constants/links";
 import type { Metadata } from "next";
+import { seo } from "@/constants/seo";
 
-const siteName = "Karl Horning";
-const siteUrl = externalLinks.portfolio;
-const defaultDescription =
-    "Karl Horning's portfolio: showcasing projects in JavaScript, GraphQL, Next.js, and more.";
-const defaultImage = `${siteUrl}/img/og-image.jpg`; // TODO: Replace with OG image
+const { defaultDescription, defaultImage, siteName, siteUrl } = seo;
 
 /**
  * Generates metadata for a given page on the site, including SEO-friendly
