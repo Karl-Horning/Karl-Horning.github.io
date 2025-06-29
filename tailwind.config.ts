@@ -22,7 +22,7 @@ const config: Config = {
             },
             colors: {
                 black: "#2d292d",
-                red: "#da4453",
+                "custom-red": "#da4453",
                 primary: "#e93681", // vibrant pink/red
                 accent: "#14a098", // teal accent
                 highlight: "#148aad", // teal for emphasis
@@ -49,7 +49,7 @@ const config: Config = {
         "text-blue-400",
         "text-orange-400",
         "text-yellow-400",
-        "text-red",
+        "text-custom-red",
     ],
 };
 export default config;
