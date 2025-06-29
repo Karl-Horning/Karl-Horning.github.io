@@ -23,7 +23,6 @@ const config: Config = {
             colors: {
                 black: "#2d292d",
                 red: "#da4453",
-                yellow: "#fee300",
                 primary: "#e93681", // vibrant pink/red
                 accent: "#14a098", // teal accent
                 highlight: "#148aad", // teal for emphasis
