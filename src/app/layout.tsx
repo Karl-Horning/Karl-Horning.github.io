@@ -2,6 +2,7 @@ import { Inter, Poppins, Rubik_Glitch } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { jsonLdHome } from "@/constants/jsonLd";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -31,6 +32,14 @@ export default function RootLayout({
             className={`${inter.variable} ${poppins.variable} ${rubikGlitch.variable} scroll-smooth`}
             style={{ scrollBehavior: "smooth" }}
         >
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(jsonLdHome),
+                    }}
+                />
+            </head>
             <body
                 className={`${inter.className} flex min-h-screen flex-col bg-background font-sans text-foreground`}
             >

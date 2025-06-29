@@ -15,19 +15,12 @@ export const metadata = createMetadata({
 
 export default function Home() {
     return (
-        <>
-            <main>
-                <Hero />
-                <About />
-                <Skills />
-                <Blog />
-                <Contact />
-            </main>
-
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHome) }}
-            />
-        </>
+        <main>
+            <Hero />
+            <About />
+            <Skills />
+            <Blog />
+            <Contact />
+        </main>
     );
 }
