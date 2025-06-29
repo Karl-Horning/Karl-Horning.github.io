@@ -4,7 +4,7 @@
  */
 export const externalLinks = {
     /** The blog subdomain */
-    blog: "https://karl-horning.github.io/dev-blog/blog/",
+    blog: "https://karl-horning.github.io/dev-blog/blog",
 
     /** Karl Horning's CodePen profile link */
     codePen: "https://codepen.io/karlhorning",
@@ -13,10 +13,10 @@ export const externalLinks = {
     gitHub: "https://github.com/Karl-Horning",
 
     /** Karl Horning's LinkedIn profile link */
-    linkedIn: "https://www.linkedin.com/in/karl-horning/",
+    linkedIn: "https://www.linkedin.com/in/karl-horning",
 
     /** Karl Horning's portfolio site */
-    portfolio: "https://karl-horning.github.io/",
+    portfolio: "https://karl-horning.github.io",
 
     /** Karl Horning's portfolio site repo */
     portfolioRepo: "https://github.com/Karl-Horning/Karl-Horning.github.io",
