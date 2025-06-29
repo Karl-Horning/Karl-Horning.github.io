@@ -15,47 +15,47 @@ export const aboutSkills: Skill[] = [
     {
         name: "JavaScript",
         icon: icons.javaScript,
-        bgColour: "bg-yellow-600",
+        colour: "bg-yellow-600",
     },
     {
         name: "Node.js",
         icon: icons.nodeJs,
-        bgColour: "bg-green-700",
+        colour: "bg-green-700",
     },
     {
         name: "React",
         icon: icons.react,
-        bgColour: "bg-blue-700",
+        colour: "bg-blue-700",
     },
     {
         name: "GraphQL",
         icon: icons.graphQl,
-        bgColour: "bg-pink-700",
+        colour: "bg-pink-700",
     },
     {
         name: "PostgreSQL",
         icon: icons.postgreSql,
-        bgColour: "bg-blue-900",
+        colour: "bg-blue-900",
     },
     {
         name: "Agile",
         icon: icons.users,
-        bgColour: "bg-amber-600",
+        colour: "bg-amber-600",
     },
     {
         name: "Accessibility",
         icon: icons.accessibility,
-        bgColour: "bg-violet-800",
+        colour: "bg-violet-800",
     },
     {
         name: "API Testing",
         icon: icons.testing,
-        bgColour: "bg-orange-700",
+        colour: "bg-orange-700",
     },
     {
         name: "Tailwind CSS",
         icon: icons.tailwind,
-        bgColour: "bg-blue-700",
+        colour: "bg-blue-700",
     },
 ];
 

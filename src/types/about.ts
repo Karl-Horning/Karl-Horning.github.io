@@ -5,12 +5,12 @@ import { IconType } from "react-icons";
  *
  * @property {string} name - The display name of the skill.
  * @property {IconType} icon - The icon associated with the skill, from react-icons.
- * @property {string} bgColour - The Tailwind background colour class used for styling.
+ * @property {string} bgColour - The Tailwind colour class used for styling.
  */
 export type Skill = {
     name: string;
     icon: IconType;
-    bgColour: string;
+    colour: string;
 };
 
 /**

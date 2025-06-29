@@ -1,14 +1,5 @@
-import { IconType } from "react-icons";
 import { icons } from "./icons";
-
-/**
- * Represents a single skill with a label, an icon, and a text colour class.
- */
-type HomeSkills = {
-    text: string;
-    icon: IconType;
-    colour: string;
-};
+import { Skill } from "@/types/about";
 
 /**
  * An array of skill objects displayed on the homepage.
@@ -20,24 +11,24 @@ type HomeSkills = {
  *
  * @returns An array of skills to render on the homepage.
  */
-export const homeSkills: HomeSkills[] = [
+export const homeSkills: Skill[] = [
     {
-        text: "JavaScript",
+        name: "JavaScript",
         icon: icons.javaScript,
         colour: "text-yellow-400",
     },
     {
-        text: "React",
+        name: "React",
         icon: icons.react,
         colour: "text-blue-400",
     },
     {
-        text: "Accessibility",
+        name: "Accessibility",
         icon: icons.accessibility,
         colour: "text-red",
     },
     {
-        text: "SQL & APIs",
+        name: "SQL & APIs",
         icon: icons.database,
         colour: "text-orange-400",
     },

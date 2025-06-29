@@ -17,14 +17,14 @@ export default function Skills() {
                     data-aos="zoom-in"
                     data-aos-delay="300"
                 >
-                    {homeSkills.map(({ text, icon, colour }, index) => (
+                    {homeSkills.map(({ name, icon, colour }, index) => (
                         <div
-                            key={text}
+                            key={name}
                             data-aos="zoom-in"
                             data-aos-delay={300 + index * 100}
                         >
                             <SkillsCard
-                                text={text}
+                                text={name}
                                 icon={icon}
                                 colour={colour}
                             />

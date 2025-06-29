@@ -26,13 +26,13 @@ export default function AboutSkills() {
                 Skills
             </h2>
             <ul className="grid grid-cols-3 gap-4">
-                {aboutSkills.map(({ name, icon: Icon, bgColour }) => (
+                {aboutSkills.map(({ name, icon: Icon, colour }) => (
                     <li
                         key={`Icon: ${name}`}
                         className="flex flex-col items-center"
                     >
                         <div
-                            className={`flex h-14 w-14 items-center justify-center rounded-full shadow-md ${bgColour}`}
+                            className={`flex h-14 w-14 items-center justify-center rounded-full shadow-md ${colour}`}
                         >
                             <Icon
                                 aria-hidden="true"
