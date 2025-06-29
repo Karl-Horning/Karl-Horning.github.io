@@ -23,17 +23,7 @@ const config: Config = {
             colors: {
                 black: "#2d292d",
                 red: "#da4453",
-                transparent: "transparent",
-                current: "currentColor",
-                white: "#ffffff",
-                purple: "#3f3cbb",
-                midnight: "#121063",
-                metal: "#565584",
-                tahiti: "#3ab7bf",
-                silver: "#ecebff",
-                "bubble-gum": "#ff77e9",
-                bermuda: "#78dcca",
-                // TODO: Remove the colours above after update
+                yellow: "#fee300",
                 primary: "#e93681", // vibrant pink/red
                 accent: "#14a098", // teal accent
                 highlight: "#148aad", // teal for emphasis
