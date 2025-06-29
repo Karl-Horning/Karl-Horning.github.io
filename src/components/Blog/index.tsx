@@ -14,8 +14,8 @@ export default async function Blog() {
     const blogPosts = await getBlogPosts();
 
     return (
-        <Section id="blog" header="From the Blog">
-            <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+        <Section id="blog" header="From the Blog" className="!text-left">
+            <div className="grid gap-8 md:grid-cols-2">
                 {blogPosts.map(
                     (
                         { title, href, imgUrl, imgAlt, date, snippet, tags },
@@ -27,7 +27,6 @@ export default async function Blog() {
                             data-aos-delay={300 + index * 100}
                         >
                             <BlogCard
-                                key={title}
                                 title={title}
                                 imgUrl={imgUrl}
                                 imgAlt={imgAlt}

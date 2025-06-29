@@ -9,7 +9,7 @@ import Link from "next/link";
  */
 export default function Footer() {
     return (
-        <footer className="mt-12 bg-black py-8 text-muted" role="contentinfo">
+        <footer className="bg-black py-8 text-muted" role="contentinfo">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
                 <p className="text-sm" aria-label="Copyright notice">
                     &copy; 2025 Karl Horning. All rights reserved.

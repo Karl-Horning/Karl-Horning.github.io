@@ -1,4 +1,5 @@
 interface HeaderProps {
+    headerId?: string;
     text: string;
     level?: 1 | 2 | 3 | 4 | 5 | 6;
     className?: string;
@@ -8,11 +9,13 @@ interface HeaderProps {
  * A reusable header component that renders an h1-h6 element with styling based on the heading level.
  *
  * @component
+ * @param {string} id - The ID of the header.
  * @param {string} text - The text content inside the header.
  * @param {1 | 2 | 3 | 4 | 5 | 6} [level=2] - The heading level, from 1 to 6, defaults to 2.
  * @param {string} [className] - Additional Tailwind CSS classes to apply.
  */
 export default function Header({
+    headerId: id,
     text,
     level = 2,
     className = "",
@@ -32,5 +35,9 @@ export default function Header({
 
     const combinedClasses = `mb-6 text-center font-heading font-black text-primary ${sizeClasses[level]} ${className}`;
 
-    return <Tag className={combinedClasses}>{text}</Tag>;
+    return (
+        <Tag {...(id ? { id } : {})} className={combinedClasses}>
+            {text}
+        </Tag>
+    );
 }

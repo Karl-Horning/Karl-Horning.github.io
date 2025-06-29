@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Section from "../Section";
 
 /**
  * ContactIntro component displays a heading and introductory message
@@ -13,14 +14,12 @@ import Header from "@/components/Header";
  */
 export default function ContactIntro() {
     return (
-        <section className="mx-auto max-w-4xl px-12 py-8 text-center">
-            <Header text="Contact Me" level={1} />
-
-            <p className="mx-auto mb-6 max-w-3xl text-lg text-text transition-colors duration-300 md:text-xl">
+        <Section id="contact-intro" header="Contact Me" headerLevel={1}>
+            <p className="mx-auto max-w-3xl text-center text-text">
                 Whether you&apos;d like to collaborate, discuss a project, share
                 feedback, or just say hello, feel free to get in touch using the
                 form below. You can also connect with me via LinkedIn or email.
             </p>
-        </section>
+        </Section>
     );
 }

@@ -14,8 +14,13 @@ import FormField from "./FormField";
  */
 export default function ContactForm() {
     return (
-        <section className="flex items-center justify-center py-6 md:px-4">
-            <div className="w-full max-w-xl rounded-2xl bg-hero p-8 shadow-lg md:p-10">
+        <section className="flex items-center justify-center pb-16 md:px-4">
+            <div
+                className="w-full max-w-xl rounded-2xl bg-hero p-8 shadow-lg md:p-10"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="600"
+            >
                 <form
                     fab-form
                     name="Portfolio Form"

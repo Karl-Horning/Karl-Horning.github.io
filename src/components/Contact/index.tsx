@@ -10,10 +10,14 @@ import { internalRoutes } from "@/constants/links";
  */
 export default function Contact() {
     return (
-        <Section id="contact" header="Let's Collaborate">
-            <div className="mx-auto max-w-4xl text-center">
+        <Section
+            id="contact"
+            header="Let's Collaborate"
+            headerId="collaborate-header"
+        >
+            <div role="region" aria-labelledby="collaborate-header">
                 <p
-                    className="mx-auto mb-8 max-w-3xl text-lg text-text md:text-xl"
+                    className="mx-auto mb-6 max-w-3xl text-lg text-text md:text-xl"
                     data-aos="fade-up"
                     data-aos-delay="400"
                 >
@@ -22,7 +26,7 @@ export default function Contact() {
                     full-stack development. Let&apos;s build something great
                     together.
                 </p>
-                <div data-aos="zoom-in" data-aos-delay="600">
+                <div data-aos="zoom-in" data-aos-delay="600" className="pb-16">
                     <ButtonLink
                         text="Get in Touch"
                         href={internalRoutes.contact}

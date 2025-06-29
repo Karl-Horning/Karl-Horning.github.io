@@ -10,10 +10,15 @@ import { internalRoutes } from "@/constants/links";
  */
 export default function About() {
     return (
-        <Section id="about" header="About Me">
-            <div className="mx-auto max-w-4xl text-center">
+        <Section
+            id="about"
+            header="About Me"
+            headerId="about-header"
+            className="mt-16"
+        >
+            <div role="region" aria-labelledby="about-header">
                 <p
-                    className="mx-auto mb-6 max-w-3xl text-lg text-text transition-colors duration-300 md:text-xl"
+                    className="mx-auto mb-6 max-w-3xl text-lg text-text md:text-xl"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="400"

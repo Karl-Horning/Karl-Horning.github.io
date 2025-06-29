@@ -28,12 +28,12 @@ export const metadata = createMetadata({
  */
 export default function About() {
     return (
-        <main className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 pt-16 text-text sm:grid-cols-2 md:pt-36 lg:grid-cols-3">
+        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 text-text sm:grid-cols-2 lg:grid-cols-3">
             <AboutPhotoCard />
             <AboutIntro />
             <AboutValues />
             <AboutSkills />
             <AboutBadges />
-        </main>
+        </section>
     );
 }

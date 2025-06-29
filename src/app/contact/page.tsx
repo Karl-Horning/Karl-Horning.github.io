@@ -26,9 +26,9 @@ export const metadata = createMetadata({
  */
 export default function Contact() {
     return (
-        <main className="mx-auto max-w-6xl pt-16 md:pt-36">
+        <section className="mx-auto max-w-6xl">
             <ContactIntro />
             <ContactForm />
-        </main>
+        </section>
     );
 }
