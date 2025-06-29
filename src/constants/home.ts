@@ -25,7 +25,7 @@ export const homeSkills: Skill[] = [
     {
         name: "Accessibility",
         icon: icons.accessibility,
-        colour: "text-red",
+        colour: "text-custom-red",
     },
     {
         name: "SQL & APIs",
