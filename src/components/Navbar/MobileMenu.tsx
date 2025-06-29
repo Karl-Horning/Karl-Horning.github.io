@@ -36,7 +36,6 @@ export default function MobileMenu({
     return (
         <div
             id="mobile-menu"
-            role="menu"
             aria-hidden={!isOpen}
             className={`absolute left-0 top-16 z-10 w-full overflow-hidden bg-background shadow-md transition-[max-height] duration-500 ease-in-out md:hidden ${
                 isOpen ? "max-h-screen" : "max-h-0"
