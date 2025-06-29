@@ -22,7 +22,12 @@ export default function Contact() {
                     full-stack development. Let&apos;s build something great
                     together.
                 </p>
-                <ButtonLink text="Get in Touch" href={internalRoutes.contact} />
+                <div data-aos="zoom-in" data-aos-delay="600">
+                    <ButtonLink
+                        text="Get in Touch"
+                        href={internalRoutes.contact}
+                    />
+                </div>
             </div>
         </Section>
     );
