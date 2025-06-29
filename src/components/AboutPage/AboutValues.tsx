@@ -28,7 +28,11 @@ export default function AboutValues() {
             <ul className="space-y-3">
                 {aboutValues.map(({ title, icon: Icon, description }) => (
                     <li key={title} className="flex items-start gap-4">
-                        <Icon className="mt-2 flex-shrink-0 text-sm text-primary" />
+                        <Icon
+                            aria-hidden="true"
+                            focusable="false"
+                            className="mt-2 flex-shrink-0 text-sm text-primary"
+                        />
                         <div className="text-base text-text">{description}</div>
                     </li>
                 ))}

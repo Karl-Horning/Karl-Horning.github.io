@@ -22,6 +22,8 @@ export default function SkillsCard({
     return (
         <div className="flex flex-col items-center rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <Icon
+                aria-hidden="true"
+                focusable="false"
                 className={`mb-4 text-5xl ${colour ? colour : "text-primary"}`}
             />
 

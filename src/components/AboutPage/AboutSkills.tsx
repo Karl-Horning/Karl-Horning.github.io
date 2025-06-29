@@ -34,7 +34,11 @@ export default function AboutSkills() {
                         <div
                             className={`flex h-14 w-14 items-center justify-center rounded-full shadow-md ${bgColour}`}
                         >
-                            <Icon className="text-xl text-white" />
+                            <Icon
+                                aria-hidden="true"
+                                focusable="false"
+                                className="text-xl text-white"
+                            />
                         </div>
                         <span className="mt-1 text-center text-sm">{name}</span>
                     </li>
