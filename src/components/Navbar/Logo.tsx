@@ -14,7 +14,7 @@ export default function Logo() {
         <div className="flex-shrink-0 text-xl font-bold transition-colors duration-300 ease-in-out">
             <a
                 href="/"
-                className={`font-glitch ${styles["glitch-hover"]} relative text-2xl font-extrabold text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary`}
+                className={`font-glitch ${styles["glitch-hover"]} relative rounded px-2 py-1 text-2xl font-extrabold text-primary transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
                 data-text="Karl Horning"
             >
                 Karl Horning

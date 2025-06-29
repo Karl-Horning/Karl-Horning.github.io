@@ -30,7 +30,7 @@ export default function DesktopMenu({
                 <Link
                     key={label}
                     href={href}
-                    className="transition-colors duration-300 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="inline-block rounded px-2 py-1 transition-colors duration-300 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                     {label}
                 </Link>

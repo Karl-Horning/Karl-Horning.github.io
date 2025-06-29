@@ -31,7 +31,11 @@ export default function BlogCard({
                 height={200}
             />
             <h3 className="mb-2 text-2xl font-semibold text-text hover:text-primary hover:underline">
-                <a href={href} aria-label={`Read more: ${title}`}>
+                <a
+                    href={href}
+                    aria-label={`Read more: ${title}`}
+                    className="rounded py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
                     {title}
                 </a>
             </h3>
