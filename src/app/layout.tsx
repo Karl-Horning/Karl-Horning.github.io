@@ -2,7 +2,6 @@ import { Inter, Poppins, Rubik_Glitch } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { externalLinks } from "@/constants/links";
 
 const inter = Inter({
     subsets: ["latin"],
