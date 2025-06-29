@@ -17,7 +17,21 @@ import { assets } from "@/constants/assets";
  */
 export default function Hero() {
     useEffect(() => {
-        AOS.init({ once: true });
+        const prefersReducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        if (!prefersReducedMotion) {
+            AOS.init({
+                duration: 800,
+                once: true,
+            });
+        } else {
+            // Remove all data-aos attributes to avoid layout shifts
+            document.querySelectorAll("[data-aos]").forEach((el) => {
+                el.removeAttribute("data-aos");
+            });
+        }
     }, []);
 
     return (
