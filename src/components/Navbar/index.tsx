@@ -40,7 +40,7 @@ export default function Navbar() {
         <nav
             role="navigation"
             aria-label="Main menu"
-            className="fixed z-30 w-full bg-background px-6 shadow-md"
+            className="fixed z-30 w-full bg-hero px-6 shadow-md"
         >
             <div className="mx-auto max-w-6xl px-4">
                 <div className="flex h-16 items-center justify-between">
