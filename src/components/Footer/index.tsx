@@ -1,5 +1,4 @@
-import { icons } from "@/constants/icons";
-import { externalLinks, internalRoutes } from "@/constants/links";
+import { footerLinks } from "@/constants/footer";
 import Link from "next/link";
 
 /**
@@ -9,29 +8,6 @@ import Link from "next/link";
  * @returns The rendered footer with social icons and links.
  */
 export default function Footer() {
-    const links = [
-        {
-            label: "GitHub",
-            href: externalLinks.gitHub,
-            icon: icons.gitHub,
-        },
-        {
-            label: "LinkedIn",
-            href: externalLinks.linkedIn,
-            icon: icons.linkedIn,
-        },
-        {
-            label: "Contact",
-            href: internalRoutes.contact,
-            icon: icons.contact,
-        },
-        {
-            label: "RSS Feed",
-            href: internalRoutes.rss,
-            icon: icons.rss,
-        },
-    ];
-
     return (
         <footer className="mt-12 bg-black py-8 text-muted" role="contentinfo">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
@@ -42,7 +18,7 @@ export default function Footer() {
                     aria-label="Social media links"
                     className="mt-4 flex space-x-6 md:mt-0"
                 >
-                    {links.map(({ label, href, icon: Icon }) => (
+                    {footerLinks.map(({ label, href, icon: Icon }) => (
                         <Link
                             key={label}
                             href={href}
