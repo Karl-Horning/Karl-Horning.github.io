@@ -32,28 +32,6 @@ export default function RootLayout({
             className={`${inter.variable} ${poppins.variable} ${rubikGlitch.variable} scroll-smooth`}
             style={{ scrollBehavior: "smooth" }}
         >
-            <head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Person",
-                            name: "Karl Horning",
-                            url: externalLinks.portfolio,
-                            sameAs: [
-                                externalLinks.linkedIn,
-                                externalLinks.gitHub,
-                            ],
-                            jobTitle: "Web Developer",
-                            worksFor: {
-                                "@type": "Organization",
-                                name: "Freelance",
-                            },
-                        }),
-                    }}
-                ></script>
-            </head>
             <body
                 className={`${inter.className} min-h-screen bg-background font-sans`}
             >
