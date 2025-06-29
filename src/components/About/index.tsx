@@ -12,18 +12,29 @@ export default function About() {
     return (
         <Section id="about" header="About Me">
             <div className="mx-auto max-w-4xl text-center">
-                <p className="mx-auto mb-6 max-w-3xl text-lg text-text transition-colors duration-300 md:text-xl">
+                <p
+                    className="mx-auto mb-6 max-w-3xl text-lg text-text transition-colors duration-300 md:text-xl"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="400"
+                >
                     I&apos;m a Full-Stack JavaScript Developer and Learning
                     Technologist with over 15 years&apos; experience in EdTech,
                     specialising in building user-focused, accessible tools for
                     learners and educators.
                 </p>
 
-                <ButtonLink
-                    text="More About Me"
-                    href={internalRoutes.about}
-                    type="secondary"
-                />
+                <div
+                    data-aos="zoom-in"
+                    data-aos-duration="700"
+                    data-aos-delay="600"
+                >
+                    <ButtonLink
+                        text="More About Me"
+                        href={internalRoutes.about}
+                        type="secondary"
+                    />
+                </div>
             </div>
         </Section>
     );

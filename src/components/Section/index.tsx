@@ -29,8 +29,19 @@ export default function Section({
     className = "",
 }: SectionProps) {
     return (
-        <section id={id} className={`bg-background px-6 py-16 ${className}`}>
-            <Header text={header} />
+        <section
+            id={id}
+            className={`bg-background px-6 py-16 ${className}`}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+        >
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+            >
+                <Header text={header} />
+            </div>
             {children}
         </section>
     );
