@@ -4,7 +4,7 @@
  */
 export const externalLinks = {
     /** The blog subdomain */
-    blog: "https://karl-horning.github.io/dev-blog/blog",
+    blog: "https://karl-horning.github.io/dev-blog",
 
     /** Karl Horning's CodePen profile link */
     codePen: "https://codepen.io/karlhorning",
