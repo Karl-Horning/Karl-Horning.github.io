@@ -54,7 +54,7 @@ export default function BlogCard({
                         href={href}
                         className="rounded bg-hero px-2 py-1 text-sm text-muted transition-colors duration-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary"
                     >
-                        {title}
+                        #{title}
                     </a>
                 ))}
             </div>
