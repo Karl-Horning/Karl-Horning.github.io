@@ -1,60 +1,87 @@
 # Karl Horning's Portfolio Site
 
+## 📖 Table of Contents
+
 - [Karl Horning's Portfolio Site](#karl-hornings-portfolio-site)
-  - [Description](#description)
-  - [Demo](#demo)
-  - [Getting Started](#getting-started)
-  - [Feedback and Contributions](#feedback-and-contributions)
-  - [Author](#author)
-  - [License](#license)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [🤓 Overview](#-overview)
+  - [🛠️ Tech Stack](#️-tech-stack)
+  - [📦 Installation](#-installation)
+  - [🚀 Scripts](#-scripts)
+  - [📁 Project Structure](#-project-structure)
+  - [🌐 Live Site](#-live-site)
+  - [📌 To Do / Future Enhancements](#-to-do--future-enhancements)
 
-## Description
+---
 
-This repository holds the source code for my 2024 portfolio website, designed to showcase my skills, projects, and experiences as a web developer. The portfolio is structured with a modern and responsive design, featuring media queries to ensure optimal viewing across various devices.
+## 🤓 Overview
 
-## Demo
+This is the source code for my personal portfolio site, built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/). It showcases my work, values, skills, and certifications, with a focus on performance, accessibility, and clean design.
 
-![Preview Image](./public/work-and-projects/portfolio-site.webp)
+---
 
-[View the live demo on GitHub](https://karl-horning.github.io/).
+## 🛠️ Tech Stack
 
-## Getting Started
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Languages**: TypeScript, JavaScript (ES6+)
+- **Styling**: Tailwind CSS, AOS (Animate on Scroll)
+- **Icons**: React Icons, FontAwesome
+- **Image Optimisation**: Sharp
+- **Linting & Formatting**:
+  - ESLint (with `eslint-config-next`)
+  - Prettier (with Tailwind plugin)
 
-To explore the portfolio site locally, follow these steps:
+---
 
-1. Clone the repository:
+## 📦 Installation
 
 ```bash
-git clone https://github.com/Karl-Horning/Karl-Horning.github.io
-```
-
-2. Install dependencies:
-
-```bash
+git clone https://github.com/Karl-Horning/Karl-Horning.github.io.git
 cd Karl-Horning.github.io
 npm install
 ```
 
-3. Run the development server:
+---
+
+## 🚀 Scripts
+
+| Command         | Description             |
+| --------------- | ----------------------- |
+| `npm run dev`   | Start local development |
+| `npm run build` | Build for production    |
+| `npm start`     | Start production server |
+| `npm run lint`  | Run ESLint checks       |
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
+src/
+├── app/
+│   ├── about/             # About page route
+│   ├── contact/           # Contact page route
+│   ├── layout.tsx         # Root layout for App Router
+│   ├── not-found.tsx      # Custom 404 page
+│   └── page.tsx           # Home page route
+├── components/            # Reusable UI components
+├── constants/             # Static values & config
+├── lib/                   # Utility functions & helpers
+├── types/                 # Custom TypeScript types
 ```
 
-4. Open your browser and navigate to `http://localhost:3000` to view the site.
+---
 
-## Feedback and Contributions
+## 🌐 Live Site
 
-Feedback, suggestions, and contributions are highly appreciated! If you encounter any issues or have ideas for improvements, feel free to [open an issue](https://github.com/Karl-Horning/Karl-Horning.github.io/issues) or submit a pull request.
+Visit the live site at: [karl-horning.github.io](https://karl-horning.github.io)
 
-## Author
+---
 
-Karl Horning
+## 📌 To Do / Future Enhancements
 
-- [GitHub](https://github.com/Karl-Horning/)
-- [LinkedIn](https://www.linkedin.com/in/karl-horning/)
-- [CodePen](https://codepen.io/karlhorning)
+- [ ] Add tests
+- [ ] Improve Lighthouse scores
+- [ ] Add analytics
 
-## License
+---
 
-This repository is licensed under the [MIT License](LICENSE).
+Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)
