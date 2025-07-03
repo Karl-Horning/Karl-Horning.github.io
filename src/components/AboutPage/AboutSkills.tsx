@@ -22,7 +22,7 @@ export default function AboutSkills() {
             >
                 <h2
                     id="skills-heading"
-                    className="mb-6 text-center text-2xl font-bold text-primary"
+                    className="mb-6 text-center text-2xl text-primary"
                 >
                     Skills
                 </h2>

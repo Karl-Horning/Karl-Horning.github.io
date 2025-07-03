@@ -27,7 +27,7 @@ export default function AboutPhotoCard() {
                 height={480}
             />
             <div className="absolute inset-0 transform rounded-xl bg-black/60  p-4 text-white opacity-0 transition-transform duration-300 group-hover:scale-105 group-hover:opacity-100">
-                <h2 className="text-xl font-bold">Karl Horning</h2>
+                <h2 className="text-xl">Karl Horning</h2>
                 <p className="text-sm">
                     Full-Stack JavaScript Developer & Learning Technologist
                 </p>

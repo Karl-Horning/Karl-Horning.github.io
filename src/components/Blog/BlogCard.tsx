@@ -31,7 +31,7 @@ export default function BlogCard({
                 width={400}
                 height={200}
             />
-            <h3 className="mb-2 text-2xl font-semibold text-text hover:text-primary hover:underline">
+            <h3 className="mb-2 text-2xl text-text hover:text-primary hover:underline">
                 <a
                     href={href}
                     aria-label={`Read more: ${title}`}

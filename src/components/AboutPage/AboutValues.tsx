@@ -22,7 +22,7 @@ export default function AboutValues() {
             >
                 <h2
                     id="values-heading"
-                    className="mb-6 text-center text-2xl font-bold text-primary"
+                    className="mb-6 text-center text-2xl text-primary"
                 >
                     What I Value
                 </h2>
