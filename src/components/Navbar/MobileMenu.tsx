@@ -2,6 +2,9 @@ import { externalLinks, internalRoutes } from "@/constants/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const { BlogLink } = externalLinks;
+const { AboutRoute, ContactRoute } = internalRoutes;
+
 type NavLink = {
     label: string;
     href: string;
@@ -24,9 +27,9 @@ interface MobileMenuProps {
  */
 export default function MobileMenu({
     links = [
-        { label: "About", href: internalRoutes.about },
-        { label: "Blog", href: externalLinks.blog },
-        { label: "Contact", href: internalRoutes.contact },
+        { label: "About", href: AboutRoute },
+        { label: "Blog", href: BlogLink },
+        { label: "Contact", href: ContactRoute },
     ],
     isOpen = false,
     onClose,

@@ -1,6 +1,8 @@
 import { internalRoutes } from "@/constants/links";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 
+const { ContactRoute } = internalRoutes;
+
 /**
  * A presentational component that renders the introductory "About Me" section.
  *
@@ -17,10 +19,7 @@ import ButtonLink from "@/components/Buttons/ButtonLink";
  */
 export default function AboutIntro() {
     return (
-        <div
-             data-aos="zoom-in" data-aos-delay="200"
-            className="md:col-span-2"
-        >
+        <div data-aos="zoom-in" data-aos-delay="200" className="md:col-span-2">
             <section
                 aria-labelledby="about-heading"
                 className="transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
@@ -65,10 +64,7 @@ export default function AboutIntro() {
                 </p>
 
                 <div className="flex justify-center">
-                    <ButtonLink
-                        text="Get in Touch"
-                        href={internalRoutes.contact}
-                    />
+                    <ButtonLink text="Get in Touch" href={ContactRoute} />
                 </div>
             </section>
         </div>

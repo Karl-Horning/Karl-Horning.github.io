@@ -3,6 +3,8 @@ import { icons } from "./icons";
 import { externalLinks, internalRoutes } from "./links";
 
 const { ContactIcon, GitHubIcon, LinkedInIcon, RssIcon } = icons;
+const { GitHubLink, LinkedInLink, RssLink } = externalLinks;
+const { ContactRoute } = internalRoutes;
 
 /**
  * Represents a single footer navigation item.
@@ -20,22 +22,22 @@ type FooterLink = {
 export const footerLinks: FooterLink[] = [
     {
         label: "GitHub",
-        href: externalLinks.gitHub,
+        href: GitHubLink,
         icon: GitHubIcon,
     },
     {
         label: "LinkedIn",
-        href: externalLinks.linkedIn,
+        href: LinkedInLink,
         icon: LinkedInIcon,
     },
     {
         label: "Contact",
-        href: internalRoutes.contact,
+        href: ContactRoute,
         icon: ContactIcon,
     },
     {
         label: "RSS Feed",
-        href: internalRoutes.rss,
+        href: RssLink,
         icon: RssIcon,
     },
 ];
