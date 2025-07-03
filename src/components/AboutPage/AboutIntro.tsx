@@ -27,7 +27,7 @@ export default function AboutIntro() {
             >
                 <h1
                     id="about-heading"
-                    className="mb-6 text-center text-4xl text-primary"
+                    className="mb-6 text-center text-5xl text-primary"
                 >
                     About Me
                 </h1>
