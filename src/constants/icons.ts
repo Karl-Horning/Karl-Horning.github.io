@@ -29,37 +29,37 @@ export const icons = {
      * @description FaUniversalAccess
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    accessibility: FaUniversalAccess,
+    AccessibilityIcon: FaUniversalAccess,
 
     /**
      * @description TbApi
      * @link [Tabler Icons](https://react-icons.github.io/react-icons/icons/tb/)
      */
-    api: TbApi,
+    ApiIcon: TbApi,
 
     /**
      * @description FaCode
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    code: FaCode,
+    CodeIcon: FaCode,
 
     /**
      * @description FaCodepen
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    codePen: FaCodepen,
+    CodePenIcon: FaCodepen,
 
     /**
      * @description FaEnvelope
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    contact: FaEnvelope,
+    ContactIcon: FaEnvelope,
 
     /**
      * @description FaDatabase
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    database: FaDatabase,
+    DatabaseIcon: FaDatabase,
 
     /**
      * @description HiOutlineExternalLink
@@ -71,83 +71,83 @@ export const icons = {
      * @description FaGithub
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    gitHub: FaGithub,
+    GitHubIcon: FaGithub,
 
     /**
      * @description SiGraphql
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
-    graphQl: SiGraphql,
+    GraphQlIcon: SiGraphql,
 
     /**
      * @description FaJs
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    javaScript: FaJs,
+    JavaScriptIcon: FaJs,
 
     /**
      * @description FaGraduationCap
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    learning: FaGraduationCap,
+    LearningIcon: FaGraduationCap,
 
     /**
      * @description FaLinkedin
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    linkedIn: FaLinkedin,
+    LinkedInIcon: FaLinkedin,
 
     /**
      * @description FaNodeJs
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    nodeJs: FaNodeJs,
+    NodeJsIcon: FaNodeJs,
 
     /**
      * @description SiPostgresql
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
-    postgreSql: SiPostgresql,
+    PostgreSqlIcon: SiPostgresql,
 
     /**
      * @description FaReact
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    react: FaReact,
+    ReactIcon: FaReact,
 
     /**
      * @description FaArrowRight
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    readMore: FaArrowRight,
+    ReadMoreIcon: FaArrowRight,
 
     /**
      * @description FaRss
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    rss: FaRss,
+    RssIcon: FaRss,
 
     /**
      * @description SiTailwindcss
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
-    tailwind: SiTailwindcss,
+    TailwindIcon: SiTailwindcss,
 
     /**
      * @description FaVial
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    testing: FaVial,
+    TestingIcon: FaVial,
 
     /**
      * @description FaTools
      * @link [Font Awesome 5](https://react-icons.github.io/react-icons/icons/fa/)
      */
-    tools: FaTools,
+    ToolsIcon: FaTools,
 
     /**
      * @description FaUser
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    users: FaUser,
+    UsersIcon: FaUser,
 };
