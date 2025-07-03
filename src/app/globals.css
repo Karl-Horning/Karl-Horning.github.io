@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --font-inter: Inter, sans-serif;
+    --font-poppins: Poppins, sans-serif;
+    --font-rubik-glitch: "Rubik Glitch", cursive;
+    --black: #2d292d;
+    --custom-red: #da4453;
+    --primary: #e93681;
+    --accent: #14a098;
+    --highlight: #148aad;
+    --background: #0f292f;
+    --background-subtle: #254c4f;
+    --surface: #1a3b3d;
+    --hero: #0b1d21;
+    --text: #cccccc;
+    --muted: #b3b3b3;
+}
+
 ::selection {
     background-color: #fee300; /* customYellow */
     color: #2d292d; /* customBlack */
@@ -40,4 +57,56 @@
     .shadow-md {
         box-shadow: none !important;
     }
+}
+
+/* Replace inline-block with inline-flex */
+.text-link {
+    color: var(--text);
+    display: inline-flex; /* Now it supports layout with the icon */
+    align-items: center; /* Vertically align text and icon */
+    gap: 0.25em; /* Small space between text and icon */
+    padding: 0 0.1em 0.3em;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+}
+
+/* Animated background underline */
+.text-link::before {
+    content: "";
+    position: absolute; /* Position relative to .text-link */
+    left: -0.2em;
+    right: -0.2em;
+    bottom: 0; /* Anchored to the bottom of the text */
+    top: 90%; /* Creates a thin underline (adjust for thickness) */
+    background-color: var(
+        --text
+    ); /* Same as text colour to simulate underline */
+    z-index: -1; /* Sits behind the actual text */
+    transition: all 0.4s cubic-bezier(0, 1, 0.3, 1);
+    border-radius: 0.1em;
+}
+
+/* On hover, change text colour */
+.text-link:hover {
+    color: black; /* IMPORTANT! Ensure contrast with background highlight */
+}
+
+/* Expand the background to fully highlight text on hover */
+.text-link:hover::before {
+    top: 0; /* Expands background to cover full height */
+    transition: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+}
+
+/* Focus styles */
+.text-link:focus {
+    outline: none;
+}
+
+.text-link:focus-visible {
+    border-radius: 0.25rem /* 4px */;
+    /* Simulates a ring around the element */
+    box-shadow:
+        0 0 0 2px var(--primary),
+        0 0 0 4px var(--background);
 }
