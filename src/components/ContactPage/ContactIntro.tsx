@@ -1,5 +1,8 @@
-import Header from "@/components/Header";
 import Section from "../Section";
+import { externalLinks } from "@/constants/links";
+import { icons } from "@/constants/icons";
+
+const { ExternalLinkIcon } = icons;
 
 /**
  * ContactIntro component displays a heading and introductory message
@@ -18,7 +21,18 @@ export default function ContactIntro() {
             <p className="mx-auto max-w-3xl text-center text-text">
                 Whether you&apos;d like to collaborate, discuss a project, share
                 feedback, or just say hello, feel free to get in touch using the
-                form below. You can also connect with me via LinkedIn or email.
+                form below. You can also{" "}
+                <a
+                    href={externalLinks.linkedIn}
+                    aria-label="Connect with Karl Horning on LinkedIn"
+                    className="text-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    connect with me via LinkedIn
+                    <ExternalLinkIcon />
+                </a>
+                .
             </p>
         </Section>
     );
