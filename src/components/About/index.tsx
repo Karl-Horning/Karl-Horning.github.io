@@ -2,6 +2,8 @@ import ButtonLink from "@/components/Buttons/ButtonLink";
 import Section from "@/components/Section";
 import { internalRoutes } from "@/constants/links";
 
+const { AboutRoute } = internalRoutes;
+
 /**
  * A section component that introduces the user with a heading, description, and a call-to-action button.
  *
@@ -36,7 +38,7 @@ export default function About() {
                 >
                     <ButtonLink
                         text="More About Me"
-                        href={internalRoutes.about}
+                        href={AboutRoute}
                         type="secondary"
                     />
                 </div>

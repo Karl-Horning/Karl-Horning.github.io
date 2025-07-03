@@ -1,8 +1,8 @@
 import { externalLinks, internalRoutes } from "./links";
 import { seo } from "@/constants/seo";
 
-const { contact } = internalRoutes;
-const { codePen, gitHub, linkedIn } = externalLinks;
+const { ContactRoute } = internalRoutes;
+const { CodePenLink, GitHubLink, LinkedInLink } = externalLinks;
 const {
     defaultDescription,
     defaultEmail,
@@ -23,7 +23,7 @@ export const jsonLdAbout = {
     jobTitle: defaultJobTitle,
     email: defaultEmail,
     url: siteUrl,
-    sameAs: [gitHub, codePen, linkedIn],
+    sameAs: [CodePenLink, GitHubLink, LinkedInLink],
     description: defaultDescription,
     knowsAbout: [
         "JavaScript",
@@ -58,7 +58,7 @@ export const jsonLdHome = {
         "@type": "Person",
         name: siteName,
         url: siteUrl,
-        sameAs: [linkedIn, gitHub, codePen],
+        sameAs: [CodePenLink, GitHubLink, LinkedInLink],
         jobTitle: defaultJobTitle,
         image: defaultImage,
     },
@@ -72,7 +72,7 @@ export const jsonLdHome = {
 export const jsonLdContact = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    url: `${siteUrl}${contact}`,
+    url: `${siteUrl}${ContactRoute}`,
     name: siteName,
     description: "Use the form to contact Karl Horning or connect on LinkedIn.",
     address: [
@@ -92,7 +92,7 @@ export const jsonLdContact = {
             "@type": "ContactPoint",
             contactType: "personal",
             description: "Contact form available on the website",
-            url: `${siteUrl}${contact}`,
+            url: `${siteUrl}${ContactRoute}`,
             availableLanguage: ["English", "Portuguese"],
         },
         {
@@ -105,10 +105,10 @@ export const jsonLdContact = {
         {
             "@type": "ContactPoint",
             contactType: "professional",
-            url: linkedIn,
+            url: LinkedInLink,
             description: "Connect with Karl on LinkedIn",
             availableLanguage: ["English", "Portuguese"],
         },
     ],
-    sameAs: [linkedIn, gitHub, codePen],
+    sameAs: [CodePenLink, GitHubLink, LinkedInLink],
 };

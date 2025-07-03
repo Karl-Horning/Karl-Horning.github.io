@@ -4,9 +4,11 @@ import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdContact } from "@/constants/jsonLd";
 
+const { ContactRoute } = internalRoutes;
+
 export const metadata = createMetadata({
     title: "Contact",
-    path: internalRoutes.contact,
+    path: ContactRoute,
     jsonLd: jsonLdContact,
 });
 

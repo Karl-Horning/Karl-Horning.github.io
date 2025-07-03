@@ -7,9 +7,11 @@ import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdAbout } from "@/constants/jsonLd";
 
+const { AboutRoute } = internalRoutes;
+
 export const metadata = createMetadata({
     title: "About",
-    path: internalRoutes.about,
+    path: AboutRoute,
     jsonLd: jsonLdAbout,
 });
 

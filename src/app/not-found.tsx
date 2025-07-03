@@ -1,6 +1,9 @@
 import Section from "@/components/Section";
 import { createMetadata } from "@/lib/metadata";
 import Link from "next/link";
+import { internalRoutes } from "@/constants/links";
+
+const { HomeRout } = internalRoutes;
 
 export const metadata = createMetadata({
     title: "404",
@@ -21,7 +24,7 @@ export const metadata = createMetadata({
  */
 export default function NotFound() {
     return (
-        <section className="flex flex-col bg-background px-6 pb-12 text-foreground">
+        <section className="text-foreground flex flex-col bg-background px-6 pb-12">
             <div className="flex flex-1 flex-col items-center justify-center gap-8">
                 {/* Header & Message */}
                 <Section id="not-found" header="404 Error" headerLevel={1}>
@@ -38,7 +41,7 @@ export default function NotFound() {
                 >
                     {/* Terminal Header */}
                     <div className="border-border flex items-center gap-2 rounded-t-2xl border-b bg-muted/80 px-4 py-2">
-                        <span className="bg-red-500 h-3 w-3 rounded-full" />
+                        <span className="h-3 w-3 rounded-full bg-red-500" />
                         <span className="h-3 w-3 rounded-full bg-yellow-400" />
                         <span className="h-3 w-3 rounded-full bg-green-500" />
                         <span className="text-muted-foreground ml-auto text-xs">
@@ -50,7 +53,7 @@ export default function NotFound() {
                     <div className="rounded-b-2xl bg-black px-4 py-6 font-mono text-sm text-green-500">
                         <p className="mb-2">&gt; cd /missing-page</p>
                         <p className="mb-2">&gt; ls</p>
-                        <p className="text-red-500 mb-2">
+                        <p className="mb-2 text-red-500">
                             ls: cannot access &apos;.&apos;: No such file or
                             directory
                         </p>
@@ -61,7 +64,7 @@ export default function NotFound() {
                             Try returning to a safe directory:
                         </p>
                         <Link
-                            href="/"
+                            href={HomeRout}
                             className="mb-6 inline-block border border-green-400 px-4 py-2 transition hover:bg-green-400 hover:text-black focus:outline-none focus:ring focus:ring-green-400"
                         >
                             [ home ]

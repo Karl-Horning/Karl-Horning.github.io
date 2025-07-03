@@ -1,6 +1,9 @@
 import { externalLinks, internalRoutes } from "@/constants/links";
 import Link from "next/link";
 
+const { BlogLink } = externalLinks;
+const { AboutRoute, ContactRoute } = internalRoutes;
+
 type NavLink = {
     label: string;
     href: string;
@@ -19,9 +22,9 @@ interface DesktopMenuProps {
  */
 export default function DesktopMenu({
     links = [
-        { label: "About", href: internalRoutes.about },
-        { label: "Blog", href: externalLinks.blog },
-        { label: "Contact", href: internalRoutes.contact },
+        { label: "About", href: AboutRoute },
+        { label: "Blog", href: BlogLink },
+        { label: "Contact", href: ContactRoute },
     ],
 }: DesktopMenuProps) {
     return (

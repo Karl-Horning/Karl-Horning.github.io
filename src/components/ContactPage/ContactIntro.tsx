@@ -3,6 +3,7 @@ import { externalLinks } from "@/constants/links";
 import { icons } from "@/constants/icons";
 
 const { ExternalLinkIcon } = icons;
+const { LinkedInLink } = externalLinks;
 
 /**
  * ContactIntro component displays a heading and introductory message
@@ -23,7 +24,7 @@ export default function ContactIntro() {
                 feedback, or just say hello, feel free to get in touch using the
                 form below. You can also{" "}
                 <a
-                    href={externalLinks.linkedIn}
+                    href={LinkedInLink}
                     aria-label="Connect with Karl Horning on LinkedIn"
                     className="text-link"
                     target="_blank"

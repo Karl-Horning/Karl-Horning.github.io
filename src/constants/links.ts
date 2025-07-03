@@ -4,29 +4,32 @@
  */
 export const externalLinks = {
     /** The blog subdomain */
-    blog: "https://karl-horning.github.io/dev-blog",
+    BlogLink: "https://karl-horning.github.io/dev-blog",
 
     /** Karl Horning's CodePen profile link */
-    codePen: "https://codepen.io/karlhorning",
+    CodePenLink: "https://codepen.io/karlhorning",
 
     /** Karl Horning's GitHub profile link  */
-    gitHub: "https://github.com/Karl-Horning",
+    GitHubLink: "https://github.com/Karl-Horning",
 
     /** Karl Horning's LinkedIn profile link */
-    linkedIn: "https://www.linkedin.com/in/karl-horning",
+    LinkedInLink: "https://www.linkedin.com/in/karl-horning",
 
     /** Karl Horning's portfolio site */
-    portfolio: "https://karl-horning.github.io",
+    PortfolioLink: "https://karl-horning.github.io",
 
     /** Karl Horning's portfolio site repo */
-    portfolioRepo: "https://github.com/Karl-Horning/Karl-Horning.github.io",
+    PortfolioRepoLink: "https://github.com/Karl-Horning/Karl-Horning.github.io",
+
+    /** The RSS feed for the blog subdomain */
+    RssLink: "/rss",
 
     /** Learnlight iOS App link */
-    learnlight: {
-        iosApp: "https://apps.apple.com/gb/app/learnlight/id1479158492",
+    LearnlightLink: {
+        IosApp: "https://apps.apple.com/gb/app/learnlight/id1479158492",
 
         /** Learnlight Android App link */
-        playApp:
+        PlayApp:
             "https://play.google.com/store/apps/details?id=com.ct.learnlight",
     },
 };
@@ -36,18 +39,12 @@ export const externalLinks = {
  */
 export const internalRoutes = {
     /** The home page */
-    home: "/",
+    HomeRout: "/",
 
     /** The about page */
 
-    about: "/about",
-
-    /** The blog subdomain */
-    blog: "/blog",
+    AboutRoute: "/about",
 
     /** The contact page */
-    contact: "/contact",
-
-    /** The RSS feed for the blog subdomain */
-    rss: "/rss",
+    ContactRoute: "/contact",
 };

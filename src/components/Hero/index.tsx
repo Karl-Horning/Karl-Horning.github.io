@@ -8,6 +8,8 @@ import ButtonLink from "@/components/Buttons/ButtonLink";
 import { internalRoutes } from "@/constants/links";
 import { assets } from "@/constants/assets";
 
+const { ContactRoute } = internalRoutes;
+
 /**
  * Hero section displayed at the top of the homepage, introducing the developer with an image,
  * a short bio, and a call-to-action button.
@@ -80,7 +82,7 @@ export default function Hero() {
                 >
                     <ButtonLink
                         text="Work With Me"
-                        href={internalRoutes.contact}
+                        href={ContactRoute}
                         className="mt-8"
                     />
                 </div>
