@@ -14,9 +14,9 @@ const config: Config = {
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },
             fontFamily: {
-                sans: ["var(--font-inter)", "sans-serif"], // body text
-                heading: ["var(--font-poppins)", "sans-serif"], // headings
-                glitch: ["var(--font-rubik-glitch)", "cursive"], // logo
+                sans: ["Inter", "sans-serif"],
+                heading: ["Poppins", "sans-serif"],
+                glitch: ['"Rubik Glitch"', "cursive"],
             },
             colors: {
                 black: "#2d292d",

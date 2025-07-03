@@ -1,25 +1,8 @@
-import { Inter, Poppins, Rubik_Glitch } from "next/font/google";
+import "./styles/fonts.css";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { jsonLdHome } from "@/constants/jsonLd";
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
-});
-
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["700"], // Bold
-    variable: "--font-poppins",
-});
-
-const rubikGlitch = Rubik_Glitch({
-    subsets: ["latin"],
-    weight: "400", // Only weight available
-    variable: "--font-rubik-glitch",
-});
 
 export default function RootLayout({
     children,
@@ -29,7 +12,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${inter.variable} ${poppins.variable} ${rubikGlitch.variable} scroll-smooth`}
+            className="scroll-smooth"
             style={{ scrollBehavior: "smooth" }}
         >
             <head>
@@ -40,9 +23,7 @@ export default function RootLayout({
                     }}
                 />
             </head>
-            <body
-                className={`${inter.className} flex min-h-screen flex-col bg-background font-sans text-foreground`}
-            >
+            <body className="text-foreground flex min-h-screen flex-col bg-background font-sans">
                 <Navbar />
                 <main className="flex-1 pt-16">{children}</main>
                 <Footer />

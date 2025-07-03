@@ -20,7 +20,7 @@ export default function AboutBadges() {
             >
                 <h2
                     id="badges-certifications-heading"
-                    className="mb-6 flex items-center justify-center rounded-lg bg-surface p-4 text-center text-2xl font-bold text-primary shadow-sm"
+                    className="mb-6 flex items-center justify-center rounded-lg bg-surface p-4 text-center text-2xl text-primary shadow-sm"
                 >
                     Badges & Certifications
                 </h2>
