@@ -1,5 +1,4 @@
 import Button from "@/components/Buttons/Button";
-import LinkedInCta from "./LinkedInCta";
 import FormField from "./FormField";
 
 /**
@@ -86,8 +85,6 @@ export default function ContactForm() {
                     {/* TODO: redirect */}
                     {/* <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you"> */}
                 </form>
-
-                <LinkedInCta />
             </div>
         </section>
     );
