@@ -1,6 +1,8 @@
 import { icons } from "./icons";
 import { Skill } from "@/types/about";
 
+const { AccessibilityIcon, ApiIcon, DatabaseIcon, JavaScriptIcon } = icons;
+
 /**
  * An array of skill objects displayed on the homepage.
  *
@@ -14,22 +16,22 @@ import { Skill } from "@/types/about";
 export const homeSkills: Skill[] = [
     {
         name: "JavaScript",
-        icon: icons.javaScript,
+        icon: JavaScriptIcon,
         colour: "text-yellow-400",
     },
     {
         name: "Accessibility",
-        icon: icons.accessibility,
+        icon: AccessibilityIcon,
         colour: "text-custom-red",
     },
     {
         name: "SQL",
-        icon: icons.database,
+        icon: DatabaseIcon,
         colour: "text-orange-400",
     },
     {
         name: "APIs",
-        icon: icons.api,
+        icon: ApiIcon,
         colour: "text-sky-500",
     },
 ];
