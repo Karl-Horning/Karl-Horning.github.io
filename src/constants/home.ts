@@ -18,18 +18,18 @@ export const homeSkills: Skill[] = [
         colour: "text-yellow-400",
     },
     {
-        name: "React",
-        icon: icons.react,
-        colour: "text-blue-400",
-    },
-    {
         name: "Accessibility",
         icon: icons.accessibility,
         colour: "text-custom-red",
     },
     {
-        name: "SQL & APIs",
+        name: "SQL",
         icon: icons.database,
         colour: "text-orange-400",
+    },
+    {
+        name: "APIs",
+        icon: icons.api,
+        colour: "text-sky-500",
     },
 ];

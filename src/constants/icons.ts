@@ -17,6 +17,7 @@ import {
     FaVial,
 } from "react-icons/fa6";
 import { SiGraphql, SiPostgresql, SiTailwindcss } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 /**
  * A collection of icon components from react-icons,
@@ -28,6 +29,12 @@ export const icons = {
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     accessibility: FaUniversalAccess,
+
+    /**
+     * @description TbApi
+     * @link [Tabler Icons](https://react-icons.github.io/react-icons/icons/tb/)
+     */
+    api: TbApi,
 
     /**
      * @description FaCode
