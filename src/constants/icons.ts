@@ -16,6 +16,7 @@ import {
     FaUser,
     FaVial,
 } from "react-icons/fa6";
+import { HiOutlineExternalLink } from "react-icons/hi";
 import { SiGraphql, SiPostgresql, SiTailwindcss } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
@@ -59,6 +60,12 @@ export const icons = {
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     database: FaDatabase,
+
+    /**
+     * @description HiOutlineExternalLink
+     * @link [Heroicons](https://react-icons.github.io/react-icons/icons/hi/)
+     */
+    ExternalLinkIcon: HiOutlineExternalLink,
 
     /**
      * @description FaGithub
