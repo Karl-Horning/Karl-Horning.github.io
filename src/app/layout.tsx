@@ -22,7 +22,7 @@ export default function RootLayout({
                         __html: JSON.stringify(jsonLdHome),
                     }}
                 />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.ico?v=2" />
             </head>
             <body className="text-foreground flex min-h-screen flex-col bg-background font-sans">
                 <Navbar />
