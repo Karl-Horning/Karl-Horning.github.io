@@ -1,11 +1,45 @@
 [
     {
+        "title": "Using Blackboard's Swagger File to Create a Postman Collection and Make an API Call",
+        "href": "https://karl-horning.github.io/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
+        "imgUrl": "https://karl-horning.github.io/dev-blog/assets/img/postman_blackboard.webp",
+        "imgAlt": "The Postman and Blackboard Learn logos",
+        "date": "11 July 2025",
+        "snippet": " This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
+        "tags": [
+            {
+                "title": "Blackboard",
+                "href": "https://karl-horning.github.io/dev-blog/tags/blackboard/"
+            },
+            {
+                "title": "Postman",
+                "href": "https://karl-horning.github.io/dev-blog/tags/postman/"
+            },
+            {
+                "title": "API",
+                "href": "https://karl-horning.github.io/dev-blog/tags/api/"
+            },
+            {
+                "title": "Swagger",
+                "href": "https://karl-horning.github.io/dev-blog/tags/swagger/"
+            },
+            {
+                "title": "OAuth2",
+                "href": "https://karl-horning.github.io/dev-blog/tags/oauth2/"
+            },
+            {
+                "title": "EdTech",
+                "href": "https://karl-horning.github.io/dev-blog/tags/edtech/"
+            }
+        ]
+    },
+    {
         "title": "Testing, Testing",
         "href": "https://karl-horning.github.io/dev-blog/posts/testing-testing/",
         "imgUrl": "https://karl-horning.github.io/dev-blog/assets/img/pexels-mali-63238.optimised.webp",
         "imgAlt": "Graffiti of a monkey wearing sunglasses (placeholder image)",
         "date": "23 June 2025",
-        "snippet": " A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together. ",
+        "snippet": " A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
         "tags": [
             {
                 "title": "meta",
