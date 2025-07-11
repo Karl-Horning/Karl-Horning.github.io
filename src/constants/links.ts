@@ -22,7 +22,7 @@ export const externalLinks = {
     PortfolioRepoLink: "https://github.com/Karl-Horning/Karl-Horning.github.io",
 
     /** The RSS feed for the blog subdomain */
-    RssLink: "/rss",
+    RssLink: "https://karl-horning.github.io/dev-blog/feed.xml",
 
     /** Learnlight iOS App link */
     LearnlightLink: {
