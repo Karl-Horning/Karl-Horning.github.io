@@ -1,83 +1,83 @@
 [
     {
         "title": "Using Blackboard's Swagger File to Create a Postman Collection and Make an API Call",
-        "href": "https://karl-horning.github.io/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
-        "imgUrl": "https://karl-horning.github.io/dev-blog/assets/img/postman_blackboard.webp",
+        "href": "https://www.karlhorning.dev/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
+        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/postman_blackboard.webp",
         "imgAlt": "The Postman and Blackboard Learn logos",
         "date": "11 July 2025",
         "snippet": " This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
         "tags": [
             {
                 "title": "Blackboard",
-                "href": "https://karl-horning.github.io/dev-blog/tags/blackboard/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/blackboard/"
             },
             {
                 "title": "Postman",
-                "href": "https://karl-horning.github.io/dev-blog/tags/postman/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/postman/"
             },
             {
                 "title": "API",
-                "href": "https://karl-horning.github.io/dev-blog/tags/api/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/api/"
             },
             {
                 "title": "Swagger",
-                "href": "https://karl-horning.github.io/dev-blog/tags/swagger/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/swagger/"
             },
             {
                 "title": "OAuth2",
-                "href": "https://karl-horning.github.io/dev-blog/tags/oauth2/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/oauth2/"
             },
             {
                 "title": "EdTech",
-                "href": "https://karl-horning.github.io/dev-blog/tags/edtech/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/edtech/"
             }
         ]
     },
     {
         "title": "Testing, Testing",
-        "href": "https://karl-horning.github.io/dev-blog/posts/testing-testing/",
-        "imgUrl": "https://karl-horning.github.io/dev-blog/assets/img/pexels-mali-63238.optimised.webp",
+        "href": "https://www.karlhorning.dev/dev-blog/posts/testing-testing/",
+        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/pexels-mali-63238.optimised.webp",
         "imgAlt": "Graffiti of a monkey wearing sunglasses (placeholder image)",
         "date": "23 June 2025",
         "snippet": " A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
         "tags": [
             {
                 "title": "meta",
-                "href": "https://karl-horning.github.io/dev-blog/tags/meta/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/meta/"
             },
             {
                 "title": "blog",
-                "href": "https://karl-horning.github.io/dev-blog/tags/blog/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/blog/"
             },
             {
                 "title": "testing",
-                "href": "https://karl-horning.github.io/dev-blog/tags/testing/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/testing/"
             }
         ]
     },
     {
         "title": "Hello, World!",
-        "href": "https://karl-horning.github.io/dev-blog/posts/hello-world/",
-        "imgUrl": "https://karl-horning.github.io/dev-blog/assets/img/pexels-meruyert-gonullu-7317281.optimised.webp",
+        "href": "https://www.karlhorning.dev/dev-blog/posts/hello-world/",
+        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/pexels-meruyert-gonullu-7317281.optimised.webp",
         "imgAlt": "A neon sign saying 'hello'",
         "date": "22 June 2025",
         "snippet": "A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.",
         "tags": [
             {
                 "title": "meta",
-                "href": "https://karl-horning.github.io/dev-blog/tags/meta/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/meta/"
             },
             {
                 "title": "blog",
-                "href": "https://karl-horning.github.io/dev-blog/tags/blog/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/blog/"
             },
             {
                 "title": "personal",
-                "href": "https://karl-horning.github.io/dev-blog/tags/personal/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/personal/"
             },
             {
                 "title": "technology",
-                "href": "https://karl-horning.github.io/dev-blog/tags/technology/"
+                "href": "https://www.karlhorning.dev/dev-blog/tags/technology/"
             }
         ]
     }

@@ -4,7 +4,7 @@
  */
 export const externalLinks = {
     /** The blog subdomain */
-    BlogLink: "https://karl-horning.github.io/dev-blog",
+    BlogLink: "https://www.karlhorning.dev/dev-blog",
 
     /** Karl Horning's CodePen profile link */
     CodePenLink: "https://codepen.io/karlhorning",
@@ -16,13 +16,13 @@ export const externalLinks = {
     LinkedInLink: "https://www.linkedin.com/in/karl-horning",
 
     /** Karl Horning's portfolio site */
-    PortfolioLink: "https://karl-horning.github.io",
+    PortfolioLink: "https://www.karlhorning.dev",
 
     /** Karl Horning's portfolio site repo */
     PortfolioRepoLink: "https://github.com/Karl-Horning/Karl-Horning.github.io",
 
     /** The RSS feed for the blog subdomain */
-    RssLink: "https://karl-horning.github.io/dev-blog/feed.xml",
+    RssLink: "https://www.karlhorning.dev/dev-blog/feed.xml",
 
     /** Learnlight iOS App link */
     LearnlightLink: {
