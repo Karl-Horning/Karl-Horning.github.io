@@ -22,7 +22,7 @@ export default function AboutIntro() {
         <div data-aos="zoom-in" data-aos-delay="200" className="md:col-span-2">
             <section
                 aria-labelledby="about-heading"
-                className="transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                className="h-full transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
                 <h1
                     id="about-heading"

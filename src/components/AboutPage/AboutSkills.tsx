@@ -18,7 +18,7 @@ export default function AboutSkills() {
         <div data-aos="zoom-in" data-aos-delay="400">
             <section
                 aria-labelledby="skills-heading"
-                className="transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                className="h-full transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
                 <h2
                     id="skills-heading"

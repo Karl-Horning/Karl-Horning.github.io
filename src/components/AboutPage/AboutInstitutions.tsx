@@ -15,7 +15,7 @@ export default function AboutInstitutions() {
         <div data-aos="zoom-in" data-aos-delay="450">
             <section
                 aria-labelledby="institutions-heading"
-                className="transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                className="h-full transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
                 <h2
                     id="institutions-heading"
@@ -24,10 +24,7 @@ export default function AboutInstitutions() {
                     Institutions I&apos;ve Worked With
                 </h2>
 
-                <ul
-                    className="grid grid-cols-2 gap-6"
-                    role="list"
-                >
+                <ul className="grid grid-cols-2 gap-6" role="list">
                     {/* Imperial College London */}
                     <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm transition-transform hover:scale-105">
                         <Image
