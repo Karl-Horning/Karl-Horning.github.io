@@ -30,7 +30,9 @@ export default function AboutBadges() {
                     {aboutBadges.map(({ name, src }) => (
                         <li
                             key={src}
-                            className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm"
+                            className={`flex items-center justify-center rounded-lg bg-white p-4 shadow-sm ${
+                                name === "Apple Teacher" ? "col-span-2" : ""
+                            }`}
                         >
                             <Image
                                 src={src}
