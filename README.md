@@ -72,7 +72,7 @@ src/
 
 ## 🌐 Live Site
 
-Visit the live site at: [karl-horning.github.io](https://www.karlhorning.dev)
+Visit the live site at: [karlhorning.dev](https://www.karlhorning.dev)
 
 ---
 
