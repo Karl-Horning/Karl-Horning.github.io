@@ -1,5 +1,5 @@
 import { icons } from "@/constants/icons";
-import { Skill, Value } from "@/types/about";
+import { LogoItem, Skill, Value } from "@/types/about";
 
 const {
     AccessibilityIcon,
@@ -111,5 +111,59 @@ export const aboutValues: Value[] = [
         title: "Lifelong Learning",
         icon: LearningIcon,
         description: "Lifelong learning, always exploring new skills and ideas",
+    },
+];
+
+/**
+ * Array of learning technologies used at different universities.
+ * Each object includes a display name and path to the logo SVG.
+ */
+export const aboutTechnologies: LogoItem[] = [
+    {
+        name: "Blackboard",
+        src: "/img/technologies/blackboard-by-anthology.svg",
+    },
+    {
+        name: "Brightspace",
+        src: "/img/technologies/brightspace-logo.svg",
+    },
+    {
+        name: "Canvas",
+        src: "/img/technologies/canvas-logo.svg",
+    },
+    {
+        name: "Moodle",
+        src: "/img/technologies/moodle-logo.svg",
+    },
+    {
+        name: "Turnitin",
+        src: "/img/technologies/turnitin-logo.svg",
+    },
+    {
+        name: "SITS:Vision",
+        src: "/img/technologies/sits-vision-logo.svg",
+    },
+];
+
+/**
+ * Array of institutions where work has been carried out.
+ * Each object includes the institution name and the path to its logo SVG.
+ */
+export const aboutInstitutions: LogoItem[] = [
+    {
+        name: "Imperial College London",
+        src: "/img/institutions/imperial-logo.svg",
+    },
+    {
+        name: "Kingston University",
+        src: "/img/institutions/kingston-university-logo.svg",
+    },
+    {
+        name: "City St George's, University of London",
+        src: "/img/institutions/city-st-georges-logo.svg",
+    },
+    {
+        name: "University of Roehampton",
+        src: "/img/institutions/roehampton-logo.svg",
     },
 ];

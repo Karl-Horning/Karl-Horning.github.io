@@ -1,33 +1,7 @@
+import { aboutTechnologies } from "@/constants/about";
 import Image from "next/image";
 
 export default function AboutTechnologies() {
-    const technologies = [
-        {
-            name: "Blackboard",
-            src: "/img/technologies/blackboard-by-anthology.svg",
-        },
-        {
-            name: "Brightspace",
-            src: "/img/technologies/brightspace-logo.svg",
-        },
-        {
-            name: "Canvas",
-            src: "/img/technologies/canvas-logo.svg",
-        },
-        {
-            name: "Moodle",
-            src: "/img/technologies/moodle-logo.svg",
-        },
-        {
-            name: "Turnitin",
-            src: "/img/technologies/turnitin-logo.svg",
-        },
-        {
-            name: "SITS:Vision",
-            src: "/img/technologies/sits-vision-logo.svg",
-        },
-    ];
-
     return (
         <div data-aos="zoom-in" data-aos-delay="400">
             <section
@@ -42,7 +16,7 @@ export default function AboutTechnologies() {
                 </h2>
 
                 <ul className="grid grid-cols-2 gap-6" role="list">
-                    {technologies.map(({ name, src }) => (
+                    {aboutTechnologies.map(({ name, src }) => (
                         <li
                             key={src}
                             className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm"

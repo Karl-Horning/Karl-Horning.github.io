@@ -1,3 +1,4 @@
+import { aboutInstitutions } from "@/constants/about";
 import Image from "next/image";
 
 /**
@@ -11,25 +12,6 @@ import Image from "next/image";
  * @component
  */
 export default function AboutInstitutions() {
-    const institutions = [
-        {
-            name: "Imperial College London",
-            src: "/img/institutions/imperial-logo.svg",
-        },
-        {
-            name: "Kingston University",
-            src: "/img/institutions/kingston-university-logo.svg",
-        },
-        {
-            name: "City St George's, University of London",
-            src: "/img/institutions/city-st-georges-logo.svg",
-        },
-        {
-            name: "University of Roehampton",
-            src: "/img/institutions/roehampton-logo.svg",
-        },
-    ];
-
     return (
         <div data-aos="zoom-in" data-aos-delay="450">
             <section
@@ -44,7 +26,7 @@ export default function AboutInstitutions() {
                 </h2>
 
                 <ul className="grid grid-cols-2 gap-6" role="list">
-                    {institutions.map(({ name, src }) => (
+                    {aboutInstitutions.map(({ name, src }) => (
                         <li
                             key={src}
                             className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm"
