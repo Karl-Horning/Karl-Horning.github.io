@@ -26,7 +26,7 @@ export default function AboutInstitutions() {
 
                 <ul className="grid grid-cols-2 gap-6" role="list">
                     {/* Imperial College London */}
-                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm transition-transform hover:scale-105">
+                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                         <Image
                             src="/img/institutions/imperial-logo.svg"
                             alt="Imperial College London logo"
@@ -38,7 +38,7 @@ export default function AboutInstitutions() {
                     </li>
 
                     {/* Kingston University */}
-                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm transition-transform hover:scale-105">
+                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                         <Image
                             src="/img/institutions/kingston-university-logo.svg"
                             alt="Kingston University London logo"
@@ -50,7 +50,7 @@ export default function AboutInstitutions() {
                     </li>
 
                     {/* St George’s, University of London */}
-                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm transition-transform hover:scale-105">
+                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                         <Image
                             src="/img/institutions/city-st-georges-logo.svg"
                             alt="City St George's, University of London logo"
@@ -62,7 +62,7 @@ export default function AboutInstitutions() {
                     </li>
 
                     {/* University of Roehampton */}
-                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm transition-transform hover:scale-105">
+                    <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                         <Image
                             src="/img/institutions/roehampton-logo.svg"
                             alt="University of Roehampton logo"
