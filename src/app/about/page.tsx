@@ -6,6 +6,7 @@ import AboutBadges from "@/components/AboutPage/AboutBadges";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdAbout } from "@/constants/jsonLd";
+import AboutInstitutions from "@/components/AboutPage/AboutInstitutions";
 
 const { AboutRoute } = internalRoutes;
 
@@ -33,6 +34,7 @@ export default function About() {
         <section className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 text-text sm:grid-cols-2 lg:grid-cols-3">
             <AboutPhotoCard />
             <AboutIntro />
+            <AboutInstitutions />
             <AboutValues />
             <AboutSkills />
             <AboutBadges />

@@ -16,7 +16,7 @@ export default function AboutBadges() {
         <div data-aos="zoom-in" data-aos-delay="500">
             <section
                 aria-labelledby="badges-certifications-heading"
-                className="transform rounded-lg bg-hero p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                className="h-full transform rounded-lg bg-hero p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
                 <h2
                     id="badges-certifications-heading"

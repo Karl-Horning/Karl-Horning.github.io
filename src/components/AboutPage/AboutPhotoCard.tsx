@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function AboutPhotoCard() {
     return (
         <section
-            className="group relative"
+            className="group relative h-full"
             data-aos="fade-right"
             data-aos-duration="1000"
         >
