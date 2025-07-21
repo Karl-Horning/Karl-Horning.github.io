@@ -25,3 +25,16 @@ export type Value = {
     icon: IconType;
     description: string;
 };
+
+/**
+ * Represents an organisation or technology logo used on the About page.
+ *
+ * Used for institutions (for example, universities) and platforms (for example, LMSs, tools).
+ *
+ * @property {string} name - The display name of the item.
+ * @property {string} src - The path to the SVG or image logo.
+ */
+export type LogoItem = {
+    name: string;
+    src: string;
+};
