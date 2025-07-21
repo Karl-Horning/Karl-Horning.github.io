@@ -19,7 +19,7 @@ const { ContactRoute } = internalRoutes;
  */
 export default function AboutIntro() {
     return (
-        <div data-aos="zoom-in" data-aos-delay="200" className="md:col-span-2">
+        <div data-aos="zoom-in" data-aos-delay="200" className="lg:col-span-2">
             <section
                 aria-labelledby="about-heading"
                 className="h-full transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
