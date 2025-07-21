@@ -7,6 +7,7 @@ import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdAbout } from "@/constants/jsonLd";
 import AboutInstitutions from "@/components/AboutPage/AboutInstitutions";
+import AboutTechnologies from "@/components/AboutPage/AboutTechnologies";
 
 const { AboutRoute } = internalRoutes;
 
@@ -35,6 +36,7 @@ export default function About() {
             <AboutPhotoCard />
             <AboutIntro />
             <AboutInstitutions />
+            <AboutTechnologies />
             <AboutValues />
             <AboutSkills />
             <AboutBadges />
