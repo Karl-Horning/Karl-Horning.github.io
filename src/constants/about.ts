@@ -167,3 +167,22 @@ export const aboutInstitutions: LogoItem[] = [
         src: "/img/institutions/roehampton-logo.svg",
     },
 ];
+
+/**
+ * Array of awarded badges and certifications.
+ * Each object includes the award name and the path to its logo SVG.
+ */
+export const aboutBadges: LogoItem[] = [
+    {
+        name: "Jira Fundamentals",
+        src: "/img/badges/atlassian-university-badge.png",
+    },
+    {
+        name: "Dyslexia Awareness",
+        src: "/img/badges/dyslexia-awareness-badge.svg",
+    },
+    {
+        name: "Apple Teacher",
+        src: "/img/badges/apple-teacher-swift-playgrounds-badge.svg",
+    },
+];
