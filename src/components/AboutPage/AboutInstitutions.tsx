@@ -49,7 +49,7 @@ export default function AboutInstitutions() {
                         />
                     </li>
 
-                    {/* St George’s, University of London */}
+                    {/* St George's, University of London */}
                     <li className="flex items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                         <Image
                             src="/img/institutions/city-st-georges-logo.svg"
