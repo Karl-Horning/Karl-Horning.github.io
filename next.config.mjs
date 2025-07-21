@@ -7,6 +7,11 @@ const nextConfig = {
                 hostname: "karl-horning.github.io",
                 pathname: "/**",
             },
+            {
+                protocol: "https",
+                hostname: "www.karlhorning.dev",
+                pathname: "/**",
+            },
         ],
     },
 };
