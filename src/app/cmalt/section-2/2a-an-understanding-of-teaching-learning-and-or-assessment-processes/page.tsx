@@ -1,0 +1,28 @@
+import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import { internalRoutes } from "@/constants/links";
+import { createMetadata } from "@/lib/metadata";
+
+const { CmaltRoute } = internalRoutes;
+
+export const metadata = createMetadata({
+    title: "Test | CMALT",
+    path: CmaltRoute,
+});
+
+export default function page() {
+    return (
+        <CMALTLayout title="Test" lastUpdated="2025-07-22">
+            <h2>CMALT Guidance</h2>
+
+            <h2>Description</h2>
+
+            <h2>Reflection</h2>
+
+            <h2>Summary</h2>
+
+            <h2>Evidence</h2>
+
+            <h2>Further Reading</h2>
+        </CMALTLayout>
+    );
+}
