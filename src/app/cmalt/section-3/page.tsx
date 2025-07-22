@@ -21,41 +21,46 @@ export default function Page() {
             title="Section 3: The Wider Context: Understanding and Engaging with Legislation, Policies and Standards"
             lastUpdated="2025-07-22"
         >
-            <h2>CMALT Guidance</h2>
+            <section>
+                <h2>CMALT Guidance</h2>
 
-            <p>
-                Candidates should demonstrate their awareness of and engagement
-                with wider issues that inform their practice. Candidates must
-                cover at least one legislative area (a) and either a second
-                legislative area or a policy area (b) (i.e., either two
-                legislative areas, or one legislative and one policy area).
-            </p>
+                <p>
+                    Candidates should demonstrate their awareness of and
+                    engagement with wider issues that inform their practice.
+                    Candidates must cover at least one legislative area (a) and
+                    either a second legislative area or a policy area (b) (i.e.,
+                    either two legislative areas, or one legislative and one
+                    policy area).
+                </p>
+            </section>
 
-            <h2>Description</h2>
+            <section>
+                <h2>Description</h2>
 
-            <p>
-                Section 3 explores the wider context that shapes my professional
-                practice. It focuses on how I understand and engage with
-                legislation, policies, and standards relevant to learning
-                technology. In the following subsections, I provide examples
-                that demonstrate this awareness and explain how these frameworks
-                influence the decisions I make in my work:
-            </p>
+                <p>
+                    Section 3 explores the wider context that shapes my
+                    professional practice. It focuses on how I understand and
+                    engage with legislation, policies, and standards relevant to
+                    learning technology. In the following subsections, I provide
+                    examples that demonstrate this awareness and explain how
+                    these frameworks influence the decisions I make in my work:
+                </p>
 
-            {section3?.children && (
-                <ul className="ml-4 mt-1 space-y-1 text-sm">
-                    {section3.children.map((child) => (
-                        <li key={child.slug}>
-                            <Link
-                                href={`/cmalt/${section3.slug}/${child.slug}`}
-                                className="cmalt-nav"
-                            >
-                                {child.label}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            )}
+                {section3?.children && (
+                    <ul className="ml-4 mt-1 space-y-1 text-sm">
+                        {section3.children.map((child) => (
+                            <li key={child.slug}>
+                                <Link
+                                    href={`/cmalt/${section3.slug}/${child.slug}`}
+                                    className="cmalt-nav"
+                                >
+                                    {child.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </section>
         </CMALTLayout>
     );
 }

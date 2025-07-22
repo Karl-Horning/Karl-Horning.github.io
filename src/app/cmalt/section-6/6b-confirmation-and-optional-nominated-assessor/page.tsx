@@ -12,17 +12,29 @@ export const metadata = createMetadata({
 export default function page() {
     return (
         <CMALTLayout title="Test" lastUpdated="2025-07-22">
-            <h2>CMALT Guidance</h2>
+            <section>
+                <h2>CMALT Guidance</h2>
+            </section>
 
-            <h2>Description</h2>
+            <section>
+                <h2>Description</h2>
+            </section>
 
-            <h2>Reflection</h2>
+            <section>
+                <h2>Reflection</h2>
+            </section>
 
-            <h2>Summary</h2>
+            <section>
+                <h2>Summary</h2>
+            </section>
 
-            <h2>Evidence</h2>
+            <section>
+                <h2>Evidence</h2>
+            </section>
 
-            <h2>Further Reading</h2>
+            <section>
+                <h2>Further Reading</h2>
+            </section>
         </CMALTLayout>
     );
 }
