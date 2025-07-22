@@ -1,6 +1,7 @@
 import { FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
+    FaCircleInfo,
     FaCode,
     FaCodepen,
     FaDatabase,
@@ -78,6 +79,12 @@ export const icons = {
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
     GraphQlIcon: SiGraphql,
+
+    /**
+     * @description FaCircleInfo
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    InfoIcon: FaCircleInfo,
 
     /**
      * @description FaJs
