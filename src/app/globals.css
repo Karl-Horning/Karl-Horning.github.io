@@ -208,40 +208,32 @@ h6 {
     .cmalt-nav,
     .prose-cmalt a {
         color: var(--text);
-        text-decoration: underline;
         position: relative;
-        transition: color 0.3s ease;
+        text-decoration: underline; /* Keep native underline for accessibility */
         overflow-wrap: anywhere;
         word-break: break-word;
+
+        /* Multiline animated underline base */
+        background-image: linear-gradient(currentColor, currentColor);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: 0% 2px;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        transition:
+            color 0.3s ease,
+            background-size 0.3s ease;
     }
 
-    /* On hover, change text colour and add animated underline background */
+    /* Hover state: change colour + reveal multiline underline */
     .cmalt-nav:hover,
     .prose-cmalt a:hover {
         color: white;
+        background-size: 100% 2px;
     }
 
-    /* Animated underline hover effect */
-    .cmalt-nav::after,
-    .prose-cmalt a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        width: 100%;
-        background-color: currentColor;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-    }
-
-    /* Animate underline on hover */
-    .cmalt-nav:hover::after,
-    .prose-cmalt a:hover::after {
-        transform: scaleX(1);
-    }
-
+    /* Focus accessibility styles */
     .cmalt-nav:focus,
     .prose-cmalt a:focus {
         outline: none;
@@ -249,8 +241,7 @@ h6 {
 
     .cmalt-nav:focus-visible,
     .prose-cmalt a:focus-visible {
-        border-radius: 0.25rem /* 4px */;
-        /* Simulates Tailwind's ring system */
+        border-radius: 0.25rem; /* 4px */
         box-shadow:
             0 0 0 2px var(--primary),
             0 0 0 4px var(--background);
