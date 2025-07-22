@@ -31,19 +31,23 @@ export default function CMALTHeader({
             <div className="cmalt-hero absolute inset-0" />
             <div className="relative z-10 mx-auto max-w-4xl text-center">
                 <h1 className="cmalt-title">{title}</h1>
-                <p className="flex items-center justify-center gap-2 text-sm opacity-80">
-                    <CalendarIcon aria-hidden="true" />
-                    Last Updated:
-                    <time dateTime={lastUpdated}>
-                        {new Date(lastUpdated).toLocaleDateString("en-GB", {
-                            day: "2-digit",
-                            month: "long",
-                            year: "numeric",
-                        })}
-                    </time>
-                    <span className="mx-1 text-xs">•</span>
-                    <ClockIcon aria-hidden="true" />
-                    <span id="reading-time">Calculating...</span>
+                <p className="flex flex-col items-center justify-center gap-2 text-sm opacity-80 md:flex-row">
+                    <span className="flex items-center gap-1">
+                        <CalendarIcon aria-hidden="true" />
+                        Last Updated:{" "}
+                        <time dateTime={lastUpdated}>
+                            {new Date(lastUpdated).toLocaleDateString("en-GB", {
+                                day: "2-digit",
+                                month: "long",
+                                year: "numeric",
+                            })}
+                        </time>
+                    </span>
+                    <span className="mx-1 hidden text-xs md:inline">•</span>
+                    <span className="flex items-center gap-1">
+                        <ClockIcon aria-hidden="true" />
+                        <span id="reading-time">Calculating...</span>
+                    </span>
                 </p>
             </div>
         </header>
