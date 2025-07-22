@@ -4,7 +4,7 @@ import Link from "next/link";
 
 /**
  * AboutTheAuthor component displaying the author's photo, description, and social links.
- * 
+ *
  * Typically used in sidebars to provide a brief introduction and relevant contact options.
  *
  * @component
@@ -16,15 +16,16 @@ export default function AboutTheAuthor() {
             <h3 className="mb-2 text-lg">About the Author</h3>
             <Image
                 src="/img/karl.optimised.webp"
-                alt="Karl: JavaScript developer and learning technologist"
+                alt="Karl Horning: JavaScript developer and learning technologist"
                 className="mx-auto mb-4 h-32 w-32 rounded-full bg-primary object-cover object-top"
                 loading="lazy"
                 aria-hidden="true"
                 width={100}
                 height={100}
             />
+            <p className="mb-1 text-center text-sm font-medium">Karl Horning</p>
             <p className="mb-4 text-center text-sm text-muted">
-                Full-stack JS developer &amp; learning technologist
+                JavaScript developer &amp; learning technologist
             </p>
             <ul className="mb-4 flex justify-center gap-1 text-sm text-primary">
                 {footerLinks.map(({ label, href, icon: Icon }) => (
