@@ -1,7 +1,6 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
-import Link from "next/link";
 
 const { CmaltRoute } = internalRoutes;
 
@@ -180,14 +179,14 @@ export default function Page() {
 
             <ul>
                 <li>
-                    <Link
+                    <a
                         href="https://github.com/Karl-Horning/blackboard-learn-apis-postman-collection"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Postman collection developed from Blackboard
                         Ultra&apos;s Swagger spec (Repository)
-                    </Link>{" "}
+                    </a>{" "}
                     <em>
                         Demonstrates critical evaluation of LMS API
                         functionality and interoperability through hands-on
@@ -260,34 +259,34 @@ export default function Page() {
             <ul>
                 <li>
                     Anthology <em>Anthology REST API documentation</em>.{" "}
-                    <Link
+                    <a
                         href="https://developer.blackboard.com/portal/displayApi"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at developer.blackboard.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Anthology <em>Blackboard Ultra</em>.{" "}
-                    <Link
+                    <a
                         href="https://www.anthology.com/products/teaching-and-learning/learning-effectiveness/blackboard"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at anthology.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Atlassian{" "}
                     <em>Acceptance Criteria: Examples and Best Practices</em>.{" "}
-                    <Link
+                    <a
                         href="https://www.atlassian.com/work-management/project-management/acceptance-criteria"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at atlassian.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Carr, P. (2023).{" "}
@@ -296,75 +295,75 @@ export default function Page() {
                         Technology
                     </em>
                     .{" "}
-                    <Link
+                    <a
                         href="https://www.engineering.com/digital-transformation-101-how-to-choose-the-right-technology/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at engineering.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     D2L <em>Brightspace API Reference</em>.{" "}
-                    <Link
+                    <a
                         href="https://docs.valence.desire2learn.com/reference.html"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at desire2learn.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     D2L <em>Brightspace by D2L</em>.{" "}
-                    <Link
+                    <a
                         href="https://www.d2l.com/en-eu/brightspace/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at d2l.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Instructure <em>Canvas LMS</em>.{" "}
-                    <Link
+                    <a
                         href="https://www.instructure.com/canvas"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at instructure.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Instructure <em>Canvas LMS API Documentation</em>.{" "}
-                    <Link
+                    <a
                         href="https://www.canvas.instructure.com/doc/api/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at canvas.instructure.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     ProductPlan <em>MoSCoW Prioritization</em>.{" "}
-                    <Link
+                    <a
                         href="https://www.productplan.com/glossary/moscow-prioritization/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at productplan.com
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Rehkopf, M.{" "}
                     <em>User Stories with Examples and a Template</em>.
                     Atlassian.{" "}
-                    <Link
+                    <a
                         href="https://www.atlassian.com/agile/project-management/user-stories"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Available at atlassian.com
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </CMALTLayout>

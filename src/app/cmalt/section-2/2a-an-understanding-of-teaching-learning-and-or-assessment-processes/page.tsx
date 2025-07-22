@@ -419,36 +419,36 @@ export default function page() {
                 <li>
                     London School of Economics <em>Constructive alignment</em>.
                     Available at:{" "}
-                    <Link
+                    <a
                         href="https://info.lse.ac.uk/staff/divisions/Eden-Centre/Resources-to-support-your-practice/Constructive-alignment"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://info.lse.ac.uk/staff/divisions/Eden-Centre/Resources-to-support-your-practice/Constructive-alignment
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Main, P. (2023) <em>Ebbinghaus forgetting curve</em>.
                     Structural Learning. Available at:{" "}
-                    <Link
+                    <a
                         href="https://www.structural-learning.com/post/ebbinghaus-forgetting-curve"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.structural-learning.com/post/ebbinghaus-forgetting-curve
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Main, P. (2022){" "}
                     <em>Spaced practice: A teacher&apos;s guide</em>. Structural
                     Learning. Available at:{" "}
-                    <Link
+                    <a
                         href="https://www.structural-learning.com/post/spaced-practice-a-teachers-guide"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.structural-learning.com/post/spaced-practice-a-teachers-guide
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     McLeod, S. (2025){" "}
@@ -457,36 +457,36 @@ export default function page() {
                         cycle
                     </em>
                     . Simply Psychology. Available at:{" "}
-                    <Link
+                    <a
                         href="https://www.simplypsychology.org/learning-kolb.html"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.simplypsychology.org/learning-kolb.html
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     WCAG (2025){" "}
                     <em>Text over images: The impact on accessibility</em>.
                     Available at:{" "}
-                    <Link
+                    <a
                         href="https://www.wcag.com/blog/content-over-images-how-does-this-ux-ui-trend-impact-accessibility/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.wcag.com/blog/content-over-images-how-does-this-ux-ui-trend-impact-accessibility/
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     Western Governors University (2021){" "}
                     <em>What is blended learning?</em> Available at:{" "}
-                    <Link
+                    <a
                         href="https://www.wgu.edu/blog/blended-learning2109.html"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.wgu.edu/blog/blended-learning2109.html
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </CMALTLayout>
