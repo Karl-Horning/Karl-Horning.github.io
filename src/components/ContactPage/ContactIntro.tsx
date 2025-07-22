@@ -31,7 +31,6 @@ export default function ContactIntro() {
                     rel="noopener noreferrer"
                 >
                     connect with me via LinkedIn
-                    <ExternalLinkIcon />
                 </a>
                 .
             </p>
