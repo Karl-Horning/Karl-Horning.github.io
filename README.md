@@ -78,6 +78,8 @@ Visit the live site at: [karlhorning.dev](https://www.karlhorning.dev)
 
 ## 📌 To Do / Future Enhancements
 
+- [ ] Correct `HomeRout`
+- [ ] Add correct routes to CMALT page metadata
 - [ ] Add tests
 - [ ] Improve Lighthouse scores
 - [ ] Add analytics
