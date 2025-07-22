@@ -1,53 +1,42 @@
 import { ReactNode } from "react";
 import CMALTSidebar from "@/components/CMALT/CMALTSidebar";
-import { icons } from "@/constants/icons";
-const { CalendarIcon, ClockIcon } = icons;
 import Script from "next/script";
+import CMALTHeader from "../CMALT/CMALTHeader";
+
+interface CMALTLayoutProps {
+    children: ReactNode;
+    title: string;
+    lastUpdated: string;
+    thumbnail?: string;
+}
 
 /**
- * Layout for CMALT portfolio pages, including a hero header and sidebar.
+ * Layout wrapper for CMALT portfolio pages.
  *
- * @param children - The main content for the page.
- * @param title - The page title (h1), displayed in the hero section.
- * @param lastUpdated - ISO date string for when the page was last updated.
- * @param thumbnail - Optional background image URL for the header.
+ * Includes a hero header with title, last updated date, and reading time,
+ * a main content area, and a sidebar. Automatically injects and calculates
+ * estimated reading time based on visible content.
+ *
+ * @param {object} props - Component props.
+ * @param {ReactNode} props.children - Main page content.
+ * @param {string} props.title - Title shown in the hero section.
+ * @param {string} props.lastUpdated - ISO 8601 date string for when the page was last updated.
+ * @param {string} [props.thumbnail="/img/cmalt-default.webp"] - Optional background image URL for the header.
+ * @returns Page layout structure for CMALT pages.
  */
 export default function CMALTLayout({
     children,
     title,
     lastUpdated,
     thumbnail = "/img/cmalt-default.webp", // fallback if not provided
-}: {
-    children: ReactNode;
-    title: string;
-    lastUpdated: string;
-    thumbnail?: string;
-}) {
+}: CMALTLayoutProps) {
     return (
         <>
-            <header
-                className="relative bg-cover bg-center px-4 py-32 text-white"
-                style={{ backgroundImage: `url(${thumbnail})` }}
-            >
-                <div className="cmalt-hero absolute inset-0" />
-                <div className="relative z-10 mx-auto max-w-4xl text-center">
-                    <h1 className="cmalt-title">{title}</h1>
-                    <p className="flex items-center justify-center gap-2 text-sm opacity-80">
-                        <CalendarIcon aria-hidden="true" />
-                        Last Updated:
-                        <time dateTime={lastUpdated}>
-                            {new Date(lastUpdated).toLocaleDateString("en-GB", {
-                                day: "2-digit",
-                                month: "long",
-                                year: "numeric",
-                            })}
-                        </time>
-                        <span className="mx-1 text-xs">•</span>
-                        <ClockIcon aria-hidden="true" />
-                        <span id="reading-time">Calculating...</span>
-                    </p>
-                </div>
-            </header>
+            <CMALTHeader
+                title={title}
+                lastUpdated={lastUpdated}
+                thumbnail={thumbnail}
+            />
 
             <div className="mx-auto grid max-w-4xl gap-12 px-4 py-16 text-[var(--text)] lg:grid-cols-3">
                 <main className="prose-cmalt lg:col-span-2">{children}</main>
@@ -63,7 +52,7 @@ export default function CMALTLayout({
                     };
 
                     const updateReadingTime = () => {
-                        const mainContent = document.querySelector("main");
+                        const mainContent = document.querySelector("main.prose-cmalt");
                         const readingTimeEl = document.getElementById("reading-time");
 
                         if (mainContent && readingTimeEl) {
