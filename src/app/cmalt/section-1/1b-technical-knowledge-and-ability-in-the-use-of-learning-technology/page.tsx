@@ -1,6 +1,7 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
+import Link from "next/link";
 
 const { CmaltRoute } = internalRoutes;
 
@@ -11,7 +12,10 @@ export const metadata = createMetadata({
 
 export default function page() {
     return (
-        <CMALTLayout title="1b: Technical Knowledge and Ability in the Use of Learning Technology" lastUpdated="2025-07-22">
+        <CMALTLayout
+            title="1b: Technical Knowledge and Ability in the Use of Learning Technology"
+            lastUpdated="2025-07-22"
+        >
             <h2>CMALT Guidance</h2>
 
             <p>
@@ -203,14 +207,14 @@ export default function page() {
             <h2>Evidence</h2>
             <ul>
                 <li>
-                    <a
+                    <Link
                         href="https://github.com/Karl-Horning/blackboard-learn-apis-postman-collection"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Postman collection developed from Blackboard
                         Ultra&apos;s Swagger spec (Repository)
-                    </a>{" "}
+                    </Link>{" "}
                     <em>
                         Demonstrates use of API endpoint analysis to understand
                         LMS functionality. Highlights the ability to translate
@@ -220,14 +224,14 @@ export default function page() {
                     </em>
                 </li>
                 <li>
-                    <a
+                    <Link
                         href="https://github.com/Karl-Horning/oxford-learners-dictionaries-api"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Oxford Learner&apos;s Dictionaries API Entry Fetcher
                         (Repository)
-                    </a>{" "}
+                    </Link>{" "}
                     <em>
                         A working Node.js prototype that fetches and transforms
                         dictionary data for seamless integration into a blended
@@ -308,13 +312,13 @@ export default function page() {
                         jQuery
                     </em>
                     . npm. Available at:{" "}
-                    <a
+                    <Link
                         href="https://www.npmjs.com/package/cheerio"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.npmjs.com/package/cheerio
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     Electron{" "}
@@ -323,25 +327,25 @@ export default function page() {
                         and CSS
                     </em>
                     . Available at:{" "}
-                    <a
+                    <Link
                         href="https://www.electronjs.org/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.electronjs.org/
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     GraphQL Foundation{" "}
                     <em>GraphQL: A Query Language for Your API</em>. Available
                     at:{" "}
-                    <a
+                    <Link
                         href="https://graphql.org/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://graphql.org/
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     Mocha{" "}
@@ -350,34 +354,35 @@ export default function page() {
                         for Node.js &amp; the Browser
                     </em>
                     . Available at:{" "}
-                    <a
+                    <Link
                         href="https://mochajs.org/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://mochajs.org/
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     Oxford University Press{" "}
-                    <em>Oxford Learner&apos;s Dictionaries API</em>. Available at:{" "}
-                    <a
+                    <em>Oxford Learner&apos;s Dictionaries API</em>. Available
+                    at:{" "}
+                    <Link
                         href="https://languages.oup.com/oxford-learners-dictionaries-api/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://languages.oup.com/oxford-learners-dictionaries-api/
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     Postman <em>Postman API Platform</em>. Available at:{" "}
-                    <a
+                    <Link
                         href="https://www.postman.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         https://www.postman.com/
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </CMALTLayout>
