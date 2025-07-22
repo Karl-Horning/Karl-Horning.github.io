@@ -21,7 +21,7 @@ export const cmaltSections = [
     },
     {
         slug: "section-2",
-        label: "Section 2: Teaching, Learning and/or Assessment Processes",
+        label: "Section 2: Learning, Teaching and Assessment Processes",
         children: [
             {
                 slug: "2a-an-understanding-of-teaching-learning-and-or-assessment-processes",
@@ -59,7 +59,7 @@ export const cmaltSections = [
     },
     {
         slug: "section-5",
-        label: "Section 5: Specialist Option(s)",
+        label: "Section 5: Specialist Area(s)",
         children: [
             {
                 slug: "5a-specialist-area-1",
@@ -69,7 +69,7 @@ export const cmaltSections = [
     },
     {
         slug: "section-6",
-        label: "Section 6: Future Plans",
+        label: "Section 6: Advanced Area(s)",
         children: [
             {
                 slug: "6a-future-plans",
