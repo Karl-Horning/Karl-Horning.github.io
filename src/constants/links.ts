@@ -45,6 +45,9 @@ export const internalRoutes = {
 
     AboutRoute: "/about",
 
+    /** The CMALT page */
+    CmaltRoute: "/cmalt",
+
     /** The contact page */
     ContactRoute: "/contact",
 };
