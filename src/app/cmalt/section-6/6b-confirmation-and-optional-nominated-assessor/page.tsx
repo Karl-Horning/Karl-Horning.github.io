@@ -11,29 +11,48 @@ export const metadata = createMetadata({
 
 export default function page() {
     return (
-        <CMALTLayout title="6b: Declaration and Nominated Assessor (optional)" lastUpdated="2025-07-22">
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
+        <CMALTLayout
+            title="6b: Declaration and Nominated Assessor (optional)"
+            lastUpdated="2025-07-22"
+        >
+            <section id="declaration">
+                <h2>Declaration</h2>
+
+                <p>I confirm that:</p>
+
+                <ul>
+                    <li>
+                        I am the author of this portfolio and that it represents
+                        my own work.
+                    </li>
+                    <li>
+                        Where collaboration with others is discussed, their
+                        contributions have been appropriately acknowledged.
+                    </li>
+                    <li>
+                        Evidence included is appropriately anonymised or
+                        included with permission.
+                    </li>
+                    <li>
+                        I understand that by submitting this portfolio, I am
+                        applying for CMALT accreditation and that the
+                        information provided will be reviewed by assessors
+                        appointed by ALT.
+                    </li>
+                </ul>
+
+                <p>
+                    <strong>Signed</strong> <em>Karl Horning</em>
+                </p>
+                <p>
+                    <strong>Date</strong> <em>22 July 2025</em>
+                </p>
             </section>
 
-            <section id="description">
-                <h2>Description</h2>
-            </section>
+            <section id="nominated-assessor">
+                <h2>Nominated Assessor (optional)</h2>
 
-            <section id="reflection">
-                <h2>Reflection</h2>
-            </section>
-
-            <section id="summary">
-                <h2>Summary</h2>
-            </section>
-
-            <section id="evidence">
-                <h2>Evidence</h2>
-            </section>
-
-            <section id="further-reading">
-                <h2>Further Reading</h2>
+                <p>I am not nominating an assessor for this submission.</p>
             </section>
         </CMALTLayout>
     );
