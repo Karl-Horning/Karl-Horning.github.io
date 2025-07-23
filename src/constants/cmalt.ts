@@ -121,8 +121,11 @@ export const cmaltEvidence = {
         designingAnEnglishCourse:
             "/cmalt/documents/designing-a-bespoke-english-course-for-professionals.pdf",
         firstSessionQuestions: "/cmalt/documents/first-session-questions.pdf",
+        microsoftTeamsFaq: "/cmalt/documents/microsoft-teams-faq-company-info-removed.pdf",
         subtitlesExample:
             "/cmalt/documents/joining-a-microsoft-teams-meeting-from-the-session-details-page.srt",
+        usingPostmanWithApolloServer:
+            "/cmalt/documents/using-postman-with-apollo-server.pdf",
         webAccessibilityResourcesAndTools:
             "/cmalt/documents/web-accessibility-resources-and-tools.pdf",
     },
@@ -179,8 +182,7 @@ export const cmaltEvidence = {
         sessionRatingsScreenshot: "/cmalt/screenshots/session-ratings.webp",
         sessionReportRatingsScreenshot:
             "/cmalt/screenshots/session-report-ratings.webp",
-        traineeListScreenshot:
-            "/cmalt/screenshots/trainee-list-screenshot.png",
+        traineeListScreenshot: "/cmalt/screenshots/trainee-list-screenshot.png",
     },
 
     /** Transcripts of training or recorded learning content */

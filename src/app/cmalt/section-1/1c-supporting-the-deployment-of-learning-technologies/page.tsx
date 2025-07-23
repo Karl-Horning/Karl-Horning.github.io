@@ -4,7 +4,8 @@ import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
-const { links } = cmaltEvidence;
+const { documents, links } = cmaltEvidence;
+const { microsoftTeamsFaq, usingPostmanWithApolloServer } = documents;
 const { blackboardSwaggerPostmanCollectionLink, deppProjectLink } = links;
 
 export const metadata = createMetadata({
@@ -81,22 +82,35 @@ export default function page() {
                 <p>
                     In 2023, while working in a development-focused team, I
                     created a guide called{" "}
-                    <em>Using Postman with Apollo Server</em> to help new
-                    developers interact with a GraphQL development environment.
-                    This included instructions for authentication, storing JWT
-                    tokens, and running queries and mutations via Postman. While
-                    it was technical in nature, the resource also functioned as
-                    a learning technology support tool, easing onboarding and
-                    promoting consistency across the team.
+                    <a
+                        href={usingPostmanWithApolloServer}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Using Postman with Apollo Server
+                    </a>{" "}
+                    to help new developers interact with a GraphQL development
+                    environment. This included instructions for authentication,
+                    storing JWT tokens, and running queries and mutations via
+                    Postman. While it was technical in nature, the resource also
+                    functioned as a learning technology support tool, easing
+                    onboarding and promoting consistency across the team.
                 </p>
 
                 <p>
                     Earlier still, in June 2021 — just before Microsoft retired
                     Skype for Business — I authored a{" "}
-                    <em>Microsoft Teams FAQ</em> to support trainers through the
-                    institutional transition to Teams. I also created a video
-                    walkthrough, <em>Microsoft Teams Guide</em>, which was used
-                    to deliver asynchronous training.
+                    <a
+                        href={microsoftTeamsFaq}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Microsoft Teams FAQ
+                    </a>{" "}
+                    to support trainers through the institutional transition to
+                    Teams. I also created a video walkthrough,{" "}
+                    <em>Microsoft Teams Guide</em>, which was used to deliver
+                    asynchronous training.
                 </p>
             </section>
 
@@ -112,13 +126,27 @@ export default function page() {
                 </p>
 
                 <p>
-                    For example, the <em>Microsoft Teams FAQ</em> included
-                    lengthy text blocks and oversized arrows that partially
-                    obscured key content. By contrast, my more recent API and
-                    Postman guides are more concise, streamlined, and visually
-                    clearer — reflecting lessons learned about information
-                    overload, visual accessibility, and cognitive load.
-                    Similarly, my <em>Using Postman with Apollo Server</em>{" "}
+                    For example, the{" "}
+                    <a
+                        href={microsoftTeamsFaq}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Microsoft Teams FAQ
+                    </a>{" "}
+                    included lengthy text blocks and oversized arrows that
+                    partially obscured key content. By contrast, my more recent
+                    API and Postman guides are more concise, streamlined, and
+                    visually clearer — reflecting lessons learned about
+                    information overload, visual accessibility, and cognitive
+                    load. Similarly, my{" "}
+                    <a
+                        href={usingPostmanWithApolloServer}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Using Postman with Apollo Server
+                    </a>{" "}
                     guide — created in Confluence — omitted annotated visuals
                     entirely, a gap I now actively address through better use of
                     screenshots, highlights, and contextual labelling.
@@ -204,13 +232,50 @@ export default function page() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Using Blackboard&apos;s Swagger File to Create a
-                            Postman Collection and Make an API Call
-                        </a>
+                            Using Blackboard&apos;s Swagger File to Create a Postman
+                            Collection and Make an API Call
+                        </a>{" "}
+                        <em>
+                            Step-by-step guide to using Blackboard&apos;s API via
+                            Postman, informed by DEPP testing and earlier
+                            platform integration work.
+                        </em>
                     </li>
-                    <li>TODO: Using Postman with Apollo Server</li>
-                    <li>TODO: Microsoft Teams FAQ</li>
-                    <li>TODO: Microsoft Teams Guide</li>
+                    <li>
+                        <a
+                            href={usingPostmanWithApolloServer}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Using Postman with Apollo Server
+                        </a>{" "}
+                        <em>
+                            Internal documentation for developers using GraphQL
+                            in Postman, supporting team learning and technical
+                            onboarding.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={microsoftTeamsFaq}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Microsoft Teams FAQ
+                        </a>{" "}
+                        <em>
+                            Trainer-focused guide created during the
+                            institutional transition from Skype for Business to
+                            Teams, used alongside asynchronous video training.
+                        </em>
+                    </li>
+                    <li>
+                        TODO: Microsoft Teams Guide{" "}
+                        <em>
+                            Short walkthrough video offering asynchronous
+                            support during Microsoft Teams rollout.
+                        </em>
+                    </li>
                 </ul>
             </section>
 
