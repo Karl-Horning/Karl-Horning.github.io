@@ -1,8 +1,19 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
-import { internalRoutes } from "@/constants/links";
+import { cmaltEvidence } from "@/constants/cmalt";
+import { externalLinks, internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
+const { GitHubLink, LinkedInLink, PortfolioLink } = externalLinks;
+const { certificates, screenshots } = cmaltEvidence;
+const {
+    appleTeacherCertificate,
+    electronCertificate,
+    graphQlCertificate,
+    nextJsCertificate,
+    webDeveloperCertificate,
+} = certificates;
+const { jiraFundamentalsScreenshot } = screenshots;
 
 export const metadata = createMetadata({
     title: "5a: Specialist Area 1 | CMALT",
@@ -302,7 +313,7 @@ export default function page() {
                 <ul>
                     <li>
                         <a
-                            href="https://github.com/Karl-Horning"
+                            href={GitHubLink}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -317,7 +328,7 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href="https://karlhorning.dev"
+                            href={PortfolioLink}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -332,7 +343,7 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href="https://www.linkedin.com/in/karl-horning/"
+                            href={LinkedInLink}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -345,7 +356,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/apple-teacher-swift-playgrounds-2025.pdf">
+                        <a
+                            href={appleTeacherCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Apple Teacher (Swift Playgrounds) (Apple, 2025)
                             (Certificate)
                         </a>{" "}
@@ -357,7 +372,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/the-web-developer-bootcamp-2019.pdf">
+                        <a
+                            href={webDeveloperCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             The Web Developer Bootcamp (Udemy, 2019)
                             (Certificate)
                         </a>{" "}
@@ -367,7 +386,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/jira-fundamentals-badge-screenshot.webp">
+                        <a
+                            href={jiraFundamentalsScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Jira Fundamentals (Atlassian, 2024) (Screenshot)
                         </a>{" "}
                         <em>
@@ -377,7 +400,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/master-electron-desktop-apps-with-html-javascript-css-2024.pdf">
+                        <a
+                            href={electronCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Master Electron (Udemy, 2024) (Certificate)
                         </a>{" "}
                         <em>
@@ -387,7 +414,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/modern-graphql-with-node-complete-developers-guide-2023.pdf">
+                        <a
+                            href={graphQlCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Modern GraphQL with Node (Udemy, 2023) (Certificate)
                         </a>{" "}
                         <em>
@@ -399,7 +430,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/next-js-the-complete-developers-guide-2024.pdf">
+                        <a
+                            href={nextJsCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Next JS: The Complete Developer&apos;s Guide (Udemy,
                             2024) (Certificate)
                         </a>{" "}

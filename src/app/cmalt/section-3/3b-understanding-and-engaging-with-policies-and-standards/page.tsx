@@ -1,8 +1,21 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
+const { certificates, screenshots } = cmaltEvidence;
+const {
+    gdprBeginnerCertificate,
+    gdprCertificate,
+    gdprElementaryCertificate,
+    gdprIntroductionCertificate,
+} = certificates;
+const {
+    dpaScreenshot,
+    joiningTeamsMeetingScreenshot,
+    microsoftTeamsFaqScreenshot,
+} = screenshots;
 
 export const metadata = createMetadata({
     title: "3b: Understanding and Engaging With Policies and Standards | CMALT",
@@ -261,7 +274,11 @@ export default function page() {
                 <h2>Evidence</h2>
                 <ul>
                     <li>
-                        <a href="/cmalt/screenshots/microsoft-teams-faq-screenshot.webp">
+                        <a
+                            href={microsoftTeamsFaqScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Anonymised student-facing guide (Microsoft Teams
                             FAQ, 2020) (Screenshot)
                         </a>{" "}
@@ -273,7 +290,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/joining-a-microsoft-teams-meeting-from-the-session-details-page-screenshot.webp">
+                        <a
+                            href={joiningTeamsMeetingScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Anonymised data in video tutorial (Joining a
                             Microsoft Teams meeting from the Session Details
                             Page, 2020) (Screenshot)
@@ -285,7 +306,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/2021-gdpr-beginner.pdf">
+                        <a
+                            href={gdprBeginnerCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <em>GDPR: Beginner</em> (Kaspersky, 2021)
                             (Certificate)
                         </a>{" "}
@@ -297,7 +322,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/2021-gdpr-elementary.pdf">
+                        <a
+                            href={gdprElementaryCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <em>GDPR: Elementary</em> (Kaspersky, 2021)
                             (Certificate)
                         </a>{" "}
@@ -308,7 +337,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/2023-gdpr.pdf">
+                        <a
+                            href={gdprCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <em>General Data Protection Regulation (GDPR)</em>{" "}
                             (Learnlight, 2023) (Certificate)
                         </a>{" "}
@@ -319,7 +352,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/2024-an-introduction-to-the-gdpr.pdf">
+                        <a
+                            href={gdprIntroductionCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <em>
                                 An Introduction to the General Data Protection
                                 Regulation (GDPR)
@@ -334,7 +371,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/dpa-screenshot.webp">
+                        <a
+                            href={dpaScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <em>
                                 Data Protection Awareness course (Imperial
                                 College London, 2024)

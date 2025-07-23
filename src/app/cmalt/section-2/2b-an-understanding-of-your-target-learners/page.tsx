@@ -1,8 +1,11 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
+const { documents } = cmaltEvidence;
+const { designingAnEnglishCourse, firstSessionQuestions } = documents;
 
 export const metadata = createMetadata({
     title: "2b: An Understanding of Your Target Learners | CMALT",
@@ -257,7 +260,11 @@ export default function page() {
                 <h2>Evidence</h2>
                 <ul>
                     <li>
-                        <a href="/cmalt/documents/first-session-questions.pdf">
+                        <a
+                            href={firstSessionQuestions}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             First Session Questions (PDF)
                         </a>{" "}
                         <em>
@@ -270,7 +277,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/documents/designing-a-bespoke-english-course-for-professionals.pdf">
+                        <a
+                            href={designingAnEnglishCourse}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Designing a Bespoke English Course for Professionals
                             (PDF)
                         </a>{" "}

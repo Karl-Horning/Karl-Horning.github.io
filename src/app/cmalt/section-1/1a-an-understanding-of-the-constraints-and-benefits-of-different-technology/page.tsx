@@ -1,8 +1,17 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
+const { presentations, repos, screenshots } = cmaltEvidence;
+const { deppIctPresentation } = presentations;
+const { blackboardPostmanCollection } = repos;
+const {
+    ictSeniorAnalystTestScriptScreenshot,
+    ictUserStoriesScreenshot,
+    traineeListScreenshot,
+} = screenshots;
 
 export const metadata = createMetadata({
     title: "1a: An Understanding of the Constraints and Benefits of Different Technology | CMALT",
@@ -196,7 +205,7 @@ export default function Page() {
                 <ul>
                     <li>
                         <a
-                            href="https://github.com/Karl-Horning/blackboard-learn-apis-postman-collection"
+                            href={blackboardPostmanCollection}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -213,8 +222,9 @@ export default function Page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/screenshots/ict-senior-analyst-test-script-screenshot.webp"
-                            download={true}
+                            href={ictSeniorAnalystTestScriptScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             ICT Senior Analyst test script (Screenshot)
                         </a>{" "}
@@ -228,8 +238,9 @@ export default function Page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/screenshots/trainee-list-screenshot.webp"
-                            download={true}
+                            href={traineeListScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Trainee List Electron app (Screenshot)
                         </a>{" "}
@@ -242,8 +253,9 @@ export default function Page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/screenshots/ict-user-stories-screenshot.webp"
-                            download={true}
+                            href={ictUserStoriesScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             ICT User Stories (Screenshot)
                         </a>{" "}
@@ -256,8 +268,9 @@ export default function Page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/presentations/depp-ict-presentation.pdf"
-                            download={true}
+                            href={deppIctPresentation}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Digital Education Platform Project (DEPP) ICT
                             Department Presentation (2024) (PDF)

@@ -1,8 +1,18 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
+const { certificates, documents, screenshots, transcripts } = cmaltEvidence;
+const { dyslexiaAwarenessCertificate } = certificates;
+const { subtitlesExample, webAccessibilityResourcesAndTools } = documents;
+const {
+    editingSubtitlesScreenshot,
+    embeddedSubtitlesScreenshot,
+    microsoftTeamsFaqScreenshot,
+} = screenshots;
+const { dyslexiaAwarenessTranscript } = transcripts;
 
 export const metadata = createMetadata({
     title: "3a: Understanding and Engaging With Legislation | CMALT",
@@ -350,7 +360,11 @@ export default function page() {
 
                 <ul>
                     <li>
-                        <a href="/cmalt/documents/web-accessibility-resources-and-tools.pdf">
+                        <a
+                            href={webAccessibilityResourcesAndTools}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Web Accessibility Resources and Tools: Guidelines,
                             Checklists, and Testing Solutions (PDF)
                         </a>{" "}
@@ -361,7 +375,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/documents/joining-a-microsoft-teams-meeting-from-the-session-details-page.srt">
+                        <a
+                            href={subtitlesExample}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             SRT subtitle file (Joining a Microsoft Teams meeting
                             from the Session Details Page, 2020) (Subtitle File)
                         </a>{" "}
@@ -371,7 +389,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/editing-subtitles-screenshot.webp">
+                        <a
+                            href={editingSubtitlesScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             SRT subtitle file in Visual Studio Code (Screenshot)
                         </a>{" "}
                         <em>
@@ -380,14 +402,22 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/embedded-subtitles-screenshot.webp">
+                        <a
+                            href={embeddedSubtitlesScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Embedded subtitles using Subler (Screenshot)
                         </a>{" "}
                         Evidence of embedding subtitles into MP4 files for
                         accessibility, following BBC subtitle guidance.
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/microsoft-teams-faq-screenshot.webp">
+                        <a
+                            href={microsoftTeamsFaqScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Document with accessible layout and navigation
                             (Microsoft Teams FAQ, 2020) (Screenshot)
                         </a>{" "}
@@ -396,7 +426,11 @@ export default function page() {
                         and screen reader compatibility).
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/dyslexia-awareness-in-partnership-with-made-by-dyslexia-2020.pdf">
+                        <a
+                            href={dyslexiaAwarenessCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Dyslexia Awareness: In partnership with Made By
                             Dyslexia (2020) (Certificate)
                         </a>{" "}
@@ -406,7 +440,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/transcripts/microsoft-learn-training-modules.pdf">
+                        <a
+                            href={dyslexiaAwarenessTranscript}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Dyslexia Awareness: In partnership with Made By
                             Dyslexia proof of completed modules (2025) (PDF)
                         </a>{" "}

@@ -1,10 +1,24 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import Image from "next/image";
-import Link from "next/link";
 
 const { CmaltRoute } = internalRoutes;
+const { certificates, documents, imgs, screenshots, transcripts } =
+    cmaltEvidence;
+const { celtaCertificate, dyslexiaAwarenessCertificate, ptllsCertificate } =
+    certificates;
+const { firstSessionQuestions, webAccessibilityResourcesAndTools } = documents;
+const {
+    ebbinghausForgettingCurve,
+    feedbackSlideOriginal,
+    feedbackSlideUpdated,
+    kolbLearningCycle,
+} = imgs;
+const { sessionRatingsScreenshot, sessionReportRatingsScreenshot } =
+    screenshots;
+const { dyslexiaAwarenessTranscript } = transcripts;
 
 export const metadata = createMetadata({
     title: "2a: An Understanding of Teaching, Learning and/or Assessment Processes | CMALT",
@@ -78,7 +92,7 @@ export default function page() {
                 <p>
                     {/* TODO: Replace with SVG */}
                     <Image
-                        src="/cmalt/imgs/ebbinghaus-forgetting-curve.webp"
+                        src={ebbinghausForgettingCurve}
                         alt="Ebbinghaus' forgetting curve showing the importance of reviewing learnt content over 1, 3, and 6 days"
                         title="Ebbinghaus' forgetting curve"
                         width={600}
@@ -105,7 +119,7 @@ export default function page() {
                 <p>
                     {/* TODO: Replace with SVG */}
                     <Image
-                        src="/cmalt/imgs/learning-cycle-kolb.webp"
+                        src={kolbLearningCycle}
                         alt="Kolb's Experiential Learning Cycle shows Concrete Experience, Reflective Observation, Abstract Conceptualisation, and Active Experimentation"
                         title="Kolb's Experiential Learning Cycle"
                         width={600}
@@ -132,7 +146,7 @@ export default function page() {
 
                 <p>
                     <Image
-                        src="/cmalt/imgs/feedback-slide-original.webp"
+                        src={feedbackSlideOriginal}
                         alt="The design for my slide shows a more difficult to read slide with lower contrast"
                         title="Original design for Markets, Numbers, and Financial Performance"
                         width={600}
@@ -142,7 +156,7 @@ export default function page() {
 
                 <p>
                     <Image
-                        src="/cmalt/imgs/feedback-slide-updated.webp"
+                        src={feedbackSlideUpdated}
                         alt="The updated design for my slide shows better contrast, with left aligned text on the left with images on the right"
                         title="Updated design for Markets, Numbers, and Financial Performance"
                         width={600}
@@ -221,7 +235,7 @@ export default function page() {
 
                 <p>
                     <Image
-                        src="/cmalt/screenshots/session-report-ratings.webp"
+                        src={sessionReportRatingsScreenshot}
                         alt="A diagram showing my session report ratings over a year, with an average of 4.9/5 stars"
                         title="Session Report Ratings"
                         width={600}
@@ -334,7 +348,11 @@ export default function page() {
 
                 <ul>
                     <li>
-                        <a href="/cmalt/certificates/ptlls-2012.pdf">
+                        <a
+                            href={ptllsCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Level 4 Preparing to Teach in the Lifelong Learning
                             Sector (PTLLS) (2012) (Certificate)
                         </a>{" "}
@@ -345,7 +363,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/celta-2013.pdf">
+                        <a
+                            href={celtaCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Cambridge ESOL Level 5* Certificate in Teaching
                             English to Speakers of Other Languages (CELTA)
                             (2013) (Certificate)
@@ -357,7 +379,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/documents/first-session-questions.pdf">
+                        <a
+                            href={firstSessionQuestions}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             First Session Questions (PDF)
                         </a>{" "}
                         <em>
@@ -368,13 +394,21 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/imgs/feedback-slide-original.webp">
+                        <a
+                            href={feedbackSlideOriginal}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             &quot;Before&quot; slide showing accessibility
                             improvements (Screenshot)
                         </a>
                     </li>
                     <li>
-                        <a href="/cmalt/imgs/feedback-slide-updated.webp">
+                        <a
+                            href={feedbackSlideUpdated}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             &quot;After&quot; slide showing accessibility
                             improvements (Screenshot)
                         </a>{" "}
@@ -386,7 +420,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/certificates/dyslexia-awareness-in-partnership-with-made-by-dyslexia-2020.pdf">
+                        <a
+                            href={dyslexiaAwarenessCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Dyslexia Awareness: In partnership with Made By
                             Dyslexia (2020) (Certificate)
                         </a>{" "}
@@ -397,7 +435,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/transcripts/microsoft-learn-training-modules.pdf">
+                        <a
+                            href={dyslexiaAwarenessTranscript}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Dyslexia Awareness: In partnership with Made By
                             Dyslexia, proof of completed modules (2025) (PDF)
                         </a>{" "}
@@ -408,7 +450,11 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/documents/web-accessibility-resources-and-tools.pdf">
+                        <a
+                            href={webAccessibilityResourcesAndTools}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Web Accessibility Resources and Tools: Guidelines,
                             Checklists, and Testing Solutions (PDF)
                         </a>{" "}
@@ -419,12 +465,20 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/session-report-ratings.webp">
+                        <a
+                            href={sessionReportRatingsScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Session report rating of 4.9/5 (Screenshot)
                         </a>
                     </li>
                     <li>
-                        <a href="/cmalt/screenshots/session-ratings.webp">
+                        <a
+                            href={sessionRatingsScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Session evaluation rating of 4.5/5 (Screenshot)
                         </a>{" "}
                         <em>

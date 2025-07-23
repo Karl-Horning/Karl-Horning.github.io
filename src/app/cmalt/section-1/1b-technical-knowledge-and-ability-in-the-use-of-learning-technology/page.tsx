@@ -1,8 +1,17 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
+const { certificates, repos, screenshots } = cmaltEvidence;
+const { graphQlCertificate } = certificates;
+const { blackboardPostmanCollection, oxfordLearnersDictionariesApi } = repos;
+const {
+    ictAnalystTestScriptScreenshot,
+    ictSeniorAnalystTestScriptScreenshot,
+    traineeListScreenshot,
+} = screenshots;
 
 export const metadata = createMetadata({
     title: "1b: Technical Knowledge and Ability in the Use of Learning Technology | CMALT",
@@ -220,7 +229,7 @@ export default function page() {
                 <ul>
                     <li>
                         <a
-                            href="https://github.com/Karl-Horning/blackboard-learn-apis-postman-collection"
+                            href={blackboardPostmanCollection}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -237,7 +246,7 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href="https://github.com/Karl-Horning/oxford-learners-dictionaries-api"
+                            href={oxfordLearnersDictionariesApi}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -254,7 +263,7 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/screenshots/ict-analyst-test-script-screenshot.webp"
+                            href={ictAnalystTestScriptScreenshot}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -270,7 +279,7 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/screenshots/ict-senior-analyst-test-script-screenshot.webp"
+                            href={ictSeniorAnalystTestScriptScreenshot}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -286,7 +295,7 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/screenshots/trainee-list-screenshot.webp"
+                            href={traineeListScreenshot}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -302,7 +311,7 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href="/cmalt/certificates/modern-graphql-with-node-complete-developers-guide-2023.pdf"
+                            href={graphQlCertificate}
                             target="_blank"
                             rel="noopener noreferrer"
                         >

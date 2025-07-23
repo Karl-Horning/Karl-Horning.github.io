@@ -5,13 +5,13 @@ import { createMetadata } from "@/lib/metadata";
 const { CmaltRoute } = internalRoutes;
 
 export const metadata = createMetadata({
-    title: "Test | CMALT",
+    title: "6b: Declaration and Nominated Assessor (optional) | CMALT",
     path: CmaltRoute,
 });
 
 export default function page() {
     return (
-        <CMALTLayout title="Test" lastUpdated="2025-07-22">
+        <CMALTLayout title="6b: Declaration and Nominated Assessor (optional)" lastUpdated="2025-07-22">
             <section>
                 <h2>CMALT Guidance</h2>
             </section>
