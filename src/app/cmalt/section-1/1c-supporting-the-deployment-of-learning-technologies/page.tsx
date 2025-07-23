@@ -240,7 +240,7 @@ export default function page() {
                             rel="noopener noreferrer"
                         >
                             Using Blackboard&apos;s Swagger File to Create a
-                            Postman Collection and Make an API Call
+                            Postman Collection and Make an API Call (PDF)
                         </a>{" "}
                         <em>
                             Step-by-step guide to using Blackboard&apos;s API
@@ -254,7 +254,7 @@ export default function page() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Using Postman with Apollo Server
+                            Using Postman with Apollo Server (PDF)
                         </a>{" "}
                         <em>
                             Internal documentation for developers using GraphQL
@@ -268,7 +268,7 @@ export default function page() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Microsoft Teams FAQ
+                            Microsoft Teams FAQ (PDF)
                         </a>{" "}
                         <em>
                             Trainer-focused guide created during the
@@ -282,7 +282,7 @@ export default function page() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Microsoft Teams Guide
+                            Microsoft Teams Guide (Video)
                         </a>{" "}
                         <em>
                             Excerpt of a short walkthrough video offering

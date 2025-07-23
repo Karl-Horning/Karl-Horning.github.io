@@ -1,3 +1,4 @@
+import FigureWithCaption from "@/components/FigureWithCaption";
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
@@ -89,16 +90,13 @@ export default function page() {
                     to maximise in-session practice.
                 </p>
 
-                <p>
-                    {/* TODO: Replace with SVG */}
-                    <Image
-                        src={ebbinghausForgettingCurve}
-                        alt="Ebbinghaus' forgetting curve showing the importance of reviewing learnt content over 1, 3, and 6 days"
-                        title="Ebbinghaus' forgetting curve"
-                        width={600}
-                        height={600}
-                    />
-                </p>
+                <FigureWithCaption
+                    src={ebbinghausForgettingCurve}
+                    alt="Kolb's Experiential Learning Cycle shows Concrete Experience, Reflective Observation, Abstract Conceptualisation, and Active Experimentation"
+                    caption="Ebbinghaus' forgetting curve showing the
+                            importance of reviewing learnt content over 1, 3,
+                            and 6 days"
+                />
 
                 <p>
                     I embedded <strong>spaced repetition</strong> and{" "}
@@ -116,16 +114,11 @@ export default function page() {
             <section id="reflection">
                 <h2>Reflection</h2>
 
-                <p>
-                    {/* TODO: Replace with SVG */}
-                    <Image
-                        src={kolbLearningCycle}
-                        alt="Kolb's Experiential Learning Cycle shows Concrete Experience, Reflective Observation, Abstract Conceptualisation, and Active Experimentation"
-                        title="Kolb's Experiential Learning Cycle"
-                        width={600}
-                        height={600}
-                    />
-                </p>
+                <FigureWithCaption
+                    src={kolbLearningCycle}
+                    alt="Kolb's Experiential Learning Cycle shows Concrete Experience, Reflective Observation, Abstract Conceptualisation, and Active Experimentation"
+                    caption="Kolb's Experiential Learning Cycle shows Concrete Experience, Reflective Observation, Abstract Conceptualisation, and Active Experimentation"
+                />
 
                 <p>
                     A key practice that I adopted was beginning each course with
@@ -144,25 +137,11 @@ export default function page() {
                     <strong>Kolb&apos;s experiential learning cycle</strong>.
                 </p>
 
-                <p>
-                    <Image
-                        src={feedbackSlideOriginal}
-                        alt="The design for my slide shows a more difficult to read slide with lower contrast"
-                        title="Original design for Markets, Numbers, and Financial Performance"
-                        width={600}
-                        height={600}
-                    />
-                </p>
-
-                <p>
-                    <Image
-                        src={feedbackSlideUpdated}
-                        alt="The updated design for my slide shows better contrast, with left aligned text on the left with images on the right"
-                        title="Updated design for Markets, Numbers, and Financial Performance"
-                        width={600}
-                        height={600}
-                    />
-                </p>
+                <FigureWithCaption
+                    src={feedbackSlideOriginal}
+                    alt="The design for my slide shows a more difficult to read slide with lower contrast"
+                    caption="The design for my slide shows a more difficult to read slide with lower contrast"
+                />
 
                 <p>
                     My approach to slide design evolved to better support
@@ -178,6 +157,12 @@ export default function page() {
                     independently after the session. This redesign aligns with
                     WCAG 2.1 guidance on colour contrast and readability.
                 </p>
+
+                <FigureWithCaption
+                    src={feedbackSlideUpdated}
+                    alt="The updated design for my slide shows better contrast, with left aligned text on the left with images on the right"
+                    caption="The updated design for my slide shows better contrast, with left aligned text on the left with images on the right"
+                />
 
                 <p>
                     Through ongoing reflection and CPD — including{" "}
@@ -233,15 +218,11 @@ export default function page() {
                     </ul>
                 </blockquote>
 
-                <p>
-                    <Image
-                        src={sessionReportRatingsScreenshot}
-                        alt="A diagram showing my session report ratings over a year, with an average of 4.9/5 stars"
-                        title="Session Report Ratings"
-                        width={600}
-                        height={600}
-                    />
-                </p>
+                <FigureWithCaption
+                    src={sessionReportRatingsScreenshot}
+                    alt="A diagram showing my session report ratings over a year, with an average of 4.9/5 stars"
+                    caption="A diagram showing my session report ratings over a year, with an average of 4.9/5 stars"
+                />
 
                 <p>
                     These design and delivery choices helped learners improve

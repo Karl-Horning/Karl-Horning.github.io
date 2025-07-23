@@ -115,9 +115,16 @@ export default function page() {
 
                 <p>
                     One project that exemplifies this balance was my integration
-                    of the Oxford Learner&apos;s Dictionaries API into the
-                    Learnlight platform. I developed a Node.js proof of concept
-                    that fetched and reformatted dictionary entries into
+                    of the{" "}
+                    <a
+                        href={oxfordLearnersDictionariesApi}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Oxford Learner&apos;s Dictionaries API Entry Fetcher
+                    </a>{" "}
+                    into the Learnlight platform. I developed a Node.js proof of
+                    concept that fetched and reformatted dictionary entries into
                     accessible, semantically structured HTML. Using Cheerio for
                     parsing, I removed superfluous elements and applied
                     lightweight styling to match our platform&apos;s design.

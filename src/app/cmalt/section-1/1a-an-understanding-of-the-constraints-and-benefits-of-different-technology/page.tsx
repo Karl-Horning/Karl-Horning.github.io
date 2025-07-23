@@ -1,3 +1,4 @@
+import FigureWithCaption from "@/components/FigureWithCaption";
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
@@ -66,6 +67,12 @@ export default function Page() {
                     pedagogical and administrative needs of various faculties.
                 </p>
 
+                <FigureWithCaption
+                    src={ictUserStoriesScreenshot}
+                    alt="A screenshot of the user stories"
+                    caption="A screenshot of the user stories"
+                />
+
                 <p>
                     To assist with this, I developed a reusable Postman
                     collection for testing Blackboard Ultra&apos;s APIs and
@@ -76,12 +83,24 @@ export default function Page() {
                     automation testing.
                 </p>
 
+                <FigureWithCaption
+                    src={ictSeniorAnalystTestScriptScreenshot}
+                    alt="A screenshot of the test scripts"
+                    caption="A screenshot of the test scripts"
+                />
+
                 <p>
                     Alongside technical evaluation, I engaged with key
                     stakeholders to manage change effectively, recognising that
                     successful adoption depends on clear communication and
                     aligning technology capabilities with user readiness.
                 </p>
+
+                <FigureWithCaption
+                    src={traineeListScreenshot}
+                    alt="A screenshot of my Trainee List Electron app"
+                    caption="A screenshot of my Trainee List Electron app"
+                />
 
                 <p>
                     In 2020/21, I faced a different set of constraints while
