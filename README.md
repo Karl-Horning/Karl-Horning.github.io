@@ -80,7 +80,7 @@ Visit the live site at: [karlhorning.dev](https://www.karlhorning.dev)
 
 - [ ] Add print styles
 - [ ] Remove h1 background image when styles are disabled
-- [ ] Correct `HomeRout`
+- [x] Correct `HomeRout`
 - [ ] Add correct routes to CMALT page metadata
 - [ ] Add tests
 - [ ] Improve Lighthouse scores

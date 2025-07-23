@@ -39,7 +39,7 @@ export const externalLinks = {
  */
 export const internalRoutes = {
     /** The home page */
-    HomeRout: "/",
+    HomeRoute: "/",
 
     /** The about page */
 

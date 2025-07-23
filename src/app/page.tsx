@@ -7,11 +7,11 @@ import Hero from "@/components/Hero";
 import { createMetadata } from "@/lib/metadata";
 import { internalRoutes } from "@/constants/links";
 
-const { HomeRout } = internalRoutes;
+const { HomeRoute } = internalRoutes;
 
 export const metadata = createMetadata({
     title: "Home",
-    path: HomeRout,
+    path: HomeRoute,
 });
 
 export default function Home() {
