@@ -78,26 +78,56 @@ export default function page() {
 
                 <ul>
                     <li>
-                        <em>GDPR: Beginner</em> (12 Oct 2021, Kaspersky)
+                        <a
+                            href={gdprBeginnerCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <em>GDPR: Beginner</em> (12 Oct 2021, Kaspersky)
+                        </a>
                     </li>
                     <li>
-                        <em>GDPR: Elementary</em> (20 Dec 2021, Kaspersky)
+                        <a
+                            href={gdprElementaryCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <em>GDPR: Elementary</em> (20 Dec 2021, Kaspersky)
+                        </a>
                     </li>
                     <li>
-                        <em>General Data Protection Regulation (GDPR)</em> (2
-                        May 2023, Learnlight)
+                        <a
+                            href={gdprCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <em>General Data Protection Regulation (GDPR)</em>{" "}
+                            (2 May 2023, Learnlight)
+                        </a>
                     </li>
                     <li>
-                        <em>
-                            An Introduction to the General Data Protection
-                            Regulation (GDPR)
-                        </em>{" "}
-                        (15 March 2024, Kevin Mitnick Security Awareness
-                        Training)
+                        <a
+                            href={gdprIntroductionCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <em>
+                                An Introduction to the General Data Protection
+                                Regulation (GDPR)
+                            </em>{" "}
+                            (15 March 2024, Kevin Mitnick Security Awareness
+                            Training)
+                        </a>
                     </li>
                     <li>
-                        <em>Data Protection Awareness</em> (1 August 2024,
-                        Imperial College London)
+                        <a
+                            href={dpaScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <em>Data Protection Awareness course</em> (1 August
+                            2024, Imperial College London)
+                        </a>
                     </li>
                 </ul>
 
