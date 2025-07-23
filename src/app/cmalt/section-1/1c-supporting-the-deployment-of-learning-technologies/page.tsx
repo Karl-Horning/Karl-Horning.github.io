@@ -297,12 +297,78 @@ export default function page() {
 
                 <ul>
                     <li>
+                        Apollo GraphQL. <em>Introduction to Apollo Server</em>.
+                        Available at:{" "}
+                        <a
+                            href="https://www.apollographql.com/docs/apollo-server"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            https://www.apollographql.com/docs/apollo-server
+                        </a>
+                    </li>
+                    <li>
+                        GeeksforGeeks. <em>JSON Web Token (JWT)</em>. Available
+                        at:{" "}
+                        <a
+                            href="https://www.geeksforgeeks.org/web-tech/json-web-token-jwt/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            https://www.geeksforgeeks.org/web-tech/json-web-token-jwt/
+                        </a>
+                    </li>
+                    <li>
+                        Imperial College London.{" "}
+                        <em>Digital Education Platform Project (DEPP)</em>.
+                        Available at:{" "}
                         <a
                             href={deppProjectLink}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Digital Education Platform Project (DEPP)
+                            {deppProjectLink}
+                        </a>
+                    </li>
+
+                    <li>
+                        Postman. <em>Collections</em>. Available at:{" "}
+                        <a
+                            href="https://www.postman.com/product/collections/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            https://www.postman.com/product/collections/
+                        </a>
+                    </li>
+                    <li>
+                        Postman. <em>GraphQL in Postman</em>. Available at:{" "}
+                        <a
+                            href="https://learning.postman.com/docs/sending-requests/graphql/graphql-overview/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            https://learning.postman.com/docs/sending-requests/graphql/graphql-overview/
+                        </a>
+                    </li>
+                    <li>
+                        Postman. <em>What is Postman?</em>. Available at:{" "}
+                        <a
+                            href="https://www.postman.com/product/what-is-postman/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            https://www.postman.com/product/what-is-postman/
+                        </a>
+                    </li>
+                    <li>
+                        SmartBear Software. <em>Swagger</em>. Available at:{" "}
+                        <a
+                            href="https://swagger.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            https://swagger.io/
                         </a>
                     </li>
                 </ul>
