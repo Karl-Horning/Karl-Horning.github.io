@@ -136,6 +136,14 @@ export const cmaltEvidence = {
         kolbLearningCycle: "/cmalt/imgs/learning-cycle-kolb.webp",
     },
 
+    /** Blog posts used to share knowledge */
+    links: {
+        blackboardSwaggerPostmanCollectionLink:
+            "https://www.karlhorning.dev/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
+        deppProjectLink:
+            "https://www.imperial.ac.uk/about/education/our-projects/learning-management-system/",
+    },
+
     /** Presentation slides used in teaching or training sessions */
     presentations: {
         deppIctPresentation: "/cmalt/presentations/depp-ict-presentation.pdf",
