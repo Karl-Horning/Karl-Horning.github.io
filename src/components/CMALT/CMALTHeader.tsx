@@ -24,11 +24,17 @@ export default function CMALTHeader({
     thumbnail = "/img/cmalt-default.webp",
 }: CMALTHeaderProps) {
     return (
-        <header
-            className="relative bg-cover bg-center px-4 py-32 text-white"
-            style={{ backgroundImage: `url(${thumbnail})` }}
-        >
+        <header className="relative px-4 py-32 text-white">
+            {/* Background image layer */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${thumbnail})` }}
+            />
+            {/* Colour overlay */}
             <div className="cmalt-hero absolute inset-0" />
+
+            {/* Content */}
             <div className="relative z-10 mx-auto max-w-4xl text-center">
                 <h1 className="cmalt-title">{title}</h1>
                 <p className="flex flex-col items-center justify-center gap-2 text-sm opacity-80 md:flex-row">
