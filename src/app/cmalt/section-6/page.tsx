@@ -21,7 +21,7 @@ export default function Page() {
             title="Section 6: Advanced Area(s)"
             lastUpdated="2025-07-22"
         >
-            <section>
+            <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
 
                 <p>
@@ -35,7 +35,7 @@ export default function Page() {
                 </p>
             </section>
 
-            <section>
+            <section id="description">
                 <h2>Description</h2>
 
                 <p>

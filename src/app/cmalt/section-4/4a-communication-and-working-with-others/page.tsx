@@ -15,7 +15,7 @@ export default function page() {
             title="4a: Communication and Working With Others"
             lastUpdated="2025-07-22"
         >
-            <section>
+            <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
 
                 <p>
@@ -52,23 +52,23 @@ export default function page() {
                 </p>
             </section>
 
-            <section>
+            <section id="description">
                 <h2>Description</h2>
             </section>
 
-            <section>
+            <section id="reflection">
                 <h2>Reflection</h2>
             </section>
 
-            <section>
+            <section id="summary">
                 <h2>Summary</h2>
             </section>
 
-            <section>
+            <section id="evidence">
                 <h2>Evidence</h2>
             </section>
 
-            <section>
+            <section id="further-reading">
                 <h2>Further Reading</h2>
             </section>
         </CMALTLayout>

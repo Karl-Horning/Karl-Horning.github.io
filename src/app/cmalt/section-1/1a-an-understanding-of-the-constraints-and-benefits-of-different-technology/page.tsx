@@ -24,7 +24,7 @@ export default function Page() {
             title="1a: An Understanding of the Constraints and Benefits of Different Technology"
             lastUpdated="2025-07-22"
         >
-            <section>
+            <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
 
                 <p>
@@ -52,7 +52,7 @@ export default function Page() {
                 </p>
             </section>
 
-            <section>
+            <section id="description">
                 <h2>Description</h2>
 
                 <p>
@@ -98,7 +98,7 @@ export default function Page() {
                 </p>
             </section>
 
-            <section>
+            <section id="reflection">
                 <h2>Reflection</h2>
 
                 <p>
@@ -149,7 +149,7 @@ export default function Page() {
                 </p>
             </section>
 
-            <section>
+            <section id="summary">
                 <h2>Summary</h2>
 
                 <p>This section shows how I:</p>
@@ -199,7 +199,7 @@ export default function Page() {
                 </ul>
             </section>
 
-            <section>
+            <section id="evidence">
                 <h2>Evidence</h2>
 
                 <ul>
@@ -285,7 +285,7 @@ export default function Page() {
                 </ul>
             </section>
 
-            <section>
+            <section id="further-reading">
                 <h2>Further Reading</h2>
 
                 <ul>

@@ -23,7 +23,7 @@ export const metadata = createMetadata({
 export default function page() {
     return (
         <CMALTLayout title="5a: Specialist Area 1" lastUpdated="2025-07-22">
-            <section>
+            <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
 
                 <p>
@@ -54,7 +54,7 @@ export default function page() {
                 </p>
             </section>
 
-            <section>
+            <section id="description">
                 <h2>Description</h2>
                 <p>
                     My specialist area is full-stack JavaScript development,
@@ -200,7 +200,7 @@ export default function page() {
                 </p>
             </section>
 
-            <section>
+            <section id="reflection">
                 <h2>Reflection</h2>
                 <p>
                     Transitioning from educator to developer has shaped not just
@@ -265,7 +265,7 @@ export default function page() {
                 </p>
             </section>
 
-            <section>
+            <section id="summary">
                 <h2>Summary</h2>
                 <ul>
                     <li>
@@ -308,7 +308,7 @@ export default function page() {
                 </ul>
             </section>
 
-            <section>
+            <section id="evidence">
                 <h2>Evidence</h2>
                 <ul>
                     <li>
@@ -446,7 +446,7 @@ export default function page() {
                 </ul>
             </section>
 
-            <section>
+            <section id="further-reading">
                 <h2>Further Reading</h2>
 
                 <ul>

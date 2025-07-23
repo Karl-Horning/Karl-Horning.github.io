@@ -12,7 +12,7 @@ export const metadata = createMetadata({
 export default function ContextualStatementPage() {
     return (
         <CMALTLayout title="Contextual Statement" lastUpdated="2025-07-22">
-            <section>
+            <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
 
                 <p>
@@ -39,7 +39,7 @@ export default function ContextualStatementPage() {
                 </p>
             </section>
 
-            <section>
+            <section id="description">
                 <h2>My Journey in Learning Technology</h2>
 
                 <p>
