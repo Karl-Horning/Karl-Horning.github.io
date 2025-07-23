@@ -12,7 +12,7 @@ import CMALTNav from "./CMALTNav";
  */
 export default function CMALTSidebar() {
     return (
-        <aside className="transform rounded-lg bg-surface p-6 text-center shadow-md">
+        <aside id="sidebar" className="transform rounded-lg bg-surface p-6 text-center shadow-md sidebar">
             <AboutTheAuthor />
 
             <hr className="mb-6 mt-8" />

@@ -78,7 +78,7 @@ Visit the live site at: [karlhorning.dev](https://www.karlhorning.dev)
 
 ## 📌 To Do / Future Enhancements
 
-- [ ] Add print styles
+- [x] Add print styles
 - [ ] Remove h1 background image when styles are disabled
 - [x] Correct `HomeRout`
 - [ ] Add correct routes to CMALT page metadata
