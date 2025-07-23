@@ -106,6 +106,7 @@ h6 {
         font-size: 0.875rem; /* 14px */
     }
 
+    .prose-cmalt figure,
     .prose-cmalt p {
         margin-bottom: 1.5rem; /* mb-6 */
     }
