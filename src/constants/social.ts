@@ -7,19 +7,19 @@ const { GitHubLink, LinkedInLink, RssLink } = externalLinks;
 const { AboutRoute, ContactRoute } = internalRoutes;
 
 /**
- * Represents a single footer navigation item.
+ * Represents a single social navigation item.
  */
-type FooterLink = {
+type SocialLink = {
     label: string;
     href: string;
     icon: IconType;
 };
 
 /**
- * A collection of footer navigation links, each with a label, URL, and icon.
+ * A collection of social navigation links, each with a label, URL, and icon.
  * Includes links to external profiles and internal routes.
  */
-export const footerLinks: FooterLink[] = [
+export const socialLinks: SocialLink[] = [
     {
         label: "About",
         href: AboutRoute,

@@ -1,4 +1,4 @@
-import { footerLinks } from "@/constants/footer";
+import { socialLinks } from "@/constants/social";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ export default function AboutTheAuthor() {
                 JavaScript developer &amp; learning technologist
             </p>
             <ul className="mb-4 flex justify-center gap-1 text-sm text-primary">
-                {footerLinks.map(({ label, href, icon: Icon }) => (
+                {socialLinks.map(({ label, href, icon: Icon }) => (
                     <Link
                         key={label}
                         href={href}

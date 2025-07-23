@@ -1,4 +1,4 @@
-import { footerLinks } from "@/constants/footer";
+import { socialLinks } from "@/constants/social";
 import Link from "next/link";
 
 /**
@@ -18,7 +18,7 @@ export default function Footer() {
                     aria-label="Social media links"
                     className="mt-4 flex space-x-6 md:mt-0"
                 >
-                    {footerLinks.map(({ label, href, icon: Icon }) => (
+                    {socialLinks.map(({ label, href, icon: Icon }) => (
                         <Link
                             key={label}
                             href={href}
