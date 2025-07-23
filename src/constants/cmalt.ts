@@ -159,28 +159,28 @@ export const cmaltEvidence = {
 
     /** Screenshots used to demonstrate functionality or achievements */
     screenshots: {
-        dpaScreenshot: "/cmalt/screenshots/dpa-screenshot.webp",
+        dpaScreenshot: "/cmalt/screenshots/dpa-screenshot.png",
         editingSubtitlesScreenshot:
-            "/cmalt/screenshots/editing-subtitles-screenshot.webp",
+            "/cmalt/screenshots/editing-subtitles-screenshot.png",
         embeddedSubtitlesScreenshot:
-            "/cmalt/screenshots/embedded-subtitles-screenshot.webp",
+            "/cmalt/screenshots/embedded-subtitles-screenshot.png",
         ictAnalystTestScriptScreenshot:
-            "/cmalt/screenshots/ict-analyst-test-script-screenshot.webp",
+            "/cmalt/screenshots/ict-analyst-test-script-screenshot.png",
         ictSeniorAnalystTestScriptScreenshot:
-            "/cmalt/screenshots/ict-senior-analyst-test-script-screenshot.webp",
+            "/cmalt/screenshots/ict-senior-analyst-test-script-screenshot.png",
         ictUserStoriesScreenshot:
-            "/cmalt/screenshots/ict-user-stories-screenshot.webp",
+            "/cmalt/screenshots/ict-user-stories-screenshot.png",
         jiraFundamentalsScreenshot:
-            "/cmalt/screenshots/jira-fundamentals-badge-screenshot.webp",
+            "/cmalt/screenshots/jira-fundamentals-badge-screenshot.png",
         joiningTeamsMeetingScreenshot:
             "/cmalt/screenshots/joining-a-microsoft-teams-meeting-from-the-session-details-page-screenshot.webp",
         microsoftTeamsFaqScreenshot:
-            "/cmalt/screenshots/microsoft-teams-faq-screenshot.webp",
+            "/cmalt/screenshots/microsoft-teams-faq-screenshot.png",
         sessionRatingsScreenshot: "/cmalt/screenshots/session-ratings.webp",
         sessionReportRatingsScreenshot:
             "/cmalt/screenshots/session-report-ratings.webp",
         traineeListScreenshot:
-            "/cmalt/screenshots/trainee-list-screenshot.webp",
+            "/cmalt/screenshots/trainee-list-screenshot.png",
     },
 
     /** Transcripts of training or recorded learning content */
