@@ -121,7 +121,8 @@ export const cmaltEvidence = {
         designingAnEnglishCourse:
             "/cmalt/documents/designing-a-bespoke-english-course-for-professionals.pdf",
         firstSessionQuestions: "/cmalt/documents/first-session-questions.pdf",
-        microsoftTeamsFaq: "/cmalt/documents/microsoft-teams-faq-company-info-removed.pdf",
+        microsoftTeamsFaq:
+            "/cmalt/documents/microsoft-teams-faq-company-info-removed.pdf",
         subtitlesExample:
             "/cmalt/documents/joining-a-microsoft-teams-meeting-from-the-session-details-page.srt",
         usingPostmanWithApolloServer:
@@ -189,5 +190,9 @@ export const cmaltEvidence = {
     transcripts: {
         dyslexiaAwarenessTranscript:
             "/cmalt/transcripts/microsoft-learn-training-modules.pdf",
+    },
+    /** Videos used in teaching or training sessions */
+    videos: {
+        microsoftTeamsGuide: "/cmalt/videos/microsoft-teams-guide-excerpt.mp4",
     },
 };

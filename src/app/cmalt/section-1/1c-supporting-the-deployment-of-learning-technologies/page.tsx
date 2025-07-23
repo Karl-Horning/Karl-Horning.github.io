@@ -4,9 +4,10 @@ import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
-const { documents, links } = cmaltEvidence;
+const { documents, links, videos } = cmaltEvidence;
 const { microsoftTeamsFaq, usingPostmanWithApolloServer } = documents;
 const { blackboardSwaggerPostmanCollectionLink, deppProjectLink } = links;
+const { microsoftTeamsGuide } = videos;
 
 export const metadata = createMetadata({
     title: "1c: Supporting the Deployment of Learning Technologies | CMALT",
@@ -109,8 +110,14 @@ export default function page() {
                     </a>{" "}
                     to support trainers through the institutional transition to
                     Teams. I also created a video walkthrough,{" "}
-                    <em>Microsoft Teams Guide</em>, which was used to deliver
-                    asynchronous training.
+                    <a
+                        href={microsoftTeamsGuide}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Microsoft Teams Guide
+                    </a>
+                    , which was used to deliver asynchronous training.
                 </p>
             </section>
 
@@ -232,12 +239,12 @@ export default function page() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Using Blackboard&apos;s Swagger File to Create a Postman
-                            Collection and Make an API Call
+                            Using Blackboard&apos;s Swagger File to Create a
+                            Postman Collection and Make an API Call
                         </a>{" "}
                         <em>
-                            Step-by-step guide to using Blackboard&apos;s API via
-                            Postman, informed by DEPP testing and earlier
+                            Step-by-step guide to using Blackboard&apos;s API
+                            via Postman, informed by DEPP testing and earlier
                             platform integration work.
                         </em>
                     </li>
@@ -270,10 +277,16 @@ export default function page() {
                         </em>
                     </li>
                     <li>
-                        TODO: Microsoft Teams Guide{" "}
+                        <a
+                            href={microsoftTeamsGuide}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Microsoft Teams Guide
+                        </a>{" "}
                         <em>
-                            Short walkthrough video offering asynchronous
-                            support during Microsoft Teams rollout.
+                            Excerpt of a short walkthrough video offering
+                            asynchronous support during Microsoft Teams rollout.
                         </em>
                     </li>
                 </ul>
