@@ -1,6 +1,7 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useState, useEffect } from "react";
 import CMALTSidebar from "@/components/CMALT/CMALTSidebar";
-import Script from "next/script";
 import CMALTHeader from "../CMALT/CMALTHeader";
 
 interface CMALTLayoutProps {
@@ -30,45 +31,46 @@ export default function CMALTLayout({
     lastUpdated,
     thumbnail = "/img/cmalt-default.webp", // fallback if not provided
 }: CMALTLayoutProps) {
+    const [readingTime, setReadingTime] = useState<string>("1 min read");
+
+    useEffect(() => {
+        const calculateReadingTime = (text: string): string => {
+            const wordsPerMinute = 150;
+            const words = text.trim().split(/\s+/).length;
+            const minutes = Math.ceil(words / wordsPerMinute);
+            return `${minutes} min read`;
+        };
+
+        const updateReadingTime = () => {
+            const mainContent = document.querySelector(
+                "main.prose-cmalt"
+            ) as HTMLElement | null;
+
+            if (mainContent) {
+                const text = mainContent.innerText || "";
+                const readingTime = calculateReadingTime(text);
+                setReadingTime(readingTime);
+            }
+        };
+
+        // Delay ensures content has fully rendered
+        const timeout = setTimeout(updateReadingTime, 100);
+        return () => clearTimeout(timeout);
+    }, []);
+
     return (
         <>
             <CMALTHeader
                 title={title}
                 lastUpdated={lastUpdated}
                 thumbnail={thumbnail}
+                readingTime={readingTime}
             />
 
             <div className="mx-auto grid max-w-4xl gap-12 px-4 py-16 text-[var(--text)] lg:grid-cols-3">
                 <main className="prose-cmalt lg:col-span-2">{children}</main>
                 <CMALTSidebar />
             </div>
-            <Script id="reading-time" strategy="lazyOnload">
-                {`
-                    const calculateReadingTime = (text) => {
-                        const wordsPerMinute = 150;
-                        const words = text.trim().split(/\\s+/).length;
-                        const minutes = Math.ceil(words / wordsPerMinute);
-                        return \`\${minutes} min read\`;
-                    };
-
-                    const updateReadingTime = () => {
-                        const mainContent = document.querySelector("main.prose-cmalt");
-                        const readingTimeEl = document.getElementById("reading-time");
-
-                        if (mainContent && readingTimeEl) {
-                            const text = mainContent.innerText || "";
-                            const readingTime = calculateReadingTime(text);
-                            readingTimeEl.textContent = readingTime;
-                        }
-                    };
-
-                    if (document.readyState === "complete" || document.readyState === "interactive") {
-                        updateReadingTime();
-                    } else {
-                        document.addEventListener("DOMContentLoaded", updateReadingTime);
-                    }
-                `}
-            </Script>
         </>
     );
 }

@@ -4,23 +4,28 @@ const { CalendarIcon, ClockIcon } = icons;
 interface CMALTHeaderProps {
     title: string;
     lastUpdated: string;
+    readingTime?: string;
     thumbnail?: string;
 }
 
 /**
  * Displays the hero header for a CMALT portfolio page.
- * Includes a background image, page title, last updated date, and a placeholder
- * for dynamically calculated reading time.
  *
- * @param {CMALTHeaderProps} props - The properties for the header component.
- * @param {string} props.title - The title of the page, displayed as the main heading.
- * @param {string} props.lastUpdated - An ISO 8601 date string representing the last update date.
- * @param {string} [props.thumbnail="/img/cmalt-default.webp"] - Optional background image URL; falls back to a default.
- * @returns The header section of the CMALT page.
+ * Includes a background image, page title, last updated date,
+ * and estimated reading time. Used as the top section of each
+ * CMALT layout page.
+ *
+ * @param {CMALTHeaderProps} props - Component properties.
+ * @param {string} props.title - The main heading shown on the page.
+ * @param {string} props.lastUpdated - ISO 8601 date string representing the last update.
+ * @param {string} [props.readingTime="1 min read"] - Optional estimated reading time displayed alongside the last updated date.
+ * @param {string} [props.thumbnail="/img/cmalt-default.webp"] - Optional background image URL for the header section.
+ * @returns The styled header section for CMALT portfolio pages.
  */
 export default function CMALTHeader({
     title,
     lastUpdated,
+    readingTime = "1 min read",
     thumbnail = "/img/cmalt-default.webp",
 }: CMALTHeaderProps) {
     return (
@@ -52,7 +57,9 @@ export default function CMALTHeader({
                     <span className="mx-1 hidden text-xs md:inline">•</span>
                     <span className="flex items-center gap-1">
                         <ClockIcon aria-hidden="true" />
-                        <span id="reading-time">Calculating...</span>
+                        <span id="reading-time" aria-live="polite">
+                            {readingTime}
+                        </span>
                     </span>
                 </p>
             </div>
