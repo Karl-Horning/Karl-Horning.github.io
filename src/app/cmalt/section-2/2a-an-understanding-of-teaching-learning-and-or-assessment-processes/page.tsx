@@ -66,10 +66,25 @@ export default function page() {
                 <h2>Description</h2>
 
                 <p>
-                    Since earning my PTLLS in 2012 and CELTA in 2013, I have
-                    delivered over 10,000 English language lessons to adult
-                    learners. These learners, ranging from CEFR levels A1 to C2,
-                    came from professional fields such as finance, IT,
+                    Since earning my{" "}
+                    <a
+                        href={ptllsCertificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        PTLLS in 2012
+                    </a>{" "}
+                    and{" "}
+                    <a
+                        href={celtaCertificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        CELTA in 2013
+                    </a>
+                    , I have delivered over 10,000 English language lessons to
+                    adult learners. These learners, ranging from CEFR levels A1
+                    to C2, came from professional fields such as finance, IT,
                     marketing, sales, and administration. My teaching was based
                     on <strong>communicative language teaching (CLT)</strong>{" "}
                     and <strong>task-based learning (TBL)</strong>, which
@@ -122,18 +137,25 @@ export default function page() {
 
                 <p>
                     A key practice that I adopted was beginning each course with
-                    a structured <strong>needs assessment</strong>. This session
-                    focused on understanding the learners&apos; goals, current
-                    proficiency, professional context, and preferred learning
-                    styles. Initially, I adhered closely to a rigid structure
-                    following the layout, but over time, I refined these
-                    assessments to be more conversational and collaborative,
-                    which improved engagement and trust. I revisited
-                    learners&apos; goals, proficiency levels, and contexts at
-                    intervals suited to each course&apos;s length. This ensured
-                    that learners could use and reflect on their experiences,
-                    and then use this information to inform future actions. This
-                    followed{" "}
+                    a structured{" "}
+                    <a
+                        href={firstSessionQuestions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        needs assessment
+                    </a>
+                    . This session focused on understanding the learners&apos;
+                    goals, current proficiency, professional context, and
+                    preferred learning styles. Initially, I adhered closely to a
+                    rigid structure following the layout, but over time, I
+                    refined these assessments to be more conversational and
+                    collaborative, which improved engagement and trust. I
+                    revisited learners&apos; goals, proficiency levels, and
+                    contexts at intervals suited to each course&apos;s length.
+                    This ensured that learners could use and reflect on their
+                    experiences, and then use this information to inform future
+                    actions. This followed{" "}
                     <strong>Kolb&apos;s experiential learning cycle</strong>.
                 </p>
 
@@ -166,18 +188,29 @@ export default function page() {
 
                 <p>
                     Through ongoing reflection and CPD — including{" "}
-                    <em>
+                    <a
+                        href={dyslexiaAwarenessCertificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Dyslexia Awareness: In partnership with Made By Dyslexia
-                    </em>{" "}
-                    (2020, updated in 2025) — I developed more inclusive visual
-                    and content design practices. These principles informed how
-                    I adapted delivery for different learning preferences. I
-                    incorporated diagrams, simplified feedback statements, and
-                    colour-coded grammar charts to reduce language processing
-                    strain and visual overload. For example, a grammar reference
-                    on the use of <em>some</em> and <em>any</em> helped clarify
-                    rules using minimal text, bullet points, and colour-coded
-                    examples:
+                    </a>{" "}
+                    (2020,{" "}
+                    <a
+                        href={dyslexiaAwarenessTranscript}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        updated in 2025
+                    </a>
+                    ) — I developed more inclusive visual and content design
+                    practices. These principles informed how I adapted delivery
+                    for different learning preferences. I incorporated diagrams,
+                    simplified feedback statements, and colour-coded grammar
+                    charts to reduce language processing strain and visual
+                    overload. For example, a grammar reference on the use of{" "}
+                    <em>some</em> and <em>any</em> helped clarify rules using
+                    minimal text, bullet points, and colour-coded examples:
                 </p>
 
                 <blockquote>
@@ -249,15 +282,26 @@ export default function page() {
                 </p>
             </section>
 
-            <section>
+            <section id="future-developments">
                 <h2>Future Developments</h2>
 
                 <p>
                     I am committed to continuously improving my teaching methods
                     by focusing on accessibility, interactivity, and the
-                    considered adoption of emerging technologies. With the
-                    ubiquitous rise of AI, I continue to explore how AI-powered
-                    tools, like automated feedback generators and
+                    considered adoption of emerging technologies. To support
+                    this, I maintain an evolving resource —{" "}
+                    <a
+                        href={webAccessibilityResourcesAndTools}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Web Accessibility Resources and Tools: Guidelines,
+                        Checklists, and Testing Solutions (PDF)
+                    </a>{" "}
+                    — which brings together up-to-date guidance, checklists, and
+                    testing strategies aligned with WCAG 2.1 and EN 301 549.
+                    With the ubiquitous rise of AI, I continue to explore how
+                    AI-powered tools, like automated feedback generators and
                     grammar-checking assistants, can support more personalised
                     learning pathways for learners. These tools help reduce the
                     time spent on routine administrative work, allowing teachers
