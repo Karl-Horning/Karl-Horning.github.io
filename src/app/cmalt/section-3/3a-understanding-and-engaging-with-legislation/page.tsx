@@ -1,3 +1,4 @@
+import FigureWithCaption from "@/components/FigureWithCaption";
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
@@ -150,10 +151,14 @@ export default function page() {
                 <p>
                     In support of these requirements, I have created a document
                     titled{" "}
-                    <em>
+                    <a
+                        href={webAccessibilityResourcesAndTools}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Web Accessibility Resources and Tools: Guidelines,
                         Checklists, and Testing Solutions
-                    </em>
+                    </a>
                     , which compiles resources for evaluating and creating
                     accessible web content. I also regularly use the
                     Accessibility Assistant when authoring Microsoft Word
@@ -163,14 +168,31 @@ export default function page() {
 
                 <p>
                     To improve my understanding of learner needs, I completed{" "}
-                    <em>
+                    <a
+                        href={dyslexiaAwarenessCertificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Dyslexia Awareness: In partnership with Made By Dyslexia
-                    </em>{" "}
-                    when it launched in 2020 and again in its extended 7-hour
-                    format in 2025.
+                    </a>{" "}
+                    when it launched in 2020 and{" "}
+                    <a
+                        href={dyslexiaAwarenessTranscript}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        again in its extended 7-hour format in 2025
+                    </a>
+                    .
                 </p>
 
                 <h3>Subtitles and Video Accessibility</h3>
+
+                <FigureWithCaption
+                    src={editingSubtitlesScreenshot}
+                    alt="A screenshot of manually editing subtitles in Visual Studio Code"
+                    caption="A screenshot of manually editing subtitles in Visual Studio Code"
+                />
 
                 <p>
                     When producing video content, I comply with WCAG 2.1{" "}
@@ -183,13 +205,13 @@ export default function page() {
                     </a>
                     . I create{" "}
                     <a
-                        href="https://www.bbc.co.uk/academy-guides/how-do-i-create-subtitles#srt"
+                        href={subtitlesExample}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        SRT
-                    </a>{" "}
-                    subtitle files, which are compatible with platforms such as{" "}
+                        SRT subtitle files
+                    </a>
+                    , which are compatible with platforms such as{" "}
                     <a
                         href="https://support.google.com/youtube/answer/2734698#zippy=%2Cbasic-file-formats%2Csubrip-srt-example"
                         target="_blank"
@@ -215,6 +237,13 @@ export default function page() {
                     </a>{" "}
                     in Visual Studio Code, basing them on the script and audio.
                 </p>
+
+                <FigureWithCaption
+                    src={embeddedSubtitlesScreenshot}
+                    alt="A screenshot of subtitles embedded with Subler"
+                    caption="A screenshot of subtitles embedded with Subler"
+                />
+
                 <p>
                     I follow the{" "}
                     <a
@@ -238,6 +267,13 @@ export default function page() {
                 </p>
 
                 <h3>Accessible Document Design</h3>
+
+                <FigureWithCaption
+                    src={microsoftTeamsFaqScreenshot}
+                    alt="A screenshot of Microsoft's Accessibility Assistant in Word"
+                    caption="A screenshot of Microsoft's Accessibility Assistant in Word"
+                />
+
                 <p>
                     I also apply accessibility standards to document creation.
                     In preparing learner-facing materials such as the{" "}
@@ -252,6 +288,7 @@ export default function page() {
                     </li>
                     <li>Ensure compatibility with screen readers</li>
                 </ul>
+
                 <p>
                     These practices align with WCAG criteria such as{" "}
                     <a
