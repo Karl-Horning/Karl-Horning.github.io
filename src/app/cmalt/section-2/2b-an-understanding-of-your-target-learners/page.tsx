@@ -57,17 +57,31 @@ export default function page() {
 
                 <p>
                     To tailor the learning experience from the start, I created
-                    a document titled <strong>First Session Questions</strong>,
-                    which I used as a structured needs analysis tool. It covered
-                    learners&apos; current proficiency, goals, work tasks
-                    requiring English, confidence levels in speaking, listening,
-                    reading, and writing, and any past difficulties or
-                    frustrations with the language.
+                    a document titled{" "}
+                    <a
+                        href={firstSessionQuestions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        First Session Questions (PDF)
+                    </a>
+                    , which I used as a structured needs analysis tool. It
+                    covered learners&apos; current proficiency, goals, work
+                    tasks requiring English, confidence levels in speaking,
+                    listening, reading, and writing, and any past difficulties
+                    or frustrations with the language.
                 </p>
 
                 <p>
-                    Based on this information, I designed bespoke ten-week
-                    courses. For example, one group needed to improve clarity in
+                    Based on this information,{" "}
+                    <a
+                        href={designingAnEnglishCourse}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        I designed bespoke ten-week courses
+                    </a>
+                    . For example, one group needed to improve clarity in
                     introductions and requests during meetings. Their curriculum
                     included topics such as:
                 </p>
