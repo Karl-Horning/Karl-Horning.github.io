@@ -1,3 +1,4 @@
+import FigureWithCaption from "@/components/FigureWithCaption";
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
@@ -131,6 +132,12 @@ export default function page() {
                     </li>
                 </ul>
 
+                <FigureWithCaption
+                    src={microsoftTeamsFaqScreenshot}
+                    alt="A screenshot of my Microsoft Teams FAQ using dummy data"
+                    caption="A screenshot of my Microsoft Teams FAQ using dummy data"
+                />
+
                 <p>
                     In my work creating digital learning resources, I have
                     implemented GDPR-aligned practices, including:
@@ -156,7 +163,7 @@ export default function page() {
                 <p>
                     In addition to removing personal data, I ensure that, where
                     possible, screenshots and recordings meet accessibility
-                    expectations—such as clear contrast and readable text—in
+                    expectations — such as clear contrast and readable text — in
                     line with WCAG 2.1.
                 </p>
             </section>
@@ -177,9 +184,8 @@ export default function page() {
                 </p>
 
                 <p>
-                    My approach reflects <strong>Article 5(1)(c)</strong> of the
-                    GDPR, which outlines the principle of{" "}
-                    <strong>data minimisation</strong>:
+                    My approach reflects Article 5(1)(c) of the GDPR, which
+                    outlines the principle of data minimisation:
                 </p>
 
                 <blockquote>
@@ -205,6 +211,13 @@ export default function page() {
                     as coded identifiers) may still be considered personal data
                     under the law.
                 </p>
+
+                <FigureWithCaption
+                    src={joiningTeamsMeetingScreenshot}
+                    alt="An anonymised screenshot using dummy data"
+                    caption="An anonymised screenshot using dummy data"
+                />
+
                 <p>
                     As a result, I have embedded data protection principles into
                     my daily workflow. I default to using anonymised or dummy
@@ -252,11 +265,7 @@ export default function page() {
                     environments. My approach reflects both institutional
                     policies and broader sector expectations around the
                     responsible use of learner data, such as those outlined by
-                    the{" "}
-                    <strong>
-                        Information Commissioner&apos;s Office (ICO)
-                    </strong>
-                    .
+                    the Information Commissioner&apos;s Office (ICO) .
                 </p>
             </section>
 
