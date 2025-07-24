@@ -61,8 +61,15 @@ export default function Page() {
                     London, I have been part of a cross-functional team
                     evaluating multiple LMS platforms (Blackboard Ultra,
                     Brightspace, Canvas) to support a major institutional
-                    review. This required direct comparison of the platforms,
-                    evaluating their APIs, integration models, accessibility
+                    review.{" "}
+                    <a
+                        href={deppIctPresentation}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        This required direct comparison of the platforms
+                    </a>
+                    , evaluating their APIs, integration models, accessibility
                     compliance (such as WCAG 2.1), and alignment with the
                     pedagogical and administrative needs of various faculties.
                 </p>
@@ -74,10 +81,17 @@ export default function Page() {
                 />
 
                 <p>
-                    To assist with this, I developed a reusable Postman
-                    collection for testing Blackboard Ultra&apos;s APIs and
-                    authored detailed user stories to ensure the LMS evaluation
-                    process was grounded in real-world requirements.
+                    To assist with this, I developed a reusable{" "}
+                    <a
+                        href={blackboardPostmanCollection}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Postman collection for testing Blackboard Ultra&apos;s
+                        APIs
+                    </a>{" "}
+                    and authored detailed user stories to ensure the LMS
+                    evaluation process was grounded in real-world requirements.
                     Additionally, I created structured manual test scripts to
                     explore functionality limitations and prepared for future
                     automation testing.
