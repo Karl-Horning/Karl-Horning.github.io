@@ -183,7 +183,7 @@ export const cmaltEvidence = {
         sessionRatingsScreenshot: "/cmalt/screenshots/session-ratings.webp",
         sessionReportRatingsScreenshot:
             "/cmalt/screenshots/session-report-ratings.webp",
-        traineeListScreenshot: "/cmalt/screenshots/trainee-list-screenshot.png",
+        traineeListScreenshot: "/cmalt/screenshots/trainee-list-screenshot.webp",
     },
 
     /** Transcripts of training or recorded learning content */
