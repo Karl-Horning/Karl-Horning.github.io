@@ -68,13 +68,20 @@ export default function page() {
                 </p>
 
                 <p>
-                    I transitioned into development after more than a decade in
-                    education, and that background has shaped how I build
-                    software. From 2021 to 2024, I worked as a full-stack
-                    JavaScript developer at Learnlight, a global EdTech company
-                    serving over 700,000 learners. I built and maintained its
-                    learning platform, the same one I previously used as an
-                    English language trainer. In that role, I:
+                    <a
+                        href={LinkedInLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        I transitioned into development after more than a decade
+                        in education
+                    </a>
+                    , and that background has shaped how I build software. From
+                    2021 to 2024, I worked as a full-stack JavaScript developer
+                    at Learnlight, a global EdTech company serving over 700,000
+                    learners. I built and maintained its learning platform, the
+                    same one I previously used as an English language trainer.
+                    In that role, I:
                 </p>
                 <ul>
                     <li>
@@ -140,30 +147,64 @@ export default function page() {
                 </p>
                 <ul>
                     <li>
-                        <strong>Apple Teacher Swift Playgrounds</strong>{" "}
+                        <a
+                            href={appleTeacherCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Apple Teacher (Swift Playgrounds)
+                        </a>{" "}
                         (Awarded 6 June 2025 by Apple, self-paced)
                     </li>
                     <li>
-                        <strong>The Web Developer Bootcamp</strong> (Awarded 2
-                        July 2019 by Udemy, 47 hours)
+                        <a
+                            href={webDeveloperCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            The Web Developer Bootcamp
+                        </a>{" "}
+                        (Awarded 2 July 2019 by Udemy, 47 hours)
                     </li>
                     <li>
-                        <strong>Master Electron</strong> (Awarded 2 February
-                        2024 by Udemy, 8 hours)
+                        <a
+                            href={electronCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Master Electron
+                        </a>{" "}
+                        (Awarded 2 February 2024 by Udemy, 8 hours)
                     </li>
                     <li>
-                        <strong>Modern GraphQL with Node</strong> (Awarded 2
-                        January 2023 by Udemy, 10.5 hours)
+                        <a
+                            href={graphQlCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Modern GraphQL with Node
+                        </a>{" "}
+                        (Awarded 2 January 2023 by Udemy, 10.5 hours)
                     </li>
                     <li>
-                        <strong>
+                        <a
+                            href={nextJsCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Next JS: The Complete Developer&apos;s Guide
-                        </strong>{" "}
+                        </a>{" "}
                         (Awarded 22 March 2024 by Udemy, 15.5 hours)
                     </li>
                     <li>
-                        <strong>Jira Fundamentals</strong> (Awarded 15 August
-                        2024 by Atlassian, self-paced)
+                        <a
+                            href={jiraFundamentalsScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Jira Fundamentals
+                        </a>{" "}
+                        (Awarded 15 August 2024 by Atlassian, self-paced)
                     </li>
                 </ul>
 
@@ -245,16 +286,50 @@ export default function page() {
                     >
                         freeCodeCamp
                     </a>
-                    , YouTube, and forums have helped bridge that gap and remain
+                    ,{" "}
+                    <a
+                        href="https://www.youtube.com/@freecodecamp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        YouTube
+                    </a>
+                    , and forums have helped bridge that gap and remain
                     essential to my ongoing development. These experiences have
                     deepened my belief in the value of knowledge-sharing. I
-                    maintain an active GitHub profile where I try to make my
-                    repositories accessible and easy to follow, and I&apos;ve
-                    recently launched a blog inspired by posts such as{" "}
-                    <em>Our learnings from adopting GraphQL</em> and{" "}
-                    <em>Migrating Netflix to GraphQL safely</em>. My goal is to
-                    reflect on development challenges and explain concepts in a
-                    way that&apos;s approachable and useful to others.
+                    maintain{" "}
+                    <a
+                        href="https://github.com/Karl-Horning"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        an active GitHub profile
+                    </a>{" "}
+                    where I try to make my repositories accessible and easy to
+                    follow, and I&apos;ve recently launched a blog inspired by
+                    posts such as{" "}
+                    <em>
+                        <a
+                            href="https://netflixtechblog.com/our-learnings-from-adopting-graphql-f099de39ae5f"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Our learnings from adopting GraphQL
+                        </a>
+                    </em>{" "}
+                    and{" "}
+                    <em>
+                        <a
+                            href="https://netflixtechblog.com/migrating-netflix-to-graphql-safely-8e1e4d4f1e72"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Migrating Netflix to GraphQL safely
+                        </a>
+                    </em>
+                    . My goal is to reflect on development challenges and
+                    explain concepts in a way that&apos;s approachable and
+                    useful to others.
                 </p>
 
                 <p>
