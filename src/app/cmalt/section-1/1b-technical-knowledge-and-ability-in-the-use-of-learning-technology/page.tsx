@@ -1,3 +1,4 @@
+import FigureWithCaption from "@/components/FigureWithCaption";
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
@@ -60,6 +61,12 @@ export default function page() {
                     supporting academic staff in their use.
                 </p>
 
+                <FigureWithCaption
+                    src={traineeListScreenshot}
+                    alt="A screenshot of my Trainee List Electron app"
+                    caption="A screenshot of my Trainee List Electron app"
+                />
+
                 <p>
                     I&apos;ve also developed bespoke tools using JavaScript,
                     Python, and Excel — from building GraphQL APIs within a
@@ -106,11 +113,19 @@ export default function page() {
                 <p>
                     Much of my work has bridged technical development and
                     practical pedagogical application. At Learnlight, for
-                    example, I optimised GraphQL API responses and implemented
-                    automated backend testing to support a commercial LMS
-                    serving over 700,000 learners. While highly technical, this
-                    work had a direct educational impact: improved system
-                    performance translated to better student experiences.
+                    example,{" "}
+                    <a
+                        href={graphQlCertificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        I optimised GraphQL API responses
+                    </a>{" "}
+                    and implemented automated backend testing to support a
+                    commercial LMS serving over 700,000 learners. While highly
+                    technical, this work had a direct educational impact:
+                    improved system performance translated to better student
+                    experiences.
                 </p>
 
                 <p>
@@ -145,12 +160,25 @@ export default function page() {
                     At Imperial College London, I brought this technical
                     foundation into a more learner-facing role. I wrote API
                     scripts based on LMS documentation (including Swagger
-                    specifications) and used Postman to evaluate endpoints
-                    related to identity and access management (IAM), data
-                    analytics, and system configuration. These scripts supported
-                    LMS evaluation by revealing system behaviours and
-                    limitations across platforms.
+                    specifications) and{" "}
+                    <a
+                        href={blackboardPostmanCollection}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        used Postman to evaluate endpoints related to identity
+                        and access management (IAM), data analytics, and system
+                        configuration
+                    </a>
+                    . These scripts supported LMS evaluation by revealing system
+                    behaviours and limitations across platforms.
                 </p>
+
+                <FigureWithCaption
+                    src={ictAnalystTestScriptScreenshot}
+                    alt="A screenshot of the test scripts"
+                    caption="A screenshot of the test scripts"
+                />
 
                 <p>
                     Alongside this, I developed manual test scripts aligned with
