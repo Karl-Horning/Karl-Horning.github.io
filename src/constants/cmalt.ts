@@ -57,7 +57,7 @@ export const cmaltSections = [
         children: [
             {
                 slug: "4a-communication-and-working-with-others",
-                label: "4a: Communication and Working with Others",
+                label: "📌 WIP: 4a: Communication and Working with Others",
             },
         ],
     },
