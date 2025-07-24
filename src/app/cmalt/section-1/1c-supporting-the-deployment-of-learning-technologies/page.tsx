@@ -7,7 +7,11 @@ const { CmaltRoute } = internalRoutes;
 const { documents, links, videos } = cmaltEvidence;
 const { microsoftTeamsFaq, usingPostmanWithApolloServer } = documents;
 const { blackboardSwaggerPostmanCollectionLink, deppProjectLink } = links;
-const { microsoftTeamsGuide } = videos;
+const {
+    microsoftTeamsGuide,
+    microsoftTeamsGuidePreview,
+    microsoftTeamsGuideSubtitles,
+} = videos;
 
 export const metadata = createMetadata({
     title: "1c: Supporting the Deployment of Learning Technologies | CMALT",
@@ -98,6 +102,29 @@ export default function page() {
                     onboarding and promoting consistency across the team.
                 </p>
 
+                <figure className="text-center">
+                    <video
+                        className="mb-6 h-auto w-full rounded-xl shadow-md"
+                        controls
+                        preload="metadata"
+                        aria-label="Excerpt from Microsoft Teams Guide"
+                        poster={microsoftTeamsGuidePreview}
+                    >
+                        <source src={microsoftTeamsGuide} type="video/mp4" />
+                        <track
+                            src={microsoftTeamsGuideSubtitles}
+                            kind="captions"
+                            srcLang="en"
+                            label="English"
+                            default
+                        />
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption className="mt-2 text-sm text-muted">
+                        An excerpt from <em>Microsoft Teams Guide</em>
+                    </figcaption>
+                </figure>
+
                 <p>
                     Earlier still, in June 2021 — just before Microsoft retired
                     Skype for Business — I authored a{" "}
@@ -110,14 +137,8 @@ export default function page() {
                     </a>{" "}
                     to support trainers through the institutional transition to
                     Teams. I also created a video walkthrough,{" "}
-                    <a
-                        href={microsoftTeamsGuide}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Microsoft Teams Guide
-                    </a>
-                    , which was used to deliver asynchronous training.
+                    <em>Microsoft Teams Guide</em>, which was used to deliver
+                    asynchronous training.
                 </p>
             </section>
 
