@@ -22,7 +22,7 @@ export const metadata = createMetadata({
 
 export default function page() {
     return (
-        <CMALTLayout title="5a: Specialist Area 1" lastUpdated="2025-07-22">
+        <CMALTLayout title="5a: Specialist Area 1" lastUpdated="2025-07-24">
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
 

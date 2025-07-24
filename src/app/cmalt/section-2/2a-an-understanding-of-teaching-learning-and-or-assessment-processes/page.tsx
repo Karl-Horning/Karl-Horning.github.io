@@ -30,7 +30,7 @@ export default function page() {
     return (
         <CMALTLayout
             title="2a: An Understanding of Teaching, Learning and/or Assessment Processes"
-            lastUpdated="2025-07-22"
+            lastUpdated="2025-07-24"
         >
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>

@@ -13,7 +13,7 @@ export default function page() {
     return (
         <CMALTLayout
             title="6b: Declaration and Nominated Assessor (optional)"
-            lastUpdated="2025-07-22"
+            lastUpdated="2025-07-24"
         >
             <section id="declaration">
                 <h2>Declaration</h2>

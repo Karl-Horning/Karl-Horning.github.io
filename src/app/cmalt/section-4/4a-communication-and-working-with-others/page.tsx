@@ -13,7 +13,7 @@ export default function page() {
     return (
         <CMALTLayout
             title="4a: Communication and Working With Others"
-            lastUpdated="2025-07-22"
+            lastUpdated="2025-07-24"
         >
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>

@@ -19,7 +19,7 @@ export default function Page() {
     return (
         <CMALTLayout
             title="Section 6: Advanced Area(s)"
-            lastUpdated="2025-07-22"
+            lastUpdated="2025-07-24"
         >
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>

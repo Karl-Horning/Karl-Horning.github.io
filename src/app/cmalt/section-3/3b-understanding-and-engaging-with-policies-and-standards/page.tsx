@@ -27,7 +27,7 @@ export default function page() {
     return (
         <CMALTLayout
             title="3b: Understanding and Engaging With Policies and Standards"
-            lastUpdated="2025-07-22"
+            lastUpdated="2025-07-24"
         >
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>

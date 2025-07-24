@@ -11,7 +11,7 @@ export const metadata = createMetadata({
 
 export default function FuturePlansPage() {
     return (
-        <CMALTLayout title="Future Plans" lastUpdated="2025-07-22">
+        <CMALTLayout title="Future Plans" lastUpdated="2025-07-24">
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
 

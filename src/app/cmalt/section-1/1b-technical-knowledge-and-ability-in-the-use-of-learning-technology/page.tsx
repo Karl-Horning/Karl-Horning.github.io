@@ -23,7 +23,7 @@ export default function page() {
     return (
         <CMALTLayout
             title="1b: Technical Knowledge and Ability in the Use of Learning Technology"
-            lastUpdated="2025-07-22"
+            lastUpdated="2025-07-24"
         >
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
