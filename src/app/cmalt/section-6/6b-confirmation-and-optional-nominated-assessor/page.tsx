@@ -42,10 +42,10 @@ export default function page() {
                 </ul>
 
                 <p>
-                    <strong>Signed</strong> <em>Karl Horning</em>
+                    Signed: <strong>Karl Horning</strong>
                 </p>
                 <p>
-                    <strong>Date</strong> <em>22 July 2025</em>
+                    Date: <strong>24 July 2025</strong>
                 </p>
             </section>
 
