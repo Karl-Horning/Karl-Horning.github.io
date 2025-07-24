@@ -39,12 +39,25 @@ export const externalLinks = {
  */
 export const internalRoutes = {
     /** The home page */
-    HomeRout: "/",
+    HomeRoute: "/",
 
     /** The about page */
 
     AboutRoute: "/about",
 
+    /** The CMALT page */
+    CmaltRoute: "/cmalt",
+
     /** The contact page */
     ContactRoute: "/contact",
 };
+
+/**
+ * A collection of links for use in the site navigation.
+ */
+export const navLinks = [
+    { label: "About", href: internalRoutes.AboutRoute },
+    { label: "Blog", href: externalLinks.BlogLink },
+    { label: "CMALT", href: internalRoutes.CmaltRoute },
+    { label: "Contact", href: internalRoutes.ContactRoute },
+];

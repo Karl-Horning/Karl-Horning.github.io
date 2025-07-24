@@ -3,7 +3,7 @@ import { createMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { internalRoutes } from "@/constants/links";
 
-const { HomeRout } = internalRoutes;
+const { HomeRoute } = internalRoutes;
 
 export const metadata = createMetadata({
     title: "404",
@@ -64,7 +64,7 @@ export default function NotFound() {
                             Try returning to a safe directory:
                         </p>
                         <Link
-                            href={HomeRout}
+                            href={HomeRoute}
                             className="mb-6 inline-block border border-green-400 px-4 py-2 transition hover:bg-green-400 hover:text-black focus:outline-none focus:ring focus:ring-green-400"
                         >
                             [ home ]

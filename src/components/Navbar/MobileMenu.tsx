@@ -1,17 +1,8 @@
-import { externalLinks, internalRoutes } from "@/constants/links";
+import { navLinks } from "@/constants/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const { BlogLink } = externalLinks;
-const { AboutRoute, ContactRoute } = internalRoutes;
-
-type NavLink = {
-    label: string;
-    href: string;
-};
-
 interface MobileMenuProps {
-    links?: NavLink[];
     isOpen?: boolean;
     onClose?: () => void;
 }
@@ -22,15 +13,10 @@ interface MobileMenuProps {
  * Displays a collapsible mobile navigation panel with accessible attributes.
  *
  * @component
- * @param {MobileMenuProps} props - Menu visibility state, link data, and optional close handler.
+ * @param {MobileMenuProps} props - Menu visibility state and optional close handler.
  * @returns The rendered mobile menu.
  */
 export default function MobileMenu({
-    links = [
-        { label: "About", href: AboutRoute },
-        { label: "Blog", href: BlogLink },
-        { label: "Contact", href: ContactRoute },
-    ],
     isOpen = false,
     onClose,
 }: MobileMenuProps) {
@@ -45,7 +31,7 @@ export default function MobileMenu({
             }`}
         >
             <div className="flex flex-col items-center space-y-8 px-4 py-8 text-center text-lg text-text">
-                {links.map(({ label, href }) => (
+                {navLinks.map(({ label, href }) => (
                     <Link
                         key={label}
                         href={href}

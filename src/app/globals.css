@@ -70,54 +70,466 @@ h6 {
     font-weight: 900;
 }
 
-/* Replace inline-block with inline-flex */
-.text-link {
-    color: var(--text);
-    display: inline-flex; /* Now it supports layout with the icon */
-    align-items: center; /* Vertically align text and icon */
-    gap: 0.25em; /* Small space between text and icon */
-    padding: 0 0.1em 0.3em;
-    position: relative;
-    text-decoration: none;
-    z-index: 0;
+@layer components {
+    .cmalt-title {
+        font-size: 1.875rem; /* mobile default */
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+
+    .prose-cmalt h2,
+    .prose-cmalt h3,
+    .prose-cmalt h4,
+    .prose-cmalt h5,
+    .prose-cmalt h6 {
+        line-height: 1.25;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    /* Base sizes */
+    .prose-cmalt h2 {
+        font-size: 1.5rem; /* 24px */
+    }
+    .prose-cmalt h3 {
+        font-size: 1.25rem; /* 20px */
+    }
+    .prose-cmalt h4 {
+        font-size: 1.125rem; /* 18px */
+    }
+    .prose-cmalt h5 {
+        font-size: 1rem; /* 16px */
+    }
+    .prose-cmalt h6 {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .prose-cmalt figure,
+    .prose-cmalt p {
+        margin-bottom: 1.5rem; /* mb-6 */
+    }
+
+    .prose-cmalt p,
+    .prose-cmalt li {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .prose-cmalt hr {
+        margin: 2rem 0;
+        border-color: theme("colors.zinc.600");
+    }
+
+    .prose-cmalt ol,
+    .prose-cmalt ul {
+        padding-left: 1.7rem;
+        margin-bottom: 1.5rem; /* mb-6 */
+    }
+
+    .prose-cmalt ol {
+        list-style: decimal;
+    }
+
+    .prose-cmalt ul {
+        list-style: disc;
+    }
+
+    .prose-cmalt li {
+        margin-bottom: 0.5rem; /* mb-2 */
+    }
+
+    .prose-cmalt li > ul,
+    .prose-cmalt li > ol {
+        margin-top: 0.5rem; /* mb-2 */
+    }
+
+    .prose-cmalt li > ol {
+        list-style: upper-roman;
+    }
+
+    .prose-cmalt li > p > img {
+        margin-top: 1rem;
+        display: block;
+    }
+
+    .text-link,
+    .cmalt-nav,
+    .prose-cmalt a {
+        color: var(--text);
+        position: relative;
+        text-decoration: underline; /* Keep native underline for accessibility */
+        overflow-wrap: anywhere;
+        word-break: break-word;
+
+        /* Multiline animated underline base */
+        background-image: linear-gradient(currentColor, currentColor);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: 0% 2px;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        transition:
+            color 0.3s ease,
+            background-size 0.3s ease;
+    }
+
+    /* Hover state: change colour + reveal multiline underline */
+    .text-link:hover,
+    .cmalt-nav:hover,
+    .prose-cmalt a:hover {
+        color: white;
+        background-size: 100% 2px;
+    }
+
+    /* Focus accessibility styles */
+    .text-link:focus,
+    .cmalt-nav:focus,
+    .prose-cmalt a:focus {
+        outline: none;
+    }
+
+    .text-link:focus-visible,
+    .cmalt-nav:focus-visible,
+    .prose-cmalt a:focus-visible {
+        border-radius: 0.25rem; /* 4px */
+        box-shadow:
+            0 0 0 2px var(--primary),
+            0 0 0 4px var(--background);
+    }
+
+    /* Blockquotes */
+    .prose-cmalt blockquote {
+        border-left: 4px solid var(--primary); /* Accent border */
+        background-color: var(--background-alt, rgba(255, 255, 255, 0.05));
+        padding: 1rem 1.25rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: var(--text-muted, #ccc);
+        border-radius: 0.5rem;
+        position: relative;
+    }
+
+    .prose-cmalt blockquote p {
+        margin: 0;
+    }
+
+    .prose-cmalt blockquote > :first-child::before {
+        content: open-quote;
+        font-size: 2rem;
+        line-height: 1;
+        margin-right: 0.25rem;
+        vertical-align: -0.25em;
+        color: var(--primary);
+    }
+
+    .prose-cmalt blockquote > :last-child::after {
+        content: close-quote;
+        font-size: 2rem;
+        line-height: 1;
+        margin-left: 0.25rem;
+        vertical-align: -0.25em;
+        color: var(--primary);
+    }
+
+    /* Nested blockquotes */
+    .prose-cmalt blockquote blockquote {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        border-left-color: var(--primary-light, #6ee7b7);
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .prose-cmalt blockquote blockquote + * {
+        margin-top: 1rem;
+    }
+
+    /* Tables */
+    .prose-cmalt table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        border: 1px solid theme("colors.zinc.700");
+        background-color: var(--background);
+        color: var(--text);
+        box-shadow: 0 0 0 1px theme("colors.zinc.800");
+    }
+
+    .prose-cmalt thead {
+        background-color: theme("colors.zinc.900");
+        color: theme("colors.white");
+        text-align: left;
+    }
+
+    .prose-cmalt th,
+    .prose-cmalt td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid theme("colors.zinc.700");
+    }
+
+    .prose-cmalt th {
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .prose-cmalt tr:last-child td {
+        border-bottom: none;
+    }
+
+    .prose-cmalt tbody tr:hover {
+        background-color: var(--selection-highlight);
+        color: var(--black);
+        transition: background-color 0.2s ease;
+    }
+
+    .prose-cmalt caption {
+        caption-side: bottom;
+        font-size: 0.875rem;
+        text-align: left;
+        margin-top: 0.75rem;
+        color: theme("colors.zinc.400");
+    }
+
+    /* Task lists */
+
+    ul li input[type="checkbox"] {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.75rem;
+        vertical-align: middle;
+        border-radius: 0.3rem;
+        border: 2px solid var(--accent);
+        accent-color: var(--primary);
+        box-shadow: 0 0 4px var(--highlight, #148aad33);
+        transition:
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    /* On focus for accessibility */
+    ul li input[type="checkbox"]:focus-visible {
+        outline: none;
+        box-shadow:
+            0 0 0 3px var(--selection-highlight),
+            0 0 8px var(--primary);
+    }
+
+    /* Disabled checkboxes */
+    ul li input[type="checkbox"]:disabled {
+        border-color: var(--muted);
+        accent-color: var(--muted);
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+    /* Code blocks (responsive) */
+    .prose-cmalt pre {
+        background-color: var(--black) !important;
+        color: white !important;
+        font-family: "Fira Mono", "Courier New", Courier, monospace !important;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        padding: 1rem 1.25rem !important;
+        border-radius: 0.5rem !important;
+        overflow-x: auto !important;
+        white-space: pre-wrap !important; /* wrap lines */
+        word-wrap: break-word !important;
+        box-sizing: border-box !important;
+        margin-bottom: 1.5rem !important;
+        box-shadow: 0 0 8px rgb(233 54 129 / 0.2) !important; /* subtle pink glow */
+    }
+
+    /* Override Prism's default white-space */
+    .prose-cmalt pre code {
+        white-space: inherit !important;
+        display: block !important;
+        color: inherit !important;
+    }
+
+    /* Style the scrollbar inside code blocks */
+    .prose-cmalt pre::-webkit-scrollbar {
+        height: 8px !important;
+    }
+
+    .prose-cmalt pre::-webkit-scrollbar-track {
+        background: var(--background-subtle) !important;
+        border-radius: 4px !important;
+    }
+
+    .prose-cmalt pre::-webkit-scrollbar-thumb {
+        background: var(--primary) !important;
+        border-radius: 4px !important;
+    }
+
+    .prose-cmalt pre::-webkit-scrollbar-thumb:hover {
+        background: var(--custom-red) !important;
+    }
+
+    /* Style inline code if you use it */
+    .prose-cmalt code {
+        background-color: var(--black) !important;
+        padding: 0.15rem 0.35rem !important;
+        border-radius: 0.3rem !important;
+        font-family: "Fira Mono", monospace !important;
+        font-size: 0.9rem !important;
+        color: white !important;
+    }
+
+    .social-button {
+        align-items: center;
+        background-color: var(--hero);
+        border-radius: 0.25rem; /* rounded */
+        color: var(--muted);
+        display: flex;
+        font-size: 0.875rem; /* text-sm */
+        gap: 0.25rem;
+        height: 2rem;
+        justify-content: center;
+        padding: 0.25rem 0.5rem; /* px-2 py-1 */
+        transition:
+            color 0.3s,
+            background-color 0.3s;
+        width: 2rem;
+    }
+
+    .social-button:hover {
+        color: white;
+        background-color: var(--primary);
+    }
+
+    .social-button:focus {
+        outline: none; /* focus:outline-none */
+    }
+
+    .social-button:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px var(--primary); /* focus-visible:ring-2 + focus-visible:ring-primary */
+    }
+
+    .cmalt-hero {
+        background-color: rgba(18, 52, 86, 0.8);
+    }
 }
 
-/* Animated background underline */
-.text-link::before {
-    content: "";
-    position: absolute; /* Position relative to .text-link */
-    left: -0.2em;
-    right: -0.2em;
-    bottom: 0; /* Anchored to the bottom of the text */
-    top: 90%; /* Creates a thin underline (adjust for thickness) */
-    background-color: var(
-        --text
-    ); /* Same as text colour to simulate underline */
-    z-index: -1; /* Sits behind the actual text */
-    transition: all 0.4s cubic-bezier(0, 1, 0.3, 1);
-    border-radius: 0.1em;
+/* Responsive heading sizes */
+@layer components {
+    @media (max-width: 480px) {
+        .prose-cmalt pre {
+            font-size: 0.8rem;
+            padding: 0.75rem 1rem;
+        }
+    }
+    @media (min-width: 640px) {
+        .cmalt-title {
+            font-size: 2.25rem;
+        }
+        .prose-cmalt h2 {
+            font-size: 1.875rem;
+        }
+        .prose-cmalt h3 {
+            font-size: 1.5rem;
+        }
+        .prose-cmalt h4 {
+            font-size: 1.25rem;
+        }
+        .prose-cmalt h5 {
+            font-size: 1.125rem;
+        }
+        .prose-cmalt h6 {
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .cmalt-title {
+            font-size: 3rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .prose-cmalt h2 {
+            font-size: 2.25rem;
+        }
+        .prose-cmalt h3 {
+            font-size: 1.875rem;
+        }
+        .prose-cmalt h4 {
+            font-size: 1.5rem;
+        }
+        .prose-cmalt h5 {
+            font-size: 1.25rem;
+        }
+        .prose-cmalt h6 {
+            font-size: 1rem;
+        }
+    }
 }
 
-/* On hover, change text colour */
-.text-link:hover {
-    color: black; /* IMPORTANT! Ensure contrast with background highlight */
-}
+@media print {
+    /* Hide elements not useful in print */
+    #desktop-menu,
+    #mobile-menu,
+    #sidebar,
+    #footer {
+        display: none !important;
+    }
 
-/* Expand the background to fully highlight text on hover */
-.text-link:hover::before {
-    top: 0; /* Expands background to cover full height */
-    transition: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
-}
+    /* Expand main content to full width if layout uses flex or grid */
+    .main,
+    .content,
+    .prose-cmalt {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
 
-/* Focus styles */
-.text-link:focus {
-    outline: none;
-}
+    /* Remove body or html padding/margins if present */
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        color: black !important;
+    }
 
-.text-link:focus-visible {
-    border-radius: 0.25rem /* 4px */;
-    /* Simulates a ring around the element */
-    box-shadow:
-        0 0 0 2px var(--primary),
-        0 0 0 4px var(--background);
+    /* Reset background and text colours to black on white */
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* Remove print-breaking visual effects */
+    [data-aos],
+    .transition,
+    .hover\:scale-105,
+    .shadow-lg,
+    .shadow-md {
+        all: unset !important;
+    }
+
+    /* Prevent breaking inside headings or block elements */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    blockquote,
+    pre,
+    code,
+    table {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Improve page-break behaviour */
+    .page-break {
+        page-break-before: always;
+    }
 }

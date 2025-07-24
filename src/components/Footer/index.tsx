@@ -1,4 +1,4 @@
-import { footerLinks } from "@/constants/footer";
+import { socialLinks } from "@/constants/social";
 import Link from "next/link";
 
 /**
@@ -9,7 +9,7 @@ import Link from "next/link";
  */
 export default function Footer() {
     return (
-        <footer className="bg-black py-8 text-muted" role="contentinfo">
+        <footer id="footer" className="bg-black py-8 text-muted" role="contentinfo">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
                 <p className="text-sm" aria-label="Copyright notice">
                     &copy; 2025 Karl Horning. All rights reserved.
@@ -18,7 +18,7 @@ export default function Footer() {
                     aria-label="Social media links"
                     className="mt-4 flex space-x-6 md:mt-0"
                 >
-                    {footerLinks.map(({ label, href, icon: Icon }) => (
+                    {socialLinks.map(({ label, href, icon: Icon }) => (
                         <Link
                             key={label}
                             href={href}

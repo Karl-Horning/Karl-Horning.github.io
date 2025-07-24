@@ -1,35 +1,16 @@
-import { externalLinks, internalRoutes } from "@/constants/links";
+import { navLinks } from "@/constants/links";
 import Link from "next/link";
-
-const { BlogLink } = externalLinks;
-const { AboutRoute, ContactRoute } = internalRoutes;
-
-type NavLink = {
-    label: string;
-    href: string;
-};
-
-interface DesktopMenuProps {
-    links?: NavLink[];
-}
 
 /**
  * Desktop navigation menu component for larger viewports.
  *
  * @component
- * @param {DesktopMenuProps} props - Optional array of nav links (label and href).
  * @returns The rendered desktop menu.
  */
-export default function DesktopMenu({
-    links = [
-        { label: "About", href: AboutRoute },
-        { label: "Blog", href: BlogLink },
-        { label: "Contact", href: ContactRoute },
-    ],
-}: DesktopMenuProps) {
+export default function DesktopMenu() {
     return (
-        <div className="hidden space-x-6 text-text md:flex">
-            {links.map(({ label, href }) => (
+        <div id="desktop-menu" className="hidden space-x-6 text-text md:flex">
+            {navLinks.map(({ label, href }) => (
                 <Link
                     key={label}
                     href={href}

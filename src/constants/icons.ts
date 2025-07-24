@@ -1,6 +1,9 @@
 import { FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
+    FaCalendar,
+    FaCircleInfo,
+    FaClock,
     FaCode,
     FaCodepen,
     FaDatabase,
@@ -36,6 +39,18 @@ export const icons = {
      * @link [Tabler Icons](https://react-icons.github.io/react-icons/icons/tb/)
      */
     ApiIcon: TbApi,
+
+    /**
+     * @description FaCalendar
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    CalendarIcon: FaCalendar,
+
+    /**
+     * @description FaClock
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    ClockIcon: FaClock,
 
     /**
      * @description FaCode
@@ -78,6 +93,12 @@ export const icons = {
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
     GraphQlIcon: SiGraphql,
+
+    /**
+     * @description FaCircleInfo
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    InfoIcon: FaCircleInfo,
 
     /**
      * @description FaJs
