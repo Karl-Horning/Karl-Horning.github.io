@@ -157,6 +157,8 @@ export const cmaltEvidence = {
     repos: {
         blackboardPostmanCollection:
             "https://github.com/Karl-Horning/blackboard-learn-apis-postman-collection",
+        graphQlRateLimitDemo:
+            "https://github.com/Karl-Horning/graphql-rate-limit-demo",
         oxfordLearnersDictionariesApi:
             "https://github.com/Karl-Horning/oxford-learners-dictionaries-api",
     },
@@ -183,7 +185,8 @@ export const cmaltEvidence = {
         sessionRatingsScreenshot: "/cmalt/screenshots/session-ratings.webp",
         sessionReportRatingsScreenshot:
             "/cmalt/screenshots/session-report-ratings.webp",
-        traineeListScreenshot: "/cmalt/screenshots/trainee-list-screenshot.webp",
+        traineeListScreenshot:
+            "/cmalt/screenshots/trainee-list-screenshot.webp",
     },
 
     /** Transcripts of training or recorded learning content */
@@ -194,7 +197,9 @@ export const cmaltEvidence = {
     /** Videos used in teaching or training sessions */
     videos: {
         microsoftTeamsGuide: "/cmalt/videos/microsoft-teams-guide-excerpt.mp4",
-        microsoftTeamsGuideSubtitles: "/cmalt/videos/microsoft-teams-guide-excerpt.vtt",
-        microsoftTeamsGuidePreview: "/cmalt/videos/microsoft-teams-guide-excerpt.png",
+        microsoftTeamsGuideSubtitles:
+            "/cmalt/videos/microsoft-teams-guide-excerpt.vtt",
+        microsoftTeamsGuidePreview:
+            "/cmalt/videos/microsoft-teams-guide-excerpt.png",
     },
 };

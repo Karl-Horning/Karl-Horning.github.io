@@ -5,7 +5,8 @@ import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
 const { GitHubLink, LinkedInLink, PortfolioLink } = externalLinks;
-const { certificates, screenshots } = cmaltEvidence;
+const { certificates, repos, screenshots } = cmaltEvidence;
+const { graphQlRateLimitDemo } = repos;
 const {
     appleTeacherCertificate,
     electronCertificate,
@@ -99,7 +100,7 @@ export default function page() {
                     <li>
                         Implemented API rate limiting using{" "}
                         <a
-                            href="https://www.npmjs.com/package/graphql-rate-limit-directive"
+                            href={graphQlRateLimitDemo}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -428,6 +429,22 @@ export default function page() {
                         <em>
                             Professional profile documenting career history,
                             skills, and development credentials.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={graphQlRateLimitDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GraphQL Rate Limit Demo (Repository)
+                        </a>{" "}
+                        <em>
+                            Example of testing a rate-limiting directive in
+                            GraphQL to assess impact and performance before
+                            production rollout, demonstrating critical
+                            evaluation and risk management in software
+                            development.
                         </em>
                     </li>
                     <li>
