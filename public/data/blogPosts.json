@@ -1,11 +1,49 @@
 [
     {
+        "title": "Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)",
+        "href": "https://www.karlhorning.dev/dev-blog/posts/setting-up-prettier-with-tailwind-css-in-a-react-project/",
+        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/prettier_tailwind.webp",
+        "imgAlt": "The Next.js, React, Vite, Tailwind, and Prettier logos",
+        "date": "04 August 2025",
+        "snippet": "A quick walkthrough for setting up Prettier with Tailwind CSS in a new React project using either Next.js or Vite. Written mainly as a reminder to myself — but hopefully useful for others too.",
+        "tags": [
+            {
+                "title": "Prettier",
+                "href": "https://www.karlhorning.dev/dev-blog/tags/prettier/"
+            },
+            {
+                "title": "Tailwind CSS",
+                "href": "https://www.karlhorning.dev/dev-blog/tags/tailwind-css/"
+            },
+            {
+                "title": "React",
+                "href": "https://www.karlhorning.dev/dev-blog/tags/react/"
+            },
+            {
+                "title": "Next.js",
+                "href": "https://www.karlhorning.dev/dev-blog/tags/nextjs/"
+            },
+            {
+                "title": "Vite",
+                "href": "https://www.karlhorning.dev/dev-blog/tags/vite/"
+            },
+            {
+                "title": "JavaScript",
+                "href": "https://www.karlhorning.dev/dev-blog/tags/javascript/"
+            },
+            {
+                "title": "Frontend",
+                "href": "https://www.karlhorning.dev/dev-blog/tags/frontend/"
+            }
+        ]
+    },
+    {
         "title": "Using Blackboard's Swagger File to Create a Postman Collection and Make an API Call",
         "href": "https://www.karlhorning.dev/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
         "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/postman_blackboard.webp",
         "imgAlt": "The Postman and Blackboard Learn logos",
         "date": "11 July 2025",
-        "snippet": " This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
+        "snippet": "This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
         "tags": [
             {
                 "title": "Blackboard",
@@ -39,7 +77,7 @@
         "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/pexels-mali-63238.optimised.webp",
         "imgAlt": "Graffiti of a monkey wearing sunglasses (placeholder image)",
         "date": "23 June 2025",
-        "snippet": " A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
+        "snippet": "A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
         "tags": [
             {
                 "title": "meta",
