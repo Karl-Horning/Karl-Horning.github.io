@@ -2,6 +2,22 @@
 
 ---
 
+<p>
+  <img src="https://img.shields.io/github/deployments/Karl-Horning/Karl-Horning.github.io/github-pages?label=github-pages&logo=github" alt="Deploy" style="vertical-align:middle; margin-right:8px;" />
+  <!-- Overall (Mobile) -->
+  <img src="https://img.shields.io/badge/Lighthouse_Overall_%28Mobile%29-98-brightgreen" alt="Lighthouse Overall (Mobile) 98" style="vertical-align:middle; margin-right:8px;" />
+  <!-- Category badges with contrasting colours -->
+  <img src="https://img.shields.io/badge/Lighthouse_Performance-94-orange" alt="Lighthouse Performance 94" style="vertical-align:middle; margin-right:8px;" />
+  <img src="https://img.shields.io/badge/Lighthouse_Accessibility-96-brightgreen" alt="Lighthouse Accessibility 96" style="vertical-align:middle; margin-right:8px;" />
+  <img src="https://img.shields.io/badge/Lighthouse_Best_Practices-100-blue" alt="Lighthouse Best Practices 100" style="vertical-align:middle; margin-right:8px;" />
+  <img src="https://img.shields.io/badge/Lighthouse_SEO-100-blueviolet" alt="Lighthouse SEO 100" style="vertical-align:middle; margin-right:8px;" />
+  <!-- Extras -->
+  <img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20on-macOS-blue?logo=apple" alt="Made with macOS" style="vertical-align:middle; margin-right:8px;" />
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License" style="vertical-align:middle; margin-right:8px;" />
+</p>
+
+---
+
 ## 📖 Table of Contents
 
 - [Karl Horning's Portfolio Site](#karl-hornings-portfolio-site)
