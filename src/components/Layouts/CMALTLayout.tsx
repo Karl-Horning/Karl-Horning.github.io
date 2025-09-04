@@ -3,6 +3,7 @@
 import { ReactNode, useState, useEffect } from "react";
 import CMALTSidebar from "@/components/CMALT/CMALTSidebar";
 import CMALTHeader from "../CMALT/CMALTHeader";
+import CMALTPrevNext from "../CMALT/CMALTPrevNext";
 
 interface CMALTLayoutProps {
     children: ReactNode;
@@ -68,7 +69,10 @@ export default function CMALTLayout({
             />
 
             <div className="mx-auto grid max-w-4xl gap-12 px-4 py-16 text-[var(--text)] lg:grid-cols-3">
-                <main className="prose-cmalt lg:col-span-2">{children}</main>
+                <main className="prose-cmalt lg:col-span-2">
+                    {children}
+                    <CMALTPrevNext />
+                </main>
                 <CMALTSidebar />
             </div>
         </>
