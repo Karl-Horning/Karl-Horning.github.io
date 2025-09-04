@@ -1,22 +1,40 @@
 # Karl Horning's Portfolio Site
 
+---
+
 ## 📖 Table of Contents
 
 - [Karl Horning's Portfolio Site](#karl-hornings-portfolio-site)
   - [📖 Table of Contents](#-table-of-contents)
   - [🤓 Overview](#-overview)
+  - [📸 Screenshot](#-screenshot)
   - [🛠️ Tech Stack](#️-tech-stack)
   - [📦 Installation](#-installation)
   - [🚀 Scripts](#-scripts)
   - [📁 Project Structure](#-project-structure)
+  - [✍️ Code Style \& Linting](#️-code-style--linting)
+  - [🔍 Tests](#-tests)
   - [🌐 Live Site](#-live-site)
-  - [📌 To Do / Future Enhancements](#-to-do--future-enhancements)
+  - [📌 Roadmap](#-roadmap)
+  - [🧪 Known Issues](#-known-issues)
+  - [📄 Licence](#-licence)
+  - [👤 Author](#-author)
 
 ---
 
 ## 🤓 Overview
 
-This is the source code for my personal portfolio site, built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/). It showcases my work, values, skills, and certifications, with a focus on performance, accessibility, and clean design.
+This is the source code for my personal portfolio site, built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/).  
+
+It showcases my work, values, skills, and certifications, with a focus on performance, accessibility, and clean design.  
+
+The site achieves **90+ scores across Performance, Accessibility, Best Practices, and SEO in Lighthouse audits**.
+
+---
+
+## 📸 Screenshot
+
+![Homepage screenshot](public/img/demo-home.webp)
 
 ---
 
@@ -52,6 +70,8 @@ npm install
 | `npm start`     | Start production server |
 | `npm run lint`  | Run ESLint checks       |
 
+---
+
 ## 📁 Project Structure
 
 ```bash
@@ -70,22 +90,56 @@ src/
 
 ---
 
-## 🌐 Live Site
+## ✍️ Code Style & Linting
 
-Visit the live site at: [karlhorning.dev](https://www.karlhorning.dev)
+This project follows:
+
+- ESLint with `eslint-config-next`
+- Prettier with the Tailwind plugin
+- Conventional Commits (including custom scopes such as `a11y` and `ux`)
 
 ---
 
-## 📌 To Do / Future Enhancements
+## 🔍 Tests
+
+Testing will be added using **Jest** and **React Testing Library**.
+
+```bash
+npm run test
+```
+
+---
+
+## 🌐 Live Site
+
+Visit the live site: [karlhorning.dev](https://www.karlhorning.dev)
+
+---
+
+## 📌 Roadmap
 
 - [x] Add print styles
 - [x] Remove h1 background image when styles are disabled
 - [x] Correct `HomeRout`
-- [ ] Add correct routes to CMALT page metadata
+- [x] Add correct routes to CMALT page metadata
+- [x] Improve Lighthouse scores
 - [ ] Add tests
-- [ ] Improve Lighthouse scores
 - [ ] Add analytics
 
 ---
+
+## 🧪 Known Issues
+
+None currently.
+
+---
+
+## 📄 Licence
+
+MIT © 2025 Karl Horning
+
+---
+
+## 👤 Author
 
 Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)
