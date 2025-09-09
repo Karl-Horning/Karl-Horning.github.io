@@ -5,8 +5,8 @@ import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
 const { GitHubLink, LinkedInLink, PortfolioLink } = externalLinks;
-const { certificates, repos, screenshots } = cmaltEvidence;
-const { graphQlRateLimitDemo } = repos;
+const { certificates, links, repos, screenshots } = cmaltEvidence;
+const { blackboardPostmanCollection, graphQlRateLimitDemo } = repos;
 const {
     appleTeacherCertificate,
     electronCertificate,
@@ -15,6 +15,7 @@ const {
     webDeveloperCertificate,
 } = certificates;
 const { jiraFundamentalsScreenshot } = screenshots;
+const { blackboardSwaggerPostmanCollectionLink, deppProjectLink } = links;
 
 export const metadata = createMetadata({
     title: "5a: Specialist Area 1 | CMALT",
@@ -23,38 +24,7 @@ export const metadata = createMetadata({
 
 export default function page() {
     return (
-        <CMALTLayout title="5a: Specialist Area 1" lastUpdated="2025-07-24">
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    In describing your specialist area(s) you should refer to
-                    the core values listed at the top of these guidelines.
-                    Because these are specialist areas you should be clear what
-                    makes your work distinct from common practice; many people
-                    teach on online courses, but designing and delivering fully
-                    online courses requires specific skills and would be
-                    considered specialist. Similarly, many teachers provide
-                    blended learning, but developing and sharing guidelines for
-                    such practice or working with a distinctive blend of
-                    contexts might distinguish your work as specialist. It may
-                    be that your specialist area is common amongst the group
-                    that you work in as you all work in a similar area; that is
-                    perfectly acceptable.
-                </p>
-
-                <p>
-                    Evidence for your specialist activity is likely to be very
-                    specific but could include: reports, papers or presentations
-                    you have written; this could be backed up by a job
-                    description plus written statements supporting your
-                    specialist knowledge from colleagues, clients or managers;
-                    active membership of professional or other bodies;
-                    certificates of completion of specialist training programmes
-                    or courses.
-                </p>
-            </section>
-
+        <CMALTLayout title="5a: Specialist Area 1" lastUpdated="2025-09-09">
             <section id="description">
                 <h2>Description</h2>
                 <p>
@@ -138,6 +108,62 @@ export default function page() {
                     Next.js on the front end, Node.js and PostgreSQL on the back
                     end, and collaborating with Agile teams using tools such as
                     Jira, Confluence, and Git.
+                </p>
+
+                <p>
+                    More recently, I have applied this specialist knowledge
+                    within my role as a Learning Technologist at Imperial
+                    College London, particularly through the{" "}
+                    <a
+                        href={deppProjectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Digital Education Platform Project (DEPP)
+                    </a>
+                    , a major institutional review of LMS platforms (Blackboard
+                    Ultra, Brightspace, Canvas). My contribution focused on
+                    technical evaluation: assessing APIs, integration models,
+                    and accessibility compliance (for example, WCAG 2.1), and
+                    aligning these with the pedagogical and administrative
+                    requirements of different faculties.
+                </p>
+
+                <p>
+                    To support this process, I created a reusable{" "}
+                    <a
+                        href={blackboardPostmanCollection}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Postman collection for testing Blackboard Ultra&apos;s
+                        APIs
+                    </a>{" "}
+                    and developed structured manual test scripts to explore
+                    functionality, identify limitations, and prepare for future
+                    automation. I ensured that the testing process remained
+                    grounded in authentic workflows and informed both technical
+                    decision-making and staff training by gathering user stories
+                    from ICT analysts and administrators.
+                </p>
+
+                <p>
+                    This project became an important part of my broader
+                    knowledge-sharing activities with colleagues and the wider
+                    community. In July 2025, I published a blog post titled{" "}
+                    <a
+                        href={blackboardSwaggerPostmanCollectionLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Using Blackboard&apos;s Swagger File to Create a Postman
+                        Collection and Make an API Call
+                    </a>
+                    , drawing directly on DEPP testing. The post demonstrates
+                    how I adapted techniques from my previous developer role to
+                    support current institutional projects, reinforcing the link
+                    between my development expertise and my impact as a Learning
+                    Technologist.
                 </p>
 
                 <p>
@@ -445,6 +471,24 @@ export default function page() {
                             production rollout, demonstrating critical
                             evaluation and risk management in software
                             development.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={blackboardPostmanCollection}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Postman collection developed from Blackboard
+                            Ultra&apos;s Swagger spec (Repository)
+                        </a>{" "}
+                        <em>
+                            Evidence of how I adapted developer tools for
+                            educational evaluation. This resource allowed staff
+                            to test LMS features against authentic workflows,
+                            bridging technical API analysis with the pedagogical
+                            and administrative needs identified during the DEPP
+                            project.
                         </em>
                     </li>
                     <li>
