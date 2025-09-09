@@ -11,7 +11,7 @@ export const metadata = createMetadata({
 
 export default function ContextualStatementPage() {
     return (
-        <CMALTLayout title="Contextual Statement" lastUpdated="2025-07-24">
+        <CMALTLayout title="Contextual Statement" lastUpdated="2025-09-09">
             <section id="description">
                 <h2>My Journey in Learning Technology</h2>
 
@@ -93,13 +93,13 @@ export default function ContextualStatementPage() {
                     College London&apos;s ICT division, a role for which I was
                     recruited due to my combination of technical expertise and
                     teaching experience. My work bridges pedagogy and
-                    technology, supporting Imperial&apos;s strategic aim to deliver
-                    innovative and inclusive digital education. I collaborate
-                    with faculty-based learning technologists across the Faculty
-                    of Natural Sciences, Engineering, Business School, Medicine,
-                    and the Interdisciplinary EdTech Lab, ensuring that our
-                    solutions are coherent, scalable, and responsive to the
-                    needs of staff and students.
+                    technology, supporting Imperial&apos;s strategic aim to
+                    deliver innovative and inclusive digital education. I
+                    collaborate with faculty-based learning technologists across
+                    the Faculty of Natural Sciences, Engineering, Business
+                    School, Medicine, and the Interdisciplinary EdTech Lab,
+                    ensuring that our solutions are coherent, scalable, and
+                    responsive to the needs of staff and students.
                 </p>
 
                 <p>
