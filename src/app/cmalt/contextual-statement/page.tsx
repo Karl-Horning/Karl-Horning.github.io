@@ -11,34 +11,7 @@ export const metadata = createMetadata({
 
 export default function ContextualStatementPage() {
     return (
-        <CMALTLayout title="Contextual Statement" lastUpdated="2025-07-24">
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Your portfolio should begin with a contextual statement —
-                    the kind of thing you might write in a cover letter for a
-                    job application. It should provide a concise biography
-                    outlining your career history with Learning Technology and
-                    your current role(s). Highlight briefly the operational
-                    context in which you work or have worked, and reflect on why
-                    you are submitting your portfolio for CMALT and how this
-                    relates to your future career aspirations.
-                </p>
-
-                <p>
-                    If you have previously been awarded Associate CMALT, you
-                    should indicate this and also indicate briefly how and to
-                    what extent your existing portfolio has been revised and
-                    amplified.
-                </p>
-
-                <p>
-                    This section is not assessed but will be very helpful for
-                    the assessors as they approach the rest of your portfolio.
-                </p>
-            </section>
-
+        <CMALTLayout title="Contextual Statement" lastUpdated="2025-09-09">
             <section id="description">
                 <h2>My Journey in Learning Technology</h2>
 
@@ -54,6 +27,19 @@ export default function ContextualStatementPage() {
                     </em>{" "}
                     (PTLLS) to design and deliver training in academic English
                     and study skills in both further and higher education.
+                </p>
+
+                <p>
+                    I transitioned from teaching to learning technology through
+                    a growing interest in programming, which began when I
+                    automated tasks in VBA as a university administrator. While
+                    teaching in Portugal, I deepened this interest through
+                    self-study on platforms such as Khan Academy and
+                    freeCodeCamp, applying what I learned to improve workflows
+                    and enhance digital resources. As I took on new
+                    responsibilities, I expanded my work with APIs and
+                    automation, which led to a full-time development role and
+                    confirmed my path into educational technology.
                 </p>
 
                 <p>
@@ -103,11 +89,39 @@ export default function ContextualStatementPage() {
                 </p>
 
                 <p>
-                    I currently work as a Learning Technologist at Imperial
-                    College London, where I support the migration to a new LMS.
-                    This includes writing user stories, conducting manual
-                    testing, and gathering user feedback to enhance digital
-                    learning for staff and students.
+                    I currently work as a Learning Technologist within Imperial
+                    College London&apos;s ICT division, a role for which I was
+                    recruited due to my combination of technical expertise and
+                    teaching experience. My work bridges pedagogy and
+                    technology, supporting Imperial&apos;s strategic aim to
+                    deliver innovative and inclusive digital education. I
+                    collaborate with faculty-based learning technologists across
+                    the Faculty of Natural Sciences, Engineering, Business
+                    School, Medicine, and the Interdisciplinary EdTech Lab,
+                    ensuring that our solutions are coherent, scalable, and
+                    responsive to the needs of staff and students.
+                </p>
+
+                <p>
+                    In practice, this involves co-designing learning experiences
+                    with academics, administrators, and developers, applying
+                    technical skills to LMS migration projects, writing user
+                    stories, conducting manual testing, and gathering user
+                    feedback to enhance digital learning. I also provide
+                    guidance on effective technology-enhanced learning
+                    practices, translate project requirements into technical
+                    specifications, and recommend integrated solutions, ensuring
+                    accessibility and inclusivity at every stage.
+                </p>
+
+                <p>
+                    This dual perspective — grounded in classroom teaching and
+                    strengthened by technical development — enables me to act as
+                    both a pedagogical partner and a technical specialist. I
+                    contribute to communities of practice, share emerging
+                    knowledge with colleagues, and help maintain consistent
+                    standards across Imperial&apos;s diverse digital education
+                    landscape.
                 </p>
 
                 <p>
@@ -115,9 +129,9 @@ export default function ContextualStatementPage() {
                     formally recognise my contributions to learning technology.
                     It marks a key step in my professional development,
                     reflecting my commitment to innovation and inclusion in
-                    education. While I have not previously held Associate CMALT,
-                    this portfolio demonstrates the depth and breadth of my
-                    practice and its impact across the sector.
+                    education. This portfolio demonstrates the depth and breadth
+                    of my practice and affirms the influence of my work across
+                    the sector.
                 </p>
             </section>
         </CMALTLayout>
