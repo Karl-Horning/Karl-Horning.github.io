@@ -12,33 +12,6 @@ export const metadata = createMetadata({
 export default function ContextualStatementPage() {
     return (
         <CMALTLayout title="Contextual Statement" lastUpdated="2025-07-24">
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Your portfolio should begin with a contextual statement —
-                    the kind of thing you might write in a cover letter for a
-                    job application. It should provide a concise biography
-                    outlining your career history with Learning Technology and
-                    your current role(s). Highlight briefly the operational
-                    context in which you work or have worked, and reflect on why
-                    you are submitting your portfolio for CMALT and how this
-                    relates to your future career aspirations.
-                </p>
-
-                <p>
-                    If you have previously been awarded Associate CMALT, you
-                    should indicate this and also indicate briefly how and to
-                    what extent your existing portfolio has been revised and
-                    amplified.
-                </p>
-
-                <p>
-                    This section is not assessed but will be very helpful for
-                    the assessors as they approach the rest of your portfolio.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>My Journey in Learning Technology</h2>
 
