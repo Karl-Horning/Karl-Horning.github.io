@@ -89,11 +89,39 @@ export default function ContextualStatementPage() {
                 </p>
 
                 <p>
-                    I currently work as a Learning Technologist at Imperial
-                    College London, where I support the migration to a new LMS.
-                    This includes writing user stories, conducting manual
-                    testing, and gathering user feedback to enhance digital
-                    learning for staff and students.
+                    I currently work as a Learning Technologist within Imperial
+                    College London's ICT division, a role for which I was
+                    recruited due to my combination of technical expertise and
+                    teaching experience. My work bridges pedagogy and
+                    technology, supporting Imperial's strategic aim to deliver
+                    innovative and inclusive digital education. I collaborate
+                    with faculty-based learning technologists across the Faculty
+                    of Natural Sciences, Engineering, Business School, Medicine,
+                    and the Interdisciplinary EdTech Lab, ensuring that our
+                    solutions are coherent, scalable, and responsive to the
+                    needs of staff and students.
+                </p>
+
+                <p>
+                    In practice, this involves co-designing learning experiences
+                    with academics, administrators, and developers, applying
+                    technical skills to LMS migration projects, writing user
+                    stories, conducting manual testing, and gathering user
+                    feedback to enhance digital learning. I also provide
+                    guidance on effective technology-enhanced learning
+                    practices, translate project requirements into technical
+                    specifications, and recommend integrated solutions, ensuring
+                    accessibility and inclusivity at every stage.
+                </p>
+
+                <p>
+                    This dual perspective — grounded in classroom teaching and
+                    strengthened by technical development — enables me to act as
+                    both a pedagogical partner and a technical specialist. I
+                    contribute to communities of practice, share emerging
+                    knowledge with colleagues, and help maintain consistent
+                    standards across Imperial's diverse digital education
+                    landscape.
                 </p>
 
                 <p>
