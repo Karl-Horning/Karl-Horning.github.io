@@ -11,21 +11,7 @@ export const metadata = createMetadata({
 
 export default function FuturePlansPage() {
     return (
-        <CMALTLayout title="Future Plans" lastUpdated="2025-07-24">
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    This section is not assessed, but it is still a required
-                    section, of between 200 - 500 words. The purpose of this is
-                    not only to give the assessor a sense of your future aims,
-                    but also help you plan for your professional development. It
-                    will be useful when preparing to keep your CMALT
-                    accreditation current by undertaking a review of your
-                    practice every 3 years.
-                </p>
-            </section>
-
+        <CMALTLayout title="Future Plans" lastUpdated="2025-09-09">
             <section>
                 <h2>Future Directions in Learning Technology</h2>
 
