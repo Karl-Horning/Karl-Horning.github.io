@@ -115,9 +115,9 @@ export default function ContextualStatementPage() {
                     formally recognise my contributions to learning technology.
                     It marks a key step in my professional development,
                     reflecting my commitment to innovation and inclusion in
-                    education. While I have not previously held Associate CMALT,
-                    this portfolio demonstrates the depth and breadth of my
-                    practice and its impact across the sector.
+                    education. This portfolio demonstrates the depth and breadth
+                    of my practice and affirms the influence of my work across
+                    the sector.
                 </p>
             </section>
         </CMALTLayout>
