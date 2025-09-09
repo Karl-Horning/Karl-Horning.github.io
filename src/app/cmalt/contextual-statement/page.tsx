@@ -57,6 +57,19 @@ export default function ContextualStatementPage() {
                 </p>
 
                 <p>
+                    I transitioned from teaching to learning technology through
+                    a growing interest in programming, which began when I
+                    automated tasks in VBA as a university administrator. While
+                    teaching in Portugal, I deepened this interest through
+                    self-study on platforms such as Khan Academy and
+                    freeCodeCamp, applying what I learned to improve workflows
+                    and enhance digital resources. As I took on new
+                    responsibilities, I expanded my work with APIs and
+                    automation, which led to a full-time development role and
+                    confirmed my path into educational technology.
+                </p>
+
+                <p>
                     Alongside this, I&apos;ve led the development of scalable
                     backend systems and optimised GraphQL APIs for a custom
                     Learning Management System (LMS) supporting over 700,000
