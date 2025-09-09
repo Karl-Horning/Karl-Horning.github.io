@@ -23,38 +23,7 @@ export const metadata = createMetadata({
 
 export default function page() {
     return (
-        <CMALTLayout title="5a: Specialist Area 1" lastUpdated="2025-07-24">
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    In describing your specialist area(s) you should refer to
-                    the core values listed at the top of these guidelines.
-                    Because these are specialist areas you should be clear what
-                    makes your work distinct from common practice; many people
-                    teach on online courses, but designing and delivering fully
-                    online courses requires specific skills and would be
-                    considered specialist. Similarly, many teachers provide
-                    blended learning, but developing and sharing guidelines for
-                    such practice or working with a distinctive blend of
-                    contexts might distinguish your work as specialist. It may
-                    be that your specialist area is common amongst the group
-                    that you work in as you all work in a similar area; that is
-                    perfectly acceptable.
-                </p>
-
-                <p>
-                    Evidence for your specialist activity is likely to be very
-                    specific but could include: reports, papers or presentations
-                    you have written; this could be backed up by a job
-                    description plus written statements supporting your
-                    specialist knowledge from colleagues, clients or managers;
-                    active membership of professional or other bodies;
-                    certificates of completion of specialist training programmes
-                    or courses.
-                </p>
-            </section>
-
+        <CMALTLayout title="5a: Specialist Area 1" lastUpdated="2025-09-09">
             <section id="description">
                 <h2>Description</h2>
                 <p>
