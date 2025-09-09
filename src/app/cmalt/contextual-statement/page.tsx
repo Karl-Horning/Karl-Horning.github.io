@@ -90,10 +90,10 @@ export default function ContextualStatementPage() {
 
                 <p>
                     I currently work as a Learning Technologist within Imperial
-                    College London's ICT division, a role for which I was
+                    College London&apos;s ICT division, a role for which I was
                     recruited due to my combination of technical expertise and
                     teaching experience. My work bridges pedagogy and
-                    technology, supporting Imperial's strategic aim to deliver
+                    technology, supporting Imperial&apos;s strategic aim to deliver
                     innovative and inclusive digital education. I collaborate
                     with faculty-based learning technologists across the Faculty
                     of Natural Sciences, Engineering, Business School, Medicine,
@@ -120,7 +120,7 @@ export default function ContextualStatementPage() {
                     both a pedagogical partner and a technical specialist. I
                     contribute to communities of practice, share emerging
                     knowledge with colleagues, and help maintain consistent
-                    standards across Imperial's diverse digital education
+                    standards across Imperial&apos;s diverse digital education
                     landscape.
                 </p>
 
