@@ -7,7 +7,7 @@ const { ContactRoute } = internalRoutes;
  * A presentational component that renders the introductory "About Me" section.
  *
  * This component includes a heading, multiple paragraphs describing
- * the author’s background, interests, and current projects,
+ * the author's background, interests, and current projects,
  * and a call-to-action button linking to the contact page.
  *
  * It uses semantic HTML and ARIA for accessibility and applies
