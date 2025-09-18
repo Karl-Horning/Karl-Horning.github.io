@@ -19,20 +19,8 @@ export default function Page() {
     return (
         <CMALTLayout
             title="Section 1: Operational Issues"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-09"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Candidates should demonstrate both their understanding and
-                    use of Learning Technology. &quot;Use&quot; might include
-                    the use of technology to enhance learning and teaching, or
-                    the development, adoption or deployment of technology to
-                    support teaching, training or education.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 

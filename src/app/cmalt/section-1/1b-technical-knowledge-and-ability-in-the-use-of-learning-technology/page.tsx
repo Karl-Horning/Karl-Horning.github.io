@@ -23,30 +23,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="1b: Technical Knowledge and Ability in the Use of Learning Technology"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-09"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    You should show that you have used a range of learning
-                    technologies. These might include web pages and online
-                    resources, Virtual Learning Environments, electronic
-                    assessment, blogs, wikis, mobile technology, AR/VR,
-                    programming languages, or other relevant technologies. It is
-                    important to make it clear how the technology you discuss is
-                    being used for learning and/or teaching.
-                </p>
-
-                <p>
-                    Evidence might include copies of certificates (originals not
-                    needed) from relevant training courses, screenshots of your
-                    work, a note from academic or support staff who have worked
-                    with you or, if appropriate, confirmation that the work is
-                    your own from your line manager.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 

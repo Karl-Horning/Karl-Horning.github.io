@@ -19,21 +19,8 @@ export default function Page() {
     return (
         <CMALTLayout
             title="Section 3: The Wider Context: Understanding and Engaging with Legislation, Policies and Standards"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-09"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Candidates should demonstrate their awareness of and
-                    engagement with wider issues that inform their practice.
-                    Candidates must cover at least one legislative area (a) and
-                    either a second legislative area or a policy area (b) (i.e.,
-                    either two legislative areas, or one legislative and one
-                    policy area).
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 

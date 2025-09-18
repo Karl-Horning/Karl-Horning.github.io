@@ -24,63 +24,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="3a: Understanding and Engaging With Legislation"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-09"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Statements here should show how relevant legislation, has
-                    influenced your work. You are not expected to have expert
-                    knowledge of all of these areas, but are expected to be
-                    aware of how they relate to and impact upon your current
-                    practice.
-                </p>
-
-                <p>
-                    In the UK you would be expected to demonstrate how you work
-                    within the context of a relevant piece of legislation such
-                    as (but not limited to):
-                </p>
-
-                <ul>
-                    <li>
-                        Equality, including accessibility, special educational
-                        needs, etc.
-                    </li>
-                    <li>Intellectual property (IPR)</li>
-                    <li>
-                        Freedom of Information (if you work for a public body)
-                    </li>
-                    <li>General Data Protection Regulation (GDPR)</li>
-                    <li>Child protection</li>
-                    <li>Anti-discrimination law</li>
-                    <li>Points Based Immigration System (PBIS)</li>
-                </ul>
-
-                <p>
-                    If you are based outside of the UK, there may be different
-                    requirements, and you should indicate this in your
-                    portfolio.
-                </p>
-
-                <p>
-                    You should consider how your example impacts on teaching and
-                    learning in your context, and on the nature and evolution of
-                    your practice. You may find it helpful to refer to the
-                    guidance on reflective writing, above.
-                </p>
-
-                <p>
-                    Evidence might include minutes of meetings with legal
-                    advisers, documentation showing how legal issues have
-                    influenced work (such as reports or data protection forms),
-                    relevant training undertaken or qualifications gained,
-                    evidence of work you have produced/authored, or of your
-                    contribution to relevant planning work, and so on.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 

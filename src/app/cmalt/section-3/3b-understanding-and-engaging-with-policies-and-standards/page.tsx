@@ -27,41 +27,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="3b: Understanding and Engaging With Policies and Standards"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-09"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    In this second section you can either explore a second area
-                    of legislation (see above) or discuss how you engage with
-                    one or more policy issues in your context. These might
-                    include, for example:
-                </p>
-
-                <ul>
-                    <li>
-                        Relevant policies and strategies (national or
-                        institutional)
-                    </li>
-                    <li>Technical standards</li>
-                    <li>
-                        Ethical frameworks or policies for the use of technology
-                        in education
-                    </li>
-                    <li>Professional codes of practice</li>
-                </ul>
-
-                <p>
-                    Evidence might include evidence of involvement in writing or
-                    forming policies, or evidence of engagement with policies,
-                    such as justifications for modifications to a course to
-                    reflect new policies, a record of how technical standards
-                    have been taken into account during system development, and
-                    so on.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
