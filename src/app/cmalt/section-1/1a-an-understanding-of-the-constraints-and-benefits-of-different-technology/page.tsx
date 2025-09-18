@@ -142,13 +142,28 @@ export default function Page() {
                     explore functionality limitations and prepared for future
                     automation testing.
                 </p>
+
+                <p>
+                    Through API testing and hands-on exploration, I found that
+                    achieving scalability and interoperability often involves
+                    compromises, such as reduced customisation or the need for
+                    greater investment in staff training and change management.
+                </p>
+
+                <p>
+                    My approach to technology evaluation always considers the
+                    wider ecosystem and the technology&apos;s fitness for
+                    purpose, particularly how it will scale within complex
+                    educational settings and remain maintainable over time.
+                </p>
             </section>
 
             <section id="reflection">
                 <h2>Reflection</h2>
 
                 <p>
-                    Choosing between technologies is rarely straightforward, as
+                    My experience comparing these platforms highlighted that
+                    choosing between technologies is rarely straightforward, as
                     each comes with trade-offs. For example, Blackboard Ultra
                     offers deep API access and mature accessibility features,
                     but its user interface feels more traditional compared to
@@ -180,40 +195,50 @@ export default function Page() {
                 </ul>
 
                 <p>
-                    Through API testing and hands-on exploration, I found that
-                    achieving scalability and interoperability often involves
-                    compromises, such as reduced customisation or the need for
-                    greater investment in staff training and change management.
-                </p>
-
-                <p>
-                    My approach to technology evaluation always considers the
-                    wider ecosystem and the technology&apos;s fitness for
-                    purpose, particularly how it will scale within complex
-                    educational settings and remain maintainable over time.
-                </p>
-
-                <p>
                     In my technical work, I&apos;ve found that automation with
                     tools like Electron or Python/Pandas can offer enormous time
                     savings, but also come with trade-offs in terms of long-term
-                    maintainability and user onboarding. When developing an
-                    Electron-based report automation tool, I weighed the
-                    benefits of direct local file access against the constraint
-                    of platform specificity. To address this, I configured the
-                    Electron app to compile for both macOS and Windows using
-                    platform-specific build tools, ensuring full cross-platform
-                    compatibility with minimal disruption to existing workflows.
-                    This cross-platform support was a key factor in choosing
-                    Electron over a web-based solution.
+                    maintainability and user onboarding. This experience gave me
+                    confidence in evaluating trade-offs systematically, and I
+                    now approach new technology choices with a clearer sense of
+                    how to balance staff needs with long-term sustainability.
                 </p>
 
                 <p>
-                    I&apos;ve also become more attuned to issues like value for
-                    money and sustainability. Open technologies and standards
-                    (like REST/GraphQL APIs or WCAG/EN301549 accessibility
-                    guidance) tend to offer greater interoperability but require
-                    more internal capacity to use and sustain effectively.
+                    On review, these experiences have had a lasting impact on
+                    how I approach learning technology. I have become more
+                    confident in championing accessibility earlier in technology
+                    reviews, and in using structured methods like user stories
+                    and acceptance criteria to manage stakeholder needs. This
+                    has also shaped how I communicate with staff: I now place
+                    greater emphasis on showing how technical decisions (such as
+                    native vs external colour accessibility) directly affect
+                    teaching and learning, ensuring that staff understand both
+                    the benefits and the limitations of a platform.
+                </p>
+
+                <p>
+                    For students, these evaluations make a tangible difference —
+                    for example, ensuring that colour customisation works
+                    natively in the LMS reduces barriers to engagement and
+                    supports inclusive teaching. Overall, I feel my practice has
+                    become more systematic, evidence-based, and confident as a
+                    result of my work on the Digital Education Platform Project
+                    (DEPP).
+                </p>
+
+                <p>
+                    For staff, this process also provided reassurance that
+                    accessibility was prioritised from the outset, which
+                    strengthened trust in the evaluation and reduced the risk of
+                    accessibility being treated as an afterthought. Working with
+                    multiple faculties showed me that even when requirements
+                    differ, structured user stories provide a shared language.
+                    Overall, these experiences have made me more confident in
+                    leading evaluations where technical, pedagogical, and
+                    accessibility requirements must be balanced, and in
+                    articulating how those decisions directly affect both
+                    teaching and learning.
                 </p>
             </section>
 
