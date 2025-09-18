@@ -9,8 +9,8 @@ const { presentations, repos, screenshots } = cmaltEvidence;
 const { deppIctPresentation } = presentations;
 const { blackboardPostmanCollection } = repos;
 const {
+    colourAccessibilityUserStories,
     ictSeniorAnalystTestScriptScreenshot,
-    ictUserStoriesScreenshot,
     traineeListScreenshot,
 } = screenshots;
 
@@ -23,36 +23,8 @@ export default function Page() {
     return (
         <CMALTLayout
             title="1a: An Understanding of the Constraints and Benefits of Different Technology"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-18"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    You should show how you have used or supported others to use
-                    technology appropriately, given the constraints and benefits
-                    it provides within your context. You should consider how you
-                    compared and contrasted the constraints and benefits of
-                    different technologies to meet the specific needs of users
-                    (students or staff).
-                </p>
-
-                <p>
-                    Evidence in support of such statements might include a brief
-                    commentary on the choices behind the development and use of
-                    Learning Technology that influence its fitness for purpose.
-                    This might discuss issues such as affordances of the
-                    technology, viability, sustainability, scalability,
-                    interoperability and value for money. Suitable evidence may
-                    include a design outline, proposal, conference presentation
-                    or similar. Alternatively, you might want to take this
-                    opportunity to find out more about a technology you have
-                    deployed, and produce a report on its viability, relating
-                    this to the constraints and benefits of different
-                    technologies.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
@@ -75,13 +47,59 @@ export default function Page() {
                 </p>
 
                 <FigureWithCaption
-                    src={ictUserStoriesScreenshot}
-                    alt="A screenshot of the user stories"
-                    caption="A screenshot of the user stories"
+                    src={colourAccessibilityUserStories}
+                    alt="A screenshot of two of the colour accessibility user stories"
+                    caption="A screenshot of two of the colour accessibility user stories"
                 />
 
                 <p>
-                    To assist with this, I developed a reusable{" "}
+                    Accessibility was a consistent priority across all
+                    faculties, but the Faculty of Natural Sciences and the
+                    Faculty of Medicine raised specific requirements around
+                    colour schemes and visual accessibility. To capture these
+                    needs, they developed detailed user stories with acceptance
+                    criteria. For example, requirements included configurable
+                    background colours, high-contrast modes, and support for
+                    colour-blind users through preset colour schemes.
+                </p>
+
+                <p>
+                    We then had to decide which elements should be provided
+                    natively within the LMS and which could be supported through
+                    external tools such as <em>ColourVeil</em>. To justify this,
+                    we compared the degree to which each platform could natively
+                    preserve accessibility when colour schemes were customised.
+                    For instance, one LMS automatically adjusted text colour (to
+                    black or white) depending on the selected background,
+                    ensuring contrast ratios always remained accessible. This
+                    feature was judged particularly valuable as it reduced the
+                    reliance on external tools and prevented user error.
+                </p>
+
+                <p>
+                    To ensure claims about accessibility could be validated,
+                    testers used <em>Accessibility Insights</em> to check that
+                    colour customisations met WCAG standards. Links to this
+                    testing resource were included directly in the evaluation
+                    scripts, making the process transparent and reproducible.
+                </p>
+
+                <FigureWithCaption
+                    src={ictSeniorAnalystTestScriptScreenshot}
+                    alt="A screenshot of the colour scheme test"
+                    caption="A screenshot of the colour scheme test"
+                />
+
+                <p>
+                    Alongside technical evaluation, I engaged with key
+                    stakeholders to manage change effectively, recognising that
+                    successful adoption depends on clear communication and
+                    aligning technology capabilities with user readiness.
+                </p>
+
+                <p>
+                    To support the evaluation process more broadly, I developed
+                    a reusable{" "}
                     <a
                         href={blackboardPostmanCollection}
                         target="_blank"
@@ -97,58 +115,11 @@ export default function Page() {
                     automation testing.
                 </p>
 
-                <FigureWithCaption
-                    src={ictSeniorAnalystTestScriptScreenshot}
-                    alt="A screenshot of the test scripts"
-                    caption="A screenshot of the test scripts"
-                />
-
                 <p>
-                    Alongside technical evaluation, I engaged with key
-                    stakeholders to manage change effectively, recognising that
-                    successful adoption depends on clear communication and
-                    aligning technology capabilities with user readiness.
-                </p>
-
-                <FigureWithCaption
-                    src={traineeListScreenshot}
-                    alt="A screenshot of my Trainee List Electron app"
-                    caption="A screenshot of my Trainee List Electron app"
-                />
-
-                <p>
-                    In 2020/21, I faced a different set of constraints while
-                    working at Learnlight, where I designed internal tools in
-                    Python and Electron to streamline internal workflows, reduce
-                    processing time, and improve data accuracy. One example was
-                    a custom Electron desktop app that significantly reduced
-                    report generation times and improved onboarding efficiency.
-                    In choosing between web-based, desktop, and cloud solutions,
-                    I had to carefully weigh up factors such as user access,
-                    offline availability, speed, and internal infrastructure
-                    limitations — all of which shaped the final design and
-                    delivery method.
-                </p>
-            </section>
-
-            <section id="reflection">
-                <h2>Reflection</h2>
-
-                <p>
-                    Choosing between technologies is rarely straightforward, as
-                    each comes with trade-offs. For example, Blackboard Ultra
-                    offers deep API access and mature accessibility features,
-                    but its user interface feels more traditional compared to
-                    the cleaner, more modern UX design of Canvas and
-                    Brightspace. While Canvas and Brightspace provide flexible,
-                    cloud-native integration models and a more intuitive
-                    experience for end users, they may lack some of the
-                    institutional familiarity and long-standing accessibility
-                    tooling that Blackboard offers. Through API testing and
-                    hands-on exploration, I found that achieving scalability and
-                    interoperability often involves compromises, such as reduced
-                    customisation or the need for greater investment in staff
-                    training and change management.
+                    Through API testing and hands-on exploration, I found that
+                    achieving scalability and interoperability often involves
+                    compromises, such as reduced customisation or the need for
+                    greater investment in staff training and change management.
                 </p>
 
                 <p>
@@ -157,28 +128,89 @@ export default function Page() {
                     purpose, particularly how it will scale within complex
                     educational settings and remain maintainable over time.
                 </p>
+            </section>
+
+            <section id="reflection">
+                <h2>Reflection</h2>
+
+                <p>
+                    My experience comparing these platforms highlighted that
+                    choosing between technologies is rarely straightforward, as
+                    each comes with trade-offs. For example, Blackboard Ultra
+                    offers deep API access and mature accessibility features,
+                    but its user interface feels more traditional compared to
+                    the cleaner, more modern UX design of Canvas and
+                    Brightspace. While Canvas and Brightspace provide flexible,
+                    cloud-native integration models and a more intuitive
+                    experience for end users, they may lack some of the
+                    institutional familiarity and long-standing accessibility
+                    tooling that Blackboard offers.
+                </p>
+
+                <p>
+                    The accessibility case study around colour customisation
+                    highlighted how we dealt with multiple requirements by:
+                </p>
+
+                <ul>
+                    <li>
+                        capturing them in structured user stories and acceptance
+                        criteria,
+                    </li>
+                    <li>
+                        testing them using consistent methods and tools, and
+                    </li>
+                    <li>
+                        justifying choices by balancing native functionality
+                        against reliance on external tools.
+                    </li>
+                </ul>
 
                 <p>
                     In my technical work, I&apos;ve found that automation with
                     tools like Electron or Python/Pandas can offer enormous time
                     savings, but also come with trade-offs in terms of long-term
-                    maintainability and user onboarding. When developing an
-                    Electron-based report automation tool, I weighed the
-                    benefits of direct local file access against the constraint
-                    of platform specificity. To address this, I configured the
-                    Electron app to compile for both macOS and Windows using
-                    platform-specific build tools, ensuring full cross-platform
-                    compatibility with minimal disruption to existing workflows.
-                    This cross-platform support was a key factor in choosing
-                    Electron over a web-based solution.
+                    maintainability and user onboarding. This experience gave me
+                    confidence in evaluating trade-offs systematically, and I
+                    now approach new technology choices with a clearer sense of
+                    how to balance staff needs with long-term sustainability.
                 </p>
 
                 <p>
-                    I&apos;ve also become more attuned to issues like value for
-                    money and sustainability. Open technologies and standards
-                    (like REST/GraphQL APIs or WCAG/EN301549 accessibility
-                    guidance) tend to offer greater interoperability but require
-                    more internal capacity to use and sustain effectively.
+                    On review, these experiences have had a lasting impact on
+                    how I approach learning technology. I have become more
+                    confident in championing accessibility earlier in technology
+                    reviews, and in using structured methods like user stories
+                    and acceptance criteria to manage stakeholder needs. This
+                    has also shaped how I communicate with staff: I now place
+                    greater emphasis on showing how technical decisions (such as
+                    native vs external colour accessibility) directly affect
+                    teaching and learning, ensuring that staff understand both
+                    the benefits and the limitations of a platform.
+                </p>
+
+                <p>
+                    For students, these evaluations make a tangible difference —
+                    for example, ensuring that colour customisation works
+                    natively in the LMS reduces barriers to engagement and
+                    supports inclusive teaching. Overall, I feel my practice has
+                    become more systematic, evidence-based, and confident as a
+                    result of my work on the Digital Education Platform Project
+                    (DEPP).
+                </p>
+
+                <p>
+                    For staff, this process also provided reassurance that
+                    accessibility was prioritised from the outset, which
+                    strengthened trust in the evaluation and reduced the risk of
+                    accessibility being treated as an afterthought. Working with
+                    multiple faculties showed me that even when requirements
+                    differ, structured user stories provide a shared language.
+                    Overall, these experiences have made me more confident in
+                    leading evaluations where technical, pedagogical, and
+                    accessibility requirements must be balanced, and in
+                    articulating how those decisions directly affect both
+                    teaching and learning.
                 </p>
             </section>
 
@@ -199,6 +231,13 @@ export default function Page() {
                         Developed tools such as Postman collections, user
                         stories, and manual test scripts to support
                         evidence-based evaluation of technology choices
+                    </li>
+
+                    <li>
+                        Addressed multiple stakeholder requirements for
+                        accessibility by creating acceptance criteria, testing
+                        compliance, and justifying the inclusion of native vs
+                        external accessibility features
                     </li>
 
                     <li>
@@ -286,11 +325,11 @@ export default function Page() {
                     </li>
                     <li>
                         <a
-                            href={ictUserStoriesScreenshot}
+                            href={colourAccessibilityUserStories}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            ICT User Stories (Screenshot)
+                            Colour Accessibility User Stories (Screenshot)
                         </a>{" "}
                         <em>
                             Illustrates how user-centred design principles were
