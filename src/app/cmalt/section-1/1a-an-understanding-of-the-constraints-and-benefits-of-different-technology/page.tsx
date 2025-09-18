@@ -23,36 +23,8 @@ export default function Page() {
     return (
         <CMALTLayout
             title="1a: An Understanding of the Constraints and Benefits of Different Technology"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-18"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    You should show how you have used or supported others to use
-                    technology appropriately, given the constraints and benefits
-                    it provides within your context. You should consider how you
-                    compared and contrasted the constraints and benefits of
-                    different technologies to meet the specific needs of users
-                    (students or staff).
-                </p>
-
-                <p>
-                    Evidence in support of such statements might include a brief
-                    commentary on the choices behind the development and use of
-                    Learning Technology that influence its fitness for purpose.
-                    This might discuss issues such as affordances of the
-                    technology, viability, sustainability, scalability,
-                    interoperability and value for money. Suitable evidence may
-                    include a design outline, proposal, conference presentation
-                    or similar. Alternatively, you might want to take this
-                    opportunity to find out more about a technology you have
-                    deployed, and produce a report on its viability, relating
-                    this to the constraints and benefits of different
-                    technologies.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
