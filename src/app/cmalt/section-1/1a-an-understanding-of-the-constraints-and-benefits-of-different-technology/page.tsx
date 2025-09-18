@@ -9,8 +9,8 @@ const { presentations, repos, screenshots } = cmaltEvidence;
 const { deppIctPresentation } = presentations;
 const { blackboardPostmanCollection } = repos;
 const {
+    colourAccessibilityUserStories,
     ictSeniorAnalystTestScriptScreenshot,
-    ictUserStoriesScreenshot,
     traineeListScreenshot,
 } = screenshots;
 
@@ -75,13 +75,59 @@ export default function Page() {
                 </p>
 
                 <FigureWithCaption
-                    src={ictUserStoriesScreenshot}
-                    alt="A screenshot of the user stories"
-                    caption="A screenshot of the user stories"
+                    src={colourAccessibilityUserStories}
+                    alt="A screenshot of two of the colour accessibility user stories"
+                    caption="A screenshot of two of the colour accessibility user stories"
                 />
 
                 <p>
-                    To assist with this, I developed a reusable{" "}
+                    Accessibility was a consistent priority across all
+                    faculties, but the Faculty of Natural Sciences and the
+                    Faculty of Medicine raised specific requirements around
+                    colour schemes and visual accessibility. To capture these
+                    needs, they developed detailed user stories with acceptance
+                    criteria. For example, requirements included configurable
+                    background colours, high-contrast modes, and support for
+                    colour-blind users through preset colour schemes.
+                </p>
+
+                <p>
+                    We then had to decide which elements should be provided
+                    natively within the LMS and which could be supported through
+                    external tools such as <em>ColourVeil</em>. To justify this,
+                    we compared the degree to which each platform could natively
+                    preserve accessibility when colour schemes were customised.
+                    For instance, one LMS automatically adjusted text colour (to
+                    black or white) depending on the selected background,
+                    ensuring contrast ratios always remained accessible. This
+                    feature was judged particularly valuable as it reduced the
+                    reliance on external tools and prevented user error.
+                </p>
+
+                <p>
+                    To ensure claims about accessibility could be validated,
+                    testers used <em>Accessibility Insights</em> to check that
+                    colour customisations met WCAG standards. Links to this
+                    testing resource were included directly in the evaluation
+                    scripts, making the process transparent and reproducible.
+                </p>
+
+                <FigureWithCaption
+                    src={ictSeniorAnalystTestScriptScreenshot}
+                    alt="A screenshot of the colour scheme test"
+                    caption="A screenshot of the colour scheme test"
+                />
+
+                <p>
+                    Alongside technical evaluation, I engaged with key
+                    stakeholders to manage change effectively, recognising that
+                    successful adoption depends on clear communication and
+                    aligning technology capabilities with user readiness.
+                </p>
+
+                <p>
+                    To support the evaluation process more broadly, I developed
+                    a reusable{" "}
                     <a
                         href={blackboardPostmanCollection}
                         target="_blank"
@@ -95,39 +141,6 @@ export default function Page() {
                     Additionally, I created structured manual test scripts to
                     explore functionality limitations and prepared for future
                     automation testing.
-                </p>
-
-                <FigureWithCaption
-                    src={ictSeniorAnalystTestScriptScreenshot}
-                    alt="A screenshot of the test scripts"
-                    caption="A screenshot of the test scripts"
-                />
-
-                <p>
-                    Alongside technical evaluation, I engaged with key
-                    stakeholders to manage change effectively, recognising that
-                    successful adoption depends on clear communication and
-                    aligning technology capabilities with user readiness.
-                </p>
-
-                <FigureWithCaption
-                    src={traineeListScreenshot}
-                    alt="A screenshot of my Trainee List Electron app"
-                    caption="A screenshot of my Trainee List Electron app"
-                />
-
-                <p>
-                    In 2020/21, I faced a different set of constraints while
-                    working at Learnlight, where I designed internal tools in
-                    Python and Electron to streamline internal workflows, reduce
-                    processing time, and improve data accuracy. One example was
-                    a custom Electron desktop app that significantly reduced
-                    report generation times and improved onboarding efficiency.
-                    In choosing between web-based, desktop, and cloud solutions,
-                    I had to carefully weigh up factors such as user access,
-                    offline availability, speed, and internal infrastructure
-                    limitations — all of which shaped the final design and
-                    delivery method.
                 </p>
             </section>
 
@@ -144,11 +157,33 @@ export default function Page() {
                     cloud-native integration models and a more intuitive
                     experience for end users, they may lack some of the
                     institutional familiarity and long-standing accessibility
-                    tooling that Blackboard offers. Through API testing and
-                    hands-on exploration, I found that achieving scalability and
-                    interoperability often involves compromises, such as reduced
-                    customisation or the need for greater investment in staff
-                    training and change management.
+                    tooling that Blackboard offers.
+                </p>
+
+                <p>
+                    The accessibility case study around colour customisation
+                    highlighted how we dealt with multiple requirements by:
+                </p>
+
+                <ul>
+                    <li>
+                        capturing them in structured user stories and acceptance
+                        criteria,
+                    </li>
+                    <li>
+                        testing them using consistent methods and tools, and
+                    </li>
+                    <li>
+                        justifying choices by balancing native functionality
+                        against reliance on external tools.
+                    </li>
+                </ul>
+
+                <p>
+                    Through API testing and hands-on exploration, I found that
+                    achieving scalability and interoperability often involves
+                    compromises, such as reduced customisation or the need for
+                    greater investment in staff training and change management.
                 </p>
 
                 <p>
@@ -199,6 +234,13 @@ export default function Page() {
                         Developed tools such as Postman collections, user
                         stories, and manual test scripts to support
                         evidence-based evaluation of technology choices
+                    </li>
+
+                    <li>
+                        Addressed multiple stakeholder requirements for
+                        accessibility by creating acceptance criteria, testing
+                        compliance, and justifying the inclusion of native vs
+                        external accessibility features
                     </li>
 
                     <li>
@@ -286,11 +328,11 @@ export default function Page() {
                     </li>
                     <li>
                         <a
-                            href={ictUserStoriesScreenshot}
+                            href={colourAccessibilityUserStories}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            ICT User Stories (Screenshot)
+                            Colour Accessibility User Stories (Screenshot)
                         </a>{" "}
                         <em>
                             Illustrates how user-centred design principles were

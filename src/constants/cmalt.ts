@@ -165,6 +165,7 @@ export const cmaltEvidence = {
 
     /** Screenshots used to demonstrate functionality or achievements */
     screenshots: {
+        colourAccessibilityUserStories: "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png",
         dpaScreenshot: "/cmalt/screenshots/dpa-screenshot.png",
         editingSubtitlesScreenshot:
             "/cmalt/screenshots/editing-subtitles-screenshot.png",
