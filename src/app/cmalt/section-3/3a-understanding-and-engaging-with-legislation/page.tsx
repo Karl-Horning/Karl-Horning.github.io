@@ -302,6 +302,21 @@ export default function page() {
                     go beyond compliance and take a proactive role in inclusive
                     content design.
                 </p>
+
+                <p>
+                    Looking back, I recognise that these practices are not only
+                    about meeting regulatory standards but also about ethical
+                    commitments. Respecting learner privacy under GDPR reflects
+                    a wider duty of care in handling sensitive information.
+                    Similarly, prioritising accessibility goes beyond compliance
+                    with WCAG or EN 301 549: it is about ensuring learners&apos;
+                    rights to participate fully and equitably. By providing
+                    subtitles, transcripts, and accessible documents, I aim to
+                    reduce barriers and support learner autonomy, acknowledging
+                    the moral responsibility I have as an educator and
+                    technologist, both in international and UK contexts, to
+                    create inclusive and respectful learning environments.
+                </p>
             </section>
 
             <section id="summary">
