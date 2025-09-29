@@ -3,11 +3,16 @@ import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
-import Image from "next/image";
 
 const { CmaltRoute } = internalRoutes;
-const { certificates, documents, imgs, screenshots, transcripts } =
-    cmaltEvidence;
+const {
+    certificates,
+    documents,
+    imgs,
+    presentations,
+    screenshots,
+    transcripts,
+} = cmaltEvidence;
 const { celtaCertificate, dyslexiaAwarenessCertificate, ptllsCertificate } =
     certificates;
 const { firstSessionQuestions, webAccessibilityResourcesAndTools } = documents;
@@ -17,6 +22,7 @@ const {
     feedbackSlideUpdated,
     kolbLearningCycle,
 } = imgs;
+const { deppIctPresentation } = presentations;
 const { sessionRatingsScreenshot, sessionReportRatingsScreenshot } =
     screenshots;
 const { dyslexiaAwarenessTranscript } = transcripts;
@@ -187,6 +193,37 @@ export default function page() {
                 />
 
                 <p>
+                    These principles now inform my practice at Imperial. In my{" "}
+                    <a
+                        href={deppIctPresentation}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        DEPP ICT presentation
+                    </a>
+                    , for example, I balanced lessons learnt from my own
+                    teaching with Imperial&apos;s published{" "}
+                    <a
+                        href="https://www.imperial.ac.uk/staff/tools-and-reference/web-guide/training-and-events/materials/accessibility/documents/ms-office/powerpoint/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        guidance on accessible PowerPoint design
+                    </a>
+                    , ensuring materials were both engaging and compliant. When
+                    preparing training for staff on Canvas, I suggested adding a
+                    glossary of terms to help staff transition from Blackboard —
+                    a step particularly valuable for international colleagues
+                    for whom differences in terminology could otherwise create
+                    barriers. Colleagues in the Faculty of Medicine also
+                    highlighted the importance of needs assessments to ensure
+                    training reflects staff contexts and requirements. This
+                    resonated strongly with my earlier teaching experience,
+                    reinforcing the role of needs analysis in creating inclusive
+                    and relevant learning opportunities.
+                </p>
+
+                <p>
                     Through ongoing reflection and CPD — including{" "}
                     <a
                         href={dyslexiaAwarenessCertificate}
@@ -205,52 +242,10 @@ export default function page() {
                     </a>
                     ) — I developed more inclusive visual and content design
                     practices. These principles informed how I adapted delivery
-                    for different learning preferences. I incorporated diagrams,
-                    simplified feedback statements, and colour-coded grammar
-                    charts to reduce language processing strain and visual
-                    overload. For example, a grammar reference on the use of{" "}
-                    <em>some</em> and <em>any</em> helped clarify rules using
-                    minimal text, bullet points, and colour-coded examples:
+                    for different learning preferences. The positive impact of
+                    these changes was reflected in learner feedback and
+                    outcomes.
                 </p>
-
-                <blockquote>
-                    <p>
-                        <strong>any (for negatives and questions)</strong>
-                    </p>
-                    <p>
-                        &apos;Any&apos; is most common in{" "}
-                        <em>negative clauses</em> and <em>questions</em>:
-                    </p>
-                    <ul>
-                        <li>
-                            (negative) He hasn&apos;t got <em>any</em> homework.
-                        </li>
-                        <li>
-                            (question) Has he got <em>any</em> homework?
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>
-                            some (for affirmatives and questions with expected
-                            answers)
-                        </strong>
-                    </p>
-                    <p>
-                        &apos;Some&apos; is most common in{" "}
-                        <em>affirmative clauses</em>. Some can be used in
-                        questions when we expect the answer to be
-                        &apos;yes&apos;:
-                    </p>
-                    <ul>
-                        <li>
-                            (affirmative) He&apos;s got <em>some</em> homework.
-                        </li>
-                        <li>
-                            (question) Has he got <em>some</em> homework?
-                        </li>
-                    </ul>
-                </blockquote>
-
                 <FigureWithCaption
                     src={sessionReportRatingsScreenshot}
                     alt="A diagram showing my session report ratings over a year, with an average of 4.9/5 stars"
@@ -258,27 +253,12 @@ export default function page() {
                 />
 
                 <p>
-                    These design and delivery choices helped learners improve
-                    clarity and confidence in language use. Learners regularly
-                    commented that the visual clarity and consistent structure
-                    of slides made content easier to absorb and revisit. This
-                    was reflected in ratings of 4.9/5 stars for my session
-                    reports, as learners frequently praised the relevance of
-                    materials, clarity of instruction, and individualised
-                    support.
-                </p>
-
-                <p>
-                    Early in my transition to online teaching, technological
-                    limitations presented challenges. As a macOS user, I faced
-                    feature gaps in tools like Skype compared to their Windows
-                    versions. For example, limited screen-sharing functionality
-                    impacted session interactivity. Network issues occasionally
-                    meant disabling webcams, reducing access to facial
-                    expressions and lip reading, which caused a significant
-                    barrier for some learners. Flexible planning slowed the
-                    lesson pace to support auditory processing while still
-                    meeting objectives.
+                    Learners regularly commented that the visual clarity and
+                    consistent structure of slides made content easier to absorb
+                    and revisit. This was reflected in ratings of 4.9/5 stars
+                    for my session reports, as learners frequently praised the
+                    relevance of materials, clarity of instruction, and
+                    individualised support.
                 </p>
             </section>
 
@@ -303,10 +283,7 @@ export default function page() {
                     With the ubiquitous rise of AI, I continue to explore how
                     AI-powered tools, like automated feedback generators and
                     grammar-checking assistants, can support more personalised
-                    learning pathways for learners. These tools help reduce the
-                    time spent on routine administrative work, allowing teachers
-                    to provide more targeted support while giving learners
-                    immediate, actionable feedback to guide their development.
+                    learning pathways for learners.
                 </p>
 
                 <p>
@@ -323,6 +300,21 @@ export default function page() {
                     passive use into <strong>active learning</strong> and aligns
                     with my goal of helping learners build transferable skills
                     and greater independence in their learning journey.
+                </p>
+
+                <p>
+                    As Imperial is a highly international university, I am
+                    especially mindful of advising staff on inclusive design
+                    that supports individuals working in a second language. This
+                    includes encouraging the breakdown of complex tasks into
+                    smaller stages, scaffolding learning activities with
+                    glossaries or visual supports, and building in opportunities
+                    for retrieval and reflection. These approaches reduce
+                    cognitive load, enable equitable participation, and ensure
+                    that international colleagues benefit from inclusive
+                    practices that were originally developed in my English
+                    teaching but continue to be relevant in higher education
+                    contexts.
                 </p>
             </section>
 
@@ -364,6 +356,16 @@ export default function page() {
                         <strong>active learning</strong> and build{" "}
                         <strong>transferable skills</strong> and learner
                         independence.
+                    </li>
+                    <li>
+                        Applied{" "}
+                        <strong>
+                            learning theories and inclusive design strategies
+                        </strong>{" "}
+                        from language teaching to my current role at Imperial,
+                        including accessible presentation design, glossary
+                        development, and needs assessments to support staff and
+                        international cohorts effectively.
                     </li>
                 </ul>
             </section>
