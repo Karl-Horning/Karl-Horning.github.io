@@ -24,29 +24,6 @@ export default function page() {
             title="1c: Supporting the Deployment of Learning Technologies"
             lastUpdated="2025-09-29"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Statements about your involvement in supporting the
-                    deployment of Learning Technology might relate to providing
-                    technical and/or pedagogic support to teachers or learners,
-                    advising on (or redesigning to take account of) technical
-                    and usability issues, developing strategies or policies,
-                    managing change, providing training or other forms of
-                    professional development, securing or deploying dedicated
-                    funding and so on, all within the context of the educational
-                    use of Learning Technology.
-                </p>
-
-                <p>
-                    For evidence, you might include the overview section of a
-                    strategy document, meeting minutes, summaries of student
-                    feedback, testimonials or witness statements from other
-                    colleagues.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
