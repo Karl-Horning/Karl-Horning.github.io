@@ -3,11 +3,16 @@ import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/constants/cmalt";
 import { internalRoutes } from "@/constants/links";
 import { createMetadata } from "@/lib/metadata";
-import Image from "next/image";
 
 const { CmaltRoute } = internalRoutes;
-const { certificates, documents, imgs, screenshots, transcripts } =
-    cmaltEvidence;
+const {
+    certificates,
+    documents,
+    imgs,
+    presentations,
+    screenshots,
+    transcripts,
+} = cmaltEvidence;
 const { celtaCertificate, dyslexiaAwarenessCertificate, ptllsCertificate } =
     certificates;
 const { firstSessionQuestions, webAccessibilityResourcesAndTools } = documents;
@@ -17,6 +22,7 @@ const {
     feedbackSlideUpdated,
     kolbLearningCycle,
 } = imgs;
+const { deppIctPresentation } = presentations;
 const { sessionRatingsScreenshot, sessionReportRatingsScreenshot } =
     screenshots;
 const { dyslexiaAwarenessTranscript } = transcripts;
@@ -30,38 +36,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="2a: An Understanding of Teaching, Learning and/or Assessment Processes"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-29"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Statements here might relate to areas such as teaching
-                    experience, learning design, curriculum development,
-                    work-based assessment, the creation and execution of a
-                    programme of training, and so on.
-                </p>
-
-                <p>
-                    Evidence might include being on the register of the Higher
-                    Education Academy, a PGCE award or other relevant
-                    postgraduate qualification, evidence of relevant
-                    professional development courses or portfolios. Commentaries
-                    from peers on your approach would also provide suitable
-                    evidence. Other possibilities include teaching experience,
-                    reflective statements that analyse experience in terms of
-                    learning theory, pedagogical approaches, sociological
-                    theories, or a comparable, recognised perspective (include
-                    relevant citations). In relation to learning design, a
-                    report, specification or reflective statement might be
-                    provided that clearly elaborates the principles that
-                    informed the design process. There must be some
-                    consideration of how technology is changing / impacting upon
-                    approaches to teaching and learning and/or the roles of
-                    learners, teachers and support staff in your context.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
@@ -166,8 +142,10 @@ export default function page() {
                 />
 
                 <p>
-                    My approach to slide design evolved to better support
-                    inclusive teaching and accessibility. For example, an early
+                    Just as needs assessments helped tailor course content to
+                    individual learners, I also recognised that the{" "}
+                    <strong>design of materials</strong> was critical in
+                    enabling equal access to learning. For example, an early
                     slide on Feedback &amp; Error Correction used white text
                     over a red background with a decorative font — a combination
                     that presented readability challenges, especially for
@@ -187,6 +165,38 @@ export default function page() {
                 />
 
                 <p>
+                    These same accessibility principles now informing my
+                    practice at Imperial. In my{" "}
+                    <a
+                        href={deppIctPresentation}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        DEPP ICT presentation
+                    </a>
+                    , for example, I balanced lessons learnt from my own
+                    teaching with Imperial&apos;s published{" "}
+                    <a
+                        href="https://www.imperial.ac.uk/staff/tools-and-reference/web-guide/training-and-events/materials/accessibility/documents/ms-office/powerpoint/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        guidance on accessible PowerPoint design
+                    </a>
+                    , ensuring materials were both engaging and compliant. When
+                    preparing training for staff on Canvas, I suggested adding a
+                    glossary of terms to help staff transition from Blackboard —
+                    a step particularly valuable for international colleagues
+                    for whom differences in terminology could otherwise create
+                    barriers. Colleagues in the Faculty of Medicine also
+                    highlighted the importance of needs assessments to ensure
+                    training reflects staff contexts and requirements. This
+                    resonated strongly with my earlier teaching experience,
+                    reinforcing the role of needs analysis in creating inclusive
+                    and relevant learning opportunities.
+                </p>
+
+                <p>
                     Through ongoing reflection and CPD — including{" "}
                     <a
                         href={dyslexiaAwarenessCertificate}
@@ -204,52 +214,11 @@ export default function page() {
                         updated in 2025
                     </a>
                     ) — I developed more inclusive visual and content design
-                    practices. These principles informed how I adapted delivery
-                    for different learning preferences. I incorporated diagrams,
-                    simplified feedback statements, and colour-coded grammar
-                    charts to reduce language processing strain and visual
-                    overload. For example, a grammar reference on the use of{" "}
-                    <em>some</em> and <em>any</em> helped clarify rules using
-                    minimal text, bullet points, and colour-coded examples:
+                    practices. The positive impact of these changes was
+                    reflected in learner feedback and outcomes, which
+                    consistently recognised improvements in accessibility and
+                    clarity.
                 </p>
-
-                <blockquote>
-                    <p>
-                        <strong>any (for negatives and questions)</strong>
-                    </p>
-                    <p>
-                        &apos;Any&apos; is most common in{" "}
-                        <em>negative clauses</em> and <em>questions</em>:
-                    </p>
-                    <ul>
-                        <li>
-                            (negative) He hasn&apos;t got <em>any</em> homework.
-                        </li>
-                        <li>
-                            (question) Has he got <em>any</em> homework?
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>
-                            some (for affirmatives and questions with expected
-                            answers)
-                        </strong>
-                    </p>
-                    <p>
-                        &apos;Some&apos; is most common in{" "}
-                        <em>affirmative clauses</em>. Some can be used in
-                        questions when we expect the answer to be
-                        &apos;yes&apos;:
-                    </p>
-                    <ul>
-                        <li>
-                            (affirmative) He&apos;s got <em>some</em> homework.
-                        </li>
-                        <li>
-                            (question) Has he got <em>some</em> homework?
-                        </li>
-                    </ul>
-                </blockquote>
 
                 <FigureWithCaption
                     src={sessionReportRatingsScreenshot}
@@ -258,27 +227,12 @@ export default function page() {
                 />
 
                 <p>
-                    These design and delivery choices helped learners improve
-                    clarity and confidence in language use. Learners regularly
-                    commented that the visual clarity and consistent structure
-                    of slides made content easier to absorb and revisit. This
-                    was reflected in ratings of 4.9/5 stars for my session
-                    reports, as learners frequently praised the relevance of
-                    materials, clarity of instruction, and individualised
-                    support.
-                </p>
-
-                <p>
-                    Early in my transition to online teaching, technological
-                    limitations presented challenges. As a macOS user, I faced
-                    feature gaps in tools like Skype compared to their Windows
-                    versions. For example, limited screen-sharing functionality
-                    impacted session interactivity. Network issues occasionally
-                    meant disabling webcams, reducing access to facial
-                    expressions and lip reading, which caused a significant
-                    barrier for some learners. Flexible planning slowed the
-                    lesson pace to support auditory processing while still
-                    meeting objectives.
+                    Learners regularly commented that the visual clarity and
+                    consistent structure of slides made content easier to absorb
+                    and revisit. This was reflected in ratings of 4.9/5 stars
+                    for my session reports, as learners frequently praised the
+                    relevance of materials, clarity of instruction, and
+                    individualised support.
                 </p>
             </section>
 
@@ -286,10 +240,12 @@ export default function page() {
                 <h2>Future Developments</h2>
 
                 <p>
-                    I am committed to continuously improving my teaching methods
-                    by focusing on accessibility, interactivity, and the
-                    considered adoption of emerging technologies. To support
-                    this, I maintain an evolving resource —{" "}
+                    Building on these reflections and the positive outcomes
+                    achieved, I am committed to continuously improving my
+                    teaching methods by focusing on accessibility,
+                    interactivity, and the considered adoption of emerging
+                    technologies. To support this, I maintain an evolving
+                    resource —{" "}
                     <a
                         href={webAccessibilityResourcesAndTools}
                         target="_blank"
@@ -300,29 +256,49 @@ export default function page() {
                     </a>{" "}
                     — which brings together up-to-date guidance, checklists, and
                     testing strategies aligned with WCAG 2.1 and EN 301 549.
-                    With the ubiquitous rise of AI, I continue to explore how
-                    AI-powered tools, like automated feedback generators and
+                    This provides a framework that I draw on when advising
+                    colleagues and designing new materials.
+                </p>
+
+                <p>
+                    As my earlier practice demonstrated the value of design
+                    clarity and needs analysis, I now extend these principles
+                    into Imperial&apos;s context by exploring how AI-powered
+                    tools, like automated feedback generators and
                     grammar-checking assistants, can support more personalised
-                    learning pathways for learners. These tools help reduce the
-                    time spent on routine administrative work, allowing teachers
-                    to provide more targeted support while giving learners
-                    immediate, actionable feedback to guide their development.
+                    learning pathways. These tools help reduce the time staff
+                    spend on routine administrative tasks, allowing more
+                    attention to be directed towards targeted, high-value
+                    support. At the same time, I encourage colleagues to see
+                    these tools not simply as shortcuts but as opportunities to
+                    develop learner agency and critical thinking.
                 </p>
 
                 <p>
                     Technology is also reshaping the teacher&apos;s role from
-                    content deliverer to facilitator and coach. As platforms for
-                    content delivery and knowledge checks become more
-                    autonomous, I continue to develop my practice to focus on
-                    critical thinking, reflective learning, and learner agency.
-                    For example, while tools like Grammarly or ChatGPT can help
-                    learners improve their English writing, I encourage them to
-                    engage critically with suggested changes: to ask{" "}
-                    <em>why</em> a correction has been made, not just{" "}
-                    <em>what</em> has changed. This reflective process turns
-                    passive use into <strong>active learning</strong> and aligns
-                    with my goal of helping learners build transferable skills
-                    and greater independence in their learning journey.
+                    content deliverer to facilitator and coach. Just as I once
+                    encouraged learners to reflect on their own goals and
+                    progress, I now encourage staff and students to engage
+                    critically with the outputs of tools such as Grammarly or
+                    ChatGPT — to ask <em>why</em> a correction has been made,
+                    not just <em>what</em> has changed. This reflective process
+                    turns passive use into <strong>active learning</strong>,
+                    aligning with my broader goal of fostering transferable
+                    skills and learner independence.
+                </p>
+
+                <p>
+                    Finally, because Imperial is a highly international
+                    university, I am especially mindful of advising staff on
+                    inclusive design that supports colleagues and learners
+                    working in a second language. Building on my experience of
+                    scaffolding complex tasks and introducing glossaries in
+                    language teaching, I now encourage the same approaches in
+                    higher education training contexts. Breaking down tasks into
+                    smaller stages, scaffolding learning activities with
+                    glossaries or visual supports, and building in opportunities
+                    for retrieval and reflection all help reduce cognitive load
+                    and enable equitable participation across diverse cohorts.
                 </p>
             </section>
 
@@ -364,6 +340,16 @@ export default function page() {
                         <strong>active learning</strong> and build{" "}
                         <strong>transferable skills</strong> and learner
                         independence.
+                    </li>
+                    <li>
+                        Applied{" "}
+                        <strong>
+                            learning theories and inclusive design strategies
+                        </strong>{" "}
+                        from language teaching to my current role at Imperial,
+                        including accessible presentation design, glossary
+                        development, and needs assessments to support staff and
+                        international cohorts effectively.
                     </li>
                 </ul>
             </section>
@@ -511,6 +497,52 @@ export default function page() {
                             training sessions focused on accessibility and
                             inclusive practices. Provide evidence of impact and
                             effectiveness in supporting professional learning.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={ebbinghausForgettingCurve}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ebbinghaus&apos; Forgetting Curve (Diagram)
+                        </a>{" "}
+                        <em>
+                            Created and used to illustrate the role of spaced
+                            repetition and retrieval practice in course design,
+                            showing application of memory theory to teaching
+                            practice.
+                        </em>
+                    </li>
+
+                    <li>
+                        <a
+                            href={kolbLearningCycle}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Kolb&apos;s Experiential Learning Cycle (Diagram)
+                        </a>{" "}
+                        <em>
+                            Adapted visual used to structure reflection on needs
+                            assessments, showing how experiential learning
+                            theory underpinned learner goal-setting and
+                            curriculum adaptation.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={deppIctPresentation}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            DEPP ICT Presentation (Slides)
+                        </a>{" "}
+                        <em>
+                            Demonstrates application of accessibility principles
+                            in a higher education context, aligning personal
+                            practice with Imperial&apos;s published guidance on
+                            accessible PowerPoint design.
                         </em>
                     </li>
                 </ul>
