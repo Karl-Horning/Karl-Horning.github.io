@@ -172,8 +172,10 @@ export default function page() {
                 />
 
                 <p>
-                    My approach to slide design evolved to better support
-                    inclusive teaching and accessibility. For example, an early
+                    Just as needs assessments helped tailor course content to
+                    individual learners, I also recognised that the{" "}
+                    <strong>design of materials</strong> was critical in
+                    enabling equal access to learning. For example, an early
                     slide on Feedback &amp; Error Correction used white text
                     over a red background with a decorative font — a combination
                     that presented readability challenges, especially for
@@ -193,7 +195,8 @@ export default function page() {
                 />
 
                 <p>
-                    These principles now inform my practice at Imperial. In my{" "}
+                    These same accessibility principles now informing my
+                    practice at Imperial. In my{" "}
                     <a
                         href={deppIctPresentation}
                         target="_blank"
@@ -241,11 +244,12 @@ export default function page() {
                         updated in 2025
                     </a>
                     ) — I developed more inclusive visual and content design
-                    practices. These principles informed how I adapted delivery
-                    for different learning preferences. The positive impact of
-                    these changes was reflected in learner feedback and
-                    outcomes.
+                    practices. The positive impact of these changes was
+                    reflected in learner feedback and outcomes, which
+                    consistently recognised improvements in accessibility and
+                    clarity.
                 </p>
+
                 <FigureWithCaption
                     src={sessionReportRatingsScreenshot}
                     alt="A diagram showing my session report ratings over a year, with an average of 4.9/5 stars"
@@ -266,10 +270,12 @@ export default function page() {
                 <h2>Future Developments</h2>
 
                 <p>
-                    I am committed to continuously improving my teaching methods
-                    by focusing on accessibility, interactivity, and the
-                    considered adoption of emerging technologies. To support
-                    this, I maintain an evolving resource —{" "}
+                    Building on these reflections and the positive outcomes
+                    achieved, I am committed to continuously improving my
+                    teaching methods by focusing on accessibility,
+                    interactivity, and the considered adoption of emerging
+                    technologies. To support this, I maintain an evolving
+                    resource —{" "}
                     <a
                         href={webAccessibilityResourcesAndTools}
                         target="_blank"
@@ -280,41 +286,49 @@ export default function page() {
                     </a>{" "}
                     — which brings together up-to-date guidance, checklists, and
                     testing strategies aligned with WCAG 2.1 and EN 301 549.
-                    With the ubiquitous rise of AI, I continue to explore how
-                    AI-powered tools, like automated feedback generators and
+                    This provides a framework that I draw on when advising
+                    colleagues and designing new materials.
+                </p>
+
+                <p>
+                    As my earlier practice demonstrated the value of design
+                    clarity and needs analysis, I now extend these principles
+                    into Imperial&apos;s context by exploring how AI-powered
+                    tools, like automated feedback generators and
                     grammar-checking assistants, can support more personalised
-                    learning pathways for learners.
+                    learning pathways. These tools help reduce the time staff
+                    spend on routine administrative tasks, allowing more
+                    attention to be directed towards targeted, high-value
+                    support. At the same time, I encourage colleagues to see
+                    these tools not simply as shortcuts but as opportunities to
+                    develop learner agency and critical thinking.
                 </p>
 
                 <p>
                     Technology is also reshaping the teacher&apos;s role from
-                    content deliverer to facilitator and coach. As platforms for
-                    content delivery and knowledge checks become more
-                    autonomous, I continue to develop my practice to focus on
-                    critical thinking, reflective learning, and learner agency.
-                    For example, while tools like Grammarly or ChatGPT can help
-                    learners improve their English writing, I encourage them to
-                    engage critically with suggested changes: to ask{" "}
-                    <em>why</em> a correction has been made, not just{" "}
-                    <em>what</em> has changed. This reflective process turns
-                    passive use into <strong>active learning</strong> and aligns
-                    with my goal of helping learners build transferable skills
-                    and greater independence in their learning journey.
+                    content deliverer to facilitator and coach. Just as I once
+                    encouraged learners to reflect on their own goals and
+                    progress, I now encourage staff and students to engage
+                    critically with the outputs of tools such as Grammarly or
+                    ChatGPT — to ask <em>why</em> a correction has been made,
+                    not just <em>what</em> has changed. This reflective process
+                    turns passive use into <strong>active learning</strong>,
+                    aligning with my broader goal of fostering transferable
+                    skills and learner independence.
                 </p>
 
                 <p>
-                    As Imperial is a highly international university, I am
-                    especially mindful of advising staff on inclusive design
-                    that supports individuals working in a second language. This
-                    includes encouraging the breakdown of complex tasks into
+                    Finally, because Imperial is a highly international
+                    university, I am especially mindful of advising staff on
+                    inclusive design that supports colleagues and learners
+                    working in a second language. Building on my experience of
+                    scaffolding complex tasks and introducing glossaries in
+                    language teaching, I now encourage the same approaches in
+                    higher education training contexts. Breaking down tasks into
                     smaller stages, scaffolding learning activities with
                     glossaries or visual supports, and building in opportunities
-                    for retrieval and reflection. These approaches reduce
-                    cognitive load, enable equitable participation, and ensure
-                    that international colleagues benefit from inclusive
-                    practices that were originally developed in my English
-                    teaching but continue to be relevant in higher education
-                    contexts.
+                    for retrieval and reflection all help reduce cognitive load
+                    and enable equitable participation across diverse cohorts.
                 </p>
             </section>
 
