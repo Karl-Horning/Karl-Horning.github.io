@@ -22,7 +22,7 @@ export default function page() {
     return (
         <CMALTLayout
             title="1c: Supporting the Deployment of Learning Technologies"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-29"
         >
             <section id="cmalt-guidance">
                 <h2>CMALT Guidance</h2>
@@ -194,23 +194,30 @@ export default function page() {
                 </p>
 
                 <p>
-                    I&apos;ve also learned that successful technology adoption
-                    often hinges on staff confidence and institutional context.
-                    Through LMS evaluation work, I&apos;ve seen how simplifying
-                    language, aligning examples with actual marking workflows,
-                    and considering accessibility at all stages can make a
-                    significant difference to adoption rates. Feedback from
-                    academic and administrative colleagues has frequently
-                    prompted revisions — for example, prioritising ease of use
-                    over advanced functionality where appropriate.
+                    Much of this work was inherently collaborative. In the DEPP
+                    project, I worked closely with other learning technologists,
+                    developers, and colleagues during platform evaluation.
+                    Internal team testing sessions highlighted both technical
+                    issues and usability challenges, leading us to adapt
+                    instructions and examples for different contexts. Feedback
+                    from administrative staff also influenced revisions — for
+                    example, simplifying language or prioritising practical
+                    marking workflows over advanced features. These
+                    contributions frequently drew my attention to areas I might
+                    not have identified alone, reinforcing the importance of
+                    team-based evaluation.
                 </p>
 
                 <p>
                     Supporting deployment now feels like an empathetic,
                     iterative process — one that blends technical clarity with a
-                    deep understanding of staff needs. I now approach training
-                    and resource development with this mindset, aiming not just
-                    to instruct but to support learning in the broader sense.
+                    deep understanding of staff needs. Collaboration has been
+                    key to this: co-developing resources, running pilot
+                    sessions, and integrating structured team feedback has
+                    consistently improved the quality and uptake of the
+                    materials I produce. I now approach training and resource
+                    development with this mindset, aiming not just to instruct
+                    but to support learning in the broader sense.
                 </p>
             </section>
 
