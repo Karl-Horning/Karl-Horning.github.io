@@ -199,13 +199,21 @@ export default function page() {
                     developers, and colleagues during platform evaluation.
                     Internal team testing sessions highlighted both technical
                     issues and usability challenges, leading us to adapt
-                    instructions and examples for different contexts. Feedback
-                    from administrative staff also influenced revisions — for
-                    example, simplifying language or prioritising practical
-                    marking workflows over advanced features. These
-                    contributions frequently drew my attention to areas I might
-                    not have identified alone, reinforcing the importance of
-                    team-based evaluation.
+                    instructions and examples for different contexts. For
+                    instance, colleagues reviewing the LMS test scripts reported
+                    that one case — requiring users to set up and submit
+                    assignments just to generate log entries — was too
+                    time-consuming in a sandbox environment. Based on this
+                    feedback, I revised the script so that testers could instead
+                    demonstrate that a detailed audit log for an individual user
+                    was shown. This adjustment made the test more flexible and
+                    scalable, while still achieving the goal of verifying
+                    assignment submissions. Feedback from administrative staff
+                    also influenced revisions — for example, simplifying
+                    language or prioritising practical marking workflows over
+                    advanced features. These contributions frequently drew my
+                    attention to areas I might not have identified alone,
+                    reinforcing the importance of team-based evaluation.
                 </p>
 
                 <p>
@@ -254,6 +262,11 @@ export default function page() {
                     <li>
                         Advocated for usability, clarity, and sustainability in
                         every stage of the deployment process
+                    </li>
+                    <li>
+                        Worked collaboratively with colleagues through team
+                        testing and pilot sessions, adapting resources in
+                        response to feedback and improving adoption outcomes
                     </li>
                 </ul>
             </section>
