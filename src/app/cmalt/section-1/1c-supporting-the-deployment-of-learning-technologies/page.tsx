@@ -58,30 +58,19 @@ export default function page() {
                 </p>
 
                 <p>
-                    Most recently, in July 2025, I published a blog post titled{" "}
+                    In June 2021 — just before Microsoft retired Skype for
+                    Business — I authored a{" "}
                     <a
-                        href={blackboardSwaggerPostmanCollectionLink}
+                        href={microsoftTeamsFaq}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Using Blackboard&apos;s Swagger File to Create a Postman
-                        Collection and Make an API Call
-                    </a>
-                    . This guide was informed by testing work I contributed to
-                    as part of the{" "}
-                    <a
-                        href={deppProjectLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Digital Education Platform Project (DEPP)
-                    </a>
-                    , which explored the adoption of new LMS platforms. In the
-                    blog&apos;s &ldquo;Step 4: Request an Access Token&ldquo;, I
-                    reference a script adapted from one I originally developed
-                    to authenticate with Learnlight&apos;s bespoke language
-                    learning platform — demonstrating how techniques from
-                    previous roles fed into current work.
+                        Microsoft Teams FAQ
+                    </a>{" "}
+                    to support trainers through the institutional transition to
+                    Teams. I also created a video walkthrough,{" "}
+                    <em>Microsoft Teams Guide</em>, which was used to deliver
+                    asynchronous training.
                 </p>
 
                 <p>
@@ -126,19 +115,30 @@ export default function page() {
                 </figure>
 
                 <p>
-                    Earlier still, in June 2021 — just before Microsoft retired
-                    Skype for Business — I authored a{" "}
+                    Most recently, in July 2025, I published a blog post titled{" "}
                     <a
-                        href={microsoftTeamsFaq}
+                        href={blackboardSwaggerPostmanCollectionLink}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Microsoft Teams FAQ
-                    </a>{" "}
-                    to support trainers through the institutional transition to
-                    Teams. I also created a video walkthrough,{" "}
-                    <em>Microsoft Teams Guide</em>, which was used to deliver
-                    asynchronous training.
+                        Using Blackboard&apos;s Swagger File to Create a Postman
+                        Collection and Make an API Call
+                    </a>
+                    . This guide was informed by testing work I contributed to
+                    as part of the{" "}
+                    <a
+                        href={deppProjectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Digital Education Platform Project (DEPP)
+                    </a>
+                    , which explored the adoption of new LMS platforms. In the
+                    blog&apos;s &ldquo;Step 4: Request an Access Token&ldquo;, I
+                    reference a script adapted from one I originally developed
+                    to authenticate with Learnlight&apos;s bespoke language
+                    learning platform — demonstrating how techniques from
+                    previous roles fed into current work.
                 </p>
             </section>
 
