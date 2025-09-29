@@ -36,38 +36,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="2a: An Understanding of Teaching, Learning and/or Assessment Processes"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-29"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Statements here might relate to areas such as teaching
-                    experience, learning design, curriculum development,
-                    work-based assessment, the creation and execution of a
-                    programme of training, and so on.
-                </p>
-
-                <p>
-                    Evidence might include being on the register of the Higher
-                    Education Academy, a PGCE award or other relevant
-                    postgraduate qualification, evidence of relevant
-                    professional development courses or portfolios. Commentaries
-                    from peers on your approach would also provide suitable
-                    evidence. Other possibilities include teaching experience,
-                    reflective statements that analyse experience in terms of
-                    learning theory, pedagogical approaches, sociological
-                    theories, or a comparable, recognised perspective (include
-                    relevant citations). In relation to learning design, a
-                    report, specification or reflective statement might be
-                    provided that clearly elaborates the principles that
-                    informed the design process. There must be some
-                    consideration of how technology is changing / impacting upon
-                    approaches to teaching and learning and/or the roles of
-                    learners, teachers and support staff in your context.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
