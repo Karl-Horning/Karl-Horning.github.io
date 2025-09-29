@@ -22,31 +22,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="1c: Supporting the Deployment of Learning Technologies"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-29"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Statements about your involvement in supporting the
-                    deployment of Learning Technology might relate to providing
-                    technical and/or pedagogic support to teachers or learners,
-                    advising on (or redesigning to take account of) technical
-                    and usability issues, developing strategies or policies,
-                    managing change, providing training or other forms of
-                    professional development, securing or deploying dedicated
-                    funding and so on, all within the context of the educational
-                    use of Learning Technology.
-                </p>
-
-                <p>
-                    For evidence, you might include the overview section of a
-                    strategy document, meeting minutes, summaries of student
-                    feedback, testimonials or witness statements from other
-                    colleagues.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
@@ -58,30 +35,19 @@ export default function page() {
                 </p>
 
                 <p>
-                    Most recently, in July 2025, I published a blog post titled{" "}
+                    In June 2021 — just before Microsoft retired Skype for
+                    Business — I authored a{" "}
                     <a
-                        href={blackboardSwaggerPostmanCollectionLink}
+                        href={microsoftTeamsFaq}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Using Blackboard&apos;s Swagger File to Create a Postman
-                        Collection and Make an API Call
-                    </a>
-                    . This guide was informed by testing work I contributed to
-                    as part of the{" "}
-                    <a
-                        href={deppProjectLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Digital Education Platform Project (DEPP)
-                    </a>
-                    , which explored the adoption of new LMS platforms. In the
-                    blog&apos;s &ldquo;Step 4: Request an Access Token&ldquo;, I
-                    reference a script adapted from one I originally developed
-                    to authenticate with Learnlight&apos;s bespoke language
-                    learning platform — demonstrating how techniques from
-                    previous roles fed into current work.
+                        Microsoft Teams FAQ
+                    </a>{" "}
+                    to support trainers through the institutional transition to
+                    Teams. I also created a video walkthrough,{" "}
+                    <em>Microsoft Teams Guide</em>, which was used to deliver
+                    asynchronous training.
                 </p>
 
                 <p>
@@ -126,19 +92,30 @@ export default function page() {
                 </figure>
 
                 <p>
-                    Earlier still, in June 2021 — just before Microsoft retired
-                    Skype for Business — I authored a{" "}
+                    Most recently, in July 2025, I published a blog post titled{" "}
                     <a
-                        href={microsoftTeamsFaq}
+                        href={blackboardSwaggerPostmanCollectionLink}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Microsoft Teams FAQ
-                    </a>{" "}
-                    to support trainers through the institutional transition to
-                    Teams. I also created a video walkthrough,{" "}
-                    <em>Microsoft Teams Guide</em>, which was used to deliver
-                    asynchronous training.
+                        Using Blackboard&apos;s Swagger File to Create a Postman
+                        Collection and Make an API Call
+                    </a>
+                    . This guide was informed by testing work I contributed to
+                    as part of the{" "}
+                    <a
+                        href={deppProjectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Digital Education Platform Project (DEPP)
+                    </a>
+                    , which explored the adoption of new LMS platforms. In the
+                    blog&apos;s &ldquo;Step 4: Request an Access Token&ldquo;, I
+                    reference a script adapted from one I originally developed
+                    to authenticate with Learnlight&apos;s bespoke language
+                    learning platform — demonstrating how techniques from
+                    previous roles fed into current work.
                 </p>
             </section>
 
@@ -194,23 +171,38 @@ export default function page() {
                 </p>
 
                 <p>
-                    I&apos;ve also learned that successful technology adoption
-                    often hinges on staff confidence and institutional context.
-                    Through LMS evaluation work, I&apos;ve seen how simplifying
-                    language, aligning examples with actual marking workflows,
-                    and considering accessibility at all stages can make a
-                    significant difference to adoption rates. Feedback from
-                    academic and administrative colleagues has frequently
-                    prompted revisions — for example, prioritising ease of use
-                    over advanced functionality where appropriate.
+                    Much of this work was inherently collaborative. In the DEPP
+                    project, I worked closely with other learning technologists,
+                    developers, and colleagues during platform evaluation.
+                    Internal team testing sessions highlighted both technical
+                    issues and usability challenges, leading us to adapt
+                    instructions and examples for different contexts. For
+                    instance, colleagues reviewing the LMS test scripts reported
+                    that one case — requiring users to set up and submit
+                    assignments just to generate log entries — was too
+                    time-consuming in a sandbox environment. Based on this
+                    feedback, I revised the script so that testers could instead
+                    demonstrate that a detailed audit log for an individual user
+                    was shown. This adjustment made the test more flexible and
+                    scalable, while still achieving the goal of verifying
+                    assignment submissions. Feedback from administrative staff
+                    also influenced revisions — for example, simplifying
+                    language or prioritising practical marking workflows over
+                    advanced features. These contributions frequently drew my
+                    attention to areas I might not have identified alone,
+                    reinforcing the importance of team-based evaluation.
                 </p>
 
                 <p>
                     Supporting deployment now feels like an empathetic,
                     iterative process — one that blends technical clarity with a
-                    deep understanding of staff needs. I now approach training
-                    and resource development with this mindset, aiming not just
-                    to instruct but to support learning in the broader sense.
+                    deep understanding of staff needs. Collaboration has been
+                    key to this: co-developing resources, running pilot
+                    sessions, and integrating structured team feedback has
+                    consistently improved the quality and uptake of the
+                    materials I produce. I now approach training and resource
+                    development with this mindset, aiming not just to instruct
+                    but to support learning in the broader sense.
                 </p>
             </section>
 
@@ -247,6 +239,11 @@ export default function page() {
                     <li>
                         Advocated for usability, clarity, and sustainability in
                         every stage of the deployment process
+                    </li>
+                    <li>
+                        Worked collaboratively with colleagues through team
+                        testing and pilot sessions, adapting resources in
+                        response to feedback and improving adoption outcomes
                     </li>
                 </ul>
             </section>
