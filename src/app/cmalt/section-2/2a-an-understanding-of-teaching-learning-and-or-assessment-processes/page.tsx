@@ -529,6 +529,52 @@ export default function page() {
                             effectiveness in supporting professional learning.
                         </em>
                     </li>
+                    <li>
+                        <a
+                            href={ebbinghausForgettingCurve}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ebbinghaus&apos; Forgetting Curve (Diagram)
+                        </a>{" "}
+                        <em>
+                            Created and used to illustrate the role of spaced
+                            repetition and retrieval practice in course design,
+                            showing application of memory theory to teaching
+                            practice.
+                        </em>
+                    </li>
+
+                    <li>
+                        <a
+                            href={kolbLearningCycle}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Kolb&apos;s Experiential Learning Cycle (Diagram)
+                        </a>{" "}
+                        <em>
+                            Adapted visual used to structure reflection on needs
+                            assessments, showing how experiential learning
+                            theory underpinned learner goal-setting and
+                            curriculum adaptation.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={deppIctPresentation}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            DEPP ICT Presentation (Slides)
+                        </a>{" "}
+                        <em>
+                            Demonstrates application of accessibility principles
+                            in a higher education context, aligning personal
+                            practice with Imperial&apos;s published guidance on
+                            accessible PowerPoint design.
+                        </em>
+                    </li>
                 </ul>
             </section>
 
