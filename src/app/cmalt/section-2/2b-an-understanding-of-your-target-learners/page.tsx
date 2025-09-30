@@ -182,6 +182,22 @@ export default function page() {
                 </p>
 
                 <p>
+                    Learners frequently commented that the focus on realistic
+                    tasks (such as presentations and meetings) directly improved
+                    their confidence at work. For instance, one learner later
+                    reported that they successfully gave a regional presentation
+                    with questions and answers after practising through
+                    scaffolded roleplays. This success highlighted the value of
+                    scenario-based tasks, but I also recognised that supporting
+                    these tasks required more focused language input. The same
+                    principle shapes my staff training at Imperial: I prioritise
+                    practice in real scenarios — such as using Canvas analytics
+                    to evaluate engagement — so that colleagues leave sessions
+                    with applied confidence rather than only theoretical
+                    knowledge.
+                </p>
+
+                <p>
                     Previously, I relied on comprehensive lists of topic-based
                     vocabulary, assuming volume equated to value. However,
                     learners struggled to retain and apply this material. Based
@@ -189,6 +205,11 @@ export default function page() {
                     approach to provide shorter, situation-specific vocabulary
                     lists followed by immediate application in roleplay or
                     dialogue. This improved learner recall and confidence.
+                    Similarly, when designing training at Imperial, I break down
+                    complex technical features into smaller, task-specific
+                    activities. This mirrors the way shorter vocabulary sets
+                    once helped language learners, ensuring that staff can
+                    absorb key concepts without cognitive overload.
                 </p>
 
                 <p>
@@ -231,6 +252,19 @@ export default function page() {
                         continuously re-evaluated
                     </strong>
                     .
+                </p>
+
+                <p>
+                    Building directly on these earlier insights, these same
+                    learner-centred approaches now inform my current practice at
+                    Imperial. For example, in preparing Canvas training for
+                    staff, I have emphasised scenario-based activities (for
+                    example, using analytics) rather than abstract feature
+                    lists, mirroring the workplace-focused roleplays I once used
+                    with English learners. This ensures staff are confident
+                    applying the tools in their own contexts, rather than
+                    passively hearing about functionality without having the
+                    opportunity to practice.
                 </p>
             </section>
 
