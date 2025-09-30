@@ -21,25 +21,6 @@ export default function Page() {
             title="Section 2: Learning, Teaching and Assessment Processes"
             lastUpdated="2025-07-24"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Candidates should demonstrate their understanding of and
-                    engagement with teaching, learning and assessment processes.
-                    &apos;Engagement&apos; may include using understanding to
-                    inform the development, adaptation or application of
-                    technology.
-                </p>
-
-                <p>
-                    Note that your learners are the people with whom you work.
-                    For teaching staff this will typically be students. For many
-                    learning technologists this may be students or the staff
-                    that you support and train.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
