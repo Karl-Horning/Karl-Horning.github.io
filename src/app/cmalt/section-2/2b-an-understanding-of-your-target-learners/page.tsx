@@ -20,30 +20,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="2b: An Understanding of Your Target Learners"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-30"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Statements should show how you have found out about
-                    learners&apos; needs and the context for their studies, and
-                    how you have developed approaches that reflect this.
-                </p>
-
-                <p>
-                    Evidence might include a description of how assistive
-                    technologies have been used to support disabled students,
-                    how learner feedback has influenced the design of an
-                    e-portfolio, how the needs of work-based learners or
-                    overseas students have shaped the curriculum, or records of
-                    conversations with product analysts, marketing departments
-                    or course teams and the resulting plans for your design.
-                    Evidence of changed practice, rather than simply the
-                    recognition that this is an important area, is required.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
