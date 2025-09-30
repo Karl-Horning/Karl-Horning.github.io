@@ -120,6 +120,8 @@ export const cmaltEvidence = {
     documents: {
         designingAnEnglishCourse:
             "/cmalt/documents/designing-a-bespoke-english-course-for-professionals.pdf",
+        exampleFeedbackCompleteFull:
+            "/cmalt/documents/example-feedback-complete-full.md",
         firstSessionQuestions: "/cmalt/documents/first-session-questions.pdf",
         microsoftTeamsFaq:
             "/cmalt/documents/microsoft-teams-faq-company-info-removed.pdf",
@@ -165,7 +167,8 @@ export const cmaltEvidence = {
 
     /** Screenshots used to demonstrate functionality or achievements */
     screenshots: {
-        colourAccessibilityUserStories: "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png",
+        colourAccessibilityUserStories:
+            "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png",
         dpaScreenshot: "/cmalt/screenshots/dpa-screenshot.png",
         editingSubtitlesScreenshot:
             "/cmalt/screenshots/editing-subtitles-screenshot.png",

@@ -5,7 +5,11 @@ import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
 const { documents } = cmaltEvidence;
-const { designingAnEnglishCourse, firstSessionQuestions } = documents;
+const {
+    designingAnEnglishCourse,
+    exampleFeedbackCompleteFull,
+    firstSessionQuestions,
+} = documents;
 
 export const metadata = createMetadata({
     title: "2b: An Understanding of Your Target Learners | CMALT",
@@ -122,42 +126,38 @@ export default function page() {
                     Italian). To address this, I gave the following explanation:
                 </p>
 
-                <blockquote>
-                    <h3>Example Feedback</h3>
-                    <h4>Complete &amp; Full</h4>
-                    <h5>complete (whole)</h5>
-                    <p>
-                        &apos;Complete&apos; is usually used to mean{" "}
-                        <em>whole</em> (containing all the parts or pieces):
-                    </p>
-                    <ul>
-                        <li>
-                            A <em>complete</em> set of dishes.
-                        </li>
-                        <li>
-                            The <em>complete</em> works of Dickens.
-                        </li>
-                    </ul>
-                    <h4>full (no more space)</h4>
-                    <p>
-                        &apos;Full&apos; is usually used to mean that a space
-                        holds or contains <em>as much as possible</em>;
-                        it&apos;s filled up:
-                    </p>
-                    <ul>
-                        <li>
-                            This cup is <em>very full</em> so be careful with
-                            it.
-                        </li>
-                        <li>
-                            My plate was already <em>full</em>.
-                        </li>
-                        <li>
-                            I tried to get into the cinema last night but it was{" "}
-                            <em>full</em>.
-                        </li>
-                    </ul>
-                </blockquote>
+                <h3>Example Feedback: Complete &amp; Full</h3>
+
+                <h4>complete (whole)</h4>
+                <p>
+                    &apos;Complete&apos; is usually used to mean <em>whole</em>{" "}
+                    (containing all the parts or pieces):
+                </p>
+                <ul>
+                    <li>
+                        A <em>complete</em> set of dishes.
+                    </li>
+                    <li>
+                        The <em>complete</em> works of Dickens.
+                    </li>
+                </ul>
+                <h4>full (no more space)</h4>
+                <p>
+                    &apos;Full&apos; is usually used to mean that a space holds
+                    or contains <em>as much as possible</em>:
+                </p>
+                <ul>
+                    <li>
+                        This cup is <em>very full</em> so be careful with it.
+                    </li>
+                    <li>
+                        My plate was already <em>full</em>.
+                    </li>
+                    <li>
+                        I tried to get into the cinema last night but it was{" "}
+                        <em>full</em>.
+                    </li>
+                </ul>
 
                 <p>
                     This level of detail helped learners build not only
@@ -340,6 +340,20 @@ export default function page() {
                             outlines that reflect input from needs analysis and
                             demonstrate how learning objectives align with
                             workplace scenarios.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={exampleFeedbackCompleteFull}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Example Feedback: Complete & Full (Markdown)
+                        </a>{" "}
+                        <em>
+                            Example of personalised written feedback given to
+                            learners, demonstrating attention to false friends
+                            and nuanced vocabulary.
                         </em>
                     </li>
                 </ul>
