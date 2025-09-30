@@ -1,4 +1,4 @@
-import { cmaltSections } from "@/constants/cmalt";
+import { cmaltSections } from "@/lib/constants/cmalt";
 
 /**
  * A node in the CMALT section hierarchy.

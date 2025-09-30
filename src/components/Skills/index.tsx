@@ -1,6 +1,6 @@
 import SkillsCard from "@/components/Skills/SkillsCard";
 import Section from "@/components/Section";
-import { homeSkills } from "@/constants/home";
+import { homeSkills } from "@/lib/constants/home";
 
 /**
  * A section component that displays a grid of skill cards with icons.

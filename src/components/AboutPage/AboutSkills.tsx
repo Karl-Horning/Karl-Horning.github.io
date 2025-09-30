@@ -1,4 +1,4 @@
-import { aboutSkills } from "@/constants/about";
+import { aboutSkills } from "@/lib/constants/about";
 
 /**
  * A visual skills grid component used on the About page.

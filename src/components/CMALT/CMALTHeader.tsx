@@ -1,4 +1,4 @@
-import { icons } from "@/constants/icons";
+import { icons } from "@/lib/constants/icons";
 const { CalendarIcon, ClockIcon } = icons;
 
 interface CMALTHeaderProps {

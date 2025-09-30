@@ -1,8 +1,8 @@
 import ContactForm from "@/components/ContactPage/ContactForm";
 import ContactIntro from "@/components/ContactPage/ContactIntro";
-import { internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/lib/constants/links";
 import { createMetadata } from "@/lib/metadata";
-import { jsonLdContact } from "@/constants/jsonLd";
+import { jsonLdContact } from "@/lib/constants/jsonLd";
 
 const { ContactRoute } = internalRoutes;
 

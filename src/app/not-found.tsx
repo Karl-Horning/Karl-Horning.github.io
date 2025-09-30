@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import { createMetadata } from "@/lib/metadata";
 import Link from "next/link";
-import { internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/lib/constants/links";
 
 const { HomeRoute } = internalRoutes;
 

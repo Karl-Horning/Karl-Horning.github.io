@@ -1,4 +1,4 @@
-import { aboutBadges } from "@/constants/about";
+import { aboutBadges } from "@/lib/constants/about";
 import Image from "next/image";
 
 /**

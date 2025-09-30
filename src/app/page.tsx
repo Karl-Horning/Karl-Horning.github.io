@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 
 import { createMetadata } from "@/lib/metadata";
-import { internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/lib/constants/links";
 
 const { HomeRoute } = internalRoutes;
 

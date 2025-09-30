@@ -1,5 +1,5 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
-import { internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/lib/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;

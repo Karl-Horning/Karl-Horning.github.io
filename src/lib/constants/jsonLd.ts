@@ -1,5 +1,5 @@
 import { externalLinks, internalRoutes } from "./links";
-import { seo } from "@/constants/seo";
+import { seo } from "@/lib/constants/seo";
 
 const { ContactRoute } = internalRoutes;
 const { CodePenLink, GitHubLink, LinkedInLink } = externalLinks;

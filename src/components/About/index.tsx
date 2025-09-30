@@ -1,6 +1,6 @@
 import ButtonLink from "@/components/Buttons/ButtonLink";
 import Section from "@/components/Section";
-import { internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/lib/constants/links";
 
 const { AboutRoute } = internalRoutes;
 
