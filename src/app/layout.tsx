@@ -49,7 +49,7 @@ export default function RootLayout({
                     href="/android-chrome-512x512.png"
                 />
             </head>
-            <body className="text-foreground flex min-h-screen flex-col bg-background font-sans">
+            <body className="flex min-h-screen flex-col bg-slate-50  font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
                 <a
                     href="#main"
                     className="sr-only rounded bg-primary px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50"
