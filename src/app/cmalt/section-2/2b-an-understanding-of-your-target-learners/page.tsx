@@ -5,7 +5,11 @@ import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;
 const { documents } = cmaltEvidence;
-const { designingAnEnglishCourse, firstSessionQuestions } = documents;
+const {
+    designingAnEnglishCourse,
+    exampleFeedbackCompleteFull,
+    firstSessionQuestions,
+} = documents;
 
 export const metadata = createMetadata({
     title: "2b: An Understanding of Your Target Learners | CMALT",
@@ -16,30 +20,8 @@ export default function page() {
     return (
         <CMALTLayout
             title="2b: An Understanding of Your Target Learners"
-            lastUpdated="2025-07-24"
+            lastUpdated="2025-09-30"
         >
-            <section id="cmalt-guidance">
-                <h2>CMALT Guidance</h2>
-
-                <p>
-                    Statements should show how you have found out about
-                    learners&apos; needs and the context for their studies, and
-                    how you have developed approaches that reflect this.
-                </p>
-
-                <p>
-                    Evidence might include a description of how assistive
-                    technologies have been used to support disabled students,
-                    how learner feedback has influenced the design of an
-                    e-portfolio, how the needs of work-based learners or
-                    overseas students have shaped the curriculum, or records of
-                    conversations with product analysts, marketing departments
-                    or course teams and the resulting plans for your design.
-                    Evidence of changed practice, rather than simply the
-                    recognition that this is an important area, is required.
-                </p>
-            </section>
-
             <section id="description">
                 <h2>Description</h2>
 
@@ -105,7 +87,7 @@ export default function page() {
                 <p>
                     I also sent preparatory materials at least five working days
                     before each lesson, allowing learners time to engage in
-                    advance, which helped reduce anxiety and boost
+                    advance of sessions, which helped reduce anxiety and boost
                     participation.
                 </p>
 
@@ -122,42 +104,38 @@ export default function page() {
                     Italian). To address this, I gave the following explanation:
                 </p>
 
-                <blockquote>
-                    <h3>Example Feedback</h3>
-                    <h4>Complete &amp; Full</h4>
-                    <h5>complete (whole)</h5>
-                    <p>
-                        &apos;Complete&apos; is usually used to mean{" "}
-                        <em>whole</em> (containing all the parts or pieces):
-                    </p>
-                    <ul>
-                        <li>
-                            A <em>complete</em> set of dishes.
-                        </li>
-                        <li>
-                            The <em>complete</em> works of Dickens.
-                        </li>
-                    </ul>
-                    <h4>full (no more space)</h4>
-                    <p>
-                        &apos;Full&apos; is usually used to mean that a space
-                        holds or contains <em>as much as possible</em>;
-                        it&apos;s filled up:
-                    </p>
-                    <ul>
-                        <li>
-                            This cup is <em>very full</em> so be careful with
-                            it.
-                        </li>
-                        <li>
-                            My plate was already <em>full</em>.
-                        </li>
-                        <li>
-                            I tried to get into the cinema last night but it was{" "}
-                            <em>full</em>.
-                        </li>
-                    </ul>
-                </blockquote>
+                <h3>Example Feedback: Complete &amp; Full</h3>
+
+                <h4>complete (whole)</h4>
+                <p>
+                    &apos;Complete&apos; is usually used to mean <em>whole</em>{" "}
+                    (containing all the parts or pieces):
+                </p>
+                <ul>
+                    <li>
+                        A <em>complete</em> set of dishes.
+                    </li>
+                    <li>
+                        The <em>complete</em> works of Dickens.
+                    </li>
+                </ul>
+                <h4>full (no more space)</h4>
+                <p>
+                    &apos;Full&apos; is usually used to mean that a space holds
+                    or contains <em>as much as possible</em>:
+                </p>
+                <ul>
+                    <li>
+                        This cup is <em>very full</em> so be careful with it.
+                    </li>
+                    <li>
+                        My plate was already <em>full</em>.
+                    </li>
+                    <li>
+                        I tried to get into the cinema last night but it was{" "}
+                        <em>full</em>.
+                    </li>
+                </ul>
 
                 <p>
                     This level of detail helped learners build not only
@@ -182,6 +160,22 @@ export default function page() {
                 </p>
 
                 <p>
+                    Learners frequently commented that the focus on realistic
+                    tasks (such as presentations and meetings) directly improved
+                    their confidence at work. For instance, one learner later
+                    reported that they successfully gave a regional presentation
+                    with questions and answers after practising through
+                    scaffolded roleplays. This success highlighted the value of
+                    scenario-based tasks, but I also recognised that supporting
+                    these tasks required more focused language input. The same
+                    principle shapes my staff training at Imperial: I prioritise
+                    practice in real scenarios — such as using Canvas analytics
+                    to evaluate engagement — so that colleagues leave sessions
+                    with applied confidence rather than only theoretical
+                    knowledge.
+                </p>
+
+                <p>
                     Previously, I relied on comprehensive lists of topic-based
                     vocabulary, assuming volume equated to value. However,
                     learners struggled to retain and apply this material. Based
@@ -189,6 +183,11 @@ export default function page() {
                     approach to provide shorter, situation-specific vocabulary
                     lists followed by immediate application in roleplay or
                     dialogue. This improved learner recall and confidence.
+                    Similarly, when designing training at Imperial, I break down
+                    complex technical features into smaller, task-specific
+                    activities. This mirrors the way shorter vocabulary sets
+                    once helped language learners, ensuring that staff can
+                    absorb key concepts without cognitive overload.
                 </p>
 
                 <p>
@@ -232,6 +231,26 @@ export default function page() {
                     </strong>
                     .
                 </p>
+
+                <p>
+                    These findings also inform my Imperial training design —
+                    using scenario-based tasks and mid-course feedback cycles to
+                    maintain relevance and support confidence in authentic
+                    contexts.
+                </p>
+
+                <p>
+                    Building directly on these earlier insights, these same
+                    learner-centred approaches now inform my current practice at
+                    Imperial. For example, in preparing Canvas training for
+                    staff, I have emphasised scenario-based activities (for
+                    example, using analytics) rather than abstract feature
+                    lists, mirroring the workplace-focused roleplays I once used
+                    with English learners. This ensures staff are confident
+                    applying the tools in their own contexts, rather than
+                    passively hearing about functionality without opportunities
+                    to practise.
+                </p>
             </section>
 
             <section id="summary">
@@ -266,6 +285,11 @@ export default function page() {
                         Aligned my teaching with sector recommendations to embed
                         real-world, scenario-based language use for
                         employability
+                    </li>
+                    <li>
+                        Applied these learner-centred strategies in staff
+                        training at Imperial (scenario-based Canvas activities,
+                        chunked tasks to reduce cognitive load).
                     </li>
                 </ul>
             </section>
@@ -306,6 +330,22 @@ export default function page() {
                             outlines that reflect input from needs analysis and
                             demonstrate how learning objectives align with
                             workplace scenarios.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={exampleFeedbackCompleteFull}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Example Feedback: Complete & Full (Markdown)
+                        </a>{" "}
+                        <em>
+                            Illustrates my approach to personalised written
+                            feedback, addressing false friends and nuanced
+                            usage. Shows how corrections were contextualised to
+                            build learner confidence, vocabulary, and practical
+                            application in workplace settings.
                         </em>
                     </li>
                 </ul>
