@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+    color-scheme: light dark;
     --font-inter: Inter, sans-serif;
     --font-poppins: Poppins, sans-serif;
     --font-rubik-glitch: "Rubik Glitch", cursive;
@@ -71,6 +72,23 @@ h6 {
 }
 
 @layer components {
+    .hero-bg {
+        background:
+            radial-gradient(
+                60% 60% at 15% -10%,
+                rgba(203, 45, 111, 0.12),
+                transparent
+            ),
+            radial-gradient(
+                60% 60% at 85% 110%,
+                rgba(76, 157, 205, 0.12),
+                transparent
+            );
+    }
+    .glass {
+        backdrop-filter: blur(8px);
+    }
+
     .cmalt-title {
         font-size: 1.875rem; /* mobile default */
         line-height: 1.2;

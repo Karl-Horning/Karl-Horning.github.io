@@ -50,8 +50,16 @@ export default function RootLayout({
                 />
             </head>
             <body className="text-foreground flex min-h-screen flex-col bg-background font-sans">
+                <a
+                    href="#main"
+                    className="sr-only rounded bg-primary px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50"
+                >
+                    Skip to content
+                </a>
                 <Navbar />
-                <main className="flex-1 pt-16">{children}</main>
+                <main id="main" className="flex-1 pt-16">
+                    {children}
+                </main>
                 <Footer />
             </body>
         </html>
