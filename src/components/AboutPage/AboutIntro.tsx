@@ -1,4 +1,4 @@
-import { internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/lib/constants/links";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 
 const { ContactRoute } = internalRoutes;

@@ -1,4 +1,4 @@
-import { assets } from "@/constants/assets";
+import { assets } from "@/lib/constants/assets";
 import Image from "next/image";
 
 /**

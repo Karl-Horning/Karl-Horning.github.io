@@ -1,6 +1,6 @@
 import Section from "../Section";
-import { externalLinks } from "@/constants/links";
-import { icons } from "@/constants/icons";
+import { externalLinks } from "@/lib/constants/links";
+import { icons } from "@/lib/constants/icons";
 
 const { ExternalLinkIcon } = icons;
 const { LinkedInLink } = externalLinks;

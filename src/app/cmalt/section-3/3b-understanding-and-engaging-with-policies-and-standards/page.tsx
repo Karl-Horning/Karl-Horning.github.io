@@ -1,7 +1,7 @@
 import FigureWithCaption from "@/components/FigureWithCaption";
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
-import { cmaltEvidence } from "@/constants/cmalt";
-import { internalRoutes } from "@/constants/links";
+import { cmaltEvidence } from "@/lib/constants/cmalt";
+import { internalRoutes } from "@/lib/constants/links";
 import { createMetadata } from "@/lib/metadata";
 
 const { CmaltRoute } = internalRoutes;

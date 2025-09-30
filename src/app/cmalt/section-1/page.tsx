@@ -1,6 +1,6 @@
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
-import { cmaltSections } from "@/constants/cmalt";
-import { internalRoutes } from "@/constants/links";
+import { cmaltSections } from "@/lib/constants/cmalt";
+import { internalRoutes } from "@/lib/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import Link from "next/link";
 

@@ -3,9 +3,9 @@ import AboutIntro from "@/components/AboutPage/AboutIntro";
 import AboutValues from "@/components/AboutPage/AboutValues";
 import AboutSkills from "@/components/AboutPage/AboutSkills";
 import AboutBadges from "@/components/AboutPage/AboutBadges";
-import { internalRoutes } from "@/constants/links";
+import { internalRoutes } from "@/lib/constants/links";
 import { createMetadata } from "@/lib/metadata";
-import { jsonLdAbout } from "@/constants/jsonLd";
+import { jsonLdAbout } from "@/lib/constants/jsonLd";
 import AboutInstitutions from "@/components/AboutPage/AboutInstitutions";
 import AboutTechnologies from "@/components/AboutPage/AboutTechnologies";
 

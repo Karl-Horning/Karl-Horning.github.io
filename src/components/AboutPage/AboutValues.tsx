@@ -1,4 +1,4 @@
-import { aboutValues } from "@/constants/about";
+import { aboutValues } from "@/lib/constants/about";
 
 /**
  * A presentational component that displays a list of personal values.

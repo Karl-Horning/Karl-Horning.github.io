@@ -1,4 +1,4 @@
-import { aboutTechnologies } from "@/constants/about";
+import { aboutTechnologies } from "@/lib/constants/about";
 import Image from "next/image";
 
 export default function AboutTechnologies() {

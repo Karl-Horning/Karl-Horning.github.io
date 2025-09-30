@@ -1,4 +1,4 @@
-import { aboutInstitutions } from "@/constants/about";
+import { aboutInstitutions } from "@/lib/constants/about";
 import Image from "next/image";
 
 /**

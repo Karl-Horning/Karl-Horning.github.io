@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { cmaltSections } from "@/constants/cmalt";
+import { cmaltSections } from "@/lib/constants/cmalt";
 import Link from "next/link";
 
 /**
