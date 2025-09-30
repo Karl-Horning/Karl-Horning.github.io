@@ -87,7 +87,7 @@ export default function page() {
                 <p>
                     I also sent preparatory materials at least five working days
                     before each lesson, allowing learners time to engage in
-                    advance, which helped reduce anxiety and boost
+                    advance of sessions, which helped reduce anxiety and boost
                     participation.
                 </p>
 
@@ -233,6 +233,13 @@ export default function page() {
                 </p>
 
                 <p>
+                    These findings also inform my Imperial training design —
+                    using scenario-based tasks and mid-course feedback cycles to
+                    maintain relevance and support confidence in authentic
+                    contexts.
+                </p>
+
+                <p>
                     Building directly on these earlier insights, these same
                     learner-centred approaches now inform my current practice at
                     Imperial. For example, in preparing Canvas training for
@@ -241,8 +248,8 @@ export default function page() {
                     lists, mirroring the workplace-focused roleplays I once used
                     with English learners. This ensures staff are confident
                     applying the tools in their own contexts, rather than
-                    passively hearing about functionality without having the
-                    opportunity to practice.
+                    passively hearing about functionality without opportunities
+                    to practise.
                 </p>
             </section>
 
@@ -278,6 +285,11 @@ export default function page() {
                         Aligned my teaching with sector recommendations to embed
                         real-world, scenario-based language use for
                         employability
+                    </li>
+                    <li>
+                        Applied these learner-centred strategies in staff
+                        training at Imperial (scenario-based Canvas activities,
+                        chunked tasks to reduce cognitive load).
                     </li>
                 </ul>
             </section>
@@ -329,9 +341,11 @@ export default function page() {
                             Example Feedback: Complete & Full (Markdown)
                         </a>{" "}
                         <em>
-                            Example of personalised written feedback given to
-                            learners, demonstrating attention to false friends
-                            and nuanced vocabulary.
+                            Illustrates my approach to personalised written
+                            feedback, addressing false friends and nuanced
+                            usage. Shows how corrections were contextualised to
+                            build learner confidence, vocabulary, and practical
+                            application in workplace settings.
                         </em>
                     </li>
                 </ul>
