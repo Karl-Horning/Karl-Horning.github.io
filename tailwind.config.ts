@@ -22,6 +22,8 @@ const config: Config = {
                 black: "#2d292d",
                 "custom-red": "#da4453",
                 primary: "#e93681", // vibrant pink/red
+                secondary: "#4C9DCD",
+                navy: "#163753",
                 accent: "#14a098", // teal accent
                 highlight: "#148aad", // teal for emphasis
                 background: "#0f292f", // main background
@@ -33,7 +35,7 @@ const config: Config = {
             },
         },
     },
-    darkMode: "class",
+    darkMode: "media",
     safelist: [
         "bg-amber-600",
         "bg-blue-700",
