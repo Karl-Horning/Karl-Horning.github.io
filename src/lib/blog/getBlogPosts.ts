@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { BlogPost } from "@/types/blog";
+import { BlogPost } from "@/types/BlogItem";
 
 /**
  * Reads a limited number of blog posts from a static JSON file served in the `/public/data` directory.

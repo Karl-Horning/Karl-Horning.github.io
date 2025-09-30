@@ -1,5 +1,5 @@
 import { icons } from "./icons";
-import { Skill } from "@/types/about";
+import { Skill } from "@/types/AboutItem";
 
 const { AccessibilityIcon, ApiIcon, DatabaseIcon, JavaScriptIcon } = icons;
 

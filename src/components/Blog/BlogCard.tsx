@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BlogPost } from "@/types/blog";
+import { BlogPost } from "@/types/BlogItem";
 
 /**
  * A card component to display a blog post preview including title, date, snippet,

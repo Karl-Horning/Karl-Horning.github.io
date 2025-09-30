@@ -1,5 +1,5 @@
 import { icons } from "@/lib/constants/icons";
-import { LogoItem, Skill, Value } from "@/types/about";
+import { LogoItem, Skill, Value } from "@/types/AboutItem";
 
 const {
     AccessibilityIcon,
