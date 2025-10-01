@@ -18,7 +18,7 @@ const { HireMeIcon } = icons;
  */
 export default function Skills() {
     return (
-        <section id="skills" className="mx-auto max-w-6xl px-4 py-20">
+        <section id="skills" className="mx-auto max-w-6xl px-4 pt-20">
             <div className="flex items-end justify-between gap-6">
                 <h2 className="text-2xl font-bold tracking-tight">Skills</h2>
                 <ButtonLink
