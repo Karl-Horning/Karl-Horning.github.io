@@ -10,6 +10,7 @@
     --black: #2d292d;
     --custom-red: #da4453;
     --primary: #cb2d6f;
+    --secondary: #3c7da4;
     --accent: #14a098;
     --highlight: #148aad;
     --background: #0f292f;
@@ -18,6 +19,12 @@
     --hero: #0b1d21;
     --text: #cccccc;
     --muted: #b3b3b3;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --secondary: #4c9dcd;
+    }
 }
 
 ::selection {
