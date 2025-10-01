@@ -5,7 +5,7 @@ const { AccessibilityIcon, ApiIcon, HigherEducationIcon, PerformanceIcon } =
     icons;
 
 /**
- * Predefined highlight items representing key technical and professional skills.
+ * Predefined highlight icons representing key technical and professional skills.
  *
  * Each highlight includes:
  * - A human-readable name
@@ -13,14 +13,14 @@ const { AccessibilityIcon, ApiIcon, HigherEducationIcon, PerformanceIcon } =
  * - An associated SVG icon component
  * - Tailwind CSS classes for text and background colours
  *
- * These items are rendered in the `Highlights` component to display
+ * These icons are rendered in the `Highlights` component to display
  * a responsive grid of skill cards on the homepage.
  *
  * @remarks
  * The colour classes support both light and dark modes, using Tailwind's
  * `dark:` variants for dynamic theming.
  */
-export const HighlightItems: IconItem[] = [
+export const HighlightIcons: IconItem[] = [
     {
         name: "Accessibility-first",
         description: "WCAG-aware design, keyboard and screen-reader friendly.",

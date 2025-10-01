@@ -1,4 +1,4 @@
-import { HighlightItems } from "@/lib/constants/highlights";
+import { HighlightIcons } from "@/lib/constants/highlights";
 import HighlightsCard from "./HighlightsCard";
 
 /**
@@ -14,7 +14,7 @@ export default function Highlights() {
     return (
         <section id="highlights" className="mx-auto max-w-6xl px-4 pt-20">
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {HighlightItems.map(
+                {HighlightIcons.map(
                     ({
                         name,
                         description,
