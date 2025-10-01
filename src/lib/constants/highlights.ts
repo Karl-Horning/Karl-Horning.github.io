@@ -32,7 +32,7 @@ export const HighlightIcons: IconItem[] = [
         name: "API-driven",
         description: "REST/GraphQL, typed clients, tests and docs.",
         icon: ApiIcon,
-        bgColour: "bg-secondary/10 dark:bg-secondary/40",
+        bgColour: "bg-blue-600/10 dark:bg-blue-600/40",
         mainColour: "text-secondary dark:text-white",
     },
     {

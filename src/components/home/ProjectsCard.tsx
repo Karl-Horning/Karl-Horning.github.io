@@ -77,8 +77,8 @@ export default function ProjectsCard({
                 </div>
                 <IconBox
                     icon={<ProjectIcon />}
-                    bgColour="bg-secondary/10"
-                    mainColour="text-secondary"
+                    bgColour="bg-secondary"
+                    mainColour="text-white"
                 />
             </div>
             <p className="mt-3 text-sm leading-relaxed text-slate-700 dark:text-slate-300">

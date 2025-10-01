@@ -26,13 +26,13 @@ export default function Hero() {
                     <div className="mt-6 flex flex-wrap gap-2 text-xs">
                         <Pill
                             text="15+ yrs"
-                            mainColour="text-primary"
-                            bgColour="bg-primary/10"
+                            mainColour="text-slate-800 dark:text-slate-200"
+                            bgColour="bg-slate-200 dark:bg-slate-800"
                         />
                         <Pill
                             text="Accessibility-first"
-                            mainColour="text-secondary"
-                            bgColour="bg-secondary/10"
+                            mainColour="text-slate-800 dark:text-slate-200"
+                            bgColour="bg-slate-200 dark:bg-slate-800"
                         />
                         <Pill
                             text="API-driven"
