@@ -2,15 +2,12 @@ import { icons } from "@/lib/constants/icons";
 import { IconItem } from "@/types/IconItem";
 
 const {
-    AccessibilityIcon,
     GraphQlIcon,
     JavaScriptIcon,
     NodeJsIcon,
     PostgreSqlIcon,
     ReactIcon,
     TailwindIcon,
-    TestingIcon,
-    UsersIcon,
 } = icons;
 
 /**
@@ -28,55 +25,37 @@ export const SkillsIcons: IconItem[] = [
     {
         name: "JavaScript",
         icon: JavaScriptIcon,
-        mainColour: "text-yellow-600",
-        bgColour: "bg-yellow-400/20",
+        mainColour: "text-yellow-600 dark:text-white",
+        bgColour: "bg-yellow-400/20 dark:bg-yellow-600",
     },
     {
         name: "Node.js",
         icon: NodeJsIcon,
-        mainColour: "text-green-600",
-        bgColour: "bg-green-400/20",
+        mainColour: "text-green-600 dark:text-white",
+        bgColour: "bg-green-400/20 dark:bg-green-600",
     },
     {
-        name: "React",
+        name: "React/Next.js",
         icon: ReactIcon,
-        mainColour: "text-sky-600",
-        bgColour: "bg-sky-400/20",
+        mainColour: "text-sky-600 dark:text-white",
+        bgColour: "bg-sky-400/20 dark:bg-sky-600",
     },
     {
         name: "GraphQL",
         icon: GraphQlIcon,
-        mainColour: "text-pink-600",
-        bgColour: "bg-pink-400/20",
+        mainColour: "text-pink-600 dark:text-white",
+        bgColour: "bg-pink-400/20 dark:bg-pink-600",
     },
     {
         name: "PostgreSQL",
         icon: PostgreSqlIcon,
-        mainColour: "text-blue-600",
-        bgColour: "bg-blue-400/20",
-    },
-    {
-        name: "Agile",
-        icon: UsersIcon,
-        mainColour: "text-amber-600",
-        bgColour: "bg-amber-400/20",
-    },
-    {
-        name: "Accessibility",
-        icon: AccessibilityIcon,
-        mainColour: "text-violet-600",
-        bgColour: "bg-violet-400/20",
-    },
-    {
-        name: "API Testing",
-        icon: TestingIcon,
-        mainColour: "text-orange-600",
-        bgColour: "bg-orange-400/20",
+        mainColour: "text-blue-600 dark:text-white",
+        bgColour: "bg-blue-400/20 dark:bg-blue-600",
     },
     {
         name: "Tailwind CSS",
         icon: TailwindIcon,
-        mainColour: "text-blue-600",
-        bgColour: "bg-blue-400/20",
+        mainColour: "text-blue-600 dark:text-white",
+        bgColour: "bg-blue-400/20 dark:bg-blue-600",
     },
 ];
