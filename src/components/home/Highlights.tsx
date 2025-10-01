@@ -12,7 +12,7 @@ import HighlightsCard from "./HighlightsCard";
  */
 export default function Highlights() {
     return (
-        <section className="mx-auto max-w-6xl px-4 pb-4 pt-[5.5rem]">
+        <section id="highlights" className="mx-auto max-w-6xl px-4 pb-4 pt-[5.5rem]">
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {HighlightItems.map(
                     ({
