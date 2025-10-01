@@ -12,7 +12,7 @@ const { ContactRoute } = internalRoutes;
 export default function Hero() {
     return (
         <section id="hero" className="hero-bg">
-            <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2 lg:py-24">
+            <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-20 md:grid-cols-2 lg:py-24">
                 <div>
                     <h1 className="text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
                         Building accessible products for real people
