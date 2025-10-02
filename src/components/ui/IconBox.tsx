@@ -1,3 +1,4 @@
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 import { ReactNode } from "react";
 
 interface IconBoxProps {
@@ -18,6 +19,12 @@ interface IconBoxProps {
      * Supports both light and dark mode variants.
      */
     mainColour: string;
+
+    /**
+     * Optional accessible label for the icon.
+     * If omitted, the icon is marked as decorative (hidden from screen readers).
+     */
+    iconLabel?: string;
 }
 
 /**
@@ -33,12 +40,17 @@ interface IconBoxProps {
  * @param props.mainColour - Tailwind class for the icon colour.
  * @returns A styled `<span>` element containing the icon.
  */
-export default function IconBox({ icon, bgColour, mainColour }: IconBoxProps) {
+export default function IconBox({
+    icon,
+    bgColour,
+    mainColour,
+    iconLabel,
+}: IconBoxProps) {
     return (
         <span
             className={`grid h-10 w-10 min-w-10 place-items-center rounded-lg ${bgColour} ${mainColour}`}
         >
-            {icon}
+            {decorateIcon(icon, iconLabel)}
         </span>
     );
 }

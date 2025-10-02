@@ -1,26 +1,64 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { ButtonType, getButtonClasses } from "./buttonStyles";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 
 interface ButtonLinkProps {
+    /**
+     * The link URL (internal or external).
+     */
     href: string;
+
+    /**
+     * The visible button text.
+     */
     text: string;
+
+    /**
+     * Button style variant.
+     * Defaults to `"primary"`.
+     */
     type?: ButtonType;
+
+    /**
+     * Optional icon element to render before the text.
+     */
     icon?: ReactNode;
+
+    /**
+     * If true, forces external behaviour (opens in a new tab).
+     * Defaults to detecting via `href` (treats URLs starting with http as external).
+     */
     external?: boolean;
+
+    /**
+     * Additional Tailwind CSS utility classes.
+     */
     className?: string;
+
+    /**
+     * Optional accessible label for the icon.
+     * If omitted, the icon is marked as decorative (hidden from screen readers).
+     */
+    iconLabel?: string;
 }
 
 /**
- * A reusable link-style button component that supports multiple styles and optional icon.
+ * A reusable button-styled link component.
  *
- * @component
- * @param href - The link URL.
- * @param text - The button text.
- * @param [type="primary"] - Button style variant: "primary" | "secondary" | "small".
- * @param [icon] - Optional icon element.
- * @param [external] - If true, forces external behaviour. Defaults to detecting via href.
- * @param [className] - Additional Tailwind classes.
+ * Renders either a Next.js `Link` (for internal routes) or
+ * an `<a>` element (for external URLs). Supports multiple style
+ * variants, optional icons, and accessibility-friendly icon labelling.
+ *
+ * @param props - The properties for the button link.
+ * @param props.href - The link URL (internal or external).
+ * @param props.text - The button text.
+ * @param props.type - Optional button variant (`"primary"`, `"secondary"`, or `"small"`).
+ * @param props.icon - Optional icon element.
+ * @param props.external - Force external link behaviour (default: auto-detected).
+ * @param props.className - Additional Tailwind CSS classes to merge.
+ * @param props.iconLabel - Accessible label for the icon (omit if decorative).
+ * @returns A styled link element (`<a>` or `Link`) with optional icon and text.
  */
 export default function ButtonLink({
     href,
@@ -29,12 +67,18 @@ export default function ButtonLink({
     icon,
     external,
     className = "",
+    iconLabel,
 }: ButtonLinkProps) {
     const isExternal = external ?? href.startsWith("http");
     const mergedClass = getButtonClasses(type, className);
+
     const content = (
         <span className="inline-flex items-center gap-2">
-            {icon && <span className="inline-block">{icon}</span>}
+            {icon && (
+                <span className="inline-block">
+                    {decorateIcon(icon, iconLabel)}
+                </span>
+            )}
             {text}
         </span>
     );
