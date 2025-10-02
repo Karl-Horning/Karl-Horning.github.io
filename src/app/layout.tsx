@@ -1,8 +1,8 @@
 import "./styles/fonts.css";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/shell/Footer";
 import { jsonLdHome } from "@/lib/constants/jsonLd";
+import Header from "@/components/shell/Header";
 
 export default function RootLayout({
     children,
@@ -56,8 +56,8 @@ export default function RootLayout({
                 >
                     Skip to content
                 </a>
-                <Navbar />
-                <main id="main" className="flex-1 pt-16">
+                <Header />
+                <main id="main" className="flex-1">
                     {children}
                 </main>
                 <Footer />

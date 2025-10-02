@@ -1,7 +1,7 @@
 "use client";
 
-import CloseIcon from "@/components/Icons/CloseIcon";
-import HamburgerIcon from "@/components/Icons/HamburgerIcon";
+import CloseIcon from "@/components/shell/CloseIcon";
+import HamburgerIcon from "@/components/shell/HamburgerIcon";
 
 interface MobileToggleButtonProps {
     isOpen: boolean;
@@ -23,7 +23,7 @@ export default function MobileToggleButton({
         <div className="md:hidden">
             <button
                 id="menu-btn"
-                className="text-text rounded focus:outline-none focus:ring-2 focus:ring-primary"
+                className="rounded text-slate-600 dark:text-slate-400"
                 aria-label="Toggle menu"
                 aria-controls="mobile-menu"
                 aria-expanded={isOpen}
