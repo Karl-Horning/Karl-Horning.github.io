@@ -1,7 +1,7 @@
 import "./styles/fonts.css";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/shell/Footer";
 import { jsonLdHome } from "@/lib/constants/jsonLd";
 
 export default function RootLayout({
