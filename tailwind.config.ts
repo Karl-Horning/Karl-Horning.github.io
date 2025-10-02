@@ -5,6 +5,7 @@ const config: Config = {
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/lib/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
@@ -21,8 +22,8 @@ const config: Config = {
             colors: {
                 black: "#2d292d",
                 "custom-red": "#da4453",
-                primary: "#e93681", // vibrant pink/red
-                secondary: "#4C9DCD",
+                primary: "#cb2d6f", // vibrant pink/red
+                secondary: "var(--secondary)", //"#4C9DCD", // #3c7da4
                 navy: "#163753",
                 accent: "#14a098", // teal accent
                 highlight: "#148aad", // teal for emphasis

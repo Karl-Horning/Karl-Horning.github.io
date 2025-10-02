@@ -9,7 +9,7 @@ import {
     FaCodepen,
     FaDatabase,
     FaDiagramProject,
-    FaEnvelope,
+    FaEnvelopeOpenText,
     FaFacebook,
     FaGaugeHigh,
     FaGithub,
@@ -17,7 +17,6 @@ import {
     FaHandshake,
     FaIdCard,
     FaJs,
-    FaLinkedin,
     FaLocationDot,
     FaNodeJs,
     FaReact,
@@ -29,7 +28,7 @@ import {
     FaX,
 } from "react-icons/fa6";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { SiGraphql, SiPostgresql, SiTailwindcss } from "react-icons/si";
+import { SiGraphql, SiLinkedin, SiPostgresql, SiTailwindcss } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
 /**
@@ -83,7 +82,7 @@ export const icons = {
      * @description FaEnvelope
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    ContactIcon: FaEnvelope,
+    ContactIcon: FaEnvelopeOpenText,
 
     /**
      * @description FaDatabase
@@ -155,7 +154,7 @@ export const icons = {
      * @description FaLinkedin
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    LinkedInIcon: FaLinkedin,
+    LinkedInIcon: SiLinkedin,
 
     /**
      * @description FaLocationDot
