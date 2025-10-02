@@ -1,13 +1,17 @@
 import { icons } from "@/lib/constants/icons";
 import { LogoItem, Skill, Value, WorkExperienceItem } from "@/types/AboutItem";
+import { IconItem } from "@/types/IconItem";
 
 const {
     AccessibilityIcon,
+    ApiIcon,
     CodeIcon,
     GraphQlIcon,
+    HireMeIcon,
     JavaScriptIcon,
     LearningIcon,
     NodeJsIcon,
+    PerformanceIcon,
     PostgreSqlIcon,
     ReactIcon,
     TailwindIcon,
@@ -188,6 +192,47 @@ export const aboutBadges: LogoItem[] = [
 ];
 
 /**
+ * Collection of value items that represent personal and professional principles.
+ *
+ * Each item includes a title, description, icon, and Tailwind CSS classes
+ * for consistent styling across light and dark themes. Used in the
+ * `Values` component to render the "What I value" grid.
+ *
+ * @constant
+ * @type {IconItem[]}
+ */
+export const valueItems: IconItem[] = [
+    {
+        title: "Inclusive by default",
+        description: "WCAG-aware patterns, keyboard support and good copy.",
+        icon: AccessibilityIcon,
+        mainColour: "text-primary dark:text-white",
+        bgColour: "bg-primary/10 dark:bg-primary",
+    },
+    {
+        title: "APIs as products",
+        description: "Typed clients, clear docs, sensible versioning.",
+        icon: ApiIcon,
+        mainColour: "text-secondary dark:text-white",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
+    },
+    {
+        title: "Calm collaboration",
+        description: "Small feedback loops. Honest communication.",
+        icon: HireMeIcon,
+        mainColour: "text-yellow-600 dark:text-white",
+        bgColour: "bg-yellow-600/10 dark:bg-yellow-700",
+    },
+    {
+        title: "Performance & DX",
+        description: "Fast UIs, fast builds, tests that matter.",
+        icon: PerformanceIcon,
+        mainColour: "text-green-600 dark:text-white",
+        bgColour: "bg-green-600/10 dark:bg-green-700",
+    },
+];
+
+/**
  * A list of work experience entries displayed in the "Experience" section.
  *
  * Each entry contains:
@@ -197,6 +242,8 @@ export const aboutBadges: LogoItem[] = [
  * - A description of responsibilities and achievements
  *
  * Used by the `Experience` component to render `ExperienceCard` items.
+ * @constant
+ * @type {WorkExperienceItem[]}
  */
 export const workExperience: WorkExperienceItem[] = [
     {
