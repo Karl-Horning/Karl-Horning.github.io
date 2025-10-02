@@ -2,7 +2,7 @@ import { internalRoutes } from "@/lib/constants/links";
 import { SkillsIcons } from "@/lib/constants/skills";
 import { icons } from "@/lib/constants/icons";
 import ButtonLink from "../ui/ButtonLink";
-import SkillsCard from "./SkillsCard";
+import IconCard from "../ui/IconCard";
 
 const { ContactRoute } = internalRoutes;
 const { HireMeIcon } = icons;
@@ -14,7 +14,7 @@ const { HireMeIcon } = icons;
  * is sourced from `SkillIcons` in the constants library and rendered
  * responsively as a six-column grid on large screens.
  *
- * @returns A section containing a responsive grid of `SkillsCard` components.
+ * @returns A section containing a responsive grid of `IconCard` components.
  */
 export default function Skills() {
     return (
@@ -29,17 +29,14 @@ export default function Skills() {
                 />
             </div>
             <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-                {SkillsIcons.map(
-                    ({ name, icon: Icon, bgColour, mainColour }) => (
-                        <SkillsCard
-                            key={name}
-                            name={name}
-                            icon={<Icon />}
-                            bgColour={bgColour}
-                            mainColour={mainColour}
-                        />
-                    )
-                )}
+                {SkillsIcons.map(({ title, icon: Icon, ...props }) => (
+                    <IconCard
+                        key={title}
+                        title={title}
+                        icon={<Icon />}
+                        {...props}
+                    />
+                ))}
             </ul>
         </section>
     );

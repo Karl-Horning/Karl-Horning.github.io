@@ -1,5 +1,5 @@
 import { HighlightIcons } from "@/lib/constants/highlights";
-import HighlightsCard from "./HighlightsCard";
+import IconCard from "../ui/IconCard";
 
 /**
  * Displays a grid of highlight cards for technical and professional skills.
@@ -16,15 +16,15 @@ export default function Highlights() {
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {HighlightIcons.map(
                     ({
-                        name,
+                        title,
                         description,
                         icon: Icon,
                         bgColour,
                         mainColour,
                     }) => (
-                        <HighlightsCard
-                            key={name}
-                            name={name}
+                        <IconCard
+                            key={title}
+                            title={title}
                             description={description}
                             icon={<Icon />}
                             bgColour={bgColour}
