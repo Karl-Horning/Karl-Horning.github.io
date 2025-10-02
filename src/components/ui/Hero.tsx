@@ -1,44 +1,75 @@
 import { assets } from "@/lib/constants/assets";
 import Image from "next/image";
-import ButtonLink from "../ui/ButtonLink";
+import ButtonLink from "./ButtonLink";
 import { icons } from "@/lib/constants/icons";
 import { internalRoutes } from "@/lib/constants/links";
-import Pill from "../ui/Pill";
+import Pill from "./Pill";
 
 const { profileImage } = assets;
 const { ContactIcon, ProjectIcon } = icons;
 const { ContactRoute } = internalRoutes;
 
-export default function Hero() {
+interface HeroProps {
+    /**
+     * Main heading text for the hero section.
+     */
+    title: string;
+
+    /**
+     * Supporting paragraph displayed beneath the title.
+     */
+    leadParagraph: string;
+
+    /**
+     * Array of short highlight strings shown as pills.
+     */
+    highlights: string[];
+}
+
+/**
+ * Hero section component.
+ *
+ * Serves as the introductory section at the top of the site,
+ * containing a main heading, supporting text, a set of highlights,
+ * call-to-action buttons, and a profile image.
+ *
+ * Features:
+ * - Prominent title and lead paragraph
+ * - Highlights rendered as styled `Pill` components
+ * - Primary and secondary `ButtonLink` call-to-actions
+ * - Profile image with decorative border and subtle ring
+ *
+ * Accessibility:
+ * - Profile image is marked `aria-hidden` and has empty alt text,
+ *   as it is decorative
+ * - Call-to-action buttons include icons but remain text-labelled
+ *
+ * @param props - The hero section properties.
+ * @param props.title - Main heading displayed in the hero.
+ * @param props.leadParagraph - Supporting paragraph shown below the title.
+ * @param props.highlights - Short highlight phrases displayed as pills.
+ * @returns A styled `<section>` element containing the hero content.
+ */
+export default function Hero({ title, leadParagraph, highlights }: HeroProps) {
     return (
         <section id="hero" className="hero-bg">
             <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-20 md:grid-cols-2 lg:py-24">
                 <div>
                     <h1 className="text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
-                        Building accessible products for real people
+                        {title}
                     </h1>
                     <p className="mt-3 max-w-prose text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                        JavaScript/TypeScript &bull; React/Next.js &bull;
-                        PostgreSQL &bull; EdTech. I ship practical,
-                        human-centred solutions with performance and a11y in
-                        mind.
+                        {leadParagraph}
                     </p>
                     <div className="mt-6 flex flex-wrap gap-2 text-xs">
-                        <Pill
-                            text="15+ yrs"
-                            mainColour="text-slate-800 dark:text-slate-200"
-                            bgColour="bg-slate-200 dark:bg-slate-800"
-                        />
-                        <Pill
-                            text="Accessibility-first"
-                            mainColour="text-slate-800 dark:text-slate-200"
-                            bgColour="bg-slate-200 dark:bg-slate-800"
-                        />
-                        <Pill
-                            text="API-driven"
-                            mainColour="text-slate-800 dark:text-slate-200"
-                            bgColour="bg-slate-200 dark:bg-slate-800"
-                        />
+                        {highlights.map((highlight) => (
+                            <Pill
+                                key={highlight}
+                                text={highlight}
+                                mainColour="text-slate-800 dark:text-slate-200"
+                                bgColour="bg-slate-200 dark:bg-slate-800"
+                            />
+                        ))}
                     </div>
                     <div className="mt-8 flex flex-wrap gap-3">
                         <ButtonLink
