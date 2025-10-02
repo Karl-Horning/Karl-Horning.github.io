@@ -1,5 +1,5 @@
 import { icons } from "@/lib/constants/icons";
-import { LogoItem, Skill, Value } from "@/types/AboutItem";
+import { LogoItem, Skill, Value, WorkExperienceItem } from "@/types/AboutItem";
 
 const {
     AccessibilityIcon,
@@ -184,5 +184,37 @@ export const aboutBadges: LogoItem[] = [
     {
         name: "Apple Teacher",
         src: "/img/badges/apple-teacher-swift-playgrounds-badge.svg",
+    },
+];
+
+/**
+ * A list of work experience entries displayed in the "Experience" section.
+ *
+ * Each entry contains:
+ * - A date range
+ * - A job title, employer, and location
+ * - A highlight (displayed as a pill)
+ * - A description of responsibilities and achievements
+ *
+ * Used by the `Experience` component to render `ExperienceCard` items.
+ */
+export const workExperience: WorkExperienceItem[] = [
+    {
+        dates: "2022 — Present",
+        jobTitle: "Learning Technologist",
+        employer: "Imperial College London",
+        location: "Hybrid/London, UK",
+        highlight: "EdTech",
+        description:
+            "LMS evaluation and rollout, API integrations, staff/student adoption.",
+    },
+    {
+        dates: "2021 — Present",
+        jobTitle: "Full-stack Developer",
+        employer: "Freelance & side projects",
+        location: "Remote",
+        highlight: "Full-stack",
+        description:
+            "React/Next.js, Node/Express, PostgreSQL, accessibility-focused UI.",
     },
 ];
