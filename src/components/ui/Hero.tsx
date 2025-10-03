@@ -7,7 +7,7 @@ import Pill from "./Pill";
 
 const { profileImage } = assets;
 const { ContactIcon, ProjectIcon } = icons;
-const { ContactRoute } = internalRoutes;
+const { ContactRoute, ProjectsRoute } = internalRoutes;
 
 interface HeroProps {
     /**
@@ -79,8 +79,7 @@ export default function Hero({ title, leadParagraph, highlights }: HeroProps) {
                         />
 
                         <ButtonLink
-                            // TODO: Add correct link
-                            href={ContactRoute}
+                            href={ProjectsRoute}
                             text="Recent projects"
                             icon={<ProjectIcon />}
                             type="secondary"
