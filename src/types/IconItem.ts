@@ -23,6 +23,11 @@ export type IconItem = {
     description?: string;
 
     /**
+     * Optional URL. If provided, the description will be rendered as a clickable link.
+     */
+    link?: string;
+
+    /**
      * Tailwind CSS class applied to the icon (for example, text colour).
      */
     mainColour: string;
