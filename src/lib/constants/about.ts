@@ -7,9 +7,11 @@ const {
     ApiIcon,
     CodeIcon,
     GraphQlIcon,
+    HigherEducationIcon,
     HireMeIcon,
     JavaScriptIcon,
     LearningIcon,
+    LocationIcon,
     NodeJsIcon,
     PerformanceIcon,
     PostgreSqlIcon,
@@ -229,6 +231,44 @@ export const valueItems: IconItem[] = [
         icon: PerformanceIcon,
         mainColour: "text-green-600 dark:text-white",
         bgColour: "bg-green-600/10 dark:bg-green-700",
+    },
+];
+
+/**
+ * Sidebar items for the biography section.
+ *
+ * Each item represents a key piece of personal or professional
+ * information, such as location, sector experience, technical
+ * skills, or focus areas. Items are displayed with an icon and
+ * styled consistently for light and dark themes.
+ *
+ * @constant
+ * @type {IconItem[]}
+ */
+export const bioSidebarItems: IconItem[] = [
+    {
+        title: "London, UK",
+        icon: LocationIcon,
+        mainColour: "text-secondary dark:text-white",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
+    },
+    {
+        title: "HE & EdTech, Blackboard/Brightspace/Canvas",
+        icon: HigherEducationIcon,
+        mainColour: "text-secondary dark:text-white",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
+    },
+    {
+        title: "JS/TS, React/Next, Node, Postgres, GraphQL/APIs",
+        icon: CodeIcon,
+        mainColour: "text-secondary dark:text-white",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
+    },
+    {
+        title: "Accessibility & performance",
+        icon: AccessibilityIcon,
+        mainColour: "text-secondary dark:text-white",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
     },
 ];
 
