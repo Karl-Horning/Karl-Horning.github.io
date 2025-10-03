@@ -17,7 +17,7 @@ export default function Platforms() {
             <h2 className="text-2xl font-bold tracking-tight">
                 Platforms I&apos;ve worked with
             </h2>
-            <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-6">
+            <ul className="mt-6 grid grid-cols-2 gap-4 text-xs sm:grid-cols-3 sm:text-lg xl:grid-cols-6 xl:text-sm">
                 {technologyItems.map(({ title, icon: Icon, ...props }) => (
                     <IconCard
                         key={title}

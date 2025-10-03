@@ -64,7 +64,7 @@ export default function CertificationsCard({
                 className="h-12 w-12 rounded-lg object-contain"
             />
             <div>
-                <p className="font-semibold">{title}</p>
+                <p className="text-sm font-semibold md:text-base">{title}</p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
                     {body}
                 </p>
