@@ -1,3 +1,4 @@
+import { BsBoxArrowDownLeft } from "react-icons/bs";
 import { FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
@@ -11,6 +12,7 @@ import {
     FaDiagramProject,
     FaEnvelopeOpenText,
     FaFacebook,
+    FaFire,
     FaGaugeHigh,
     FaGithub,
     FaGraduationCap,
@@ -28,7 +30,15 @@ import {
     FaX,
 } from "react-icons/fa6";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { SiGraphql, SiLinkedin, SiPostgresql, SiTailwindcss } from "react-icons/si";
+import {
+    SiCanvas,
+    SiGraphql,
+    SiLinkedin,
+    SiMoodle,
+    SiPostgresql,
+    SiTailwindcss,
+    SiTeratail,
+} from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
 /**
@@ -49,16 +59,34 @@ export const icons = {
     ApiIcon: TbApi,
 
     /**
+     * @description SiTeratail
+     * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
+     */
+    BlackboardIcon: SiTeratail,
+
+    /**
      * @description FaBluesky
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     BlueskyIcon: FaBluesky,
 
     /**
+     * @description FaFire
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    BrightspaceIcon: FaFire,
+
+    /**
      * @description FaCalendar
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     CalendarIcon: FaCalendar,
+
+    /**
+     * @description SiCanvas
+     * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
+     */
+    CanvasIcon: SiCanvas,
 
     /**
      * @description FaClock
@@ -163,6 +191,12 @@ export const icons = {
     LocationIcon: FaLocationDot,
 
     /**
+     * @description SiMoodle
+     * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
+     */
+    MoodleIcon: SiMoodle,
+
+    /**
      * @description FaNodeJs
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
@@ -205,6 +239,12 @@ export const icons = {
     RssIcon: FaRss,
 
     /**
+     * @description FaDatabase
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    SitsVisionIcon: FaDatabase,
+
+    /**
      * @description SiTailwindcss
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
@@ -221,6 +261,12 @@ export const icons = {
      * @link [Font Awesome 5](https://react-icons.github.io/react-icons/icons/fa/)
      */
     ToolsIcon: FaTools,
+
+    /**
+     * @description BsBoxArrowDownLeft
+     * @link [Bootstrap Icons](https://react-icons.github.io/react-icons/icons/bs/)
+     */
+    TurnitinIcon: BsBoxArrowDownLeft,
 
     /**
      * @description FaUser
