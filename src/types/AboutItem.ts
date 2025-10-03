@@ -74,3 +74,35 @@ export type WorkExperienceItem = {
     description: string;
 };
 
+/**
+ * Represents a single certification or professional badge entry.
+ *
+ * Used to display achievements such as online course completions,
+ * professional accreditations, or skill-based badges.
+ */
+export type CertificationItem = {
+    /**
+     * The name of the certification or badge.
+     */
+    title: string;
+
+    /**
+     * A short description or context about the certification.
+     */
+    body: string;
+
+    /**
+     * The date the certification was earned (for example, "2024-06-01").
+     */
+    date: string;
+
+    /**
+     * Path or URL to the image representing the certification badge.
+     */
+    image: string;
+
+    /**
+     * A URL to verify the certification, if available.
+     */
+    verification: string;
+};

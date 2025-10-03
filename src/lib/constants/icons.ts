@@ -30,6 +30,7 @@ import {
     FaX,
 } from "react-icons/fa6";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { RiShieldCheckFill } from "react-icons/ri";
 import {
     SiCanvas,
     SiGraphql,
@@ -87,6 +88,12 @@ export const icons = {
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
     CanvasIcon: SiCanvas,
+
+    /**
+     * @description RiShieldCheckFill
+     * @link [Remix Icon](https://react-icons.github.io/react-icons/icons/ri/)
+     */
+    CheckIcon: RiShieldCheckFill,
 
     /**
      * @description FaClock
