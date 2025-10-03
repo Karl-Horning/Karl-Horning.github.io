@@ -54,7 +54,7 @@ export default function Hero({ title, leadParagraph, highlights }: HeroProps) {
     return (
         <section id="hero" className="hero-bg">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-20 md:flex-row lg:py-24">
-                <div>
+                <div className="order-2 md:order-1">
                     <h1 className="text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
                         {title}
                     </h1>
@@ -86,7 +86,7 @@ export default function Hero({ title, leadParagraph, highlights }: HeroProps) {
                         />
                     </div>
                 </div>
-                <div>
+                <div className="order-1 md:order-2">
                     <div className="relative mx-auto aspect-square w-64 overflow-hidden rounded-3xl border border-slate-200 shadow-md md:w-80 dark:border-slate-800">
                         <Image
                             src={profileImage}
