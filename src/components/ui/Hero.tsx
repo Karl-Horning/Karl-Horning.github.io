@@ -53,7 +53,7 @@ interface HeroProps {
 export default function Hero({ title, leadParagraph, highlights }: HeroProps) {
     return (
         <section id="hero" className="hero-bg">
-            <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-20 md:grid-cols-2 lg:py-24">
+            <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-20 md:flex-row lg:py-24">
                 <div>
                     <h1 className="text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
                         {title}
