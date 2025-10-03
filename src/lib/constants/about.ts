@@ -230,6 +230,7 @@ export const workExperience: WorkExperienceItem[] = [
         highlight: "EdTech",
         description:
             "LMS evaluation and rollout, API integrations, staff/student adoption.",
+        image: "/img/institutions/imperial-logo.svg",
     },
     {
         dates: "2021 — Present",
@@ -239,5 +240,6 @@ export const workExperience: WorkExperienceItem[] = [
         highlight: "Full-stack",
         description:
             "React/Next.js, Node/Express, PostgreSQL, accessibility-focused UI.",
+        image: "/android-chrome-512x512.png",
     },
 ];

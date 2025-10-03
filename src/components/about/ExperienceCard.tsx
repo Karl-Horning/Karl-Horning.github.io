@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Pill from "../ui/Pill";
 
 interface ExperienceCardProps {
@@ -42,6 +43,11 @@ interface ExperienceCardProps {
      * Defaults to `"bg-slate-200 dark:bg-slate-800"`.
      */
     bgColour?: string;
+
+    /**
+     * Path or URL to the image representing the role.
+     */
+    image: string;
 }
 
 /**
@@ -64,6 +70,7 @@ interface ExperienceCardProps {
  * @param props.description - A longer description of the role.
  * @param props.mainColour - Tailwind class for pill text colour.
  * @param props.bgColour - Tailwind class for pill background colour.
+ * @param props.image - The image representing the role.
  * @returns A styled `<li>` element containing the experience entry.
  */
 export default function ExperienceCard({
@@ -75,18 +82,30 @@ export default function ExperienceCard({
     location,
     mainColour = "text-slate-800 dark:text-slate-200",
     bgColour = "bg-slate-200 dark:bg-slate-800",
+    image,
 }: ExperienceCardProps) {
     return (
-        <li className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                    <p className="text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                        {dates}
-                    </p>
-                    <p className="font-semibold">
-                        {jobTitle} &bull; {employer} &bull; {location}
-                    </p>
-                </div>
+        <li className="grid items-center gap-4 p-4 md:grid-cols-[auto_1fr_auto]">
+            <Image
+                src={image}
+                alt={`${employer}, ${location}`}
+                height={160}
+                width={160}
+                className="order-1 h-16 w-16 rounded-lg object-contain p-1"
+            />
+
+            <div className="order-2">
+                <p className="text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                    {dates}
+                </p>
+                <p className="font-semibold">
+                    {jobTitle} &bull; {employer} &bull; {location}
+                </p>
+                <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
+                    {description}
+                </p>
+            </div>
+            <div className="order-3">
                 <Pill
                     text={highlight}
                     className="text-xs"
@@ -94,9 +113,6 @@ export default function ExperienceCard({
                     mainColour={mainColour}
                 />
             </div>
-            <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
-                {description}
-            </p>
         </li>
     );
 }

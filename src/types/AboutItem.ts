@@ -33,6 +33,11 @@ export type WorkExperienceItem = {
      * A longer description providing more details about the role.
      */
     description: string;
+
+    /**
+     * Path or URL to the image representing the experience.
+     */
+    image: string;
 };
 
 /**
