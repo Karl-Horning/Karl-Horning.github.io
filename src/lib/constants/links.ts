@@ -42,7 +42,6 @@ export const internalRoutes = {
     HomeRoute: "/",
 
     /** The about page */
-
     AboutRoute: "/about",
 
     /** The CMALT page */
@@ -50,6 +49,9 @@ export const internalRoutes = {
 
     /** The contact page */
     ContactRoute: "/contact",
+
+    /** The projects page */
+    ProjectsRoute: "/",
 };
 
 /**
@@ -59,5 +61,6 @@ export const navLinks = [
     { label: "About", href: internalRoutes.AboutRoute },
     { label: "Blog", href: externalLinks.BlogLink },
     { label: "CMALT", href: internalRoutes.CmaltRoute },
+    { label: "Projects", href: internalRoutes.ProjectsRoute },
     { label: "Contact", href: internalRoutes.ContactRoute },
 ];

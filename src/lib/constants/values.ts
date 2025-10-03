@@ -6,19 +6,19 @@ const { AccessibilityIcon, CodeIcon, LearningIcon, ToolsIcon, UsersIcon } =
 
 /**
  * Array of value objects representing personal and professional values.
- * Each value includes a name, an icon component, descriptive text,
+ * Each value includes a title, an icon component, descriptive text,
  * and Tailwind classes for icon and background colours.
  */
 export const aboutValues: IconItem[] = [
     {
-        name: "Accessibility",
+        title: "Accessibility",
         icon: AccessibilityIcon,
         description: "Building accessible, inclusive interfaces for everyone",
         mainColour: "text-violet-600",
         bgColour: "bg-violet-400/20",
     },
     {
-        name: "Clear Code",
+        title: "Clear Code",
         icon: CodeIcon,
         description:
             "Clear, maintainable code that future-me (or someone else) can understand",
@@ -26,14 +26,14 @@ export const aboutValues: IconItem[] = [
         bgColour: "bg-emerald-400/20",
     },
     {
-        name: "Collaboration",
+        title: "Collaboration",
         icon: UsersIcon,
         description: "Collaborative problem-solving and honest communication",
         mainColour: "text-orange-600",
         bgColour: "bg-orange-400/20",
     },
     {
-        name: "Right Tools",
+        title: "Right Tools",
         icon: ToolsIcon,
         description:
             "Using the right tool for the job and knowing when to keep things simple",
@@ -41,7 +41,7 @@ export const aboutValues: IconItem[] = [
         bgColour: "bg-sky-400/20",
     },
     {
-        name: "Lifelong Learning",
+        title: "Lifelong Learning",
         icon: LearningIcon,
         description: "Lifelong learning, always exploring new skills and ideas",
         mainColour: "text-pink-600",

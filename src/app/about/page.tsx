@@ -1,13 +1,13 @@
-import AboutPhotoCard from "@/components/AboutPage/AboutPhotoCard";
-import AboutIntro from "@/components/AboutPage/AboutIntro";
-import AboutValues from "@/components/AboutPage/AboutValues";
-import AboutSkills from "@/components/AboutPage/AboutSkills";
-import AboutBadges from "@/components/AboutPage/AboutBadges";
 import { internalRoutes } from "@/lib/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdAbout } from "@/lib/constants/jsonLd";
-import AboutInstitutions from "@/components/AboutPage/AboutInstitutions";
-import AboutTechnologies from "@/components/AboutPage/AboutTechnologies";
+import Hero from "@/components/ui/Hero";
+import Bio from "@/components/about/Bio";
+import Values from "@/components/about/Values";
+import Experience from "@/components/about/Experience";
+import Platforms from "@/components/about/Platforms";
+import ContactCta from "@/components/ui/ContactCta";
+import Certifications from "@/components/about/Certifications";
 
 const { AboutRoute } = internalRoutes;
 
@@ -32,14 +32,18 @@ export const metadata = createMetadata({
  */
 export default function About() {
     return (
-        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 text-text sm:grid-cols-2 lg:grid-cols-3">
-            <AboutPhotoCard />
-            <AboutIntro />
-            <AboutInstitutions />
-            <AboutTechnologies />
-            <AboutValues />
-            <AboutSkills />
-            <AboutBadges />
-        </section>
+        <>
+            <Hero
+                title="About me"
+                leadParagraph="I'm Karl — a full-stack JavaScript/TypeScript developer and learning technologist. I build accessible interfaces and pragmatic, well-documented APIs for people in higher education and beyond."
+                highlights={["CMALT", "CELTA", "PTLLS"]}
+            />
+            <Bio />
+            <Values />
+            <Experience />
+            <Platforms />
+            <Certifications />
+            <ContactCta />
+        </>
     );
 }

@@ -1,4 +1,4 @@
-import ButtonLink from "../ui/ButtonLink";
+import ButtonLink from "./ButtonLink";
 import { icons } from "@/lib/constants/icons";
 import { externalLinks, internalRoutes } from "@/lib/constants/links";
 
@@ -20,7 +20,7 @@ const { ContactRoute } = internalRoutes;
  *
  * @returns A `<section>` element containing the contact call-to-action.
  */
-export default function Contact() {
+export default function ContactCta() {
     return (
         <section id="contact" className="mx-auto max-w-6xl px-4 py-20">
             <div className="rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/10 to-navy/10 p-8 text-slate-900 shadow-sm dark:bg-gradient-to-br dark:from-navy/60 dark:via-slate-900 dark:to-slate-900 dark:text-slate-100 dark:ring-1 dark:ring-white/10">

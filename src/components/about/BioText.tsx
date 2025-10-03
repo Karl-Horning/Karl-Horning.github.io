@@ -1,35 +1,17 @@
-import { internalRoutes } from "@/lib/constants/links";
-import ButtonLink from "@/components/Buttons/ButtonLink";
-
-const { ContactRoute } = internalRoutes;
-
 /**
- * A presentational component that renders the introductory "About Me" section.
+ * Renders the main biography text for the About page.
  *
- * This component includes a heading, multiple paragraphs describing
- * the author's background, interests, and current projects,
- * and a call-to-action button linking to the contact page.
+ * Provides a multi-paragraph introduction covering professional
+ * background, areas of expertise, side projects, and personal
+ * interests. Styled with Tailwind’s `prose` classes for
+ * readability and responsive typography.
  *
- * It uses semantic HTML and ARIA for accessibility and applies
- * Tailwind CSS classes for styling and interaction effects.
- *
- * This component is static and does not accept any props.
- *
- * @component
+ * @returns The biography text section containing multiple descriptive paragraphs.
  */
-export default function AboutIntro() {
+export default function BioText() {
     return (
-        <div data-aos="zoom-in" data-aos-delay="200" className="lg:col-span-2">
-            <section
-                aria-labelledby="about-heading"
-                className="h-full transform rounded-lg bg-surface p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-            >
-                <h1
-                    id="about-heading"
-                    className="mb-6 text-center text-5xl text-primary"
-                >
-                    About Me
-                </h1>
+        <div className="md:col-span-2">
+            <div className="prose max-w-none text-slate-700 dark:text-slate-300">
                 <p className="mb-4">
                     Hi, I&apos;m Karl, a developer and learning technologist
                     from the UK.
@@ -58,15 +40,11 @@ export default function AboutIntro() {
                     &quot;200 words a day&quot; method. I&apos;m always learning
                     and always building.
                 </p>
-                <p className="mb-6">
+                <p className="mb-4">
                     When I&apos;m not coding, I&apos;m writing, running, or
                     tinkering with some new open-source tools.
                 </p>
-
-                <div className="flex justify-center">
-                    <ButtonLink text="Get in Touch" href={ContactRoute} />
-                </div>
-            </section>
+            </div>
         </div>
     );
 }

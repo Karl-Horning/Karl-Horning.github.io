@@ -1,8 +1,8 @@
-import Hero from "@/components/home/Hero";
+import Hero from "@/components/ui/Hero";
 import Highlights from "@/components/home/Highlights";
 import Skills from "@/components/home/Skills";
 import Blog from "@/components/home/Blog";
-import Contact from "@/components/home/Contact";
+import ContactCta from "@/components/ui/ContactCta";
 
 import { createMetadata } from "@/lib/metadata";
 import { internalRoutes } from "@/lib/constants/links";
@@ -18,12 +18,21 @@ export const metadata = createMetadata({
 export default function Home() {
     return (
         <main>
-            <Hero />
+            <Hero
+                title="Building accessible products for real people"
+                leadParagraph="I ship practical, human-centred solutions with performance and a11y in mind."
+                highlights={[
+                    "JavaScript/TypeScript",
+                    "React/Next.js",
+                    "PostgreSQL",
+                    "EdTech",
+                ]}
+            />
             <Highlights />
             <Skills />
             <Projects />
             <Blog />
-            <Contact />
+            <ContactCta />
         </main>
     );
 }
