@@ -1,8 +1,10 @@
-import ContactForm from "@/components/ContactPage/ContactForm";
-import ContactIntro from "@/components/ContactPage/ContactIntro";
 import { internalRoutes } from "@/lib/constants/links";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdContact } from "@/lib/constants/jsonLd";
+import Hero from "@/components/ui/Hero";
+import QuickCards from "@/components/contact/QuickCards";
+import Form from "@/components/contact/Form";
+import ContactCta from "@/components/ui/ContactCta";
 
 const { ContactRoute } = internalRoutes;
 
@@ -15,9 +17,9 @@ export const metadata = createMetadata({
 /**
  * The Contact page component.
  *
- * Renders a contact form section with fields for name, email, company, and message,
+ * Renders a contact form section with fields for name, email, subject, and message,
  * as well as a call to action to connect on LinkedIn.
- * Includes form accessibility features and uses fabform.io for form submission.
+ * Includes form accessibility features and uses Formspree for form submission.
  *
  * Also injects JSON-LD structured data for SEO purposes.
  *
@@ -28,9 +30,15 @@ export const metadata = createMetadata({
  */
 export default function Contact() {
     return (
-        <section className="mx-auto max-w-6xl">
-            <ContactIntro />
-            <ContactForm />
-        </section>
+        <>
+            <Hero
+                title="Contact"
+                leadParagraph="Drop me a line about freelance projects, consultancy, or roles in EdTech and full-stack development. I aim to reply within 2 working days."
+                highlights={["UK hours (BST/GMT)", "Remote & hybrid"]}
+            />
+            <QuickCards />
+            <Form />
+            <ContactCta />
+        </>
     );
 }

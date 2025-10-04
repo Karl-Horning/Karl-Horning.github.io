@@ -73,7 +73,7 @@ export default function Hero({ title, leadParagraph, highlights }: HeroProps) {
                     </div>
                     <div className="mt-8 flex flex-wrap gap-3">
                         <ButtonLink
-                            href={ContactRoute}
+                            href={`${ContactRoute}#contactForm`}
                             text="Get in touch"
                             icon={<ContactIcon />}
                         />

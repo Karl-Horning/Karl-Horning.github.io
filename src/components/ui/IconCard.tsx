@@ -13,6 +13,11 @@ interface IconCardProps {
     description?: string;
 
     /**
+     * Optional URL. If provided, the description will be rendered as a clickable link.
+     */
+    link?: string;
+
+    /**
      * The icon element to visually represent the content.
      */
     icon: ReactNode;
@@ -51,6 +56,7 @@ interface IconCardProps {
 export default function IconCard({
     title,
     description,
+    link,
     icon,
     bgColour,
     mainColour,
@@ -68,11 +74,23 @@ export default function IconCard({
             </div>
             <div>
                 <p className="font-semibold">{title}</p>
-                {description && (
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                        {description}
-                    </p>
-                )}
+                {description ? (
+                    link ? (
+                        <p className="mt-1 text-sm text-secondary hover:underline">
+                            <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {description}
+                            </a>
+                        </p>
+                    ) : (
+                        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                            {description}
+                        </p>
+                    )
+                ) : null}
             </div>
         </li>
     );

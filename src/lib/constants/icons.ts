@@ -1,4 +1,4 @@
-import { BsBoxArrowDownLeft } from "react-icons/bs";
+import { BsBoxArrowDownLeft, BsFillSendFill } from "react-icons/bs";
 import { FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
@@ -245,6 +245,12 @@ export const icons = {
      */
     RssIcon: FaRss,
 
+    /**
+     * @description BsFillSendFill
+     * @link [Bootstrap Icons](https://react-icons.github.io/react-icons/icons/bs/)
+     */
+    SendIcon: BsFillSendFill,
+    
     /**
      * @description FaDatabase
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)

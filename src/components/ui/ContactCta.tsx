@@ -23,7 +23,7 @@ const { ContactRoute } = internalRoutes;
 export default function ContactCta() {
     return (
         <section id="contact" className="mx-auto max-w-6xl px-4 py-20">
-            <div className="rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/10 to-navy/10 p-8 text-slate-900 shadow-sm dark:bg-gradient-to-br dark:from-navy/60 dark:via-slate-900 dark:to-slate-900 dark:text-slate-100 dark:ring-1 dark:ring-white/10">
+            <div className="via-secondary/10 rounded-3xl bg-gradient-to-br from-primary/10 to-navy/10 p-8 text-slate-900 shadow-sm dark:bg-gradient-to-br dark:from-navy/60 dark:via-slate-900 dark:to-slate-900 dark:text-slate-100 dark:ring-1 dark:ring-white/10">
                 <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[1fr_auto]">
                     <div>
                         <h2 className="text-2xl font-bold tracking-tight">
@@ -37,7 +37,7 @@ export default function ContactCta() {
                     </div>
                     <div className="flex gap-3">
                         <ButtonLink
-                            href={ContactRoute}
+                            href={`${ContactRoute}#contactForm`}
                             text="Contact me"
                             icon={<ContactIcon />}
                         />
