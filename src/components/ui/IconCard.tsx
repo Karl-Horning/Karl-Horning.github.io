@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import IconBox from "../ui/IconBox";
+import Link from "next/link";
 
 interface IconCardProps {
     /**
@@ -61,9 +62,44 @@ export default function IconCard({
     bgColour,
     mainColour,
 }: IconCardProps) {
+    // Automatically treat links starting with 'http' as external URLs
+    const isExternal = link?.startsWith("http");
+
+    let descriptionContent: ReactNode = null;
+
+    // Conditionally render description based on whether a link is provided
+    if (description) {
+        if (link) {
+            const commonClasses = "mt-1 text-sm text-secondary hover:underline";
+
+            // Render as external link (opens in new tab)
+            descriptionContent = isExternal ? (
+                <p className={commonClasses}>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                        {description}
+                    </a>
+                </p>
+            ) : (
+                // Render as internal Next.js <Link>
+                <p className={commonClasses}>
+                    <Link href={link}>{description}</Link>
+                </p>
+            );
+        } else {
+            // Render plain text if no link is provided
+            descriptionContent = (
+                <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                    {description}
+                </p>
+            );
+        }
+    }
+
     return (
         <li
-            className={`flex rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900 ${description ? "items-start" : "items-center"} gap-3`}
+            className={`flex rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900 ${
+                description ? "items-start" : "items-center"
+            } gap-3`}
         >
             <div className={`${description && "mt-1"}`}>
                 <IconBox
@@ -74,23 +110,7 @@ export default function IconCard({
             </div>
             <div>
                 <p className="font-semibold">{title}</p>
-                {description ? (
-                    link ? (
-                        <p className="mt-1 text-sm text-secondary hover:underline">
-                            <a
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {description}
-                            </a>
-                        </p>
-                    ) : (
-                        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                            {description}
-                        </p>
-                    )
-                ) : null}
+                {descriptionContent}
             </div>
         </li>
     );
