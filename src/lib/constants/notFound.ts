@@ -25,7 +25,7 @@ export const quickDestinationItems: IconItem[] = [
         link: HomeRoute,
         icon: LocationIcon,
         mainColour: "text-secondary dark:text-white",
-        bgColour: "bg-secondary/10 dark:bg-secondary",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
     },
     {
         title: "About",
@@ -33,7 +33,7 @@ export const quickDestinationItems: IconItem[] = [
         link: AboutRoute,
         icon: IdIcon,
         mainColour: "text-secondary dark:text-white",
-        bgColour: "bg-secondary/10 dark:bg-secondary",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
     },
     {
         title: "Blog",
@@ -41,7 +41,7 @@ export const quickDestinationItems: IconItem[] = [
         link: BlogLink,
         icon: RssIcon,
         mainColour: "text-secondary dark:text-white",
-        bgColour: "bg-secondary/10 dark:bg-secondary",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
     },
 ];
 
