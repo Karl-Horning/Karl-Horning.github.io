@@ -51,7 +51,7 @@ export const internalRoutes = {
     ContactRoute: "/contact",
 
     /** The projects page */
-    ProjectsRoute: "/",
+    ProjectsRoute: "/projects",
 };
 
 /**
