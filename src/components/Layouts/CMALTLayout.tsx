@@ -1,9 +1,9 @@
 "use client";
 
 import { ReactNode, useState, useEffect } from "react";
-import CMALTSidebar from "@/components/CMALT/CMALTSidebar";
-import CMALTHeader from "../CMALT/CMALTHeader";
-import CMALTPrevNext from "../CMALT/CMALTPrevNext";
+import CMALTSidebar from "@/components/cmalt/CMALTSidebar";
+import CMALTHeader from "../cmalt/CMALTHeader";
+import CMALTPrevNext from "../cmalt/CMALTPrevNext";
 
 interface CMALTLayoutProps {
     children: ReactNode;
