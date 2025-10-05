@@ -34,7 +34,7 @@ export default function NotFound() {
         <section id="not-found" className="hero-bg">
             <div className="mx-auto max-w-6xl px-4 pt-20">
                 <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                    <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_20rem]">
+                    <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_20rem]">
                         <div>
                             <p className="text-sm font-semibold text-primary">
                                 404 — Page missing
