@@ -1,8 +1,16 @@
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
+import { ReactNode } from "react";
+
 interface PillProps {
     /**
      * The text displayed inside the pill.
      */
-    text: string;
+    text: ReactNode;
+
+    /**
+     * An optional icon displayed alongside the text.
+     */
+    icon?: ReactNode;
 
     /**
      * Tailwind CSS class applied to the text colour.
@@ -30,22 +38,27 @@ interface PillProps {
  *
  * @param props - The properties for the Pill component.
  * @param props.text - The text displayed inside the pill.
+ * @param props.icon - Optional icon displayed before the text.
  * @param props.mainColour - Tailwind class for text colour (with light/dark mode support).
  * @param props.bgColour - Tailwind class for background colour (with light/dark mode support).
  * @param props.className - Additional custom classes for styling or layout adjustments.
- * @returns A styled `<span>` element containing the provided text.
+ * @returns A styled `<span>` element containing the provided text and optional icon.
  */
 export default function Pill({
     text,
+    icon,
     mainColour = "text-slate-800 dark:text-slate-200",
     bgColour = "bg-slate-200 dark:bg-slate-800",
     className = "",
 }: PillProps) {
     return (
         <span
-            className={`${mainColour} ${bgColour} rounded-full px-3 py-1 font-semibold ${className}`}
+            className={`${mainColour} ${bgColour} inline-flex items-center gap-2 rounded-full px-3 py-1 font-semibold ${className}`}
         >
-            {text}
+            {icon && (
+                <span className="flex-shrink-0">{decorateIcon(icon)}</span>
+            )}
+            <span>{text}</span>
         </span>
     );
 }

@@ -1,4 +1,4 @@
-import FigureWithCaption from "@/components/FigureWithCaption";
+import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import CMALTLayout from "@/components/Layouts/CMALTLayout";
 import { cmaltEvidence } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/links";
