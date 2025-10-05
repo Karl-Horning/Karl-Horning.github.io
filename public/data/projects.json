@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Developer Portfolio",
+        "description": "My personal portfolio, built with Next.js, TypeScript, and Tailwind CSS, showcases my work, values, and technical skills through a clean, accessible, and high-performance design. It scores 90+ across all Lighthouse categories and reflects my focus on thoughtful development, usability, and attention to detail.",
+        "topics": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS"
+        ],
+        "slug": "developer-portfolio",
+        "repo": "Karl-Horning.github.io",
+        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
+    },
+    {
+        "title": "Visual Vault — Image optimiser",
+        "description": "A desktop app that batch-optimises images using Sharp and sensible defaults. Focused on speed, drag-drop and preserving visual quality.",
+        "topics": [
+            "Electron",
+            "Sharp",
+            "Vite"
+        ],
+        "slug": "visual-vault-image-optimiser",
+        "repo": "visual-vault-image-optimiser",
+        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
+    },
+    {
+        "title": "Course Sync — SITS ↔ Blackboard",
+        "description": "Automated synchronisation of course enrolments with resilient retries, structured logging and on-call friendly dashboards.",
+        "topics": [
+            "OAuth2",
+            "SDK",
+            "Ops"
+        ],
+        "slug": "course-sync-sits-blackboard",
+        "repo": "course-sync-sits-blackboard",
+        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
+    },
+    {
+        "title": "A11y Lint Rules — ESLint plugin",
+        "description": "Codifies common accessibility checks I encounter in HE projects and CI pipelines, with autofixes where safe.",
+        "topics": [
+            "Accessibility",
+            "ESLint",
+            "Testing"
+        ],
+        "slug": "a11y-lint-rules-eslint-plugin",
+        "repo": "a11y-lint-rules-eslint-plugin",
+        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
+    }
+]
