@@ -1,0 +1,89 @@
+import { icons } from "@/lib/constants/icons";
+import { externalLinks, internalRoutes } from "@/lib/constants/links";
+import { ProjectItem } from "@/types/ProjectItem";
+import Image from "next/image";
+import Pill from "../ui/Pill";
+import ButtonLink from "../ui/ButtonLink";
+
+const { ExternalLinkIcon, FolderIcon } = icons;
+const { GitHubLink } = externalLinks;
+const { ProjectsRoute } = internalRoutes;
+
+interface ProjectsCardProps extends ProjectItem {
+    /**
+     * If `true`, the image will be displayed on the right and text on the left.
+     * Defaults to `false`.
+     */
+    reverse?: boolean;
+}
+
+/**
+ * Displays a project card with an image, description, topic tags, and links.
+ *
+ * The layout can be flipped using the `reverse` prop, allowing the image to
+ * appear on the right and text content on the left. Each card is styled with
+ * Tailwind CSS for consistent light and dark mode presentation.
+ *
+ * @component
+ * @param {ProjectsCardProps} props - The properties for the ProjectsCard component.
+ * @param {string} props.title - The project title displayed as the main heading.
+ * @param {string} props.description - A short description of the project.
+ * @param {string} props.screenshot - The path or URL of the project screenshot.
+ * @param {string} props.slug - The project slug used to generate internal case study links.
+ * @param {string} props.repo - The GitHub repository name for the project.
+ * @param {string[]} props.topics - A list of topic tags rendered as pill components.
+ * @param {boolean} [props.reverse=false] - Determines whether to reverse the layout (image on the right).
+ * @returns A responsive section containing a project preview with image, text, and links.
+ */
+export default function ProjectsCard({
+    title,
+    description,
+    screenshot,
+    slug,
+    repo,
+    topics,
+    reverse = false,
+}: ProjectsCardProps) {
+    return (
+        <section className="mt-20 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+            {/* Image column */}
+            <div className={reverse ? "md:order-2" : "md:order-1"}>
+                <Image
+                    className="rounded-3xl border border-slate-200 object-cover shadow-sm dark:border-slate-800"
+                    src={screenshot}
+                    alt=""
+                    height={540}
+                    width={960}
+                />
+            </div>
+
+            {/* Text column */}
+            <div className={reverse ? "md:order-1" : "md:order-2"}>
+                <h2 className="text-2xl font-bold">{title}</h2>
+                <p className="mt-2 text-slate-700 dark:text-slate-300">
+                    {description}
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-2 text-xs">
+                    {topics.map((topic) => (
+                        <Pill key={topic} text={topic} />
+                    ))}
+                </div>
+
+                <div className="mt-4 flex gap-3">
+                    <ButtonLink
+                        text="Read case study"
+                        href={`${ProjectsRoute}/${slug}`}
+                        icon={<FolderIcon />}
+                    />
+                    <ButtonLink
+                        text="Repo"
+                        href={`${GitHubLink}/${repo}`}
+                        icon={<ExternalLinkIcon />}
+                        type="secondary"
+                    />
+                </div>
+            </div>
+        </section>
+    );
+}
