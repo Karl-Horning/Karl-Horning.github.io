@@ -13,6 +13,7 @@ import {
     FaEnvelopeOpenText,
     FaFacebook,
     FaFire,
+    FaFolderOpen,
     FaGaugeHigh,
     FaGithub,
     FaGraduationCap,
@@ -144,6 +145,12 @@ export const icons = {
     FacebookIcon: FaFacebook,
 
     /**
+     * @description FaFolderOpen
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    FolderIcon: FaFolderOpen,
+
+    /**
      * @description SiGraphql
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
@@ -256,7 +263,7 @@ export const icons = {
      * @link [Bootstrap Icons](https://react-icons.github.io/react-icons/icons/bs/)
      */
     SendIcon: BsFillSendFill,
-    
+
     /**
      * @description FaDatabase
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
