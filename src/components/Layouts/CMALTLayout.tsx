@@ -1,36 +1,52 @@
 "use client";
 
 import { ReactNode, useState, useEffect } from "react";
-import CMALTSidebar from "@/components/cmalt/CMALTSidebar";
-import CMALTHeader from "../cmalt/CMALTHeader";
-import CMALTPrevNext from "../cmalt/CMALTPrevNext";
+import Sidebar from "../cmalt/Sidebar";
+import Header from "../cmalt/Header";
+import PrevNext from "../cmalt/PrevNext";
+import ContactCta from "../ui/ContactCta";
 
 interface CMALTLayoutProps {
+    /**
+     * The main content for the CMALT page, typically markdown-rendered sections.
+     */
     children: ReactNode;
+
+    /**
+     * The title displayed in the CMALT header section.
+     */
     title: string;
+
+    /**
+     * The date the page was last updated, in ISO 8601 format (for example, "2025-09-10").
+     */
     lastUpdated: string;
+
+    /**
+     * An optional thumbnail image for future use (not currently implemented).
+     */
     thumbnail?: string;
 }
 
 /**
- * Layout wrapper for CMALT portfolio pages.
+ * Provides the layout structure for CMALT portfolio pages.
  *
- * Includes a hero header with title, last updated date, and reading time,
- * a main content area, and a sidebar. Automatically injects and calculates
- * estimated reading time based on visible content.
+ * Renders the page header, sidebar navigation, content area, and
+ * previous/next navigation controls. The component also calculates
+ * an estimated reading time based on the visible article text.
  *
- * @param {object} props - Component props.
- * @param {ReactNode} props.children - Main page content.
- * @param {string} props.title - Title shown in the hero section.
- * @param {string} props.lastUpdated - ISO 8601 date string for when the page was last updated.
- * @param {string} [props.thumbnail="/img/cmalt-default.webp"] - Optional background image URL for the header.
- * @returns Page layout structure for CMALT pages.
+ * @component
+ * @param {CMALTLayoutProps} props - The properties for the CMALT layout.
+ * @param {ReactNode} props.children - The main content of the CMALT page.
+ * @param {string} props.title - The page title displayed in the header.
+ * @param {string} props.lastUpdated - The ISO 8601 date when the page was last updated.
+ * @param {string} [props.thumbnail] - Optional thumbnail image (not currently used).
+ * @returns The structured layout for a CMALT portfolio page, including header, content, sidebar, and footer sections.
  */
 export default function CMALTLayout({
     children,
     title,
     lastUpdated,
-    thumbnail = "/img/cmalt-default.webp", // fallback if not provided
 }: CMALTLayoutProps) {
     const [readingTime, setReadingTime] = useState<string>("1 min read");
 
@@ -43,12 +59,12 @@ export default function CMALTLayout({
         };
 
         const updateReadingTime = () => {
-            const mainContent = document.querySelector(
-                "main.prose-cmalt"
+            const mainText = document.querySelector(
+                "article.prose"
             ) as HTMLElement | null;
 
-            if (mainContent) {
-                const text = mainContent.innerText || "";
+            if (mainText) {
+                const text = mainText.innerText || "";
                 const readingTime = calculateReadingTime(text);
                 setReadingTime(readingTime);
             }
@@ -61,20 +77,22 @@ export default function CMALTLayout({
 
     return (
         <>
-            <CMALTHeader
-                title={title}
-                lastUpdated={lastUpdated}
-                thumbnail={thumbnail}
-                readingTime={readingTime}
-            />
-
-            <div className="mx-auto grid max-w-4xl gap-12 px-4 py-16 text-[var(--text)] lg:grid-cols-3">
-                <main className="prose-cmalt lg:col-span-2">
-                    {children}
-                    <CMALTPrevNext />
-                </main>
-                <CMALTSidebar />
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[18rem_1fr]">
+                <Sidebar />
+                <div className="space-y-8">
+                    <Header
+                        title={title}
+                        lastUpdated={lastUpdated}
+                        readingTime={readingTime}
+                    />
+                    <article className="prose max-w-none">{children}</article>
+                    <PrevNext />
+                </div>
             </div>
+            <ContactCta
+                title="Questions about this section?"
+                description="Contact me for clarifications or further evidence."
+            />
         </>
     );
 }
