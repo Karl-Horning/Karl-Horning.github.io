@@ -1,5 +1,5 @@
 import { BsBoxArrowDownLeft, BsFillSendFill } from "react-icons/bs";
-import { FaTools } from "react-icons/fa";
+import { FaSearch, FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
     FaBluesky,
@@ -244,6 +244,12 @@ export const icons = {
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     RssIcon: FaRss,
+
+    /**
+     * @description FaSearch
+     * @link [Font Awesome 5](https://react-icons.github.io/react-icons/icons/fa/)
+     */
+    SearchIcon: FaSearch,
 
     /**
      * @description BsFillSendFill
