@@ -72,7 +72,7 @@ export default function FigureWithCaption({
                 width={width}
                 height={height}
             />
-            <figcaption className="mt-2 text-sm text-muted">
+            <figcaption className="mt-2 text-sm text-slate-700 dark:text-slate-200">
                 {caption}
             </figcaption>
         </figure>

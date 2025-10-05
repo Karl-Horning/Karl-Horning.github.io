@@ -25,6 +25,18 @@
     :root {
         --secondary: #4c9dcd;
     }
+
+    .prose-cmalt a {
+        color: #cccccc;
+    }
+
+    .text-link:hover,
+    .cmalt-nav:hover,
+    .nav-link:hover,
+    .prose-cmalt a:hover {
+        color: white;
+        background-size: 100% 2px;
+    }
 }
 
 ::selection {
@@ -178,10 +190,27 @@ h6 {
         display: block;
     }
 
+    .nav-link {
+        position: relative;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+
+        /* Multiline animated underline base */
+        background-image: linear-gradient(currentColor, currentColor);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: 0% 2px;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        transition:
+            color 0.3s ease,
+            background-size 0.3s ease;
+    }
+
     .text-link,
-    .cmalt-nav,
     .prose-cmalt a {
-        color: var(--text);
+        color: #666;
         position: relative;
         text-decoration: underline; /* Keep native underline for accessibility */
         overflow-wrap: anywhere;
@@ -203,8 +232,9 @@ h6 {
     /* Hover state: change colour + reveal multiline underline */
     .text-link:hover,
     .cmalt-nav:hover,
+    .nav-link:hover,
     .prose-cmalt a:hover {
-        color: white;
+        color: #111;
         background-size: 100% 2px;
     }
 
