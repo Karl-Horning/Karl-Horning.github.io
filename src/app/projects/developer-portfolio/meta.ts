@@ -1,4 +1,4 @@
-import { ProjectMeta } from "@/types";
+import type { ProjectMeta } from "@/types";
 import "server-only";
 
 export const meta = {

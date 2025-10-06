@@ -10,23 +10,23 @@
         "slug": "developer-portfolio",
         "repo": "Karl-Horning.github.io",
         "thumbnail": {
-            "src": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png",
-            "alt": "Test image"
+            "src": "/img/screenshots/example.jpg",
+            "alt": "Project cover image"
         }
     },
     {
-        "title": "Visual Vault — Image optimiser",
-        "description": "A desktop app that batch-optimises images using Sharp and sensible defaults. Focused on speed, drag-drop and preserving visual quality.",
+        "title": "Generic Project — Case Study Template ",
+        "description": "Use this as a scaffold for any project. Replace the placeholder copy with your own and keep the sections concise and outcomes‑focused.",
         "topics": [
-            "Electron",
-            "Sharp",
-            "Vite"
+            "React",
+            "API",
+            "Accessibility"
         ],
         "slug": "generic-project",
-        "repo": "generic-project",
+        "repo": "Karl-Horning.github.io",
         "thumbnail": {
-            "src": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png",
-            "alt": "Test image"
+            "src": "/img/screenshots/example.jpg",
+            "alt": "Project cover image"
         }
     }
 ]
