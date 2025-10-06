@@ -6,6 +6,7 @@ import EntryHeader from "@/components/ui/EntryHeader";
 import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import ProjectsSidebar from "@/components/projects/ProjectsSidebar";
 import ShareButtons from "@/components/ui/ShareButtons";
+import { getPrevNextProject } from "@/lib/helpers/getPrevNextProject";
 
 type ProjectLayoutProps = PropsWithChildren<ProjectMeta>;
 
@@ -32,7 +33,7 @@ type ProjectLayoutProps = PropsWithChildren<ProjectMeta>;
  * @param props.children - The main page content (usually an article or case study).
  * @returns A fully composed layout for a project case study page.
  */
-export default function ProjectLayout({
+export default async function ProjectLayout({
     children,
     date,
     description,
@@ -42,6 +43,8 @@ export default function ProjectLayout({
     title,
     topics,
 }: ProjectLayoutProps) {
+    const { previous, next } = await getPrevNextProject(slug);
+
     return (
         <>
             <EntryHeader
@@ -64,19 +67,15 @@ export default function ProjectLayout({
                     </main>
                     <ShareButtons slug={slug} />
                     <AuthorCard />
-                    {/* TODO: populate previous next buttons dynamically from JSON data */}
-                    <PrevNextButtons
-                        contextTitle="Case study"
-                        itemType="section"
-                        previous={{
-                            title: "Something related",
-                            href: "/projects/previous",
-                        }}
-                        next={{
-                            title: "Something related",
-                            href: "/projects/next",
-                        }}
-                    />
+                    {/* Populates the previous and next buttons dynamically from JSON data */}
+                    {(previous || next) && (
+                        <PrevNextButtons
+                            contextTitle="Case study"
+                            itemType="section"
+                            previous={previous ?? undefined}
+                            next={next ?? undefined}
+                        />
+                    )}
                 </div>
             </div>
         </>
