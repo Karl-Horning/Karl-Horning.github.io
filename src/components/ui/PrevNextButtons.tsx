@@ -1,4 +1,5 @@
 import { icons } from "@/lib/constants/icons";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 const { NextIcon, PreviousIcon } = icons;
 
 interface PrevNextButtonsProps {
@@ -84,10 +85,10 @@ export default function PrevNextButtons({
                 rel={!prevDisabled ? "prev" : undefined}
             >
                 <span className="mt-1 grid h-8 w-8 place-items-center rounded-lg bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
-                    <PreviousIcon />
+                    {decorateIcon(<PreviousIcon />)}
                 </span>
                 <div>
-                    <span className="text-xs text-slate-500">
+                    <span className="text-xs text-slate-500 dark:text-slate-300">
                         Previous {itemType}
                     </span>
                     <p className="font-semibold">
@@ -107,7 +108,7 @@ export default function PrevNextButtons({
                 rel={!nextDisabled ? "next" : undefined}
             >
                 <div className="ml-auto text-right">
-                    <span className="block text-xs text-slate-500">
+                    <span className="block text-xs text-slate-500 dark:text-slate-300">
                         Next {itemType}
                     </span>
                     <p className="font-semibold">
@@ -115,7 +116,7 @@ export default function PrevNextButtons({
                     </p>
                 </div>
                 <span className="mt-1 grid h-8 w-8 place-items-center rounded-lg bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
-                    <NextIcon />
+                    {decorateIcon(<NextIcon />)}
                 </span>
             </a>
         </nav>

@@ -1,5 +1,6 @@
 import { icons } from "@/lib/constants/icons";
 import { externalLinks } from "@/lib/constants/links";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 
 const { LinkedInIcon, XIcon } = icons;
 const { PortfolioLink } = externalLinks;
@@ -37,7 +38,7 @@ export default function ShareButtons({ slug }: ShareButtonsProps) {
                 rel="noreferrer"
                 id="shareTwitter"
             >
-                <XIcon className="mr-1" />
+                {decorateIcon(<XIcon className="mr-1" />)}
                 Post
             </a>
             <a
@@ -47,7 +48,7 @@ export default function ShareButtons({ slug }: ShareButtonsProps) {
                 rel="noreferrer"
                 id="shareLinkedIn"
             >
-                <LinkedInIcon className="mr-1" />
+                {decorateIcon(<LinkedInIcon className="mr-1" />)}
                 Share
             </a>
         </section>

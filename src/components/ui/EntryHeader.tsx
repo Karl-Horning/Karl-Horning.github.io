@@ -140,8 +140,8 @@ export default function EntryHeader({
                         <Pill
                             key={topic}
                             text={`#${topic}`}
-                            mainColour="text-secondary"
-                            bgColour="bg-blue-700/10"
+                            mainColour="text-blue-700 dark:text-secondary"
+                            bgColour="bg-blue-600/10 dark:bg-blue-200/10"
                         />
                     ))}
 
