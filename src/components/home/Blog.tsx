@@ -36,7 +36,7 @@ export default async function Blog() {
                     type="secondary"
                 />
             </div>
-            <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
                 {blogPosts.map((post) => (
                     <div key={post.title}>
                         <BlogCard {...post} />

@@ -54,7 +54,7 @@ export default function ProjectsCard({
     reverse = false,
 }: ProjectsCardProps) {
     return (
-        <section className="mt-20 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             {/* Image column */}
             <div className={reverse ? "md:order-2" : "md:order-1"}>
                 <Image
@@ -98,6 +98,6 @@ export default function ProjectsCard({
                     />
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
