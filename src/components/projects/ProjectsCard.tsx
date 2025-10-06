@@ -1,6 +1,6 @@
 import { icons } from "@/lib/constants/icons";
 import { externalLinks, internalRoutes } from "@/lib/constants/links";
-import { ProjectItem } from "@/types/ProjectItem";
+import { ProjectMeta } from "@/types";
 import Image from "next/image";
 import Pill from "../ui/Pill";
 import ButtonLink from "../ui/ButtonLink";
@@ -9,13 +9,22 @@ const { ExternalLinkIcon, FolderIcon } = icons;
 const { GitHubLink } = externalLinks;
 const { ProjectsRoute } = internalRoutes;
 
-interface ProjectsCardProps extends ProjectItem {
+type ProjectsCardProps = Pick<
+    ProjectMeta,
+    "slug" | "title" | "description" | "topics" | "repo"
+> & {
+    /**
+     * Thumbnail image object containing the source and alt text
+     * for the project cover image.
+     */
+    thumbnail: ProjectMeta["thumbnail"];
+
     /**
      * If `true`, the image will be displayed on the right and text on the left.
      * Defaults to `false`.
      */
     reverse?: boolean;
-}
+};
 
 /**
  * Displays a project card with an image, description, topic tags, and links.
@@ -28,7 +37,7 @@ interface ProjectsCardProps extends ProjectItem {
  * @param {ProjectsCardProps} props - The properties for the ProjectsCard component.
  * @param {string} props.title - The project title displayed as the main heading.
  * @param {string} props.description - A short description of the project.
- * @param {string} props.screenshot - The path or URL of the project screenshot.
+ * @param {string} props.thumbnail - The project's main cover image and its alt text.
  * @param {string} props.slug - The project slug used to generate internal case study links.
  * @param {string} props.repo - The GitHub repository name for the project.
  * @param {string[]} props.topics - A list of topic tags rendered as pill components.
@@ -38,7 +47,7 @@ interface ProjectsCardProps extends ProjectItem {
 export default function ProjectsCard({
     title,
     description,
-    screenshot,
+    thumbnail,
     slug,
     repo,
     topics,
@@ -50,8 +59,8 @@ export default function ProjectsCard({
             <div className={reverse ? "md:order-2" : "md:order-1"}>
                 <Image
                     className="rounded-3xl border border-slate-200 object-cover shadow-sm dark:border-slate-800"
-                    src={screenshot}
-                    alt=""
+                    src={thumbnail.src}
+                    alt={thumbnail.alt}
                     height={540}
                     width={960}
                 />

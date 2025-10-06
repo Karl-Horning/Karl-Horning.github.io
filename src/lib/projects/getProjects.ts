@@ -1,17 +1,17 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { ProjectItem } from "@/types/ProjectItem";
+import { ProjectMeta } from "@/types";
 
 /**
  * Asynchronously retrieves a list of project items from the local JSON data file.
  *
  * Reads and parses the `projects.json` file stored in `/public/data/`, returning
- * an array of `ProjectItem` objects. The number of results can be limited using
+ * an array of `ProjectMeta` objects. The number of results can be limited using
  * the optional `limit` parameter.
  *
  * @async
  * @param {number} [limit=10] - The maximum number of project items to return.
- * @returns {Promise<ProjectItem[]>} A promise that resolves to an array of project data objects.
+ * @returns {Promise<ProjectMeta[]>} A promise that resolves to an array of project data objects.
  *
  * @throws Will log and rethrow an error if the JSON file cannot be read or parsed.
  *
@@ -23,7 +23,7 @@ import { ProjectItem } from "@/types/ProjectItem";
  */
 export async function getProjectItems(
     limit: number = 10
-): Promise<ProjectItem[]> {
+): Promise<ProjectMeta[]> {
     try {
         // Construct absolute path to the JSON file in public folder
         const jsonFilePath = path.join(
@@ -37,7 +37,7 @@ export async function getProjectItems(
         const jsonData = await fs.readFile(jsonFilePath, "utf-8");
 
         // Parse and return JSON data
-        const data: ProjectItem[] = JSON.parse(jsonData);
+        const data: ProjectMeta[] = JSON.parse(jsonData);
 
         return data.slice(0, limit);
     } catch (error) {

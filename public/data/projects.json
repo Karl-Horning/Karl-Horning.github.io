@@ -9,7 +9,10 @@
         ],
         "slug": "developer-portfolio",
         "repo": "Karl-Horning.github.io",
-        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
+        "thumbnail": {
+            "src": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png",
+            "alt": "Test image"
+        }
     },
     {
         "title": "Visual Vault — Image optimiser",
@@ -19,32 +22,11 @@
             "Sharp",
             "Vite"
         ],
-        "slug": "visual-vault-image-optimiser",
-        "repo": "visual-vault-image-optimiser",
-        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
-    },
-    {
-        "title": "Course Sync — SITS ↔ Blackboard",
-        "description": "Automated synchronisation of course enrolments with resilient retries, structured logging and on-call friendly dashboards.",
-        "topics": [
-            "OAuth2",
-            "SDK",
-            "Ops"
-        ],
-        "slug": "course-sync-sits-blackboard",
-        "repo": "course-sync-sits-blackboard",
-        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
-    },
-    {
-        "title": "A11y Lint Rules — ESLint plugin",
-        "description": "Codifies common accessibility checks I encounter in HE projects and CI pipelines, with autofixes where safe.",
-        "topics": [
-            "Accessibility",
-            "ESLint",
-            "Testing"
-        ],
-        "slug": "a11y-lint-rules-eslint-plugin",
-        "repo": "a11y-lint-rules-eslint-plugin",
-        "screenshot": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png"
+        "slug": "generic-project",
+        "repo": "generic-project",
+        "thumbnail": {
+            "src": "/cmalt/screenshots/colour-accessibility-user-stories-screenshot.png",
+            "alt": "Test image"
+        }
     }
 ]
