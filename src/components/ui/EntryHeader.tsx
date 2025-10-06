@@ -35,7 +35,7 @@ interface EntryHeaderProps {
      * A list of related topics or tags displayed as pills
      * (for example, `["Next.js", "GraphQL"]`).
      */
-    topics?: string[];
+    topics?: readonly string[];
 
     /**
      * Whether to include a Ko-fi button by default.
