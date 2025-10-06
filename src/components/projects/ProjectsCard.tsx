@@ -75,7 +75,12 @@ export default function ProjectsCard({
 
                 <div className="mt-4 flex flex-wrap gap-2 text-xs">
                     {topics.map((topic) => (
-                        <Pill key={topic} text={topic} />
+                        <Pill
+                            key={topic}
+                            text={`#${topic}`}
+                            mainColour="text-blue-700 dark:text-secondary"
+                            bgColour="bg-blue-600/10 dark:bg-blue-200/10"
+                        />
                     ))}
                 </div>
 
