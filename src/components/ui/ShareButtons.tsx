@@ -1,5 +1,4 @@
-import { icons } from "@/lib/constants/icons";
-import { externalLinks } from "@/lib/constants/links";
+import { externalLinks, icons } from "@/lib/constants/ui";
 import { decorateIcon } from "@/lib/helpers/iconHelpers";
 
 const { LinkedInIcon, XIcon } = icons;

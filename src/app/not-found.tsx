@@ -3,7 +3,7 @@ import Search from "@/components/ui/Search";
 import QuickDestinations from "@/components/not-found/QuickDestinations";
 import TopicChips from "@/components/ui/TopicChips";
 import Image from "next/image";
-import { assets } from "@/lib/constants/assets";
+import { assets } from "@/lib/constants/ui";
 import ContactCta from "@/components/ui/ContactCta";
 import { notFoundTopics } from "@/lib/constants/notFound";
 

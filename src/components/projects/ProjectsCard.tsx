@@ -1,5 +1,4 @@
-import { icons } from "@/lib/constants/icons";
-import { externalLinks, internalRoutes } from "@/lib/constants/links";
+import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
 import { ProjectMeta } from "@/types";
 import Image from "next/image";
 import Pill from "../ui/Pill";

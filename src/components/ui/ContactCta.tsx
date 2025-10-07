@@ -1,6 +1,5 @@
 import ButtonLink from "./ButtonLink";
-import { icons } from "@/lib/constants/icons";
-import { externalLinks, internalRoutes } from "@/lib/constants/links";
+import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
 
 const { ContactIcon, LinkedInIcon } = icons;
 const { LinkedInLink } = externalLinks;

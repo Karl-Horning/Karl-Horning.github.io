@@ -1,4 +1,4 @@
-import { navLinks } from "@/lib/constants/links";
+import { navLinks } from "@/lib/constants/ui";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

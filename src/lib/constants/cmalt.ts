@@ -1,6 +1,10 @@
 /**
- * A list of sections used to structure the CMALT portfolio.
- * Each section may optionally include child sections for more specific evidence or reflections.
+ * Defines the structure and navigation of the CMALT portfolio.
+ *
+ * Each section represents a key component of the portfolio, such as
+ * contextual statements, evidence areas, and reflective sections.
+ * Sections may include optional child sections for more specific
+ * evidence, examples, or reflections.
  */
 export const cmaltSections = [
     { slug: "", label: "Overview" },
@@ -88,11 +92,15 @@ export const cmaltSections = [
 ];
 
 /**
- * A collection of evidence assets for the CMALT portfolio.
- * Organised into categories such as certificates, documents, images, presentations, repositories, screenshots, and transcripts.
+ * Centralised collection of evidence assets for the CMALT portfolio.
+ *
+ * Assets are organised into categories such as certificates, documents,
+ * images, presentations, repositories, screenshots, transcripts, and videos.
+ * Each category groups related files and resources that support the evidence
+ * presented throughout the portfolio.
  */
 export const cmaltEvidence = {
-    /** PDF certificates used to support the portfolio */
+    /** Certificates supporting the portfolio, stored as PDFs */
     certificates: {
         appleTeacherCertificate:
             "/cmalt/certificates/apple-teacher-swift-playgrounds-2025.pdf",
@@ -142,7 +150,7 @@ export const cmaltEvidence = {
         kolbLearningCycle: "/cmalt/imgs/learning-cycle-kolb.webp",
     },
 
-    /** Blog posts used to share knowledge */
+    /** External links to blog posts or institutional pages */
     links: {
         blackboardSwaggerPostmanCollectionLink:
             "https://www.karlhorning.dev/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
@@ -198,6 +206,7 @@ export const cmaltEvidence = {
         dyslexiaAwarenessTranscript:
             "/cmalt/transcripts/microsoft-learn-training-modules.pdf",
     },
+
     /** Videos used in teaching or training sessions */
     videos: {
         microsoftTeamsGuide: "/cmalt/videos/microsoft-teams-guide-excerpt.mp4",

@@ -1,4 +1,4 @@
-import { socialLinks } from "@/lib/constants/social";
+import { socialLinks } from "@/lib/constants/ui";
 import Link from "next/link";
 
 /**

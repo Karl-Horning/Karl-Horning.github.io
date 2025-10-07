@@ -1,4 +1,4 @@
-import { icons } from "@/lib/constants/icons";
+import { icons } from "@/lib/constants/ui";
 import { Certification, Icon, WorkExperience } from "@/types";
 import { cmaltEvidence } from "./cmalt";
 
@@ -24,12 +24,11 @@ const {
  * Collection of professional certifications and badges.
  *
  * Each item includes metadata such as the certification title,
- * issuing organisation, date earned, badge image, and a link
- * for external verification. Used in the Certifications section
- * to showcase validated skills and achievements.
+ * issuing organisation, date earned, badge image, and an optional
+ * verification link for external validation.
  *
- * @constant
- * @type {Certification[]}
+ * Used in the `Certifications` section to showcase verified skills
+ * and professional achievements.
  */
 export const certificationItems: Certification[] = [
     {
@@ -83,11 +82,9 @@ export const certificationItems: Certification[] = [
  * used in higher education and EdTech.
  *
  * Each item includes a title, icon, and Tailwind CSS classes for
- * consistent styling across light and dark themes. Used in the
- * `Technologies` section of the About page.
+ * consistent styling across light and dark themes.
  *
- * @constant
- * @type {Icon[]}
+ * Used in the `Technologies` section of the About page.
  */
 export const technologyItems: Icon[] = [
     {
@@ -129,14 +126,12 @@ export const technologyItems: Icon[] = [
 ];
 
 /**
- * Collection of value items that represent personal and professional principles.
+ * Collection of value items representing key personal and professional principles.
  *
- * Each item includes a title, description, icon, and Tailwind CSS classes
- * for consistent styling across light and dark themes. Used in the
- * `Values` component to render the "What I value" grid.
+ * Each item includes a title, description, and icon with Tailwind CSS classes
+ * for consistent styling across light and dark themes.
  *
- * @constant
- * @type {Icon[]}
+ * Used in the `Values` component to render the "What I value" grid.
  */
 export const valueItems: Icon[] = [
     {
@@ -170,15 +165,16 @@ export const valueItems: Icon[] = [
 ];
 
 /**
- * Sidebar items for the biography section.
+ * Sidebar items used in the biography section.
  *
  * Each item represents a key piece of personal or professional
- * information, such as location, sector experience, technical
- * skills, or focus areas. Items are displayed with an icon and
- * styled consistently for light and dark themes.
+ * information such as location, sector experience, technical
+ * skills, or focus areas.
  *
- * @constant
- * @type {Icon[]}
+ * Items are displayed with an icon and styled consistently
+ * for both light and dark themes.
+ *
+ * Used in the `BioSidebar` component.
  */
 export const bioSidebarItems: Icon[] = [
     {
@@ -208,17 +204,13 @@ export const bioSidebarItems: Icon[] = [
 ];
 
 /**
- * A list of work experience entries displayed in the "Experience" section.
+ * Collection of work experience entries displayed in the Experience section.
  *
- * Each entry contains:
- * - A date range
- * - A job title, employer, and location
- * - A highlight (displayed as a pill)
- * - A description of responsibilities and achievements
+ * Each entry includes a date range, job title, employer, location,
+ * highlight (used as a pill), and a description of key responsibilities
+ * and achievements.
  *
  * Used by the `Experience` component to render `ExperienceCard` items.
- * @constant
- * @type {WorkExperience[]}
  */
 export const workExperience: WorkExperience[] = [
     {

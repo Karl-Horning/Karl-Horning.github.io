@@ -1,8 +1,6 @@
-import { assets } from "@/lib/constants/assets";
+import { assets, icons, internalRoutes } from "@/lib/constants/ui";
 import Image from "next/image";
 import ButtonLink from "./ButtonLink";
-import { icons } from "@/lib/constants/icons";
-import { internalRoutes } from "@/lib/constants/links";
 import Pill from "./Pill";
 
 const { profileImage } = assets;

@@ -1,4 +1,4 @@
-import { icons } from "@/lib/constants/icons";
+import { icons } from "@/lib/constants/ui";
 import IconBox from "../ui/IconBox";
 import Pill from "../ui/Pill";
 

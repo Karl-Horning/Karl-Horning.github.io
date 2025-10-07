@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getPrevNext } from "@/lib/cmalt/cmalt-nav";
-import { icons } from "@/lib/constants/icons";
+import { icons } from "@/lib/constants/ui";
 
 const { NextIcon, PreviousIcon } = icons;
 

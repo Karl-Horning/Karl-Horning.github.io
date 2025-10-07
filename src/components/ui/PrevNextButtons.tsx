@@ -1,4 +1,4 @@
-import { icons } from "@/lib/constants/icons";
+import { icons } from "@/lib/constants/ui";
 import { decorateIcon } from "@/lib/helpers/iconHelpers";
 const { NextIcon, PreviousIcon } = icons;
 

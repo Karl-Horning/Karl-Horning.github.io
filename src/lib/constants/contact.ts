@@ -1,20 +1,18 @@
-import { icons } from "@/lib/constants/icons";
-import { externalLinks } from "@/lib/constants/links";
+import { externalLinks, icons } from "./ui";
 import { Icon } from "@/types";
 
 const { CalendarIcon, ContactIcon, GitHubIcon, LinkedInIcon } = icons;
 const { GitHubLink, LinkedInLink } = externalLinks;
 
 /**
- * Collection of contact methods and related details.
+ * Centralised collection of contact methods and related details.
  *
  * Each item includes a title, optional description, icon, link,
- * and Tailwind CSS classes for consistent styling. These entries
- * are used in the `Contact` section to provide ways for visitors
- * to get in touch or connect on external platforms.
+ * and Tailwind CSS classes for consistent styling across light
+ * and dark themes.
  *
- * @constant
- * @type {Icon[]}
+ * Used in the `Contact` section to provide visitors with clear
+ * ways to get in touch or connect on external platforms.
  */
 export const contactItems: Icon[] = [
     {

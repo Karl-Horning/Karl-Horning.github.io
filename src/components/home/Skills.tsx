@@ -1,6 +1,5 @@
-import { internalRoutes } from "@/lib/constants/links";
-import { SkillsIcons } from "@/lib/constants/skills";
-import { icons } from "@/lib/constants/icons";
+import { icons, internalRoutes } from "@/lib/constants/ui";
+import { SkillsIcons } from "@/lib/constants/home";
 import ButtonLink from "../ui/ButtonLink";
 import IconCard from "../ui/IconCard";
 
