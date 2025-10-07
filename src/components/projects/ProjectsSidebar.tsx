@@ -103,7 +103,7 @@ export default function ProjectsSidebar({
     }
 
     return (
-        <aside className="sticky top-[5rem] hidden max-h-[calc(100vh-6rem)] overflow-auto rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm md:block dark:border-slate-800 dark:bg-slate-900">
+        <aside className="sticky top-[4.5rem] hidden max-h-[calc(100vh-6rem)] overflow-auto rounded-2xl border border-slate-200 bg-white p-5 text-sm shadow-sm md:block dark:border-slate-800 dark:bg-slate-900">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-300">
                 On this page
             </p>
@@ -115,8 +115,8 @@ export default function ProjectsSidebar({
                             key={h.id}
                             href={`#${h.id}`}
                             className={[
-                                "block rounded px-2 py-1 text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800",
-                                isActive ? "font-semibold underline" : "",
+                                "block rounded px-2 py-1 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800",
+                                isActive ? "text-primary  dark:bg-primary dark:text-white" : "text-slate-700",
                             ].join(" ")}
                         >
                             {h.text}
