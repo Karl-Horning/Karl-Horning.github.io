@@ -1,5 +1,5 @@
 import { icons } from "@/lib/constants/icons";
-import { IconItem } from "@/types/IconItem";
+import { Icon } from "@/types";
 
 const {
     GraphQlIcon,
@@ -21,7 +21,7 @@ const {
  *   bgColour: string
  * }>}
  */
-export const SkillsIcons: IconItem[] = [
+export const SkillsIcons: Icon[] = [
     {
         title: "JavaScript",
         icon: JavaScriptIcon,

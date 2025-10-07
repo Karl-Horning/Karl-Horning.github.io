@@ -1,6 +1,6 @@
 import { icons } from "@/lib/constants/icons";
 import { externalLinks } from "@/lib/constants/links";
-import { IconItem } from "@/types/IconItem";
+import { Icon } from "@/types";
 
 const { CalendarIcon, ContactIcon, GitHubIcon, LinkedInIcon } = icons;
 const { GitHubLink, LinkedInLink } = externalLinks;
@@ -14,9 +14,9 @@ const { GitHubLink, LinkedInLink } = externalLinks;
  * to get in touch or connect on external platforms.
  *
  * @constant
- * @type {IconItem[]}
+ * @type {Icon[]}
  */
-export const contactItems: IconItem[] = [
+export const contactItems: Icon[] = [
     {
         title: "Email",
         description: "test@example.com",

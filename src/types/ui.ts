@@ -6,7 +6,7 @@ import { IconType } from "react-icons";
  * Used for values, sidebar entries, and other UI elements that pair
  * descriptive text with an icon and consistent Tailwind colour classes.
  */
-export type IconItem = {
+export type Icon = {
     /**
      * The display name or label for the item.
      */
@@ -36,4 +36,38 @@ export type IconItem = {
      * Tailwind CSS class applied to the background behind the icon.
      */
     bgColour: string;
+};
+
+/**
+ * Represents a small image preview used for cards,
+ * project listings, or summaries.
+ */
+export type Thumbnail = {
+    /**
+     * The image source URL or static import path.
+     */
+    src: string;
+
+    /**
+     * Descriptive alternative text for accessibility and SEO.
+     */
+    alt: string;
+};
+
+/**
+ * Represents a single blog topic or tag link.
+ *
+ * Used to create navigable topic chips or lists that
+ * direct users to filtered blog views by tag.
+ */
+export type Topic = {
+    /**
+     * The display name or label for the topic (for example, "#React").
+     */
+    title: string;
+
+    /**
+     * The URL path or link target for the topic (usually internal).
+     */
+    link: string;
 };

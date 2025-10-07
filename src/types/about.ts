@@ -1,9 +1,7 @@
-import { IconType } from "react-icons";
-
 /**
  * Represents a single work experience entry used in the "Experience" section.
  */
-export type WorkExperienceItem = {
+export type WorkExperience = {
     /**
      * The date range for the experience (for example, "2022–2024").
      */
@@ -46,7 +44,7 @@ export type WorkExperienceItem = {
  * Used to display achievements such as online course completions,
  * professional accreditations, or skill-based badges.
  */
-export type CertificationItem = {
+export type Certification = {
     /**
      * The name of the certification or badge.
      */

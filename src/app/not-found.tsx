@@ -5,7 +5,7 @@ import TopicChips from "@/components/ui/TopicChips";
 import Image from "next/image";
 import { assets } from "@/lib/constants/assets";
 import ContactCta from "@/components/ui/ContactCta";
-import { notFoundTopicItems } from "@/lib/constants/notFound";
+import { notFoundTopics } from "@/lib/constants/notFound";
 
 const { notFoundImage } = assets;
 
@@ -49,7 +49,7 @@ export default function NotFound() {
                             </p>
 
                             <QuickDestinations />
-                            <TopicChips topics={notFoundTopicItems} />
+                            <TopicChips topics={notFoundTopics} />
                             <Search />
                         </div>
 

@@ -1,5 +1,5 @@
 import { icons } from "@/lib/constants/icons";
-import { IconItem } from "@/types/IconItem";
+import { Icon } from "@/types";
 
 const { AccessibilityIcon, ApiIcon, HigherEducationIcon, PerformanceIcon } =
     icons;
@@ -20,7 +20,7 @@ const { AccessibilityIcon, ApiIcon, HigherEducationIcon, PerformanceIcon } =
  * The colour classes support both light and dark modes, using Tailwind's
  * `dark:` variants for dynamic theming.
  */
-export const HighlightIcons: IconItem[] = [
+export const HighlightIcons: Icon[] = [
     {
         title: "Accessibility-first",
         description: "WCAG-aware design, keyboard and screen-reader friendly.",

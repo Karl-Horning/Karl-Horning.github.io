@@ -1,11 +1,11 @@
-import { TopicItem } from "@/types/TopicItem";
+import { Topic } from "@/types";
 
 interface TopicChipsProps {
     /**
      * Array of topic items to display as clickable chips.
      * Each item includes a title and a corresponding link.
      */
-    topics: TopicItem[];
+    topics: Topic[];
 
     /**
      * Optional additional classes to customise spacing or layout.
@@ -18,7 +18,7 @@ interface TopicChipsProps {
  *
  * Each chip represents a blog tag (for example, #React or #Next.js)
  * and links to its corresponding tag page. Accepts any list of
- * {@link TopicItem} objects, making the component reusable across pages.
+ * {@link Topic} objects, making the component reusable across pages.
  *
  * @param props - Component properties.
  * @param props.topics - Array of topic items to render as chips.

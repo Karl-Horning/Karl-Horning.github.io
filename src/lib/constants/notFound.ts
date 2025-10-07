@@ -1,7 +1,6 @@
-import { IconItem } from "@/types/IconItem";
+import { Icon, Topic } from "@/types";
 import { icons } from "./icons";
 import { externalLinks, internalRoutes } from "./links";
-import { TopicItem } from "@/types/TopicItem";
 
 const { BlogLink } = externalLinks;
 const { HomeRoute, AboutRoute } = internalRoutes;
@@ -16,9 +15,9 @@ const { IdIcon, LocationIcon, RssIcon } = icons;
  * light and dark modes. Used by the `QuickDestinations` component.
  *
  * @constant
- * @type {IconItem[]}
+ * @type {Icon[]}
  */
-export const quickDestinationItems: IconItem[] = [
+export const quickDestinationItems: Icon[] = [
     {
         title: "Home",
         description: "Start here",
@@ -53,9 +52,9 @@ export const quickDestinationItems: IconItem[] = [
  * clickable chips or badges for quick topic access.
  *
  * @constant
- * @type {TopicItem[]}
+ * @type {Topic[]}
  */
-export const notFoundTopicItems: TopicItem[] = [
+export const notFoundTopics: Topic[] = [
     { title: "#React", link: `${BlogLink}/tags/react/` },
     { title: "#Next.js", link: `${BlogLink}/tags/nextjs/` },
     { title: "#APIs", link: `${BlogLink}/tags/api/` },
