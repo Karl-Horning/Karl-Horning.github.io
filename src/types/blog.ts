@@ -4,6 +4,7 @@
  * @property {string} title - The display title of the tag.
  * @property {string} href - The URL path or link related to the tag.
  */
+// TODO: normalise or remove: duplicate of topic
 export type Tag = {
     title: string;
     href: string;
@@ -18,6 +19,7 @@ export type Tag = {
  * @property {string} snippet - A short excerpt or summary of the blog post content.
  * @property {Tag[]} tags - An array of tags associated with the blog post.
  */
+// TODO: normalise or remove: tags should use `Topic`, img should use `Thumbnail`
 export interface BlogPost {
     title: string;
     href: string;

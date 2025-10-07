@@ -1,6 +1,5 @@
 import { icons } from "@/lib/constants/icons";
-import { CertificationItem, WorkExperienceItem } from "@/types/AboutItem";
-import { IconItem } from "@/types/IconItem";
+import { Certification, Icon, WorkExperience } from "@/types";
 import { cmaltEvidence } from "./cmalt";
 
 const { certificates } = cmaltEvidence;
@@ -30,9 +29,9 @@ const {
  * to showcase validated skills and achievements.
  *
  * @constant
- * @type {CertificationItem[]}
+ * @type {Certification[]}
  */
-export const certificationItems: CertificationItem[] = [
+export const certificationItems: Certification[] = [
     {
         title: "Jira Fundamentals",
         body: "Atlassian University",
@@ -88,9 +87,9 @@ export const certificationItems: CertificationItem[] = [
  * `Technologies` section of the About page.
  *
  * @constant
- * @type {IconItem[]}
+ * @type {Icon[]}
  */
-export const technologyItems: IconItem[] = [
+export const technologyItems: Icon[] = [
     {
         title: "Blackboard",
         icon: BlackboardIcon,
@@ -137,9 +136,9 @@ export const technologyItems: IconItem[] = [
  * `Values` component to render the "What I value" grid.
  *
  * @constant
- * @type {IconItem[]}
+ * @type {Icon[]}
  */
-export const valueItems: IconItem[] = [
+export const valueItems: Icon[] = [
     {
         title: "Inclusive by default",
         description: "WCAG-aware patterns, keyboard support and good copy.",
@@ -179,9 +178,9 @@ export const valueItems: IconItem[] = [
  * styled consistently for light and dark themes.
  *
  * @constant
- * @type {IconItem[]}
+ * @type {Icon[]}
  */
-export const bioSidebarItems: IconItem[] = [
+export const bioSidebarItems: Icon[] = [
     {
         title: "London, UK",
         icon: LocationIcon,
@@ -219,9 +218,9 @@ export const bioSidebarItems: IconItem[] = [
  *
  * Used by the `Experience` component to render `ExperienceCard` items.
  * @constant
- * @type {WorkExperienceItem[]}
+ * @type {WorkExperience[]}
  */
-export const workExperience: WorkExperienceItem[] = [
+export const workExperience: WorkExperience[] = [
     {
         dates: "2022 — Present",
         jobTitle: "Learning Technologist",

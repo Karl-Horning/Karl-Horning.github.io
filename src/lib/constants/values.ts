@@ -1,4 +1,4 @@
-import { IconItem } from "@/types/IconItem";
+import { Icon } from "@/types";
 import { icons } from "@/lib/constants/icons";
 
 const { AccessibilityIcon, CodeIcon, LearningIcon, ToolsIcon, UsersIcon } =
@@ -9,7 +9,7 @@ const { AccessibilityIcon, CodeIcon, LearningIcon, ToolsIcon, UsersIcon } =
  * Each value includes a title, an icon component, descriptive text,
  * and Tailwind classes for icon and background colours.
  */
-export const aboutValues: IconItem[] = [
+export const aboutValues: Icon[] = [
     {
         title: "Accessibility",
         icon: AccessibilityIcon,
