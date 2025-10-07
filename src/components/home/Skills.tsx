@@ -28,7 +28,7 @@ export default function Skills() {
                     type="secondary"
                 />
             </div>
-            <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
                 {SkillsIcons.map(({ title, icon: Icon, ...props }) => (
                     <IconCard
                         key={title}

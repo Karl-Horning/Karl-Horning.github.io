@@ -1,5 +1,5 @@
 import { BsBoxArrowDownLeft, BsFillSendFill } from "react-icons/bs";
-import { FaSearch, FaTools } from "react-icons/fa";
+import { FaArrowLeft, FaSearch, FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
     FaBluesky,
@@ -13,6 +13,7 @@ import {
     FaEnvelopeOpenText,
     FaFacebook,
     FaFire,
+    FaFolderOpen,
     FaGaugeHigh,
     FaGithub,
     FaGraduationCap,
@@ -27,11 +28,12 @@ import {
     FaUniversalAccess,
     FaUser,
     FaVial,
-    FaX,
+    FaXTwitter,
 } from "react-icons/fa6";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { RiShieldCheckFill } from "react-icons/ri";
 import {
+    SiBuymeacoffee,
     SiCanvas,
     SiGraphql,
     SiLinkedin,
@@ -114,6 +116,12 @@ export const icons = {
     CodePenIcon: FaCodepen,
 
     /**
+     * @description SiBuymeacoffee
+     * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
+     */
+    CoffeeIcon: SiBuymeacoffee,
+
+    /**
      * @description FaEnvelope
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
@@ -142,6 +150,12 @@ export const icons = {
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     FacebookIcon: FaFacebook,
+
+    /**
+     * @description FaFolderOpen
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    FolderIcon: FaFolderOpen,
 
     /**
      * @description SiGraphql
@@ -204,6 +218,12 @@ export const icons = {
     MoodleIcon: SiMoodle,
 
     /**
+     * @description FaArrowRight
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    NextIcon: FaArrowRight,
+
+    /**
      * @description FaNodeJs
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
@@ -220,6 +240,12 @@ export const icons = {
      * @link [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
     PostgreSqlIcon: SiPostgresql,
+
+    /**
+     * @description FaArrowLeft
+     * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    PreviousIcon: FaArrowLeft,
 
     /**
      * @description FaDiagramProject
@@ -256,7 +282,7 @@ export const icons = {
      * @link [Bootstrap Icons](https://react-icons.github.io/react-icons/icons/bs/)
      */
     SendIcon: BsFillSendFill,
-    
+
     /**
      * @description FaDatabase
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
@@ -297,5 +323,5 @@ export const icons = {
      * @description FaX
      * @link [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    XIcon: FaX,
+    XIcon: FaXTwitter,
 };

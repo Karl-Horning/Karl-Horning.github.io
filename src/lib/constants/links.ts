@@ -12,6 +12,9 @@ export const externalLinks = {
     /** Karl Horning's GitHub profile link  */
     GitHubLink: "https://github.com/Karl-Horning",
 
+    /** Karl Horning's GitHub profile link  */
+    KofiLink: "https://ko-fi.com/karlhorning",
+
     /** Karl Horning's LinkedIn profile link */
     LinkedInLink: "https://www.linkedin.com/in/karl-horning",
 
@@ -51,7 +54,7 @@ export const internalRoutes = {
     ContactRoute: "/contact",
 
     /** The projects page */
-    ProjectsRoute: "/",
+    ProjectsRoute: "/projects",
 };
 
 /**
