@@ -19,6 +19,10 @@
     --hero: #0b1d21;
     --text: #cccccc;
     --muted: #b3b3b3;
+    --glitch-magenta: #cb2d6f; /* palette pink */
+    --glitch-cyan: #148aad; /* teal */
+    --glitch-strength: 3px; /* pixel jump distance */
+    --glitch-speed: 700ms; /* total loop time */
 }
 
 @media (prefers-color-scheme: dark) {
