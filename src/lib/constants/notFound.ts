@@ -1,6 +1,5 @@
 import { Icon, Topic } from "@/types";
-import { icons } from "./icons";
-import { externalLinks, internalRoutes } from "./links";
+import { externalLinks, icons, internalRoutes } from "./ui";
 
 const { BlogLink } = externalLinks;
 const { HomeRoute, AboutRoute } = internalRoutes;
@@ -13,9 +12,6 @@ const { IdIcon, LocationIcon, RssIcon } = icons;
  * Home, About, and Blog. Each item includes a title, short description,
  * icon, link, and Tailwind CSS classes for consistent styling in both
  * light and dark modes. Used by the `QuickDestinations` component.
- *
- * @constant
- * @type {Icon[]}
  */
 export const quickDestinationItems: Icon[] = [
     {
@@ -50,9 +46,6 @@ export const quickDestinationItems: Icon[] = [
  * Each item includes a title representing a tag and a link to its
  * corresponding filtered view on the blog. Commonly displayed as
  * clickable chips or badges for quick topic access.
- *
- * @constant
- * @type {Topic[]}
  */
 export const notFoundTopics: Topic[] = [
     { title: "#React", link: `${BlogLink}/tags/react/` },

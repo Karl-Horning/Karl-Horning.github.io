@@ -1,4 +1,4 @@
-import { externalLinks, internalRoutes } from "./links";
+import { externalLinks, internalRoutes } from "./ui";
 import { seo } from "@/lib/constants/seo";
 
 const { ContactRoute } = internalRoutes;
@@ -13,8 +13,11 @@ const {
 } = seo;
 
 /**
- * JSON-LD structured data describing Karl Horning as a Person,
- * including job titles, skills, contact info, and employer.
+ * JSON-LD structured data describing **Karl Horning** as a person.
+ *
+ * Defines key attributes such as job title, areas of expertise,
+ * contact details, social links, and current employer. Used in
+ * the `<head>` section for semantic SEO and rich search snippets.
  */
 export const jsonLdAbout = {
     "@context": "https://schema.org",
@@ -45,8 +48,11 @@ export const jsonLdAbout = {
 };
 
 /**
- * JSON-LD structured data for the home page,
- * describing the website and its publisher.
+ * JSON-LD structured data for the **home page**.
+ *
+ * Describes the portfolio website as a whole, including its name,
+ * URL, publisher, and overall purpose. Used to enhance search
+ * engine visibility and establish authorship.
  */
 export const jsonLdHome = {
     "@context": "https://schema.org",
@@ -65,9 +71,11 @@ export const jsonLdHome = {
 };
 
 /**
- * JSON-LD structured data for the contact page,
- * including postal addresses and multiple contact points
- * (contact form, email, LinkedIn).
+ * JSON-LD structured data for the **contact page**.
+ *
+ * Provides postal addresses, available languages, and multiple
+ * contact points (form, email, LinkedIn). Helps search engines
+ * display verified contact information in rich results.
  */
 export const jsonLdContact = {
     "@context": "https://schema.org",

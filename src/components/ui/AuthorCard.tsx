@@ -1,8 +1,11 @@
 import Image from "next/image";
 import ButtonLink from "./ButtonLink";
-import { icons } from "@/lib/constants/icons";
-import { assets } from "@/lib/constants/assets";
-import { externalLinks, internalRoutes } from "@/lib/constants/links";
+import {
+    assets,
+    externalLinks,
+    icons,
+    internalRoutes,
+} from "@/lib/constants/ui";
 
 const { CoffeeIcon, ContactIcon } = icons;
 const { KofiLink } = externalLinks;

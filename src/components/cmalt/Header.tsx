@@ -1,4 +1,4 @@
-import { icons } from "@/lib/constants/icons";
+import { icons } from "@/lib/constants/ui";
 import Pill from "../ui/Pill";
 
 const { CalendarIcon, ClockIcon } = icons;

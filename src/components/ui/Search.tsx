@@ -1,7 +1,6 @@
-import { icons } from "@/lib/constants/icons";
-import { externalLinks } from "@/lib/constants/links";
-const { SearchIcon } = icons;
+import { externalLinks,icons } from "@/lib/constants/ui";
 
+const { SearchIcon } = icons;
 const { BlogLink } = externalLinks;
 
 /**

@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 import Pill from "./Pill";
 import ButtonLink from "./ButtonLink";
-import { icons } from "@/lib/constants/icons";
-import { externalLinks } from "@/lib/constants/links";
+import { externalLinks, icons } from "@/lib/constants/ui";
 
 const { CalendarIcon, ClockIcon, CoffeeIcon } = icons;
 const { KofiLink } = externalLinks;

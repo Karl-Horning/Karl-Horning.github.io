@@ -1,4 +1,4 @@
-import { HighlightIcons } from "@/lib/constants/highlights";
+import { HighlightIcons } from "@/lib/constants/home";
 import IconCard from "../ui/IconCard";
 
 /**

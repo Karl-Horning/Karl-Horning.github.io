@@ -1,6 +1,5 @@
-import { externalLinks } from "@/lib/constants/links";
+import { externalLinks, icons } from "@/lib/constants/ui";
 import { getBlogPosts } from "@/lib/blog/getBlogPosts";
-import { icons } from "@/lib/constants/icons";
 import BlogCard from "./BlogCard";
 import ButtonLink from "../ui/ButtonLink";
 
