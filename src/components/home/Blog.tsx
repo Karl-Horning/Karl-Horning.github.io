@@ -1,6 +1,6 @@
 import { icons, internalRoutes } from "@/lib/constants/ui";
-import { getBlogPosts } from "@/lib/blog/getBlogPosts";
-import BlogCard from "./BlogCard";
+import { getBlogPosts } from "@/lib/helpers/getBlogPosts";
+import BlogCard from "../ui/BlogCard";
 import ButtonLink from "../ui/ButtonLink";
 
 const { ReadMoreIcon } = icons;
@@ -20,7 +20,7 @@ const { BlogRoute } = internalRoutes;
  * button, and a grid of blog post previews.
  */
 export default async function Blog() {
-    const blogPosts = await getBlogPosts();
+    const blogPosts = await getBlogPosts(2);
 
     return (
         <section id="blog" className="mx-auto max-w-6xl px-4 pt-20">
