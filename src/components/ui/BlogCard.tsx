@@ -42,45 +42,55 @@ export default function BlogCard({
     topics,
 }: BlogPost) {
     return (
-        <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-            <Image
-                src={thumbnail.src}
-                alt={thumbnail.alt}
-                aria-hidden={!thumbnail.alt ? "true" : undefined}
-                className="mb-4 h-48 w-full rounded-md object-cover"
-                loading="lazy"
-                width={400}
-                height={200}
-            />
-            <h2 className="text-2xl font-bold mt-3">{title}</h2>
-
-            <p className="mt-3 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
-                {decorateIcon(<CalendarIcon />)}{" "}
-                <time dateTime={date}>
-                    {new Date(date).toLocaleDateString("en-GB", {
-                        day: "2-digit",
-                        month: "long",
-                        year: "numeric",
-                    })}
-                </time>
-                <span className="mx-2">|</span>
-                {decorateIcon(<ClockIcon />)} {readingTime} min read
-            </p>
-
-            <p className="mt-3 text-slate-700 dark:text-slate-300">
-                {description}
-            </p>
-            <p className="my-6">
-                <ButtonLink
-                    href={`${BlogRoute}/posts/${slug}`}
-                    text="Read more"
-                    icon={<ReadMoreIcon />}
+        <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+            <div className="flex flex-col">
+                <Image
+                    src={thumbnail.src}
+                    alt={thumbnail.alt}
+                    aria-hidden={!thumbnail.alt ? "true" : undefined}
+                    className="mb-4 h-48 w-full rounded-md object-cover"
+                    loading="lazy"
+                    width={400}
+                    height={200}
                 />
-            </p>
-            <hr className="mt-8 border-slate-100 dark:border-slate-800" />
-            <ul className="mt-6 flex flex-wrap">
-                <TopicChips topics={topics} />
-            </ul>
+
+                <h2 className="mt-3 text-2xl font-bold">{title}</h2>
+
+                <p className="mt-3 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+                    {decorateIcon(<CalendarIcon />)}
+                    <time dateTime={date}>
+                        {new Date(date).toLocaleDateString("en-GB", {
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric",
+                        })}
+                    </time>
+                    <span className="mx-2">|</span>
+                    {decorateIcon(<ClockIcon />)} {readingTime} min read
+                </p>
+
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                    {description}
+                </p>
+            </div>
+
+            <div className="mt-auto">
+                <ul className="mt-6 flex flex-wrap gap-2">
+                    <TopicChips topics={topics} />
+                </ul>
+                <hr className="mt-6 border-slate-100 dark:border-slate-800" />
+
+                <footer>
+                    <div className="mt-6 flex flex-col md:float-right md:flex-row">
+                        <ButtonLink
+                            href={`${BlogRoute}/posts/${slug}`}
+                            text="Read more"
+                            icon={<ReadMoreIcon />}
+                            className="text-center md:text-left"
+                        />
+                    </div>
+                </footer>
+            </div>
         </article>
     );
 }
