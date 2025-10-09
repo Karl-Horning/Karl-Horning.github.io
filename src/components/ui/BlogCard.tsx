@@ -24,12 +24,12 @@ const { CalendarIcon, ClockIcon, ReadMoreIcon } = icons;
  *
  * @param props - The blog post properties.
  * @param props.title - The title of the blog post.
- * @param props.href - The URL to the full blog post.
- * @param props.imgUrl - Path or URL to the featured image.
- * @param props.imgAlt - Optional alt text for the image (improves accessibility).
- * @param props.date - The publication date as a string.
  * @param props.description - A short excerpt or teaser for the blog post.
- * @param props.tags - An array of tags associated with the post. Each tag includes a title and link.
+ * @param props.date - The publication date as a string.
+ * @param props.readingTime - The estimated reading time for the content.
+ * @param props.slug - The unique slug of the blog post used to generate shareable URLs.
+ * @param props.thumbnail - Thumbnail image object containing the source and alt text for the project cover image.
+ * @param props.topics - An array of tags associated with the post. Each tag includes a title and link.
  * @returns A styled `<article>` element representing a blog post card.
  */
 export default function BlogCard({
