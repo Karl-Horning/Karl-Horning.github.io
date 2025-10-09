@@ -49,8 +49,13 @@ export default function NotFound() {
                             </p>
 
                             <QuickDestinations />
-                            <TopicChips topics={notFoundTopics} />
-                            <Search />
+
+                            <div className="mt-6">
+                                <Search />
+                            </div>
+                            <div className="mt-6">
+                                <TopicChips topics={notFoundTopics} />
+                            </div>
                         </div>
 
                         <Image

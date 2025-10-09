@@ -1,122 +1,138 @@
 [
     {
         "title": "Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)",
-        "href": "https://www.karlhorning.dev/dev-blog/posts/setting-up-prettier-with-tailwind-css-in-a-react-project/",
-        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/prettier_tailwind.webp",
-        "imgAlt": "The Next.js, React, Vite, Tailwind, and Prettier logos",
-        "date": "04 August 2025",
-        "snippet": "A quick walkthrough for setting up Prettier with Tailwind CSS in a new React project using either Next.js or Vite. Written mainly as a reminder to myself — but hopefully useful for others too.",
-        "tags": [
+        "description": "A quick walkthrough for setting up Prettier with Tailwind CSS in a new React project using either Next.js or Vite. Written mainly as a reminder to myself — but hopefully useful for others too.",
+        "date": "2025-08-04",
+        "readingTime": 6,
+        "slug": "setting-up-prettier-with-tailwind-css-in-a-react-project",
+        "thumbnail": {
+            "src": "/img/blog/prettier_tailwind.webp",
+            "alt": "The Next.js, React, Vite, Tailwind, and Prettier logos"
+        },
+        "topics": [
             {
                 "title": "Prettier",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/prettier/"
+                "link": "/posts/prettier"
             },
             {
                 "title": "Tailwind CSS",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/tailwind-css/"
+                "link": "/posts/tailwind-css"
             },
             {
                 "title": "React",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/react/"
+                "link": "/posts/react"
             },
             {
                 "title": "Next.js",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/nextjs/"
+                "link": "/posts/nextjs"
             },
             {
                 "title": "Vite",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/vite/"
+                "link": "/posts/vite"
             },
             {
                 "title": "JavaScript",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/javascript/"
+                "link": "/posts/javascript"
             },
             {
                 "title": "Frontend",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/frontend/"
+                "link": "/posts/frontend"
             }
-        ]
+        ],
+        "draft": false
     },
     {
         "title": "Using Blackboard's Swagger File to Create a Postman Collection and Make an API Call",
-        "href": "https://www.karlhorning.dev/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
-        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/postman_blackboard.webp",
-        "imgAlt": "The Postman and Blackboard Learn logos",
-        "date": "11 July 2025",
-        "snippet": "This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
-        "tags": [
+        "description": "This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
+        "date": "2025-07-11",
+        "readingTime": 6,
+        "slug": "using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call",
+        "thumbnail": {
+            "src": "/img/blog/postman_blackboard.webp",
+            "alt": "The Postman and Blackboard Learn logos"
+        },
+        "topics": [
             {
                 "title": "Blackboard",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/blackboard/"
+                "link": "/posts/blackboard"
             },
             {
                 "title": "Postman",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/postman/"
+                "link": "/posts/postman"
             },
             {
                 "title": "API",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/api/"
+                "link": "/posts/api"
             },
             {
                 "title": "Swagger",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/swagger/"
+                "link": "/posts/swagger"
             },
             {
                 "title": "OAuth2",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/oauth2/"
+                "link": "/posts/oauth2"
             },
             {
                 "title": "EdTech",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/edtech/"
+                "link": "/posts/edtech"
             }
-        ]
+        ],
+        "draft": false
     },
     {
         "title": "Testing, Testing",
-        "href": "https://www.karlhorning.dev/dev-blog/posts/testing-testing/",
-        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/pexels-mali-63238.optimised.webp",
-        "imgAlt": "Graffiti of a monkey wearing sunglasses (placeholder image)",
-        "date": "23 June 2025",
-        "snippet": "A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
-        "tags": [
+        "description": "A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
+        "date": "2025-06-23",
+        "readingTime": 6,
+        "slug": "testing-testing",
+        "thumbnail": {
+            "src": "/img/blog/pexels-mali-63238.optimised.webp",
+            "alt": "Graffiti of a monkey wearing sunglasses (placeholder image)"
+        },
+        "topics": [
             {
                 "title": "meta",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/meta/"
+                "link": "/posts/meta"
             },
             {
                 "title": "blog",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/blog/"
+                "link": "/posts/blog"
             },
             {
                 "title": "testing",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/testing/"
+                "link": "/posts/testing"
             }
-        ]
+        ],
+        "draft": false
     },
     {
         "title": "Hello, World!",
-        "href": "https://www.karlhorning.dev/dev-blog/posts/hello-world/",
-        "imgUrl": "https://www.karlhorning.dev/dev-blog/assets/img/pexels-meruyert-gonullu-7317281.optimised.webp",
-        "imgAlt": "A neon sign saying 'hello'",
-        "date": "22 June 2025",
-        "snippet": "A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.",
-        "tags": [
+        "description": "A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.",
+        "date": "2025-06-22",
+        "readingTime": 6,
+        "slug": "hello-world",
+        "thumbnail": {
+            "src": "/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp",
+            "alt": "A neon sign saying 'hello'"
+        },
+        "topics": [
             {
                 "title": "meta",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/meta/"
+                "link": "/posts/meta"
             },
             {
                 "title": "blog",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/blog/"
+                "link": "/posts/blog"
             },
             {
                 "title": "personal",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/personal/"
+                "link": "/posts/personal"
             },
             {
                 "title": "technology",
-                "href": "https://www.karlhorning.dev/dev-blog/tags/technology/"
+                "link": "/posts/technology"
             }
-        ]
+        ],
+        "draft": false
     }
 ]

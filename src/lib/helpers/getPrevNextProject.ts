@@ -11,8 +11,14 @@ import { cache } from "react";
  */
 type ProjectListItem = Pick<
     ProjectMeta,
-    "slug" | "title" | "description" | "topics" | "repo"
+    "slug" | "title" | "description" | "repo"
 > & {
+    /**
+     * Topics object containing the display name and slug
+     * for the topic link.
+     */
+    topics: ProjectMeta["topics"];
+} & {
     /**
      * Thumbnail image object containing the source and alt text
      * for the project cover image.

@@ -1,4 +1,4 @@
-import { Thumbnail } from "@/types";
+import { Thumbnail, Topic } from "@/types";
 
 /**
  * Metadata describing an individual project entry.
@@ -44,7 +44,7 @@ export type ProjectMeta = {
      * An array of topic strings used as tags or metadata
      * for filtering or categorising projects.
      */
-    topics: readonly string[];
+    topics: Topic[];
 
     /**
      * Optional GitHub repository name or URL associated with the project.

@@ -3,6 +3,7 @@ import { ProjectMeta } from "@/types";
 import Image from "next/image";
 import Pill from "../ui/Pill";
 import ButtonLink from "../ui/ButtonLink";
+import TopicChips from "../ui/TopicChips";
 
 const { ExternalLinkIcon, FolderIcon } = icons;
 const { GitHubLink } = externalLinks;
@@ -73,14 +74,7 @@ export default function ProjectsCard({
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                    {topics.map((topic) => (
-                        <Pill
-                            key={topic}
-                            text={`#${topic}`}
-                            mainColour="text-blue-700 dark:text-secondary"
-                            bgColour="bg-blue-600/10 dark:bg-blue-200/10"
-                        />
-                    ))}
+                    <TopicChips topics={topics} />
                 </div>
 
                 <div className="mt-4 flex gap-3">

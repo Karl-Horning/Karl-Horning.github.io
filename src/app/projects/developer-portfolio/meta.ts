@@ -6,7 +6,20 @@ export const meta = {
     title: "Developer Portfolio",
     date: "2025-10-07",
     readingTime: 5,
-    topics: ["Next.js", "TypeScript", "Tailwind CSS"],
+    topics: [
+        {
+            title: "Next.js",
+            link: "/posts/nextjs",
+        },
+        {
+            title: "TypeScript",
+            link: "/posts/typescript",
+        },
+        {
+            title: "Tailwind CSS",
+            link: "/posts/tailwind-css",
+        },
+    ],
     description:
         "My personal portfolio, built with Next.js, TypeScript, and Tailwind CSS, showcases my work, values, and technical skills through a clean, accessible, and high-performance design. It scores 90+ across all Lighthouse categories and reflects my focus on thoughtful development, usability, and attention to detail.",
     thumbnail: {
