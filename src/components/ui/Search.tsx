@@ -25,7 +25,6 @@ export default function Search() {
             aria-label="Site search"
             action={BlogRoute}
             method="get"
-            className="mt-6 max-w-md"
         >
             <label htmlFor="blog-search" className="sr-only">
                 Search posts

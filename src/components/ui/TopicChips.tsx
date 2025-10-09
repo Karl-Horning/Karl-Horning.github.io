@@ -1,4 +1,5 @@
 import { Topic } from "@/types";
+import Link from "next/link";
 
 interface TopicChipsProps {
     /**
@@ -30,15 +31,15 @@ export default function TopicChips({
     className = "",
 }: TopicChipsProps) {
     return (
-        <div className={`mt-6 flex flex-wrap gap-2 text-xs ${className}`}>
+        <div className={`flex flex-wrap gap-2 text-xs ${className}`}>
             {topics.map(({ title, link }) => (
-                <a
+                <Link
                     key={title}
                     href={link}
-                    className="rounded-full bg-slate-100 px-3 py-1 text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                    className="rounded-full bg-blue-300/10 px-3 py-1 text-blue-700 transition hover:bg-blue-400/10 dark:bg-blue-200/10 dark:text-secondary dark:hover:bg-blue-200/20"
                 >
-                    {title}
-                </a>
+                    #{title}
+                </Link>
             ))}
         </div>
     );

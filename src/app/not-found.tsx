@@ -39,10 +39,10 @@ export default function NotFound() {
                             <p className="text-sm font-semibold text-primary">
                                 404 — Page missing
                             </p>
-                            <h1 className="mt-2 text-4xl font-extrabold tracking-tight">
+                            <h1 className="mt-3 text-4xl font-extrabold tracking-tight">
                                 Let&apos;s get you back on course
                             </h1>
-                            <p className="mt-2 text-slate-700 dark:text-slate-300">
+                            <p className="mt-3 text-slate-700 dark:text-slate-300">
                                 The link may be broken or the page removed. Here
                                 are a few common destinations and topics you
                                 might be after.
