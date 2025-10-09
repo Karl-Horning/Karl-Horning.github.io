@@ -367,6 +367,9 @@ export const internalRoutes = {
 
     /** Projects page */
     ProjectsRoute: "/projects",
+
+    /** XML file for feed */
+    RssFeed: "/rss.xml",
 } satisfies SiteLink;
 
 /**
@@ -410,7 +413,7 @@ export const socialLinks: SocialLink[] = [
     },
     {
         label: "RSS Feed",
-        href: externalLinks.RssLink,
+        href: internalRoutes.RssFeed,
         icon: icons.RssIcon,
     },
 ];

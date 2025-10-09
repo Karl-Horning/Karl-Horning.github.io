@@ -1,8 +1,9 @@
 import ButtonLink from "@/components/ui/ButtonLink";
-import { externalLinks, icons } from "@/lib/constants/ui";
+import { externalLinks, internalRoutes, icons } from "@/lib/constants/ui";
 
 const { CoffeeIcon, RssIcon } = icons;
-const { KofiLink, RssLink } = externalLinks;
+const { KofiLink } = externalLinks;
+const { RssFeed } = internalRoutes;
 
 /**
  * Displays a footer section for the blog landing page.
@@ -34,7 +35,7 @@ export default function BlogLandingFooter() {
                             icon={<CoffeeIcon />}
                         />
                         <ButtonLink
-                            href={RssLink}
+                            href={RssFeed}
                             text="RSS Feed"
                             icon={<RssIcon />}
                             type="secondary"
