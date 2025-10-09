@@ -9,15 +9,15 @@ export const meta = {
     topics: [
         {
             title: "Next.js",
-            link: "/posts/nextjs",
+            link: "/blog/tag/nextjs",
         },
         {
             title: "TypeScript",
-            link: "/posts/typescript",
+            link: "/blog/tag/typescript",
         },
         {
             title: "Tailwind CSS",
-            link: "/posts/tailwind-css",
+            link: "/blog/tag/tailwindcss",
         },
     ],
     description:

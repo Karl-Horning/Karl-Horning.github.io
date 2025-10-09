@@ -5,15 +5,15 @@
         "topics": [
             {
                 "title": "Next.js",
-                "link": "/posts/nextjs"
+                "link": "/blog/tag/nextjs"
             },
             {
                 "title": "TypeScript",
-                "link": "/posts/typescript"
+                "link": "/blog/tag/typescript"
             },
             {
                 "title": "Tailwind CSS",
-                "link": "/posts/tailwind-css"
+                "link": "/blog/tag/tailwindcss"
             }
         ],
         "slug": "developer-portfolio",
@@ -29,15 +29,15 @@
         "topics": [
             {
                 "title": "React",
-                "link": "/posts/react"
+                "link": "/blog/tag/react"
             },
             {
                 "title": "API",
-                "link": "/posts/api"
+                "link": "/blog/tag/api"
             },
             {
                 "title": "Accessibility",
-                "link": "/posts/accessibility"
+                "link": "/blog/tag/accessibility"
             }
         ],
         "slug": "generic-project",

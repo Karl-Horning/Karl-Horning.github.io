@@ -83,7 +83,7 @@ export default function BlogCard({
                 <footer>
                     <div className="mt-6 flex flex-col md:float-right md:flex-row">
                         <ButtonLink
-                            href={`${BlogRoute}/posts/${slug}`}
+                            href={`${BlogRoute}/${slug}`}
                             text="Read more"
                             icon={<ReadMoreIcon />}
                             className="text-center md:text-left"

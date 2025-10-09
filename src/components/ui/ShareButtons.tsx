@@ -26,12 +26,12 @@ interface ShareButtonsProps {
  */
 export default function ShareButtons({ slug }: ShareButtonsProps) {
     return (
-        <section className="mt-10 flex flex-wrap items-center gap-3">
+        <section className="flex flex-wrap items-center gap-3">
             <span className="text-sm text-slate-600 dark:text-slate-400">
                 Share:
             </span>
             <a
-                href={`https://twitter.com/intent/tweet?text=${PortfolioLink}/projects/${slug}`}
+                href={`https://twitter.com/intent/tweet?text=${PortfolioLink}/${slug}`}
                 className="flex cursor-pointer items-center rounded-lg border border-slate-300 bg-white px-3 py-1 text-sm shadow-sm transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800"
                 target="_blank"
                 rel="noreferrer"
@@ -41,7 +41,7 @@ export default function ShareButtons({ slug }: ShareButtonsProps) {
                 Post
             </a>
             <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${PortfolioLink}/projects/${slug}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${PortfolioLink}/${slug}`}
                 className="flex cursor-pointer items-center rounded-lg border border-slate-300 bg-white px-3 py-1 text-sm shadow-sm transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800"
                 target="_blank"
                 rel="noreferrer"

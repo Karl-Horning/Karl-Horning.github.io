@@ -12,31 +12,31 @@
         "topics": [
             {
                 "title": "Prettier",
-                "link": "/posts/prettier"
+                "link": "/blog/tag/prettier"
             },
             {
                 "title": "Tailwind CSS",
-                "link": "/posts/tailwind-css"
+                "link": "/blog/tag/tailwindcss"
             },
             {
                 "title": "React",
-                "link": "/posts/react"
+                "link": "/blog/tag/react"
             },
             {
                 "title": "Next.js",
-                "link": "/posts/nextjs"
+                "link": "/blog/tag/nextjs"
             },
             {
                 "title": "Vite",
-                "link": "/posts/vite"
+                "link": "/blog/tag/vite"
             },
             {
                 "title": "JavaScript",
-                "link": "/posts/javascript"
+                "link": "/blog/tag/javascript"
             },
             {
                 "title": "Frontend",
-                "link": "/posts/frontend"
+                "link": "/blog/tag/frontend"
             }
         ],
         "draft": false
@@ -54,27 +54,27 @@
         "topics": [
             {
                 "title": "Blackboard",
-                "link": "/posts/blackboard"
+                "link": "/blog/tag/blackboard"
             },
             {
                 "title": "Postman",
-                "link": "/posts/postman"
+                "link": "/blog/tag/postman"
             },
             {
                 "title": "API",
-                "link": "/posts/api"
+                "link": "/blog/tag/api"
             },
             {
                 "title": "Swagger",
-                "link": "/posts/swagger"
+                "link": "/blog/tag/swagger"
             },
             {
                 "title": "OAuth2",
-                "link": "/posts/oauth2"
+                "link": "/blog/tag/oauth2"
             },
             {
                 "title": "EdTech",
-                "link": "/posts/edtech"
+                "link": "/blog/tag/edtech"
             }
         ],
         "draft": false
@@ -92,15 +92,15 @@
         "topics": [
             {
                 "title": "meta",
-                "link": "/posts/meta"
+                "link": "/blog/tag/meta"
             },
             {
                 "title": "blog",
-                "link": "/posts/blog"
+                "link": "/blog/tag/blog"
             },
             {
                 "title": "testing",
-                "link": "/posts/testing"
+                "link": "/blog/tag/testing"
             }
         ],
         "draft": false
@@ -118,19 +118,19 @@
         "topics": [
             {
                 "title": "meta",
-                "link": "/posts/meta"
+                "link": "/blog/tag/meta"
             },
             {
                 "title": "blog",
-                "link": "/posts/blog"
+                "link": "/blog/tag/blog"
             },
             {
                 "title": "personal",
-                "link": "/posts/personal"
+                "link": "/blog/tag/personal"
             },
             {
                 "title": "technology",
-                "link": "/posts/technology"
+                "link": "/blog/tag/technology"
             }
         ],
         "draft": false

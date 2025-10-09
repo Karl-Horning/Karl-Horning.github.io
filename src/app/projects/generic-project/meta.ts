@@ -9,15 +9,15 @@ export const meta = {
     topics: [
         {
             title: "React",
-            link: "/posts/react",
+            link: "/blog/tag/react",
         },
         {
             title: "API",
-            link: "/posts/api",
+            link: "/blog/tag/api",
         },
         {
             title: "Accessibility",
-            link: "/posts/accessibility",
+            link: "/blog/tag/accessibility",
         },
     ],
     description:
