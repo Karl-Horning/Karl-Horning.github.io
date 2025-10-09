@@ -1,10 +1,10 @@
-import { externalLinks, icons } from "@/lib/constants/ui";
+import { icons, internalRoutes } from "@/lib/constants/ui";
 import { getBlogPosts } from "@/lib/blog/getBlogPosts";
 import BlogCard from "./BlogCard";
 import ButtonLink from "../ui/ButtonLink";
 
 const { ReadMoreIcon } = icons;
-const { BlogLink } = externalLinks;
+const { BlogRoute } = internalRoutes;
 
 /**
  * Displays the "From the blog" section.
@@ -30,7 +30,7 @@ export default async function Blog() {
                 </h2>
                 <ButtonLink
                     text="View all posts"
-                    href={BlogLink}
+                    href={BlogRoute}
                     icon={<ReadMoreIcon />}
                     type="secondary"
                 />

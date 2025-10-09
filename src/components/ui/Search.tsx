@@ -1,7 +1,7 @@
-import { externalLinks,icons } from "@/lib/constants/ui";
+import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
 
 const { SearchIcon } = icons;
-const { BlogLink } = externalLinks;
+const { BlogRoute } = internalRoutes;
 
 /**
  * Renders an accessible blog search form.
@@ -23,7 +23,7 @@ export default function Search() {
         <form
             role="search"
             aria-label="Site search"
-            action={BlogLink}
+            action={BlogRoute}
             method="get"
             className="mt-6 max-w-md"
         >

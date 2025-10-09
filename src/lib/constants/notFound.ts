@@ -1,8 +1,7 @@
 import { Icon, Topic } from "@/types";
-import { externalLinks, icons, internalRoutes } from "./ui";
+import { icons, internalRoutes } from "./ui";
 
-const { BlogLink } = externalLinks;
-const { HomeRoute, AboutRoute } = internalRoutes;
+const { HomeRoute, AboutRoute, BlogRoute } = internalRoutes;
 const { IdIcon, LocationIcon, RssIcon } = icons;
 
 /**
@@ -33,7 +32,7 @@ export const quickDestinationItems: Icon[] = [
     {
         title: "Blog",
         description: "Latest posts",
-        link: BlogLink,
+        link: BlogRoute,
         icon: RssIcon,
         mainColour: "text-secondary dark:text-white",
         bgColour: "bg-blue-600/10 dark:bg-secondary",
@@ -48,9 +47,9 @@ export const quickDestinationItems: Icon[] = [
  * clickable chips or badges for quick topic access.
  */
 export const notFoundTopics: Topic[] = [
-    { title: "#React", link: `${BlogLink}/tags/react/` },
-    { title: "#Next.js", link: `${BlogLink}/tags/nextjs/` },
-    { title: "#APIs", link: `${BlogLink}/tags/api/` },
-    { title: "#JavaScript", link: `${BlogLink}/tags/javascript/` },
-    { title: "#EdTech", link: `${BlogLink}/tags/edtech/` },
+    { title: "#React", link: `${BlogRoute}/tags/react/` },
+    { title: "#Next.js", link: `${BlogRoute}/tags/nextjs/` },
+    { title: "#APIs", link: `${BlogRoute}/tags/api/` },
+    { title: "#JavaScript", link: `${BlogRoute}/tags/javascript/` },
+    { title: "#EdTech", link: `${BlogRoute}/tags/edtech/` },
 ];

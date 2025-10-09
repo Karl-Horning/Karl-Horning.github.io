@@ -356,6 +356,9 @@ export const internalRoutes = {
     /** About page */
     AboutRoute: "/about",
 
+    /** Blog page */
+    BlogRoute: "/blog",
+
     /** CMALT page */
     CmaltRoute: "/cmalt",
 
@@ -374,7 +377,7 @@ export const internalRoutes = {
  */
 export const navLinks = [
     { label: "About", href: internalRoutes.AboutRoute },
-    { label: "Blog", href: externalLinks.BlogLink },
+    { label: "Blog", href: internalRoutes.BlogRoute },
     { label: "CMALT", href: internalRoutes.CmaltRoute },
     { label: "Projects", href: internalRoutes.ProjectsRoute },
     { label: "Contact", href: internalRoutes.ContactRoute },
