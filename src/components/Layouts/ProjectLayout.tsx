@@ -7,6 +7,7 @@ import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import ProjectsSidebar from "@/components/projects/ProjectsSidebar";
 import ShareButtons from "@/components/ui/ShareButtons";
 import { getPrevNextProject } from "@/lib/helpers/getPrevNextProject";
+import ContactCta from "../ui/ContactCta";
 
 type ProjectLayoutProps = PropsWithChildren<ProjectMeta>;
 
@@ -54,7 +55,7 @@ export default async function ProjectLayout({
                 readingTime={readingTime}
                 topics={topics}
             />
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-20 md:grid-cols-[16rem_1fr]">
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[16rem_1fr]">
                 <ProjectsSidebar rootSelector="#main" />
                 <div className="max-w-3xl">
                     <EntryCoverImage {...thumbnail} />
@@ -65,7 +66,7 @@ export default async function ProjectLayout({
                     >
                         {children}
                     </main>
-                    <ShareButtons slug={slug} />
+                    <ShareButtons slug={`projects/${slug}`} />
                     <AuthorCard />
                     {/* Populates the previous and next buttons dynamically from JSON data */}
                     {(previous || next) && (
