@@ -10,11 +10,11 @@ import { BlogPost } from "@/types";
  *
  * @async
  * @function
- * @param {number} [limit=2] - The number of blog posts to return.
+ * @param {number} [limit=10] - The number of blog posts to return.
  * @returns {Promise<BlogPost[]>} Resolves to an array of blog posts.
  * @throws Will throw an error if reading or parsing the file fails.
  */
-export async function getBlogPosts(limit: number = 2): Promise<BlogPost[]> {
+export async function getBlogPosts(limit: number = 10): Promise<BlogPost[]> {
     try {
         // Construct absolute path to the JSON file in public folder
         const jsonFilePath = path.join(
