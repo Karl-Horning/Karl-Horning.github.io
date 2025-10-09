@@ -1,0 +1,42 @@
+import { BlogPost } from "@/types";
+import "server-only";
+
+export const meta = {
+    title: "Using Blackboard's Swagger File to Create a Postman Collection and Make an API Call",
+    description:
+        "This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
+    date: "2025-07-11",
+    readingTime: 7,
+    slug: "using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call",
+    thumbnail: {
+        src: "/img/blog/postman_blackboard.webp",
+        alt: "The Postman and Blackboard Learn logos",
+    },
+    topics: [
+        {
+            title: "Blackboard",
+            link: "/blog/tag/blackboard",
+        },
+        {
+            title: "Postman",
+            link: "/blog/tag/postman",
+        },
+        {
+            title: "API",
+            link: "/blog/tag/api",
+        },
+        {
+            title: "Swagger",
+            link: "/blog/tag/swagger",
+        },
+        {
+            title: "OAuth2",
+            link: "/blog/tag/oauth2",
+        },
+        {
+            title: "EdTech",
+            link: "/blog/tag/edtech",
+        },
+    ],
+    draft: false,
+} as const satisfies BlogPost;
