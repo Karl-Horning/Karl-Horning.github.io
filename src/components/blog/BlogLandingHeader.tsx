@@ -1,5 +1,13 @@
 import Search from "@/components/ui/Search";
 
+interface BlogHeaderProps {
+    /**
+     * The main heading text displayed at the top of the blog page.
+     * Typically a static string such as "From the blog".
+     */
+    title: string;
+}
+
 /**
  * Displays the blog header with page title, intro copy,
  * a search input, a tag filter, and a sort control.
@@ -9,15 +17,16 @@ import Search from "@/components/ui/Search";
  * - Wire the search box to query/filter posts.
  * - Sort posts by date (newest/oldest) based on selection.
  *
- * Layout adapts from a single column on mobile to a compact
- * three-column control row on larger screens.
+ * @param {BlogHeaderProps} props - Component props.
+ * @param {string} props.title - The heading displayed at the top of the blog page.
+ * @returns The blog header section, including title, intro, and search/filter controls.
  */
-export default function BlogHeader() {
+export default function BlogHeader({ title }: BlogHeaderProps) {
     return (
         <section className={`hero-bg`}>
             <div className="mx-auto max-w-6xl px-4 py-20">
                 <h1 className="mt-3 text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    From the blog
+                    {title}
                 </h1>
 
                 <p className="mt-3 max-w-prose text-lg text-slate-700 dark:text-slate-300">
@@ -29,7 +38,7 @@ export default function BlogHeader() {
                     <label className="relative block">
                         <Search />
                     </label>
-                    <label className="md:ml-3">
+                    {/* <label className="md:ml-3">
                         <span className="sr-only">Filter by tag</span>
                         <select
                             id="tagFilter"
@@ -47,7 +56,7 @@ export default function BlogHeader() {
                             <option value="new">Newest first</option>
                             <option value="old">Oldest first</option>
                         </select>
-                    </label>
+                    </label> */}
                 </div>
             </div>
         </section>
