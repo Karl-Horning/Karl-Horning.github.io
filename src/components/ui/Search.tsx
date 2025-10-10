@@ -1,4 +1,4 @@
-import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
+import { icons, internalRoutes } from "@/lib/constants/ui";
 
 const { SearchIcon } = icons;
 const { BlogRoute } = internalRoutes;
