@@ -84,7 +84,7 @@ export default function PrevNextButtons({
                 tabIndex={prevDisabled ? -1 : undefined}
                 rel={!prevDisabled ? "prev" : undefined}
             >
-                <span className="mt-1 grid h-8 w-8 place-items-center rounded-lg bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                <span className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                     {decorateIcon(<PreviousIcon />)}
                 </span>
                 <div>
@@ -115,7 +115,7 @@ export default function PrevNextButtons({
                         {next?.href ? next.title : "—"}
                     </p>
                 </div>
-                <span className="mt-1 grid h-8 w-8 place-items-center rounded-lg bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                <span className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                     {decorateIcon(<NextIcon />)}
                 </span>
             </a>

@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
-import Pill from "./Pill";
 import ButtonLink from "./ButtonLink";
 import { externalLinks, icons } from "@/lib/constants/ui";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
+import TopicChipsList from "./TopicChipsList";
 
 const { CalendarIcon, ClockIcon, CoffeeIcon } = icons;
 const { KofiLink } = externalLinks;
@@ -22,7 +23,7 @@ interface EntryHeaderProps {
      * The date the entry was published or last updated.
      * Accepts an ISO 8601 string or a JavaScript Date object.
      */
-    date?: string | Date;
+    date?: string;
 
     /**
      * The estimated reading time for the entry, expressed in minutes
@@ -34,7 +35,7 @@ interface EntryHeaderProps {
      * A list of related topics or tags displayed as pills
      * (for example, `["Next.js", "GraphQL"]`).
      */
-    topics?: readonly string[];
+    topics?: string[];
 
     /**
      * Whether to include a Ko-fi button by default.
@@ -95,20 +96,27 @@ export default function EntryHeader({
     actions,
     className = "",
 }: EntryHeaderProps) {
-    const formattedDate = date
-        ? new Date(date).toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "long",
-              year: "numeric",
-          })
-        : null;
-
     return (
         <section className={`hero-bg ${className}`}>
             <div className="mx-auto max-w-6xl px-4 py-20">
                 <h1 className="mt-3 text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
                     {title}
                 </h1>
+
+                <p className="mt-3 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+                    {decorateIcon(<CalendarIcon />)}{" "}
+                    {date && (
+                        <time dateTime={date}>
+                            {new Date(date).toLocaleDateString("en-GB", {
+                                day: "2-digit",
+                                month: "long",
+                                year: "numeric",
+                            })}
+                        </time>
+                    )}
+                    <span className="mx-2">|</span>
+                    {decorateIcon(<ClockIcon />)} {readingTime} min read
+                </p>
 
                 {description && (
                     <p className="mt-3 max-w-prose text-lg text-slate-700 dark:text-slate-300">
@@ -117,32 +125,7 @@ export default function EntryHeader({
                 )}
 
                 <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
-                    {formattedDate && (
-                        <Pill
-                            icon={<CalendarIcon />}
-                            text={
-                                <time dateTime={new Date(date!).toISOString()}>
-                                    {formattedDate}
-                                </time>
-                            }
-                        />
-                    )}
-
-                    {typeof readingTime === "number" && (
-                        <Pill
-                            icon={<ClockIcon />}
-                            text={`${readingTime} min read`}
-                        />
-                    )}
-
-                    {topics?.map((topic) => (
-                        <Pill
-                            key={topic}
-                            text={`#${topic}`}
-                            mainColour="text-blue-700 dark:text-secondary"
-                            bgColour="bg-blue-600/10 dark:bg-blue-200/10"
-                        />
-                    ))}
+                    <TopicChipsList topics={topics} />
 
                     {/* Right-aligned actions */}
                     <div className="mt-4 flex w-full justify-start md:ml-auto md:mt-0 md:w-auto">

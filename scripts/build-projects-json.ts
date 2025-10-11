@@ -16,7 +16,12 @@ const MetaSchema = z.object({
         .regex(/^\d{4}-\d{2}-\d{2}$/)
         .optional(), // not used in output
     readingTime: z.number().int().positive().optional(), // not used in output
-    topics: z.array(z.string()),
+    topics: z.array(
+        z.object({
+            title: z.string(),
+            link: z.string(),
+        })
+    ),
     description: z.string(),
     thumbnail: z.object({
         src: z.string(),
@@ -29,7 +34,12 @@ const MetaSchema = z.object({
 const ListItemSchema = z.object({
     title: z.string(),
     description: z.string(),
-    topics: z.array(z.string()),
+    topics: z.array(
+        z.object({
+            title: z.string(),
+            link: z.string(),
+        })
+    ),
     slug: z.string(),
     repo: z.string().optional(),
     thumbnail: z.object({

@@ -1,6 +1,6 @@
 import { IconRegistry, NavLink, SiteLink } from "@/types";
 import { BsBoxArrowDownLeft, BsFillSendFill } from "react-icons/bs";
-import { FaArrowLeft, FaSearch, FaTools } from "react-icons/fa";
+import { FaArrowAltCircleRight, FaArrowLeft, FaSearch, FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
     FaBluesky,
@@ -256,9 +256,9 @@ export const icons: IconRegistry = {
     ReactIcon: FaReact,
 
     /**
-     * `FaArrowRight` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     * `FaArrowAltCircleRight` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    ReadMoreIcon: FaArrowRight,
+    ReadMoreIcon: FaArrowAltCircleRight,
 
     /**
      * `FaRss` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
@@ -356,6 +356,9 @@ export const internalRoutes = {
     /** About page */
     AboutRoute: "/about",
 
+    /** Blog page */
+    BlogRoute: "/blog",
+
     /** CMALT page */
     CmaltRoute: "/cmalt",
 
@@ -364,6 +367,9 @@ export const internalRoutes = {
 
     /** Projects page */
     ProjectsRoute: "/projects",
+
+    /** XML file for feed */
+    RssFeed: "/rss.xml",
 } satisfies SiteLink;
 
 /**
@@ -374,7 +380,7 @@ export const internalRoutes = {
  */
 export const navLinks = [
     { label: "About", href: internalRoutes.AboutRoute },
-    { label: "Blog", href: externalLinks.BlogLink },
+    { label: "Blog", href: internalRoutes.BlogRoute },
     { label: "CMALT", href: internalRoutes.CmaltRoute },
     { label: "Projects", href: internalRoutes.ProjectsRoute },
     { label: "Contact", href: internalRoutes.ContactRoute },
@@ -407,7 +413,7 @@ export const socialLinks: SocialLink[] = [
     },
     {
         label: "RSS Feed",
-        href: externalLinks.RssLink,
+        href: internalRoutes.RssFeed,
         icon: icons.RssIcon,
     },
 ];

@@ -41,10 +41,10 @@ export type ProjectMeta = {
     thumbnail: Thumbnail;
 
     /**
-     * An array of topic strings used as tags or metadata
+     * An array of strings used as tags or metadata
      * for filtering or categorising projects.
      */
-    topics: readonly string[];
+    topics: string[];
 
     /**
      * Optional GitHub repository name or URL associated with the project.

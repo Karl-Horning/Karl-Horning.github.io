@@ -1,45 +1,52 @@
-import { Topic } from "@/types";
+import Link from "next/link";
 
+/**
+ * Props for the TopicChips component.
+ */
 interface TopicChipsProps {
     /**
-     * Array of topic items to display as clickable chips.
-     * Each item includes a title and a corresponding link.
+     * The label shown inside the chip (rendered with a leading '#').
      */
-    topics: Topic[];
+    title: string;
 
     /**
-     * Optional additional classes to customise spacing or layout.
+     * The destination URL for the tag page.
+     */
+    link: string;
+
+    /**
+     * Optional additional classes to customise spacing or layout (default: "").
      */
     className?: string;
 }
 
 /**
- * Renders a collection of topic chips for quick blog navigation.
+ * Renders a single topic chip that links to its tag page.
  *
- * Each chip represents a blog tag (for example, #React or #Next.js)
- * and links to its corresponding tag page. Accepts any list of
- * {@link Topic} objects, making the component reusable across pages.
+ * Appears as `#<title>` inside a rounded pill. Useful for
+ * quick navigation to a tag/collection page.
  *
  * @param props - Component properties.
- * @param props.topics - Array of topic items to render as chips.
- * @param props.className - Optional extra classes to extend or override layout.
- * @returns A flex container of clickable topic chips linking to blog tag pages.
+ * @param props.title - The label shown inside the chip (rendered with a leading '#').
+ * @param props.link - The destination URL for the tag page.
+ * @param props.className - Optional additional classes to customise spacing or layout (default: "").
+ * @returns A flex container with one clickable topic chip linking to the tag page.
  */
 export default function TopicChips({
-    topics,
+    title,
+    link,
     className = "",
 }: TopicChipsProps) {
     return (
-        <div className={`mt-6 flex flex-wrap gap-2 text-xs ${className}`}>
-            {topics.map(({ title, link }) => (
-                <a
-                    key={title}
-                    href={link}
-                    className="rounded-full bg-slate-100 px-3 py-1 text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
-                >
-                    {title}
-                </a>
-            ))}
+        <div
+            className={`flex flex-wrap gap-2 text-xs${className ? ` ${className}` : ""}`}
+        >
+            <Link
+                href={link}
+                className="rounded-full bg-blue-300/10 px-3 py-1 text-blue-700 transition hover:bg-blue-400/10 dark:bg-blue-200/10 dark:text-secondary dark:hover:bg-blue-200/20"
+            >
+                #{title}
+            </Link>
         </div>
     );
 }
