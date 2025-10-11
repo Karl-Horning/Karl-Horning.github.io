@@ -1,6 +1,6 @@
 import { IconRegistry, NavLink, SiteLink } from "@/types";
 import { BsBoxArrowDownLeft, BsFillSendFill } from "react-icons/bs";
-import { FaArrowLeft, FaSearch, FaTools } from "react-icons/fa";
+import { FaArrowAltCircleRight, FaArrowLeft, FaSearch, FaTools } from "react-icons/fa";
 import {
     FaArrowRight,
     FaBluesky,
@@ -256,9 +256,9 @@ export const icons: IconRegistry = {
     ReactIcon: FaReact,
 
     /**
-     * `FaArrowRight` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     * `FaArrowAltCircleRight` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    ReadMoreIcon: FaArrowRight,
+    ReadMoreIcon: FaArrowAltCircleRight,
 
     /**
      * `FaRss` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
