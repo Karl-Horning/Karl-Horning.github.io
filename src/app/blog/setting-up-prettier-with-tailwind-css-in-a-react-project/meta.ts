@@ -37,10 +37,6 @@ export const meta = {
             title: "JavaScript",
             link: "/blog/tag/javascript",
         },
-        {
-            title: "Frontend",
-            link: "/blog/tag/frontend",
-        },
     ],
     draft: false,
 } as const satisfies BlogPost;
