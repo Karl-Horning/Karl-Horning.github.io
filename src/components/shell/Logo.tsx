@@ -1,4 +1,5 @@
 import styles from "@/components/shell/Logo.module.css";
+import Link from "next/link";
 
 /**
  * Displays the site logo with a glitch hover effect.
@@ -12,13 +13,13 @@ import styles from "@/components/shell/Logo.module.css";
 export default function Logo() {
     return (
         <div className="flex-shrink-0 text-xl transition-colors duration-300 ease-in-out">
-            <a
+            <Link
                 href="/"
                 className={`relative inline-block rounded px-2 py-1 font-glitch text-2xl font-extrabold leading-none text-primary ${styles.glitch} transition-colors duration-300`}
                 data-text="Karl Horning"
             >
                 Karl Horning
-            </a>
+            </Link>
         </div>
     );
 }

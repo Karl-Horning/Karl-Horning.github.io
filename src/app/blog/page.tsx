@@ -9,7 +9,7 @@ interface BlogPageProps {
      * Optional URL search parameters used to filter blog posts.
      * For example, `?q=react` will display only posts matching “react”.
      */
-    searchParams?: { q?: string };
+    searchParams?: Promise<{ q?: string }>;
 }
 
 /**
@@ -40,7 +40,8 @@ interface BlogPageProps {
  * /blog?q=react
  * ```
  */
-export default async function Page({ searchParams }: BlogPageProps) {
+export default async function Page(props: BlogPageProps) {
+    const searchParams = await props.searchParams;
     const query = searchParams?.q || "";
 
     let blogPosts: BlogPost[] = await searchBlogPosts(query);
