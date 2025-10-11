@@ -6,20 +6,7 @@ export const meta = {
     title: "Generic Project — Case Study Template ",
     date: "2025-09-11",
     readingTime: 5,
-    topics: [
-        {
-            title: "React",
-            link: "/blog/tag/react",
-        },
-        {
-            title: "API",
-            link: "/blog/tag/api",
-        },
-        {
-            title: "Accessibility",
-            link: "/blog/tag/accessibility",
-        },
-    ],
+    topics: ["React", "API", "Accessibility"],
     description:
         "Use this as a scaffold for any project. Replace the placeholder copy with your own and keep the sections concise and outcomes‑focused.",
     thumbnail: {

@@ -1,4 +1,4 @@
-import { Thumbnail, Topic } from "./index";
+import { Thumbnail } from "./index";
 
 export type BlogPost = {
     /**
@@ -35,10 +35,10 @@ export type BlogPost = {
     thumbnail: Thumbnail;
 
     /**
-     * An array of Topic types used as tags or metadata
+     * An array of string used as tags or metadata
      * for filtering or categorising blog posts.
      */
-    topics: Topic[];
+    topics: string[];
 
     /**
      * Marks the blog post as a draft, preventing it from appearing

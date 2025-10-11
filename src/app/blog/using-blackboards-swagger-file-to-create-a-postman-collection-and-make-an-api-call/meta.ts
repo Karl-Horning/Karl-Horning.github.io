@@ -12,31 +12,6 @@ export const meta = {
         src: "/img/blog/postman_blackboard.webp",
         alt: "The Postman and Blackboard Learn logos",
     },
-    topics: [
-        {
-            title: "Blackboard",
-            link: "/blog/tag/blackboard",
-        },
-        {
-            title: "Postman",
-            link: "/blog/tag/postman",
-        },
-        {
-            title: "API",
-            link: "/blog/tag/api",
-        },
-        {
-            title: "Swagger",
-            link: "/blog/tag/swagger",
-        },
-        {
-            title: "OAuth2",
-            link: "/blog/tag/oauth2",
-        },
-        {
-            title: "EdTech",
-            link: "/blog/tag/edtech",
-        },
-    ],
+    topics: ["Blackboard", "Postman", "API", "Swagger", "OAuth2", "EdTech"],
     draft: false,
 } as const satisfies BlogPost;

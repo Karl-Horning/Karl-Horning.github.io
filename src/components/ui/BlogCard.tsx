@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { BlogPost } from "@/types";
 import { internalRoutes } from "@/lib/constants/ui";
-import TopicChips from "@/components/ui/TopicChips";
 import { icons } from "@/lib/constants/ui";
 import ButtonLink from "@/components/ui/ButtonLink";
 import { decorateIcon } from "@/lib/helpers/iconHelpers";
+import TopicChipsList from "@/components/ui/TopicChipsList";
 
 const { BlogRoute } = internalRoutes;
 const { CalendarIcon, ClockIcon, ReadMoreIcon } = icons;
@@ -76,7 +76,7 @@ export default function BlogCard({
 
             <div className="mt-auto">
                 <ul className="mt-6 flex flex-wrap gap-2">
-                    <TopicChips topics={topics} />
+                    <TopicChipsList topics={topics} />
                 </ul>
                 <hr className="mt-6 border-slate-100 dark:border-slate-800" />
 

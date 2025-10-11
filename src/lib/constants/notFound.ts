@@ -1,4 +1,4 @@
-import { Icon, Topic } from "@/types";
+import { Icon } from "@/types";
 import { icons, internalRoutes } from "./ui";
 
 const { HomeRoute, AboutRoute, BlogRoute } = internalRoutes;
@@ -46,10 +46,10 @@ export const quickDestinationItems: Icon[] = [
  * corresponding filtered view on the blog. Commonly displayed as
  * clickable chips or badges for quick topic access.
  */
-export const notFoundTopics: Topic[] = [
-    { title: "#React", link: `${BlogRoute}/tags/react/` },
-    { title: "#Next.js", link: `${BlogRoute}/tags/nextjs/` },
-    { title: "#APIs", link: `${BlogRoute}/tags/api/` },
-    { title: "#JavaScript", link: `${BlogRoute}/tags/javascript/` },
-    { title: "#EdTech", link: `${BlogRoute}/tags/edtech/` },
+export const notFoundTopics: string[] = [
+    "React",
+    "Next.js",
+    "APIs",
+    "JavaScript",
+    "EdTech",
 ];

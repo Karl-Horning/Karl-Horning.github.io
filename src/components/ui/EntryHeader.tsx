@@ -1,10 +1,8 @@
 import { ReactNode } from "react";
-import Pill from "./Pill";
 import ButtonLink from "./ButtonLink";
 import { externalLinks, icons } from "@/lib/constants/ui";
 import { decorateIcon } from "@/lib/helpers/iconHelpers";
-import TopicChips from "./TopicChips";
-import { Topic } from "@/types";
+import TopicChipsList from "./TopicChipsList";
 
 const { CalendarIcon, ClockIcon, CoffeeIcon } = icons;
 const { KofiLink } = externalLinks;
@@ -37,7 +35,7 @@ interface EntryHeaderProps {
      * A list of related topics or tags displayed as pills
      * (for example, `["Next.js", "GraphQL"]`).
      */
-    topics?: Topic[];
+    topics?: string[];
 
     /**
      * Whether to include a Ko-fi button by default.
@@ -127,7 +125,7 @@ export default function EntryHeader({
                 )}
 
                 <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
-                    {topics && <TopicChips topics={topics} />}
+                    <TopicChipsList topics={topics} />
 
                     {/* Right-aligned actions */}
                     <div className="mt-4 flex w-full justify-start md:ml-auto md:mt-0 md:w-auto">

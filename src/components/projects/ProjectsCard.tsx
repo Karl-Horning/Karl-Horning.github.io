@@ -1,9 +1,8 @@
 import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
 import { ProjectMeta } from "@/types";
 import Image from "next/image";
-import Pill from "../ui/Pill";
 import ButtonLink from "../ui/ButtonLink";
-import TopicChips from "../ui/TopicChips";
+import TopicChipsList from "../ui/TopicChipsList";
 
 const { ExternalLinkIcon, FolderIcon } = icons;
 const { GitHubLink } = externalLinks;
@@ -74,7 +73,7 @@ export default function ProjectsCard({
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                    <TopicChips topics={topics} />
+                    <TopicChipsList topics={topics} />
                 </div>
 
                 <div className="mt-4 flex gap-3">

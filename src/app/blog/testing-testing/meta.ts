@@ -12,19 +12,6 @@ export const meta = {
         src: "/img/blog/pexels-mali-63238.optimised.webp",
         alt: "Graffiti of a monkey wearing sunglasses (placeholder image)",
     },
-    topics: [
-        {
-            title: "meta",
-            link: "/blog/tag/meta",
-        },
-        {
-            title: "blog",
-            link: "/blog/tag/blog",
-        },
-        {
-            title: "testing",
-            link: "/blog/tag/testing",
-        },
-    ],
+    topics: ["meta", "blog", "testing"],
     draft: false,
 } as const satisfies BlogPost;

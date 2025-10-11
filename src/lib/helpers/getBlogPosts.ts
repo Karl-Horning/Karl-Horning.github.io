@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { BlogPost, Topic } from "@/types";
+import { BlogPost } from "@/types";
+import { slugify } from "./textHelpers";
 
 /**
  * Reads a limited number of blog posts from a static JSON file served in the `/public/data` directory.
@@ -48,22 +49,6 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 }
 
 /**
- * Derives a normalised tag string from either a primitive tag or a Topic object.
- *
- * Accepts both `string` tags and `{ title, link }` Topic objects for flexibility.
- *
- * @param tag - A raw tag (string) or Topic object.
- * @returns A lowercased, trimmed tag label suitable for matching.
- */
-function normaliseTag(tag: string | Topic): string {
-    const label = typeof tag === "string" ? tag : (tag.title ?? "");
-    return label
-        .trim()
-        .toLowerCase()
-        .replace(/[^a-zA-Z0-9]/g, "");
-}
-
-/**
  * Returns all unique tags used across published posts, normalised and sorted.
  *
  * @async
@@ -73,7 +58,7 @@ function normaliseTag(tag: string | Topic): string {
 export async function getAllTags(): Promise<string[]> {
     const posts = await getAllBlogPosts();
     const set = new Set<string>();
-    posts.forEach((p) => p.topics?.forEach((t) => set.add(normaliseTag(t))));
+    posts.forEach((p) => p.topics?.forEach((t) => set.add(slugify(t))));
     return Array.from(set).sort();
 }
 
@@ -88,7 +73,7 @@ export async function getAllTags(): Promise<string[]> {
 export async function getPostsByTag(tag: string): Promise<BlogPost[]> {
     const key = tag.trim().toLowerCase();
     const posts = await getAllBlogPosts();
-    return posts.filter((p) => p.topics?.some((t) => normaliseTag(t) === key));
+    return posts.filter((p) => p.topics?.some((t) => slugify(t) === key));
 }
 
 /**

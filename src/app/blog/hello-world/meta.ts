@@ -12,23 +12,6 @@ export const meta = {
         src: "/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp",
         alt: "A neon sign saying 'hello'",
     },
-    topics: [
-        {
-            title: "meta",
-            link: "/blog/tag/meta",
-        },
-        {
-            title: "blog",
-            link: "/blog/tag/blog",
-        },
-        {
-            title: "personal",
-            link: "/blog/tag/personal",
-        },
-        {
-            title: "technology",
-            link: "/blog/tag/technology",
-        },
-    ],
+    topics: ["meta", "blog", "personal", "technology"],
     draft: false,
 } as const satisfies BlogPost;

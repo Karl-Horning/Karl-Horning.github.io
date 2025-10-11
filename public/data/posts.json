@@ -10,30 +10,12 @@
             "alt": "The Next.js, React, Vite, Tailwind, and Prettier logos"
         },
         "topics": [
-            {
-                "title": "Prettier",
-                "link": "/blog/tag/prettier"
-            },
-            {
-                "title": "Tailwind CSS",
-                "link": "/blog/tag/tailwindcss"
-            },
-            {
-                "title": "React",
-                "link": "/blog/tag/react"
-            },
-            {
-                "title": "Next.js",
-                "link": "/blog/tag/nextjs"
-            },
-            {
-                "title": "Vite",
-                "link": "/blog/tag/vite"
-            },
-            {
-                "title": "JavaScript",
-                "link": "/blog/tag/javascript"
-            }
+            "Prettier",
+            "Tailwind CSS",
+            "React",
+            "Next.js",
+            "Vite",
+            "JavaScript"
         ],
         "draft": false
     },
@@ -48,30 +30,12 @@
             "alt": "The Postman and Blackboard Learn logos"
         },
         "topics": [
-            {
-                "title": "Blackboard",
-                "link": "/blog/tag/blackboard"
-            },
-            {
-                "title": "Postman",
-                "link": "/blog/tag/postman"
-            },
-            {
-                "title": "API",
-                "link": "/blog/tag/api"
-            },
-            {
-                "title": "Swagger",
-                "link": "/blog/tag/swagger"
-            },
-            {
-                "title": "OAuth2",
-                "link": "/blog/tag/oauth2"
-            },
-            {
-                "title": "EdTech",
-                "link": "/blog/tag/edtech"
-            }
+            "Blackboard",
+            "Postman",
+            "API",
+            "Swagger",
+            "OAuth2",
+            "EdTech"
         ],
         "draft": false
     },
@@ -86,18 +50,9 @@
             "alt": "Graffiti of a monkey wearing sunglasses (placeholder image)"
         },
         "topics": [
-            {
-                "title": "meta",
-                "link": "/blog/tag/meta"
-            },
-            {
-                "title": "blog",
-                "link": "/blog/tag/blog"
-            },
-            {
-                "title": "testing",
-                "link": "/blog/tag/testing"
-            }
+            "meta",
+            "blog",
+            "testing"
         ],
         "draft": false
     },
@@ -112,22 +67,10 @@
             "alt": "A neon sign saying 'hello'"
         },
         "topics": [
-            {
-                "title": "meta",
-                "link": "/blog/tag/meta"
-            },
-            {
-                "title": "blog",
-                "link": "/blog/tag/blog"
-            },
-            {
-                "title": "personal",
-                "link": "/blog/tag/personal"
-            },
-            {
-                "title": "technology",
-                "link": "/blog/tag/technology"
-            }
+            "meta",
+            "blog",
+            "personal",
+            "technology"
         ],
         "draft": false
     }

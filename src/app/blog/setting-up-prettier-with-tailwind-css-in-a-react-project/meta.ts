@@ -13,30 +13,12 @@ export const meta = {
         alt: "The Next.js, React, Vite, Tailwind, and Prettier logos",
     },
     topics: [
-        {
-            title: "Prettier",
-            link: "/blog/tag/prettier",
-        },
-        {
-            title: "Tailwind CSS",
-            link: "/blog/tag/tailwindcss",
-        },
-        {
-            title: "React",
-            link: "/blog/tag/react",
-        },
-        {
-            title: "Next.js",
-            link: "/blog/tag/nextjs",
-        },
-        {
-            title: "Vite",
-            link: "/blog/tag/vite",
-        },
-        {
-            title: "JavaScript",
-            link: "/blog/tag/javascript",
-        },
+        "Prettier",
+        "Tailwind CSS",
+        "React",
+        "Next.js",
+        "Vite",
+        "JavaScript",
     ],
     draft: false,
 } as const satisfies BlogPost;
