@@ -42,7 +42,7 @@ export default async function Page({
     const blogPosts = await getPostsByTag(slug);
     return (
         <>
-            <BlogLandingHeader title={`Posts tagged with #${slug}`} />
+            <BlogLandingHeader title={`From the blog: #${slug}`} />
             <BlogLandingPosts blogPosts={blogPosts} />
             <BlogLandingFooter />
         </>
