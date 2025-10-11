@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getPrevNext } from "@/lib/cmalt/cmalt-nav";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { icons } from "@/lib/constants/ui";
+
+const { NextIcon, PreviousIcon } = icons;
 
 /**
  * Renders the CMALT section navigation component for moving
@@ -39,7 +41,7 @@ export default function PrevNext() {
                     aria-label={`Previous: ${prev.label}`}
                 >
                     {/* Left arrow icon stays pinned to the edge */}
-                    <FiArrowLeft
+                    <PreviousIcon
                         className="mt-0.5 shrink-0 self-start"
                         aria-hidden
                     />
@@ -62,7 +64,7 @@ export default function PrevNext() {
                     className="group flex items-start gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm transition  dark:border-slate-800 dark:bg-slate-900"
                     aria-label={`Previous: None`}
                 >
-                    <FiArrowLeft
+                    <PreviousIcon
                         className="mt-0.5 shrink-0 self-start"
                         aria-hidden
                     />
@@ -95,7 +97,7 @@ export default function PrevNext() {
                     </span>
 
                     {/* Right arrow icon pinned to edge */}
-                    <FiArrowRight
+                    <NextIcon
                         className="mt-0.5 shrink-0 self-start"
                         aria-hidden
                     />
@@ -115,7 +117,7 @@ export default function PrevNext() {
                     </span>
 
                     {/* Right arrow icon pinned to edge */}
-                    <FiArrowRight
+                    <NextIcon
                         className="mt-0.5 shrink-0 self-start"
                         aria-hidden
                     />

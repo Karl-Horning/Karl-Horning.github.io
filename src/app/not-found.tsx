@@ -1,11 +1,11 @@
 import { createMetadata } from "@/lib/metadata";
 import Search from "@/components/ui/Search";
 import QuickDestinations from "@/components/not-found/QuickDestinations";
-import TopicChips from "@/components/ui/TopicChips";
 import Image from "next/image";
-import { assets } from "@/lib/constants/assets";
+import { assets } from "@/lib/constants/ui";
 import ContactCta from "@/components/ui/ContactCta";
-import { notFoundTopicItems } from "@/lib/constants/notFound";
+import { notFoundTopics } from "@/lib/constants/notFound";
+import TopicChipsList from "@/components/ui/TopicChipsList";
 
 const { notFoundImage } = assets;
 
@@ -39,18 +39,25 @@ export default function NotFound() {
                             <p className="text-sm font-semibold text-primary">
                                 404 — Page missing
                             </p>
-                            <h1 className="mt-2 text-4xl font-extrabold tracking-tight">
+                            <h1 className="mt-3 text-4xl font-extrabold tracking-tight">
                                 Let&apos;s get you back on course
                             </h1>
-                            <p className="mt-2 text-slate-700 dark:text-slate-300">
+                            <p className="mt-3 text-slate-700 dark:text-slate-300">
                                 The link may be broken or the page removed. Here
                                 are a few common destinations and topics you
                                 might be after.
                             </p>
 
                             <QuickDestinations />
-                            <TopicChips topics={notFoundTopicItems} />
-                            <Search />
+
+                            <div className="mt-6">
+                                <Search />
+                            </div>
+                            <div className="mt-6">
+                                <ul className="mt-6 flex flex-wrap gap-2">
+                                    <TopicChipsList topics={notFoundTopics} />
+                                </ul>
+                            </div>
                         </div>
 
                         <Image

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Developer Portfolio",
+        "description": "My personal portfolio, built with Next.js, TypeScript, and Tailwind CSS, showcases my work, values, and technical skills through a clean, accessible, and high-performance design. It scores 90+ across all Lighthouse categories and reflects my focus on thoughtful development, usability, and attention to detail.",
+        "topics": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS"
+        ],
+        "slug": "developer-portfolio",
+        "repo": "Karl-Horning.github.io",
+        "thumbnail": {
+            "src": "/img/screenshots/example.jpg",
+            "alt": "Project cover image"
+        }
+    },
+    {
+        "title": "Generic Project — Case Study Template ",
+        "description": "Use this as a scaffold for any project. Replace the placeholder copy with your own and keep the sections concise and outcomes‑focused.",
+        "topics": [
+            "React",
+            "API",
+            "Accessibility"
+        ],
+        "slug": "generic-project",
+        "repo": "Karl-Horning.github.io",
+        "thumbnail": {
+            "src": "/img/screenshots/example.jpg",
+            "alt": "Project cover image"
+        }
+    }
+]

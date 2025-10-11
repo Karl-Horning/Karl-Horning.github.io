@@ -3,31 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "build:projects-json": "tsx scripts/build-projects-json.ts"
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "next": "14.2.2",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "15.5.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-icons": "^5.1.0",
     "sharp": "^0.34.2"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.2",
+    "eslint-config-next": "15.5.4",
+    "fast-glob": "^3.3.3",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tsx": "^4.20.6",
+    "typescript": "^5",
+    "zod": "^4.1.12"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -37,5 +42,9 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "overrides": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1"
   }
 }

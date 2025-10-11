@@ -1,8 +1,7 @@
-import { icons } from "@/lib/constants/icons";
-import { externalLinks } from "@/lib/constants/links";
-const { SearchIcon } = icons;
+import { icons, internalRoutes } from "@/lib/constants/ui";
 
-const { BlogLink } = externalLinks;
+const { SearchIcon } = icons;
+const { BlogRoute } = internalRoutes;
 
 /**
  * Renders an accessible blog search form.
@@ -24,9 +23,8 @@ export default function Search() {
         <form
             role="search"
             aria-label="Site search"
-            action={BlogLink}
+            action={BlogRoute}
             method="get"
-            className="mt-6 max-w-md"
         >
             <label htmlFor="blog-search" className="sr-only">
                 Search posts

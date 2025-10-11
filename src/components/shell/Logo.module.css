@@ -1,103 +1,229 @@
-.glitch-hover::before,
-.glitch-hover::after {
+/* Base: ensure a stable inline box and predictable metrics */
+.glitch {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+/* Two overlaid copies of the text used to create the RGB split */
+.glitch::before,
+.glitch::after {
     content: attr(data-text);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: inherit;
-    background: transparent;
-    overflow: hidden;
-    /* Using inset() to clip */
-    clip-path: inset(100% 100% 100% 100%); /* fully clipped by default */
-    opacity: 0;
+    inset: 0; /* shorthand for top/right/bottom/left: 0 */
     pointer-events: none;
+    opacity: 0; /* hidden until hover */
+    font: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    white-space: inherit;
+    transform: translate3d(0, 0, 0); /* avoids sub-pixel drift */
+    will-change: transform, clip-path, opacity;
 }
 
-.glitch-hover::before {
-    text-shadow: -2px 0 var(--colour-primary); /* vibrant pinkish red primary */
-    animation-name: glitch-anim-1;
-    animation-duration: 0.5s; /* faster flicker */
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(2, end); /* jerky steps */
-    animation-direction: alternate-reverse;
+/* Cyan layer offset */
+.glitch::before {
+    text-shadow:
+        var(--glitch-strength) 0 var(--glitch-cyan),
+        calc(var(--glitch-strength) * -0.5) 0 var(--glitch-cyan);
 }
 
-.glitch-hover::after {
-    text-shadow: -2px 0 #148aad; /* teal accent */
-    animation-name: glitch-anim-2;
-    animation-duration: 0.5s; /* faster flicker */
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(2, end); /* jerky steps */
-    animation-direction: alternate-reverse;
+/* Magenta layer offset */
+.glitch::after {
+    text-shadow:
+        calc(var(--glitch-strength) * -1) 0 var(--glitch-magenta),
+        calc(var(--glitch-strength) * 0.5) 0 var(--glitch-magenta);
 }
 
-/* Show glitch layers on hover */
-.glitch-hover:hover::before,
-.glitch-hover:hover::after {
+/* Hover: trigger motion and a slight pop in contrast/saturation */
+.glitch:hover {
+    animation: glitch-shake var(--glitch-speed) steps(2, end) infinite;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
     opacity: 1;
-    clip-path: inset(0 0 0 0); /* show all */
+    animation-play-state: running;
 }
 
-/* Animation keyframes */
-@keyframes glitch-anim-1 {
-    0%,
+/* Run distinct slice animations on the coloured copies */
+.glitch:hover::before {
+    animation:
+        glitch-slice-a var(--glitch-speed) steps(2, end) infinite
+            alternate-reverse,
+        glitch-flicker var(--glitch-speed) steps(2, end) infinite;
+}
+
+.glitch:hover::after {
+    animation:
+        glitch-slice-b var(--glitch-speed) steps(2, end) infinite alternate,
+        glitch-flicker var(--glitch-speed) steps(2, end) infinite reverse;
+}
+
+/* --- Keyframes --- */
+/* Base text: gentle shake with occasional skew blips */
+@keyframes glitch-shake {
+    0% {
+        transform: translate3d(0, 0, 0) skewX(0deg);
+    }
+    10% {
+        transform: translate3d(0.5px, -0.5px, 0) skewX(0deg);
+    }
     20% {
-        clip-path: inset(0 0 calc(100% - 15px) 0);
-        transform: translateX(0);
+        transform: translate3d(-1px, 0.5px, 0) skewX(-0.3deg);
     }
-    25%,
-    45% {
-        clip-path: inset(7px 0 calc(100% - 22px) 0);
-        transform: translateX(-3px);
+    30% {
+        transform: translate3d(1px, 0, 0) skewX(0.3deg);
     }
-    50%,
+    40% {
+        transform: translate3d(-0.5px, 1px, 0) skewX(0deg);
+    }
+    50% {
+        transform: translate3d(0.5px, -1px, 0) skewX(-0.2deg);
+    }
+    60% {
+        transform: translate3d(-1px, 0, 0) skewX(0.2deg);
+    }
     70% {
-        clip-path: inset(0 0 calc(100% - 15px) 0);
-        transform: translateX(0);
+        transform: translate3d(1px, 0.5px, 0) skewX(0deg);
     }
-    75%,
-    95% {
-        clip-path: inset(7px 0 calc(100% - 22px) 0);
-        transform: translateX(2px);
+    80% {
+        transform: translate3d(-0.5px, -0.5px, 0) skewX(0.2deg);
+    }
+    90% {
+        transform: translate3d(0.5px, 0, 0) skewX(-0.2deg);
     }
     100% {
-        clip-path: inset(0 0 calc(100% - 15px) 0);
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0) skewX(0deg);
     }
 }
 
-@keyframes glitch-anim-2 {
-    0%,
+/* Cyan slice: vertical banding with horizontal twitches */
+@keyframes glitch-slice-a {
+    0% {
+        clip-path: inset(0 0 80% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10% {
+        clip-path: inset(10% 0 65% 0);
+        transform: translate3d(var(--glitch-strength), 0, 0);
+    }
     20% {
-        clip-path: inset(calc(100% - 40px) 0 calc(100% - 25px) 0);
-        transform: translateX(0);
+        clip-path: inset(30% 0 40% 0);
+        transform: translate3d(0, 0, 0);
     }
-    25%,
-    45% {
-        clip-path: inset(calc(100% - 45px) 0 calc(100% - 30px) 0);
-        transform: translateX(3px);
+    30% {
+        clip-path: inset(45% 0 30% 0);
+        transform: translate3d(calc(var(--glitch-strength) * -1), 0, 0);
     }
-    50%,
+    40% {
+        clip-path: inset(60% 0 20% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        clip-path: inset(70% 0 10% 0);
+        transform: translate3d(var(--glitch-strength), 0, 0);
+    }
+    60% {
+        clip-path: inset(20% 0 60% 0);
+        transform: translate3d(0, 0, 0);
+    }
     70% {
-        clip-path: inset(calc(100% - 40px) 0 calc(100% - 25px) 0);
-        transform: translateX(0);
+        clip-path: inset(35% 0 45% 0);
+        transform: translate3d(calc(var(--glitch-strength) * -1), 0, 0);
     }
-    75%,
-    95% {
-        clip-path: inset(calc(100% - 45px) 0 calc(100% - 30px) 0);
-        transform: translateX(-2px);
+    80% {
+        clip-path: inset(55% 0 25% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    90% {
+        clip-path: inset(15% 0 70% 0);
+        transform: translate3d(var(--glitch-strength), 0, 0);
     }
     100% {
-        clip-path: inset(calc(100% - 40px) 0 calc(100% - 25px) 0);
-        transform: translateX(0);
+        clip-path: inset(0 0 80% 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
+/* Magenta slice: complementary bands to enhance the RGB split */
+@keyframes glitch-slice-b {
+    0% {
+        clip-path: inset(85% 0 0 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10% {
+        clip-path: inset(70% 0 5% 0);
+        transform: translate3d(calc(var(--glitch-strength) * -1), 0, 0);
+    }
+    20% {
+        clip-path: inset(50% 0 20% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    30% {
+        clip-path: inset(35% 0 35% 0);
+        transform: translate3d(var(--glitch-strength), 0, 0);
+    }
+    40% {
+        clip-path: inset(25% 0 50% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translate3d(calc(var(--glitch-strength) * -1), 0, 0);
+    }
+    60% {
+        clip-path: inset(55% 0 25% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    70% {
+        clip-path: inset(40% 0 40% 0);
+        transform: translate3d(var(--glitch-strength), 0, 0);
+    }
+    80% {
+        clip-path: inset(30% 0 55% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    90% {
+        clip-path: inset(5% 0 75% 0);
+        transform: translate3d(calc(var(--glitch-strength) * -1), 0, 0);
+    }
+    100% {
+        clip-path: inset(85% 0 0 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Subtle visibility flicker applied to both coloured layers */
+@keyframes glitch-flicker {
+    0%,
+    18%,
+    22%,
+    40%,
+    60%,
+    64%,
+    78%,
+    100% {
+        opacity: 1;
+    }
+    20%,
+    62% {
+        opacity: 0.15;
+    }
+}
+
+/* Respect reduced motion preferences by disabling animations and filters */
 @media (prefers-reduced-motion: reduce) {
-    .glitch-hover::before,
-    .glitch-hover::after {
-        animation: none;
-        opacity: 0;
+    .glitch,
+    .glitch::before,
+    .glitch::after {
+        animation: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+        clip-path: none !important;
     }
 }

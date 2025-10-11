@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Karl Horning's Blog</title>
+    <link>https://www.karlhorning.dev/blog</link>
+    <description>Notes on web development, accessibility, and learning tech</description>
+
+    <atom:link href="https://www.karlhorning.dev/rss.xml" rel="self" type="application/rss+xml" />
+
+
+    <item>
+      <title>Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)</title>
+      <link>https://www.karlhorning.dev/blog/setting-up-prettier-with-tailwind-css-in-a-react-project/</link>
+      <pubDate>Mon, 04 Aug 2025 19:00:00 +0100</pubDate>
+      <description><![CDATA[A personal checklist for setting up Prettier with Tailwind CSS, covering installation, configuration, and project setup in both Next.js and Vite. Ideal for React developers who want to save a few minutes each time.]]></description>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/prettier_tailwind.webp" />
+      <guid>https://www.karlhorning.dev/blog/setting-up-prettier-with-tailwind-css-in-a-react-project/</guid>
+    </item>
+
+    <item>
+      <title>Using Blackboard&#39;s Swagger File to Create a Postman Collection and Make an API Call</title>
+      <link>https://www.karlhorning.dev/blog/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/</link>
+      <pubDate>Fri, 11 Jul 2025 11:00:00 +0100</pubDate>
+      <description><![CDATA[This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.]]></description>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/postman_blackboard.webp" />
+      <guid>https://www.karlhorning.dev/blog/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/</guid>
+    </item>
+
+    <item>
+      <title>Testing, Testing</title>
+      <link>https://www.karlhorning.dev/blog/testing-testing/</link>
+      <pubDate>Mon, 23 Jun 2025 01:00:00 +0100</pubDate>
+      <description><![CDATA[A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.]]></description>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/pexels-mali-63238.optimised.webp" />
+      <guid>https://www.karlhorning.dev/blog/testing-testing/</guid>
+    </item>
+
+    <item>
+      <title>Hello, World!</title>
+      <link>https://www.karlhorning.dev/blog/hello-world/</link>
+      <pubDate>Sun, 22 Jun 2025 01:00:00 +0100</pubDate>
+      <description><![CDATA[A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.]]></description>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp" />
+      <guid>https://www.karlhorning.dev/blog/hello-world/</guid>
+    </item>
+
+  </channel>
+</rss>
+

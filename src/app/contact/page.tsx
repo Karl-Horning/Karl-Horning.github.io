@@ -1,4 +1,4 @@
-import { internalRoutes } from "@/lib/constants/links";
+import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { jsonLdContact } from "@/lib/constants/jsonLd";
 import Hero from "@/components/ui/Hero";

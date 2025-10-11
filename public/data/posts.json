@@ -1,0 +1,77 @@
+[
+    {
+        "title": "Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)",
+        "description": "A quick walkthrough for setting up Prettier with Tailwind CSS in a new React project using either Next.js or Vite. Written mainly as a reminder to myself — but hopefully useful for others too.",
+        "date": "2025-08-04",
+        "readingTime": 6,
+        "slug": "setting-up-prettier-with-tailwind-css-in-a-react-project",
+        "thumbnail": {
+            "src": "/img/blog/prettier_tailwind.webp",
+            "alt": "The Next.js, React, Vite, Tailwind, and Prettier logos"
+        },
+        "topics": [
+            "Prettier",
+            "Tailwind CSS",
+            "React",
+            "Next.js",
+            "Vite",
+            "JavaScript"
+        ],
+        "draft": false
+    },
+    {
+        "title": "Using Blackboard's Swagger File to Create a Postman Collection and Make an API Call",
+        "description": "This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
+        "date": "2025-07-11",
+        "readingTime": 6,
+        "slug": "using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call",
+        "thumbnail": {
+            "src": "/img/blog/postman_blackboard.webp",
+            "alt": "The Postman and Blackboard Learn logos"
+        },
+        "topics": [
+            "Blackboard",
+            "Postman",
+            "API",
+            "Swagger",
+            "OAuth2",
+            "EdTech"
+        ],
+        "draft": false
+    },
+    {
+        "title": "Testing, Testing",
+        "description": "A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
+        "date": "2025-06-23",
+        "readingTime": 6,
+        "slug": "testing-testing",
+        "thumbnail": {
+            "src": "/img/blog/pexels-mali-63238.optimised.webp",
+            "alt": "Graffiti of a monkey wearing sunglasses (placeholder image)"
+        },
+        "topics": [
+            "meta",
+            "blog",
+            "testing"
+        ],
+        "draft": false
+    },
+    {
+        "title": "Hello, World!",
+        "description": "A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.",
+        "date": "2025-06-22",
+        "readingTime": 6,
+        "slug": "hello-world",
+        "thumbnail": {
+            "src": "/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp",
+            "alt": "A neon sign saying 'hello'"
+        },
+        "topics": [
+            "meta",
+            "blog",
+            "personal",
+            "technology"
+        ],
+        "draft": false
+    }
+]

@@ -1,4 +1,4 @@
-import { navLinks } from "@/lib/constants/links";
+import { navLinks } from "@/lib/constants/ui";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -28,9 +28,10 @@ export default function MobileMenu({
             role="navigation"
             aria-label="Mobile"
             aria-hidden={!isOpen}
-            inert={!isOpen}
             className={`glass absolute left-0 top-16 z-10 w-full overflow-hidden border-b border-slate-200/70 bg-white/80 shadow-md transition-[max-height] duration-500 ease-in-out md:hidden dark:border-slate-800 dark:bg-slate-950/70 ${
-                isOpen ? "max-h-screen" : "max-h-0"
+                isOpen
+                    ? "pointer-events-auto max-h-screen"
+                    : "pointer-events-none max-h-0"
             }`}
         >
             <div className="flex flex-col items-center space-y-8 px-4 py-8 text-center text-lg text-slate-900 dark:text-slate-100">

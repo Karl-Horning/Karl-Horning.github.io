@@ -1,24 +1,25 @@
 import styles from "@/components/shell/Logo.module.css";
+import Link from "next/link";
 
 /**
- * Logo component displaying the site logo with a glitch hover effect.
+ * Displays the site logo with a glitch hover effect.
  *
- * Renders a clickable logo linking to the homepage, styled with
- * custom glitch effect classes and Tailwind utility classes.
+ * Renders a clickable logo that links to the homepage,
+ * styled using a combination of Tailwind utility classes
+ * and a custom glitch effect from `Logo.module.css`.
  *
- * @component
- * @returns The logo for the website
+ * @returns The site logo as a styled clickable element.
  */
 export default function Logo() {
     return (
         <div className="flex-shrink-0 text-xl transition-colors duration-300 ease-in-out">
-            <a
+            <Link
                 href="/"
-                className={`font-glitch ${styles["glitch-hover"]} relative rounded px-2 py-1 text-2xl font-extrabold text-primary transition-colors duration-300 `}
+                className={`relative inline-block rounded px-2 py-1 font-glitch text-2xl font-extrabold leading-none text-primary ${styles.glitch} transition-colors duration-300`}
                 data-text="Karl Horning"
             >
                 Karl Horning
-            </a>
+            </Link>
         </div>
     );
 }

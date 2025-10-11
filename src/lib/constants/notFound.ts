@@ -1,10 +1,7 @@
-import { IconItem } from "@/types/IconItem";
-import { icons } from "./icons";
-import { externalLinks, internalRoutes } from "./links";
-import { TopicItem } from "@/types/TopicItem";
+import { Icon } from "@/types";
+import { icons, internalRoutes } from "./ui";
 
-const { BlogLink } = externalLinks;
-const { HomeRoute, AboutRoute } = internalRoutes;
+const { HomeRoute, AboutRoute, BlogRoute } = internalRoutes;
 const { IdIcon, LocationIcon, RssIcon } = icons;
 
 /**
@@ -14,11 +11,8 @@ const { IdIcon, LocationIcon, RssIcon } = icons;
  * Home, About, and Blog. Each item includes a title, short description,
  * icon, link, and Tailwind CSS classes for consistent styling in both
  * light and dark modes. Used by the `QuickDestinations` component.
- *
- * @constant
- * @type {IconItem[]}
  */
-export const quickDestinationItems: IconItem[] = [
+export const quickDestinationItems: Icon[] = [
     {
         title: "Home",
         description: "Start here",
@@ -38,7 +32,7 @@ export const quickDestinationItems: IconItem[] = [
     {
         title: "Blog",
         description: "Latest posts",
-        link: BlogLink,
+        link: BlogRoute,
         icon: RssIcon,
         mainColour: "text-secondary dark:text-white",
         bgColour: "bg-blue-600/10 dark:bg-secondary",
@@ -51,14 +45,11 @@ export const quickDestinationItems: IconItem[] = [
  * Each item includes a title representing a tag and a link to its
  * corresponding filtered view on the blog. Commonly displayed as
  * clickable chips or badges for quick topic access.
- *
- * @constant
- * @type {TopicItem[]}
  */
-export const notFoundTopicItems: TopicItem[] = [
-    { title: "#React", link: `${BlogLink}/tags/react/` },
-    { title: "#Next.js", link: `${BlogLink}/tags/nextjs/` },
-    { title: "#APIs", link: `${BlogLink}/tags/api/` },
-    { title: "#JavaScript", link: `${BlogLink}/tags/javascript/` },
-    { title: "#EdTech", link: `${BlogLink}/tags/edtech/` },
+export const notFoundTopics: string[] = [
+    "React",
+    "Next.js",
+    "APIs",
+    "JavaScript",
+    "EdTech",
 ];

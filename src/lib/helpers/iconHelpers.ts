@@ -17,7 +17,7 @@ export const decorateIcon = (
     iconLabel?: string
 ): ReactNode => {
     if (!icon || !isValidElement(icon)) return icon;
-    const el = icon as ReactElement;
+    const el = icon as ReactElement<any>;
 
     // Decorative (default): hide from a11y tree
     if (!iconLabel) {

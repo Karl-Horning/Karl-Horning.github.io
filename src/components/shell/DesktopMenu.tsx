@@ -1,10 +1,7 @@
-import { navLinks } from "@/lib/constants/links";
 import Link from "next/link";
 import ButtonLink from "../ui/ButtonLink";
-import { internalRoutes } from "@/lib/constants/links";
-import { icons } from "@/lib/constants/icons";
+import { icons, navLinks } from "@/lib/constants/ui";
 
-const { ContactRoute } = internalRoutes;
 const { HireMeIcon } = icons;
 
 /**
