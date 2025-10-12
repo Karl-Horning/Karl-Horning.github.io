@@ -8,7 +8,7 @@ import { CmaltPage } from "@/types";
 import ButtonLink from "@/components/ui/ButtonLink";
 import { icons, internalRoutes } from "@/lib/constants/ui";
 
-const { HigherEducationIcon } = icons;
+const { HigherEducationIcon, ReadMoreIcon } = icons;
 const { CmaltRoute } = internalRoutes;
 
 /**
@@ -52,6 +52,7 @@ export default async function CmaltLayout({
 }: CmaltLayoutProps) {
     // Retrieve previous and next CMALT pages for pagination controls
     const { previous, next } = await getPrevNextCmalt(slug);
+    const nextHref = next?.href ?? CmaltRoute;
 
     return (
         <>
@@ -62,7 +63,14 @@ export default async function CmaltLayout({
                 readingTime={readingTime}
                 includeKofiButton={false}
                 actions={
-                    slug && (
+                    next ? (
+                        <ButtonLink
+                            text="Go to next page"
+                            type="secondary"
+                            href={nextHref}
+                            icon={<ReadMoreIcon />}
+                        />
+                    ) : (
                         <ButtonLink
                             text="Back to CMALT index"
                             type="secondary"
