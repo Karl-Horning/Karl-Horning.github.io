@@ -125,7 +125,7 @@ export default function EntryHeader({
                 )}
 
                 <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
-                    <TopicChipsList topics={topics} />
+                    {topics && <TopicChipsList topics={topics} />}
 
                     {/* Right-aligned actions */}
                     <div className="mt-4 flex w-full justify-start md:ml-auto md:mt-0 md:w-auto">

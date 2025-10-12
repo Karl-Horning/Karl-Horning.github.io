@@ -1,58 +1,48 @@
 import BlogLandingHeader from "@/components/blog/BlogLandingHeader";
 import BlogLandingPosts from "@/components/blog/BlogLandingPosts";
 import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
-import { getBlogPosts, searchBlogPosts } from "@/lib/helpers/getBlogPosts";
+import { getBlogPosts } from "@/lib/helpers/getBlogPosts";
 import { BlogPost } from "@/types";
 
-interface BlogPageProps {
-    /**
-     * Optional URL search parameters used to filter blog posts.
-     * For example, `?q=react` will display only posts matching “react”.
-     */
-    searchParams?: Promise<{ q?: string }>;
-}
+/**
+ * Forces static generation of the blog landing page
+ * at build time to improve performance and reliability.
+ */
+export const dynamic = "force-static";
 
 /**
- * Server component for rendering the main blog landing page.
+ * Server component for the main Blog landing page.
  *
- * Fetches and displays blog posts in a structured layout with a header,
- * a responsive post grid, and a footer section containing follow or
- * subscription links.
+ * Fetches all blog post metadata via {@link getBlogPosts}
+ * and renders a header, a grid of posts, and a footer.
  *
- * If a search query (`?q=term`) is provided, the results are filtered
- * using {@link searchBlogPosts}. Otherwise, the component defaults to
- * the latest posts from {@link getBlogPosts}.
+ * This page is statically generated (`force-static`) for fast load times.
  *
- * @remarks
- * This page runs on the server and uses static JSON data from
- * `/public/data/posts.json` during build or request time.
- *
- * @param {BlogPageProps} props - Component props.
- * @param {{ q?: string }} [props.searchParams] - URL search parameters used for filtering posts.
- * @returns The complete blog landing layout, including header, grid of posts, and footer.
+ * @async
+ * @returns The fully rendered blog index page including header, posts, and footer.
  *
  * @example
  * ```tsx
- * // Renders all posts
- * /blog
- *
- * // Filters posts containing the term "react"
- * /blog?q=react
+ * // Automatically generated at build time
+ * export default async function Page() {
+ *   const blogPosts = await getBlogPosts();
+ *   return (
+ *     <>
+ *       <BlogLandingHeader title="From the blog" />
+ *       <BlogLandingPosts blogPosts={blogPosts} />
+ *       <BlogLandingFooter />
+ *     </>
+ *   );
+ * }
  * ```
  */
-export default async function Page(props: BlogPageProps) {
-    const searchParams = await props.searchParams;
-    const query = searchParams?.q || "";
-
-    let blogPosts: BlogPost[] = await searchBlogPosts(query);
-
-    if (blogPosts.length < 1 && !query) blogPosts = await getBlogPosts();
+export default async function Page() {
+    // Fetch all blog post metadata for listing
+    const blogPosts: BlogPost[] = await getBlogPosts();
 
     return (
         <>
-            <BlogLandingHeader
-                title={!query ? "From the blog" : `Searched for #${query}`}
-            />
+            <BlogLandingHeader title="From the blog" />
             <BlogLandingPosts blogPosts={blogPosts} />
             <BlogLandingFooter />
         </>

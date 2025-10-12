@@ -6,8 +6,8 @@ import EntryHeader from "@/components/ui/EntryHeader";
 import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import ProjectsSidebar from "@/components/projects/ProjectsSidebar";
 import ShareButtons from "@/components/ui/ShareButtons";
-import { getPrevNextProject } from "@/lib/helpers/getPrevNextProject";
-import ContactCta from "../ui/ContactCta";
+import { getPrevNextProject } from "@/lib/helpers/getPrevNext";
+import ContactCta from "@/components/ui/ContactCta";
 
 type ProjectLayoutProps = PropsWithChildren<ProjectMeta>;
 
@@ -79,6 +79,10 @@ export default async function ProjectLayout({
                     )}
                 </div>
             </div>
+            <ContactCta
+                title="Want a deeper dive?"
+                description="I can share private repos, extended write-ups and implementation notes on request."
+            />
         </>
     );
 }
