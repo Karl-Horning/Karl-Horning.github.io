@@ -1,16 +1,16 @@
 [
     {
-        "title": "Index",
+        "title": "CMALT Homepage",
         "description": "This index provides a structured map of my CMALT portfolio, aligning with the assessment framework and linking directly to each submission section.",
-        "section": "Index",
+        "section": "CMALT Homepage",
         "date": "2025-10-11",
-        "readingTime": 1,
+        "readingTime": 2,
         "slug": "",
         "draft": false
     },
     {
         "title": "Contextual Statement",
-        "description": "",
+        "description": "An overview of my professional background and current role, providing the context for my CMALT portfolio and how my experience informs my approach to learning technology.",
         "date": "2025-09-09",
         "readingTime": 5,
         "slug": "contextual-statement",
