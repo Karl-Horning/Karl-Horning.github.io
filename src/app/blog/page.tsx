@@ -4,14 +4,6 @@ import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
 import { getBlogPosts, searchBlogPosts } from "@/lib/helpers/getBlogPosts";
 import { BlogPost } from "@/types";
 
-interface BlogPageProps {
-    /**
-     * Optional URL search parameters used to filter blog posts.
-     * For example, `?q=react` will display only posts matching “react”.
-     */
-    searchParams?: Promise<{ q?: string }>;
-}
-
 /**
  * Server component for rendering the main blog landing page.
  *
@@ -24,11 +16,16 @@ interface BlogPageProps {
  * the latest posts from {@link getBlogPosts}.
  *
  * @remarks
- * This page runs on the server and uses static JSON data from
- * `/public/data/posts.json` during build or request time.
+ * This page is pre-rendered for static export (GitHub Pages). Because
+ * GitHub Pages is static hosting, per-request server filtering by `?q=`
+ * is not available at runtime. The default build will therefore render
+ * the non-filtered list; client-side filtering can be added separately
+ * if you want `?q=` to work on the client after load.
  *
- * @param {BlogPageProps} props - Component props.
- * @param {{ q?: string }} [props.searchParams] - URL search parameters used for filtering posts.
+ * @param props - Component props.
+ * @param props.searchParams - URL search parameters used to filter posts
+ * (shape provided by the App Router: plain object; values may be string or string[]).
+ *
  * @returns The complete blog landing layout, including header, grid of posts, and footer.
  *
  * @example
@@ -36,17 +33,32 @@ interface BlogPageProps {
  * // Renders all posts
  * /blog
  *
- * // Filters posts containing the term "react"
+ * // Intended filter form (works at build time only unless you add client-side filtering)
  * /blog?q=react
  * ```
  */
-export default async function Page(props: BlogPageProps) {
-    const searchParams = await props.searchParams;
-    const query = searchParams?.q || "";
+type BlogPageProps = {
+    /** App Router shape: plain object; values can be string or string[]. */
+    searchParams?: { q?: string | string[] };
+};
 
-    let blogPosts: BlogPost[] = await searchBlogPosts(query);
+/** Ensure pre-render for `output: "export"` (no per-request server work). */
+export const dynamic = "force-static";
 
-    if (blogPosts.length < 1 && !query) blogPosts = await getBlogPosts();
+export default async function Page({ searchParams }: BlogPageProps) {
+    // Normalise ?q to a single string
+    const raw = searchParams?.q;
+    const query = Array.isArray(raw) ? (raw[0] ?? "") : (raw ?? "");
+
+    // Build-time filtering if a query is present; otherwise latest posts
+    let blogPosts: BlogPost[] = query
+        ? await searchBlogPosts(query)
+        : await getBlogPosts();
+
+    // Fallback: if nothing found and no query, load latest posts
+    if (!query && blogPosts.length < 1) {
+        blogPosts = await getBlogPosts();
+    }
 
     return (
         <>

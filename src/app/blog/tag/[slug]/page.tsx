@@ -1,45 +1,40 @@
+import { notFound } from "next/navigation";
 import BlogLandingHeader from "@/components/blog/BlogLandingHeader";
 import BlogLandingPosts from "@/components/blog/BlogLandingPosts";
 import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
-import { getPostsByTag } from "@/lib/helpers/getBlogPosts";
+import { getAllTags, getPostsByTag } from "@/lib/helpers/getBlogPosts";
 
 /**
- * Server component for rendering a filtered list of blog posts by tag.
+ * Blog Tag Page (SSG)
  *
- * Dynamically generates pages for URLs matching `/blog/tag/[slug]`,
- * displaying only posts that include the given tag.
+ * Statically generates pages for `/blog/tag/[slug]`, where `slug` is the
+ * slugified form of a topic (for example, "Tailwind CSS" → "tailwind-css").
  *
- * Uses {@link getPostsByTag} to retrieve all posts associated with the
- * specified tag, and reuses shared components for consistent layout
- * and styling across the blog section.
+ * Data comes from `/public/data/posts.json` via helper functions:
+ * - `getAllTags()` returns all unique, slugified topic strings
+ * - `getPostsByTag(slug)` returns posts whose topics slugify to `slug`
  *
- * @remarks
- * This route is statically generated or server-rendered via Next.js,
- * depending on the build configuration. It consumes data from the
- * local `/public/data/posts.json` file at request time.
- *
- * @param {Object} props - Component props.
- * @param {Promise<{ slug: string }>} props.params - Dynamic route parameters.
- * The `slug` corresponds to the tag name (for example, `"react"`).
- *
- * @returns A complete blog page layout filtered by the specified tag.
- *
- * @example
- * ```tsx
- * // Displays posts tagged "react"
- * /blog/tag/react
- *
- * // Displays posts tagged "accessibility"
- * /blog/tag/accessibility
- * ```
+ * Notes:
+ * - `generateStaticParams()` is required for `output: "export"` (GitHub Pages).
+ * - `params` is a plain object (not a Promise).
  */
-export default async function Page({
-    params,
-}: {
-    params: Promise<{ slug: string }>;
-}) {
-    const { slug } = await params;
-    const blogPosts = await getPostsByTag(slug);
+export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
+    const tags = await getAllTags(); // already slugified + sorted
+    return tags.map((slug) => ({ slug }));
+}
+
+export const dynamic = "error"; // forbid runtime dynamic rendering
+export const dynamicParams = false; // unknown slugs => 404
+
+export default async function Page({ params }: { params: { slug: string } }) {
+    const { slug } = params;
+
+    const blogPosts = await getPostsByTag(slug); // uses the same slugify logic
+
+    if (!blogPosts || blogPosts.length === 0) {
+        notFound();
+    }
+
     return (
         <>
             <BlogLandingHeader title={`From the blog: #${slug}`} />
