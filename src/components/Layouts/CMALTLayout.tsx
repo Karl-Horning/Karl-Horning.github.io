@@ -1,94 +1,104 @@
-"use client";
+import { PropsWithChildren } from "react";
+import CmaltSidebar from "@/components/cmalt/CmaltSidebar.server";
+import ContactCta from "@/components/ui/ContactCta";
+import EntryHeader from "@/components/ui/EntryHeader";
+import { getPrevNextCmalt } from "@/lib/helpers/getPrevNext";
+import PrevNextButtons from "@/components/ui/PrevNextButtons";
+import { CmaltPage } from "@/types";
+import ButtonLink from "@/components/ui/ButtonLink";
+import { icons, internalRoutes } from "@/lib/constants/ui";
 
-import { ReactNode, useState, useEffect } from "react";
-import Sidebar from "../cmalt/Sidebar";
-import Header from "../cmalt/Header";
-import PrevNext from "../cmalt/PrevNext";
-import ContactCta from "../ui/ContactCta";
-
-interface CMALTLayoutProps {
-    /**
-     * The main content for the CMALT page, typically markdown-rendered sections.
-     */
-    children: ReactNode;
-
-    /**
-     * The title displayed in the CMALT header section.
-     */
-    title: string;
-
-    /**
-     * The date the page was last updated, in ISO 8601 format (for example, "2025-09-10").
-     */
-    lastUpdated: string;
-
-    /**
-     * An optional thumbnail image for future use (not currently implemented).
-     */
-    thumbnail?: string;
-}
+const { HigherEducationIcon } = icons;
+const { CmaltRoute } = internalRoutes;
 
 /**
- * Provides the layout structure for CMALT portfolio pages.
+ * Props for the {@link CmaltLayout} component.
  *
- * Renders the page header, sidebar navigation, content area, and
- * previous/next navigation controls. The component also calculates
- * an estimated reading time based on the visible article text.
- *
- * @component
- * @param {CMALTLayoutProps} props - The properties for the CMALT layout.
- * @param {ReactNode} props.children - The main content of the CMALT page.
- * @param {string} props.title - The page title displayed in the header.
- * @param {string} props.lastUpdated - The ISO 8601 date when the page was last updated.
- * @param {string} [props.thumbnail] - Optional thumbnail image (not currently used).
- * @returns The structured layout for a CMALT portfolio page, including header, content, sidebar, and footer sections.
+ * Extends {@link CmaltPage} to include `children`,
+ * allowing each CMALT page to render unique body content.
  */
-export default function CMALTLayout({
-    children,
+type CmaltLayoutProps = PropsWithChildren<CmaltPage>;
+
+/**
+ * Layout wrapper for CMALT portfolio pages.
+ *
+ * Provides a consistent layout that includes:
+ * - A page header with metadata and back-navigation
+ * - A sidebar for contextual CMALT navigation
+ * - The main content area (populated by individual pages)
+ * - Previous/Next pagination buttons
+ * - A footer call-to-action encouraging contact
+ *
+ * This component is asynchronous because it fetches
+ * pagination data via {@link getPrevNextCmalt}.
+ *
+ * @async
+ * @param props - Component properties.
+ * @param props.title - The page title shown in the header.
+ * @param props.description - Short summary of the CMALT section.
+ * @param props.date - The ISO 8601 date of publication or update.
+ * @param props.readingTime - Estimated reading time in minutes.
+ * @param props.slug - The URL slug for the current CMALT section.
+ * @param props.children - Page content to render inside the main area.
+ * @returns A structured layout for CMALT portfolio pages.
+ */
+export default async function CmaltLayout({
     title,
-    lastUpdated,
-}: CMALTLayoutProps) {
-    const [readingTime, setReadingTime] = useState<string>("1 min read");
-
-    useEffect(() => {
-        const calculateReadingTime = (text: string): string => {
-            const wordsPerMinute = 150;
-            const words = text.trim().split(/\s+/).length;
-            const minutes = Math.ceil(words / wordsPerMinute);
-            return `${minutes} min read`;
-        };
-
-        const updateReadingTime = () => {
-            const mainText = document.querySelector(
-                "article.prose"
-            ) as HTMLElement | null;
-
-            if (mainText) {
-                const text = mainText.innerText || "";
-                const readingTime = calculateReadingTime(text);
-                setReadingTime(readingTime);
-            }
-        };
-
-        // Delay ensures content has fully rendered
-        const timeout = setTimeout(updateReadingTime, 100);
-        return () => clearTimeout(timeout);
-    }, []);
+    description,
+    date,
+    readingTime,
+    slug,
+    children,
+}: CmaltLayoutProps) {
+    // Retrieve previous and next CMALT pages for pagination controls
+    const { previous, next } = await getPrevNextCmalt(slug);
 
     return (
         <>
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[18rem_1fr]">
-                <Sidebar />
-                <div className="space-y-8">
-                    <Header
-                        title={title}
-                        lastUpdated={lastUpdated}
-                        readingTime={readingTime}
-                    />
-                    <article className="prose max-w-none">{children}</article>
-                    <PrevNext />
+            <EntryHeader
+                title={title}
+                description={description}
+                date={date}
+                readingTime={readingTime}
+                includeKofiButton={false}
+                actions={
+                    slug && (
+                        <ButtonLink
+                            text="Back to CMALT index"
+                            type="secondary"
+                            href={CmaltRoute}
+                            icon={<HigherEducationIcon />}
+                        />
+                    )
+                }
+            />
+
+            {/* Two-column grid: Sidebar + main content */}
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[16rem_1fr]">
+                <CmaltSidebar />
+
+                <div className="max-w-3xl">
+                    {/* Main content area — move <main> tag here rather than global layout */}
+                    <main
+                        id="main"
+                        className="prose prose-slate dark:prose-invert max-w-none"
+                    >
+                        {children}
+                    </main>
+
+                    {/* Context-aware pagination between CMALT pages */}
+                    {(previous || next) && (
+                        <PrevNextButtons
+                            contextTitle="CMALT Pagination"
+                            itemType="page"
+                            previous={previous ?? undefined}
+                            next={next ?? undefined}
+                        />
+                    )}
                 </div>
             </div>
+
+            {/* Footer CTA for contact and clarifications */}
             <ContactCta
                 title="Questions about this section?"
                 description="Contact me for clarifications or further evidence."

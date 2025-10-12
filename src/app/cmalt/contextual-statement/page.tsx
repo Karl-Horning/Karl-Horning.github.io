@@ -1,17 +1,18 @@
-import CMALTLayout from "@/components/Layouts/CMALTLayout";
+import CmaltLayout from "@/components/Layouts/CmaltLayout";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
+import { meta } from "./meta";
 
 const { CmaltRoute } = internalRoutes;
 
 export const metadata = createMetadata({
-    title: "Contextual Statement (CMALT)",
-    path: CmaltRoute,
+    title: `${meta.title} | CMALT`,
+    path: `${CmaltRoute}/${meta.slug}`,
 });
 
 export default function ContextualStatementPage() {
     return (
-        <CMALTLayout title="Contextual Statement" lastUpdated="2025-09-09">
+        <CmaltLayout {...meta}>
             <section id="description">
                 <h2>My Journey in Learning Technology</h2>
 
@@ -134,6 +135,6 @@ export default function ContextualStatementPage() {
                     the sector.
                 </p>
             </section>
-        </CMALTLayout>
+        </CmaltLayout>
     );
 }
