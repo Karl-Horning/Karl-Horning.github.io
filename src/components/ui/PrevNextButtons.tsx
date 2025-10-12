@@ -15,7 +15,7 @@ interface PrevNextButtonsProps {
      * The type of content item being navigated between.
      * Determines the wording for accessibility labels.
      */
-    itemType: "project" | "post" | "section";
+    itemType: "project" | "post" | "section" | "page";
 
     /**
      * Optional information for the previous item.
@@ -51,7 +51,7 @@ interface PrevNextButtonsProps {
  *
  * @param {PrevNextButtonsProps} props - The properties for the component.
  * @param {string} props.contextTitle - Title of the current context, used for the `aria-label`.
- * @param {"project" | "post" | "section"} props.itemType - Type of content being navigated.
+ * @param {"project" | "post" | "section" | "page"} props.itemType - Type of content being navigated.
  * @param {object} [props.previous] - Optional object describing the previous item.
  * @param {object} [props.next] - Optional object describing the next item.
  * @returns A `<nav>` element containing styled “Previous” and “Next” navigation buttons.
