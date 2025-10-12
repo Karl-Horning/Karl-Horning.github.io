@@ -1,5 +1,4 @@
 import { createMetadata } from "@/lib/metadata";
-import Search from "@/components/ui/Search";
 import QuickDestinations from "@/components/not-found/QuickDestinations";
 import Image from "next/image";
 import { assets } from "@/lib/constants/ui";
@@ -50,9 +49,6 @@ export default function NotFound() {
 
                             <QuickDestinations />
 
-                            <div className="mt-6">
-                                <Search />
-                            </div>
                             <div className="mt-6">
                                 <ul className="mt-6 flex flex-wrap gap-2">
                                     <TopicChipsList topics={notFoundTopics} />
