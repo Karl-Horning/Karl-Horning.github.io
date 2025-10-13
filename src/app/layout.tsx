@@ -1,5 +1,5 @@
 import "./styles/fonts.css";
-import "./globals.css";
+import "./styles/globals.css";
 import Footer from "@/components/shell/Footer";
 import { jsonLdHome } from "@/lib/constants/jsonLd";
 import Header from "@/components/shell/Header";
