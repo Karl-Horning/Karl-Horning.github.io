@@ -78,7 +78,6 @@ export default async function BlogLayout({
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20">
                 <EntryCoverImage {...thumbnail} />
 
-                {/* TODO: Remove main from main layout and add to pages where main content actually is */}
                 <main
                     id="main"
                     className="prose prose-slate dark:prose-invert mx-auto max-w-3xl"

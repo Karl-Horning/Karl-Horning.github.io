@@ -1,5 +1,5 @@
 import "./styles/fonts.css";
-import "./globals.css";
+import "./styles/globals.css";
 import Footer from "@/components/shell/Footer";
 import { jsonLdHome } from "@/lib/constants/jsonLd";
 import Header from "@/components/shell/Header";
@@ -57,9 +57,7 @@ export default function RootLayout({
                     Skip to content
                 </a>
                 <Header />
-                <main id="main" className="flex-1">
-                    {children}
-                </main>
+                <div className="flex-1">{children}</div>
                 <Footer />
             </body>
         </html>

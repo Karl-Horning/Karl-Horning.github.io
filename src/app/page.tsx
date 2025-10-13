@@ -17,7 +17,7 @@ export const metadata = createMetadata({
 
 export default function Home() {
     return (
-        <main>
+        <main id="main">
             <Hero
                 title="Building accessible products for real people"
                 leadParagraph="I ship practical, human-centred solutions with performance and a11y in mind."
