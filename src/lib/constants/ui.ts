@@ -47,7 +47,6 @@ import {
     SiGraphql,
     SiLinkedin,
     SiMoodle,
-    SiPostgresql,
     SiTailwindcss,
     SiTeratail,
     SiTypescript,
@@ -55,7 +54,7 @@ import {
 import { TbApi } from "react-icons/tb";
 
 import { SocialLink } from "@/types";
-import { BiSolidHomeHeart } from "react-icons/bi";
+import { BiLogoPostgresql, BiSolidHomeHeart } from "react-icons/bi";
 import { GrCertificate, GrContact } from "react-icons/gr";
 
 /**
@@ -258,9 +257,9 @@ export const icons: IconRegistry = {
     PerformanceIcon: FaGaugeHigh,
 
     /**
-     * `SiPostgresql` icon from [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
+     * `BiLogoPostgresql` icon from [BoxIcons](https://react-icons.github.io/react-icons/icons/bi/)
      */
-    PostgreSqlIcon: SiPostgresql,
+    PostgreSqlIcon: BiLogoPostgresql,
 
     /**
      * `FaArrowLeft` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)

@@ -85,7 +85,7 @@ export const SkillsIcons: Icon[] = [
         bgColour: "bg-green-400/20 dark:bg-green-600",
     },
     {
-        title: "React/Next.js",
+        title: "React",
         icon: ReactIcon,
         mainColour: "text-sky-600 dark:text-white",
         bgColour: "bg-sky-400/20 dark:bg-sky-600",
@@ -97,13 +97,13 @@ export const SkillsIcons: Icon[] = [
         bgColour: "bg-pink-400/20 dark:bg-pink-600",
     },
     {
-        title: "PostgreSQL",
+        title: "SQL",
         icon: PostgreSqlIcon,
         mainColour: "text-blue-600 dark:text-white",
         bgColour: "bg-blue-400/20 dark:bg-blue-600",
     },
     {
-        title: "Tailwind CSS",
+        title: "Tailwind",
         icon: TailwindIcon,
         mainColour: "text-blue-600 dark:text-white",
         bgColour: "bg-blue-400/20 dark:bg-blue-600",
