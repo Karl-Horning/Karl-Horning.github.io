@@ -30,6 +30,10 @@
         --secondary: #4c9dcd;
     }
 
+    .prose a {
+        color: white;
+    }
+
     .text-link:hover,
     .cmalt-nav:hover,
     .nav-link:hover,
