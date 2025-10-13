@@ -21,12 +21,7 @@ export default function Home() {
             <Hero
                 title="Building accessible products for real people"
                 leadParagraph="I ship practical, human-centred solutions with performance and a11y in mind."
-                highlights={[
-                    "JavaScript/TypeScript",
-                    "React/Next.js",
-                    "PostgreSQL",
-                    "EdTech",
-                ]}
+                tagline="Full-Stack JavaScript & EdTech"
             />
             <Highlights />
             <Skills />

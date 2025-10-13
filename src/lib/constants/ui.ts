@@ -1,17 +1,25 @@
 import { IconRegistry, NavLink, SiteLink } from "@/types";
-import { BsBoxArrowDownLeft, BsFillSendFill } from "react-icons/bs";
-import { FaArrowAltCircleRight, FaArrowLeft, FaSearch, FaTools } from "react-icons/fa";
+import {
+    BsBox2HeartFill,
+    BsBoxArrowDownLeft,
+    BsFillSendFill,
+    BsInfoSquareFill,
+} from "react-icons/bs";
+import {
+    FaArrowAltCircleRight,
+    FaArrowLeft,
+    FaBlog,
+    FaSearch,
+    FaTools,
+} from "react-icons/fa";
 import {
     FaArrowRight,
     FaBluesky,
     FaCalendar,
-    FaCircleInfo,
     FaClock,
     FaCode,
     FaCodepen,
     FaDatabase,
-    FaDiagramProject,
-    FaEnvelopeOpenText,
     FaFacebook,
     FaFire,
     FaFolderOpen,
@@ -39,17 +47,15 @@ import {
     SiGraphql,
     SiLinkedin,
     SiMoodle,
-    SiPostgresql,
     SiTailwindcss,
     SiTeratail,
+    SiTypescript,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
 import { SocialLink } from "@/types";
-
-// const { ContactIcon, GitHubIcon, InfoIcon, LinkedInIcon, RssIcon } = icons;
-// const { GitHubLink, LinkedInLink, RssLink } = externalLinks;
-// const { AboutRoute, ContactRoute } = internalRoutes;
+import { BiLogoPostgresql, BiSolidHomeHeart } from "react-icons/bi";
+import { GrCertificate, GrContact } from "react-icons/gr";
 
 /**
  * Centralised collection of static asset paths used across the site.
@@ -96,6 +102,11 @@ export const icons: IconRegistry = {
     BlackboardIcon: SiTeratail,
 
     /**
+     * `FaBlog` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     */
+    BlogIcon: FaBlog,
+
+    /**
      * `FaBluesky` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     BlueskyIcon: FaBluesky,
@@ -114,6 +125,11 @@ export const icons: IconRegistry = {
      * `SiCanvas` icon from [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
      */
     CanvasIcon: SiCanvas,
+
+    /**
+     * `GrCertificate` icon from [Grommet-Icons](https://react-icons.github.io/react-icons/icons/gr/)
+     */
+    CertificateIcon: GrCertificate,
 
     /**
      * `RiShieldCheckFill` icon from [Remix Icon](https://react-icons.github.io/react-icons/icons/ri/)
@@ -141,9 +157,9 @@ export const icons: IconRegistry = {
     CoffeeIcon: SiBuymeacoffee,
 
     /**
-     * `FaEnvelope` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     * `GrContact` icon from [Grommet-Icons](https://react-icons.github.io/react-icons/icons/gr/)
      */
-    ContactIcon: FaEnvelopeOpenText,
+    ContactIcon: GrContact,
 
     /**
      * `FaDatabase` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
@@ -186,9 +202,14 @@ export const icons: IconRegistry = {
     HireMeIcon: FaHandshake,
 
     /**
+     * `BiSolidHomeHeart` icon from [BoxIcons](https://react-icons.github.io/react-icons/icons/bi/)
+     */
+    HomeIcon: BiSolidHomeHeart,
+
+    /**
      * `FaCircleInfo` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
-    InfoIcon: FaCircleInfo,
+    InfoIcon: BsInfoSquareFill,
 
     /**
      * `FaIdCard` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
@@ -236,9 +257,9 @@ export const icons: IconRegistry = {
     PerformanceIcon: FaGaugeHigh,
 
     /**
-     * `SiPostgresql` icon from [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
+     * `BiLogoPostgresql` icon from [BoxIcons](https://react-icons.github.io/react-icons/icons/bi/)
      */
-    PostgreSqlIcon: SiPostgresql,
+    PostgreSqlIcon: BiLogoPostgresql,
 
     /**
      * `FaArrowLeft` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
@@ -246,9 +267,9 @@ export const icons: IconRegistry = {
     PreviousIcon: FaArrowLeft,
 
     /**
-     * `FaDiagramProject` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
+     * `BsBox2HeartFill` icon from [Bootstrap Icons](https://react-icons.github.io/react-icons/icons/bs/)
      */
-    ProjectIcon: FaDiagramProject,
+    ProjectIcon: BsBox2HeartFill,
 
     /**
      * `FaReact` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
@@ -299,6 +320,11 @@ export const icons: IconRegistry = {
      * `BsBoxArrowDownLeft` icon from [Bootstrap Icons](https://react-icons.github.io/react-icons/icons/bs/)
      */
     TurnitinIcon: BsBoxArrowDownLeft,
+
+    /**
+     * `SiTypescript` icon from [Simple Icons](https://react-icons.github.io/react-icons/icons/si/)
+     */
+    TypeScriptIcon: SiTypescript,
 
     /**
      * `FaUser` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)

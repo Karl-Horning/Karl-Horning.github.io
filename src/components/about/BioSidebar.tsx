@@ -1,5 +1,6 @@
 import { bioSidebarItems } from "@/lib/constants/about";
-
+import { icons } from "@/lib/constants/ui";
+const { LocationIcon } = icons;
 /**
  * Renders a sidebar with key personal and professional details.
  *
@@ -12,20 +13,23 @@ import { bioSidebarItems } from "@/lib/constants/about";
  */
 export default function BioSidebar() {
     return (
-        <aside className="space-y-3 rounded-2xl border border-slate-200 bg-white p-6 text-sm shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <h3 id="values-heading" className="mb-6 text-lg font-semibold">
+        <aside aria-labelledby="glance2" className="md:sticky md:top-24">
+            <h3 id="glance2" className="mb-4 text-lg font-semibold">
                 At a glance
             </h3>
-            <ul className="space-y-3">
-                {bioSidebarItems.map(({ title, icon: Icon }) => (
-                    <li key={title} className="flex items-start gap-4">
-                        <Icon
-                            aria-hidden="true"
-                            focusable="false"
-                            className="mt-1.5 flex-shrink-0 text-sm text-secondary"
-                        />
-                        <div className="text-slate-700 dark:text-slate-300">
-                            {title}
+            <ul className="items-start gap-3 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm  dark:divide-slate-800 dark:border-slate-800 dark:bg-slate-900">
+                {bioSidebarItems.map(({ icon: Icon, title, description }) => (
+                    <li key={title} className="flex gap-3 p-4">
+                        <span className="grid h-10 w-10 min-w-10 place-items-center rounded-lg bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                            {<Icon />}
+                        </span>
+                        <div>
+                            <p className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                                {title}
+                            </p>
+                            <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
+                                {description}
+                            </p>
                         </div>
                     </li>
                 ))}

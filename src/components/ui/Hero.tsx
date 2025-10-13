@@ -1,7 +1,6 @@
 import { assets, icons, internalRoutes } from "@/lib/constants/ui";
 import Image from "next/image";
 import ButtonLink from "./ButtonLink";
-import Pill from "./Pill";
 
 const { profileImage } = assets;
 const { ContactIcon, ProjectIcon } = icons;
@@ -19,9 +18,9 @@ interface HeroProps {
     leadParagraph: string;
 
     /**
-     * Array of short highlight strings shown as pills.
+     * Identity-defining phrase displayed above the title.
      */
-    highlights: string[];
+    tagline?: string;
 }
 
 /**
@@ -48,27 +47,22 @@ interface HeroProps {
  * @param props.highlights - Short highlight phrases displayed as pills.
  * @returns A styled `<section>` element containing the hero content.
  */
-export default function Hero({ title, leadParagraph, highlights }: HeroProps) {
+export default function Hero({ title, leadParagraph, tagline }: HeroProps) {
     return (
         <section id="hero" className="hero-bg">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-20 md:flex-row lg:py-24">
                 <div className="order-2 md:order-1">
-                    <h1 className="text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
+                    {tagline && (
+                        <p className="text-sm font-semibold uppercase text-primary">
+                            {tagline}
+                        </p>
+                    )}
+                    <h1 className="mt-2 text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
                         {title}
                     </h1>
                     <p className="mt-3 max-w-prose text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         {leadParagraph}
                     </p>
-                    <div className="mt-6 flex flex-wrap gap-2 text-xs">
-                        {highlights.map((highlight) => (
-                            <Pill
-                                key={highlight}
-                                text={highlight}
-                                mainColour="text-slate-800 dark:text-slate-200"
-                                bgColour="bg-slate-200 dark:bg-slate-800"
-                            />
-                        ))}
-                    </div>
                     <div className="mt-8 flex flex-wrap gap-3">
                         <ButtonLink
                             href={`${ContactRoute}#contactForm`}

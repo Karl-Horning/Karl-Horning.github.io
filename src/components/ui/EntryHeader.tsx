@@ -99,11 +99,11 @@ export default function EntryHeader({
     return (
         <section className={`hero-bg ${className}`}>
             <div className="mx-auto max-w-6xl px-4 py-20">
-                <h1 className="mt-3 text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
+                <h1 className="mt-4 text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
                     {title}
                 </h1>
 
-                <p className="mt-3 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+                <p className="mt-4 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
                     {decorateIcon(<CalendarIcon />)}{" "}
                     {date && (
                         <time dateTime={date}>
@@ -119,12 +119,12 @@ export default function EntryHeader({
                 </p>
 
                 {description && (
-                    <p className="mt-3 max-w-prose text-lg text-slate-700 dark:text-slate-300">
+                    <p className="mt-4 max-w-prose text-lg text-slate-700 dark:text-slate-300">
                         {description}
                     </p>
                 )}
 
-                <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+                <div className="mt-6 flex flex-wrap items-center gap-2 text-xs">
                     {topics && <TopicChipsList topics={topics} />}
 
                     {/* Right-aligned actions */}
