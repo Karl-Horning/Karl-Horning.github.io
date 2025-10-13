@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "build:projects-json": "tsx scripts/build-projects-json.ts",
     "build:posts-json": "tsx scripts/build-posts-json.ts",
-    "build:cmalt-json": "tsx scripts/build-cmalt-json.ts"
+    "build:cmalt-json": "tsx scripts/build-cmalt-json.ts",
+    "build:rss": "tsx scripts/build-rss-from-posts.ts"
   },
   "dependencies": {
     "aos": "^2.3.4",
