@@ -1,7 +1,14 @@
 import { externalLinks, internalRoutes } from "./ui";
 import { seo } from "@/lib/constants/seo";
 
-const { ContactRoute } = internalRoutes;
+const {
+    AboutRoute,
+    BlogRoute,
+    CmaltRoute,
+    ContactRoute,
+    HomeRoute,
+    ProjectsRoute,
+} = internalRoutes;
 const { CodePenLink, GitHubLink, LinkedInLink } = externalLinks;
 const {
     defaultDescription,
@@ -25,7 +32,7 @@ export const jsonLdAbout = {
     name: siteName,
     jobTitle: defaultJobTitle,
     email: defaultEmail,
-    url: siteUrl,
+    url: `${siteUrl}${AboutRoute}`,
     sameAs: [CodePenLink, GitHubLink, LinkedInLink],
     description: defaultDescription,
     knowsAbout: [
@@ -119,4 +126,143 @@ export const jsonLdContact = {
         },
     ],
     sameAs: [CodePenLink, GitHubLink, LinkedInLink],
+};
+
+/**
+ * JSON-LD structured data for the **blog**.
+ *
+ * Uses the `Blog` type to describe the site’s articles feed. This helps search
+ * engines understand that this page lists posts and can improve rich results.
+ * Place in the `<head>` of the blog index page.
+ */
+export const jsonLdBlog = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    url: `${siteUrl}${BlogRoute}`,
+    name: `${siteName} Blog`,
+    description: defaultDescription,
+    inLanguage: "en-GB",
+    publisher: {
+        "@type": "Person",
+        name: siteName,
+        url: siteUrl,
+        sameAs: [CodePenLink, GitHubLink, LinkedInLink],
+        jobTitle: defaultJobTitle,
+        image: defaultImage,
+        email: defaultEmail,
+    },
+    author: {
+        "@type": "Person",
+        name: siteName,
+        url: siteUrl,
+        sameAs: [CodePenLink, GitHubLink, LinkedInLink],
+        jobTitle: defaultJobTitle,
+    },
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${siteUrl}${BlogRoute}`,
+    },
+};
+
+/**
+ * JSON-LD structured data for the **CMALT portfolio page**.
+ *
+ * Marks the page as a ProfilePage whose main entity is the site owner (you),
+ * and associates an EducationalOccupationalCredential (CMALT) awarded by ALT.
+ * Place in the `<head>` of the CMALT portfolio landing page.
+ */
+export const jsonLdCMALT = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    url: `${siteUrl}${CmaltRoute}`,
+    name: `${siteName} CMALT Portfolio`,
+    description:
+        "CMALT (Certified Member of the Association for Learning Technology) portfolio evidencing practice, reflection, and professional development.",
+    inLanguage: "en-GB",
+    mainEntity: {
+        "@type": "Person",
+        name: siteName,
+        url: siteUrl,
+        jobTitle: defaultJobTitle,
+        email: defaultEmail,
+        sameAs: [CodePenLink, GitHubLink, LinkedInLink],
+        hasCredential: {
+            "@type": "EducationalOccupationalCredential",
+            name: "CMALT (Certified Member of ALT)",
+            credentialCategory: "Professional certification",
+            url: "https://www.alt.ac.uk/certified-membership",
+            awardingBody: {
+                "@type": "Organization",
+                name: "Association for Learning Technology (ALT)",
+                url: "https://www.alt.ac.uk/",
+            },
+            // TODO: when awarded, add: validFor, dateCreated/issued, recognisedBy, etc.
+        },
+        knowsAbout: [
+            "Learning technology",
+            "Instructional design",
+            "VLE/LMS",
+            "Accessibility (a11y)",
+            "Assessment and feedback",
+            "Educational evaluation",
+        ],
+    },
+    publisher: {
+        "@type": "Person",
+        name: siteName,
+        url: siteUrl,
+        sameAs: [CodePenLink, GitHubLink, LinkedInLink],
+        jobTitle: defaultJobTitle,
+        image: defaultImage,
+    },
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${siteUrl}${CmaltRoute}`,
+    },
+};
+
+/**
+ * JSON-LD structured data for the **projects page**.
+ *
+ * Declares the page as a CollectionPage and includes an ItemList placeholder
+ * for featured projects. This supports richer understanding of your portfolio
+ * listings. Place in the `<head>` of the projects index page.
+ */
+export const jsonLdProjects = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    url: `${siteUrl}${ProjectsRoute}`,
+    name: `${siteName} Projects`,
+    description:
+        "Selected software and learning-technology projects, including web apps, APIs, data, and evaluation work.",
+    inLanguage: "en-GB",
+    publisher: {
+        "@type": "Person",
+        name: siteName,
+        url: siteUrl,
+        sameAs: [CodePenLink, GitHubLink, LinkedInLink],
+        jobTitle: defaultJobTitle,
+        image: defaultImage,
+    },
+    about: [
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "React",
+        "Next.js",
+        "GraphQL",
+        "PostgreSQL",
+        "Accessibility",
+        "LMS integrations",
+        "API testing",
+    ],
+    hasPart: {
+        "@type": "ItemList",
+        name: "Featured projects",
+        itemListOrder: "http://schema.org/ItemListOrderAscending",
+    },
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${siteUrl}${ProjectsRoute}`,
+    },
 };

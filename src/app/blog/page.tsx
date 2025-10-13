@@ -1,34 +1,69 @@
-import BlogLandingHeader from "@/components/blog/BlogLandingHeader";
 import BlogLandingPosts from "@/components/blog/BlogLandingPosts";
 import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
 import { getBlogPosts } from "@/lib/helpers/getBlogPosts";
 import { BlogPost } from "@/types";
+import PageIntroSplit from "@/components/ui/PageIntroSplit";
+import { icons, internalRoutes } from "@/lib/constants/ui";
+import { createMetadata } from "@/lib/metadata";
+import { jsonLdBlog } from "@/lib/constants/jsonLd";
+
+const { BlogIcon, ReadMoreIcon, RssIcon } = icons;
+const { BlogRoute, RssFeed } = internalRoutes;
 
 /**
- * Forces static generation of the blog landing page
- * at build time to improve performance and reliability.
+ * Static metadata for the Blog landing page.
+ *
+ * Generated using {@link createMetadata} and enhanced with
+ * structured data via {@link jsonLdBlog} for SEO and discoverability.
+ */
+export const metadata = createMetadata({
+    title: "Blog",
+    path: BlogRoute,
+    jsonLd: jsonLdBlog,
+});
+
+/**
+ * Forces static generation of the Blog landing page.
+ *
+ * Ensures the page is built at compile time for optimal
+ * performance and predictable load behaviour.
  */
 export const dynamic = "force-static";
 
 /**
- * Server component for the main Blog landing page.
+ * Renders the **Blog** landing page.
  *
- * Fetches all blog post metadata via {@link getBlogPosts}
- * and renders a header, a grid of posts, and a footer.
+ * This is the main index for all blog posts and acts as an entry
+ * point for written reflections, tutorials, and technical notes.
  *
- * This page is statically generated (`force-static`) for fast load times.
+ * The component fetches metadata for all posts using {@link getBlogPosts}
+ * and presents them within a structured, accessible layout consisting of:
+ *
+ * ### Layout structure
+ * - {@link PageIntroSplit} — Hero section introducing the blog and CTAs.
+ * - {@link BlogLandingPosts} — Responsive grid of post previews.
+ * - {@link BlogLandingFooter} — Footer section with supplementary navigation.
+ *
+ * ### Behaviour
+ * - The page is statically generated (`force-static`).
+ * - Fetches blog metadata only once at build time.
+ * - Optimised for SEO via `metadata` export.
  *
  * @async
- * @returns The fully rendered blog index page including header, posts, and footer.
+ * @returns The complete Blog index page with hero intro, post listings, and footer.
  *
  * @example
  * ```tsx
- * // Automatically generated at build time
  * export default async function Page() {
  *   const blogPosts = await getBlogPosts();
  *   return (
  *     <>
- *       <BlogLandingHeader title="From the blog" />
+ *       <PageIntroSplit
+ *         title="Blog"
+ *         leadParagraph="Tutorials and notes on React, TypeScript, accessibility, and EdTech."
+ *         tagline="Writing & Reflections"
+ *         heroIcon={<BlogIcon />}
+ *       />
  *       <BlogLandingPosts blogPosts={blogPosts} />
  *       <BlogLandingFooter />
  *     </>
@@ -37,12 +72,27 @@ export const dynamic = "force-static";
  * ```
  */
 export default async function Page() {
-    // Fetch all blog post metadata for listing
+    // Fetch metadata for all published blog posts
     const blogPosts: BlogPost[] = await getBlogPosts();
 
     return (
         <>
-            <BlogLandingHeader title="From the blog" />
+            <PageIntroSplit
+                title="Blog"
+                leadParagraph="Tutorials and notes on JavaScript/TypeScript, React/Next.js, APIs, accessibility and EdTech."
+                tagline="Writing & Reflections"
+                heroIcon={<BlogIcon />}
+                primaryCta={{
+                    href: `${BlogRoute}#grid`,
+                    text: "Read latest posts",
+                    icon: <ReadMoreIcon />,
+                }}
+                secondaryCta={{
+                    href: RssFeed,
+                    text: "Subscribe",
+                    icon: <RssIcon />,
+                }}
+            />
             <BlogLandingPosts blogPosts={blogPosts} />
             <BlogLandingFooter />
         </>

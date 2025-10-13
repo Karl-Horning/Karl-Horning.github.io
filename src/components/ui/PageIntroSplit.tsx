@@ -34,7 +34,7 @@ interface PageIntroSplitProps {
     title: string;
 
     /** Supporting paragraph text below the title. */
-    leadParagraph: string;
+    leadParagraph: ReactNode;
 
     /** Optional small label or category shown above the title. */
     tagline?: string;
