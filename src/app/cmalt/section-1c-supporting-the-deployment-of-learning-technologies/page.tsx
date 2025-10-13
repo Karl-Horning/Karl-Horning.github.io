@@ -84,7 +84,7 @@ export default function page() {
                         />
                         Your browser does not support the video tag.
                     </video>
-                    <figcaption className="mt-2 text-sm text-muted">
+                    <figcaption className="mt-2 text-sm text-slate-700 dark:text-slate-200">
                         An excerpt from <em>Microsoft Teams Guide</em>
                     </figcaption>
                 </figure>
