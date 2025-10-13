@@ -5,7 +5,7 @@ export const meta = {
     title: "CMALT Homepage",
     description:
         "An overview of my CMALT portfolio, highlighting how my professional practice, values, and ongoing development are demonstrated across each section.",
-    date: "2025-07-24",
+    date: "2025-10-11",
     readingTime: 2,
     slug: "",
     draft: false,
