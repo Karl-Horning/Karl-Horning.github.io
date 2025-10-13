@@ -30,10 +30,6 @@
         --secondary: #4c9dcd;
     }
 
-    .prose a {
-        color: #cccccc;
-    }
-
     .text-link:hover,
     .cmalt-nav:hover,
     .nav-link:hover,
@@ -49,13 +45,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    [data-aos] {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-        /* Disable zoom on hover */
-    }
-
     /* Target elements with transition classes */
     .transition-transform,
     .transition,
@@ -109,13 +98,6 @@ h6 {
     }
     .glass {
         backdrop-filter: blur(8px);
-    }
-
-    .cmalt-title {
-        font-size: 1.875rem; /* mobile default */
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        font-weight: 800;
     }
 
     .prose h2,
@@ -194,24 +176,6 @@ h6 {
         display: block;
     }
 
-    .nav-link {
-        position: relative;
-        overflow-wrap: anywhere;
-        word-break: break-word;
-
-        /* Multiline animated underline base */
-        background-image: linear-gradient(currentColor, currentColor);
-        background-repeat: no-repeat;
-        background-position: 0 100%;
-        background-size: 0% 2px;
-        box-decoration-break: clone;
-        -webkit-box-decoration-break: clone;
-
-        transition:
-            color 0.3s ease,
-            background-size 0.3s ease;
-    }
-
     .text-link,
     .prose a {
         color: #666;
@@ -240,22 +204,6 @@ h6 {
     .prose a:hover {
         color: #111;
         background-size: 100% 2px;
-    }
-
-    /* Focus accessibility styles */
-    .text-link:focus,
-    .cmalt-nav:focus,
-    .prose a:focus {
-        outline: none;
-    }
-
-    .text-link:focus-visible,
-    .cmalt-nav:focus-visible,
-    .prose a:focus-visible {
-        border-radius: 0.25rem; /* 4px */
-        box-shadow:
-            0 0 0 2px var(--primary),
-            0 0 0 4px var(--background);
     }
 
     /* Blockquotes */
@@ -368,14 +316,6 @@ h6 {
             box-shadow 0.3s ease;
     }
 
-    /* On focus for accessibility */
-    ul li input[type="checkbox"]:focus-visible {
-        outline: none;
-        box-shadow:
-            0 0 0 3px var(--selection-highlight),
-            0 0 8px var(--primary);
-    }
-
     /* Disabled checkboxes */
     ul li input[type="checkbox"]:disabled {
         border-color: var(--muted);
@@ -436,41 +376,6 @@ h6 {
         font-size: 0.9rem !important;
         color: white !important;
     }
-
-    .social-button {
-        align-items: center;
-        background-color: var(--hero);
-        border-radius: 0.25rem; /* rounded */
-        color: var(--muted);
-        display: flex;
-        font-size: 0.875rem; /* text-sm */
-        gap: 0.25rem;
-        height: 2rem;
-        justify-content: center;
-        padding: 0.25rem 0.5rem; /* px-2 py-1 */
-        transition:
-            color 0.3s,
-            background-color 0.3s;
-        width: 2rem;
-    }
-
-    .social-button:hover {
-        color: white;
-        background-color: var(--primary);
-    }
-
-    .social-button:focus {
-        outline: none; /* focus:outline-none */
-    }
-
-    .social-button:focus-visible {
-        outline: none;
-        box-shadow: 0 0 0 2px var(--primary); /* focus-visible:ring-2 + focus-visible:ring-primary */
-    }
-
-    .cmalt-hero {
-        background-color: rgba(18, 52, 86, 0.8);
-    }
 }
 
 /* Responsive heading sizes */
@@ -482,9 +387,6 @@ h6 {
         }
     }
     @media (min-width: 640px) {
-        .cmalt-title {
-            font-size: 2.25rem;
-        }
         .prose h2 {
             font-size: 1.875rem;
         }
@@ -499,12 +401,6 @@ h6 {
         }
         .prose h6 {
             font-size: 1rem;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .cmalt-title {
-            font-size: 3rem;
         }
     }
 
@@ -563,7 +459,6 @@ h6 {
     }
 
     /* Remove print-breaking visual effects */
-    [data-aos],
     .transition,
     .hover\:scale-105,
     .shadow-lg,
