@@ -57,7 +57,7 @@ export const metadata = createMetadata({
  *         leadParagraph="A selection of web apps, experiments, and learning tools."
  *         heroIcon={<ProjectIcon />}
  *         primaryCta={{
- *           href: `${ProjectsRoute}#recentProjects`,
+ *           href: `${ProjectsRoute}#main`,
  *           text: "Recent projects",
  *           icon: <ReadMoreIcon />,
  *         }}
@@ -86,7 +86,7 @@ export default function Projects() {
                 tagline="Selected Work"
                 heroIcon={<ProjectIcon />}
                 primaryCta={{
-                    href: `${ProjectsRoute}#recentProjects`,
+                    href: `${ProjectsRoute}#main`,
                     text: "Recent projects",
                     icon: <ReadMoreIcon />,
                 }}

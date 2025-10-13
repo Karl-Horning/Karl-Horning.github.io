@@ -59,7 +59,6 @@ export default async function ProjectLayout({
                 <ProjectsSidebar rootSelector="#main" />
                 <div className="max-w-3xl">
                     <EntryCoverImage {...thumbnail} />
-                    {/* TODO: Remove main from main layout and add to pages where main content actually is */}
                     <main
                         id="main"
                         className="prose prose-slate dark:prose-invert max-w-none"

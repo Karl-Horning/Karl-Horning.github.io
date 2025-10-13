@@ -100,7 +100,6 @@ export default async function CmaltHomePage() {
                 <CmaltSidebar />
 
                 <div className="max-w-3xl">
-                    {/* TODO: Main content area — move <main> tag here rather than global layout */}
                     <main
                         id="main"
                         className="prose prose-slate dark:prose-invert max-w-none"
