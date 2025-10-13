@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "build:projects-json": "tsx scripts/build-projects-json.ts"
+    "build:projects-json": "tsx scripts/build-projects-json.ts",
+    "build:posts-json": "tsx scripts/build-posts-json.ts",
+    "build:cmalt-json": "tsx scripts/build-cmalt-json.ts"
   },
   "dependencies": {
     "aos": "^2.3.4",
