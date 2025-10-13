@@ -35,14 +35,14 @@ export const HighlightIcons: Icon[] = [
         title: "Accessibility-first",
         description: "WCAG-aware design, keyboard and screen-reader friendly.",
         icon: AccessibilityIcon,
-        bgColour: "bg-primary/10 dark:bg-primary/70",
+        bgColour: "bg-primary/10 dark:bg-primary",
         mainColour: "text-primary dark:text-white",
     },
     {
         title: "API-driven",
         description: "REST/GraphQL, typed clients, tests and docs.",
         icon: ApiIcon,
-        bgColour: "bg-blue-600/10 dark:bg-blue-600/40",
+        bgColour: "bg-blue-600/10 dark:bg-secondary",
         mainColour: "text-secondary dark:text-white",
     },
     {
@@ -56,8 +56,8 @@ export const HighlightIcons: Icon[] = [
         title: "Performance & DX",
         description: "Vite/Next.js, sensible tooling, CI and quality gates.",
         icon: PerformanceIcon,
-        bgColour: "bg-orange-800/10 dark:bg-orange-800/70",
-        mainColour: "text-orange-800 dark:text-white",
+        bgColour: "bg-orange-600/10 dark:bg-orange-600",
+        mainColour: "text-orange-600 dark:text-white",
     },
 ];
 
