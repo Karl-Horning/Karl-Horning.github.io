@@ -178,25 +178,29 @@ export const valueItems: Icon[] = [
  */
 export const bioSidebarItems: Icon[] = [
     {
-        title: "London, UK",
+        title: "Location",
+        description: "London & Portugal (remote/hybrid)",
         icon: LocationIcon,
         mainColour: "text-secondary dark:text-white",
         bgColour: "bg-blue-600/10 dark:bg-secondary",
     },
     {
-        title: "HE & EdTech, Blackboard/Brightspace/Canvas",
+        title: "Sectors",
+        description: "HE & EdTech",
         icon: HigherEducationIcon,
         mainColour: "text-secondary dark:text-white",
         bgColour: "bg-blue-600/10 dark:bg-secondary",
     },
     {
-        title: "JS/TS, React/Next, Node, Postgres, GraphQL/APIs",
+        title: "Stack",
+        description: "JS/TS, React/Next, Node",
         icon: CodeIcon,
         mainColour: "text-secondary dark:text-white",
         bgColour: "bg-blue-600/10 dark:bg-secondary",
     },
     {
-        title: "Accessibility & performance",
+        title: "Focus",
+        description: "Accessibility & performance",
         icon: AccessibilityIcon,
         mainColour: "text-secondary dark:text-white",
         bgColour: "bg-blue-600/10 dark:bg-secondary",
