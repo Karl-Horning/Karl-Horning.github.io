@@ -41,7 +41,7 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
  * Ensures tag pages are statically built at compile time and that
  * unknown slugs return a 404 rather than being resolved at runtime.
  */
-export const dynamic = "error";
+// export const dynamic = "error";
 
 /**
  * Prevents runtime handling of non-predefined `slug` routes.
@@ -49,7 +49,7 @@ export const dynamic = "error";
  * When a slug does not exist in the generated static parameters,
  * the page returns a 404 automatically.
  */
-export const dynamicParams = false;
+// export const dynamicParams = false;
 
 /**
  * Renders a statically generated Blog Tag page.
@@ -100,7 +100,9 @@ export const dynamicParams = false;
 export default async function Page({ params }: { params: { slug: string } }) {
     const { slug } = await params;
 
-    const blogPosts = await getPostsByTag(slug); // uses the same slugify logic
+    const blogPosts = await getPostsByTag(slug).catch((e) => {
+        throw e;
+    });
 
     if (!blogPosts || blogPosts.length === 0) {
         notFound();

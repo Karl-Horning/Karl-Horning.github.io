@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@latest out",
     "lint": "eslint .",
     "build:projects-json": "tsx scripts/build-projects-json.ts",
     "build:posts-json": "tsx scripts/build-posts-json.ts",
