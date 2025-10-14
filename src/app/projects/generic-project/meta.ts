@@ -14,5 +14,5 @@ export const meta = {
         alt: "Project cover image",
     },
     repo: "",
-    draft: false,
+    draft: true,
 } as const satisfies ProjectMeta;

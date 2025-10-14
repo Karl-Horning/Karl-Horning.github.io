@@ -28,20 +28,5 @@
             "src": "/img/screenshots/example.jpg",
             "alt": "Project cover image"
         }
-    },
-    {
-        "title": "Generic Project — Case Study Template ",
-        "description": "Use this as a scaffold for any project. Replace the placeholder copy with your own and keep the sections concise and outcomes‑focused.",
-        "topics": [
-            "React",
-            "API",
-            "Accessibility"
-        ],
-        "slug": "generic-project",
-        "repo": "",
-        "thumbnail": {
-            "src": "/img/screenshots/example.jpg",
-            "alt": "Project cover image"
-        }
     }
 ]
