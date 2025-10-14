@@ -1,0 +1,85 @@
+@layer components {
+    /* Accent variable with fallback to primary */
+    .prose {
+        --blockquote-accent: var(--primary, #cb2d6f);
+    }
+
+    .prose blockquote {
+        position: relative;
+        margin-block: 1.5rem;
+        padding-block: 1rem;
+        padding-inline: 1.25rem 1rem;
+        border-radius: 0.75rem;
+
+        /* Accent bar (RTL-aware) */
+        border-inline-start: 3px solid var(--blockquote-accent);
+
+        /* Text inherits from Tailwind Typography */
+        color: var(--tw-prose-body);
+        font-style: normal;
+
+        /* Theme-aware card tint using current text colour */
+        background: color-mix(in srgb, currentColor 6%, transparent);
+    }
+
+    /* Tidy inner spacing */
+    .prose blockquote > :first-child {
+        margin-top: 0;
+    }
+    .prose blockquote > :last-child {
+        margin-bottom: 0;
+    }
+
+    /* Nested blockquotes: lighter everything */
+    .prose blockquote blockquote {
+        margin-block-start: 1rem;
+        border-inline-start-color: color-mix(
+            in srgb,
+            var(--blockquote-accent) 55%,
+            transparent
+        );
+        background: color-mix(in srgb, currentColor 4%, transparent);
+    }
+
+    /* Attribution */
+    .prose blockquote footer,
+    .prose blockquote cite {
+        display: block;
+        margin-block-start: 0.75rem;
+        font-size: 0.9em;
+        color: var(
+            --tw-prose-quotes,
+            color-mix(in srgb, currentColor 70%, transparent)
+        );
+        font-style: normal;
+    }
+    .prose blockquote cite::before {
+        content: "— ";
+        opacity: 0.75;
+    }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+        .prose blockquote {
+            background: color-mix(in srgb, currentColor 10%, transparent);
+        }
+        .prose blockquote::before {
+            opacity: 0.22;
+        }
+        .prose blockquote blockquote {
+            background: color-mix(in srgb, currentColor 6%, transparent);
+        }
+    }
+
+    /* High contrast / Windows HC */
+    @media (forced-colors: active) {
+        .prose blockquote {
+            background: Canvas;
+            color: CanvasText;
+            border-inline-start: 3px solid Highlight;
+        }
+        .prose blockquote::before {
+            display: none;
+        }
+    }
+}
