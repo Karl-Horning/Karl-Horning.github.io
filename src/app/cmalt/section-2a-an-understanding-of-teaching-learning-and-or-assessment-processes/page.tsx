@@ -6,14 +6,8 @@ import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
 const { CmaltRoute } = internalRoutes;
-const {
-    certificates,
-    documents,
-    imgs,
-    presentations,
-    screenshots,
-    transcripts,
-} = cmaltEvidence;
+const { certificates, documents, imgs, links, presentations, screenshots } =
+    cmaltEvidence;
 const { celtaCertificate, dyslexiaAwarenessCertificate, ptllsCertificate } =
     certificates;
 const { firstSessionQuestions, webAccessibilityResourcesAndTools } = documents;
@@ -23,10 +17,10 @@ const {
     feedbackSlideUpdated,
     kolbLearningCycle,
 } = imgs;
+const { dyslexiaAwareness } = links;
 const { deppIctPresentation } = presentations;
 const { sessionRatingsScreenshot, sessionReportRatingsScreenshot } =
     screenshots;
-const { dyslexiaAwarenessTranscript } = transcripts;
 
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
@@ -205,7 +199,7 @@ export default function page() {
                     </a>{" "}
                     (2020,{" "}
                     <a
-                        href={dyslexiaAwarenessTranscript}
+                        href={dyslexiaAwareness}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -445,12 +439,12 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href={dyslexiaAwarenessTranscript}
+                            href={dyslexiaAwareness}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             Dyslexia Awareness: In partnership with Made By
-                            Dyslexia, proof of completed modules (2025) (PDF)
+                            Dyslexia, proof of completed modules (2025) (Badge)
                         </a>{" "}
                         <em>
                             Transcript of recent self-directed CPD focused on

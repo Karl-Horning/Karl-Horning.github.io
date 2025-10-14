@@ -2,8 +2,10 @@ import { icons } from "@/lib/constants/ui";
 import { Certification, Icon, WorkExperience } from "@/types";
 import { cmaltEvidence } from "./cmalt";
 
-const { certificates } = cmaltEvidence;
-const { celtaCertificate, ptllsCertificate } = certificates;
+const { certificates, links } = cmaltEvidence;
+const { appleTeacherCertificate, celtaCertificate, ptllsCertificate } =
+    certificates;
+const { dyslexiaAwareness } = links;
 const {
     AccessibilityIcon,
     ApiIcon,
@@ -51,8 +53,7 @@ export const certificationItems: Certification[] = [
         body: "Made By Dyslexia",
         date: "2025-09-05",
         image: "/img/badges/dyslexia-awareness-badge.svg",
-        verification:
-            "https://learn.microsoft.com/en-us/users/karlhorning-7806/achievements/uyj64lz3",
+        verification: dyslexiaAwareness,
     },
     {
         title: "Certificate in Teaching English to Speakers of Other Languages (CELTA)",
@@ -73,7 +74,7 @@ export const certificationItems: Certification[] = [
         body: "Apple",
         date: "2025-06-06",
         image: "/img/badges/apple-teacher-swift-playgrounds-badge.png",
-        verification: "",
+        verification: appleTeacherCertificate,
     },
 ];
 

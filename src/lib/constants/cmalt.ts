@@ -63,6 +63,8 @@ export const cmaltEvidence = {
             "https://www.karlhorning.dev/dev-blog/posts/using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call/",
         deppProjectLink:
             "https://www.imperial.ac.uk/about/education/our-projects/learning-management-system/",
+        dyslexiaAwareness:
+            "https://learn.microsoft.com/en-us/users/karlhorning-7806/achievements/uyj64lz3",
     },
 
     /** Presentation slides used in teaching or training sessions */
