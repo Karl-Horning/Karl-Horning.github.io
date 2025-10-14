@@ -13,6 +13,6 @@ export const meta = {
         src: "/img/screenshots/example.jpg",
         alt: "Project cover image",
     },
-    repo: "Karl-Horning.github.io",
+    repo: "",
     draft: false,
 } as const satisfies ProjectMeta;

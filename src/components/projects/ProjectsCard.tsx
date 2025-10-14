@@ -82,12 +82,14 @@ export default function ProjectsCard({
                         href={`${ProjectsRoute}/${slug}`}
                         icon={<FolderIcon />}
                     />
-                    <ButtonLink
-                        text="Repo"
-                        href={`${GitHubLink}/${repo}`}
-                        icon={<ExternalLinkIcon />}
-                        type="secondary"
-                    />
+                    {repo && (
+                        <ButtonLink
+                            text="Repo"
+                            href={repo}
+                            icon={<ExternalLinkIcon />}
+                            type="secondary"
+                        />
+                    )}
                 </div>
             </div>
         </div>
