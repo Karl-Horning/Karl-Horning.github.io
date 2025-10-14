@@ -1,5 +1,20 @@
 [
     {
+        "title": "Learnlight Platform & Mobile Apps",
+        "description": "Full-Stack JavaScript Developer (Backend Focus) at Learnlight (2021-2024). Built and optimised the Apollo-based GraphQL API powering Learnlight's global learning platform, improving scalability, reliability, and developer efficiency for 700k+ registered learners across 180+ countries.",
+        "topics": [
+            "GraphQL",
+            "API",
+            "EdTech"
+        ],
+        "slug": "learnlight-platform",
+        "repo": "",
+        "thumbnail": {
+            "src": "/img/screenshots/learnlight-platform.webp",
+            "alt": "Learnlight platform homepage"
+        }
+    },
+    {
         "title": "Developer Portfolio",
         "description": "My personal portfolio, built with Next.js, TypeScript, and Tailwind CSS, showcases my work, values, and technical skills through a clean, accessible, and high-performance design. It scores 90+ across all Lighthouse categories and reflects my focus on thoughtful development, usability, and attention to detail.",
         "topics": [
