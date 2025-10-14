@@ -4,6 +4,7 @@
 @import "./a11y.css";
 @import "./typography.css";
 @import "./prose.css";
+@import "./blockquote.css";
 @import "./code.css";
 @import "./components.css";
 @import "./tables.css";
