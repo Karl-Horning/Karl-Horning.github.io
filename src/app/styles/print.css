@@ -1,0 +1,63 @@
+@media print {
+    /* Hide elements not useful in print */
+    #desktop-menu,
+    #mobile-menu,
+    #sidebar,
+    #footer {
+        display: none !important;
+    }
+
+    /* Expand main content to full width if layout uses flex or grid */
+    .main,
+    .content,
+    .prose {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Remove body or html padding/margins if present */
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Reset background and text colours to black on white */
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* Remove print-breaking visual effects */
+    .transition,
+    .hover\:scale-105,
+    .shadow-lg,
+    .shadow-md {
+        all: unset !important;
+    }
+
+    /* Prevent breaking inside headings or block elements */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    blockquote,
+    pre,
+    code,
+    table {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Improve page-break behaviour */
+    .page-break {
+        page-break-before: always;
+    }
+}
