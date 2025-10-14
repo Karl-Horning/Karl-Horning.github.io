@@ -1,0 +1,32 @@
+::selection {
+    background-color: #fee300; /* customYellow */
+    color: #2d292d; /* customBlack */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Target elements with transition classes */
+    .transition-transform,
+    .transition,
+    .transition-all,
+    .transition-opacity,
+    .transition-colors,
+    .transition-shadow,
+    .transition-transform {
+        transition-property: none !important;
+        transition-duration: 0s !important;
+        transition-timing-function: linear !important;
+    }
+
+    /* Reset transforms */
+    .transform,
+    .scale-105,
+    .hover\:scale-105:hover {
+        transform: none !important;
+    }
+
+    /* Remove hover shadow */
+    .hover\:shadow-lg:hover,
+    .shadow-md {
+        box-shadow: none !important;
+    }
+}

@@ -1,0 +1,132 @@
+@layer components {
+    .prose figure,
+    .prose p {
+        margin-bottom: 1.5rem; /* mb-6 */
+    }
+
+    .prose p,
+    .prose li {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .prose hr {
+        margin: 2rem 0;
+        border-color: theme("colors.zinc.600");
+    }
+
+    .prose ol,
+    .prose ul {
+        padding-left: 1.7rem;
+        margin-bottom: 1.5rem; /* mb-6 */
+    }
+
+    .prose ol {
+        list-style: decimal;
+    }
+
+    .prose ul {
+        list-style: disc;
+    }
+
+    .prose li {
+        margin-bottom: 0.5rem; /* mb-2 */
+    }
+
+    .prose li > ul,
+    .prose li > ol {
+        margin-top: 0.5rem; /* mb-2 */
+    }
+
+    .prose li > ol {
+        list-style: upper-roman;
+    }
+
+    .prose li > p > img {
+        margin-top: 1rem;
+        display: block;
+    }
+
+    .prose a {
+        color: #666;
+        position: relative;
+        text-decoration: underline; /* Keep native underline for accessibility */
+        overflow-wrap: anywhere;
+        word-break: break-word;
+
+        /* Multiline animated underline base */
+        background-image: linear-gradient(currentColor, currentColor);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: 0% 2px;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        transition:
+            color 0.3s ease,
+            background-size 0.3s ease;
+    }
+
+    /* Hover state: change colour + reveal multiline underline */
+    .prose a:hover {
+        color: #111;
+        background-size: 100% 2px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .prose a {
+            color: white;
+        }
+
+        .prose a:hover {
+            color: white;
+            background-size: 100% 2px;
+        }
+    }
+
+    /* Blockquotes */
+    .prose blockquote {
+        border-left: 4px solid var(--primary); /* Accent border */
+        background-color: var(--background-alt, rgba(255, 255, 255, 0.05));
+        padding: 1rem 1.25rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: var(--text-muted, #ccc);
+        border-radius: 0.5rem;
+        position: relative;
+    }
+
+    .prose blockquote p {
+        margin: 0;
+    }
+
+    .prose blockquote > :first-child::before {
+        content: open-quote;
+        font-size: 2rem;
+        line-height: 1;
+        margin-right: 0.25rem;
+        vertical-align: -0.25em;
+        color: var(--primary);
+    }
+
+    .prose blockquote > :last-child::after {
+        content: close-quote;
+        font-size: 2rem;
+        line-height: 1;
+        margin-left: 0.25rem;
+        vertical-align: -0.25em;
+        color: var(--primary);
+    }
+
+    /* Nested blockquotes */
+    .prose blockquote blockquote {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        border-left-color: var(--primary-light, #6ee7b7);
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .prose blockquote blockquote + * {
+        margin-top: 1rem;
+    }
+}

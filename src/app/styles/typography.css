@@ -1,0 +1,78 @@
+/* Font styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Inter", sans-serif;
+}
+
+@layer components {
+    .prose h2,
+    .prose h3,
+    .prose h4,
+    .prose h5,
+    .prose h6 {
+        line-height: 1.25;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    /* Base sizes */
+    .prose h2 {
+        font-size: 1.5rem; /* 24px */
+    }
+    .prose h3 {
+        font-size: 1.25rem; /* 20px */
+    }
+    .prose h4 {
+        font-size: 1.125rem; /* 18px */
+    }
+    .prose h5 {
+        font-size: 1rem; /* 16px */
+    }
+    .prose h6 {
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+/* Responsive heading sizes */
+@layer components {
+    @media (min-width: 640px) {
+        .prose h2 {
+            font-size: 1.875rem;
+        }
+        .prose h3 {
+            font-size: 1.5rem;
+        }
+        .prose h4 {
+            font-size: 1.25rem;
+        }
+        .prose h5 {
+            font-size: 1.125rem;
+        }
+        .prose h6 {
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .prose h2 {
+            font-size: 2.25rem;
+        }
+        .prose h3 {
+            font-size: 1.875rem;
+        }
+        .prose h4 {
+            font-size: 1.5rem;
+        }
+        .prose h5 {
+            font-size: 1.25rem;
+        }
+        .prose h6 {
+            font-size: 1rem;
+        }
+    }
+}

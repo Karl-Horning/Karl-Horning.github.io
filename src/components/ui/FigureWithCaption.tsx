@@ -71,8 +71,9 @@ export default function FigureWithCaption({
                 title={title || alt}
                 width={width}
                 height={height}
+                className="mb-6 w-full rounded-2xl"
             />
-            <figcaption className="mt-2 text-sm text-slate-700 dark:text-slate-200">
+            <figcaption className="text-sm text-slate-700 dark:text-slate-200">
                 {caption}
             </figcaption>
         </figure>
