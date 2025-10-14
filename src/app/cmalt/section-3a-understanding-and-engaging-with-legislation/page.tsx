@@ -6,15 +6,16 @@ import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
 const { CmaltRoute } = internalRoutes;
-const { certificates, documents, screenshots, transcripts } = cmaltEvidence;
+const { certificates, documents, links, screenshots } =
+    cmaltEvidence;
 const { dyslexiaAwarenessCertificate } = certificates;
 const { subtitlesExample, webAccessibilityResourcesAndTools } = documents;
+const { dyslexiaAwareness } = links;
 const {
     editingSubtitlesScreenshot,
     embeddedSubtitlesScreenshot,
     microsoftTeamsFaqScreenshot,
 } = screenshots;
-const { dyslexiaAwarenessTranscript } = transcripts;
 
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
@@ -120,7 +121,7 @@ export default function page() {
                     </a>{" "}
                     when it launched in 2020 and{" "}
                     <a
-                        href={dyslexiaAwarenessTranscript}
+                        href={dyslexiaAwareness}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -436,12 +437,12 @@ export default function page() {
                     </li>
                     <li>
                         <a
-                            href={dyslexiaAwarenessTranscript}
+                            href={dyslexiaAwareness}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             Dyslexia Awareness: In partnership with Made By
-                            Dyslexia proof of completed modules (2025) (PDF)
+                            Dyslexia proof of completed modules (2025) (Badge)
                         </a>{" "}
                         <em>
                             Proof of completion for the extended 7-hour version
