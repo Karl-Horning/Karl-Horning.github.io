@@ -20,5 +20,5 @@ export const meta = {
         alt: "Screenshot of Karl Horning's portfolio homepage",
     },
     repo: "https://github.com/Karl-Horning/Karl-Horning.github.io",
-    draft: true,
+    draft: false,
 } as const satisfies ProjectMeta;
