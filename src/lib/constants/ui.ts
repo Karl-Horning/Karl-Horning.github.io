@@ -365,8 +365,8 @@ export const externalLinks = {
     /** GitHub repository for Karl Horning’s portfolio site */
     PortfolioRepoLink: "https://github.com/Karl-Horning/Karl-Horning.github.io",
 
-    /** RSS feed for the blog subdomain */
-    RssLink: "https://www.karlhorning.dev/dev-blog/feed.xml",
+    /** RSS feed for the blog */
+    RssLink: "https://www.karlhorning.dev/rss.xml",
 } satisfies SiteLink;
 
 /**

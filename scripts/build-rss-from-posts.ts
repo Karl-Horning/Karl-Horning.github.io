@@ -3,26 +3,38 @@ import { promises as fs } from "fs";
 import path from "path";
 import { z } from "zod";
 
-// ------------------ Config (edit to suit your site) ------------------
-
+/**
+ * Base site and feed configuration.
+ *
+ * Used to construct absolute URLs and channel metadata
+ * for the generated RSS feed.
+ */
 const SITE_URL = "https://www.karlhorning.dev";
 const BLOG_BASE = `${SITE_URL}/blog`;
 const FEED_PATH = path.join(process.cwd(), "public", "rss.xml");
 
-// Channel metadata
+/** Channel metadata (rendered in `<channel>`). */
 const CHANNEL_TITLE = "Karl Horning's Blog";
-const CHANNEL_LINK = `${BLOG_BASE}`;
+const CHANNEL_LINK = BLOG_BASE;
 const CHANNEL_DESCRIPTION =
     "Notes on web development, accessibility, and learning tech";
+const CHANNEL_LANGUAGE = "en-GB";
+const CHANNEL_GENERATOR = "build-rss-from-posts.ts";
 
-// RSS self link
+/** URL to the feed itself (for the atom:link `self` reference). */
 const FEED_SELF_URL = `${SITE_URL}/rss.xml`;
 
-// Time to use for posts that only have a date (24h, UTC).
-const DEFAULT_PUB_HOUR_UTC = 9; // 09:00:00 UTC
+/**
+ * Default publish hour (UTC) for posts that only specify a date.
+ * Applied when converting `YYYY-MM-DD` to RFC-822.
+ */
+const DEFAULT_PUB_HOUR_UTC = 9; // 09:00 UTC
 
-// ------------------ Schemas ------------------
-
+/**
+ * Zod schema for a single blog post entry sourced from `/public/data/posts.json`.
+ *
+ * Fields are validated to ensure correct formatting (e.g. ISO date).
+ */
 const PostSchema = z.object({
     title: z.string(),
     description: z.string(),
@@ -33,14 +45,38 @@ const PostSchema = z.object({
         src: z.string(),
         alt: z.string(),
     }),
-    topics: z.array(z.string()),
+    topics: z.array(z.string()).default([]),
     draft: z.boolean(),
 });
 
+/** Zod schema for an array of posts. */
 const PostsSchema = z.array(PostSchema);
 
-// ------------------ Helpers ------------------
+/** Inferred TypeScript type for a single post. */
+type Post = z.infer<typeof PostSchema>;
 
+/** Two-space indentation used when rendering XML. */
+const IND = "  ";
+
+/**
+ * Indents each non-empty line of a multi-line string.
+ *
+ * @param n - Indentation level (number of `IND` units).
+ * @param s - The string to indent.
+ * @returns The indented string.
+ */
+const indent = (n: number, s: string) =>
+    s
+        .split("\n")
+        .map((line) => (line ? IND.repeat(n) + line : line))
+        .join("\n");
+
+/**
+ * Escapes a string for safe inclusion in XML text/attributes.
+ *
+ * @param s - Unescaped string.
+ * @returns XML-escaped string.
+ */
 function xmlEscape(s: string): string {
     return s
         .replace(/&/g, "&amp;")
@@ -50,9 +86,13 @@ function xmlEscape(s: string): string {
         .replace(/'/g, "&apos;");
 }
 
-// RFC-822 date (UTC). Many readers accept “GMT”; normalise to “+0000”.
+/**
+ * Formats a `Date` as an RFC-822 string in UTC with a `+0000` offset.
+ *
+ * @param d - Date to format.
+ * @returns RFC-822 formatted date string (e.g., `Mon, 01 Jan 2025 09:00:00 +0000`).
+ */
 function toRfc822UTC(d: Date): string {
-    // Example: "Mon, 04 Aug 2025 19:00:00 +0000"
     const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const monthNames = [
         "Jan",
@@ -78,75 +118,155 @@ function toRfc822UTC(d: Date): string {
     return `${dayName}, ${day} ${month} ${year} ${hour}:${min}:${sec} +0000`;
 }
 
+/**
+ * Converts an ISO-like `YYYY-MM-DD` string to an RFC-822 UTC date string.
+ * Uses {@link DEFAULT_PUB_HOUR_UTC} for the time portion.
+ *
+ * @param isoDateYYYYMMDD - The ISO date (date-only) string.
+ * @returns RFC-822 formatted date string in UTC.
+ */
+function rfc822FromISODate(isoDateYYYYMMDD: string): string {
+    const d = new Date(`${isoDateYYYYMMDD}T00:00:00.000Z`);
+    d.setUTCHours(DEFAULT_PUB_HOUR_UTC, 0, 0, 0);
+    return toRfc822UTC(d);
+}
+
+/**
+ * Resolves a URL to an absolute URL string using {@link SITE_URL} as base.
+ *
+ * @param relativeOrAbsolute - Relative path or absolute URL.
+ * @returns Absolute URL string.
+ */
 function absoluteUrl(relativeOrAbsolute: string): string {
     try {
-        // If it's already absolute, new URL succeeds directly
-        return new URL(relativeOrAbsolute).toString();
+        return new URL(relativeOrAbsolute).toString(); // already absolute
     } catch {
         return `${SITE_URL}${relativeOrAbsolute.startsWith("/") ? "" : "/"}${relativeOrAbsolute}`;
     }
 }
 
-// ------------------ Main ------------------
+/**
+ * Renders a single `<item>` XML block for the RSS feed.
+ *
+ * Includes title, link, publication date, description with thumbnail,
+ * categories (from topics), a `media:thumbnail`, and a permalink GUID.
+ *
+ * @param p - Validated post object.
+ * @returns The `<item>` XML string.
+ */
+function renderItem(p: Post): string {
+    const link = `${BLOG_BASE}/${p.slug}`;
+    const guid = link;
+    const thumb = absoluteUrl(p.thumbnail.src);
+    const alt = xmlEscape(p.thumbnail.alt);
+    const categories =
+        p.topics
+            .map((t) => `${indent(3, `<category>${xmlEscape(t)}</category>`)}`)
+            .join("\n") || "";
 
+    const parts = [
+        indent(2, "<item>"),
+        indent(3, `<title>${xmlEscape(p.title)}</title>`),
+        indent(3, `<link>${xmlEscape(link)}</link>`),
+        indent(3, `<pubDate>${rfc822FromISODate(p.date)}</pubDate>`),
+        indent(
+            3,
+            `<description><![CDATA[<img src="${xmlEscape(
+                thumb
+            )}" alt="${alt}" /><br>${p.description}]]></description>`
+        ),
+        categories,
+        indent(3, `<media:thumbnail url="${xmlEscape(thumb)}" />`),
+        indent(3, `<guid isPermaLink="true">${xmlEscape(guid)}</guid>`),
+        indent(2, "</item>"),
+    ].filter(Boolean);
+
+    return parts.join("\n");
+}
+
+/**
+ * Parses JSON safely and throws a readable error on failure.
+ *
+ * @param text - Raw JSON text.
+ * @returns Parsed JSON value.
+ * @throws When the input is not valid JSON.
+ */
+function safeParseJson(text: string): unknown {
+    try {
+        return JSON.parse(text);
+    } catch (e) {
+        throw new Error(
+            `posts.json is not valid JSON: ${(e as Error).message}`
+        );
+    }
+}
+
+/**
+ * Main entry point: reads posts JSON, validates items, renders RSS XML,
+ * and writes the result to {@link FEED_PATH}.
+ *
+ * Steps:
+ * 1. Read `/public/data/posts.json` and parse JSON safely.
+ * 2. Validate against {@link PostsSchema}.
+ * 3. Filter out drafts, sort newest → oldest.
+ * 4. Render `<item>` blocks and channel metadata.
+ * 5. Write `public/rss.xml`.
+ *
+ * @async
+ * @returns Resolves when the RSS file has been written.
+ */
 async function run() {
     const postsPath = path.join(process.cwd(), "public", "data", "posts.json");
     const raw = await fs.readFile(postsPath, "utf-8");
-    const parsed = PostsSchema.parse(JSON.parse(raw));
+    const parsed = safeParseJson(raw);
 
-    // Defensive as posts.json should already exclude drafts
-    const published = parsed.filter((p) => p.draft === false);
+    const posts = PostsSchema.parse(parsed);
 
-    // Sort newest → oldest by date
+    // Defensive: `posts.json` should already exclude drafts.
+    const published = posts.filter((p) => p.draft === false);
+
+    // Sort newest → oldest by date.
     published.sort((a, b) => {
         const aTime = new Date(`${a.date}T00:00:00.000Z`).getTime();
         const bTime = new Date(`${b.date}T00:00:00.000Z`).getTime();
         return bTime - aTime;
     });
 
-    // Build items
-    const itemsXml = published
-        .map((p) => {
-            const pubDate = new Date(`${p.date}T00:00:00.000Z`);
-            pubDate.setUTCHours(DEFAULT_PUB_HOUR_UTC, 0, 0, 0);
+    const itemsXml = published.map(renderItem).join("\n");
 
-            const link = `${BLOG_BASE}/${p.slug}/`;
-            const guid = link; // stable URL guid
-            const thumb = absoluteUrl(p.thumbnail.src);
-
-            return [
-                "    <item>",
-                `      <title>${xmlEscape(p.title)}</title>`,
-                `      <link>${xmlEscape(link)}</link>`,
-                `      <pubDate>${toRfc822UTC(pubDate)}</pubDate>`,
-                `      <description><![CDATA[${p.description}]]></description>`,
-                `      <media:thumbnail url="${xmlEscape(thumb)}" />`,
-                `      <guid>${xmlEscape(guid)}</guid>`,
-                "    </item>",
-            ].join("\n");
-        })
-        .join("\n\n");
-
-    // Channel dates
+    // Channel metadata.
     const now = new Date();
     const lastBuildDate = toRfc822UTC(now);
 
-    const rss = [
-        '<?xml version="1.0" encoding="UTF-8" ?>',
-        '<rss version="2.0"',
-        '  xmlns:media="http://search.yahoo.com/mrss/"',
-        '  xmlns:atom="http://www.w3.org/2005/Atom">',
-        "  <channel>",
-        `    <title>${xmlEscape(CHANNEL_TITLE)}</title>`,
-        `    <link>${xmlEscape(CHANNEL_LINK)}</link>`,
-        `    <description>${xmlEscape(CHANNEL_DESCRIPTION)}</description>`,
-        "",
-        `    <lastBuildDate>${lastBuildDate}</lastBuildDate>`,
-        `    <atom:link href="${xmlEscape(FEED_SELF_URL)}" rel="self" type="application/rss+xml" />`,
-        "",
+    const channelParts = [
+        indent(1, "<channel>"),
+        indent(2, `<title>${xmlEscape(CHANNEL_TITLE)}</title>`),
+        indent(2, `<link>${xmlEscape(CHANNEL_LINK)}</link>`),
+        indent(
+            2,
+            `<description>${xmlEscape(CHANNEL_DESCRIPTION)}</description>`
+        ),
+        indent(2, `<language>${CHANNEL_LANGUAGE}</language>`),
+        indent(2, `<generator>${xmlEscape(CHANNEL_GENERATOR)}</generator>`),
+        indent(2, `<lastBuildDate>${lastBuildDate}</lastBuildDate>`),
+        indent(
+            2,
+            `<atom:link href="${xmlEscape(
+                FEED_SELF_URL
+            )}" rel="self" type="application/rss+xml" />`
+        ),
         itemsXml,
-        "",
-        "  </channel>",
+        indent(1, "</channel>"),
+    ];
+
+    const rss = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        "<rss",
+        `${IND}version="2.0"`,
+        `${IND}xmlns:media="http://search.yahoo.com/mrss/"`,
+        `${IND}xmlns:atom="http://www.w3.org/2005/Atom"`,
+        ">",
+        channelParts.join("\n"),
         "</rss>",
         "",
     ].join("\n");
@@ -157,6 +277,7 @@ async function run() {
     );
 }
 
+// Execute the build script.
 run().catch((err) => {
     console.error(err);
     process.exit(1);

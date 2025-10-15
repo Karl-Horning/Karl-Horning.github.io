@@ -36,6 +36,11 @@ export default function Footer() {
                                     ? "noopener noreferrer"
                                     : undefined
                             }
+                            type={
+                                label.startsWith("RSS")
+                                    ? "application/rss+xml"
+                                    : undefined
+                            }
                         >
                             <Icon
                                 className="h-5 w-5 text-2xl"

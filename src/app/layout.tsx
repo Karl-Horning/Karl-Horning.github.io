@@ -2,6 +2,9 @@ import "./styles/globals.css";
 import Footer from "@/components/shell/Footer";
 import { jsonLdHome } from "@/lib/constants/jsonLd";
 import Header from "@/components/shell/Header";
+import { externalLinks } from "@/lib/constants/ui";
+
+const { RssLink } = externalLinks;
 
 export default function RootLayout({
     children,
@@ -46,6 +49,12 @@ export default function RootLayout({
                     type="image/png"
                     sizes="512x512"
                     href="/android-chrome-512x512.png"
+                />
+                <link
+                    rel="alternate"
+                    type="application/rss+xml"
+                    title="Karl Horning's Blog"
+                    href={RssLink}
                 />
             </head>
             <body className="flex min-h-screen flex-col bg-slate-50  font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
