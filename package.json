@@ -10,7 +10,8 @@
     "build:projects-json": "tsx scripts/build-projects-json.ts",
     "build:posts-json": "tsx scripts/build-posts-json.ts",
     "build:cmalt-json": "tsx scripts/build-cmalt-json.ts",
-    "build:rss": "tsx scripts/build-rss-from-posts.ts"
+    "build:rss": "tsx scripts/build-rss-from-posts.ts",
+    "build:resize-images": "tsx scripts/resize-images.ts"
   },
   "dependencies": {
     "next": "15.5.4",
