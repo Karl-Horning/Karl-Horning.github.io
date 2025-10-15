@@ -17,11 +17,14 @@
                 "name": "next"
             }
         ],
+        "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"],
-            "@/fonts": ["./src/app/styles/fonts.ts"]
-        }
+            "@/fonts": ["./src/app/styles/fonts.ts"],
+            "server-only": ["./scripts/shims/server-only.ts"]
+        },
+        "target": "ES2017"
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-    "exclude": ["node_modules"]
+    "exclude": [".next", "node_modules"]
 }

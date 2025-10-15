@@ -1,16 +1,23 @@
-import AboutPhotoCard from "@/components/AboutPage/AboutPhotoCard";
-import AboutIntro from "@/components/AboutPage/AboutIntro";
-import AboutValues from "@/components/AboutPage/AboutValues";
-import AboutSkills from "@/components/AboutPage/AboutSkills";
-import AboutBadges from "@/components/AboutPage/AboutBadges";
-import { internalRoutes } from "@/constants/links";
+import { icons, internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
-import { jsonLdAbout } from "@/constants/jsonLd";
-import AboutInstitutions from "@/components/AboutPage/AboutInstitutions";
-import AboutTechnologies from "@/components/AboutPage/AboutTechnologies";
+import { jsonLdAbout } from "@/lib/constants/jsonLd";
+import Bio from "@/components/about/Bio";
+import Values from "@/components/about/Values";
+import Experience from "@/components/about/Experience";
+import Platforms from "@/components/about/Platforms";
+import ContactCta from "@/components/ui/ContactCta";
+import Certifications from "@/components/about/Certifications";
+import PageIntroSplit from "@/components/ui/PageIntroSplit";
 
-const { AboutRoute } = internalRoutes;
+const { ProjectIcon, ContactIcon, InfoIcon } = icons;
+const { AboutRoute, ProjectsRoute, ContactRoute } = internalRoutes;
 
+/**
+ * Static page metadata for the About route.
+ *
+ * Created via {@link createMetadata} and used by Next.js for SEO.
+ * Includes structured data from {@link jsonLdAbout}.
+ */
 export const metadata = createMetadata({
     title: "About",
     path: AboutRoute,
@@ -18,28 +25,71 @@ export const metadata = createMetadata({
 });
 
 /**
- * The main About page component.
+ * Renders the **About** page.
  *
- * Composes multiple presentational components to display
- * an overview about the user, including a photo card,
- * introductory text, personal values, skills grid, and badges.
+ * Provides an overview of the author’s professional background,
+ * values, platforms experience, and certifications.
+ * This page acts as a personal profile hub and uses several modular components
+ * for clear visual hierarchy and accessible structure.
  *
- * This component arranges child components in a responsive grid layout.
+ * ### Layout structure
+ * - {@link PageIntroSplit} — Introductory hero section with headline and CTAs.
+ * - {@link Bio} — Concise biography and visual profile card.
+ * - {@link Values} — Grid or list describing professional values.
+ * - {@link Experience} — Overview of relevant career or project experience.
+ * - {@link Platforms} — Technologies and systems used in academic and technical work.
+ * - {@link Certifications} — Professional credentials and recognitions.
+ * - {@link ContactCta} — Footer contact prompt encouraging further engagement.
  *
- * Metadata for the page title and path is created and exported separately.
+ * ### Behaviour
+ * - The `metadata` export provides title and structured data for SEO.
+ * - All sections are statically rendered and responsive.
+ * - Uses Tailwind CSS grid utilities for vertical rhythm and consistent spacing.
+ *
+ * @remarks
+ * This page does not fetch any remote data — it relies entirely on local,
+ * pre-defined content components.
  *
  * @component
+ * @returns The full About page layout, combining all major subsections.
+ *
+ * @example
+ * ```tsx
+ * import About from "@/app/about/page";
+ *
+ * export default function Page() {
+ *   return <About />;
+ * }
+ * ```
  */
 export default function About() {
     return (
-        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 text-text sm:grid-cols-2 lg:grid-cols-3">
-            <AboutPhotoCard />
-            <AboutIntro />
-            <AboutInstitutions />
-            <AboutTechnologies />
-            <AboutValues />
-            <AboutSkills />
-            <AboutBadges />
-        </section>
+        <>
+            <PageIntroSplit
+                title="About Me"
+                tagline="Background & Values"
+                leadParagraph="Learning technologist and developer passionate about building accessible, meaningful digital experiences. I combine educational insight with technical practice to improve how people learn and work."
+                heroIcon={<InfoIcon />}
+                primaryCta={{
+                    href: `${ProjectsRoute}`,
+                    text: "Explore my projects",
+                    icon: <ProjectIcon />,
+                }}
+                secondaryCta={{
+                    href: `${ContactRoute}#contactForm`,
+                    text: "Get in touch",
+                    icon: <ContactIcon />,
+                    type: "secondary",
+                }}
+            />
+            <main id="main">
+                <Bio />
+                <Values />
+                <Experience />
+                <Platforms />
+                <Certifications />
+            </main>
+            <ContactCta />
+        </>
     );
 }

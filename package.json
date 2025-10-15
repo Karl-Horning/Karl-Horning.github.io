@@ -1,34 +1,41 @@
 {
   "name": "karl-horning.github.io",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "preview:static": "npx serve out",
-    "lint": "next lint"
+    "start": "npx serve@latest out",
+    "lint": "eslint .",
+    "build:projects-json": "tsx scripts/build-projects-json.ts",
+    "build:posts-json": "tsx scripts/build-posts-json.ts",
+    "build:cmalt-json": "tsx scripts/build-cmalt-json.ts",
+    "build:rss": "tsx scripts/build-rss-from-posts.ts"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "next": "14.2.2",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "15.5.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-icons": "^5.1.0",
     "sharp": "^0.34.2"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.7",
+    "@eslint/eslintrc": "^3.3.1",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
+    "autoprefixer": "^10.4.21",
     "eslint": "^8",
-    "eslint-config-next": "14.2.2",
-    "postcss": "^8",
+    "eslint-config-next": "15.5.4",
+    "fast-glob": "^3.3.3",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.18",
+    "tsx": "^4.20.6",
+    "typescript": "^5",
+    "zod": "^4.1.12"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -38,5 +45,9 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "overrides": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1"
   }
 }

@@ -1,0 +1,34 @@
+[
+    {
+        "title": "KarlHorning.dev - Building a Modern, Accessible Developer Portfolio",
+        "description": "A TypeScript-based Next.js portfolio focused on accessibility, performance, and clean documentation.",
+        "topics": [
+            "Next.js",
+            "TypeScript",
+            "Accessibility",
+            "Tailwind CSS",
+            "Portfolio"
+        ],
+        "slug": "karlhorning-dev",
+        "repo": "https://github.com/Karl-Horning/Karl-Horning.github.io",
+        "thumbnail": {
+            "src": "/img/projects/karlhorning-dev.webp",
+            "alt": "Screenshot of Karl Horning's portfolio homepage"
+        }
+    },
+    {
+        "title": "Learnlight Platform & Mobile Apps",
+        "description": "Full-Stack JavaScript Developer (Backend Focus) at Learnlight (2021-2024). Built and optimised the Apollo-based GraphQL API powering Learnlight's global learning platform, improving scalability, reliability, and developer efficiency for 700k+ registered learners across 180+ countries.",
+        "topics": [
+            "GraphQL",
+            "API",
+            "EdTech"
+        ],
+        "slug": "learnlight-platform",
+        "repo": "",
+        "thumbnail": {
+            "src": "/img/projects/learnlight-platform.webp",
+            "alt": "Learnlight platform homepage"
+        }
+    }
+]

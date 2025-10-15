@@ -1,8 +1,7 @@
-import "./styles/fonts.css";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { jsonLdHome } from "@/constants/jsonLd";
+import "./styles/globals.css";
+import Footer from "@/components/shell/Footer";
+import { jsonLdHome } from "@/lib/constants/jsonLd";
+import Header from "@/components/shell/Header";
 
 export default function RootLayout({
     children,
@@ -49,9 +48,15 @@ export default function RootLayout({
                     href="/android-chrome-512x512.png"
                 />
             </head>
-            <body className="text-foreground flex min-h-screen flex-col bg-background font-sans">
-                <Navbar />
-                <main className="flex-1 pt-16">{children}</main>
+            <body className="flex min-h-screen flex-col bg-slate-50  font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+                <a
+                    href="#main"
+                    className="sr-only rounded bg-primary px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50"
+                >
+                    Skip to content
+                </a>
+                <Header />
+                <div className="flex-1">{children}</div>
                 <Footer />
             </body>
         </html>
