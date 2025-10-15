@@ -74,7 +74,7 @@ export default function TopicChipsList({
 
     return (
         <ul
-            className={`flex flex-wrap gap-2${className ? ` ${className}` : ""}`}
+            className={`flex flex-wrap gap-2 mt-4${className ? ` ${className}` : ""}`}
         >
             {items.map(({ title, slug }, index) => {
                 // Helper: bump the seen count for this slug.

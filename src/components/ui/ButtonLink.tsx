@@ -12,7 +12,7 @@ interface ButtonLinkProps {
     /**
      * The visible button text.
      */
-    text: string;
+    text: ReactNode;
 
     /**
      * Button style variant.

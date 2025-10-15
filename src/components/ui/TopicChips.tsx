@@ -38,7 +38,7 @@ export default function TopicChips({
     className = "",
 }: TopicChipsProps) {
     return (
-        <div
+        <li
             className={`flex flex-wrap gap-2 text-xs${className ? ` ${className}` : ""}`}
         >
             <Link
@@ -47,6 +47,6 @@ export default function TopicChips({
             >
                 #{title}
             </Link>
-        </div>
+        </li>
     );
 }
