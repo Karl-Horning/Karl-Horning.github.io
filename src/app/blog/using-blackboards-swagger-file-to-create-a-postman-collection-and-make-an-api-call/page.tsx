@@ -2,6 +2,15 @@ import BlogLayout from "@/components/Layouts/BlogLayout";
 import { meta } from "./meta";
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import { fourHundredResponse, jwtScript } from "./example";
+import { createMetadata } from "@/lib/metadata";
+import { internalRoutes } from "@/lib/constants/ui";
+
+const { BlogRoute } = internalRoutes;
+
+export const metadata = createMetadata({
+    title: `${meta.title} | Blog`,
+    path: `${BlogRoute}/${meta.slug}`,
+});
 
 export default function Page() {
     return (
