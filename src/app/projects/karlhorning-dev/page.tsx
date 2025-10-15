@@ -5,10 +5,16 @@ import { meta } from "./meta";
 import { jsdocExample } from "./examples";
 import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
 import LighthouseGrid from "@/components/ui/LighthouseGrid";
+import { createMetadata } from "@/lib/metadata";
 
 const { GitHubLink } = externalLinks;
-const { CmaltRoute } = internalRoutes;
+const { CmaltRoute, ProjectsRoute } = internalRoutes;
 const { CertificateIcon, ContactIcon, HomeIcon, InfoIcon, ProjectIcon } = icons;
+
+export const metadata = createMetadata({
+    title: `${meta.title} | Projects`,
+    path: `${ProjectsRoute}/${meta.slug}`,
+});
 
 export default function Page() {
     return (

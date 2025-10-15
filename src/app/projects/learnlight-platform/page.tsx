@@ -1,6 +1,15 @@
 import ProjectLayout from "@/components/Layouts/ProjectLayout";
 import { meta } from "./meta";
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
+import { createMetadata } from "@/lib/metadata";
+import { internalRoutes } from "@/lib/constants/ui";
+
+const { ProjectsRoute } = internalRoutes;
+
+export const metadata = createMetadata({
+    title: `${meta.title} | Projects`,
+    path: `${ProjectsRoute}/${meta.slug}`,
+});
 
 export default function Page() {
     return (
