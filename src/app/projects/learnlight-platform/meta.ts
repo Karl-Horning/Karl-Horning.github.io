@@ -10,7 +10,7 @@ export const meta = {
     description:
         "Full-Stack JavaScript Developer (Backend Focus) at Learnlight (2021-2024). Built and optimised the Apollo-based GraphQL API powering Learnlight's global learning platform, improving scalability, reliability, and developer efficiency for 700k+ registered learners across 180+ countries.",
     thumbnail: {
-        src: "/img/projects/learnlight-platform.webp",
+        src: "/img/screenshots/learnlight-platform.webp",
         alt: "Learnlight platform homepage",
     },
     repo: "",

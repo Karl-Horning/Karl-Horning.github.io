@@ -10,7 +10,7 @@
         "slug": "learnlight-platform",
         "repo": "",
         "thumbnail": {
-            "src": "/img/projects/learnlight-platform.webp",
+            "src": "/img/screenshots/learnlight-platform.webp",
             "alt": "Learnlight platform homepage"
         }
     },
@@ -25,7 +25,7 @@
         "slug": "developer-portfolio",
         "repo": "Karl-Horning.github.io",
         "thumbnail": {
-            "src": "/img/projects/example.jpg",
+            "src": "/img/screenshots/example.jpg",
             "alt": "Project cover image"
         }
     }
