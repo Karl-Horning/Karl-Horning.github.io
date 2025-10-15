@@ -108,10 +108,10 @@ export default function PageIntroSplit({
     const IconPanel = (
         <div className="order-1 hidden md:order-2 md:flex md:justify-end">
             <div
-                className="relative flex items-center justify-center rounded-3xl border border-slate-200 bg-white/70 p-8 shadow-md ring-1 ring-black/5 dark:border-slate-800 dark:bg-slate-900/60 dark:ring-white/10"
+                className="relative flex items-center justify-center rounded-3xl bg-primary/10 p-8 text-primary shadow-md"
                 aria-hidden="true"
             >
-                <div className="text-[12rem] text-secondary">
+                <div className="text-[12rem]">
                     {heroIcon ?? <ProjectIcon />}
                 </div>
             </div>
