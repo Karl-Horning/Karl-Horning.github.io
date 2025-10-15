@@ -114,15 +114,19 @@ async function run() {
             const guid = link; // stable URL guid
             const thumb = absoluteUrl(p.thumbnail.src);
             const alt = p.thumbnail.alt;
+            const categories = (p.topics ?? [])
+                .map((t) => `<category>${xmlEscape(t)}</category>`)
+                .join("\n");
 
             return [
                 "    <item>",
                 `      <title>${xmlEscape(p.title)}</title>`,
                 `      <link>${xmlEscape(link)}</link>`,
                 `      <pubDate>${toRfc822UTC(pubDate)}</pubDate>`,
-                `      <description>\n        <![CDATA[<img src="${xmlEscape(thumb)}" alt="${alt}" /><br>${p.description}]]>\n      </description>`,
+                `      <description><![CDATA[<img src="${xmlEscape(thumb)}" alt="${alt}" /><br>${p.description}]]></description>`,
+                `      ${categories}`,
                 `      <media:thumbnail url="${xmlEscape(thumb)}" />`,
-                `      <guid isPermaLink="true"\n        >${xmlEscape(guid)}</guid\n      >`,
+                `      <guid isPermaLink="true">${xmlEscape(guid)}</guid>`,
                 "    </item>",
             ].join("\n");
         })
