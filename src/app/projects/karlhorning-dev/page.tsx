@@ -196,7 +196,7 @@ export default function Page() {
                 <p>
                     For example, see my detailed backend case study:{" "}
                     <Link href="/projects/learnlight-platform">
-                        Learnlight Platform & Mobile Apps
+                        Learnlight Platform &amp; Mobile Apps
                     </Link>
                     .
                 </p>
@@ -305,11 +305,11 @@ export default function Page() {
                 <h2>Accessibility and Performance</h2>
 
                 <p>
-                    Accessibility is monitored throughout development using
-                    Lighthouse, WAVE, and Firefox&apos;s built-in accessibility
-                    tools. The current localhost score is 96, and I&apos;ll
-                    publish a full Lighthouse and accessibility audit once the
-                    live build is deployed.
+                    Accessibility is monitored throughout development and on the
+                    live site using Lighthouse, WAVE, and Firefox&apos;s
+                    built-in accessibility tools. The current{" "}
+                    <strong>live</strong> score is 100, and a full Lighthouse and
+                    accessibility audit is published from the production build.
                 </p>
 
                 <ul>
@@ -320,32 +320,24 @@ export default function Page() {
                     <li>Optimised media via Next/Image and Sharp</li>
                 </ul>
 
-                <h3>Lighthouse Performance (Localhost build): Mobile</h3>
+                <h3>Lighthouse Performance (Live): Mobile</h3>
 
                 <LighthouseGrid
                     data={{
-                        Performance: 84,
-                        Accessibility: 96,
+                        Performance: 97,
+                        Accessibility: 100,
                         "Best Practices": 100,
                         SEO: 100,
                     }}
                 />
 
-                <p>
-                    <strong>Note:</strong> These are localhost development
-                    figures. Most issues relate to caching or localhost
-                    conditions. The production build is expected to achieve 95+
-                    across all categories. I&apos;ll publish production
-                    Lighthouse and Core Web Vitals after deployment.
-                </p>
-
-                <h3>Lighthouse Performance (Localhost build): Desktop</h3>
-
                 <FigureWithCaption
-                    src="/img/projects/lighthouse-performance-desktop-2025-10.webp"
+                    src="/img/projects/lighthouse-performance-mobile-2025-10-16.webp"
                     alt=""
-                    caption="Lighthouse report (desktop) run locally on 15 Oct 2025. Scores reflect localhost/dev caching; production is expected to improve."
+                    caption="Lighthouse report (mobile) run on 16 Oct 2025 against the live site."
                 />
+
+                <h3>Lighthouse Performance (Live): Desktop</h3>
 
                 <LighthouseGrid
                     data={{
@@ -355,10 +347,15 @@ export default function Page() {
                         SEO: 100,
                     }}
                 />
+
+                <p>
+                    These figures reflect the production environment as of 16
+                    Oct 2025.
+                </p>
             </section>
 
             <section id="privacy">
-                <h2>Privacy, Security & Performance</h2>
+                <h2>Privacy, Security &amp; Performance</h2>
                 <p>
                     The site is statically generated for reliability and
                     security, with no user tracking or unnecessary third-party
@@ -379,8 +376,8 @@ export default function Page() {
                 <p>
                     Development currently happens in{" "}
                     <code>refresh/2025-design</code>, with feature and bug
-                    branches merged in before the final release to{" "}
-                    <code>main</code>.
+                    branches merged into that branch before PRs to{" "}
+                    <code>main</code>, which serves the live site.
                 </p>
             </section>
 
