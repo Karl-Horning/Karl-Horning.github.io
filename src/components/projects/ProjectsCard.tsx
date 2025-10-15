@@ -76,7 +76,9 @@ export default function ProjectsCard({
                     <TopicChipsList topics={topics} />
                 </div>
 
-                <div className="mt-4 flex gap-3">
+                <hr className="mt-6 border-slate-100 dark:border-slate-800" />
+
+                <div className="mt-6 flex gap-3">
                     <ButtonLink
                         text="Read case study"
                         href={`${ProjectsRoute}/${slug}`}
