@@ -44,11 +44,6 @@ export default async function BlogLandingPosts({
                     No posts found!
                 </h3>
             )}
-
-            <nav
-                id="pager"
-                className="mt-8 flex items-center justify-center gap-2"
-            ></nav>
         </main>
     );
 }
