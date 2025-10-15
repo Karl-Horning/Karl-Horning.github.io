@@ -3,7 +3,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { z } from "zod";
 
-// ------------------ Config (edit to suit your site) ------------------
+// ------------------ Config ------------------
 
 const SITE_URL = "https://www.karlhorning.dev";
 const BLOG_BASE = `${SITE_URL}/blog`;
@@ -50,7 +50,7 @@ function xmlEscape(s: string): string {
         .replace(/'/g, "&apos;");
 }
 
-// RFC-822 date (UTC). Many readers accept “GMT”; normalise to “+0000”.
+// RFC-822 date (UTC). Many readers accept "GMT"; normalise to "+0000".
 function toRfc822UTC(d: Date): string {
     // Example: "Mon, 04 Aug 2025 19:00:00 +0000"
     const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -110,42 +110,40 @@ async function run() {
             const pubDate = new Date(`${p.date}T00:00:00.000Z`);
             pubDate.setUTCHours(DEFAULT_PUB_HOUR_UTC, 0, 0, 0);
 
-            const link = `${BLOG_BASE}/${p.slug}/`;
+            const link = `${BLOG_BASE}/${p.slug}`;
             const guid = link; // stable URL guid
             const thumb = absoluteUrl(p.thumbnail.src);
+            const alt = p.thumbnail.alt;
 
             return [
                 "    <item>",
                 `      <title>${xmlEscape(p.title)}</title>`,
                 `      <link>${xmlEscape(link)}</link>`,
                 `      <pubDate>${toRfc822UTC(pubDate)}</pubDate>`,
-                `      <description><![CDATA[${p.description}]]></description>`,
+                `      <description>\n        <![CDATA[<img src="${xmlEscape(thumb)}" alt="${alt}" /><br>${p.description}]]>\n      </description>`,
                 `      <media:thumbnail url="${xmlEscape(thumb)}" />`,
-                `      <guid>${xmlEscape(guid)}</guid>`,
+                `      <guid isPermaLink="true"\n        >${xmlEscape(guid)}</guid\n      >`,
                 "    </item>",
             ].join("\n");
         })
-        .join("\n\n");
+        .join("\n");
 
     // Channel dates
     const now = new Date();
     const lastBuildDate = toRfc822UTC(now);
 
     const rss = [
-        '<?xml version="1.0" encoding="UTF-8" ?>',
-        '<rss version="2.0"',
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss\n  version="2.0"',
         '  xmlns:media="http://search.yahoo.com/mrss/"',
-        '  xmlns:atom="http://www.w3.org/2005/Atom">',
+        '  xmlns:atom="http://www.w3.org/2005/Atom"\n>',
         "  <channel>",
         `    <title>${xmlEscape(CHANNEL_TITLE)}</title>`,
         `    <link>${xmlEscape(CHANNEL_LINK)}</link>`,
         `    <description>${xmlEscape(CHANNEL_DESCRIPTION)}</description>`,
-        "",
         `    <lastBuildDate>${lastBuildDate}</lastBuildDate>`,
         `    <atom:link href="${xmlEscape(FEED_SELF_URL)}" rel="self" type="application/rss+xml" />`,
-        "",
         itemsXml,
-        "",
         "  </channel>",
         "</rss>",
         "",
