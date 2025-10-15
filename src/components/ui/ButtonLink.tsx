@@ -93,7 +93,11 @@ export default function ButtonLink({
             {content}
         </a>
     ) : (
-        <Link href={href} className={mergedClass}>
+        <Link
+            href={href}
+            className={mergedClass}
+            type={href.endsWith("rss.xml") ? "application/rss+xml" : undefined}
+        >
             {content}
         </Link>
     );
