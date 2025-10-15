@@ -4,9 +4,15 @@ import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
 import { getAllTags, getPostsByTag } from "@/lib/helpers/getBlogPosts";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
 import { icons, internalRoutes } from "@/lib/constants/ui";
+import { createMetadata } from "@/lib/metadata";
 
 const { BlogIcon, ReadMoreIcon, RssIcon } = icons;
 const { BlogRoute, RssFeed } = internalRoutes;
+
+export const metadata = createMetadata({
+    title: "Blog",
+    path: BlogRoute,
+});
 
 /**
  * Generates static parameters for all blog tag pages.

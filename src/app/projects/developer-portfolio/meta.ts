@@ -10,9 +10,9 @@ export const meta = {
     description:
         "My personal portfolio, built with Next.js, TypeScript, and Tailwind CSS, showcases my work, values, and technical skills through a clean, accessible, and high-performance design. It scores 90+ across all Lighthouse categories and reflects my focus on thoughtful development, usability, and attention to detail.",
     thumbnail: {
-        src: "/img/screenshots/example.jpg",
+        src: "/img/projects/example.jpg",
         alt: "Project cover image",
     },
     repo: "Karl-Horning.github.io",
-    draft: false,
+    draft: true,
 } as const satisfies ProjectMeta;

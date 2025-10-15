@@ -75,16 +75,23 @@ export default function BlogCard({
             </div>
 
             <div className="mt-auto">
-                <ul className="mt-6 flex flex-wrap gap-2">
+                {/* <ul className="mt-6 flex flex-wrap gap-2"> */}
                     <TopicChipsList topics={topics} />
-                </ul>
+                {/* </ul> */}
                 <hr className="mt-6 border-slate-100 dark:border-slate-800" />
 
                 <footer>
                     <div className="mt-6 flex flex-col md:float-right md:flex-row">
                         <ButtonLink
                             href={`${BlogRoute}/${slug}`}
-                            text="Read more"
+                            text={
+                                <>
+                                    Read more{" "}
+                                    <span className="sr-only">
+                                        about {title}
+                                    </span>
+                                </>
+                            }
                             icon={<ReadMoreIcon />}
                             className="text-center md:text-left"
                         />

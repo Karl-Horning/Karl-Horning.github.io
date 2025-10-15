@@ -6,6 +6,15 @@ import {
     prettierConfig,
     viteConfig,
 } from "./examples";
+import { createMetadata } from "@/lib/metadata";
+import { internalRoutes } from "@/lib/constants/ui";
+
+const { BlogRoute } = internalRoutes;
+
+export const metadata = createMetadata({
+    title: `${meta.title} | Blog`,
+    path: `${BlogRoute}/${meta.slug}`,
+});
 
 export default function Page() {
     return (
