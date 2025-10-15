@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
+<rss
+  version="2.0"
   xmlns:media="http://search.yahoo.com/mrss/"
-  xmlns:atom="http://www.w3.org/2005/Atom">
+  xmlns:atom="http://www.w3.org/2005/Atom"
+>
   <channel>
     <title>Karl Horning&apos;s Blog</title>
     <link>https://www.karlhorning.dev/blog</link>
     <description>Notes on web development, accessibility, and learning tech</description>
-    <lastBuildDate>Wed, 15 Oct 2025 21:40:05 +0000</lastBuildDate>
+    <language>en-GB</language>
+    <generator>build-rss-from-posts.ts</generator>
+    <lastBuildDate>Wed, 15 Oct 2025 21:54:30 +0000</lastBuildDate>
     <atom:link href="https://www.karlhorning.dev/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)</title>
@@ -51,7 +55,7 @@
       <title>Hello, World!</title>
       <link>https://www.karlhorning.dev/blog/hello-world</link>
       <pubDate>Sun, 22 Jun 2025 09:00:00 +0000</pubDate>
-      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp" alt="A neon sign saying 'hello'" /><br>A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.]]></description>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp" alt="A neon sign saying &apos;hello&apos;" /><br>A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.]]></description>
       <category>meta</category>
       <category>blog</category>
       <category>personal</category>
