@@ -324,27 +324,10 @@ export default function Page() {
 
                 <LighthouseGrid
                     data={{
-                        Performance: 77,
-                        Accessibility: 92,
-                        "Best Practices": 100,
-                        SEO: 92,
-                    }}
-                />
-
-                <FigureWithCaption
-                    src="/img/projects/lighthouse-performance.webp"
-                    alt=""
-                    caption="Lighthouse report (mobile) run locally on 15 Oct 2025. Scores reflect localhost/dev caching; production is expected to improve."
-                />
-
-                <h3>Lighthouse Performance (Localhost build): Desktop</h3>
-
-                <LighthouseGrid
-                    data={{
-                        Performance: 98,
+                        Performance: 84,
                         Accessibility: 96,
                         "Best Practices": 100,
-                        SEO: 92,
+                        SEO: 100,
                     }}
                 />
 
@@ -355,6 +338,23 @@ export default function Page() {
                     across all categories. I&apos;ll publish production
                     Lighthouse and Core Web Vitals after deployment.
                 </p>
+
+                <h3>Lighthouse Performance (Localhost build): Desktop</h3>
+
+                <FigureWithCaption
+                    src="/img/projects/lighthouse-performance-desktop-2025-10.webp"
+                    alt=""
+                    caption="Lighthouse report (desktop) run locally on 15 Oct 2025. Scores reflect localhost/dev caching; production is expected to improve."
+                />
+
+                <LighthouseGrid
+                    data={{
+                        Performance: 99,
+                        Accessibility: 100,
+                        "Best Practices": 100,
+                        SEO: 100,
+                    }}
+                />
             </section>
 
             <section id="privacy">
