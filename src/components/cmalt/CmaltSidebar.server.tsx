@@ -20,7 +20,7 @@ export default async function CmaltSidebar() {
     return (
         <aside
             aria-label="CMALT navigation"
-            className="sticky top-[4.5rem] hidden max-h-[calc(100vh-6rem)] overflow-auto rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:block dark:border-slate-800 dark:bg-slate-900"
+            className="sticky top-[4.5rem] order-1 hidden max-h-[calc(100vh-6rem)] overflow-auto rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:block dark:border-slate-800 dark:bg-slate-900"
         >
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-300">
                 CMALT Portfolio

@@ -36,7 +36,7 @@ export default function AuthorCard() {
             <div className="flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm sm:flex-row sm:text-left dark:border-slate-800 dark:bg-slate-900">
                 <Image
                     src={profileImage}
-                    alt="Karl Horning"
+                    alt=""
                     className="h-32 w-32 rounded-2xl border border-slate-200 bg-primary object-cover dark:border-slate-800"
                     height={64}
                     width={64}

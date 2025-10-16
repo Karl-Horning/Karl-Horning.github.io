@@ -53,9 +53,12 @@ export default function Hero({ title, leadParagraph, tagline }: HeroProps) {
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-20 md:flex-row lg:py-24">
                 <div className="order-2 md:order-1">
                     {tagline && (
-                        <p className="text-sm font-semibold uppercase text-primary">
+                        <span
+                            className="text-sm font-semibold uppercase text-primary dark:text-pink-500"
+                            aria-hidden="true"
+                        >
                             {tagline}
-                        </p>
+                        </span>
                     )}
                     <h1 className="mt-2 text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">
                         {title}

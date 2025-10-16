@@ -83,9 +83,7 @@ export default async function CmaltLayout({
 
             {/* Two-column grid: Sidebar + main content */}
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[16rem_1fr]">
-                <CmaltSidebar />
-
-                <div className="max-w-3xl">
+                <div className="order-2 max-w-3xl">
                     <main
                         id="main"
                         className="prose prose-slate dark:prose-invert max-w-none"
@@ -103,6 +101,8 @@ export default async function CmaltLayout({
                         />
                     )}
                 </div>
+
+                <CmaltSidebar />
             </div>
 
             {/* Footer CTA for contact and clarifications */}
