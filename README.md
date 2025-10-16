@@ -1,18 +1,13 @@
-# Karl Horning's Portfolio Site
+# KarlHorning.dev — Developer Portfolio
 
 ---
 
 <p>
-  <img src="https://img.shields.io/github/deployments/Karl-Horning/Karl-Horning.github.io/github-pages?label=github-pages&logo=github" alt="Deploy" style="vertical-align:middle; margin-right:8px;" />
-  <!-- Overall (Mobile) -->
-  <img src="https://img.shields.io/badge/Lighthouse_Overall_%28Mobile%29-98-brightgreen" alt="Lighthouse Overall (Mobile) 98" style="vertical-align:middle; margin-right:8px;" />
-  <!-- Category badges with contrasting colours -->
-  <img src="https://img.shields.io/badge/Lighthouse_Performance-94-orange" alt="Lighthouse Performance 94" style="vertical-align:middle; margin-right:8px;" />
-  <img src="https://img.shields.io/badge/Lighthouse_Accessibility-96-brightgreen" alt="Lighthouse Accessibility 96" style="vertical-align:middle; margin-right:8px;" />
+  <img src="https://img.shields.io/github/deployments/Karl-Horning/Karl-Horning.github.io/github-pages?label=GitHub%20Pages&logo=github" alt="Deploy" style="vertical-align:middle; margin-right:8px;" />
+  <img src="https://img.shields.io/badge/Lighthouse_Performance-99-brightgreen" alt="Lighthouse Performance 99" style="vertical-align:middle; margin-right:8px;" />
+  <img src="https://img.shields.io/badge/Lighthouse_Accessibility-100-brightgreen" alt="Lighthouse Accessibility 100" style="vertical-align:middle; margin-right:8px;" />
   <img src="https://img.shields.io/badge/Lighthouse_Best_Practices-100-blue" alt="Lighthouse Best Practices 100" style="vertical-align:middle; margin-right:8px;" />
   <img src="https://img.shields.io/badge/Lighthouse_SEO-100-blueviolet" alt="Lighthouse SEO 100" style="vertical-align:middle; margin-right:8px;" />
-  <!-- Extras -->
-  <img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20on-macOS-blue?logo=apple" alt="Made with macOS" style="vertical-align:middle; margin-right:8px;" />
   <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License" style="vertical-align:middle; margin-right:8px;" />
 </p>
 
@@ -20,9 +15,13 @@
 
 ## 📖 Table of Contents
 
-- [Karl Horning's Portfolio Site](#karl-hornings-portfolio-site)
+- [KarlHorning.dev — Developer Portfolio](#karlhorningdev--developer-portfolio)
   - [📖 Table of Contents](#-table-of-contents)
   - [🤓 Overview](#-overview)
+  - [🎨 Design Approach](#-design-approach)
+  - [♿ Accessibility \& Performance](#-accessibility--performance)
+    - [Accessibility Principles](#accessibility-principles)
+    - [Performance Practices](#performance-practices)
   - [📸 Screenshot](#-screenshot)
   - [🛠️ Tech Stack](#️-tech-stack)
   - [📦 Installation](#-installation)
@@ -31,8 +30,9 @@
   - [✍️ Code Style \& Linting](#️-code-style--linting)
   - [🔍 Tests](#-tests)
   - [🌐 Live Site](#-live-site)
+    - [Latest Lighthouse Scores (16 Oct 2025)](#latest-lighthouse-scores-16-oct-2025)
   - [📌 Roadmap](#-roadmap)
-  - [🧪 Known Issues](#-known-issues)
+  - [📚 Further Reading](#-further-reading)
   - [📄 Licence](#-licence)
   - [👤 Author](#-author)
 
@@ -40,30 +40,78 @@
 
 ## 🤓 Overview
 
-This is the source code for my personal portfolio site, built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/).  
+**KarlHorning.dev** is my centralised developer portfolio — a single, accessible [Next.js](https://nextjs.org/) build that replaces the need to maintain multiple stacks.
+It unifies my **projects**, **blog**, and **CMALT portfolio** into one modular, maintainable codebase.
 
-It showcases my work, values, skills, and certifications, with a focus on performance, accessibility, and clean design.  
+The site reflects my approach to professional front-end development:
 
-The site achieves **90+ scores across Performance, Accessibility, Best Practices, and SEO in Lighthouse audits**.
+- built for **accessibility**, **performance**, and **clarity**
+- structured around predictable, typed data
+- documented consistently through **JSDoc** and **TypeScript**
+
+Migrating from Eleventy to Next.js reduced maintenance by roughly **2–3 hours per month**, while improving accessibility, scalability, and performance.
+
+---
+
+## 🎨 Design Approach
+
+The site prioritises **clarity**, **readability**, and **inclusivity** over visual excess.
+Typography, spacing, and colour are all built around accessibility and tone:
+
+- **Layout:** Grid-based rhythm with clear typographic hierarchy
+- **Colour palette:** Balanced, accessible contrasts for both light and dark modes (`#F6E6EC`, `#C1EOF6`, `#EDABC6`, `#4C9DCD`, `#CB2D6F`, `#163753`)
+- **Animations:** Subtle and purposeful — for example, a light CSS glitch hover effect on the logo adds character without distraction
+- **Responsiveness:** Mobile-first, optimised for clarity across all devices
+- **Interaction:** Keyboard- and screen reader-friendly components throughout
+
+The goal is to maintain a calm, professional aesthetic while adhering to WCAG 2.2 AA standards.
+
+---
+
+## ♿ Accessibility & Performance
+
+Accessibility and performance are tested continuously during development and post-deployment using **Lighthouse**, **axe**, and **WAVE**.
+
+### Accessibility Principles
+
+- Semantic HTML and ARIA roles used consistently
+- Visible "Skip to content" link for keyboard users
+- Logical heading structure (`h1–h3`) across pages
+- All media includes descriptive `alt` text
+- Form elements fully labelled and focus-managed
+- Colour contrast verified in both modes
+
+### Performance Practices
+
+- **Static generation** via `next export`
+- **Optimised media** using Sharp and Next/Image
+- **No tracking or third-party scripts**
+- **Lighthouse scores:**
+
+  - Performance: 97 (Mobile) / 99 (Desktop)
+  - Accessibility: 100
+  - Best Practices: 100
+  - SEO: 100
 
 ---
 
 ## 📸 Screenshot
 
-![Homepage screenshot](public/img/demo-home.webp)
+![Homepage screenshot](public/img/projects/karlhorning-dev.webp)
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/)
-- **Languages**: TypeScript, JavaScript (ES6+)
-- **Styling**: Tailwind CSS, AOS (Animate on Scroll)
-- **Icons**: React Icons, FontAwesome
-- **Image Optimisation**: Sharp
-- **Linting & Formatting**:
-  - ESLint (with `eslint-config-next`)
-  - Prettier (with Tailwind plugin)
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript (strict mode)
+- **UI:** React 19 + Tailwind CSS
+- **Tooling:** ESLint + Prettier (Tailwind plugin)
+- **Icons:** React Icons
+- **Image Optimisation:** Sharp
+- **Deployment:** GitHub Pages (static export)
+- **Accessibility:** WCAG-aware, semantic, ARIA-friendly components
+- **CI/CD:** GitHub Actions for linting, type checks, build, and `next export`
 
 ---
 
@@ -79,12 +127,13 @@ npm install
 
 ## 🚀 Scripts
 
-| Command         | Description             |
-| --------------- | ----------------------- |
-| `npm run dev`   | Start local development |
-| `npm run build` | Build for production    |
-| `npm start`     | Start production server |
-| `npm run lint`  | Run ESLint checks       |
+| Command              | Description                                        |
+| -------------------- | -------------------------------------------------- |
+| `npm run dev`        | Start local development with Turbopack             |
+| `npm run build`      | Build for production                               |
+| `npm start`          | Serve static build locally                         |
+| `npm run lint`       | Run ESLint checks                                  |
+| `npm run build:data` | Regenerate JSON data (projects, posts, CMALT, RSS) |
 
 ---
 
@@ -92,33 +141,34 @@ npm install
 
 ```bash
 src/
-├── app/
-│   ├── about/             # About page route
-│   ├── contact/           # Contact page route
-│   ├── layout.tsx         # Root layout for App Router
-│   ├── not-found.tsx      # Custom 404 page
-│   └── page.tsx           # Home page route
-├── components/            # Reusable UI components
-├── constants/             # Static values & config
-├── lib/                   # Utility functions & helpers
-├── types/                 # Custom TypeScript types
+├── app/                    # App Router pages (Home, About, Projects, CMALT, etc.)
+├── components/             # Reusable UI and layout components
+├── lib/                    # Metadata, constants, and helper functions
+├── types/                  # Shared TypeScript types (UI, data models)
+├── public/data/            # JSON-based blog, project, and CMALT data
 ```
+
+The architecture follows a **clear separation of concerns** between content, types, and logic — designed for scalability and maintainability.
 
 ---
 
 ## ✍️ Code Style & Linting
 
-This project follows:
+This project uses:
 
-- ESLint with `eslint-config-next`
-- Prettier with the Tailwind plugin
-- Conventional Commits (including custom scopes such as `a11y` and `ux`)
+- **ESLint** with `eslint-config-next`
+- **Prettier** with the Tailwind CSS plugin
+- **Conventional Commits** (including custom scopes such as `a11y` and `ux`)
+- **JSDoc annotations** to document functions and datasets
 
 ---
 
 ## 🔍 Tests
 
-Testing will be added using **Jest** and **React Testing Library**.
+Planned testing stack:
+
+- **Jest** and **React Testing Library** for UI components
+- **axe-core** integration for automated accessibility checks
 
 ```bash
 npm run test
@@ -128,25 +178,37 @@ npm run test
 
 ## 🌐 Live Site
 
-Visit the live site: [karlhorning.dev](https://www.karlhorning.dev)
+Visit: [karlhorning.dev](https://www.karlhorning.dev)
+
+### Latest Lighthouse Scores (16 Oct 2025)
+
+| Metric         | Mobile | Desktop |
+| -------------- | ------ | ------- |
+| Performance    | 97     | 99      |
+| Accessibility  | 100    | 100     |
+| Best Practices | 100    | 100     |
+| SEO            | 100    | 100     |
 
 ---
 
 ## 📌 Roadmap
 
-- [x] Add print styles
-- [x] Remove h1 background image when styles are disabled
-- [x] Correct `HomeRout`
-- [x] Add correct routes to CMALT page metadata
-- [x] Improve Lighthouse scores
-- [ ] Add tests
-- [ ] Add analytics
+- [x] Migrate from Eleventy to Next.js
+- [x] Add Projects & CMALT portfolio routes
+- [x] Achieve 100 Accessibility and SEO scores
+- [x] Automate CI/CD deployment via GitHub Actions
+- [ ] Add Jest test coverage
+- [ ] Integrate privacy-friendly analytics
 
 ---
 
-## 🧪 Known Issues
+## 📚 Further Reading
 
-None currently.
+- [KarlHorning.dev - Building a Modern, Accessible Developer Portfolio](https://www.karlhorning.dev/projects/karlhorning-dev)
+- [GitHub Repository](https://github.com/Karl-Horning/Karl-Horning.github.io)
+- [CMALT Portfolio](https://www.karlhorning.dev/cmalt)
+- [Blog](https://www.karlhorning.dev/blog)
+- [Projects](https://www.karlhorning.dev/projects)
 
 ---
 
