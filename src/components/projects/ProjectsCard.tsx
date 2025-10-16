@@ -3,6 +3,7 @@ import { ProjectMeta } from "@/types";
 import Image from "next/image";
 import ButtonLink from "../ui/ButtonLink";
 import TopicChipsList from "../ui/TopicChipsList";
+import Link from "next/link";
 
 const { ExternalLinkIcon, FolderIcon } = icons;
 const { GitHubLink } = externalLinks;
@@ -53,7 +54,7 @@ export default function ProjectsCard({
     reverse = false,
 }: ProjectsCardProps) {
     return (
-        <div className="mt-8 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <article className="card mt-8 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             {/* Image column */}
             <div className={reverse ? "md:order-2" : "md:order-1"}>
                 <Image
@@ -67,7 +68,9 @@ export default function ProjectsCard({
 
             {/* Text column */}
             <div className={reverse ? "md:order-1" : "md:order-2"}>
-                <h2 className="text-2xl font-bold">{title}</h2>
+                <Link href={`${ProjectsRoute}/${slug}`}>
+                    <h2 className="text-2xl font-bold">{title}</h2>
+                </Link>
                 <p className="mt-2 text-slate-700 dark:text-slate-300">
                     {description}
                 </p>
@@ -94,6 +97,6 @@ export default function ProjectsCard({
                     )}
                 </div>
             </div>
-        </div>
+        </article>
     );
 }

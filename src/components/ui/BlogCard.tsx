@@ -5,6 +5,7 @@ import { icons } from "@/lib/constants/ui";
 import ButtonLink from "@/components/ui/ButtonLink";
 import { decorateIcon } from "@/lib/helpers/iconHelpers";
 import TopicChipsList from "@/components/ui/TopicChipsList";
+import Link from "next/link";
 
 const { BlogRoute } = internalRoutes;
 const { CalendarIcon, ClockIcon, ReadMoreIcon } = icons;
@@ -42,7 +43,7 @@ export default function BlogCard({
     topics,
 }: BlogPost) {
     return (
-        <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+        <article className="card flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
             <div className="flex flex-col">
                 <Image
                     src={thumbnail.src}
@@ -54,7 +55,9 @@ export default function BlogCard({
                     height={200}
                 />
 
-                <h2 className="mt-3 text-2xl font-bold">{title}</h2>
+                <Link href={`${BlogRoute}/${slug}`}>
+                    <h2 className="mt-3 text-2xl font-bold">{title}</h2>
+                </Link>
 
                 <p className="mt-3 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
                     {decorateIcon(<CalendarIcon />)}
@@ -75,9 +78,7 @@ export default function BlogCard({
             </div>
 
             <div className="mt-auto">
-                {/* <ul className="mt-6 flex flex-wrap gap-2"> */}
-                    <TopicChipsList topics={topics} />
-                {/* </ul> */}
+                <TopicChipsList topics={topics} />
                 <hr className="mt-6 border-slate-100 dark:border-slate-800" />
 
                 <footer>
