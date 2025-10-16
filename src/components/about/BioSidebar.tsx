@@ -14,9 +14,9 @@ const { LocationIcon } = icons;
 export default function BioSidebar() {
     return (
         <aside aria-labelledby="glance2" className="md:sticky md:top-24">
-            <h3 id="glance2" className="mb-4 text-lg font-semibold">
+            <h2 id="glance2" className="mb-4 text-lg font-semibold">
                 At a glance
-            </h3>
+            </h2>
             <ul className="items-start gap-3 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm  dark:divide-slate-800 dark:border-slate-800 dark:bg-slate-900">
                 {bioSidebarItems.map(({ icon: Icon, title, description }) => (
                     <li key={title} className="flex gap-3 p-4">

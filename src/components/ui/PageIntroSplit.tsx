@@ -122,7 +122,10 @@ export default function PageIntroSplit({
     const Copy = (
         <div className="order-2 text-center md:order-1 md:text-left">
             {tagline && (
-                <p className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wide text-primary md:justify-start">
+                <span
+                    className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wide text-primary md:justify-start dark:text-pink-500"
+                    aria-hidden="true"
+                >
                     {/* Small decorative icon appears only on mobile */}
                     <span
                         className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-primary/10 text-primary md:hidden"
@@ -133,7 +136,7 @@ export default function PageIntroSplit({
                         </span>
                     </span>
                     {tagline}
-                </p>
+                </span>
             )}
 
             <h1 className="mt-2 text-pretty text-4xl font-extrabold tracking-tight sm:text-5xl">

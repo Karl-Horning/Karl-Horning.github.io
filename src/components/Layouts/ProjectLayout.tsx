@@ -56,8 +56,7 @@ export default async function ProjectLayout({
                 topics={topics}
             />
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[16rem_1fr]">
-                <ProjectsSidebar rootSelector="#main" />
-                <div className="max-w-3xl">
+                <div className="order-2 max-w-3xl">
                     <EntryCoverImage {...thumbnail} />
                     <main
                         id="main"
@@ -77,6 +76,7 @@ export default async function ProjectLayout({
                         />
                     )}
                 </div>
+                <ProjectsSidebar rootSelector="#main" />
             </div>
             <ContactCta
                 title="Want a deeper dive?"
