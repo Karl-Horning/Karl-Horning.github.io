@@ -5,7 +5,7 @@ export const meta = {
     title: "Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)",
     description:
         "A quick walkthrough for setting up Prettier with Tailwind CSS in a new React project using either Next.js or Vite. Written mainly as a reminder to myself — but hopefully useful for others too.",
-    date: "2025-08-04",
+    date: "2025-08-04T16:03:00Z",
     readingTime: 4,
     slug: "setting-up-prettier-with-tailwind-css-in-a-react-project",
     thumbnail: {
