@@ -7,11 +7,13 @@ import { z } from "zod";
 import "tsconfig-paths/register";
 
 // ---- Schemas ---------------------------------------------------------------
-// Every field required; mirrors BlogPost meta exactly.
+// Accept full ISO 8601 UTC `YYYY-MM-DDTHH:MM:SSZ`.
+const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
+
 const BlogMetaSchema = z.object({
     title: z.string(),
     description: z.string(),
-    date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    date: z.string().regex(ISO_UTC_RE),
     readingTime: z.number().int().positive(),
     slug: z.string(),
     thumbnail: z.object({

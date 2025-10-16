@@ -25,20 +25,20 @@ const CHANNEL_GENERATOR = "build-rss-from-posts.ts";
 const FEED_SELF_URL = `${SITE_URL}/rss.xml`;
 
 /**
- * Default publish hour (UTC) for posts that only specify a date.
- * Applied when converting `YYYY-MM-DD` to RFC-822.
- */
-const DEFAULT_PUB_HOUR_UTC = 9; // 09:00 UTC
-
-/**
  * Zod schema for a single blog post entry sourced from `/public/data/posts.json`.
  *
  * Fields are validated to ensure correct formatting (e.g. ISO date).
  */
+const DATE_ONLY_RE = /^\d{4}-\d{2}-\d{2}$/;
+const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
+
 const PostSchema = z.object({
     title: z.string(),
     description: z.string(),
-    date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    date: z.union([
+        z.string().regex(DATE_ONLY_RE),
+        z.string().regex(ISO_UTC_RE),
+    ]),
     readingTime: z.number().int().positive(),
     slug: z.string(),
     thumbnail: z.object({
@@ -119,19 +119,6 @@ function toRfc822UTC(d: Date): string {
 }
 
 /**
- * Converts an ISO-like `YYYY-MM-DD` string to an RFC-822 UTC date string.
- * Uses {@link DEFAULT_PUB_HOUR_UTC} for the time portion.
- *
- * @param isoDateYYYYMMDD - The ISO date (date-only) string.
- * @returns RFC-822 formatted date string in UTC.
- */
-function rfc822FromISODate(isoDateYYYYMMDD: string): string {
-    const d = new Date(`${isoDateYYYYMMDD}T00:00:00.000Z`);
-    d.setUTCHours(DEFAULT_PUB_HOUR_UTC, 0, 0, 0);
-    return toRfc822UTC(d);
-}
-
-/**
  * Resolves a URL to an absolute URL string using {@link SITE_URL} as base.
  *
  * @param relativeOrAbsolute - Relative path or absolute URL.
@@ -168,7 +155,7 @@ function renderItem(p: Post): string {
         indent(2, "<item>"),
         indent(3, `<title>${xmlEscape(p.title)}</title>`),
         indent(3, `<link>${xmlEscape(link)}</link>`),
-        indent(3, `<pubDate>${rfc822FromISODate(p.date)}</pubDate>`),
+        indent(3, `<pubDate>${p.date}</pubDate>`),
         indent(
             3,
             `<description><![CDATA[<img src="${xmlEscape(

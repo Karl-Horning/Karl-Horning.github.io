@@ -2,7 +2,7 @@
     {
         "title": "Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)",
         "description": "A quick walkthrough for setting up Prettier with Tailwind CSS in a new React project using either Next.js or Vite. Written mainly as a reminder to myself — but hopefully useful for others too.",
-        "date": "2025-08-04",
+        "date": "2025-08-04T16:03:00Z",
         "readingTime": 4,
         "slug": "setting-up-prettier-with-tailwind-css-in-a-react-project",
         "thumbnail": {
@@ -22,7 +22,7 @@
     {
         "title": "Using Blackboard's Swagger File to Create a Postman Collection and Make an API Call",
         "description": "This beginner-friendly tutorial walks you through importing Blackboard's Learn API into Postman, setting up OAuth2 authentication, and making a test request using client credentials.",
-        "date": "2025-07-11",
+        "date": "2025-07-11T18:31:00Z",
         "readingTime": 7,
         "slug": "using-blackboards-swagger-file-to-create-a-postman-collection-and-make-an-api-call",
         "thumbnail": {
@@ -42,7 +42,7 @@
     {
         "title": "Testing, Testing",
         "description": "A light-hearted post about testing my new blog, tweaking layouts, and checking how everything fits together.",
-        "date": "2025-06-23",
+        "date": "2025-06-23T21:14:00Z",
         "readingTime": 2,
         "slug": "testing-testing",
         "thumbnail": {
@@ -59,7 +59,7 @@
     {
         "title": "Hello, World!",
         "description": "A quick introduction to the blog: what it's for, what I might write about, and why I'm building it in the first place.",
-        "date": "2025-06-22",
+        "date": "2025-06-22T22:33:00Z",
         "readingTime": 2,
         "slug": "hello-world",
         "thumbnail": {

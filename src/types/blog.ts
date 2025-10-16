@@ -12,10 +12,10 @@ export type BlogPost = {
     description: string;
 
     /**
-     * The ISO 8601 date (for example, `"2025-10-07"`) representing
+     * The ISO 8601 date (for example, `"2025-10-07T09:00:00Z"`) representing
      * when the blog post was created or last updated.
      */
-    date: `${number}-${number}-${number}`;
+    date: `${number}-${number}-${number}T${number}:${number}:${number}Z`;
 
     /**
      * Estimated reading time in minutes for the blog post content.
