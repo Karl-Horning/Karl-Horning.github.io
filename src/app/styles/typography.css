@@ -16,7 +16,6 @@ h6 {
     .prose h5,
     .prose h6 {
         line-height: 1.25;
-        margin-top: 2rem;
         margin-bottom: 1rem;
         font-weight: 700;
     }
