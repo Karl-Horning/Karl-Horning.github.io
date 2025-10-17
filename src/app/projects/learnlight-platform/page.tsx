@@ -201,7 +201,7 @@ export default function Page() {
                 role="region"
                 aria-label="Key challenges table"
             >
-                <table className="min-w-full border-collapse text-sm">
+                <table className="mb-8 min-w-full border-collapse text-sm">
                     <caption className="sr-only">
                         Key challenges, solutions, and results from backend work
                         on the Learnlight platform (2021-2024).
