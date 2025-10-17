@@ -5,12 +5,14 @@ import { meta } from "./meta";
 
 const { CmaltRoute } = internalRoutes;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
-export default function page() {
+// Section 6b
+export default function Page() {
     return (
         <CmaltLayout {...meta}>
             <section id="declaration">
