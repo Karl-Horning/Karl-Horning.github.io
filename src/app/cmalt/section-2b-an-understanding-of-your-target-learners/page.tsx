@@ -4,6 +4,7 @@ import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
 const { documents } = cmaltEvidence;
 const {
@@ -12,12 +13,14 @@ const {
     firstSessionQuestions,
 } = documents;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
-export default function page() {
+// Section 2b
+export default function Page() {
     return (
         <CmaltLayout {...meta}>
             <section id="description">
@@ -43,7 +46,7 @@ export default function page() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        First Session Questions (PDF)
+                        First Session Questions
                     </a>
                     , which I used as a structured needs analysis tool. It
                     covered learners&apos; current proficiency, goals, work
@@ -294,6 +297,8 @@ export default function page() {
 
             <section id="evidence">
                 <h2>Evidence</h2>
+
+                <h3>Needs Analysis & Course Design</h3>
                 <ul>
                     <li>
                         <a
@@ -304,12 +309,10 @@ export default function page() {
                             First Session Questions (PDF)
                         </a>{" "}
                         <em>
-                            {" "}
-                            Demonstrates a structured approach to identifying
-                            learners&apos; individual goals, workplace needs,
-                            and confidence levels across language skills.
-                            Informs personalised course design and
-                            learner-centred planning.
+                            Structured needs analysis capturing goals, workplace
+                            tasks, confidence by skill, and pain points; anchors
+                            personalised planning and ongoing course
+                            adjustments.
                         </em>
                     </li>
                     <li>
@@ -322,28 +325,28 @@ export default function page() {
                             (PDF)
                         </a>{" "}
                         <em>
-                            {" "}
-                            Provides an example curriculum tailored to
-                            real-world communication needs. Includes session
-                            outlines that reflect input from needs analysis and
-                            demonstrate how learning objectives align with
-                            workplace scenarios.
+                            Example ten-week curriculum aligned to real
+                            scenarios (meetings, calls, requests); shows
+                            constructive alignment from needs analysis to
+                            objectives, activities, and assessment.
                         </em>
                     </li>
+                </ul>
+
+                <h3>Personalised Feedback & Usage Clarity</h3>
+                <ul>
                     <li>
                         <a
                             href={exampleFeedbackCompleteFull}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Example Feedback: Complete & Full (Markdown)
+                            Example Feedback: Complete &amp; Full (Markdown)
                         </a>{" "}
                         <em>
-                            Illustrates my approach to personalised written
-                            feedback, addressing false friends and nuanced
-                            usage. Shows how corrections were contextualised to
-                            build learner confidence, vocabulary, and practical
-                            application in workplace settings.
+                            Targeted written feedback addressing false friends
+                            and nuanced usage; models clear explanations that
+                            build accuracy, confidence, and workplace transfer.
                         </em>
                     </li>
                 </ul>
