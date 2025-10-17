@@ -5,6 +5,7 @@ import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
 const { certificates, repos, screenshots } = cmaltEvidence;
 const { graphQlCertificate } = certificates;
@@ -15,11 +16,13 @@ const {
     traineeListScreenshot,
 } = screenshots;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
+// Section 1b
 export default function page() {
     return (
         <CmaltLayout {...meta}>
@@ -237,6 +240,8 @@ export default function page() {
 
             <section id="evidence">
                 <h2>Evidence</h2>
+
+                <h3>Platform Evaluation & API Testing</h3>
                 <ul>
                     <li>
                         <a
@@ -248,28 +253,10 @@ export default function page() {
                             Ultra&apos;s Swagger spec (Repository)
                         </a>{" "}
                         <em>
-                            Demonstrates use of API endpoint analysis to
-                            understand LMS functionality. Highlights the ability
-                            to translate technical documentation (Swagger) into
-                            practical testing workflows relevant to access
-                            management and system evaluation.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={oxfordLearnersDictionariesApi}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Oxford Learner&apos;s Dictionaries API Entry Fetcher
-                            (Repository)
-                        </a>{" "}
-                        <em>
-                            A working Node.js prototype that fetches and
-                            transforms dictionary data for seamless integration
-                            into a blended learning platform. Demonstrates use
-                            of promises, Cheerio, and semantic HTML to improve
-                            mobile learning accessibility and user experience.
+                            Demonstrates hands-on evaluation of LMS API
+                            functionality and interoperability; translates
+                            Swagger documentation into practical testing
+                            workflows for IAM, analytics, and configuration.
                         </em>
                     </li>
                     <li>
@@ -281,11 +268,9 @@ export default function page() {
                             ICT Analyst test script (Screenshot)
                         </a>{" "}
                         <em>
-                            Illustrates practical application of test plans
-                            designed to reflect academic workflows. Shows how
-                            technical tools were evaluated from a learning and
-                            teaching perspective, improving stakeholder
-                            confidence in platform usability.
+                            Structured manual test plan reflecting academic
+                            workflows; evidences reproducible checks of
+                            navigation, bulk actions, and activity logs.
                         </em>
                     </li>
                     <li>
@@ -297,11 +282,30 @@ export default function page() {
                             ICT Senior Analyst test script (Screenshot)
                         </a>{" "}
                         <em>
-                            Further evidence of applied testing aligned with
-                            curriculum delivery and administrative requirements.
-                            Supports dual perspective (technical and
-                            pedagogical) in LMS evaluation and training
-                            readiness.
+                            Further evidence of applied testing aligned to
+                            administrative requirements; supports dual
+                            technical–pedagogic perspective in LMS evaluation
+                            and training readiness.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Custom Integrations & Tools</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={oxfordLearnersDictionariesApi}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Oxford Learner&apos;s Dictionaries API Entry Fetcher
+                            (Repository)
+                        </a>{" "}
+                        <em>
+                            Node.js prototype integrating third-party content;
+                            uses Cheerio and semantic HTML to deliver
+                            accessible, in-context definitions for blended
+                            learning.
                         </em>
                     </li>
                     <li>
@@ -313,13 +317,16 @@ export default function page() {
                             Trainee List Electron app (Screenshot)
                         </a>{" "}
                         <em>
-                            Shows a bespoke desktop app built with Electron and
-                            JavaScript to streamline staff onboarding. Developed
-                            under institutional constraints, this demonstrates
-                            platform-specific deployment, reduced friction, and
-                            enhanced user autonomy.
+                            Bespoke cross-platform desktop tool for staff
+                            onboarding; shows pragmatic trade-offs for speed,
+                            deployment, and maintainability under institutional
+                            constraints.
                         </em>
                     </li>
+                </ul>
+
+                <h3>Professional Development</h3>
+                <ul>
                     <li>
                         <a
                             href={graphQlCertificate}
@@ -329,11 +336,10 @@ export default function page() {
                             Modern GraphQL with Node (Udemy, 2023) (Certificate)
                         </a>{" "}
                         <em>
-                            Certificate demonstrating formal training in modern
-                            API development. Underpins evidence of GraphQL
-                            integration work and highlights continued
-                            professional development in technical skillsets
-                            supporting learning technologies.
+                            Formal training underpinning API design and
+                            optimisation work; evidences continued professional
+                            development directly supporting learning-technology
+                            projects.
                         </em>
                     </li>
                 </ul>
