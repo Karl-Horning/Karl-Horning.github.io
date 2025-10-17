@@ -5,6 +5,7 @@ import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
 const { presentations, repos, screenshots } = cmaltEvidence;
 const { deppIctPresentation } = presentations;
@@ -15,11 +16,13 @@ const {
     traineeListScreenshot,
 } = screenshots;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
+// Section 1a
 export default function Page() {
     return (
         <CmaltLayout {...meta}>
@@ -272,6 +275,7 @@ export default function Page() {
             <section id="evidence">
                 <h2>Evidence</h2>
 
+                <h3>Platform Evaluation & API Testing</h3>
                 <ul>
                     <li>
                         <a
@@ -285,9 +289,8 @@ export default function Page() {
                         <em>
                             Demonstrates critical evaluation of LMS API
                             functionality and interoperability through hands-on
-                            testing. This was used to explore constraints and
-                            affordances of Blackboard Ultra&apos;s integration
-                            model.
+                            testing; used to explore constraints and affordances
+                            of Blackboard Ultra&apos;s integration model.
                         </em>
                     </li>
                     <li>
@@ -299,41 +302,10 @@ export default function Page() {
                             ICT Senior Analyst test script (Screenshot)
                         </a>{" "}
                         <em>
-                            Shows how manual test scripts were used to evaluate
-                            platform functionality, identify limitations, and
-                            simulate user journeys. This highlights practical
-                            engagement with technology under real-world
-                            constraints.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={traineeListScreenshot}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Trainee List Electron app (Screenshot)
-                        </a>{" "}
-                        <em>
-                            Evidence of custom tool development under
-                            infrastructure and access constraints. Demonstrates
-                            consideration of speed and platform specificity when
-                            choosing Electron for cross-platform deployment.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={colourAccessibilityUserStories}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Colour Accessibility User Stories (Screenshot)
-                        </a>{" "}
-                        <em>
-                            Illustrates how user-centred design principles were
-                            embedded in technology evaluation by grounding
-                            decisions in staff requirements. Helps demonstrate
-                            value-for-money and pedagogical fit.
+                            Shows how structured manual test scripts were used
+                            to evaluate platform functionality, identify
+                            limitations, and simulate user journeys with
+                            reproducible steps.
                         </em>
                     </li>
                     <li>
@@ -346,10 +318,48 @@ export default function Page() {
                             Department Presentation (2024) (PDF)
                         </a>{" "}
                         <em>
-                            Captures broader institutional decision-making,
-                            where multiple LMS platforms were compared.
-                            Highlights how scalability, accessibility, and
-                            sustainability were evaluated at a strategic level.
+                            Captures the institutional evaluation context —
+                            multiple LMS platforms compared against timelines,
+                            accessibility, scalability, and integration
+                            requirements.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Accessibility & User-Centred Design</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={colourAccessibilityUserStories}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Colour Accessibility User Stories (Screenshot)
+                        </a>{" "}
+                        <em>
+                            Evidence of user-centred requirements (acceptance
+                            criteria, contrast needs, preset schemes) informing
+                            evaluation and decision-making; demonstrates
+                            alignment with inclusive design principles.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Custom Tooling & Automation</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={traineeListScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Trainee List Electron app (Screenshot)
+                        </a>{" "}
+                        <em>
+                            Shows custom tool development under infrastructure
+                            and access constraints; justifies cross-platform
+                            delivery and documents trade-offs between
+                            performance, maintainability, and scalability.
                         </em>
                     </li>
                 </ul>
