@@ -6,7 +6,7 @@ export const meta = {
     description:
         "Section 3 explores the wider context that shapes my professional practice. It focuses on how I understand and engage with legislation, policies, and standards relevant to learning technology.",
     date: "2025-09-09",
-    readingTime: 7,
+    readingTime: 8,
     slug: "section-3b-understanding-and-engaging-with-policies-and-standards",
     draft: false,
 } as const satisfies CmaltPage;
