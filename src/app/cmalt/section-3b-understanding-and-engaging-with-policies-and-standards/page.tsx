@@ -5,6 +5,7 @@ import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
 const { certificates, screenshots } = cmaltEvidence;
 const {
@@ -19,12 +20,14 @@ const {
     microsoftTeamsFaqScreenshot,
 } = screenshots;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
-export default function page() {
+// Section 3b
+export default function Page() {
     return (
         <CmaltLayout {...meta}>
             <section id="description">
@@ -276,23 +279,9 @@ export default function page() {
 
             <section id="evidence">
                 <h2>Evidence</h2>
+
+                <h3>Practical Application: Anonymisation & GDPR-by-Design</h3>
                 <ul>
-                    <li>
-                        <a
-                            href={microsoftTeamsFaqScreenshot}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Anonymised student-facing guide (Microsoft Teams
-                            FAQ, 2020) (Screenshot)
-                        </a>{" "}
-                        <em>
-                            Demonstrates practical application of GDPR
-                            principles by removing all identifiable data from
-                            student-facing materials. Reflects institutional and
-                            legal standards for anonymisation.
-                        </em>
-                    </li>
                     <li>
                         <a
                             href={joiningTeamsMeetingScreenshot}
@@ -304,55 +293,46 @@ export default function page() {
                             Page, 2020) (Screenshot)
                         </a>{" "}
                         <em>
-                            Shows implementation of data minimisation during
-                            video creation. Engages with ethical and legal
-                            responsibilities around learner privacy under GDPR.
+                            Shows data minimisation in visual media;
+                            demonstrates safe screen-recording practice with no
+                            personally identifiable information (PII) exposed.
                         </em>
                     </li>
                     <li>
                         <a
-                            href={gdprBeginnerCertificate}
+                            href={microsoftTeamsFaqScreenshot}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <em>GDPR: Beginner</em> (Kaspersky, 2021)
-                            (Certificate)
+                            Anonymised student-facing guide (Microsoft Teams
+                            FAQ, 2020) (Screenshot)
                         </a>{" "}
                         <em>
-                            Evidence of foundational training in data
-                            protection, demonstrating active engagement with
-                            professional standards and institutional policy
-                            compliance.
+                            Example of anonymised artefacts used in learner
+                            materials; aligns with institutional guidance on
+                            anonymisation and lawful processing.
                         </em>
                     </li>
+                </ul>
+
+                <h3>Training & Institutional Compliance</h3>
+                <ul>
                     <li>
                         <a
-                            href={gdprElementaryCertificate}
+                            href={dpaScreenshot}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <em>GDPR: Elementary</em> (Kaspersky, 2021)
-                            (Certificate)
+                            <em>
+                                Data Protection Awareness course (Imperial
+                                College London, 2024)
+                            </em>{" "}
+                            (Screenshot)
                         </a>{" "}
                         <em>
-                            Further development of GDPR knowledge, supporting
-                            ethical handling of personal data in line with
-                            national legislation and sector guidance.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={gdprCertificate}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <em>General Data Protection Regulation (GDPR)</em>{" "}
-                            (Learnlight, 2023) (Certificate)
-                        </a>{" "}
-                        <em>
-                            Illustrates continued commitment to staying updated
-                            with GDPR requirements and understanding how they
-                            apply within educational settings.
+                            Institution-specific training evidencing alignment
+                            with Imperial policies and procedures for lawful,
+                            ethical handling of data.
                         </em>
                     </li>
                     <li>
@@ -369,28 +349,53 @@ export default function page() {
                             (Certificate)
                         </a>{" "}
                         <em>
-                            Supports understanding of evolving GDPR
-                            interpretations and application of data protection
-                            principles in digital learning environments.
+                            Confirms current understanding of GDPR principles
+                            and risk-aware behaviours in digital learning
+                            contexts.
                         </em>
                     </li>
                     <li>
                         <a
-                            href={dpaScreenshot}
+                            href={gdprCertificate}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <em>
-                                Data Protection Awareness course (Imperial
-                                College London, 2024)
-                            </em>{" "}
-                            (Screenshot)
+                            <em>General Data Protection Regulation (GDPR)</em>{" "}
+                            (Learnlight, 2023) (Certificate)
                         </a>{" "}
                         <em>
-                            Institution-specific training reflecting engagement
-                            with internal data protection policies and alignment
-                            with Imperial&apos;s expectations for lawful,
-                            ethical handling of data.
+                            Ongoing professional development linking GDPR
+                            requirements to educational platforms and workflows.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={gdprElementaryCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <em>GDPR: Elementary</em> (Kaspersky, 2021)
+                            (Certificate)
+                        </a>{" "}
+                        <em>
+                            Consolidates core concepts beyond foundational
+                            level; supports ethical handling of personal data
+                            across teams.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={gdprBeginnerCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <em>GDPR: Beginner</em> (Kaspersky, 2021)
+                            (Certificate)
+                        </a>{" "}
+                        <em>
+                            Baseline GDPR training establishing fundamental
+                            principles for subsequent practice and
+                            certification.
                         </em>
                     </li>
                 </ul>

@@ -54,7 +54,7 @@ export const metadata = createMetadata({
  *
  * @example
  * ```tsx
- * export default async function CmaltHomePage() {
+ * export default async function Page() {
  *   const { previous, next } = await getPrevNextCmalt(meta.slug);
  *   return (
  *     <>
@@ -72,7 +72,7 @@ export const metadata = createMetadata({
  * }
  * ```
  */
-export default async function CmaltHomePage() {
+export default async function Page() {
     // Retrieve previous and next CMALT pages for pagination controls
     const { previous, next } = await getPrevNextCmalt(meta.slug);
     const nextHref = next?.href ?? CmaltRoute;
@@ -123,12 +123,10 @@ export default async function CmaltHomePage() {
                             <p>
                                 Each section of this portfolio aligns with one
                                 of the CMALT core principles, demonstrating{" "}
-                                <em>collaborative practice</em>,{" "}
-                                <em>communication</em>,{" "}
-                                <em>understanding of learning technologies</em>,
-                                and{" "}
-                                <em>commitment to professional development</em>.
-                                You can explore each section using the{" "}
+                                collaborative practice, communication,{" "}
+                                understanding of learning technologies, and{" "}
+                                commitment to professional development. You can
+                                explore each section using the{" "}
                                 <strong>navigation menu on the left</strong>.
                             </p>
                         </section>
@@ -158,34 +156,57 @@ export default async function CmaltHomePage() {
 
                         <section id="navigation-note">
                             <h2>How to Navigate</h2>
+
                             <p>
-                                The portfolio can be navigated using the menu on
-                                the left-hand side. Each section contains:
+                                Use the <strong>left-hand menu</strong> to
+                                browse each CMALT section. Every page follows a
+                                consistent structure so you can quickly see
+                                context, reflection, and evidence of practice.
                             </p>
+
                             <ul>
                                 <li>
-                                    A <strong>Description</strong> outlining the
-                                    context and evidence.
+                                    <strong>Description:</strong> concise
+                                    context for the activity or work, including
+                                    purpose, audience, and constraints.
                                 </li>
                                 <li>
-                                    A <strong>Reflection</strong> discussing
-                                    what I learned and how my practice
-                                    developed.
+                                    <strong>Reflection:</strong> what I
+                                    learned, how my practice developed, and how
+                                    this aligns with CMALT principles.
+                                </li>
+                                <li>
+                                    <strong>Summary:</strong> a quick,
+                                    scannable list of key outcomes and
+                                    contributions.
+                                </li>
+                                <li>
+                                    <strong>Evidence:</strong> split into
+                                    themed groups (for example, Practical
+                                    Application, Institutional Evaluation,
+                                    Training &amp; Compliance) and ordered by
+                                    importance. Each item includes a short note
+                                    explaining why it matters and how it maps to
+                                    the criteria.
+                                </li>
+                                <li>
+                                    <strong>Further Reading:</strong> curated,
+                                    topic-specific sources that underpin the
+                                    section and offer routes to learn more.
+                                    These aren&apos;t required to review the
+                                    evidence, but they&apos;re helpful if
+                                    you&apos;d like extra depth or to explore
+                                    adjacent concepts.
                                 </li>
                             </ul>
 
                             <p>
-                                Every subsection begins with a brief shared
-                                description to help readers understand the
-                                overarching theme and how each piece of evidence
-                                connects to the CMALT criteria.
-                            </p>
-
-                            <p>
-                                I have included links to supporting documents,
-                                screenshots, and videos throughout to illustrate
-                                my approach and provide verifiable evidence of
-                                practice.
+                                Where relevant, documents, screenshots, and
+                                videos open in a new tab for ease of
+                                verification. I&apos;ve prioritised clarity and
+                                accessibility (plain English, descriptive link
+                                text, and readable layouts) to support smooth
+                                review.
                             </p>
                         </section>
                     </main>

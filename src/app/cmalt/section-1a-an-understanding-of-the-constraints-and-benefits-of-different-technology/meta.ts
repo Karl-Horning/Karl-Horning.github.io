@@ -6,7 +6,7 @@ export const meta = {
     description:
         "Section 1 focuses on the practical and technical aspects of working with learning technologies. It includes examples of how I have addressed organisational constraints, applied technical knowledge, and supported the deployment of systems and services.",
     date: "2025-09-18",
-    readingTime: 9,
+    readingTime: 11,
     slug: "section-1a-an-understanding-of-the-constraints-and-benefits-of-different-technology",
     draft: false,
 } as const satisfies CmaltPage;

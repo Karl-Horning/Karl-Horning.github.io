@@ -5,6 +5,7 @@ import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
 const { certificates, documents, imgs, links, presentations, screenshots } =
     cmaltEvidence;
@@ -22,12 +23,14 @@ const { deppIctPresentation } = presentations;
 const { sessionRatingsScreenshot, sessionReportRatingsScreenshot } =
     screenshots;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
-export default function page() {
+// Section 2a
+export default function Page() {
     return (
         <CmaltLayout {...meta}>
             <section id="description">
@@ -349,63 +352,8 @@ export default function page() {
             <section id="evidence">
                 <h2>Evidence</h2>
 
+                <h3>Inclusive Design & Accessible Materials</h3>
                 <ul>
-                    <li>
-                        <a
-                            href={ptllsCertificate}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Level 4 Preparing to Teach in the Lifelong Learning
-                            Sector (PTLLS) (2012) (Certificate)
-                        </a>{" "}
-                        <em>
-                            Demonstrates formal teacher training and direct
-                            teaching experience, with an emphasis on pedagogy,
-                            curriculum delivery, and assessment practice.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={celtaCertificate}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Cambridge ESOL Level 5* Certificate in Teaching
-                            English to Speakers of Other Languages (CELTA)
-                            (2013) (Certificate)
-                        </a>{" "}
-                        <em>
-                            Evidence of designing and delivering learner-centred
-                            lessons for diverse groups, supporting inclusive
-                            pedagogy and differentiated instruction.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={firstSessionQuestions}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            First Session Questions (PDF)
-                        </a>{" "}
-                        <em>
-                            Demonstrates early learner engagement strategies to
-                            identify prior knowledge and individual needs,
-                            informing the design of inclusive and accessible
-                            learning experiences.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={feedbackSlideOriginal}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            &quot;Before&quot; slide showing accessibility
-                            improvements (Screenshot)
-                        </a>
-                    </li>
                     <li>
                         <a
                             href={feedbackSlideUpdated}
@@ -416,40 +364,25 @@ export default function page() {
                             improvements (Screenshot)
                         </a>{" "}
                         <em>
-                            Screenshots showing accessibility-led redesign of a
-                            teaching slide, with improved font choice, text
-                            contrast, layout, and visual support aligned with
-                            WCAG principles.
+                            Accessibility-led redesign (contrast, font, layout,
+                            visuals) aligned with WCAG principles; demonstrates
+                            concrete improvement to learner access and cognitive
+                            load.
                         </em>
                     </li>
                     <li>
                         <a
-                            href={dyslexiaAwarenessCertificate}
+                            href={feedbackSlideOriginal}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Dyslexia Awareness: In partnership with Made By
-                            Dyslexia (2020) (Certificate)
+                            &quot;Before&quot; slide showing accessibility
+                            issues (Screenshot)
                         </a>{" "}
                         <em>
-                            Formal recognition of training that developed
-                            awareness of neurodiverse learning needs, directly
-                            informing accessible content and interface design.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={dyslexiaAwareness}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Dyslexia Awareness: In partnership with Made By
-                            Dyslexia, proof of completed modules (2025) (Badge)
-                        </a>{" "}
-                        <em>
-                            Transcript of recent self-directed CPD focused on
-                            inclusive design and accessibility best practices
-                            for neurodivergent learners.
+                            Baseline for the redesign; evidences reflective
+                            practice and the rationale for accessibility
+                            changes.
                         </em>
                     </li>
                     <li>
@@ -462,64 +395,9 @@ export default function page() {
                             Checklists, and Testing Solutions (PDF)
                         </a>{" "}
                         <em>
-                            A curated set of tools and guidelines used in
-                            accessibility audits and improvements, reflecting an
-                            embedded, process-led approach to inclusive design.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={sessionReportRatingsScreenshot}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Session report rating of 4.9/5 (Screenshot)
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href={sessionRatingsScreenshot}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Session evaluation rating of 4.5/5 (Screenshot)
-                        </a>{" "}
-                        <em>
-                            Participant evaluation scores (4.9/5 and 4.5/5) from
-                            training sessions focused on accessibility and
-                            inclusive practices. Provide evidence of impact and
-                            effectiveness in supporting professional learning.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={ebbinghausForgettingCurve}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Ebbinghaus&apos; Forgetting Curve (Diagram)
-                        </a>{" "}
-                        <em>
-                            Created and used to illustrate the role of spaced
-                            repetition and retrieval practice in course design,
-                            showing application of memory theory to teaching
-                            practice.
-                        </em>
-                    </li>
-
-                    <li>
-                        <a
-                            href={kolbLearningCycle}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Kolb&apos;s Experiential Learning Cycle (Diagram)
-                        </a>{" "}
-                        <em>
-                            Adapted visual used to structure reflection on needs
-                            assessments, showing how experiential learning
-                            theory underpinned learner goal-setting and
-                            curriculum adaptation.
+                            Curated framework used in audits and improvements;
+                            shows process-led, reusable support for inclusive
+                            design.
                         </em>
                     </li>
                     <li>
@@ -531,10 +409,149 @@ export default function page() {
                             DEPP ICT Presentation (Slides)
                         </a>{" "}
                         <em>
-                            Demonstrates application of accessibility principles
-                            in a higher education context, aligning personal
-                            practice with Imperial&apos;s published guidance on
-                            accessible PowerPoint design.
+                            Application of accessibility principles in HE
+                            context; aligns personal practice with Imperial’s
+                            guidance on accessible PowerPoint design.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Needs Analysis & Curriculum Design</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={firstSessionQuestions}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            First Session Questions (PDF)
+                        </a>{" "}
+                        <em>
+                            Structured needs assessment capturing goals,
+                            context, and preferences; underpins constructive
+                            alignment and inclusive lesson design.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={kolbLearningCycle}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Kolb&apos;s Experiential Learning Cycle (Diagram)
+                        </a>{" "}
+                        <em>
+                            Adapted visual used to structure reflection and
+                            iteration; evidences the theory-to-practice link in
+                            goal-setting and course adaptation.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={ebbinghausForgettingCurve}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ebbinghaus&apos; Forgetting Curve (Diagram)
+                        </a>{" "}
+                        <em>
+                            Supports spaced repetition and retrieval practice
+                            decisions; shows application of memory theory to
+                            sequencing and review.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Learner Impact & Evaluation</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={sessionReportRatingsScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Session report rating of 4.9/5 (Screenshot)
+                        </a>{" "}
+                        <em>
+                            Evidence of learner-perceived clarity, relevance,
+                            and support following accessibility and design
+                            improvements.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={sessionRatingsScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Session evaluation rating of 4.5/5 (Screenshot)
+                        </a>{" "}
+                        <em>
+                            Participant evaluations from training sessions
+                            focused on inclusive practice; demonstrates
+                            sustained impact on professional learning.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Teaching Qualifications & CPD</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={celtaCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Cambridge ESOL Level 5* Certificate in Teaching
+                            English to Speakers of Other Languages (CELTA)
+                            (2013) (Certificate)
+                        </a>{" "}
+                        <em>
+                            Foundation in learner-centred pedagogy and
+                            differentiated instruction for diverse groups.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={ptllsCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Level 4 Preparing to Teach in the Lifelong Learning
+                            Sector (PTLLS) (2012) (Certificate)
+                        </a>{" "}
+                        <em>
+                            Formal teacher training covering planning,
+                            assessment, and curriculum delivery.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={dyslexiaAwareness}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dyslexia Awareness: In partnership with Made By
+                            Dyslexia — proof of completed modules (2025) (Badge)
+                        </a>{" "}
+                        <em>
+                            Recent CPD focused on neurodivergent learners;
+                            informs inclusive design choices and accessible
+                            communication.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={dyslexiaAwarenessCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dyslexia Awareness: In partnership with Made By
+                            Dyslexia (2020) (Certificate)
+                        </a>{" "}
+                        <em>
+                            Prior certification evidencing ongoing commitment to
+                            accessibility and learner support.
                         </em>
                     </li>
                 </ul>

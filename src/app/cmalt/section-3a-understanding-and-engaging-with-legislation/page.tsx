@@ -5,9 +5,9 @@ import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
-const { certificates, documents, links, screenshots } =
-    cmaltEvidence;
+const { certificates, documents, links, screenshots } = cmaltEvidence;
 const { dyslexiaAwarenessCertificate } = certificates;
 const { subtitlesExample, webAccessibilityResourcesAndTools } = documents;
 const { dyslexiaAwareness } = links;
@@ -17,12 +17,14 @@ const {
     microsoftTeamsFaqScreenshot,
 } = screenshots;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
-export default function page() {
+// Section 3a
+export default function Page() {
     return (
         <CmaltLayout {...meta}>
             <section id="description">
@@ -354,22 +356,8 @@ export default function page() {
             <section id="evidence">
                 <h2>Evidence</h2>
 
+                <h3>Subtitles & Video Accessibility</h3>
                 <ul>
-                    <li>
-                        <a
-                            href={webAccessibilityResourcesAndTools}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Web Accessibility Resources and Tools: Guidelines,
-                            Checklists, and Testing Solutions (PDF)
-                        </a>{" "}
-                        <em>
-                            A curated guide to evaluating and implementing
-                            accessible web content, aligned with WCAG 2.1 and EN
-                            301 549.
-                        </em>
-                    </li>
                     <li>
                         <a
                             href={subtitlesExample}
@@ -380,8 +368,23 @@ export default function page() {
                             from the Session Details Page, 2020) (Subtitle File)
                         </a>{" "}
                         <em>
-                            Manually created subtitle file demonstrating
-                            alignment with WCAG 2.1 Success Criterion 1.2.2.
+                            Manually authored captions meeting WCAG 2.1 SC
+                            1.2.2; demonstrates accurate timing and readable
+                            phrasing for inclusive video delivery.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={embeddedSubtitlesScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Embedded subtitles using Subler (Screenshot)
+                        </a>{" "}
+                        <em>
+                            Shows subtitles multiplexed into MP4 for offline
+                            access; aligns with BBC guidance on single-sentence
+                            captions.
                         </em>
                     </li>
                     <li>
@@ -393,21 +396,14 @@ export default function page() {
                             SRT subtitle file in Visual Studio Code (Screenshot)
                         </a>{" "}
                         <em>
-                            Screenshot of timing captions precisely within
-                            Visual Studio Code.
+                            Workflow view of precise caption timing with VS Code
+                            + Subtitles Editor extension.
                         </em>
                     </li>
-                    <li>
-                        <a
-                            href={embeddedSubtitlesScreenshot}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Embedded subtitles using Subler (Screenshot)
-                        </a>{" "}
-                        Evidence of embedding subtitles into MP4 files for
-                        accessibility, following BBC subtitle guidance.
-                    </li>
+                </ul>
+
+                <h3>Accessible Document Design</h3>
+                <ul>
                     <li>
                         <a
                             href={microsoftTeamsFaqScreenshot}
@@ -417,9 +413,45 @@ export default function page() {
                             Document with accessible layout and navigation
                             (Microsoft Teams FAQ, 2020) (Screenshot)
                         </a>{" "}
-                        Example of a learner-facing document structured with
-                        accessibility in mind (clear headings, logical sequence,
-                        and screen reader compatibility).
+                        <em>
+                            Learner-facing example using clear heading
+                            hierarchy, meaningful sequence, and
+                            screen-reader-friendly structure.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Accessibility Frameworks & CPD</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={webAccessibilityResourcesAndTools}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Web Accessibility Resources and Tools: Guidelines,
+                            Checklists, and Testing Solutions (PDF)
+                        </a>{" "}
+                        <em>
+                            Curated framework used in audits and improvements;
+                            operationalises WCAG 2.1 and EN 301 549 within
+                            day-to-day practice.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={dyslexiaAwareness}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dyslexia Awareness: In partnership with Made By
+                            Dyslexia — proof of completed modules (2025) (Badge)
+                        </a>{" "}
+                        <em>
+                            Recent CPD focused on neurodivergent learner needs;
+                            informs captioning choices, document design, and
+                            inclusive communication.
+                        </em>
                     </li>
                     <li>
                         <a
@@ -431,23 +463,8 @@ export default function page() {
                             Dyslexia (2020) (Certificate)
                         </a>{" "}
                         <em>
-                            Certification of training completed via Microsoft
-                            Learn, in partnership with Made By Dyslexia.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={dyslexiaAwareness}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Dyslexia Awareness: In partnership with Made By
-                            Dyslexia proof of completed modules (2025) (Badge)
-                        </a>{" "}
-                        <em>
-                            Proof of completion for the extended 7-hour version
-                            of the Dyslexia Awareness training, covering
-                            inclusive strategies and learner support.
+                            Foundational certification evidencing long-term
+                            commitment to accessible practice.
                         </em>
                     </li>
                 </ul>

@@ -4,6 +4,7 @@ import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
 const { documents, links, videos } = cmaltEvidence;
 const { microsoftTeamsFaq, usingPostmanWithApolloServer } = documents;
@@ -14,11 +15,13 @@ const {
     microsoftTeamsGuideSubtitles,
 } = videos;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
+// Section 1c
 export default function page() {
     return (
         <CmaltLayout {...meta}>
@@ -248,6 +251,8 @@ export default function page() {
 
             <section id="evidence">
                 <h2>Evidence</h2>
+
+                <h3>Documentation & Technical Workflows</h3>
                 <ul>
                     <li>
                         <a
@@ -256,12 +261,13 @@ export default function page() {
                             rel="noopener noreferrer"
                         >
                             Using Blackboard&apos;s Swagger File to Create a
-                            Postman Collection and Make an API Call (PDF)
+                            Postman Collection and Make an API Call (2025) (Blog
+                            post)
                         </a>{" "}
                         <em>
-                            Step-by-step guide to using Blackboard&apos;s API
-                            via Postman, informed by DEPP testing and earlier
-                            platform integration work.
+                            Public, step-by-step guide informed by DEPP testing;
+                            demonstrates clear dissemination of API evaluation
+                            methods and supports reproducible endpoint testing.
                         </em>
                     </li>
                     <li>
@@ -270,26 +276,32 @@ export default function page() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Using Postman with Apollo Server (PDF)
+                            Using Postman with Apollo Server (2023) (PDF)
                         </a>{" "}
                         <em>
-                            Internal documentation for developers using GraphQL
-                            in Postman, supporting team learning and technical
-                            onboarding.
+                            Internal developer documentation for GraphQL
+                            workflows (auth, JWT storage, queries/mutations);
+                            underpins consistent onboarding and team-wide
+                            technical practice.
                         </em>
                     </li>
+                </ul>
+
+                <h3>Training & Rollout Support</h3>
+                <ul>
                     <li>
                         <a
                             href={microsoftTeamsFaq}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Microsoft Teams FAQ (PDF)
+                            Microsoft Teams FAQ (2021) (PDF)
                         </a>{" "}
                         <em>
-                            Trainer-focused guide created during the
-                            institutional transition from Skype for Business to
-                            Teams, used alongside asynchronous video training.
+                            Trainer-focused guide produced during the Skype for
+                            Business → Teams transition; plain-English support
+                            that reduced friction and queries during
+                            institutional change.
                         </em>
                     </li>
                     <li>
@@ -301,8 +313,9 @@ export default function page() {
                             Microsoft Teams Guide (Video)
                         </a>{" "}
                         <em>
-                            Excerpt of a short walkthrough video offering
-                            asynchronous support during Microsoft Teams rollout.
+                            Short asynchronous walkthrough used alongside the
+                            FAQ; provides accessible, on-demand training to
+                            support deployment at scale.
                         </em>
                     </li>
                 </ul>
