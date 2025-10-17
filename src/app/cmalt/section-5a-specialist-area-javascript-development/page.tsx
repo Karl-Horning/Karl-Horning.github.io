@@ -4,6 +4,7 @@ import { externalLinks, internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
+// Evidence
 const { CmaltRoute } = internalRoutes;
 const { GitHubLink, LinkedInLink, PortfolioLink } = externalLinks;
 const { certificates, links, repos, screenshots } = cmaltEvidence;
@@ -18,12 +19,14 @@ const {
 const { jiraFundamentalsScreenshot } = screenshots;
 const { blackboardSwaggerPostmanCollectionLink, deppProjectLink } = links;
 
+// Metadata
 export const metadata = createMetadata({
     title: `${meta.title} | CMALT`,
     path: `${CmaltRoute}/${meta.slug}`,
 });
 
-export default function page() {
+// Section 5a
+export default function Page() {
     return (
         <CmaltLayout {...meta}>
             <section id="description">
@@ -413,51 +416,9 @@ export default function page() {
 
             <section id="evidence">
                 <h2>Evidence</h2>
+
+                <h3>Core Engineering Impact</h3>
                 <ul>
-                    <li>
-                        <a
-                            href={GitHubLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Karl Horning&apos;s GitHub: github.com/Karl-Horning
-                            (Repository)
-                        </a>{" "}
-                        <em>
-                            Showcases code repositories for side projects and
-                            personal tooling, demonstrating ongoing development
-                            practice and knowledge-sharing.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={PortfolioLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Karl Horning&apos;s personal portfolio:
-                            karlhorning.dev
-                        </a>{" "}
-                        <em>
-                            A curated showcase of development work, projects,
-                            and technical documentation that supports
-                            professional reflection and communication.
-                        </em>
-                    </li>
-                    <li>
-                        <a
-                            href={LinkedInLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Karl Horning&apos;s LinkedIn profile:
-                            linkedin.com/in/karl-horning
-                        </a>{" "}
-                        <em>
-                            Professional profile documenting career history,
-                            skills, and development credentials.
-                        </em>
-                    </li>
                     <li>
                         <a
                             href={graphQlRateLimitDemo}
@@ -467,11 +428,9 @@ export default function page() {
                             GraphQL Rate Limit Demo (Repository)
                         </a>{" "}
                         <em>
-                            Example of testing a rate-limiting directive in
-                            GraphQL to assess impact and performance before
-                            production rollout, demonstrating critical
-                            evaluation and risk management in software
-                            development.
+                            Demonstrates performance/stability safeguards at
+                            scale; evidence of proactive risk management and
+                            measurable backend optimisation.
                         </em>
                     </li>
                     <li>
@@ -484,72 +443,84 @@ export default function page() {
                             Ultra&apos;s Swagger spec (Repository)
                         </a>{" "}
                         <em>
-                            Evidence of how I adapted developer tools for
-                            educational evaluation. This resource allowed staff
-                            to test LMS features against authentic workflows,
-                            bridging technical API analysis with the pedagogical
-                            and administrative needs identified during the DEPP
-                            project.
+                            Adapts developer tooling for institutional
+                            evaluation; bridges API analysis with authentic HE
+                            workflows used in DEPP.
                         </em>
                     </li>
                     <li>
                         <a
-                            href={appleTeacherCertificate}
+                            href={GitHubLink}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Apple Teacher (Swift Playgrounds) (Apple, 2025)
-                            (Certificate)
+                            Karl Horning&apos;s GitHub: github.com/Karl-Horning
+                            (Repository)
                         </a>{" "}
                         <em>
-                            Formal recognition from Apple of my Swift
-                            development skills and my ability to teach Swift
-                            effectively, demonstrating the intersection of
-                            technical expertise and pedagogy.
+                            Ongoing code artefacts and utilities; showcases
+                            breadth across the stack and commitment to
+                            transparent, reusable engineering practice.
+                        </em>
+                    </li>
+                </ul>
+
+                <h3>Institutional Evaluation & Knowledge Sharing</h3>
+                <ul>
+                    <li>
+                        <a
+                            href={blackboardSwaggerPostmanCollectionLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Using Blackboard&apos;s Swagger File to Create a
+                            Postman Collection and Make an API Call (Blog Post,
+                            2025)
+                        </a>{" "}
+                        <em>
+                            Public write-up translating internal DEPP testing
+                            into reusable guidance; evidence of dissemination
+                            and sector contribution.
                         </em>
                     </li>
                     <li>
                         <a
-                            href={webDeveloperCertificate}
+                            href={PortfolioLink}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            The Web Developer Bootcamp (Udemy, 2019)
-                            (Certificate)
+                            Karl Horning&apos;s personal portfolio:
+                            karlhorning.dev
                         </a>{" "}
                         <em>
-                            Evidence of foundational web development training
-                            underpinning full-stack proficiency.
+                            Curated showcase of projects and documentation;
+                            supports reflective practice and communicates impact
+                            to non-technical audiences.
                         </em>
                     </li>
+                </ul>
+
+                <h3>Professional Profile</h3>
+                <ul>
                     <li>
                         <a
-                            href={jiraFundamentalsScreenshot}
+                            href={LinkedInLink}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Jira Fundamentals (Atlassian, 2024) (Screenshot)
+                            Karl Horning&apos;s LinkedIn profile:
+                            linkedin.com/in/karl-horning
                         </a>{" "}
                         <em>
-                            Demonstrates knowledge of Agile project management
-                            tools essential to collaborative software
-                            development.
+                            Verifies career trajectory, skills, and
+                            endorsements; complements technical evidence with
+                            professional context.
                         </em>
                     </li>
-                    <li>
-                        <a
-                            href={electronCertificate}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Master Electron (Udemy, 2024) (Certificate)
-                        </a>{" "}
-                        <em>
-                            Specialist training in desktop application
-                            development, supporting cross-platform tooling
-                            creation.
-                        </em>
-                    </li>
+                </ul>
+
+                <h3>Training & Certifications</h3>
+                <ul>
                     <li>
                         <a
                             href={graphQlCertificate}
@@ -559,11 +530,8 @@ export default function page() {
                             Modern GraphQL with Node (Udemy, 2023) (Certificate)
                         </a>{" "}
                         <em>
-                            Advanced training in GraphQL API development,
-                            directly supporting my work optimising and
-                            stabilising backend APIs for large-scale EdTech
-                            platforms, enhancing performance and reliability for
-                            hundreds of thousands of users.
+                            Directly underpins GraphQL optimisation, batching,
+                            and schema design used in production.
                         </em>
                     </li>
                     <li>
@@ -576,8 +544,64 @@ export default function page() {
                             2024) (Certificate)
                         </a>{" "}
                         <em>
-                            Specialist frontend framework training for building
-                            performant React-based user interfaces.
+                            Front-end performance and DX improvements; supports
+                            full-stack delivery and rapid prototyping.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={electronCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Master Electron (Udemy, 2024) (Certificate)
+                        </a>{" "}
+                        <em>
+                            Desktop tooling expertise enabling cross-platform
+                            internal apps for staff workflows.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={webDeveloperCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            The Web Developer Bootcamp (Udemy, 2019)
+                            (Certificate)
+                        </a>{" "}
+                        <em>
+                            Foundational web engineering skills underpinning
+                            full-stack practice.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={jiraFundamentalsScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Jira Fundamentals (Atlassian, 2024) (Screenshot)
+                        </a>{" "}
+                        <em>
+                            Agile project operations and collaboration
+                            essentials; supports delivery at team and programme
+                            scale.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={appleTeacherCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Apple Teacher (Swift Playgrounds) (Apple, 2025)
+                            (Certificate)
+                        </a>{" "}
+                        <em>
+                            Signals the pedagogy-engineering link: ability to
+                            teach technical concepts and design learner-centred
+                            resources.
                         </em>
                     </li>
                 </ul>
