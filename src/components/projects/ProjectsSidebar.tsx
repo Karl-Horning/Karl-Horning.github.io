@@ -117,7 +117,7 @@ export default function ProjectsSidebar({
                             className={[
                                 "block rounded px-2 py-1 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800",
                                 isActive
-                                    ? "text-primary  dark:bg-primary dark:text-white"
+                                    ? "pointer-events-none  text-primary dark:bg-primary dark:text-white"
                                     : "text-slate-700",
                             ].join(" ")}
                         >
