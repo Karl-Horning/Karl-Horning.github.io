@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "npx serve@latest out",
+    "test": "npx playwright test",
     "lint": "eslint .",
     "build:projects-json": "tsx scripts/build-projects-json.ts",
     "build:posts-json": "tsx scripts/build-posts-json.ts",
@@ -22,7 +23,9 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "^1.56.1",
     "@types/node": "^20",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
