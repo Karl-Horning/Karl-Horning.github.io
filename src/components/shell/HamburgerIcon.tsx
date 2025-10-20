@@ -18,6 +18,7 @@ export default function HamburgerIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
+            id="HamburgerIcon"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

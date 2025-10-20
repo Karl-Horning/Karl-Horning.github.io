@@ -17,6 +17,7 @@ export default function CloseIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
+            id="CloseIcon"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

@@ -14,6 +14,7 @@ export default function Logo() {
     return (
         <div className="flex-shrink-0 text-xl transition-colors duration-300 ease-in-out">
             <Link
+                id="logo"
                 href="/"
                 className={`relative inline-block rounded px-2 py-1 font-glitch text-2xl font-extrabold leading-none text-primary ${styles.glitch} transition-colors duration-300`}
                 data-text="Karl Horning"
