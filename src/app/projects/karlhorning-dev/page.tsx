@@ -54,13 +54,13 @@ export default function Page() {
                 <h2>Tech Stack</h2>
                 <ul>
                     <li>
-                        <strong>Framework:</strong> Next.js 14 (App Router)
+                        <strong>Framework:</strong> Next.js 15 (App Router)
                     </li>
                     <li>
                         <strong>Language:</strong> TypeScript (strict mode)
                     </li>
                     <li>
-                        <strong>UI:</strong> React 18 + Tailwind CSS
+                        <strong>UI:</strong> React 19 + Tailwind CSS
                     </li>
                     <li>
                         <strong>Tooling:</strong> ESLint + Prettier (Tailwind
@@ -73,6 +73,10 @@ export default function Page() {
                         <strong>Image Optimisation:</strong> Sharp
                     </li>
                     <li>
+                        <strong>Testing:</strong> Playwright + axe-core for
+                        end-to-end accessibility
+                    </li>
+                    <li>
                         <strong>Deployment:</strong> GitHub Pages (static
                         export)
                     </li>
@@ -83,11 +87,11 @@ export default function Page() {
                 </ul>
 
                 <p>
-                    CI/CD: GitHub Actions runs type checks, linting, build, and{" "}
-                    <code>next export</code> on push to
-                    <code> main</code>, then deploys automatically to GitHub
-                    Pages. Workflows include a composite Node setup/cache action
-                    and a Pages deployment pipeline.
+                    CI/CD: GitHub Actions runs type checks, linting, build,
+                    Playwright accessibility tests, and <code>next export</code>{" "}
+                    on push to <code>main</code>, then deploys automatically to
+                    GitHub Pages. Workflows include a composite Node setup/cache
+                    action and a Pages deployment pipeline.
                 </p>
             </section>
 
@@ -95,24 +99,24 @@ export default function Page() {
                 <h2>Key Skills Demonstrated</h2>
                 <ul>
                     <li>
-                        <strong>Front-end architecture:</strong> Next.js 14,
-                        React 18, TypeScript
+                        <strong>Front-end architecture:</strong> Next.js 15,
+                        React 19, TypeScript
                     </li>
                     <li>
                         <strong>Styling and accessibility:</strong> Tailwind
                         CSS, WCAG 2.2 AA, semantic HTML, ARIA
                     </li>
                     <li>
-                        <strong>Performance optimisation:</strong> Sharp, static
-                        export, Lighthouse and axe testing
+                        <strong>Performance and accessibility testing:</strong>{" "}
+                        Playwright + axe-core, Lighthouse, and static export
                     </li>
                     <li>
                         <strong>Documentation and consistency:</strong>{" "}
                         TypeScript + JSDoc, predictable structure
                     </li>
                     <li>
-                        <strong>Testing and maintainability:</strong> ESLint,
-                        Prettier, plans to add Jest tests
+                        <strong>Maintainability and quality:</strong> ESLint,
+                        Prettier, CI/CD automation
                     </li>
                     <li>
                         <strong>Deployment and scalability:</strong> GitHub
@@ -308,8 +312,9 @@ export default function Page() {
                     Accessibility is monitored throughout development and on the
                     live site using Lighthouse, WAVE, and Firefox&apos;s
                     built-in accessibility tools. The current{" "}
-                    <strong>live</strong> score is 100, and a full Lighthouse and
-                    accessibility audit is published from the production build.
+                    <strong>live</strong> score is 100, and a full Lighthouse
+                    and accessibility audit is published from the production
+                    build.
                 </p>
 
                 <ul>
@@ -351,6 +356,16 @@ export default function Page() {
                 <p>
                     These figures reflect the production environment as of 16
                     Oct 2025.
+                </p>
+
+                <p>
+                    In addition to manual and Lighthouse testing, a full-site
+                    automated accessibility suite runs with{" "}
+                    <strong>Playwright</strong> and <strong>axe-core</strong>.
+                    Each route is rendered in a real browser and scanned against
+                    WCAG 2.2 AA criteria, ensuring zero accessibility violations
+                    before deployment. Current results:{" "}
+                    <strong>all pages pass with no detected issues</strong>.
                 </p>
             </section>
 
