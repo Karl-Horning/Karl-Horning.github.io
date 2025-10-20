@@ -214,37 +214,29 @@ export default function page() {
                 </p>
 
                 <p>
-                    I have also recognised the importance of structured
-                    meetings, drawing on advice similar to{" "}
+                    Through my involvement in DEPP meetings, I have learned the
+                    value of structured preparation and documentation from
+                    colleagues who model effective facilitation practices.
+                    Project owners consistently share agendas in advance and
+                    follow them closely during meetings, which helps maintain
+                    focus and ensure that all voices are heard. On two
+                    occasions, I prepared the meeting notes myself, adopting the
+                    same format — an agenda-linked structure with a brief
+                    executive summary and clearly marked{" "}
+                    <strong>Action:</strong> points. This approach, also
+                    informed by accessibility guidance from{" "}
                     <a
                         href={
-                            "https://www.forbes.com/councils/forbescoachescouncil/2024/06/27/18-expert-tips-for-communicating-with-hybrid-and-remote-teams/"
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Forbes Coaches Council&apos;s
-                    </a>{" "}
-                    principle to &quot;always include a meeting agenda.&quot;
-                    Creating and circulating agendas in advance keeps
-                    discussions focused, allocates speaking roles, and ensures
-                    all voices are heard through multiple channels — whether
-                    verbally, via chat, or through collaborative notes. I follow
-                    each meeting with an executive summary, use headings aligned
-                    with the agenda, and highlight key decisions with bold{" "}
-                    <strong>Action:</strong> labels. This approach, informed by
-                    accessibility guidance from{" "}
-                    <a
-                        href={
-                            "https://www.gov.uk/government/publications/inclusive-communicationhttps://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats"
+                            "https://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats"
                         }
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         GOV.UK&apos;s Inclusive Communication
                     </a>{" "}
-                    resource, ensures information is concise, scannable, and
-                    accessible to all participants.
+                    resource, supports clarity and inclusivity by making
+                    information concise, scannable, and easy to follow for all
+                    participants.
                 </p>
 
                 <p>
