@@ -12,7 +12,7 @@ const { HireMeIcon } = icons;
  */
 export default function DesktopMenu() {
     return (
-        <div id="desktop-menu" className="hidden items-center gap-3 md:flex">
+        <section id="desktop-menu" className="hidden items-center gap-3 md:flex">
             {navLinks.map(({ label, href }) =>
                 label === "Contact" ? (
                     <ButtonLink
@@ -31,6 +31,6 @@ export default function DesktopMenu() {
                     </Link>
                 )
             )}
-        </div>
+        </section>
     );
 }

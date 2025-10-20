@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { icons } from "@/lib/constants/ui";
 import ButtonLink from "./ButtonLink";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 
 const { ProjectIcon } = icons;
 
@@ -112,7 +113,7 @@ export default function PageIntroSplit({
                 aria-hidden="true"
             >
                 <div className="text-[12rem]">
-                    {heroIcon ?? <ProjectIcon />}
+                    {decorateIcon(heroIcon) ?? <ProjectIcon />}
                 </div>
             </div>
         </div>
