@@ -12,7 +12,8 @@ export const metadata = createMetadata({
 });
 
 // Evidence links
-const { certificates, documents, links, presentations } = cmaltEvidence;
+const { certificates, documents, links, presentations, screenshots } =
+    cmaltEvidence;
 const { understandingManualTestingCertificate } = certificates;
 const {
     microsoftTeamsFaq,
@@ -21,6 +22,7 @@ const {
 } = documents;
 const { blackboardSwaggerPostmanCollectionLink } = links;
 const { deppIctPresentation } = presentations;
+const { pocCleaningScreenshot } = screenshots;
 
 export default function page() {
     return (
@@ -336,6 +338,25 @@ export default function page() {
                 <ul>
                     <li>
                         <a
+                            href={pocCleaningScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            PoC Data Cleaning Collaboration Screenshot (June
+                            2025) (Image)
+                        </a>{" "}
+                        <em>
+                            Screenshot from Microsoft Teams showing
+                            collaborative communication with a Business School
+                            colleague during the Proof of Concept data-cleaning
+                            phase. Demonstrates how discrepancies were
+                            discussed, clarified, and actioned in real time.
+                            Shared with the colleague&apos;s consent;
+                            anonymisation not required.
+                        </em>
+                    </li>
+                    <li>
+                        <a
                             href={deppIctPresentation}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -348,15 +369,6 @@ export default function page() {
                             milestones, testing processes, and feedback
                             mechanisms — demonstrating cross-departmental
                             communication and facilitation.
-                        </em>
-                    </li>
-                    <li>
-                        TODO: Proof of Concept data-cleaning artefacts —
-                        anonymised screenshots{" "}
-                        <em>
-                            Evidence of collaboration with Business School
-                            colleagues to identify and annotate data
-                            discrepancies, clarifying actions for follow-up.
                         </em>
                     </li>
                     <li>

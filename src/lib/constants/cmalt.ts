@@ -105,6 +105,7 @@ export const cmaltEvidence = {
             "/cmalt/screenshots/joining-a-microsoft-teams-meeting-from-the-session-details-page-screenshot.webp",
         microsoftTeamsFaqScreenshot:
             "/cmalt/screenshots/microsoft-teams-faq-screenshot.png",
+        pocCleaningScreenshot: "/cmalt/screenshots/poc-cleaning-screenshot.png",
         sessionRatingsScreenshot: "/cmalt/screenshots/session-ratings.webp",
         sessionReportRatingsScreenshot:
             "/cmalt/screenshots/session-report-ratings.webp",
