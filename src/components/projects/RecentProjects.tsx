@@ -14,7 +14,7 @@ import ProjectsCard from "./ProjectsCard";
 export default async function RecentProjects() {
     const recentProjectItems = await getProjectItems();
     return (
-        <main id="main" className="mx-auto mt-20 max-w-6xl px-4">
+        <section className="mx-auto mt-20 max-w-6xl px-4">
             {recentProjectItems.map(({ title, ...props }, index) => (
                 <ProjectsCard
                     key={title}
@@ -23,6 +23,6 @@ export default async function RecentProjects() {
                     {...props}
                 />
             ))}
-        </main>
+        </section>
     );
 }

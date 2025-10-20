@@ -67,7 +67,7 @@ export default async function BlogLayout({
     const { previous, next } = await getPrevNextBlogPost(slug);
 
     return (
-        <>
+        <main id="main">
             <EntryHeader
                 title={title}
                 description={description}
@@ -78,12 +78,9 @@ export default async function BlogLayout({
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20">
                 <EntryCoverImage {...thumbnail} />
 
-                <main
-                    id="main"
-                    className="prose prose-slate dark:prose-invert mx-auto max-w-3xl"
-                >
+                <article className="prose prose-slate dark:prose-invert mx-auto max-w-3xl">
                     {children}
-                </main>
+                </article>
 
                 <div className="mx-auto max-w-3xl">
                     <ShareButtons slug={`blog/${slug}`} />
@@ -104,6 +101,6 @@ export default async function BlogLayout({
                 title="Enjoyed this post?"
                 description="I'm available for freelance work and consultancy in EdTech and full-stack development."
             />
-        </>
+        </main>
     );
 }

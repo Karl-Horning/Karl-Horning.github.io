@@ -98,10 +98,7 @@ export default async function Page() {
 
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[16rem_1fr]">
                 <div className="order-2 max-w-3xl">
-                    <main
-                        id="main"
-                        className="prose prose-slate dark:prose-invert max-w-none"
-                    >
+                    <article className="prose prose-slate dark:prose-invert max-w-none">
                         <section id="header-description">
                             <h2>Welcome to My CMALT Portfolio</h2>
                             <p>
@@ -171,23 +168,21 @@ export default async function Page() {
                                     purpose, audience, and constraints.
                                 </li>
                                 <li>
-                                    <strong>Reflection:</strong> what I
-                                    learned, how my practice developed, and how
-                                    this aligns with CMALT principles.
+                                    <strong>Reflection:</strong> what I learned,
+                                    how my practice developed, and how this
+                                    aligns with CMALT principles.
                                 </li>
                                 <li>
-                                    <strong>Summary:</strong> a quick,
-                                    scannable list of key outcomes and
-                                    contributions.
+                                    <strong>Summary:</strong> a quick, scannable
+                                    list of key outcomes and contributions.
                                 </li>
                                 <li>
-                                    <strong>Evidence:</strong> split into
-                                    themed groups (for example, Practical
-                                    Application, Institutional Evaluation,
-                                    Training &amp; Compliance) and ordered by
-                                    importance. Each item includes a short note
-                                    explaining why it matters and how it maps to
-                                    the criteria.
+                                    <strong>Evidence:</strong> split into themed
+                                    groups (for example, Practical Application,
+                                    Institutional Evaluation, Training &amp;
+                                    Compliance) and ordered by importance. Each
+                                    item includes a short note explaining why it
+                                    matters and how it maps to the criteria.
                                 </li>
                                 <li>
                                     <strong>Further Reading:</strong> curated,
@@ -209,7 +204,7 @@ export default async function Page() {
                                 review.
                             </p>
                         </section>
-                    </main>
+                    </article>
 
                     {/* Context-aware pagination between CMALT pages */}
                     {(previous || next) && (

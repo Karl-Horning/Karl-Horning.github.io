@@ -10,7 +10,7 @@
  */
 export default function BioText() {
     return (
-        <div className="md:col-span-2">
+        <article className="md:col-span-2">
             <div className="prose max-w-prose text-slate-700 dark:text-slate-300">
                 <p className="mb-4">
                     Hi, I&apos;m Karl, a developer and learning technologist
@@ -45,6 +45,6 @@ export default function BioText() {
                     tinkering with some new open-source tools.
                 </p>
             </div>
-        </div>
+        </article>
     );
 }

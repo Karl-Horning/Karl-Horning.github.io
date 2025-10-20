@@ -1,4 +1,5 @@
 import { externalLinks, icons } from "@/lib/constants/ui";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 
 const { GitHubIcon, LinkedInIcon } = icons;
 const { GitHubLink, LinkedInLink } = externalLinks;
@@ -15,7 +16,7 @@ const { GitHubLink, LinkedInLink } = externalLinks;
  */
 export default function FormSidebar() {
     return (
-        <aside className="space-y-4">
+        <section className="space-y-4">
             <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <h3 className="font-semibold">Availability & turnaround</h3>
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-600 dark:text-slate-400">
@@ -50,7 +51,7 @@ export default function FormSidebar() {
                         aria-label="LinkedIn"
                         className="grid h-9 w-9 place-items-center rounded-lg bg-slate-100 text-slate-700 transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-primary"
                     >
-                        <LinkedInIcon className="text-lg" />
+                        {decorateIcon(<LinkedInIcon className="text-lg" />)}
                     </a>
                     <a
                         href={GitHubLink}
@@ -59,10 +60,10 @@ export default function FormSidebar() {
                         aria-label="GitHub"
                         className="grid h-9 w-9 place-items-center rounded-lg bg-slate-100 text-slate-700 transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-primary"
                     >
-                        <GitHubIcon className="text-lg" />
+                        {decorateIcon(<GitHubIcon className="text-lg" />)}
                     </a>
                 </div>
             </div>
-        </aside>
+        </section>
     );
 }

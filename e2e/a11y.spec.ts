@@ -2,7 +2,10 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { internalRoutes } from "@/lib/constants/ui";
 
-const routes = Object.values(internalRoutes);
+// Remove XML docs
+const routes = Object.values(internalRoutes).filter(
+    (route) => !route.endsWith(".xml")
+);
 
 for (const route of routes) {
     test(`A11y: ${route}`, async ({ page }) => {
