@@ -74,7 +74,7 @@ export default function Hero({ title, leadParagraph, tagline }: HeroProps) {
                         />
 
                         <ButtonLink
-                            href={`${ProjectsRoute}/#main`}
+                            href={`${ProjectsRoute}/#recentProjects`}
                             text="Recent projects"
                             icon={<ProjectIcon />}
                             type="secondary"

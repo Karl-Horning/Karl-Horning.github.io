@@ -86,7 +86,7 @@ export default function Projects() {
                 tagline="Selected Work"
                 heroIcon={<ProjectIcon />}
                 primaryCta={{
-                    href: `${ProjectsRoute}#main`,
+                    href: `${ProjectsRoute}#recentProjects`,
                     text: "Recent projects",
                     icon: <ReadMoreIcon />,
                 }}
