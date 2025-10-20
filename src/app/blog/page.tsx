@@ -83,7 +83,7 @@ export default async function Page() {
                 tagline="Writing & Reflections"
                 heroIcon={<BlogIcon />}
                 primaryCta={{
-                    href: `${BlogRoute}#main`,
+                    href: `${BlogRoute}#blogLandingPosts`,
                     text: "Read latest posts",
                     icon: <ReadMoreIcon />,
                 }}

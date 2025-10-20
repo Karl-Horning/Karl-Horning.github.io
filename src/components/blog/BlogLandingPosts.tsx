@@ -27,7 +27,7 @@ export default async function BlogLandingPosts({
     blogPosts = [],
 }: BlogLandingPostsProps) {
     return (
-        <article className="mx-auto max-w-6xl px-4 pt-20">
+        <article id="blogLandingPosts" className="mx-auto max-w-6xl px-4 pt-20">
             {blogPosts.length >= 1 ? (
                 <div
                     id="grid"
