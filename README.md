@@ -29,6 +29,8 @@
   - [📁 Project Structure](#-project-structure)
   - [✍️ Code Style \& Linting](#️-code-style--linting)
   - [🔍 Tests](#-tests)
+    - [Current Setup](#current-setup)
+    - [Planned Additions](#planned-additions)
   - [🌐 Live Site](#-live-site)
     - [Latest Lighthouse Scores (16 Oct 2025)](#latest-lighthouse-scores-16-oct-2025)
   - [📌 Roadmap](#-roadmap)
@@ -165,14 +167,38 @@ This project uses:
 
 ## 🔍 Tests
 
-Planned testing stack:
+Accessibility testing is automated with **Playwright** and **axe-core**, ensuring that all routes meet WCAG 2.2 AA standards.
 
-- **Jest** and **React Testing Library** for UI components
-- **axe-core** integration for automated accessibility checks
+### Current Setup
+
+- **Framework:** [Playwright](https://playwright.dev/)
+- **Accessibility Engine:** [axe-core](https://github.com/dequelabs/axe-core) via `@axe-core/playwright`
+- **Scope:** All major routes (`/`, `/about`, `/blog`, `/cmalt`, `/contact`, `/projects`)
+- **Environment:** Headless Chromium
+
+Each page is loaded in a real browser environment, scanned with `axe-core`, and must pass with zero accessibility violations before the build is considered successful.
 
 ```bash
 npm run test
 ```
+
+**Example output:**
+
+```bash
+Running 6 tests using 1 worker
+✓  A11y: / (1.5s)
+✓  A11y: /about (1.0s)
+✓  A11y: /blog (0.9s)
+✓  A11y: /cmalt (1.0s)
+✓  A11y: /contact (1.1s)
+✓  A11y: /projects (1.1s)
+
+6 passed (7.9s)
+```
+
+### Planned Additions
+
+- **Jest** and **React Testing Library** for UI components
 
 ---
 
@@ -197,6 +223,7 @@ Visit: [karlhorning.dev](https://www.karlhorning.dev)
 - [x] Add Projects & CMALT portfolio routes
 - [x] Achieve 100 Accessibility and SEO scores
 - [x] Automate CI/CD deployment via GitHub Actions
+- [x] Automated accessibility checks
 - [ ] Add Jest test coverage
 - [ ] Integrate privacy-friendly analytics
 
