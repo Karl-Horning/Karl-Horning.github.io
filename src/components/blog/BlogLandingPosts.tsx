@@ -27,7 +27,7 @@ export default async function BlogLandingPosts({
     blogPosts = [],
 }: BlogLandingPostsProps) {
     return (
-        <main id="main" className="mx-auto max-w-6xl px-4 pt-20">
+        <article className="mx-auto max-w-6xl px-4 pt-20">
             {blogPosts.length >= 1 ? (
                 <div
                     id="grid"
@@ -44,6 +44,6 @@ export default async function BlogLandingPosts({
                     No posts found!
                 </h3>
             )}
-        </main>
+        </article>
     );
 }

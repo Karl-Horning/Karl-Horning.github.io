@@ -82,13 +82,11 @@ export default function About() {
                     type: "secondary",
                 }}
             />
-            <main id="main">
-                <Bio />
-                <Values />
-                <Experience />
-                <Platforms />
-                <Certifications />
-            </main>
+            <Bio />
+            <Values />
+            <Experience />
+            <Platforms />
+            <Certifications />
             <ContactCta />
         </>
     );

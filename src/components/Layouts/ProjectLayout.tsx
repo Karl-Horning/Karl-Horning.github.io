@@ -47,7 +47,7 @@ export default async function ProjectLayout({
     const { previous, next } = await getPrevNextProject(slug);
 
     return (
-        <>
+        <main id="main">
             <EntryHeader
                 title={title}
                 description={description}
@@ -58,12 +58,9 @@ export default async function ProjectLayout({
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[16rem_1fr]">
                 <div className="order-2 max-w-3xl">
                     <EntryCoverImage {...thumbnail} />
-                    <main
-                        id="main"
-                        className="prose prose-slate dark:prose-invert max-w-none"
-                    >
+                    <article className="prose prose-slate dark:prose-invert max-w-none">
                         {children}
-                    </main>
+                    </article>
                     <ShareButtons slug={`projects/${slug}`} />
                     <AuthorCard />
                     {/* Populates the previous and next buttons dynamically from JSON data */}
@@ -82,6 +79,6 @@ export default async function ProjectLayout({
                 title="Want a deeper dive?"
                 description="I can share private repos, extended write-ups and implementation notes on request."
             />
-        </>
+        </main>
     );
 }

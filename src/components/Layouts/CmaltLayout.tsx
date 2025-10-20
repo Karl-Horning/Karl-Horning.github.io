@@ -55,7 +55,7 @@ export default async function CmaltLayout({
     const nextHref = next?.href ?? CmaltRoute;
 
     return (
-        <>
+        <main id="main">
             <EntryHeader
                 title={title}
                 description={description}
@@ -84,12 +84,9 @@ export default async function CmaltLayout({
             {/* Two-column grid: Sidebar + main content */}
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-20 md:grid-cols-[16rem_1fr]">
                 <div className="order-2 max-w-3xl">
-                    <main
-                        id="main"
-                        className="prose prose-slate dark:prose-invert max-w-none"
-                    >
+                    <article className="prose prose-slate dark:prose-invert max-w-none">
                         {children}
-                    </main>
+                    </article>
 
                     {/* Context-aware pagination between CMALT pages */}
                     {(previous || next) && (
@@ -110,6 +107,6 @@ export default async function CmaltLayout({
                 title="Questions about this section?"
                 description="Contact me for clarifications or further evidence."
             />
-        </>
+        </main>
     );
 }
