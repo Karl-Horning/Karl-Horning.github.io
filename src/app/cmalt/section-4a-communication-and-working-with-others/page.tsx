@@ -12,7 +12,8 @@ export const metadata = createMetadata({
 });
 
 // Evidence links
-const { documents, links, presentations } = cmaltEvidence;
+const { certificates, documents, links, presentations } = cmaltEvidence;
+const { understandingManualTestingCertificate } = certificates;
 const {
     microsoftTeamsFaq,
     usingPostmanWithApolloServer,
@@ -107,9 +108,27 @@ export default function page() {
                     2025, I collaborated with colleagues in the Business School
                     on a Proof of Concept data-cleaning exercise, identifying
                     and annotating discrepancies to streamline downstream work.
-                    Day-to-day, I contribute through Teams updates,
-                    collaborative documents, and peer reviews that refine
-                    workflows and support staff.
+                </p>
+
+                <p>
+                    Ahead of this Proof of Concept, I completed the{" "}
+                    <a
+                        href={understandingManualTestingCertificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Understanding Manual Testing
+                    </a>{" "}
+                    course on LinkedIn Learning (5 November 2024) to strengthen
+                    my approach to testing and communication. Coming from a
+                    developer background, I was more familiar with automated
+                    testing frameworks such as unit and integration tests. This
+                    training helped me appreciate how manual testing complements
+                    automation by capturing the user experience and uncovering
+                    usability or accessibility issues that scripted tests can
+                    miss. It also improved how I communicate
+                    findings—translating technical observations into practical
+                    recommendations for non-technical stakeholders.
                 </p>
 
                 <p>
@@ -224,6 +243,21 @@ export default function page() {
                     </a>{" "}
                     resource, ensures information is concise, scannable, and
                     accessible to all participants.
+                </p>
+
+                <p>
+                    The DEPP Proof of Concept also reinforced the communicative
+                    value of <em>manual testing</em>. Through collaboration with
+                    technical and academic colleagues, I learned that effective
+                    testing is as much about clear dialogue and documentation as
+                    it is about functionality. Different users engage with
+                    systems in different ways — some explore every feature,
+                    while others only use what they need — so structured
+                    feedback and observation are essential for understanding
+                    pain points and adoption barriers. This insight continues to
+                    inform how I test and present my own digital tools, ensuring
+                    that findings are framed in accessible, actionable language
+                    for all audiences.
                 </p>
 
                 <p>
@@ -411,14 +445,20 @@ export default function page() {
                 <h3>Professional Development</h3>
                 <ul>
                     <li>
-                        TODO: Professional development artefacts —
-                        notes/certificates from internal sessions and LinkedIn
-                        Learning courses{" "}
+                        <a
+                            href={understandingManualTestingCertificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Understanding Manual Testing (LinkedIn Learning,
+                            2024) (Certificate)
+                        </a>{" "}
                         <em>
-                            Demonstrates engagement with continuous learning in
-                            accessibility, API design, and
-                            JavaScript/TypeScript, and contribution to shared
-                            learning culture.
+                            Completed ahead of DEPP Proof of Concept testing to
+                            strengthen communication between technical and
+                            academic stakeholders. Demonstrates reflective
+                            development and understanding of user behaviour
+                            beyond automated testing.
                         </em>
                     </li>
                 </ul>

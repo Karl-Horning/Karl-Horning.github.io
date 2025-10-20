@@ -27,6 +27,8 @@ export const cmaltEvidence = {
         nextJsCertificate:
             "/cmalt/certificates/next-js-the-complete-developers-guide-2024.pdf",
         ptllsCertificate: "/cmalt/certificates/ptlls-2012.pdf",
+        understandingManualTestingCertificate:
+            "https://www.linkedin.com/learning/certificates/f782913a2c36840d82ebfa0ae237428710a86e940d24b950fb384e4871e67d7b?u=2720425",
         webDeveloperCertificate:
             "/cmalt/certificates/the-web-developer-bootcamp-2019.pdf",
     },
