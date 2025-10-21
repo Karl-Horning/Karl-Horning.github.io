@@ -6,7 +6,7 @@ export const meta = {
     title: "Learnlight Platform & Mobile Apps",
     date: "2025-10-14",
     readingTime: 8,
-    topics: ["GraphQL", "API", "EdTech"],
+    topics: ["JavaScript", "API", "EdTech"],
     description:
         "Full-Stack JavaScript Developer (Backend Focus) at Learnlight (2021-2024). Built and optimised the Apollo-based GraphQL API powering Learnlight's global learning platform, improving scalability, reliability, and developer efficiency for 700k+ registered learners across 180+ countries.",
     thumbnail: {

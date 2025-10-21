@@ -6,13 +6,7 @@ export const meta = {
     title: "KarlHorning.dev - Building a Modern, Accessible Developer Portfolio",
     date: "2025-10-15",
     readingTime: 6,
-    topics: [
-        "Next.js",
-        "TypeScript",
-        "Accessibility",
-        "Tailwind CSS",
-        "Portfolio",
-    ],
+    topics: ["Next.js", "TypeScript", "Accessibility", "Tailwind CSS"],
     description:
         "A TypeScript-based Next.js portfolio focused on accessibility, performance, and clean documentation.",
     thumbnail: {

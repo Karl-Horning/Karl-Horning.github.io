@@ -18,6 +18,7 @@ export const meta = {
         "React",
         "Next.js",
         "Vite",
+        "TypeScript",
         "JavaScript",
     ],
     draft: false,

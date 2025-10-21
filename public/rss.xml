@@ -10,7 +10,7 @@
     <description>Notes on web development, accessibility, and learning tech</description>
     <language>en-GB</language>
     <generator>build-rss-from-posts.ts</generator>
-    <lastBuildDate>Thu, 16 Oct 2025 08:03:47 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Oct 2025 21:33:59 +0000</lastBuildDate>
     <atom:link href="https://www.karlhorning.dev/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up Prettier with Tailwind CSS in a React Project (Without Forgetting Next Time)</title>
@@ -22,6 +22,7 @@
       <category>React</category>
       <category>Next.js</category>
       <category>Vite</category>
+      <category>TypeScript</category>
       <category>JavaScript</category>
       <media:thumbnail url="https://www.karlhorning.dev/img/blog/prettier_tailwind.webp" />
       <guid isPermaLink="true">https://www.karlhorning.dev/blog/setting-up-prettier-with-tailwind-css-in-a-react-project</guid>
