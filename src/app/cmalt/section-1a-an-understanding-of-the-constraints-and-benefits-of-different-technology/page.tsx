@@ -369,23 +369,24 @@ export default function Page() {
 
                 <ul>
                     <li>
-                        Anthology <em>Anthology REST API documentation</em>.{" "}
+                        Anthology <em>Anthology REST API documentation</em>.
+                        Available at{" "}
                         <a
                             href="https://developer.blackboard.com/portal/displayApi"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at developer.blackboard.com
+                            https://developer.blackboard.com/portal/displayApi
                         </a>
                     </li>
                     <li>
-                        Anthology <em>Blackboard Ultra</em>.{" "}
+                        Anthology <em>Blackboard Ultra</em>. Available at{" "}
                         <a
                             href="https://www.anthology.com/products/teaching-and-learning/learning-effectiveness/blackboard"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at anthology.com
+                            https://www.anthology.com/products/teaching-and-learning/learning-effectiveness/blackboard
                         </a>
                     </li>
                     <li>
@@ -393,13 +394,13 @@ export default function Page() {
                         <em>
                             Acceptance Criteria: Examples and Best Practices
                         </em>
-                        .{" "}
+                        . Available at{" "}
                         <a
                             href="https://www.atlassian.com/work-management/project-management/acceptance-criteria"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at atlassian.com
+                            https://www.atlassian.com/work-management/project-management/acceptance-criteria
                         </a>
                     </li>
                     <li>
@@ -408,75 +409,76 @@ export default function Page() {
                             Digital Transformation 101: How to Choose the Right
                             Technology
                         </em>
-                        .{" "}
+                        . Available at{" "}
                         <a
                             href="https://www.engineering.com/digital-transformation-101-how-to-choose-the-right-technology/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at engineering.com
+                            https://www.engineering.com/digital-transformation-101-how-to-choose-the-right-technology/
                         </a>
                     </li>
                     <li>
-                        D2L <em>Brightspace API Reference</em>.{" "}
+                        D2L <em>Brightspace API Reference</em>. Available at{" "}
                         <a
                             href="https://docs.valence.desire2learn.com/reference.html"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at desire2learn.com
+                            https://docs.valence.desire2learn.com/reference.html
                         </a>
                     </li>
                     <li>
-                        D2L <em>Brightspace by D2L</em>.{" "}
+                        D2L <em>Brightspace by D2L</em>. Available at{" "}
                         <a
                             href="https://www.d2l.com/en-eu/brightspace/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at d2l.com
+                            https://www.d2l.com/en-eu/brightspace/
                         </a>
                     </li>
                     <li>
-                        Instructure <em>Canvas LMS</em>.{" "}
+                        Instructure <em>Canvas LMS</em>. Available at{" "}
                         <a
                             href="https://www.instructure.com/canvas"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at instructure.com
+                            https://www.instructure.com/canvas
                         </a>
                     </li>
                     <li>
-                        Instructure <em>Canvas LMS API Documentation</em>.{" "}
+                        Instructure <em>Canvas LMS API Documentation</em>.
+                        Available at{" "}
                         <a
                             href="https://www.canvas.instructure.com/doc/api/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at canvas.instructure.com
+                            https://www.canvas.instructure.com/doc/api/
                         </a>
                     </li>
                     <li>
-                        ProductPlan <em>MoSCoW Prioritization</em>.{" "}
+                        ProductPlan <em>MoSCoW Prioritization</em>. Available at{" "}
                         <a
                             href="https://www.productplan.com/glossary/moscow-prioritization/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at productplan.com
+                            https://www.productplan.com/glossary/moscow-prioritization/
                         </a>
                     </li>
                     <li>
                         Rehkopf, M.{" "}
                         <em>User Stories with Examples and a Template</em>.
-                        Atlassian.{" "}
+                        Atlassian. Available at{" "}
                         <a
                             href="https://www.atlassian.com/agile/project-management/user-stories"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Available at atlassian.com
+                            https://www.atlassian.com/agile/project-management/user-stories
                         </a>
                     </li>
                 </ul>
