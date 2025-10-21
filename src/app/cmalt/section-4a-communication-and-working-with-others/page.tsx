@@ -26,7 +26,7 @@ export const metadata = createMetadata({
 });
 
 // Section 4a
-export default function page() {
+export default function Page() {
     return (
         <CmaltLayout {...meta}>
             <section id="cmalt-guidance">
@@ -262,7 +262,11 @@ export default function page() {
                     technical walkthroughs to accessibility-aware resources. In
                     both meetings and published materials, I apply the same
                     inclusive design principle: keep it simple, make it concise,
-                    and emphasise what matters most.
+                    and emphasise what matters most. I&apos;ve also strengthened
+                    interpersonal skills central to collaborative work—framing
+                    feedback constructively, negotiating priorities when
+                    timelines compete, and closing the loop with clear, written
+                    next steps.
                 </p>
 
                 <p>
