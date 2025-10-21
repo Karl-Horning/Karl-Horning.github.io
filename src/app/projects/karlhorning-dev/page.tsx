@@ -1,11 +1,11 @@
-import ProjectLayout from "@/components/layouts/ProjectLayout";
+import ProjectLayout from "@/components/Layouts/ProjectLayout";
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import Link from "next/link";
 import { meta } from "./meta";
 import { jsdocExample } from "./examples";
 import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
 import LighthouseGrid from "@/components/ui/LighthouseGrid";
-import { createMetadata } from "@/lib/helpers";
+import { createMetadata } from "@/lib/metadata";
 
 const { GitHubLink } = externalLinks;
 const { CmaltRoute, ProjectsRoute } = internalRoutes;

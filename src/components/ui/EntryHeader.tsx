@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import ButtonLink from "./ButtonLink";
 import { externalLinks, icons } from "@/lib/constants/ui";
-import { decorateIcon } from "@/lib/helpers";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 import TopicChipsList from "./TopicChipsList";
 
 const { CalendarIcon, ClockIcon, CoffeeIcon } = icons;

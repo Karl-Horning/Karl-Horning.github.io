@@ -1,11 +1,12 @@
-import CmaltLayout from "@/components/layouts/CmaltLayout";
-import { documents } from "@/lib/constants/cmalt";
+import CmaltLayout from "@/components/Layouts/CmaltLayout";
+import { cmaltEvidence } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
-import { createMetadata } from "@/lib/helpers";
+import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
 // Evidence
 const { CmaltRoute } = internalRoutes;
+const { documents } = cmaltEvidence;
 const {
     designingAnEnglishCourse,
     exampleFeedbackCompleteFull,

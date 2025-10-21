@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import BlogLandingPosts from "@/components/blog/BlogLandingPosts";
 import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
+import { getAllTags, getPostsByTag } from "@/lib/helpers/getBlogPosts";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
 import { icons, internalRoutes } from "@/lib/constants/ui";
-import { createMetadata } from "@/lib/helpers";
-import { getAllTags, getPostsByTag } from "@/lib/server";
+import { createMetadata } from "@/lib/metadata";
 
 const { BlogIcon, ReadMoreIcon, RssIcon } = icons;
 const { BlogRoute, RssFeed } = internalRoutes;

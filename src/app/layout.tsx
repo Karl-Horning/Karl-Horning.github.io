@@ -1,6 +1,6 @@
 import "./styles/globals.css";
 import Footer from "@/components/shell/Footer";
-import { jsonLdHome } from "@/lib/constants/site-metadata";
+import { jsonLdHome } from "@/lib/constants/jsonLd";
 import Header from "@/components/shell/Header";
 import { externalLinks } from "@/lib/constants/ui";
 

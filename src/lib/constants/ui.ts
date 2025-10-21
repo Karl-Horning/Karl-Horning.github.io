@@ -1,4 +1,4 @@
-import { IconRegistry } from "@/types";
+import { IconRegistry, NavLink, SiteLink } from "@/types";
 import {
     BsBox2HeartFill,
     BsBoxArrowDownLeft,
@@ -53,8 +53,27 @@ import {
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
+import { SocialLink } from "@/types";
 import { BiLogoPostgresql, BiSolidHomeHeart } from "react-icons/bi";
 import { GrCertificate, GrContact } from "react-icons/gr";
+
+/**
+ * Centralised collection of static asset paths used across the site.
+ *
+ * Provides a single source of truth for referencing images and
+ * other static files to improve consistency and maintainability.
+ */
+export const assets = {
+    /**
+     * Optimised profile image used in the author card and site metadata.
+     */
+    profileImage: "/img/karl.optimised.webp",
+
+    /**
+     * Default image displayed on the 404 “Not Found” page.
+     */
+    notFoundImage: "/img/not-found.webp",
+};
 
 /**
  * Centralised collection of icon components sourced from various
@@ -317,3 +336,110 @@ export const icons: IconRegistry = {
      */
     XIcon: FaXTwitter,
 };
+
+/**
+ * Centralised collection of external URLs used across the site.
+ *
+ * Ensures consistent and maintainable links to social profiles,
+ * external apps, and project repositories.
+ */
+export const externalLinks = {
+    /** Blog subdomain */
+    BlogLink: "https://www.karlhorning.dev/dev-blog",
+
+    /** Karl Horning’s CodePen profile */
+    CodePenLink: "https://codepen.io/karlhorning",
+
+    /** Karl Horning’s GitHub profile */
+    GitHubLink: "https://github.com/Karl-Horning",
+
+    /** Karl Horning’s Ko-fi profile */
+    KofiLink: "https://ko-fi.com/karlhorning",
+
+    /** Karl Horning’s LinkedIn profile */
+    LinkedInLink: "https://www.linkedin.com/in/karl-horning",
+
+    /** Karl Horning’s portfolio site */
+    PortfolioLink: "https://www.karlhorning.dev",
+
+    /** GitHub repository for Karl Horning’s portfolio site */
+    PortfolioRepoLink: "https://github.com/Karl-Horning/Karl-Horning.github.io",
+
+    /** RSS feed for the blog */
+    RssLink: "https://www.karlhorning.dev/rss.xml",
+} satisfies SiteLink;
+
+/**
+ * Collection of internal route paths used for navigation and routing.
+ *
+ * Provides a single source of truth for route definitions within
+ * the site to prevent hard-coded paths in multiple components.
+ */
+export const internalRoutes = {
+    /** Home page */
+    HomeRoute: "/",
+
+    /** About page */
+    AboutRoute: "/about",
+
+    /** Blog page */
+    BlogRoute: "/blog",
+
+    /** CMALT page */
+    CmaltRoute: "/cmalt",
+
+    /** Contact page */
+    ContactRoute: "/contact",
+
+    /** Projects page */
+    ProjectsRoute: "/projects",
+
+    /** XML file for feed */
+    RssFeed: "/rss.xml",
+} satisfies SiteLink;
+
+/**
+ * Navigation link configuration for the site header and menu.
+ *
+ * Combines internal and external URLs for easy reuse in
+ * navigation components.
+ */
+export const navLinks = [
+    { label: "About", href: internalRoutes.AboutRoute },
+    { label: "Blog", href: internalRoutes.BlogRoute },
+    { label: "CMALT", href: internalRoutes.CmaltRoute },
+    { label: "Projects", href: internalRoutes.ProjectsRoute },
+    { label: "Contact", href: internalRoutes.ContactRoute },
+] satisfies readonly NavLink[];
+
+/**
+ * A collection of social navigation links, each with a label, URL, and icon.
+ * Includes links to external profiles and internal routes.
+ */
+export const socialLinks: SocialLink[] = [
+    {
+        label: "About",
+        href: internalRoutes.AboutRoute,
+        icon: icons.InfoIcon,
+    },
+    {
+        label: "GitHub",
+        href: externalLinks.GitHubLink,
+        icon: icons.GitHubIcon,
+    },
+    {
+        label: "LinkedIn",
+        href: externalLinks.LinkedInLink,
+        icon: icons.LinkedInIcon,
+    },
+    {
+        label: "Contact",
+        href: internalRoutes.ContactRoute,
+        icon: icons.ContactIcon,
+    },
+    {
+        label: "RSS Feed",
+        href: internalRoutes.RssFeed,
+        icon: icons.RssIcon,
+    },
+];

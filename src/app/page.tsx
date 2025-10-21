@@ -3,7 +3,8 @@ import Highlights from "@/components/home/Highlights";
 import Skills from "@/components/home/Skills";
 import Blog from "@/components/home/Blog";
 import ContactCta from "@/components/ui/ContactCta";
-import { createMetadata } from "@/lib/helpers";
+
+import { createMetadata } from "@/lib/metadata";
 import { internalRoutes } from "@/lib/constants/ui";
 import Projects from "@/components/home/Projects";
 

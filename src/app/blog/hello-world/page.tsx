@@ -1,6 +1,6 @@
-import BlogLayout from "@/components/layouts/BlogLayout";
+import BlogLayout from "@/components/Layouts/BlogLayout";
 import { meta } from "./meta";
-import { createMetadata } from "@/lib/helpers";
+import { createMetadata } from "@/lib/metadata";
 import { internalRoutes } from "@/lib/constants/ui";
 
 const { BlogRoute } = internalRoutes;

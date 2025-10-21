@@ -1,9 +1,9 @@
 import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
+import { getAllTags } from "@/lib/helpers/getBlogPosts";
 import TopicChipsList from "@/components/ui/TopicChipsList";
 import { icons, internalRoutes } from "@/lib/constants/ui";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
-import { createMetadata } from "@/lib/helpers";
-import { getAllTags } from "@/lib/server";
+import { createMetadata } from "@/lib/metadata";
 
 const { BlogIcon, ReadMoreIcon, RssIcon } = icons;
 const { BlogRoute, RssFeed } = internalRoutes;

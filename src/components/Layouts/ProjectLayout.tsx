@@ -6,7 +6,7 @@ import EntryHeader from "@/components/ui/EntryHeader";
 import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import ProjectsSidebar from "@/components/projects/ProjectsSidebar";
 import ShareButtons from "@/components/ui/ShareButtons";
-import { getPrevNextProject } from "@/lib/server";
+import { getPrevNextProject } from "@/lib/helpers/getPrevNext";
 import ContactCta from "@/components/ui/ContactCta";
 
 type ProjectLayoutProps = PropsWithChildren<ProjectMeta>;

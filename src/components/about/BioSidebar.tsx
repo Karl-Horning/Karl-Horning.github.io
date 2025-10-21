@@ -1,5 +1,6 @@
 import { bioSidebarItems } from "@/lib/constants/about";
-
+import { icons } from "@/lib/constants/ui";
+const { LocationIcon } = icons;
 /**
  * Renders a sidebar with key personal and professional details.
  *

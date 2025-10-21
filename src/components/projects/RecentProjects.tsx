@@ -1,4 +1,4 @@
-import { getProjectItems } from "@/lib/server";
+import { getProjectItems } from "@/lib/projects/getProjects";
 import ProjectsCard from "./ProjectsCard";
 
 /**

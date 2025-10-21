@@ -1,12 +1,12 @@
-import { createMetadata } from "@/lib/helpers";
+import { createMetadata } from "@/lib/metadata";
 import { icons, internalRoutes } from "@/lib/constants/ui";
 import { meta } from "./meta";
 import ContactCta from "@/components/ui/ContactCta";
 import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import CmaltSidebar from "@/components/cmalt/CmaltSidebar.server";
-import { getPrevNextCmalt } from "@/lib/server";
+import { getPrevNextCmalt } from "@/lib/helpers/getPrevNext";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
-import { jsonLdCMALT } from "@/lib/constants/site-metadata";
+import { jsonLdCMALT } from "@/lib/constants/jsonLd";
 
 const { CmaltRoute } = internalRoutes;
 const { CertificateIcon, InfoIcon, ReadMoreIcon } = icons;

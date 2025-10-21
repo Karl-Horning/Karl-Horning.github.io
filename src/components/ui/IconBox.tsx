@@ -1,4 +1,4 @@
-import { decorateIcon } from "@/lib/helpers";
+import { decorateIcon } from "@/lib/helpers/iconHelpers";
 import { ReactNode } from "react";
 
 interface IconBoxProps {

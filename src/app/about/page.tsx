@@ -1,6 +1,6 @@
 import { icons, internalRoutes } from "@/lib/constants/ui";
-import { createMetadata } from "@/lib/helpers";
-import { jsonLdAbout } from "@/lib/constants/site-metadata";
+import { createMetadata } from "@/lib/metadata";
+import { jsonLdAbout } from "@/lib/constants/jsonLd";
 import Bio from "@/components/about/Bio";
 import Values from "@/components/about/Values";
 import Experience from "@/components/about/Experience";
