@@ -103,6 +103,8 @@ export const cmaltEvidence = {
             "/cmalt/screenshots/jira-fundamentals-badge-screenshot.png",
         joiningTeamsMeetingScreenshot:
             "/cmalt/screenshots/joining-a-microsoft-teams-meeting-from-the-session-details-page-screenshot.webp",
+        lmsProjectGroupNotesScreenshot:
+            "/cmalt/screenshots/lms-project-group-notes-screenshot.png",
         microsoftTeamsFaqScreenshot:
             "/cmalt/screenshots/microsoft-teams-faq-screenshot.png",
         pocCleaningScreenshot: "/cmalt/screenshots/poc-cleaning-screenshot.png",

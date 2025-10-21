@@ -22,7 +22,7 @@ const {
 } = documents;
 const { blackboardSwaggerPostmanCollectionLink } = links;
 const { deppIctPresentation } = presentations;
-const { pocCleaningScreenshot } = screenshots;
+const { lmsProjectGroupNotesScreenshot, pocCleaningScreenshot } = screenshots;
 
 export default function page() {
     return (
@@ -349,6 +349,24 @@ export default function page() {
                     </li>
                     <li>
                         <a
+                            href={lmsProjectGroupNotesScreenshot}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LMS Project Group Meeting Notes (October 2025)
+                            (Screenshot)
+                        </a>{" "}
+                        <em>
+                            Example of structured, agenda-linked notes produced
+                            during DEPP meetings. Demonstrates learning from
+                            colleagues&apos; communication practices and the
+                            application of accessible formatting principles.
+                            Shared with the consent of project leads;
+                            anonymisation not required.
+                        </em>
+                    </li>
+                    <li>
+                        <a
                             href={deppIctPresentation}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -363,25 +381,14 @@ export default function page() {
                             communication and facilitation.
                         </em>
                     </li>
-                    <li>
+                    {/* <li>
                         TODO: Asana task records and meeting notes — anonymised
                         examples showing actions and ownership{" "}
                         <em>
                             Demonstrates structured project management and
                             transparent communication across hybrid teams.
                         </em>
-                    </li>
-                    <li>
-                        TODO: Meeting notes with Executive Summaries — examples
-                        demonstrating structured agendas and accessible
-                        documentation{" "}
-                        <em>
-                            Illustrates application of inclusive communication
-                            principles — clear agendas, headings, and action
-                            points — aligning with GOV.UK and Forbes Coaches
-                            Council guidance.
-                        </em>
-                    </li>
+                    </li> */}
                 </ul>
 
                 <h3>Documentation and Dissemination</h3>
