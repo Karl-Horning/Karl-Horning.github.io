@@ -1,5 +1,5 @@
 import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { jsonLdContact } from "@/lib/constants/site-metadata";
 import Form from "@/components/contact/Form";
 import ContactCta from "@/components/ui/ContactCta";

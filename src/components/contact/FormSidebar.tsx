@@ -1,5 +1,5 @@
 import { externalLinks, icons } from "@/lib/constants/ui";
-import { decorateIcon } from "@/lib/helpers/iconHelpers";
+import { decorateIcon } from "@/lib/helpers";
 
 const { GitHubIcon, LinkedInIcon } = icons;
 const { GitHubLink, LinkedInLink } = externalLinks;

@@ -1,11 +1,11 @@
 import BlogLandingPosts from "@/components/blog/BlogLandingPosts";
 import BlogLandingFooter from "@/components/blog/BlogLandingFooter";
-import { getBlogPosts } from "@/lib/helpers/getBlogPosts";
 import { BlogPost } from "@/types";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
 import { icons, internalRoutes } from "@/lib/constants/ui";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { jsonLdBlog } from "@/lib/constants/site-metadata";
+import { getBlogPosts } from "@/lib/server";
 
 const { BlogIcon, ReadMoreIcon, RssIcon } = icons;
 const { BlogRoute, RssFeed } = internalRoutes;

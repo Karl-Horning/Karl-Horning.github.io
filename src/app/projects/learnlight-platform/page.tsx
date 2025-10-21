@@ -1,7 +1,7 @@
 import ProjectLayout from "@/components/layouts/ProjectLayout";
 import { meta } from "./meta";
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { internalRoutes } from "@/lib/constants/ui";
 
 const { ProjectsRoute } = internalRoutes;

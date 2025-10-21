@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import { ButtonType, getButtonClasses } from "./buttonStyles";
-import { decorateIcon } from "@/lib/helpers/iconHelpers";
+import { decorateIcon } from "@/lib/helpers";
 
 interface ButtonLinkProps {
     /**

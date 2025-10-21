@@ -1,5 +1,5 @@
 import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { jsonLdProjects } from "@/lib/constants/site-metadata";
 import ContactCta from "@/components/ui/ContactCta";
 import RecentProjects from "@/components/projects/RecentProjects";

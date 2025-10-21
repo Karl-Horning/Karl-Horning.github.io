@@ -2,40 +2,13 @@ import "server-only";
 import { promises as fs } from "fs";
 import path from "path";
 import { internalRoutes } from "@/lib/constants/ui";
+import { CmaltNavLink } from "@/types";
 
 const { CmaltRoute } = internalRoutes;
 
 /**
- * Represents a single navigation link in the CMALT structure.
- *
- * Used by `getCmaltNav()` to build grouped navigation data
- * for the CMALT portfolio site.
- */
-export type NavLink = {
-    /** Display title of the navigation link. */
-    title: string;
-
-    /** Destination URL or path for the link. */
-    href: string;
-
-    /**
-     * Whether this link should match the route exactly.
-     * For example, the homepage link (`/cmalt`) uses `isExact: true`.
-     */
-    isExact: boolean;
-
-    /**
-     * Logical group in which to render the link.
-     *
-     * - `"top"` → Appears at the top of the navigation.
-     * - `"section-n"` → Appears under Section N (for example, "section-1", "section-2").
-     */
-    group: "top" | `section-${number}`;
-};
-
-/**
  * Raw data shape for CMALT entries read from `public/data/cmalt.json`.
- * Represents minimal metadata before transforming into `NavLink` objects.
+ * Represents minimal metadata before transforming into `CmaltNavLink` objects.
  */
 type RawItem = {
     /** Display title, such as “Section 1a: Context of Professional Practice”. */
@@ -60,7 +33,7 @@ type RawItem = {
  *
  * @async
  * @returns An object containing:
- * - `top`: An array of top-level `NavLink` items (for example, homepage or intro).
+ * - `top`: An array of top-level `CmaltNavLink` items (for example, homepage or intro).
  * - `sections`: An ordered list of section groups, each containing label, key, and items.
  *
  * @example
@@ -70,8 +43,12 @@ type RawItem = {
  * ```
  */
 export async function getCmaltNav(): Promise<{
-    top: NavLink[];
-    sections: { label: string; key: `section-${number}`; items: NavLink[] }[];
+    top: CmaltNavLink[];
+    sections: {
+        label: string;
+        key: `section-${number}`;
+        items: CmaltNavLink[];
+    }[];
 }> {
     // Load and parse CMALT metadata
     const file = path.join(process.cwd(), "public/data/cmalt.json");
@@ -82,13 +59,13 @@ export async function getCmaltNav(): Promise<{
     const visible = items.filter((i) => !i.draft);
 
     // Build normalised links with grouping + flags derived from data
-    const links: NavLink[] = visible.map((i) => {
+    const links: CmaltNavLink[] = visible.map((i) => {
         const isHomepage = i.slug === ""; // CMALT homepage has an empty slug
         const href = isHomepage ? CmaltRoute : `${CmaltRoute}/${i.slug}`;
 
         // Determine if the title starts with “Section <number>”
         const sectionMatch = i.title.match(/^Section\s+(\d+)/i);
-        const group: NavLink["group"] = sectionMatch
+        const group: CmaltNavLink["group"] = sectionMatch
             ? (`section-${+sectionMatch[1]}` as const)
             : "top";
 
@@ -104,7 +81,7 @@ export async function getCmaltNav(): Promise<{
     const top = links.filter((l) => l.group === "top");
 
     // Group and sort sections numerically, then alphabetically within each
-    const map = new Map<string, NavLink[]>();
+    const map = new Map<string, CmaltNavLink[]>();
     for (const l of links) {
         if (l.group === "top") continue;
         if (!map.has(l.group)) map.set(l.group, []);

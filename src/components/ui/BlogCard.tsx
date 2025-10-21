@@ -3,7 +3,7 @@ import { BlogPost } from "@/types";
 import { internalRoutes } from "@/lib/constants/ui";
 import { icons } from "@/lib/constants/ui";
 import ButtonLink from "@/components/ui/ButtonLink";
-import { decorateIcon } from "@/lib/helpers/iconHelpers";
+import { decorateIcon } from "@/lib/helpers";
 import TopicChipsList from "@/components/ui/TopicChipsList";
 import Link from "next/link";
 

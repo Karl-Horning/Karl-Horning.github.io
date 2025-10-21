@@ -1,4 +1,4 @@
-import { getCmaltNav } from "@/lib/helpers/cmaltNavHelpers";
+import { getCmaltNav } from "@/lib/server";
 import CmaltSidebarClient from "./CmaltSidebar.client";
 
 /**

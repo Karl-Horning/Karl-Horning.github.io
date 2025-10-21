@@ -1,4 +1,4 @@
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import Image from "next/image";
 import { assets, icons, internalRoutes } from "@/lib/constants/ui";
 import ContactCta from "@/components/ui/ContactCta";

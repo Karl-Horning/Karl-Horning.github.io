@@ -6,7 +6,7 @@ import {
     prettierConfig,
     viteConfig,
 } from "./examples";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { internalRoutes } from "@/lib/constants/ui";
 
 const { BlogRoute } = internalRoutes;

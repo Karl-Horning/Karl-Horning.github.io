@@ -5,7 +5,7 @@ import EntryCoverImage from "../ui/EntryCoverImage";
 import ShareButtons from "../ui/ShareButtons";
 import AuthorCard from "../ui/AuthorCard";
 import PrevNextButtons from "../ui/PrevNextButtons";
-import { getPrevNextBlogPost } from "@/lib/helpers/getPrevNext";
+import { getPrevNextBlogPost } from "@/lib/server";
 import ContactCta from "../ui/ContactCta";
 
 type BlogLayoutProps = PropsWithChildren<BlogPost>;

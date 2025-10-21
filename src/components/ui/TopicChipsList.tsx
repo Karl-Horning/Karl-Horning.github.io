@@ -1,5 +1,5 @@
 import TopicChips from "@/components/ui/TopicChips";
-import { slugify } from "@/lib/helpers/textHelpers";
+import { slugify } from "@/lib/helpers";
 import { internalRoutes } from "@/lib/constants/ui";
 
 const { BlogRoute } = internalRoutes;

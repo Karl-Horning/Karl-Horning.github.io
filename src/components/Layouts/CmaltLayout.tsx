@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import CmaltSidebar from "@/components/cmalt/CmaltSidebar.server";
 import ContactCta from "@/components/ui/ContactCta";
 import EntryHeader from "@/components/ui/EntryHeader";
-import { getPrevNextCmalt } from "@/lib/helpers/getPrevNext";
+import { getPrevNextCmalt } from "@/lib/server";
 import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import { CmaltPage } from "@/types";
 import ButtonLink from "@/components/ui/ButtonLink";

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { icons } from "@/lib/constants/ui";
 import ButtonLink from "./ButtonLink";
-import { decorateIcon } from "@/lib/helpers/iconHelpers";
+import { decorateIcon } from "@/lib/helpers";
 
 const { ProjectIcon } = icons;
 

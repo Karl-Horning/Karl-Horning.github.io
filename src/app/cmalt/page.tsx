@@ -1,10 +1,10 @@
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { icons, internalRoutes } from "@/lib/constants/ui";
 import { meta } from "./meta";
 import ContactCta from "@/components/ui/ContactCta";
 import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import CmaltSidebar from "@/components/cmalt/CmaltSidebar.server";
-import { getPrevNextCmalt } from "@/lib/helpers/getPrevNext";
+import { getPrevNextCmalt } from "@/lib/server";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
 import { jsonLdCMALT } from "@/lib/constants/site-metadata";
 
