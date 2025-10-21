@@ -1,4 +1,4 @@
-import ProjectLayout from "@/components/layouts1/ProjectLayout";
+import ProjectLayout from "@/components/layouts/ProjectLayout";
 import { meta } from "./meta";
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import { createMetadata } from "@/lib/helpers";

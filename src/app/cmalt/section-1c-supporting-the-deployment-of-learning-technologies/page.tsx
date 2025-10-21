@@ -1,4 +1,4 @@
-import CmaltLayout from "@/components/layouts1/CmaltLayout";
+import CmaltLayout from "@/components/layouts/CmaltLayout";
 import { documents, links, videos } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/helpers";
