@@ -1,8 +1,7 @@
 import { icons } from "@/lib/constants/ui";
 import { Certification, Icon, WorkExperience } from "@/types";
-import { cmaltEvidence } from "./cmalt";
+import { certificates, links } from "./cmalt";
 
-const { certificates, links } = cmaltEvidence;
 const { appleTeacherCertificate, celtaCertificate, ptllsCertificate } =
     certificates;
 const { dyslexiaAwareness } = links;

@@ -1,13 +1,17 @@
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import CmaltLayout from "@/components/Layouts/CmaltLayout";
-import { cmaltEvidence } from "@/lib/constants/cmalt";
+import {
+    certificates,
+    documents,
+    links,
+    screenshots,
+} from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
 // Evidence
 const { CmaltRoute } = internalRoutes;
-const { certificates, documents, links, screenshots } = cmaltEvidence;
 const { dyslexiaAwarenessCertificate } = certificates;
 const { subtitlesExample, webAccessibilityResourcesAndTools } = documents;
 const { dyslexiaAwareness } = links;

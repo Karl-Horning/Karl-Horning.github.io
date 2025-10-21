@@ -1,5 +1,5 @@
 import CmaltLayout from "@/components/Layouts/CmaltLayout";
-import { cmaltEvidence } from "@/lib/constants/cmalt";
+import { certificates, links, repos, screenshots } from "@/lib/constants/cmalt";
 import { externalLinks, internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
@@ -7,7 +7,6 @@ import { meta } from "./meta";
 // Evidence
 const { CmaltRoute } = internalRoutes;
 const { GitHubLink, LinkedInLink, PortfolioLink } = externalLinks;
-const { certificates, links, repos, screenshots } = cmaltEvidence;
 const { blackboardPostmanCollection, graphQlRateLimitDemo } = repos;
 const {
     appleTeacherCertificate,

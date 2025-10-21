@@ -1,12 +1,11 @@
 import CmaltLayout from "@/components/Layouts/CmaltLayout";
-import { cmaltEvidence } from "@/lib/constants/cmalt";
+import { documents, links, videos } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
 // Evidence
 const { CmaltRoute } = internalRoutes;
-const { documents, links, videos } = cmaltEvidence;
 const { microsoftTeamsFaq, usingPostmanWithApolloServer } = documents;
 const { blackboardSwaggerPostmanCollectionLink, deppProjectLink } = links;
 const {

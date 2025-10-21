@@ -1,27 +1,31 @@
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import CmaltLayout from "@/components/Layouts/CmaltLayout";
-import { cmaltEvidence } from "@/lib/constants/cmalt";
+import {
+    certificates,
+    diagrams,
+    documents,
+    links,
+    presentations,
+    screenshots,
+} from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
 import { meta } from "./meta";
 
 // Evidence
 const { CmaltRoute } = internalRoutes;
-const { certificates, documents, imgs, links, presentations, screenshots } =
-    cmaltEvidence;
 const { celtaCertificate, dyslexiaAwarenessCertificate, ptllsCertificate } =
     certificates;
 const { firstSessionQuestions, webAccessibilityResourcesAndTools } = documents;
-const {
-    ebbinghausForgettingCurve,
-    feedbackSlideOriginal,
-    feedbackSlideUpdated,
-    kolbLearningCycle,
-} = imgs;
+const { ebbinghausForgettingCurve, kolbLearningCycle } = diagrams;
 const { dyslexiaAwareness } = links;
 const { deppIctPresentation } = presentations;
-const { sessionRatingsScreenshot, sessionReportRatingsScreenshot } =
-    screenshots;
+const {
+    feedbackSlideOriginalScreenshot,
+    feedbackSlideUpdatedScreenshot,
+    sessionRatingsScreenshot,
+    sessionReportRatingsScreenshot,
+} = screenshots;
 
 // Metadata
 export const metadata = createMetadata({
@@ -131,7 +135,7 @@ export default function Page() {
                 </p>
 
                 <FigureWithCaption
-                    src={feedbackSlideOriginal}
+                    src={feedbackSlideOriginalScreenshot}
                     alt="The design for my slide shows a more difficult to read slide with lower contrast"
                     caption="The design for my slide shows a more difficult to read slide with lower contrast"
                 />
@@ -154,7 +158,7 @@ export default function Page() {
                 </p>
 
                 <FigureWithCaption
-                    src={feedbackSlideUpdated}
+                    src={feedbackSlideUpdatedScreenshot}
                     alt="The updated design for my slide shows better contrast, with left aligned text on the left with images on the right"
                     caption="The updated design for my slide shows better contrast, with left aligned text on the left with images on the right"
                 />
@@ -356,7 +360,7 @@ export default function Page() {
                 <ul>
                     <li>
                         <a
-                            href={feedbackSlideUpdated}
+                            href={feedbackSlideUpdatedScreenshot}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -372,7 +376,7 @@ export default function Page() {
                     </li>
                     <li>
                         <a
-                            href={feedbackSlideOriginal}
+                            href={feedbackSlideOriginalScreenshot}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
