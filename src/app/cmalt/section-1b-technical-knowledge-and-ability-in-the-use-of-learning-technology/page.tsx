@@ -1,5 +1,5 @@
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
-import CmaltLayout from "@/components/Layouts/CmaltLayout";
+import CmaltLayout from "@/components/layouts/CmaltLayout";
 import { certificates, repos, screenshots } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";

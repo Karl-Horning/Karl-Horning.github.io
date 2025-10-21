@@ -1,4 +1,4 @@
-import ProjectLayout from "@/components/Layouts/ProjectLayout";
+import ProjectLayout from "@/components/layouts/ProjectLayout";
 import Image from "next/image";
 import { meta } from "./meta";
 import { createMetadata } from "@/lib/metadata";
