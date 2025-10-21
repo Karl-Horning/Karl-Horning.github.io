@@ -1,7 +1,7 @@
 import { icons, internalRoutes } from "@/lib/constants/ui";
-import { getBlogPosts } from "@/lib/helpers/getBlogPosts";
 import BlogCard from "../ui/BlogCard";
 import ButtonLink from "../ui/ButtonLink";
+import { getBlogPosts } from "@/lib/server";
 
 const { ReadMoreIcon } = icons;
 const { BlogRoute } = internalRoutes;

@@ -1,8 +1,8 @@
-import BlogLayout from "@/components/Layouts/BlogLayout";
+import BlogLayout from "@/components/layouts/BlogLayout";
 import { meta } from "./meta";
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import { fourHundredResponse, jwtScript } from "./example";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { internalRoutes } from "@/lib/constants/ui";
 
 const { BlogRoute } = internalRoutes;

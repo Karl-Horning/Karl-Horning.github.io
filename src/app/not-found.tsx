@@ -1,8 +1,8 @@
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import Image from "next/image";
 import { assets, icons, internalRoutes } from "@/lib/constants/ui";
 import ContactCta from "@/components/ui/ContactCta";
-import { notFoundTopics } from "@/lib/constants/notFound";
+import { notFoundTopics } from "@/lib/constants/not-found";
 import TopicChipsList from "@/components/ui/TopicChipsList";
 import ButtonLink from "@/components/ui/ButtonLink";
 

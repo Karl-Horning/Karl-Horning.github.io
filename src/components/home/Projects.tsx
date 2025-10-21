@@ -1,4 +1,4 @@
-import { getProjectItems } from "@/lib/projects/getProjects";
+import { getProjectItems } from "@/lib/server";
 import ProjectsCard from "@/components/projects/ProjectsCard";
 import ButtonLink from "@/components/ui/ButtonLink";
 import { icons, internalRoutes } from "@/lib/constants/ui";

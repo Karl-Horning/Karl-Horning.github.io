@@ -1,6 +1,6 @@
 // src/components/cmalt/CmaltTopList.tsx
+import { CmaltNavLink } from "@/types";
 import Link from "next/link";
-import type { NavLink } from "@/lib/helpers/cmaltNavHelpers";
 
 /**
  * Renders the top-level (non-section) CMALT links.
@@ -14,7 +14,7 @@ export function CmaltTopList({
     items,
     isActive,
 }: {
-    items: NavLink[];
+    items: CmaltNavLink[];
     isActive: (href: string, isExact: boolean) => boolean;
 }) {
     return (

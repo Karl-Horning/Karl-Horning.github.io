@@ -1,14 +1,18 @@
-import CmaltLayout from "@/components/Layouts/CmaltLayout";
-import { cmaltEvidence } from "@/lib/constants/cmalt";
+import CmaltLayout from "@/components/layouts/CmaltLayout";
+import {
+    certificates,
+    documents,
+    links,
+    presentations,
+    screenshots,
+} from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/helpers";
 import { meta } from "./meta";
 
 const { CmaltRoute } = internalRoutes;
 
 // Evidence links
-const { certificates, documents, links, presentations, screenshots } =
-    cmaltEvidence;
 const { understandingManualTestingCertificate } = certificates;
 const {
     microsoftTeamsFaq,

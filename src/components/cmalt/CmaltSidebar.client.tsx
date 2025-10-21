@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import type { NavLink } from "@/lib/helpers/cmaltNavHelpers";
 import { CmaltTopList } from "./CmaltTopList";
 import { CmaltSectionGroup } from "./CmaltSectionGroup";
+import { CmaltNavLink } from "@/types";
 
 /**
  * Grouped CMALT navigation data.
@@ -13,8 +13,12 @@ import { CmaltSectionGroup } from "./CmaltSectionGroup";
  * - `sections` contains collapsible “Section N” groups and their items.
  */
 type Grouped = {
-    top: NavLink[];
-    sections: { label: string; key: `section-${number}`; items: NavLink[] }[];
+    top: CmaltNavLink[];
+    sections: {
+        label: string;
+        key: `section-${number}`;
+        items: CmaltNavLink[];
+    }[];
 };
 
 /**

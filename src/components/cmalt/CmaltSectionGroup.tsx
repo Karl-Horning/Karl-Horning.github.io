@@ -1,7 +1,7 @@
 // src/components/cmalt/CmaltSectionGroup.tsx
 import Link from "next/link";
-import type { NavLink } from "@/lib/helpers/cmaltNavHelpers";
 import { Chevron } from "./Chevron";
+import { CmaltNavLink } from "@/types";
 
 /**
  * Collapsible CMALT section group (for example, "Section 1").
@@ -28,7 +28,7 @@ export function CmaltSectionGroup({
 }: {
     id: string;
     label: string;
-    items: NavLink[];
+    items: CmaltNavLink[];
     expanded: boolean;
     onToggle: () => void;
     isActive: (href: string, isExact: boolean) => boolean;

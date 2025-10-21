@@ -8,7 +8,7 @@
 export const notFoundTopics: string[] = [
     "React",
     "Next.js",
-    "APIs",
+    "API",
     "JavaScript",
     "EdTech",
 ];

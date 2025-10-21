@@ -1,4 +1,4 @@
-import { assets, externalLinks } from "./ui";
+import { assets, externalLinks } from "../ui";
 
 const { PortfolioLink } = externalLinks;
 
