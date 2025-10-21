@@ -6,11 +6,6 @@ import { meta } from "./meta";
 
 const { CmaltRoute } = internalRoutes;
 
-export const metadata = createMetadata({
-    title: `${meta.title} | CMALT`,
-    path: `${CmaltRoute}/${meta.slug}`,
-});
-
 // Evidence links
 const { certificates, documents, links, presentations, screenshots } =
     cmaltEvidence;
@@ -24,6 +19,13 @@ const { blackboardSwaggerPostmanCollectionLink } = links;
 const { deppIctPresentation } = presentations;
 const { lmsProjectGroupNotesScreenshot, pocCleaningScreenshot } = screenshots;
 
+// Metadata
+export const metadata = createMetadata({
+    title: `${meta.title} | CMALT`,
+    path: `${CmaltRoute}/${meta.slug}`,
+});
+
+// Section 4a
 export default function page() {
     return (
         <CmaltLayout {...meta}>
