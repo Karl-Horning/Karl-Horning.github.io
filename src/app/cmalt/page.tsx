@@ -6,7 +6,7 @@ import PrevNextButtons from "@/components/ui/PrevNextButtons";
 import CmaltSidebar from "@/components/cmalt/CmaltSidebar.server";
 import { getPrevNextCmalt } from "@/lib/helpers/getPrevNext";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
-import { jsonLdCMALT } from "@/lib/constants/jsonLd";
+import { jsonLdCMALT } from "@/lib/constants/site-metadata";
 
 const { CmaltRoute } = internalRoutes;
 const { CertificateIcon, InfoIcon, ReadMoreIcon } = icons;

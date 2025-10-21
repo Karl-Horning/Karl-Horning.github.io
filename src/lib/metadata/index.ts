@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { seo } from "@/lib/constants/seo";
+import { seo } from "@/lib/constants/site-metadata/seo";
 
 const { defaultDescription, defaultImage, siteName, siteUrl } = seo;
 

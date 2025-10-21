@@ -5,7 +5,7 @@ import { BlogPost } from "@/types";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
 import { icons, internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
-import { jsonLdBlog } from "@/lib/constants/jsonLd";
+import { jsonLdBlog } from "@/lib/constants/site-metadata";
 
 const { BlogIcon, ReadMoreIcon, RssIcon } = icons;
 const { BlogRoute, RssFeed } = internalRoutes;

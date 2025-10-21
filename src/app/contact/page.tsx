@@ -1,6 +1,6 @@
 import { externalLinks, icons, internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/metadata";
-import { jsonLdContact } from "@/lib/constants/jsonLd";
+import { jsonLdContact } from "@/lib/constants/site-metadata";
 import Form from "@/components/contact/Form";
 import ContactCta from "@/components/ui/ContactCta";
 import PageIntroSplit from "@/components/ui/PageIntroSplit";
