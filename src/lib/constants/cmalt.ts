@@ -27,6 +27,8 @@ export const cmaltEvidence = {
         nextJsCertificate:
             "/cmalt/certificates/next-js-the-complete-developers-guide-2024.pdf",
         ptllsCertificate: "/cmalt/certificates/ptlls-2012.pdf",
+        understandingManualTestingCertificate:
+            "https://www.linkedin.com/learning/certificates/f782913a2c36840d82ebfa0ae237428710a86e940d24b950fb384e4871e67d7b?u=2720425",
         webDeveloperCertificate:
             "/cmalt/certificates/the-web-developer-bootcamp-2019.pdf",
     },
@@ -101,8 +103,11 @@ export const cmaltEvidence = {
             "/cmalt/screenshots/jira-fundamentals-badge-screenshot.png",
         joiningTeamsMeetingScreenshot:
             "/cmalt/screenshots/joining-a-microsoft-teams-meeting-from-the-session-details-page-screenshot.webp",
+        lmsProjectGroupNotesScreenshot:
+            "/cmalt/screenshots/lms-project-group-notes-screenshot.png",
         microsoftTeamsFaqScreenshot:
             "/cmalt/screenshots/microsoft-teams-faq-screenshot.png",
+        pocCleaningScreenshot: "/cmalt/screenshots/poc-cleaning-screenshot.png",
         sessionRatingsScreenshot: "/cmalt/screenshots/session-ratings.webp",
         sessionReportRatingsScreenshot:
             "/cmalt/screenshots/session-report-ratings.webp",
