@@ -1,4 +1,4 @@
-import BlogLayout from "@/components/layouts/BlogLayout";
+import BlogLayout from "@/components/layouts1/BlogLayout";
 import { meta } from "./meta";
 import {
     htmlExample,

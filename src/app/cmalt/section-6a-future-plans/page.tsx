@@ -1,4 +1,4 @@
-import CmaltLayout from "@/components/layouts/CmaltLayout";
+import CmaltLayout from "@/components/layouts1/CmaltLayout";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/helpers";
 import { meta } from "./meta";

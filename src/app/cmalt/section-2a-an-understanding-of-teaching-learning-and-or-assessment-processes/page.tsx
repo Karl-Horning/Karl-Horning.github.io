@@ -1,5 +1,5 @@
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
-import CmaltLayout from "@/components/layouts/CmaltLayout";
+import CmaltLayout from "@/components/layouts1/CmaltLayout";
 import {
     certificates,
     diagrams,

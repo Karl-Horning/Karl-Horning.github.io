@@ -1,4 +1,4 @@
-import ProjectLayout from "@/components/layouts/ProjectLayout";
+import ProjectLayout from "@/components/layouts1/ProjectLayout";
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import Link from "next/link";
 import { meta } from "./meta";
