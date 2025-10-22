@@ -40,6 +40,12 @@ export default function Page() {
                 inclusive digital experiences.
             </p>
 
+            <p>
+                I&apos;ve been collecting accessibility resources for over seven
+                years, and this post will continue to evolve as I discover new
+                tools and updates.
+            </p>
+
             <h2>Accessibility Checklist</h2>
             <p>
                 Start by familiarising yourself with accessibility standards and
