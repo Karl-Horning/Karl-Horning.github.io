@@ -15,35 +15,36 @@ export default function Page() {
     return (
         <BlogLayout {...meta}>
             <p>
-                Creating accessible websites isn&apos;t just a legal or ethical
-                responsibility — it&apos;s good design. Accessibility ensures
-                that everyone, regardless of ability, can interact with digital
-                content effectively. Whether you&apos;re auditing an existing
-                site or building something new, the following resources will
-                help you understand best practices, run accessibility tests, and
-                stay aligned with current standards such as WCAG 2.2.
+                Creating websites that everyone can use isn&apos;t just a legal
+                or ethical responsibility — it&apos;s good design. Accessibility
+                ensures that everyone, regardless of ability, can interact with
+                digital content effectively. Whether you&apos;re auditing an
+                existing site or building something new, the following resources
+                will help you understand best practices, run accessibility
+                tests, and stay aligned with current standards such as WCAG 2.2.
             </p>
 
             <p>
-                ⭐️ <em>Starred items</em> are recommended starting points if
-                you&apos;re new to accessibility or just need the essentials.
+                ⭐️ <strong>Pro tip:</strong> Look out for the items marked with
+                a star — they&apos;re great starting points if you&apos;re new
+                to accessibility or just want to focus on the essentials.
             </p>
 
             <h2>How to Use This Guide</h2>
             <p>
-                This post is organised by category so you can quickly find what
-                you need — from community-led resources and official
-                documentation to testing tools and contrast checkers. It&apos;s
-                designed as both a learning guide and a practical reference for
-                developers, designers, and content creators who want to build
-                more inclusive digital experiences.
+                I&apos;ve organised these resources into categories so you can
+                find what&apos;s relevant quickly. From community-led sites and
+                official guidelines to testing tools and contrast checkers, this
+                guide is both a learning resource and a practical reference for
+                developers, designers, and content creators aiming to build more
+                inclusive digital experiences.
             </p>
 
-            <h2>Checklist</h2>
+            <h2>Accessibility Checklist</h2>
             <p>
                 Start by familiarising yourself with accessibility standards and
                 checklists. These will help you evaluate your content and
-                identify common issues early in development.
+                identify common issues early before they become bigger problems.
             </p>
 
             <FigureWithCaption
@@ -61,8 +62,8 @@ export default function Page() {
                     >
                         The Web Content Accessibility Guidelines (WCAG)
                     </a>
-                    : A comprehensive checklist based on WCAG, providing
-                    guidelines for creating accessible web content.
+                    : A detailed checklist based on WCAG, providing guidelines
+                    for creating accessible web content.
                 </li>
             </ul>
 
@@ -75,7 +76,7 @@ export default function Page() {
             <FigureWithCaption
                 src={"/img/blog/accessibility-resources/a11y-screenshot.avif"}
                 alt=""
-                caption="The A11Y Project — a community hub for practical accessibility resources."
+                caption="The A11Y Project is a community hub for practical accessibility resources."
             />
 
             <ul>
@@ -89,7 +90,7 @@ export default function Page() {
                         The A11Y Project
                     </a>
                     : A community-driven resource that makes accessibility
-                    easier to understand and implement.
+                    easier to understand and apply.
                 </li>
                 <li>
                     <a
@@ -108,7 +109,7 @@ export default function Page() {
             <FigureWithCaption
                 src={"/img/blog/accessibility-resources/mdn-screenshot.avif"}
                 alt=""
-                caption="Mozilla's accessibility documentation — a go-to resource for developers."
+                caption="Mozilla's resource hub for developers tackling accessibility."
             />
 
             <ul>
@@ -142,15 +143,15 @@ export default function Page() {
                     >
                         Web Accessibility Tutorials
                     </a>
-                    : Tutorials provided by the Web Accessibility Initiative
-                    (WAI).
+                    : Step-by-step tutorials from the Web Accessibility
+                    Initiative (WAI).
                 </li>
             </ul>
 
             <h3>Articles and Tutorials</h3>
             <p>
-                These tutorials and articles provide background, techniques, and
-                practical advice for implementing accessible design.
+                These give background, techniques, and practical tips to bring
+                accessibility into your workflow.
             </p>
 
             <h4>Introduction to Accessibility</h4>
@@ -163,7 +164,8 @@ export default function Page() {
                     >
                         Accessibility
                     </a>{" "}
-                    (W3C): Overview of accessibility standards.
+                    (W3C): An overview of the standards that shape accessible
+                    web design.
                 </li>
                 <li>
                     <a
@@ -173,8 +175,8 @@ export default function Page() {
                     >
                         Handling common accessibility problems
                     </a>
-                    : Guidance on solving common accessibility issues from
-                    Mozilla.
+                    : Mozilla&apos;s guidance on solving common accessibility
+                    issues.
                 </li>
             </ul>
 
@@ -183,7 +185,7 @@ export default function Page() {
             <FigureWithCaption
                 src={"/img/blog/accessibility-resources/webaim-screenshot.avif"}
                 alt=""
-                caption="WebAIM's guide explaining how to make web interfaces navigable by keyboard."
+                caption="WebAIM's guide explaining how to make sites navigable by keyboard."
             />
 
             <ul>
@@ -196,7 +198,7 @@ export default function Page() {
                     >
                         Keyboard Accessibility
                     </a>
-                    : In-depth guide from WebAIM.
+                    : A detailed walkthrough for making sites keyboard-friendly.
                 </li>
                 <li>
                     <a
@@ -206,7 +208,7 @@ export default function Page() {
                     >
                         Keyboard (MDN)
                     </a>
-                    : Keyboard accessibility information from Mozilla.
+                    : Mozilla&apos;s advice on keyboard accessibility standards.
                 </li>
             </ul>
 
@@ -220,7 +222,7 @@ export default function Page() {
                     >
                         Accessibility features in Firefox
                     </a>
-                    : Overview of accessibility options in Firefox.
+                    : How Firefox supports accessibility features
                 </li>
                 <li>
                     <a
@@ -230,16 +232,17 @@ export default function Page() {
                     >
                         ARIA in HTML
                     </a>
-                    : Specification for Accessible Rich Internet Applications.
+                    : The official W3 guide to using ARIA roles and labels
+                    effectively
                 </li>
             </ul>
 
-            <h4>Testing Standards</h4>
+            <h4>Testing Standards & Case Studies</h4>
 
             <FigureWithCaption
                 src={"/img/blog/accessibility-resources/ssa508-screenshot.avif"}
                 alt=""
-                caption="SSA's Section 508 Test Method — an official framework for evaluating accessibility."
+                caption="SSA's Section 508 Test Method is an official framework for evaluating accessibility."
             />
 
             <ul>
@@ -252,8 +255,8 @@ export default function Page() {
                     >
                         SSA 508 Test Method
                     </a>
-                    : The Social Security Administration&apos;s Accessibility
-                    Test Method.
+                    : The Social Security Administration&apos;s accessibility
+                    testing approach.
                 </li>
             </ul>
 
@@ -278,7 +281,7 @@ export default function Page() {
                     >
                         This guide is unreadable
                     </a>
-                    : A cautionary tale about bad accessibility practices.
+                    : A cautionary tale about poor accessibility practices.
                 </li>
             </ul>
 
@@ -298,7 +301,7 @@ export default function Page() {
                     "/img/blog/accessibility-resources/lighthouse-screenshot.avif"
                 }
                 alt=""
-                caption="Google Lighthouse — a free tool for auditing accessibility and performance."
+                caption="Google Lighthouse offers audits for accessibility and site performance."
             />
 
             <ul>
@@ -311,7 +314,7 @@ export default function Page() {
                     >
                         Lighthouse
                     </a>
-                    : Google&apos;s tool for web performance and accessibility.
+                    : A free, open-source audit tool from Google.
                 </li>
                 <li>
                     <a
@@ -321,7 +324,7 @@ export default function Page() {
                     >
                         Axe
                     </a>
-                    : A popular accessibility testing toolkit.
+                    : One of the most popular accessibility testing libraries.
                 </li>
             </ul>
 
@@ -345,8 +348,8 @@ export default function Page() {
                     >
                         Accessibility Insights
                     </a>
-                    : Microsoft&apos;s tool for identifying accessibility
-                    issues.
+                    : Microsoft&apos;s extension for finding and fixing
+                    accessibility problems.
                 </li>
                 <li>
                     ARIA DevTools{" "}
@@ -385,19 +388,12 @@ export default function Page() {
                     >
                         (Chrome)
                     </a>
-                    : A web accessibility evaluation tool by{" "}
-                    <a
-                        href="https://webaim.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        WebAIM
-                    </a>
-                    .
+                    : WebAIM&apos;s easy-to-use browser extension for visual
+                    accessibility checks.
                 </li>
             </ul>
 
-            <h3>Standalone Software</h3>
+            <h3>Standalone & Web-Based Tools</h3>
             <ul>
                 <li>
                     <a
@@ -421,16 +417,14 @@ export default function Page() {
                 </li>
             </ul>
 
-            <h3>Web-Based Tools</h3>
-
-            <h4>Contrast Checkers</h4>
+            <h3>Contrast and Visual Tests</h3>
 
             <FigureWithCaption
                 src={
                     "/img/blog/accessibility-resources/contrast-checker-screenshot.avif"
                 }
                 alt=""
-                caption="WebAIM's Contrast Checker — quickly test colour contrast ratios for text and UI elements."
+                caption="WebAIM's Contrast Checker makes colour contrast testing quick and simple."
             />
 
             <ul>
@@ -443,7 +437,8 @@ export default function Page() {
                     >
                         Contrast Checker
                     </a>
-                    : WebAIM&apos;s contrast checker.
+                    : Quickly see if text and background colours meet
+                    accessibility standards.
                 </li>
                 <li>
                     <a
@@ -453,16 +448,16 @@ export default function Page() {
                     >
                         Colour Contrast Accessibility Validator
                     </a>
-                    : Tool for checking colour contrast.
+                    : An alternative for contrast checks.
                 </li>
             </ul>
 
-            <h4>Accessibility Testing Tools</h4>
+            <h3>Visual Accessibility Testing</h3>
 
             <FigureWithCaption
                 src={"/img/blog/accessibility-resources/wave-screenshot.avif"}
                 alt=""
-                caption="The WAVE tool from WebAIM — a visual way to identify accessibility errors on a page."
+                caption="WebAIM's WAVE tool highlights accessibility issues visually on the page."
             />
 
             <ul>
@@ -475,7 +470,8 @@ export default function Page() {
                     >
                         WAVE
                     </a>
-                    : WebAIM&apos;s tool for evaluating web accessibility.
+                    : One of the most widely used visual accessibility
+                    evaluation tools.
                 </li>
                 <li>
                     <a
@@ -485,7 +481,7 @@ export default function Page() {
                     >
                         HTML_CodeSniffer
                     </a>
-                    : Code-level accessibility testing extension.
+                    : Detects code-level issues.
                 </li>
                 <li>
                     <a
@@ -495,17 +491,38 @@ export default function Page() {
                     >
                         tota11y
                     </a>
-                    : JavaScript library for visualising accessibility issues.
+                    : A JavaScript library that visualises accessibility errors
+                    directly on your webpage.
                 </li>
             </ul>
 
-            <h2>Notes</h2>
-            <ul>
-                <li>
-                    <strong>Starred Tools (⭐)</strong>: These are recommended
-                    starting points for those needing high-priority tools.
-                </li>
-            </ul>
+            <h2>Final Thoughts</h2>
+
+            <p>
+                Getting started with accessibility can feel overwhelming at
+                first, but even small, consistent steps make a difference. The
+                key is to keep learning, testing, and listening to the people
+                who will actually use your digital content. Accessibility
+                isn&apos;t about ticking boxes — it&apos;s about creating better
+                experiences for everyone, regardless of ability.
+            </p>
+
+            <p>
+                Don&apos;t be discouraged by the technical challenges; it&apos;s
+                a journey of ongoing improvement. Use the tools and resources
+                above as your allies, and don&apos;t hesitate to seek feedback
+                from users or fellow developers. The more inclusive your
+                approach, the more your work can truly make a positive impact.
+            </p>
+
+            <p>
+                In the end, accessibility benefits us all. When we design with
+                everyone in mind, we create websites, apps, and digital spaces
+                that are more usable, welcoming, and effective. Keep at it —
+                every bit of effort counts.
+            </p>
+
+            <p>— Karl</p>
 
             <h2>Further Reading</h2>
             <ul>
@@ -537,19 +554,6 @@ export default function Page() {
                     </a>
                 </li>
             </ul>
-
-            <h2>Final Thoughts</h2>
-
-            <p>
-                Accessibility is an ongoing process, not a one-time checklist.
-                Regular testing, user feedback, and staying up to date with
-                evolving standards will help ensure your content remains
-                inclusive. Small improvements — like adding alt text, checking
-                colour contrast, and improving keyboard navigation — can make a
-                big difference to your users.
-            </p>
-
-            <p>— Karl</p>
         </BlogLayout>
     );
 }
