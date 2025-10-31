@@ -8,15 +8,17 @@ import Link from "next/link";
  * @returns The rendered footer with social icons and links.
  */
 export default function Footer() {
+    const year = new Date().getFullYear();
+
     return (
         <footer
             id="footer"
-            className="border-t border-slate-200 py-10 text-center text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400"
+            className="border-t border-slate-200 py-10 text-center text-slate-600 dark:border-slate-800 dark:text-slate-400"
             role="contentinfo"
         >
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
                 <p className="text-sm" aria-label="Copyright notice">
-                    &copy; 2025 Made with ❤️ and TypeScript by Karl Horning.
+                    &copy; {year} Made with ❤️ and TypeScript by Karl Horning.
                 </p>
                 <nav
                     aria-label="Social media links"
@@ -43,7 +45,7 @@ export default function Footer() {
                             }
                         >
                             <Icon
-                                className="h-5 w-5 text-2xl"
+                                className="text-4xl md:text-lg"
                                 aria-hidden="true"
                             />
                         </Link>
