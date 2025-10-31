@@ -3,34 +3,38 @@ import { internalRoutes } from "./internal.routes";
 import { icons } from "./icons";
 import { externalLinks } from "./external.links";
 
+const { CodePenIcon, GitHubIcon, InfoIcon, LinkedInIcon, RssIcon } = icons;
+const { HomeRoute, RssFeed } = internalRoutes;
+const { CodePenLink, GitHubLink, LinkedInLink } = externalLinks;
+
 /**
  * A collection of social navigation links, each with a label, URL, and icon.
  * Includes links to external profiles and internal routes.
  */
 export const socialLinks: SocialLink[] = [
     {
-        label: "About",
-        href: internalRoutes.AboutRoute,
-        icon: icons.InfoIcon,
+        label: "KarlHorning.dev",
+        href: HomeRoute,
+        icon: InfoIcon,
     },
     {
         label: "GitHub",
-        href: externalLinks.GitHubLink,
-        icon: icons.GitHubIcon,
+        href: GitHubLink,
+        icon: GitHubIcon,
     },
     {
         label: "LinkedIn",
-        href: externalLinks.LinkedInLink,
-        icon: icons.LinkedInIcon,
+        href: LinkedInLink,
+        icon: LinkedInIcon,
     },
     {
-        label: "Contact",
-        href: internalRoutes.ContactRoute,
-        icon: icons.ContactIcon,
+        label: "CodePen",
+        href: CodePenLink,
+        icon: CodePenIcon,
     },
     {
         label: "RSS Feed",
-        href: internalRoutes.RssFeed,
-        icon: icons.RssIcon,
+        href: RssFeed,
+        icon: RssIcon,
     },
 ];
