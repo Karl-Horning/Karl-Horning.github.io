@@ -16,7 +16,7 @@ export default function Footer() {
         >
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
                 <p className="text-sm" aria-label="Copyright notice">
-                    &copy; 2025 Karl Horning. All rights reserved.
+                    &copy; 2025 Made with ❤️ and TypeScript by Karl Horning.
                 </p>
                 <nav
                     aria-label="Social media links"
