@@ -54,7 +54,7 @@ import {
 import { TbApi } from "react-icons/tb";
 
 import { BiLogoPostgresql, BiSolidHomeHeart } from "react-icons/bi";
-import { GrCertificate, GrContact } from "react-icons/gr";
+import { GrCertificate, GrContact, GrTestDesktop } from "react-icons/gr";
 
 /**
  * Centralised collection of icon components sourced from various
@@ -146,6 +146,11 @@ export const icons: IconRegistry = {
      * `FaDatabase` icon from [Font Awesome 6](https://react-icons.github.io/react-icons/icons/fa6/)
      */
     DatabaseIcon: FaDatabase,
+
+    /**
+     * `GrTestDesktop` icon from [Grommet-Icons](https://react-icons.github.io/react-icons/icons/gr/)
+     */
+    DemoIcon: GrTestDesktop,
 
     /**
      * `HiOutlineExternalLink` icon from [Heroicons](https://react-icons.github.io/react-icons/icons/hi/)
