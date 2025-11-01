@@ -12,5 +12,6 @@ export const navLinks = [
     { label: "Blog", href: internalRoutes.BlogRoute },
     { label: "CMALT", href: internalRoutes.CmaltRoute },
     { label: "Projects", href: internalRoutes.ProjectsRoute },
+    { label: "Demos", href: internalRoutes.DemosRoute },
     { label: "Contact", href: internalRoutes.ContactRoute },
 ] satisfies readonly NavLink[];

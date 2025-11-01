@@ -22,6 +22,9 @@ export const internalRoutes = {
     /** Contact page */
     ContactRoute: "/contact",
 
+    /** Demos page */
+    DemosRoute: "/demos",
+
     /** Projects page */
     ProjectsRoute: "/projects",
 
