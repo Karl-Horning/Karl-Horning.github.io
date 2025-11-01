@@ -2,14 +2,12 @@
 
 ---
 
-<p>
-  <img src="https://img.shields.io/github/deployments/Karl-Horning/Karl-Horning.github.io/github-pages?label=GitHub%20Pages&logo=github" alt="Deploy" style="vertical-align:middle; margin-right:8px;" />
-  <img src="https://img.shields.io/badge/Lighthouse_Performance-99-brightgreen" alt="Lighthouse Performance 99" style="vertical-align:middle; margin-right:8px;" />
-  <img src="https://img.shields.io/badge/Lighthouse_Accessibility-100-brightgreen" alt="Lighthouse Accessibility 100" style="vertical-align:middle; margin-right:8px;" />
-  <img src="https://img.shields.io/badge/Lighthouse_Best_Practices-100-blue" alt="Lighthouse Best Practices 100" style="vertical-align:middle; margin-right:8px;" />
-  <img src="https://img.shields.io/badge/Lighthouse_SEO-100-blueviolet" alt="Lighthouse SEO 100" style="vertical-align:middle; margin-right:8px;" />
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License" style="vertical-align:middle; margin-right:8px;" />
-</p>
+![GitHub Pages Deploy](https://img.shields.io/github/deployments/Karl-Horning/Karl-Horning.github.io/github-pages?label=GitHub%20Pages\&logo=github)
+![Lighthouse Performance 99](https://img.shields.io/badge/Lighthouse_Performance-99-brightgreen)
+![Lighthouse Accessibility 100](https://img.shields.io/badge/Lighthouse_Accessibility-100-brightgreen)
+![Lighthouse Best Practices 100](https://img.shields.io/badge/Lighthouse_Best_Practices-100-blue)
+![Lighthouse SEO 100](https://img.shields.io/badge/Lighthouse_SEO-100-blueviolet)
+![MIT License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -32,7 +30,7 @@
     - [Current Setup](#current-setup)
     - [Planned Additions](#planned-additions)
   - [🌐 Live Site](#-live-site)
-    - [Latest Lighthouse Scores (16 Oct 2025)](#latest-lighthouse-scores-16-oct-2025)
+    - [Lighthouse Scores (16 Oct 2025)](#lighthouse-scores-16-oct-2025)
   - [📌 Roadmap](#-roadmap)
   - [📚 Further Reading](#-further-reading)
   - [📄 Licence](#-licence)
@@ -42,8 +40,7 @@
 
 ## 🤓 Overview
 
-**KarlHorning.dev** is my centralised developer portfolio — a single, accessible [Next.js](https://nextjs.org/) build that replaces the need to maintain multiple stacks.
-It unifies my **projects**, **blog**, and **CMALT portfolio** into one modular, maintainable codebase.
+**KarlHorning.dev** is my centralised developer portfolio — a single, accessible [Next.js](https://nextjs.org/) build that unifies my **projects**, **blog**, and **CMALT portfolio** into one modular, maintainable codebase.
 
 The site reflects my approach to professional front-end development:
 
@@ -57,37 +54,36 @@ Migrating from Eleventy to Next.js reduced maintenance by roughly **2–3 hours 
 
 ## 🎨 Design Approach
 
-The site prioritises **clarity**, **readability**, and **inclusivity** over visual excess.
-Typography, spacing, and colour are all built around accessibility and tone:
+The design emphasises **clarity**, **readability**, and **inclusivity** over visual excess.
 
-- **Layout:** Grid-based rhythm with clear typographic hierarchy
-- **Colour palette:** Balanced, accessible contrasts for both light and dark modes (`#F6E6EC`, `#C1EOF6`, `#EDABC6`, `#4C9DCD`, `#CB2D6F`, `#163753`)
-- **Animations:** Subtle and purposeful — for example, a light CSS glitch hover effect on the logo adds character without distraction
-- **Responsiveness:** Mobile-first, optimised for clarity across all devices
-- **Interaction:** Keyboard- and screen reader-friendly components throughout
+- **Layout:** Grid-based with clear typographic hierarchy
+- **Colours:** Accessible palette for light and dark modes (`#F6E6EC`, `#C1EOF6`, `#EDABC6`, `#4C9DCD`, `#CB2D6F`, `#163753`)
+- **Animations:** Minimal and purposeful — for example, a subtle CSS glitch hover effect on the logo
+- **Responsiveness:** Mobile-first, designed for clarity across all viewports
+- **Interaction:** Fully keyboard- and screen reader-accessible
 
-The goal is to maintain a calm, professional aesthetic while adhering to WCAG 2.2 AA standards.
+The overall aesthetic aims for calm professionalism while meeting **WCAG 2.2 AA** standards.
 
 ---
 
 ## ♿ Accessibility & Performance
 
-Accessibility and performance are tested continuously during development and post-deployment using **Lighthouse**, **axe**, and **WAVE**.
+Accessibility and performance are tested continuously during development and deployment with **Lighthouse**, **axe**, and **WAVE**.
 
 ### Accessibility Principles
 
-- Semantic HTML and ARIA roles used consistently
-- Visible "Skip to content" link for keyboard users
-- Logical heading structure (`h1–h3`) across pages
-- All media includes descriptive `alt` text
-- Form elements fully labelled and focus-managed
-- Colour contrast verified in both modes
+- Semantic HTML and consistent ARIA roles
+- Visible "Skip to content" link
+- Logical heading hierarchy
+- Descriptive `alt` text for media
+- Fully labelled, focus-managed form elements
+- Verified contrast ratios for all modes
 
 ### Performance Practices
 
 - **Static generation** via `next export`
 - **Optimised media** using Sharp and Next/Image
-- **No tracking or third-party scripts**
+- **No third-party tracking scripts**
 - **Lighthouse scores:**
 
   - Performance: 97 (Mobile) / 99 (Desktop)
@@ -110,10 +106,10 @@ Accessibility and performance are tested continuously during development and pos
 - **UI:** React 19 + Tailwind CSS
 - **Tooling:** ESLint + Prettier (Tailwind plugin)
 - **Icons:** React Icons
-- **Image Optimisation:** Sharp
+- **Images:** Sharp for optimisation
 - **Deployment:** GitHub Pages (static export)
-- **Accessibility:** WCAG-aware, semantic, ARIA-friendly components
-- **CI/CD:** GitHub Actions for linting, type checks, build, and `next export`
+- **Accessibility:** WCAG-aware, semantic components
+- **CI/CD:** GitHub Actions (linting, type checks, build, and export)
 
 ---
 
@@ -143,11 +139,11 @@ npm install
 
 ```bash
 src/
-├── app/                    # App Router pages (Home, About, Projects, CMALT, etc.)
-├── components/             # Reusable UI and layout components
-├── lib/                    # Metadata, constants, and helper functions
-├── types/                  # Shared TypeScript types (UI, data models)
-├── public/data/            # JSON-based blog, project, and CMALT data
+├── app/            # App Router pages (Home, About, Projects, CMALT, etc.)
+├── components/     # Reusable UI and layout components
+├── lib/            # Metadata, constants, and helper functions
+├── types/          # Shared TypeScript types
+├── public/data/    # JSON-based blog, project, and CMALT data
 ```
 
 The architecture follows a **clear separation of concerns** between content, types, and logic — designed for scalability and maintainability.
@@ -156,24 +152,22 @@ The architecture follows a **clear separation of concerns** between content, typ
 
 ## ✍️ Code Style & Linting
 
-This project uses:
-
 - **ESLint** with `eslint-config-next`
-- **Prettier** with the Tailwind CSS plugin
-- **Conventional Commits** (including custom scopes such as `a11y` and `ux`)
-- **JSDoc annotations** to document functions and datasets
+- **Prettier** with Tailwind CSS plugin
+- **Conventional Commits** (with scopes such as `a11y` and `ux`)
+- **JSDoc** for function and dataset documentation
 
 ---
 
 ## 🔍 Tests
 
-Accessibility testing is automated with **Playwright** and **axe-core**, ensuring that all routes meet WCAG 2.2 AA standards.
+Automated accessibility testing is powered by **Playwright** and **axe-core**, ensuring all routes meet WCAG 2.2 AA standards.
 
 ### Current Setup
 
 - **Framework:** [Playwright](https://playwright.dev/)
-- **Accessibility Engine:** [axe-core](https://github.com/dequelabs/axe-core) via `@axe-core/playwright`
-- **Scope:** All major routes (`/`, `/about`, `/blog`, `/cmalt`, `/contact`, `/projects`)
+- **Engine:** [axe-core](https://github.com/dequelabs/axe-core) via `@axe-core/playwright`
+- **Scope:** `/`, `/about`, `/blog`, `/cmalt`, `/contact`, `/projects`, `/demos`
 - **Environment:** Headless Chromium
 
 Each page is loaded in a real browser environment, scanned with `axe-core`, and must pass with zero accessibility violations before the build is considered successful.
@@ -182,18 +176,19 @@ Each page is loaded in a real browser environment, scanned with `axe-core`, and 
 npm run test
 ```
 
-**Example output:**
+**Example Output:**
 
 ```bash
-Running 6 tests using 1 worker
-✓  A11y: / (1.5s)
-✓  A11y: /about (1.0s)
+Running 7 tests using 1 worker
+✓  A11y: / (1.2s)
+✓  A11y: /about (1.6s)
 ✓  A11y: /blog (0.9s)
-✓  A11y: /cmalt (1.0s)
-✓  A11y: /contact (1.1s)
-✓  A11y: /projects (1.1s)
+✓  A11y: /cmalt (0.8s)
+✓  A11y: /contact (0.8s)
+✓  A11y: /demos (0.7s)
+✓  A11y: /projects (0.8s)
 
-6 passed (7.9s)
+7 passed (8.2s)
 ```
 
 ### Planned Additions
@@ -204,9 +199,9 @@ Running 6 tests using 1 worker
 
 ## 🌐 Live Site
 
-Visit: [karlhorning.dev](https://www.karlhorning.dev)
+**URL:** [karlhorning.dev](https://www.karlhorning.dev)
 
-### Latest Lighthouse Scores (16 Oct 2025)
+### Lighthouse Scores (16 Oct 2025)
 
 | Metric         | Mobile | Desktop |
 | -------------- | ------ | ------- |
@@ -222,10 +217,10 @@ Visit: [karlhorning.dev](https://www.karlhorning.dev)
 - [x] Migrate from Eleventy to Next.js
 - [x] Add Projects & CMALT portfolio routes
 - [x] Achieve 100 Accessibility and SEO scores
-- [x] Automate CI/CD deployment via GitHub Actions
+- [x] Automate CI/CD via GitHub Actions
 - [x] Automated accessibility checks
-- [ ] Add Jest test coverage
-- [ ] Integrate privacy-friendly analytics
+- [ ] Add Jest coverage
+- [ ] Add privacy-friendly analytics
 
 ---
 
