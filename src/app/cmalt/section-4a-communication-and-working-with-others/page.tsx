@@ -53,32 +53,39 @@ export default function Page() {
                     visual technical documentation, to delivering departmental
                     presentations and preparing structured meeting summaries.
                     This adaptability is essential when collaborating across
-                    cross-functional groups such as DEPP&apos;s technical and
-                    academic teams.
+                    cross-functional groups such as the Digital Education
+                    Platform Project&apos;s (DEPP) technical and academic teams,
+                    and collaboration more broadly is central to my role. I work
+                    with colleagues across faculties and support teams to
+                    co-design learning experiences and advise on the use of
+                    Canvas LMS and related technologies.
                 </p>
 
                 <p>
-                    Collaboration is central to my role. I work with colleagues
-                    across faculties and support teams to co-design learning
-                    experiences and advise on the use of Canvas LMS and related
-                    technologies. A significant part of my current work is
-                    within the Digital Education Platform Project (DEPP),
-                    supporting Imperial&apos;s transition from Blackboard to
-                    Canvas. Within the Platform Integration and Migration and{" "}
+                    For instance, I have been working closely with learning
+                    technologists from the Business School, Interdisciplinary
+                    EdTech Lab, Faculty of Natural Sciences, Faculty of
+                    Medicine, and Faculty of Engineering, alongside ICT
+                    developers and platform specialists, ensuring that academic
+                    perspectives informed technical decision-making and vice
+                    versa. A significant part of my current work is within the
+                    DEPP, supporting Imperial&apos;s transition from Blackboard
+                    to Canvas. Within the Platform Integration and Migration and
                     Testing and Evaluation groups, I help surface technical
-                    dependencies, coordinate feedback loops, and ensure{" "}
+                    dependencies, coordinate feedback loops, and ensure
                     actionable outcomes are captured in Asana so they can be
                     implemented by the right teams.
                 </p>
 
                 <p>
-                    In 2024, I delivered a department-wide presentation on DEPP,
-                    outlining milestones, testing processes, and feedback
+                    In 2024, I delivered a department-wide presentation on the
+                    DEPP, outlining milestones, testing processes, and feedback
                     mechanisms. This improved shared understanding and aligned
                     timelines between technical and academic teams. In June
                     2025, I collaborated with colleagues in the Business School
                     on a Proof of Concept data-cleaning exercise, identifying
-                    and annotating discrepancies to streamline downstream work.
+                    and annotating discrepancies to streamline downstream work
+                    and reduce the time needed for subsequent data validation.
                 </p>
 
                 <p>
@@ -148,7 +155,7 @@ export default function Page() {
                             Web Accessibility Resources and Tools: Guidelines,
                             Checklists, and Testing Solutions
                         </a>{" "}
-                        (shared with DEPP in January 2025).
+                        (shared with the DEPP in January 2025).
                     </li>
                 </ul>
 
@@ -177,14 +184,14 @@ export default function Page() {
                     communication practice. I have learned that plain-English
                     explanations, clear documentation of decisions, and explicit
                     next steps are essential for maintaining momentum and trust.
-                    In DEPP, this has meant translating complex platform
+                    In the DEPP, this has meant translating complex platform
                     evaluations and test findings into concise updates that
                     productively guide technical and academic teams.
                 </p>
 
                 <p>
-                    Through my involvement in DEPP meetings, I have learned the
-                    value of structured preparation and documentation from
+                    Through my involvement in the DEPP meetings, I have learned
+                    the value of structured preparation and documentation from
                     colleagues who model effective facilitation practices.
                     Project owners consistently share agendas in advance and
                     follow them closely during meetings, which helps maintain
@@ -220,7 +227,22 @@ export default function Page() {
                     pain points and adoption barriers. This insight continues to
                     inform how I test and present my own digital tools, ensuring
                     that findings are framed in accessible, actionable language
-                    for all audiences.
+                    for all audiences. It also reinforced the importance of
+                    framing technical findings in language that prioritises user
+                    needs and accessibility. I now approach documentation and
+                    feedback summaries with greater attention to tone and
+                    structure, ensuring they are inclusive, actionable, and
+                    audience-appropriate.
+                </p>
+
+                <p>
+                    Adapting communication formats — from technical
+                    documentation to plain-language guides and visual summaries
+                    — helps ensure accessibility for colleagues with differing
+                    technical confidence or learning preferences. This
+                    flexibility is key to inclusive and effective collaboration
+                    across Imperial&apos;s diverse academic and professional
+                    communities.
                 </p>
 
                 <p>
@@ -250,7 +272,12 @@ export default function Page() {
                     through internal channels and my professional portfolio,
                     while further developing facilitation and knowledge-sharing
                     approaches that make communication consistent, scalable, and
-                    inclusive.
+                    inclusive. In doing so, I reinforce my commitment to the
+                    CMALT principles of collaboration, reflection, and the open
+                    sharing of effective practice. By documenting and
+                    disseminating lessons learned, I contribute to collective
+                    professional development both within and beyond my
+                    institution.
                 </p>
             </section>
 
@@ -262,16 +289,17 @@ export default function Page() {
                 <ul>
                     <li>
                         Practise clear, inclusive communication to connect
-                        academic, administrative, and technical teams.
+                        academic, administrative, and technical teams and ensure
+                        accessibility for diverse audiences.
                     </li>
                     <li>
-                        Contribute to DEPP through Integration/Migration and
+                        Contribute to the DEPP through Integration/Migration and
                         Testing/Evaluation groups, translating findings into
                         actionable Asana tasks.
                     </li>
                     <li>
-                        Delivered a department-wide DEPP presentation (2024) to
-                        align timelines, testing, and feedback processes.
+                        Delivered a department-wide the DEPP presentation (2024)
+                        to align timelines, testing, and feedback processes.
                     </li>
                     <li>
                         Supported a Business School Proof of Concept (June 2025)
@@ -292,6 +320,11 @@ export default function Page() {
                         Maintain currency through internal CPD, LinkedIn
                         Learning courses, and curated tech/media sources,
                         sharing highlights with colleagues.
+                    </li>
+                    <li>
+                        Align communication practice with CMALT principles of
+                        collaboration, reflection, and sharing effective
+                        practice across professional communities.
                     </li>
                 </ul>
             </section>
@@ -331,7 +364,7 @@ export default function Page() {
                         </a>{" "}
                         <em>
                             Example of structured, agenda-linked notes produced
-                            during DEPP meetings. Demonstrates learning from
+                            during the DEPP meetings. Demonstrates learning from
                             colleagues&apos; communication practices and the
                             application of accessible formatting principles.
                             Shared with the consent of project leads;
@@ -354,14 +387,6 @@ export default function Page() {
                             communication and facilitation.
                         </em>
                     </li>
-                    {/* <li>
-                        TODO: Asana task records and meeting notes — anonymised
-                        examples showing actions and ownership{" "}
-                        <em>
-                            Demonstrates structured project management and
-                            transparent communication across hybrid teams.
-                        </em>
-                    </li> */}
                 </ul>
 
                 <h3>Documentation and Dissemination</h3>
@@ -419,7 +444,7 @@ export default function Page() {
                             Checklists, and Testing Solutions (PDF)
                         </a>{" "}
                         <em>
-                            Curated resource shared with DEPP colleagues,
+                            Curated resource shared with the DEPP colleagues,
                             supporting accessible design and awareness of
                             WCAG-aligned best practice.
                         </em>
@@ -438,8 +463,8 @@ export default function Page() {
                             2024) (Certificate)
                         </a>{" "}
                         <em>
-                            Completed ahead of DEPP Proof of Concept testing to
-                            strengthen communication between technical and
+                            Completed ahead of the DEPP Proof of Concept testing
+                            to strengthen communication between technical and
                             academic stakeholders. Demonstrates reflective
                             development and understanding of user behaviour
                             beyond automated testing.
