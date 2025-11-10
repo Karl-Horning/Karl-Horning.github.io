@@ -6,4 +6,5 @@ export const repos = {
         "https://github.com/Karl-Horning/graphql-rate-limit-demo",
     oxfordLearnersDictionariesApi:
         "https://github.com/Karl-Horning/oxford-learners-dictionaries-api",
+    styleGuides: "https://github.com/Karl-Horning/karl-style-guides",
 };

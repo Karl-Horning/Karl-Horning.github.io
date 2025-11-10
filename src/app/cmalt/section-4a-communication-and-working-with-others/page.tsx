@@ -4,6 +4,7 @@ import {
     documents,
     links,
     presentations,
+    repos,
     screenshots,
 } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
@@ -21,6 +22,7 @@ const {
 } = documents;
 const { blackboardSwaggerPostmanCollectionLink } = links;
 const { deppIctPresentation } = presentations;
+const { styleGuides } = repos;
 const { lmsProjectGroupNotesScreenshot, pocCleaningScreenshot } = screenshots;
 
 // Metadata
@@ -110,7 +112,7 @@ export default function Page() {
                 </p>
 
                 <p>
-                    I also disseminate practice through documentation, practical
+                    I disseminate practice through documentation, practical
                     guides, and blog posts. Examples include:
                 </p>
 
@@ -160,15 +162,28 @@ export default function Page() {
                 </ul>
 
                 <p>
-                    My portfolio site serves as an open record of these
-                    materials, helping colleagues and the wider community access
-                    concrete, reusable guidance.
+                    I maintain a public repository of{" "}
+                    <a
+                        href={styleGuides}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        documentation and style guides
+                    </a>{" "}
+                    which consolidate the conventions I follow when writing
+                    READMEs, CSS, comments, and Git commits. Creating and
+                    maintaining these guides reinforces my commitment to
+                    clarity, accessibility, and the open sharing of effective
+                    practice, aligning with CMALT principles.
                 </p>
 
                 <p>
-                    My professional development is sustained through internal
-                    learning sessions, self-directed study (for example,
-                    LinkedIn Learning courses on accessibility,
+                    These resources, along with my professional portfolio site,
+                    serve as an open record of my work and methods, helping
+                    colleagues and the wider community access concrete, reusable
+                    guidance. My professional development is sustained through
+                    internal learning sessions, self-directed study (for
+                    example, LinkedIn Learning courses on accessibility,
                     JavaScript/TypeScript, and APIs), and engagement with
                     technology blogs and YouTube channels. I regularly share
                     useful resources with colleagues, contributing to a culture
@@ -447,6 +462,22 @@ export default function Page() {
                             Curated resource shared with the DEPP colleagues,
                             supporting accessible design and awareness of
                             WCAG-aligned best practice.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={styleGuides}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Style Guides (GitHub Repository)
+                        </a>{" "}
+                        <em>
+                            Collection of documentation and style guides
+                            (READMEs, CSS, comments, and Git commits)
+                            demonstrating consistent, accessible communication
+                            practices and commitment to sharing effective
+                            professional standards.
                         </em>
                     </li>
                 </ul>
