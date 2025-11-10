@@ -19,7 +19,7 @@ export default function ContextualStatementPage() {
                 <p>
                     I have over a decade of experience in blended and digital
                     learning, combining pedagogical expertise with technical
-                    development to improve learning experiences. Beginning as a
+                    development to improve learning experiences. As a
                     CELTA-qualified English teacher, I&apos;ve delivered over
                     10,000 lessons with consistently high ratings, and used my{" "}
                     <em>
@@ -33,24 +33,23 @@ export default function ContextualStatementPage() {
                 <p>
                     I transitioned from teaching to learning technology through
                     a growing interest in programming, which began when I
-                    automated tasks in VBA as a university administrator. While
-                    teaching in Portugal, I deepened this interest through
-                    self-study on platforms such as Khan Academy and
-                    freeCodeCamp, applying what I learned to improve workflows
-                    and enhance digital resources. As I took on new
-                    responsibilities, I expanded my work with APIs and
+                    automated tasks in Visual Basic for Applications (VBA) as a
+                    university administrator. While teaching in Portugal, I
+                    deepened this interest through self-study on platforms such
+                    as Khan Academy and freeCodeCamp, applying what I learned to
+                    improve workflows and enhance digital resources. As I took
+                    on new responsibilities, I expanded my work with APIs and
                     automation, which led to a full-time development role and
                     confirmed my path into educational technology.
                 </p>
 
                 <p>
-                    Alongside this, I&apos;ve led the development of scalable
-                    backend systems and optimised GraphQL APIs for a custom
-                    Learning Management System (LMS) supporting over 700,000
-                    learners. This dual perspective — both educational and
-                    technical — enables me to design learner-centred solutions
-                    grounded in pedagogical principles and responsive to
-                    real-world needs.
+                    I&apos;ve led the development of scalable backend systems
+                    and optimised GraphQL APIs for a custom Learning Management
+                    System (LMS) supporting over 700,000 registered learners. This dual
+                    perspective — both educational and technical — enables me to
+                    design learner-centred solutions grounded in pedagogical
+                    principles and responsive to real-world needs.
                 </p>
 
                 <p>
@@ -77,7 +76,7 @@ export default function ContextualStatementPage() {
                     content to support non-native speakers and neurodiverse
                     learners — including visual documentation, explainer videos,
                     and GIFs designed for clarity and retention. In a prior role
-                    as Transformation Project Manager, I automated financial
+                    as a Transformation Project Manager, I automated financial
                     workflows using Python and Pandas, and led Excel training to
                     promote data literacy.
                 </p>
