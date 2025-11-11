@@ -528,7 +528,7 @@ export default function Page() {
                         </a>
                     </li>
                     <li>
-                        W3C. <em>Captions (Prerecorded)</em> – WCAG 2.1
+                        W3C. <em>Captions (Prerecorded)</em> - WCAG 2.1
                         Understanding Success Criterion 1.2.2. Available at:{" "}
                         <a
                             href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html"
@@ -539,7 +539,7 @@ export default function Page() {
                         </a>
                     </li>
                     <li>
-                        W3C. <em>Info and Relationships</em> – WCAG 2.1.
+                        W3C. <em>Info and Relationships</em> - WCAG 2.1.
                         Available at:{" "}
                         <a
                             href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
@@ -550,7 +550,7 @@ export default function Page() {
                         </a>
                     </li>
                     <li>
-                        W3C. <em>Meaningful Sequence</em> – WCAG 2.1. Available
+                        W3C. <em>Meaningful Sequence</em> - WCAG 2.1. Available
                         at:{" "}
                         <a
                             href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html"
@@ -561,7 +561,7 @@ export default function Page() {
                         </a>
                     </li>
                     <li>
-                        W3C. <em>Non-text Content</em> – WCAG 2.1. Available at:{" "}
+                        W3C. <em>Non-text Content</em> - WCAG 2.1. Available at:{" "}
                         <a
                             href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
                             target="_blank"
@@ -573,7 +573,7 @@ export default function Page() {
                     <li>
                         W3C.{" "}
                         <em>Success Criterion 1.2.2 Captions (Prerecorded)</em>{" "}
-                        – WCAG 2.1 Reference. Available at:{" "}
+                        - WCAG 2.1 Reference. Available at:{" "}
                         <a
                             href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded"
                             target="_blank"
@@ -583,7 +583,7 @@ export default function Page() {
                         </a>
                     </li>
                     <li>
-                        W3C. <em>Use of Colour</em> – WCAG 2.1. Available at:{" "}
+                        W3C. <em>Use of Colour</em> - WCAG 2.1. Available at:{" "}
                         <a
                             href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html"
                             target="_blank"

@@ -3,7 +3,7 @@
  */
 export type WorkExperience = {
     /**
-     * The date range for the experience (for example, "2022–2024").
+     * The date range for the experience (for example, "2022-2024").
      */
     dates: string;
 
