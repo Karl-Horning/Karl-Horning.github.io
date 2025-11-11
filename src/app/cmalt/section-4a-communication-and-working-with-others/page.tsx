@@ -299,16 +299,16 @@ export default function Page() {
             <section id="summary">
                 <h2>Summary</h2>
 
-                <p>This section demonstrates how I:</p>
+                <p>This section demonstrates how I have:</p>
 
                 <ul>
                     <li>
-                        Practise clear, inclusive communication to connect
+                        Practised clear, inclusive communication to connect
                         academic, administrative, and technical teams and ensure
                         accessibility for diverse audiences.
                     </li>
                     <li>
-                        Contribute to the DEPP through Integration/Migration and
+                        Contributed to the DEPP through Integration/Migration and
                         Testing/Evaluation groups, translating findings into
                         actionable Asana tasks.
                     </li>
@@ -322,22 +322,22 @@ export default function Page() {
                         follow-up actions.
                     </li>
                     <li>
-                        Use structured meeting agendas, executive summaries, and
+                        Used structured meeting agendas, executive summaries, and
                         accessible formatting to enhance clarity and
                         inclusivity.
                     </li>
                     <li>
-                        Disseminate practice via documentation and blog posts
+                        Disseminated practice via documentation and blog posts
                         (Teams FAQ, Postman guides, Blackboard API article,
                         Accessibility resources).
                     </li>
                     <li>
-                        Maintain currency through internal CPD, LinkedIn
+                        Maintained currency through internal CPD, LinkedIn
                         Learning courses, and curated tech/media sources,
                         sharing highlights with colleagues.
                     </li>
                     <li>
-                        Align communication practice with CMALT principles of
+                        Aligned communication practice with CMALT principles of
                         collaboration, reflection, and sharing effective
                         practice across professional communities.
                     </li>

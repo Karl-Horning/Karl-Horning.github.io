@@ -327,6 +327,8 @@ export default function Page() {
             <section id="summary">
                 <h2>Summary</h2>
 
+                <p>This section demonstrates how I have:</p>
+
                 <ul>
                     <li>
                         Aligned my practice with EN 301 549 and WCAG 2.1 to
