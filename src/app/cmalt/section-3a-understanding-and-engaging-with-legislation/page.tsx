@@ -84,9 +84,13 @@ export default function Page() {
                 <p>
                     Accessibility and inclusivity are central to my practice as
                     a learning technologist. I work in line with EN 301 549:{" "}
-                    <em>
+                    <a
+                        href="https://accessibility-manual.dwp.gov.uk/accessibility-law/en301549-accessibility-requirements-for-ict-products-and-services"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Accessibility requirements for ICT products and services
-                    </em>
+                    </a>
                     , which incorporates the{" "}
                     <a
                         href="https://www.w3.org/TR/WCAG21/"
