@@ -58,8 +58,9 @@ export default function Page() {
                         CELTA in 2013
                     </a>
                     , I have delivered over 10,000 English language lessons to
-                    adult learners. These learners, ranging from CEFR levels A1
-                    to C2, came from professional fields such as finance, IT,
+                    adult learners. These learners, ranging from Common European
+                    Framework of Reference for Languages (CEFR) levels A1 to C2,
+                    came from professional fields such as finance, IT,
                     marketing, sales, and administration. My teaching was based
                     on <strong>communicative language teaching (CLT)</strong>{" "}
                     and <strong>task-based learning (TBL)</strong>, which
@@ -269,7 +270,7 @@ export default function Page() {
                     spend on routine administrative tasks, allowing more
                     attention to be directed towards targeted, high-value
                     support. At the same time, I encourage colleagues to see
-                    these tools not simply as shortcuts but as opportunities to
+                    these tools not simply as shortcuts, but as opportunities to
                     develop learner agency and critical thinking.
                 </p>
 
@@ -304,9 +305,11 @@ export default function Page() {
             <section id="summary">
                 <h2>Summary</h2>
 
+                <p>This section demonstrates how I have:</p>
+
                 <ul>
                     <li>
-                        Demonstrated a{" "}
+                        Made a{" "}
                         <strong>commitment to continuous improvement</strong> in
                         teaching through a focus on accessibility,
                         interactivity, and thoughtful adoption of emerging
