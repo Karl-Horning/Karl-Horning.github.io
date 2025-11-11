@@ -1,9 +1,12 @@
 import CmaltLayout from "@/components/layouts/CmaltLayout";
+import { repos } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/helpers";
 import { meta } from "./meta";
+import Link from "next/link";
 
-const { CmaltRoute } = internalRoutes;
+const { BlogRoute, CmaltRoute, HomeRoute } = internalRoutes;
+const { styleGuides } = repos;
 
 // Metadata
 export const metadata = createMetadata({
@@ -49,6 +52,71 @@ export default function Page() {
                 </p>
 
                 <p>
+                    <Link
+                        href={BlogRoute}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        I also plan to continue writing about what I learn in
+                        coding and accessibility through my blog
+                    </Link>
+                    , using it as a space to share practical examples,
+                    reflective insights, and reusable solutions for the wider
+                    learning technology community. As my technical work evolves,
+                    I will keep refining my use of TypeScript — a language I
+                    increasingly value for its ability to catch errors early and
+                    promote clarity through strong typing. I also intend to
+                    expand my use of automated accessibility testing frameworks
+                    such as <code>@axe-core/playwright</code>, which I currently
+                    use on{" "}
+                    <Link
+                        href={HomeRoute}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        karlhorning.dev
+                    </Link>{" "}
+                    to identify and resolve accessibility issues during
+                    development. This experience has shown how valuable
+                    automated testing can be in catching issues early and
+                    embedding accessibility as a core part of the development
+                    process rather than an afterthought, and I plan to continue
+                    applying it in future projects alongside manual testing.
+                </p>
+
+                <p>
+                    In future projects, I aim to deepen my data-informed
+                    approach to accessibility evaluation, combining automated
+                    testing with analytics on issue trends and resolution rates
+                    to establish evidence-based accessibility benchmarks. I also
+                    plan to continue developing my{" "}
+                    <a
+                        href={styleGuides}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Style Guides
+                    </a>{" "}
+                    repository, which consolidates documentation standards for
+                    READMEs, CSS, comments, and Git commits. Building on this
+                    foundation, I intend to expand it into a broader developer
+                    education resource — creating accessible, maintainable
+                    coding examples and guidance that support inclusive
+                    engineering practices. This will allow me to unite my
+                    background as an educator with my technical expertise,
+                    helping others apply clarity, accessibility, and
+                    sustainability principles in their own development work.
+                </p>
+
+                <p>
+                    Alongside accessibility, I am increasingly interested in
+                    ethical and sustainable design in educational technology —
+                    exploring how performance optimisation, energy efficiency,
+                    and inclusive development intersect in building equitable,
+                    responsible systems for learning.
+                </p>
+
+                <p>
                     Continuing professional development will remain a priority.
                     I plan to undertake further formal training in digital
                     accessibility and ethics in AI, and to stay actively engaged
@@ -61,12 +129,13 @@ export default function Page() {
 
                 <p>
                     Finally, I aim to mentor others entering the learning
-                    technology profession, particularly those from
-                    underrepresented or non-traditional backgrounds. Having
+                    technology and development professions, particularly those
+                    from underrepresented or non-traditional backgrounds. Having
                     benefited from strong peer networks myself, I believe it is
                     important to give back by encouraging reflective,
-                    learner-centred practice and by supporting the professional
-                    growth of others through initiatives like CMALT.
+                    learner-centred practice and by supporting others in
+                    developing their own inclusive, sustainable approaches to
+                    technology.
                 </p>
             </section>
         </CmaltLayout>
