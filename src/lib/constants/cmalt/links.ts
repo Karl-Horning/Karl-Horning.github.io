@@ -6,4 +6,6 @@ export const links = {
         "https://www.imperial.ac.uk/about/education/our-projects/learning-management-system/",
     dyslexiaAwareness:
         "https://learn.microsoft.com/en-us/users/karlhorning-7806/achievements/uyj64lz3",
+    learnlightPlatformCaseStudy:
+        "https://www.karlhorning.dev/projects/learnlight-platform",
 };

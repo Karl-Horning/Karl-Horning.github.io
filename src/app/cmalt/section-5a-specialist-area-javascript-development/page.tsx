@@ -7,7 +7,8 @@ import { meta } from "./meta";
 // Evidence
 const { CmaltRoute } = internalRoutes;
 const { GitHubLink, LinkedInLink, PortfolioLink } = externalLinks;
-const { blackboardPostmanCollection, graphQlRateLimitDemo } = repos;
+const { blackboardPostmanCollection, graphQlRateLimitDemo, styleGuides } =
+    repos;
 const {
     appleTeacherCertificate,
     electronCertificate,
@@ -16,7 +17,11 @@ const {
     webDeveloperCertificate,
 } = certificates;
 const { jiraFundamentalsScreenshot } = screenshots;
-const { blackboardSwaggerPostmanCollectionLink, deppProjectLink } = links;
+const {
+    blackboardSwaggerPostmanCollectionLink,
+    deppProjectLink,
+    learnlightPlatformCaseStudy,
+} = links;
 
 // Metadata
 export const metadata = createMetadata({
@@ -52,10 +57,17 @@ export default function Page() {
                     </a>
                     , and that background has shaped how I build software. From
                     2021 to 2024, I worked as a full-stack JavaScript developer
-                    at Learnlight, a global EdTech company serving over 700,000
-                    learners. I built and maintained its learning platform, the
-                    same one I previously used as an English language trainer.
-                    In that role, I:
+                    at Learnlight, a global EdTech company{" "}
+                    <a
+                        href={learnlightPlatformCaseStudy}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        serving over 700,000 registered learners
+                    </a>
+                    . I built and maintained its learning platform, the same one
+                    I previously used as an English language trainer. In that
+                    role, I:
                 </p>
                 <ul>
                     <li>
@@ -98,19 +110,20 @@ export default function Page() {
                     optimising backend calls wasn&apos;t just about efficiency:
                     it helped improve access in low-bandwidth regions and
                     reduced operational costs. Aligning technical systems with
-                    educational outcomes is what drives my development work.
+                    educational outcomes is what drives my approach to
+                    development.
                 </p>
 
                 <p>
-                    My development work also includes testing, documentation,
-                    and developer workflows. I&apos;ve introduced quality
-                    assurance processes that directly impacted how quickly and
-                    safely new features could be deployed, which is especially
-                    critical in always-on learning environments. I&apos;m
-                    comfortable working across the stack, utilising React and
-                    Next.js on the front end, Node.js and PostgreSQL on the back
-                    end, and collaborating with Agile teams using tools such as
-                    Jira, Confluence, and Git.
+                    Beyond coding, I focus on testing, documentation, and
+                    developer workflows. I&apos;ve introduced quality assurance
+                    processes that directly impacted how quickly and safely new
+                    features could be deployed, which is especially critical in
+                    always-on learning environments. I&apos;m comfortable
+                    working across the stack, utilising React and Next.js on the
+                    front end, Node.js and PostgreSQL on the back end, and
+                    collaborating with Agile teams using tools such as Jira,
+                    Confluence, and Git.
                 </p>
 
                 <p>
@@ -125,7 +138,7 @@ export default function Page() {
                         Digital Education Platform Project (DEPP)
                     </a>
                     , a major institutional review of LMS platforms (Blackboard
-                    Ultra, Brightspace, Canvas). My contribution focused on
+                    Ultra, Brightspace, and Canvas). My contribution focused on
                     technical evaluation: assessing APIs, integration models,
                     and accessibility compliance (for example, WCAG 2.1), and
                     aligning these with the pedagogical and administrative
@@ -165,8 +178,8 @@ export default function Page() {
                     , drawing directly on DEPP testing. The post demonstrates
                     how I adapted techniques from my previous developer role to
                     support current institutional projects, reinforcing the link
-                    between my development expertise and my impact as a Learning
-                    Technologist.
+                    between my development expertise and my impact as a learning
+                    technologist.
                 </p>
 
                 <p>
@@ -295,8 +308,15 @@ export default function Page() {
                     diverse learning styles. As a visual learner, I often turned
                     to alternative resources such as video tutorials, MOOCs, and
                     community forums to fill the gaps. These experiences shaped
-                    my approach to documentation: I now write detailed READMEs,
-                    use JSDoc consistently, and document GraphQL schemas so
+                    my approach to documentation:{" "}
+                    <a
+                        href={styleGuides}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        I now write detailed READMEs
+                    </a>
+                    , use JSDoc consistently, and document GraphQL schemas so
                     they&apos;re easily understood and usable in tools like
                     GraphQL Sandbox. I&apos;ve come to see documentation not
                     just as a technical requirement, but as a way to support
@@ -372,6 +392,9 @@ export default function Page() {
 
             <section id="summary">
                 <h2>Summary</h2>
+
+                <p>This section demonstrates how I have:</p>
+
                 <ul>
                     <li>
                         Applied full-stack JavaScript development skills —
@@ -418,6 +441,22 @@ export default function Page() {
 
                 <h3>Core Engineering Impact</h3>
                 <ul>
+                    <li>
+                        <a
+                            href={learnlightPlatformCaseStudy}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Learnlight Platform Case Study (Website)
+                        </a>{" "}
+                        <em>
+                            Case study of large-scale LMS development for over
+                            700,000 registered learners, demonstrating API
+                            optimisation, automated testing, and user-focused
+                            improvements to accessibility and mobile
+                            performance.
+                        </em>
+                    </li>
                     <li>
                         <a
                             href={graphQlRateLimitDemo}
@@ -480,6 +519,22 @@ export default function Page() {
                             Public write-up translating internal DEPP testing
                             into reusable guidance; evidence of dissemination
                             and sector contribution.
+                        </em>
+                    </li>
+                    <li>
+                        <a
+                            href={styleGuides}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Style Guides (GitHub Repository)
+                        </a>{" "}
+                        <em>
+                            Collection of documentation and code style guides
+                            (READMEs, CSS, comments, and Git commits)
+                            demonstrating consistent, accessible developer
+                            communication and commitment to maintainable,
+                            inclusive engineering practice.
                         </em>
                     </li>
                     <li>

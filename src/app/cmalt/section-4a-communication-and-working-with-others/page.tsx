@@ -80,18 +80,34 @@ export default function Page() {
                 </p>
 
                 <p>
-                    In 2024, I delivered a department-wide presentation on the
-                    DEPP, outlining milestones, testing processes, and feedback
+                    In October 2024, I delivered{" "}
+                    <a
+                        href={deppIctPresentation}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        a department-wide presentation on the DEPP
+                    </a>
+                    , outlining milestones, testing processes, and feedback
                     mechanisms. This improved shared understanding and aligned
                     timelines between technical and academic teams. In June
                     2025, I collaborated with colleagues in the Business School
-                    on a Proof of Concept data-cleaning exercise, identifying
-                    and annotating discrepancies to streamline downstream work
-                    and reduce the time needed for subsequent data validation.
+                    on{" "}
+                    <a
+                        href={pocCleaningScreenshot}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        a Proof of Concept data-cleaning exercise
+                    </a>
+                    , identifying and annotating discrepancies to streamline
+                    downstream work and reduce the time needed for subsequent
+                    data validation.
                 </p>
 
                 <p>
-                    Ahead of this Proof of Concept, I completed the{" "}
+                    On 5 November 2024 — ahead of this Proof of Concept testing
+                    — I completed the{" "}
                     <a
                         href={understandingManualTestingCertificate}
                         target="_blank"
@@ -99,11 +115,11 @@ export default function Page() {
                     >
                         Understanding Manual Testing
                     </a>{" "}
-                    course on LinkedIn Learning (5 November 2024) to strengthen
-                    my approach to testing and communication. Coming from a
-                    developer background, I was more familiar with automated
-                    testing frameworks such as unit and integration tests. This
-                    training helped me appreciate how manual testing complements
+                    course on LinkedIn Learning to strengthen my approach to
+                    testing and communication. Coming from a developer
+                    background, I was more familiar with automated testing
+                    frameworks such as unit and integration tests. This training
+                    helped me appreciate how manual testing complements
                     automation by capturing the user experience and uncovering
                     usability or accessibility issues that scripted tests can
                     miss. It also improved how I communicate
@@ -211,9 +227,16 @@ export default function Page() {
                     Project owners consistently share agendas in advance and
                     follow them closely during meetings, which helps maintain
                     focus and ensure that all voices are heard. On two
-                    occasions, I prepared the meeting notes myself, adopting the
-                    same format — an agenda-linked structure with a brief
-                    executive summary and clearly marked{" "}
+                    occasions,{" "}
+                    <a
+                        href={lmsProjectGroupNotesScreenshot}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        I prepared the meeting notes myself
+                    </a>
+                    , adopting the same format — an agenda-linked structure with
+                    a brief executive summary and clearly marked{" "}
                     <strong>Action:</strong> points. This approach, also
                     informed by accessibility guidance from{" "}
                     <a
@@ -231,23 +254,23 @@ export default function Page() {
                 </p>
 
                 <p>
-                    The DEPP Proof of Concept also reinforced the communicative
-                    value of <em>manual testing</em>. Through collaboration with
-                    technical and academic colleagues, I learned that effective
-                    testing is as much about clear dialogue and documentation as
-                    it is about functionality. Different users engage with
-                    systems in different ways — some explore every feature,
-                    while others only use what they need — so structured
-                    feedback and observation are essential for understanding
-                    pain points and adoption barriers. This insight continues to
-                    inform how I test and present my own digital tools, ensuring
-                    that findings are framed in accessible, actionable language
-                    for all audiences. It also reinforced the importance of
-                    framing technical findings in language that prioritises user
-                    needs and accessibility. I now approach documentation and
-                    feedback summaries with greater attention to tone and
-                    structure, ensuring they are inclusive, actionable, and
-                    audience-appropriate.
+                    The DEPP Proof of Concept testing also reinforced the
+                    communicative value of <em>manual testing</em>. Through
+                    collaboration with technical and academic colleagues, I
+                    learned that effective testing is as much about clear
+                    dialogue and documentation as it is about functionality.
+                    Different users engage with systems in different ways — some
+                    explore every feature, while others only use what they need
+                    — so structured feedback and observation are essential for
+                    understanding pain points and adoption barriers. This
+                    insight continues to inform how I test and present my own
+                    digital tools, ensuring that findings are framed in
+                    accessible, actionable language for all audiences. It also
+                    reinforced the importance of framing technical findings in
+                    language that prioritises user needs and accessibility. I
+                    now approach documentation and feedback summaries with
+                    greater attention to tone and structure, ensuring they are
+                    inclusive, actionable, and audience-appropriate.
                 </p>
 
                 <p>
@@ -267,7 +290,7 @@ export default function Page() {
                     both meetings and published materials, I apply the same
                     inclusive design principle: keep it simple, make it concise,
                     and emphasise what matters most. I&apos;ve also strengthened
-                    interpersonal skills central to collaborative work—framing
+                    interpersonal skills central to collaborative work — framing
                     feedback constructively, negotiating priorities when
                     timelines compete, and closing the loop with clear, written
                     next steps.
@@ -299,45 +322,46 @@ export default function Page() {
             <section id="summary">
                 <h2>Summary</h2>
 
-                <p>This section demonstrates how I:</p>
+                <p>This section demonstrates how I have:</p>
 
                 <ul>
                     <li>
-                        Practise clear, inclusive communication to connect
+                        Practised clear, inclusive communication to connect
                         academic, administrative, and technical teams and ensure
                         accessibility for diverse audiences.
                     </li>
                     <li>
-                        Contribute to the DEPP through Integration/Migration and
-                        Testing/Evaluation groups, translating findings into
+                        Contributed to the DEPP through Integration/Migration
+                        and Testing/Evaluation groups, translating findings into
                         actionable Asana tasks.
                     </li>
                     <li>
-                        Delivered a department-wide the DEPP presentation (2024)
-                        to align timelines, testing, and feedback processes.
+                        Delivered a department-wide presentation (October 2024)
+                        on the DEPP to align timelines, testing, and feedback
+                        processes.
                     </li>
                     <li>
-                        Supported a Business School Proof of Concept (June 2025)
-                        by annotating data discrepancies and clarifying
-                        follow-up actions.
+                        Supported the Business School during Proof of Concept
+                        testing (June 2025) by annotating data discrepancies and
+                        clarifying follow-up actions.
                     </li>
                     <li>
-                        Use structured meeting agendas, executive summaries, and
-                        accessible formatting to enhance clarity and
+                        Used structured meeting agendas, executive summaries,
+                        and accessible formatting to enhance clarity and
                         inclusivity.
                     </li>
                     <li>
-                        Disseminate practice via documentation and blog posts
+                        Disseminated practice via documentation and blog posts
                         (Teams FAQ, Postman guides, Blackboard API article,
                         Accessibility resources).
                     </li>
                     <li>
-                        Maintain currency through internal CPD, LinkedIn
+                        Maintained currency through internal CPD, LinkedIn
                         Learning courses, and curated tech/media sources,
                         sharing highlights with colleagues.
                     </li>
                     <li>
-                        Align communication practice with CMALT principles of
+                        Aligned communication practice with CMALT principles of
                         collaboration, reflection, and sharing effective
                         practice across professional communities.
                     </li>

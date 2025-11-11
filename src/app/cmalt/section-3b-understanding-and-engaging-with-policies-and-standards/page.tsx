@@ -166,7 +166,7 @@ export default function Page() {
                 <p>
                     This principle is reinforced by{" "}
                     <a
-                        href="https://www.imperial.ac.uk/admin-services/secretariat/policies-and-guidance/guidance/faqs/"
+                        href="https://web.archive.org/web/20250117173620/https://www.imperial.ac.uk/admin-services/secretariat/policies-and-guidance/guidance/faqs/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -188,7 +188,7 @@ export default function Page() {
                 <p>
                     As a result, I have embedded data protection principles into
                     my daily workflow. I default to using anonymised or dummy
-                    data — even under tight deadlines — and check file names and
+                    data — particularly under tight deadlines — and check file names and
                     visible content before sharing learning materials. I
                     maintain a reference list of tools like{" "}
                     <a
@@ -238,7 +238,9 @@ export default function Page() {
 
             <section id="summary">
                 <h2>Summary</h2>
-                <p>This section shows how I:</p>
+
+                <p>This section demonstrates how I have:</p>
+                
                 <ul>
                     <li>
                         Completed regular GDPR and data protection training to

@@ -45,7 +45,7 @@ export default function Page() {
                     Signed: <strong>Karl Horning</strong>
                 </p>
                 <p>
-                    Date: <strong>21 October 2025</strong>
+                    Date: <strong>11 November 2025</strong>
                 </p>
             </section>
 

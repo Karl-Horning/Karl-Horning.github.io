@@ -233,28 +233,23 @@ export default function Page() {
                 </p>
 
                 <p>
-                    These findings also inform my Imperial training design —
-                    using scenario-based tasks and mid-course feedback cycles to
-                    maintain relevance and support confidence in authentic
-                    contexts.
-                </p>
-
-                <p>
                     Building directly on these earlier insights, these same
                     learner-centred approaches now inform my current practice at
                     Imperial. For example, in preparing Canvas training for
-                    staff, I have emphasised scenario-based activities (for
-                    example, using analytics) rather than abstract feature
-                    lists, mirroring the workplace-focused roleplays I once used
-                    with English learners. This ensures staff are confident
-                    applying the tools in their own contexts, rather than
-                    passively hearing about functionality without opportunities
-                    to practise.
+                    staff, I have emphasised scenario-based activities — like
+                    using analytics — rather than abstract feature lists,
+                    mirroring the workplace-focused roleplays I once used with
+                    English learners. This ensures staff are confident applying
+                    the tools in their own contexts, rather than passively
+                    hearing about functionality without opportunities to
+                    practise.
                 </p>
             </section>
 
             <section id="summary">
                 <h2>Summary</h2>
+
+                <p>This section demonstrates how I have:</p>
 
                 <ul>
                     <li>

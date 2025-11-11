@@ -1,6 +1,6 @@
 import FigureWithCaption from "@/components/ui/FigureWithCaption";
 import CmaltLayout from "@/components/layouts/CmaltLayout";
-import { certificates, repos, screenshots } from "@/lib/constants/cmalt";
+import { certificates, links, repos, screenshots } from "@/lib/constants/cmalt";
 import { internalRoutes } from "@/lib/constants/ui";
 import { createMetadata } from "@/lib/helpers";
 import { meta } from "./meta";
@@ -8,6 +8,7 @@ import { meta } from "./meta";
 // Evidence
 const { CmaltRoute } = internalRoutes;
 const { graphQlCertificate } = certificates;
+const { learnlightPlatformCaseStudy } = links;
 const { blackboardPostmanCollection, oxfordLearnersDictionariesApi } = repos;
 const {
     ictAnalystTestScriptScreenshot,
@@ -99,11 +100,18 @@ export default function page() {
                     >
                         I optimised GraphQL API responses
                     </a>{" "}
-                    and implemented automated backend testing to support a
-                    commercial LMS serving over 700,000 learners. While highly
-                    technical, this work had a direct educational impact:
-                    improved system performance translated to better student
-                    experiences.
+                    and implemented automated backend testing to support{" "}
+                    <a
+                        href={learnlightPlatformCaseStudy}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        a commercial LMS serving over 700,000 registered
+                        learners
+                    </a>
+                    . While highly technical, this work had a direct educational
+                    impact: improved system performance translated to better
+                    student experiences.
                 </p>
 
                 <p>
@@ -190,7 +198,7 @@ export default function page() {
             <section id="summary">
                 <h2>Summary</h2>
 
-                <p>This section shows how I:</p>
+                <p>This section demonstrates how I have:</p>
 
                 <ul>
                     <li>
@@ -283,7 +291,7 @@ export default function page() {
                         <em>
                             Further evidence of applied testing aligned to
                             administrative requirements; supports dual
-                            technical–pedagogic perspective in LMS evaluation
+                            technical-pedagogic perspective in LMS evaluation
                             and training readiness.
                         </em>
                     </li>
@@ -291,6 +299,22 @@ export default function page() {
 
                 <h3>Custom Integrations & Tools</h3>
                 <ul>
+                    <li>
+                        <a
+                            href={learnlightPlatformCaseStudy}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Learnlight Platform Case Study (Website)
+                        </a>{" "}
+                        <em>
+                            Case study of large-scale LMS development for over
+                            700,000 registered learners, demonstrating API
+                            optimisation, automated testing, and user-focused
+                            improvements to accessibility and mobile
+                            performance.
+                        </em>
+                    </li>
                     <li>
                         <a
                             href={oxfordLearnersDictionariesApi}

@@ -7,7 +7,7 @@
  *
  * Rules:
  * - Titles: concise, sentence case, no trailing punctuation.
- * - Descriptions: 1–2 sentences, UK spelling, plain English.
+ * - Descriptions: 1-2 sentences, UK spelling, plain English.
  * - Links: always `repoLink`; add `demoLink` only if a live demo exists.
  * - `type`: "demo" | "repo" (nothing else).
  * - `importance`: "high" | "medium" | "low" | "lowest".

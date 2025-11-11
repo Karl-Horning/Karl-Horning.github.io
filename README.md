@@ -48,7 +48,7 @@ The site reflects my approach to professional front-end development:
 - structured around predictable, typed data
 - documented consistently through **JSDoc** and **TypeScript**
 
-Migrating from Eleventy to Next.js reduced maintenance by roughly **2–3 hours per month**, while improving accessibility, scalability, and performance.
+Migrating from Eleventy to Next.js reduced maintenance by roughly **2-3 hours per month**, while improving accessibility, scalability, and performance.
 
 ---
 

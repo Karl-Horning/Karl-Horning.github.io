@@ -217,7 +217,7 @@ export default function Page() {
             <section id="summary">
                 <h2>Summary</h2>
 
-                <p>This section shows how I:</p>
+                <p>This section demonstrates how I have:</p>
 
                 <ul>
                     <li>
