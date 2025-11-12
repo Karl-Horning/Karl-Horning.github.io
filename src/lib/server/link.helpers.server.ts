@@ -65,6 +65,18 @@ function createPrevNext<T extends HasSlugAndTitle>(
     relativeJsonPath: string,
     baseHref: string
 ) {
+    const base = baseHref.replace(/\/$/, "");
+
+    /**
+     * Builds a valid href for the given slug.
+     * - Removes leading/trailing slashes from the slug.
+     * - Returns the base path when slug is empty (for example, "/cmalt").
+     *
+     * @example "contextual-statement" → "/cmalt/contextual-statement"
+     */
+    const hrefFor = (slug: string) =>
+        slug ? `${base}/${slug.replace(/^\/|\/$/g, "")}` : base;
+
     /**
      * Reads and parses the JSON file containing all items.
      * Cached using React's `cache()` to avoid redundant disk reads.
@@ -96,16 +108,10 @@ function createPrevNext<T extends HasSlugAndTitle>(
         // Return structured links for easier use in UI components
         return {
             previous: prevItem
-                ? {
-                      title: prevItem.title,
-                      href: `${baseHref}/${prevItem.slug}`,
-                  }
+                ? { title: prevItem.title, href: hrefFor(prevItem.slug) }
                 : null,
             next: nextItem
-                ? {
-                      title: nextItem.title,
-                      href: `${baseHref}/${nextItem.slug}`,
-                  }
+                ? { title: nextItem.title, href: hrefFor(nextItem.slug) }
                 : null,
         };
     };
