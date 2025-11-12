@@ -52,7 +52,10 @@ export default function Page() {
             <section id="nominated-assessor">
                 <h2>Nominated Assessor (optional)</h2>
 
-                <p>I am not nominating an assessor for this submission.</p>
+                <p>
+                    I am nominating Kiran K Gawali as an assessor for this
+                    submission.
+                </p>
             </section>
         </CmaltLayout>
     );
