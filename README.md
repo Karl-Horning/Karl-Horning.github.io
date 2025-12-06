@@ -101,7 +101,7 @@ Accessibility and performance are tested continuously during development and dep
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 15 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript (strict mode)
 - **UI:** React 19 + Tailwind CSS
 - **Tooling:** ESLint + Prettier (Tailwind plugin)
