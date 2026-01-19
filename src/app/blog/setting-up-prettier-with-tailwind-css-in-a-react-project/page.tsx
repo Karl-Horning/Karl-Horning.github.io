@@ -35,7 +35,7 @@ export default function Page() {
             </p>
             <blockquote>
                 <p>
-                    📝 I usually create the GitHub repo first and clone it
+                    I usually create the GitHub repo first and clone it
                     locally, so I initialise Next.js or Vite in an existing
                     folder. If you&apos;re doing the same, remember to use the{" "}
                     <code>.</code> at the end of your command to scaffold into
@@ -43,7 +43,7 @@ export default function Page() {
                 </p>
             </blockquote>
             <hr />
-            <h2>🧱 Starting a New Next.js Project</h2>
+            <h2>Starting a New Next.js Project</h2>
             <p>From your Visual Studio Code terminal, run:</p>
             <pre>
                 <code className="language-bash">
@@ -81,7 +81,7 @@ export default function Page() {
                 is the shortcut on macOS.)
             </p>
             <hr />
-            <h2>⚡ Bonus: Using Prettier + Tailwind CSS in a Vite Project</h2>
+            <h2>Bonus: Using Prettier + Tailwind CSS in a Vite Project</h2>
             <p>
                 The setup is nearly identical when working with Vite, but
                 here&apos;s a quick run-through for completeness.
@@ -119,7 +119,7 @@ export default function Page() {
                 <code className="language-html">{htmlExample}</code>
             </pre>
             <hr />
-            <h2>🔁 Final Notes</h2>
+            <h2>Final Notes</h2>
             <p>
                 This approach works equally well across both Next.js and Vite
                 projects. If you&apos;re using VS Code, make sure you have the

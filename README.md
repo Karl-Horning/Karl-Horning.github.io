@@ -11,34 +11,34 @@
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 - [KarlHorning.dev — Developer Portfolio](#karlhorningdev--developer-portfolio)
-  - [📖 Table of Contents](#-table-of-contents)
-  - [🤓 Overview](#-overview)
-  - [🎨 Design Approach](#-design-approach)
-  - [♿ Accessibility \& Performance](#-accessibility--performance)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Design Approach](#design-approach)
+  - [Accessibility \& Performance](#accessibility--performance)
     - [Accessibility Principles](#accessibility-principles)
     - [Performance Practices](#performance-practices)
-  - [📸 Screenshot](#-screenshot)
-  - [🛠️ Tech Stack](#️-tech-stack)
-  - [📦 Installation](#-installation)
-  - [🚀 Scripts](#-scripts)
-  - [📁 Project Structure](#-project-structure)
-  - [✍️ Code Style \& Linting](#️-code-style--linting)
-  - [🔍 Tests](#-tests)
+  - [Screenshot](#screenshot)
+  - [Tech Stack](#tech-stack)
+  - [Installation](#installation)
+  - [Scripts](#scripts)
+  - [Project Structure](#project-structure)
+  - [Code Style \& Linting](#code-style--linting)
+  - [Tests](#tests)
     - [Current Setup](#current-setup)
     - [Planned Additions](#planned-additions)
-  - [🌐 Live Site](#-live-site)
+  - [Live Site](#live-site)
     - [Lighthouse Scores (16 Oct 2025)](#lighthouse-scores-16-oct-2025)
-  - [📌 Roadmap](#-roadmap)
-  - [📚 Further Reading](#-further-reading)
-  - [📄 Licence](#-licence)
-  - [👤 Author](#-author)
+  - [Roadmap](#roadmap)
+  - [Further Reading](#further-reading)
+  - [Licence](#licence)
+  - [Author](#author)
 
 ---
 
-## 🤓 Overview
+## Overview
 
 **KarlHorning.dev** is my centralised developer portfolio — a single, accessible [Next.js](https://nextjs.org/) build that unifies my **projects**, **blog**, and **CMALT portfolio** into one modular, maintainable codebase.
 
@@ -52,7 +52,7 @@ Migrating from Eleventy to Next.js reduced maintenance by roughly **2-3 hours pe
 
 ---
 
-## 🎨 Design Approach
+## Design Approach
 
 The design emphasises **clarity**, **readability**, and **inclusivity** over visual excess.
 
@@ -66,7 +66,7 @@ The overall aesthetic aims for calm professionalism while meeting **WCAG 2.2 AA*
 
 ---
 
-## ♿ Accessibility & Performance
+## Accessibility & Performance
 
 Accessibility and performance are tested continuously during development and deployment with **Lighthouse**, **axe**, and **WAVE**.
 
@@ -93,13 +93,13 @@ Accessibility and performance are tested continuously during development and dep
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 ![Homepage screenshot](public/img/projects/karlhorning-dev.webp)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript (strict mode)
@@ -113,7 +113,7 @@ Accessibility and performance are tested continuously during development and dep
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 git clone https://github.com/Karl-Horning/Karl-Horning.github.io.git
@@ -123,7 +123,7 @@ npm install
 
 ---
 
-## 🚀 Scripts
+## Scripts
 
 | Command              | Description                                        |
 | -------------------- | -------------------------------------------------- |
@@ -135,7 +135,7 @@ npm install
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 src/
@@ -150,7 +150,7 @@ The architecture follows a **clear separation of concerns** between content, typ
 
 ---
 
-## ✍️ Code Style & Linting
+## Code Style & Linting
 
 - **ESLint** with `eslint-config-next`
 - **Prettier** with Tailwind CSS plugin
@@ -159,7 +159,7 @@ The architecture follows a **clear separation of concerns** between content, typ
 
 ---
 
-## 🔍 Tests
+## Tests
 
 Automated accessibility testing is powered by **Playwright** and **axe-core**, ensuring all routes meet WCAG 2.2 AA standards.
 
@@ -197,7 +197,7 @@ Running 7 tests using 1 worker
 
 ---
 
-## 🌐 Live Site
+## Live Site
 
 **URL:** [karlhorning.dev](https://www.karlhorning.dev)
 
@@ -212,7 +212,7 @@ Running 7 tests using 1 worker
 
 ---
 
-## 📌 Roadmap
+## Roadmap
 
 - [x] Migrate from Eleventy to Next.js
 - [x] Add Projects & CMALT portfolio routes
@@ -224,7 +224,7 @@ Running 7 tests using 1 worker
 
 ---
 
-## 📚 Further Reading
+## Further Reading
 
 - [KarlHorning.dev - Building a Modern, Accessible Developer Portfolio](https://www.karlhorning.dev/projects/karlhorning-dev)
 - [GitHub Repository](https://github.com/Karl-Horning/Karl-Horning.github.io)
@@ -234,12 +234,12 @@ Running 7 tests using 1 worker
 
 ---
 
-## 📄 Licence
+## Licence
 
 MIT © 2025 Karl Horning
 
 ---
 
-## 👤 Author
+## Author
 
 Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)

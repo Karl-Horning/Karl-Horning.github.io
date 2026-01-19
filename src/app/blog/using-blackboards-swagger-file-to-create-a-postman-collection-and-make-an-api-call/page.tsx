@@ -22,7 +22,7 @@ export default function Page() {
                 with APIs.
             </p>
             <hr />
-            <h2>🛠️ Prerequisites</h2>
+            <h2>Prerequisites</h2>
             <p>Before you begin, make sure you have:</p>
             <ul>
                 <li>
@@ -47,12 +47,11 @@ export default function Page() {
                 </li>
             </ul>
             <hr />
-            <h2>🔁 Step 1: Download the Blackboard API Swagger File</h2>
+            <h2>Step 1: Download the Blackboard API Swagger File</h2>
             <ol>
                 <li>
                     <p>Go to the Blackboard REST API documentation:</p>
                     <p>
-                        👉{" "}
                         <a href="https://developer.blackboard.com/portal/displayApi">
                             https://developer.blackboard.com/portal/displayApi
                         </a>
@@ -62,10 +61,9 @@ export default function Page() {
                     <p>
                         Under the <strong>Learn APIs</strong> section,
                         right-click the link below and open it in a new tab (or,
-                        open the link below 🤪):
+                        open the link below):
                     </p>
                     <p>
-                        👉{" "}
                         <a href="https://devportal-docstore.s3.amazonaws.com/learn-swagger.json">
                             https://devportal-docstore.s3.amazonaws.com/learn-swagger.json
                         </a>
@@ -108,7 +106,7 @@ export default function Page() {
                 </li>
             </ol>
             <hr />
-            <h2>🧰 Step 2: Import the Swagger File into Postman</h2>
+            <h2>Step 2: Import the Swagger File into Postman</h2>
             <FigureWithCaption
                 src="/img/blog/postman_blackboard/2.1_new_workspace.webp"
                 alt="Postman interface showing how to create a new workspace from the New menu."
@@ -171,7 +169,7 @@ export default function Page() {
                 <strong>Collections</strong> tab.
             </p>
             <hr />
-            <h2>🔐 Step 3: Set Up the Authentication Environment</h2>
+            <h2>Step 3: Set Up the Authentication Environment</h2>
             <FigureWithCaption
                 src="/img/blog/postman_blackboard/3.1_create_env.webp"
                 alt="Creating a new environment in Postman with the Create Environment modal open."
@@ -249,7 +247,7 @@ export default function Page() {
                 </li>
             </ol>
             <hr />
-            <h2>🔑 Step 4: Request an Access Token</h2>
+            <h2>Step 4: Request an Access Token</h2>
             <p>
                 To interact with Blackboard&apos;s REST API, you&apos;ll need to
                 obtain an OAuth2 access token. This token authenticates your API
@@ -357,7 +355,7 @@ export default function Page() {
                 </li>
             </ol>
             <hr />
-            <h2>🌐 Step 5: Add the Access Token to All API Requests</h2>
+            <h2>Step 5: Add the Access Token to All API Requests</h2>
             <FigureWithCaption
                 src="/img/blog/postman_blackboard/5.1_set_access_token.webp"
                 alt="Postman Collection-level Authorization tab set to API Key with Authorization as the header key."
@@ -400,14 +398,14 @@ export default function Page() {
             </p>
             <blockquote>
                 <p>
-                    💡 <strong>Tip:</strong> Some individual requests may still
+                    <strong>Tip:</strong> Some individual requests may still
                     have old parameters set by default. If you get errors, check
                     the <strong>Params</strong> tab and uncheck or delete any
                     unnecessary ones.
                 </p>
             </blockquote>
             <p>You&apos;re now ready to explore Blackboard&apos;s Learn API.</p>
-            <h2>✅ Step 6: Make a Simple API Call</h2>
+            <h2>Step 6: Make a Simple API Call</h2>
             <p>
                 Let&apos;s test the setup with a basic GET request to list
                 users.
@@ -441,7 +439,7 @@ export default function Page() {
                 has been saved and that it&apos;s correctly set under the
                 collection&apos;s <strong>Authorization</strong> tab.
             </p>
-            <h2>🧯 Troubleshooting</h2>
+            <h2>Troubleshooting</h2>
             <p>Here are some common issues and how to fix them:</p>
             <ul>
                 <li>
@@ -532,7 +530,7 @@ export default function Page() {
                     </ul>
                 </li>
             </ul>
-            <h2>🎉 Summary</h2>
+            <h2>Summary</h2>
             <p>You&apos;ve now:</p>
             <ul>
                 <li>

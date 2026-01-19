@@ -25,11 +25,11 @@ export default function Page() {
             </p>
 
             <ul>
-                <li>👍 Thumbnails</li>
-                <li>👽 Headings and paragraph spacing</li>
-                <li>📸 Responsive images</li>
-                <li>🧮 Reading time calculations</li>
-                <li>🔗 Sidebar listings and link styles</li>
+                <li>Thumbnails</li>
+                <li>Headings and paragraph spacing</li>
+                <li>Responsive images</li>
+                <li>Reading time calculations</li>
+                <li>Sidebar listings and link styles</li>
             </ul>
 
             <h2>It Doesn&apos;t Have to Be Perfect</h2>
@@ -39,11 +39,11 @@ export default function Page() {
                 step to see how things display and whether updates I&apos;ve
                 made to the blog design are working across devices. I&apos;ll
                 probably come back and tidy this post later (or not, if
-                you&apos;re reading this in the future! 🤖).
+                you&apos;re reading this in the future!).
             </p>
 
             <p>
-                If you&apos;ve stumbled across this post, hello! 👋 You&apos;ve
+                If you&apos;ve stumbled across this post, hello! You&apos;ve
                 caught the blog mid-flight. Thanks for your patience while I
                 bolt on bits of functionality and give things a coat of paint.
             </p>

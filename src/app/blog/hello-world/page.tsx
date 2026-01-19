@@ -31,7 +31,7 @@ export default function Page() {
 
             <p>
                 I&apos;m building the blog with{" "}
-                <a href="https://www.11ty.dev/" target="_blank">
+                <a href="https://www.11ty.dev/" target="_blank" rel="noopener">
                     Eleventy (11ty)
                 </a>
                 , a lightweight static site generator. It&apos;s fast, flexible,
@@ -51,15 +51,15 @@ export default function Page() {
 
             <ul>
                 <li>
-                    🛠 <strong>Built with</strong>: Eleventy, Tailwind CSS,
+                    <strong>Built with</strong>: Eleventy, Tailwind CSS,
                     GitHub Pages
                 </li>
                 <li>
-                    🧪 <strong>Currently testing</strong>: Layouts, dark mode,
+                    <strong>Currently testing</strong>: Layouts, dark mode,
                     mobile nav
                 </li>
                 <li>
-                    ☕ <strong>Currently drinking</strong>: Water 😥
+                    <strong>Currently drinking</strong>: Water 😥
                 </li>
             </ul>
 
