@@ -27,8 +27,8 @@ export default function About() {
                         className={styles.about__photo}
                         src="/karl-profile-photo.png"
                         alt="Karl Horning, full-stack developer"
-                        width="280"
-                        height="280"
+                        width={280}
+                        height={280}
                     />
                     <div className={styles.about__content}>
                         <p className={styles.about__text}>
