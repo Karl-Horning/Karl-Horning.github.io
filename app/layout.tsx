@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Rubik_Glitch } from "next/font/google";
+import { Inter, Barlow_Condensed, Rubik_Glitch } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const inter = Inter({
+    variable: "--font-inter",
     subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const barlowCondensed = Barlow_Condensed({
+    weight: ["700", "900"],
+    variable: "--font-barlow-condensed",
     subsets: ["latin"],
 });
 
@@ -32,11 +33,14 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${geistSans.variable} ${geistMono.variable} ${rubikGlitch.variable} h-full antialiased`}
+            className={`${inter.variable} ${barlowCondensed.variable} ${rubikGlitch.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
+                <a href="#main" className="skip-link">
+                    Skip to main content
+                </a>
                 <Nav />
-                {children}
+                <main id="main">{children}</main>
             </body>
         </html>
     );
