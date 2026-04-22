@@ -3,19 +3,60 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
+
+    /* Brand palette */
+    --primary:    #cb2d6f;
+    --secondary:  #3c7da4;
+    --accent:     #14a098;
+    --highlight:  #148aad;
+    --black:      #2d292d;
+    --custom-red: #da4453;
+
+    /* Pink scale */
+    --pink:       #cb2d6f;
+    --pink-dk:    #a52259;
+    --pink-text:  #a52259;
+    --pink-light: #e8709a;
+
+    /* Surfaces & text */
+    --bg:               #f7f3ee;
+    --bg2:              #ede9e3;
+    --fg:               #0d0d0d;
+    --muted:            #5c5552;
+    --border:           #d5cfc8;
+    --footer-bg:        #0d0d0d;
+    --background-subtle: #254c4f;
+    --surface:          #1a3b3d;
+    --hero:             #0b1d21;
+    --text:             #cccccc;
+
+    /* Layout */
+    --max-w: 1140px;
+    --pad:   clamp(1.25rem, 5vw, 3.5rem);
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
+    --font-glitch: var(--font-rubik-glitch);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
+
+        /* Design tokens — dark overrides */
+        --pink-text:  #e8709a;
+        --bg:         #111015;
+        --bg2:        #1a1522;
+        --fg:         #e8e8e8;
+        --muted:      #9a8fa8;
+        --border:     #2a2035;
+        --footer-bg:  #0c0a10;
     }
 }
 
