@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #F7F3EE;
+    --foreground: #0D0D0D;
 
     /* Brand palette */
     --primary: #cb2d6f;
@@ -127,14 +127,46 @@
     border-top: 1px solid var(--border);
 }
 
+/* ── Section ──────────────────────────────── */
+.section {
+    padding: 5.5rem 0;
+}
+.section__meta {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+    margin-bottom: 3.5rem;
+}
+.eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pink-text);
+}
+.section__title {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 900;
+    font-size: clamp(2.75rem, 6vw, 5rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: var(--fg);
+}
+
+/* ── Layout util ───────────────────────────────────── */
+.wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--pad);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+        --background: #111015;
+        --foreground: #e8e8e8;
 
         /* Design tokens — dark overrides */
         --pink-text: #e8709a;
-        --bg: #111015;
         --bg2: #1a1522;
         --fg: #e8e8e8;
         --muted: #9a8fa8;
