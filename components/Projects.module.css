@@ -1,0 +1,90 @@
+/* Unstyled list wrapper for the project rows */
+.proj_list {
+    list-style: none;
+}
+
+/* Each project row — three columns: number | content | cta link */
+.proj {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr auto;
+    gap: 2rem;
+    padding: 2.25rem 0;
+    border-top: 1px solid var(--border);
+    align-items: start;
+}
+
+.proj:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+/* Decorative zero-padded index using the condensed display font */
+.proj__num {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--pink-text);
+    letter-spacing: 0.1em;
+    padding-top: 0.3rem;
+}
+
+.proj__title {
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.625rem;
+}
+
+.proj__desc {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 58ch;
+}
+
+/* Inline pill tags listing technologies used */
+.proj__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.875rem;
+    list-style: none;
+}
+
+.tag {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    background: var(--bg2);
+    border-radius: 2px;
+    color: var(--muted);
+}
+
+/* "View ↗" link pinned to the top-right of each project row */
+.proj__cta {
+    white-space: nowrap;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pink-text);
+    padding-top: 0.35rem;
+    transition: color 0.15s;
+}
+
+.proj__cta:hover {
+    color: var(--pink);
+}
+
+/* Collapse to two columns on narrow viewports; CTA drops below the content */
+@media (max-width: 719px) {
+    .proj {
+        grid-template-columns: 3rem 1fr;
+    }
+
+    .proj__cta {
+        grid-column: 2;
+        margin-top: -0.5rem;
+    }
+}
