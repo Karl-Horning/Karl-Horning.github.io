@@ -1,0 +1,120 @@
+/* Fixed bar */
+.nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Inner flex row: logo | links | hamburger */
+.navBar {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1.125rem var(--pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Desktop nav links */
+.navLinks {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.navLinks a {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color 0.15s;
+}
+
+.navLinks a:hover {
+    color: var(--pink);
+}
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 32px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--fg);
+    transition:
+        transform 0.25s,
+        opacity 0.25s;
+}
+
+/* Animate the three bars into an × when the menu is open */
+.hamburgerOpen span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerOpen span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburgerOpen span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile drawer — hidden until .mobileMenuOpen is added */
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    padding: 1.5rem var(--pad) 2rem;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.mobileMenuOpen {
+    display: flex;
+}
+
+.mobileMenu a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color 0.15s;
+}
+
+.mobileMenu a:hover {
+    color: var(--pink);
+}
+
+/* Show hamburger and hide desktop links on narrow viewports */
+@media (max-width: 719px) {
+    .navLinks {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hamburger span {
+        transition: none;
+    }
+}
