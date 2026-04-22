@@ -1,0 +1,58 @@
+/* Section wrapper — alternate background to visually separate from hero */
+.about {
+    padding: 5.5rem 0;
+    background: var(--bg2);
+}
+
+/* Two-column grid: fixed-width photo on the left, text on the right */
+.about__inner {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4.5rem;
+    align-items: start;
+}
+
+/* Profile photo — square crop anchored to the top of the face */
+.about__photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* Stacked text content with consistent vertical rhythm */
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 0.5rem;
+}
+
+.about__text {
+    font-size: 1.0625rem;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* Highlighted names and figures within body copy */
+.about__text strong {
+    color: var(--fg);
+    font-weight: 700;
+}
+
+/* Location / availability line below the bio paragraphs */
+.about__location {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--pink-text);
+    margin-top: 0.5rem;
+}
+
+/* Collapse to single column on narrow viewports */
+@media (max-width: 719px) {
+    .about__inner {
+        grid-template-columns: 1fr;
+    }
+}
