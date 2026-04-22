@@ -16,7 +16,7 @@ export default function Logo() {
             <Link
                 id="logo"
                 href="/"
-                className={`relative inline-block rounded px-2 py-1 font-glitch text-2xl font-extrabold leading-none text-primary ${styles.glitch} transition-colors duration-300`}
+                className={`relative inline-block rounded py-1 font-glitch text-2xl font-extrabold leading-none text-primary ${styles.glitch} transition-colors duration-300`}
                 data-text="Karl Horning"
             >
                 Karl Horning

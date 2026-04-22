@@ -5,43 +5,126 @@
     --foreground: #171717;
 
     /* Brand palette */
-    --primary:    #cb2d6f;
-    --secondary:  #3c7da4;
-    --accent:     #14a098;
-    --highlight:  #148aad;
-    --black:      #2d292d;
+    --primary: #cb2d6f;
+    --secondary: #3c7da4;
+    --accent: #14a098;
+    --highlight: #148aad;
+    --black: #2d292d;
     --custom-red: #da4453;
 
     /* Pink scale */
-    --pink:       #cb2d6f;
-    --pink-dk:    #a52259;
-    --pink-text:  #a52259;
+    --pink: #cb2d6f;
+    --pink-dk: #a52259;
+    --pink-text: #a52259;
     --pink-light: #e8709a;
 
     /* Surfaces & text */
-    --bg:               #f7f3ee;
-    --bg2:              #ede9e3;
-    --fg:               #0d0d0d;
-    --muted:            #5c5552;
-    --border:           #d5cfc8;
-    --footer-bg:        #0d0d0d;
+    --bg: #f7f3ee;
+    --bg2: #ede9e3;
+    --fg: #0d0d0d;
+    --muted: #5c5552;
+    --border: #d5cfc8;
+    --footer-bg: #0d0d0d;
     --background-subtle: #254c4f;
-    --surface:          #1a3b3d;
-    --hero:             #0b1d21;
-    --text:             #cccccc;
+    --surface: #1a3b3d;
+    --hero: #0b1d21;
+    --text: #cccccc;
 
     /* Layout */
     --max-w: 1140px;
-    --pad:   clamp(1.25rem, 5vw, 3.5rem);
+    --pad: clamp(1.25rem, 5vw, 3.5rem);
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-primary: var(--primary);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+    --font-sans: var(--font-inter);
+    --font-condensed: var(--font-barlow-condensed);
     --font-glitch: var(--font-rubik-glitch);
+}
+
+/* ── Base ──────────────────────────────────────────── */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        background: var(--background);
+        color: var(--foreground);
+        font-family: var(--font-inter), system-ui, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+/* ── Skip link ─────────────────────────────────────── */
+.skip-link {
+    position: absolute;
+    top: -200%;
+    left: 1rem;
+    background: var(--pink);
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    z-index: 9999;
+    border-radius: 0 0 4px 4px;
+    transition: top 0.1s;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* ── Buttons ───────────────────────────────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.8125rem 1.625rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        color 0.15s,
+        border-color 0.15s;
+}
+.btn--solid {
+    background: var(--pink);
+    color: #fff;
+}
+.btn--solid:hover {
+    background: var(--pink-dk);
+}
+.btn--ghost {
+    border-color: var(--fg);
+    color: var(--fg);
+}
+.btn--ghost:hover {
+    border-color: var(--pink);
+    color: var(--pink);
+}
+
+/* ── Rule ──────────────────────────────────────────── */
+.rule {
+    border: none;
+    border-top: 2px solid var(--pink);
+    margin: 0;
+}
+.rule--subtle {
+    border-top: 1px solid var(--border);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,18 +133,22 @@
         --foreground: #ededed;
 
         /* Design tokens — dark overrides */
-        --pink-text:  #e8709a;
-        --bg:         #111015;
-        --bg2:        #1a1522;
-        --fg:         #e8e8e8;
-        --muted:      #9a8fa8;
-        --border:     #2a2035;
-        --footer-bg:  #0c0a10;
+        --pink-text: #e8709a;
+        --bg: #111015;
+        --bg2: #1a1522;
+        --fg: #e8e8e8;
+        --muted: #9a8fa8;
+        --border: #2a2035;
+        --footer-bg: #0c0a10;
+        .rule {
+            border-top-color: var(--pink);
+        }
     }
 }
 
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
