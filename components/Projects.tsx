@@ -1,4 +1,5 @@
 import styles from "@/components/Projects.module.css";
+import { FiArrowUpRight } from "react-icons/fi";
 
 /**
  * Selected work section listing notable projects.
@@ -60,7 +61,7 @@ export default function Projects() {
                             className={styles.proj__cta}
                             aria-label="View Learnlight project"
                         >
-                            View ↗
+                            View <FiArrowUpRight aria-hidden="true" />
                         </a>
                     </li>
 
@@ -93,7 +94,7 @@ export default function Projects() {
                             className={styles.proj__cta}
                             aria-label="View portfolio project"
                         >
-                            View ↗
+                            View <FiArrowUpRight aria-hidden="true" />
                         </a>
                     </li>
 
@@ -126,7 +127,7 @@ export default function Projects() {
                             className={styles.proj__cta}
                             aria-label="View Transform Text project"
                         >
-                            View ↗
+                            View <FiArrowUpRight aria-hidden="true" />
                         </a>
                     </li>
 
@@ -159,7 +160,7 @@ export default function Projects() {
                             className={styles.proj__cta}
                             aria-label="View Canvas guide project"
                         >
-                            View ↗
+                            View <FiArrowUpRight aria-hidden="true" />
                         </a>
                     </li>
 
@@ -191,7 +192,7 @@ export default function Projects() {
                             className={styles.proj__cta}
                             aria-label="View Colour Contrast Checker project"
                         >
-                            View ↗
+                            View <FiArrowUpRight aria-hidden="true" />
                         </a>
                     </li>
                 </ul>

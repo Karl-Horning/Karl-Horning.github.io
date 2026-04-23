@@ -61,8 +61,11 @@
     color: var(--muted);
 }
 
-/* "View ↗" link pinned to the top-right of each project row */
+/* "View" link pinned to the top-right of each project row */
 .proj__cta {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
     white-space: nowrap;
     font-size: 0.75rem;
     font-weight: 700;

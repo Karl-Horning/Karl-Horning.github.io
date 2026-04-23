@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "@/components/Hero.module.css";
 import { LINKEDIN_URL } from "@/lib/constants/links";
+import { FiArrowUpRight } from "react-icons/fi";
 
 /**
  * Full-page hero section introducing the site owner.
@@ -49,7 +50,7 @@ export default function Hero() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                LinkedIn ↗
+                                LinkedIn <FiArrowUpRight aria-hidden="true" />
                             </a>
                         </div>
                     </div>
