@@ -56,7 +56,7 @@ export default function Projects() {
                             </ul>
                         </div>
                         <a
-                            href="/projects/learnlight-platform"
+                            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/projects/learnlight-platform`}
                             className={styles.proj__cta}
                             aria-label="View Learnlight project"
                         >
@@ -89,7 +89,7 @@ export default function Projects() {
                             </ul>
                         </div>
                         <a
-                            href="/projects/karlhorning-dev"
+                            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/projects/karlhorning-dev`}
                             className={styles.proj__cta}
                             aria-label="View portfolio project"
                         >
@@ -122,7 +122,7 @@ export default function Projects() {
                             </ul>
                         </div>
                         <a
-                            href="/projects/transform-text"
+                            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/projects/transform-text`}
                             className={styles.proj__cta}
                             aria-label="View Transform Text project"
                         >
@@ -155,7 +155,7 @@ export default function Projects() {
                             </ul>
                         </div>
                         <a
-                            href="/projects/canvas-guide"
+                            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/projects/canvas-guide`}
                             className={styles.proj__cta}
                             aria-label="View Canvas guide project"
                         >
@@ -187,7 +187,7 @@ export default function Projects() {
                             </ul>
                         </div>
                         <a
-                            href="/projects/colour-contrast-checker"
+                            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/projects/colour-contrast-checker`}
                             className={styles.proj__cta}
                             aria-label="View Colour Contrast Checker project"
                         >
