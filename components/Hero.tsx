@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "@/components/Hero.module.css";
+import { LINKEDIN_URL } from "@/lib/constants/links";
 
 /**
  * Full-page hero section introducing the site owner.
@@ -43,7 +44,7 @@ export default function Hero() {
                                 View my work
                             </Link>
                             <a
-                                href="https://www.linkedin.com/in/karl-horning/"
+                                href={LINKEDIN_URL}
                                 className="btn btn--ghost"
                                 target="_blank"
                                 rel="noopener noreferrer"

@@ -1,4 +1,5 @@
 import styles from "@/components/CtaStrip.module.css";
+import { LINKEDIN_URL } from "@/lib/constants/links";
 
 /**
  * Full-width call-to-action strip inviting visitors to get in touch.
@@ -21,7 +22,7 @@ export default function CtaStrip() {
                 </p>
                 <div className={styles.cta_strip__actions}>
                     <a
-                        href="https://www.linkedin.com/in/karl-horning/"
+                        href={LINKEDIN_URL}
                         className="btn btn--solid"
                         target="_blank"
                         rel="noopener noreferrer"
