@@ -28,7 +28,10 @@ export default function CtaStrip() {
                     >
                         Connect on LinkedIn ↗
                     </a>
-                    <a href="/contact" className="btn btn--ghost">
+                    <a
+                        href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/contact`}
+                        className="btn btn--ghost"
+                    >
                         Send a message
                     </a>
                 </div>
