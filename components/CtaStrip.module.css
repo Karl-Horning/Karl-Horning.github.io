@@ -1,0 +1,48 @@
+/* Full-width section with alternate background to break the page rhythm */
+.cta_strip {
+    padding: 6rem 0;
+    background: var(--bg2);
+    text-align: center;
+}
+
+/* Large display heading split across two coloured lines */
+.cta_strip__heading {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 6rem);
+    text-transform: uppercase;
+    line-height: 0.88;
+    margin-bottom: 1.5rem;
+}
+
+.cta_strip__heading .line1 {
+    display: block;
+    color: var(--fg);
+}
+
+/* Second line rendered in brand pink for visual contrast */
+.cta_strip__heading .line2 {
+    display: block;
+    color: var(--pink);
+}
+
+.cta_strip__sub {
+    font-size: 1.0625rem;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+}
+
+/* Centred button row that stacks vertically on the smallest viewports */
+.cta_strip__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .cta_strip__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
