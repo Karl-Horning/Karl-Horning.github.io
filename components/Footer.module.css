@@ -1,0 +1,100 @@
+/* Dark full-width footer with top and bottom rows */
+.footer {
+    background: var(--footer-bg);
+    color: #fff;
+    padding: 2.5rem 0;
+}
+
+/* Top row: brand wordmark on the left, nav links on the right */
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+}
+
+.footer__brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo rendered in the display font at reduced opacity */
+.footer__logo {
+    font-family: var(--font-rubik-glitch);
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Inline horizontal nav list */
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    align-self: center;
+}
+
+.footer__nav a {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+/* Shared hover state for logo and nav links */
+.footer__logo:hover,
+.footer__nav a:hover {
+    color: var(--pink-light);
+}
+
+/* Bottom row: tagline on the left, social icons on the right */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer__sub {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Row of square icon links */
+.footer__social {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+}
+
+/* Each icon link is a centred square hit target */
+.footer__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.15s;
+    text-decoration: none;
+}
+
+.footer__social a:hover {
+    color: var(--pink-light);
+}
+
+/* Stack brand and nav vertically on narrow viewports */
+@media (max-width: 719px) {
+    .footer__top {
+        flex-direction: column;
+    }
+}
