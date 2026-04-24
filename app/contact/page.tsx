@@ -59,8 +59,10 @@ export default function Page() {
                                         rel="noopener noreferrer"
                                     >
                                         <FaLinkedin aria-hidden="true" />
-                                        View my LinkedIn profile{" "}
-                                        <FiArrowUpRight aria-hidden="true" />
+                                        Connect on LinkedIn{" "}
+                                        <span className={styles.btn_linkedin__arrow}>
+                                            <FiArrowUpRight aria-hidden="true" />
+                                        </span>
                                     </a>
                                 </div>
                             </div>
