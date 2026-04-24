@@ -1,6 +1,7 @@
 /* Dark full-width footer with top and bottom rows */
 .footer {
     background: var(--footer-bg);
+    border-top: 2px solid var(--pink);
     color: #fff;
     padding: 2.5rem 0;
 }
@@ -90,6 +91,12 @@
 
 .footer__social a:hover {
     color: var(--pink-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    .footer__top {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
 }
 
 /* Stack brand and nav vertically on narrow viewports */
