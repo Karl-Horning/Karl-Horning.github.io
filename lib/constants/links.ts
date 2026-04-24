@@ -25,3 +25,22 @@ export const CCC_REPO_URL =
 /** Live: Color Contrast Checker */
 export const CCC_DEMO_URL =
     "https://www.karlhorning.dev/color-contrast-checker-pwa/";
+
+/** Chrome Store: Transform Text */
+export const CHROME_STORE_URL =
+    "https://chromewebstore.google.com/detail/transform-text/hniojnoepnkpmimpnbaljkkcmoaklcii";
+
+/** Edge Store: Transform Text */
+export const EDGE_STORE_URL =
+    "https://microsoftedge.microsoft.com/addons/detail/transform-text/jmmaiegdlpmbochdbahokkbjelncaioc";
+
+/** Firefox Store: Transform Text */
+export const FIREFOX_STORE_URL =
+    "https://addons.mozilla.org/en-GB/firefox/addon/transform-text/";
+
+/** Repo: Transform Text */
+export const TRANSFORM_TEXT_REPO_URL =
+    "https://github.com/Karl-Horning/transform-text-extension";
+
+/** Live: Transform Text */
+export const TRANSFORM_TEXT_URL = "https://www.karlhorning.dev/transform-text/";
