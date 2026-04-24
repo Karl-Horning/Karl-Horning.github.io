@@ -95,7 +95,6 @@ export default function RootLayout({
         <html
             lang="en-GB"
             className={`${inter.variable} ${barlowCondensed.variable} ${rubikGlitch.variable} h-full antialiased`}
-            data-scroll-behavior="smooth"
         >
             <body className="min-h-full flex flex-col">
                 <a href="#main" className="skip-link">
