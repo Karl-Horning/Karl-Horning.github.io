@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Barlow_Condensed, Rubik_Glitch } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -28,6 +28,10 @@ const rubikGlitch = Rubik_Glitch({
     variable: "--font-rubik-glitch",
     subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+    themeColor: "#cb2d6f",
+};
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
@@ -64,7 +68,6 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         images: ["/og/preview-image.png"],
     },
-    themeColor: "#cb2d6f",
 };
 
 export default function RootLayout({
