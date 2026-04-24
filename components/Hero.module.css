@@ -1,16 +1,3 @@
-.hero {
-    min-height: 100dvh;
-    padding-top: 68px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.hero__inner {
-    padding: 5rem var(--pad) 6rem;
-    max-width: var(--max-w);
-    margin: 0 auto;
-    width: 100%;
-}
 .hero__eyebrow {
     font-size: 0.8125rem;
     font-weight: 700;
@@ -20,7 +7,7 @@
     margin-bottom: 1rem;
 }
 .hero__name {
-    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-family: var(--font-barlow-condensed);
     font-weight: 900;
     font-size: clamp(5.5rem, 15vw, 14rem);
     line-height: 0.87;
@@ -85,9 +72,5 @@
 @media (max-width: 480px) {
     .hero__actions {
         flex-direction: column;
-    }
-    .cta-strip__actions {
-        flex-direction: column;
-        align-items: center;
     }
 }

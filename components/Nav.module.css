@@ -3,7 +3,7 @@
     position: fixed;
     inset: 0 0 auto 0;
     z-index: 100;
-    background: var(--background);
+    background: var(--bg);
     border-bottom: 1px solid var(--border);
 }
 
@@ -82,7 +82,7 @@
     padding: 1.5rem var(--pad) 2rem;
     gap: 1.5rem;
     border-top: 1px solid var(--border);
-    background: var(--background);
+    background: var(--bg);
 }
 
 .mobileMenuOpen {
