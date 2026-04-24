@@ -9,3 +9,11 @@ export const CODEPEN_URL = "https://codepen.io/karlhorning";
 
 /** Karl Horning's Formspree forms URL. */
 export const FORMSPREE_URL = "https://formspree.io/f/mgvnyjyq";
+
+/** Repo: Oxford Learner's Dictionaries API PoC */
+export const OLD_API_POC_URL =
+    "https://github.com/Karl-Horning/oxford-learners-dictionaries-api";
+
+/** Repo: GraphQL Rate Limit Demo PoC */
+export const RATE_LIMIT_POC_URL =
+    "https://github.com/Karl-Horning/graphql-rate-limit-demo";
