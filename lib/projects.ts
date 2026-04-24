@@ -1,5 +1,5 @@
 import { meta as canvasGuide } from "@/app/projects/canvas-guide/meta";
-import { meta as colourContrastChecker } from "@/app/projects/colour-contrast-checker/meta";
+import { meta as colorContrastChecker } from "@/app/projects/color-contrast-checker/meta";
 import { meta as karlhorningDev } from "@/app/projects/karlhorning-dev/meta";
 import { meta as learnlightPlatform } from "@/app/projects/learnlight-platform/meta";
 import { meta as transformText } from "@/app/projects/transform-text/meta";
@@ -31,5 +31,5 @@ export const PROJECTS: ProjectMeta[] = [
     karlhorningDev,
     transformText,
     canvasGuide,
-    colourContrastChecker,
+    colorContrastChecker,
 ].sort((a, b) => a.number - b.number);

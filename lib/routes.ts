@@ -12,7 +12,7 @@ export const ROUTES = [
     "/projects/karlhorning-dev",
     "/projects/transform-text",
     "/projects/canvas-guide",
-    "/projects/colour-contrast-checker",
+    "/projects/color-contrast-checker",
 ] as const;
 
 export type Route = (typeof ROUTES)[number];
