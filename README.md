@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# karlhorning.dev
 
-## Getting Started
+Personal portfolio and blog — a statically exported Next.js site with Playwright + axe-core accessibility testing built in.
 
-First, run the development server:
+**Live site:** [karlhorning.dev](https://www.karlhorning.dev)
+
+## Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **CSS Modules**
+- **React Icons**
+- Deployed to **GitHub Pages** via GitHub Actions with a custom domain
+
+## Notable decisions
+
+**Single source of truth for routes** — `lib/routes.ts` drives the generated sitemap and Playwright smoke tests. Add a route here when a new page is created.
+
+**Single source of truth for projects** — `lib/projects.ts` defines the `ProjectMeta` interface and exports `PROJECTS` sorted by display order. Each project has a `meta.ts` alongside its page; the shared `ProjectLayout` component derives the sidebar, links, and prev/next navigation from that data automatically.
+
+**SEO** — Each page exports typed metadata with Open Graph and Twitter cards, canonical URLs, and a default OG image. The site is registered with Google Search Console.
+
+**Accessibility testing** — Playwright with `@axe-core/playwright` for automated accessibility checks on every route across desktop and mobile viewports, alongside manual screen reader and keyboard testing.
+
+**CSS architecture** — CSS Modules for component-scoped styles; `globals.css` holds design tokens and shared utilities only.
+
+**CI/CD** — GitHub Actions builds and deploys to GitHub Pages on every merge to main.
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script | Description |
+| --- | --- |
+| `dev` | Start the development server |
+| `build` | Production build (static export) |
+| `start` | Start the Next.js server (run `build` first) |
+| `lint` | Run ESLint |
+| `test` | Run Playwright tests |
+| `test:ui` | Run Playwright tests with the interactive UI |
+| `check-links` | Check for broken links on the live site |
+| `check-links:local` | Check for broken links on the local server |
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Released under the [MIT License](./LICENSE) by [Karl Horning](https://github.com/Karl-Horning).
