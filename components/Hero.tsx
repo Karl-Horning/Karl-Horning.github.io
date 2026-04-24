@@ -14,8 +14,8 @@ import { FiArrowUpRight } from "react-icons/fi";
 export default function Hero() {
     return (
         <>
-            <section className={styles.hero} aria-label="Introduction">
-                <div className={styles.hero__inner}>
+            <section className="full-page" aria-label="Introduction">
+                <div className="page-inner">
                     <p className={styles.hero__eyebrow}>
                         — Full-stack developer
                     </p>

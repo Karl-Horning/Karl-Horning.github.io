@@ -1,17 +1,6 @@
 @import "tailwindcss";
 
 :root {
-    --background: #F7F3EE;
-    --foreground: #0D0D0D;
-
-    /* Brand palette */
-    --primary: #cb2d6f;
-    --secondary: #3c7da4;
-    --accent: #14a098;
-    --highlight: #148aad;
-    --black: #2d292d;
-    --custom-red: #da4453;
-
     /* Pink scale */
     --pink: #cb2d6f;
     --pink-dk: #a52259;
@@ -25,10 +14,6 @@
     --muted: #5c5552;
     --border: #d5cfc8;
     --footer-bg: #0d0d0d;
-    --background-subtle: #254c4f;
-    --surface: #1a3b3d;
-    --hero: #0b1d21;
-    --text: #cccccc;
 
     /* Layout */
     --max-w: 1140px;
@@ -36,9 +21,9 @@
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-primary: var(--primary);
+    --color-background: var(--bg);
+    --color-foreground: var(--fg);
+    --color-primary: var(--pink);
     --font-sans: var(--font-inter);
     --font-condensed: var(--font-barlow-condensed);
     --font-glitch: var(--font-rubik-glitch);
@@ -50,8 +35,8 @@
         scroll-behavior: smooth;
     }
     body {
-        background: var(--background);
-        color: var(--foreground);
+        background: var(--bg);
+        color: var(--fg);
         font-family: var(--font-inter), system-ui, sans-serif;
         font-size: 1.0625rem;
         line-height: 1.65;
@@ -153,19 +138,34 @@
     color: var(--fg);
 }
 
-/* ── Layout util ───────────────────────────────────── */
+/* ── Layout utils ──────────────────────────────────── */
 .wrap {
     max-width: var(--max-w);
     margin: 0 auto;
     padding: 0 var(--pad);
 }
 
+/* Full-viewport flex column — shared by hero and error page */
+.full-page {
+    min-height: 100dvh;
+    padding-top: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Padded, centred content block — shared by hero and error page */
+.page-inner {
+    padding: 5rem var(--pad) 6rem;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    width: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #111015;
-        --foreground: #e8e8e8;
-
         /* Design tokens — dark overrides */
+        --bg: #111015;
         --pink-text: #e8709a;
         --bg2: #1a1522;
         --fg: #e8e8e8;
@@ -182,5 +182,210 @@
     .btn {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* ── 404 Section ───────────────────────────────────── */
+.error__eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pink-text);
+    margin-bottom: 1.25rem;
+}
+
+/* The big number */
+.error__code {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 900;
+    font-size: clamp(7rem, 22vw, 20rem);
+    line-height: 0.87;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--fg);
+    position: relative;
+    display: inline-block;
+    animation: glitch-shake 4s steps(2, end) infinite;
+}
+.error__code .zero {
+    color: var(--pink);
+}
+.error__code::before,
+.error__code::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    font: inherit;
+    pointer-events: none;
+    letter-spacing: inherit;
+}
+.error__code::before {
+    text-shadow:
+        3px 0 #148aad,
+        -1.5px 0 #148aad;
+}
+.error__code::after {
+    text-shadow:
+        -3px 0 #cb2d6f,
+        1.5px 0 #cb2d6f;
+}
+.error__code::before {
+    animation:
+        glitch-slice-a 4s steps(2, end) infinite alternate-reverse,
+        glitch-flicker 4s steps(2, end) infinite;
+}
+.error__code::after {
+    animation:
+        glitch-slice-b 4s steps(2, end) infinite alternate,
+        glitch-flicker 4s steps(2, end) infinite reverse;
+}
+
+.error__rule {
+    width: 100%;
+    height: 2px;
+    background: var(--pink);
+    margin: 2.5rem 0;
+}
+.error__bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: end;
+}
+.error__left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 540px;
+}
+.error__heading {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--fg);
+}
+.error__sub {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.75;
+}
+.error__actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.875rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* ── Glitch keyframes ──────────────────────────────── */
+@keyframes glitch-shake {
+    0% {
+        transform: translate3d(0, 0, 0) skewX(0deg);
+    }
+    20% {
+        transform: translate3d(-1px, 0.5px, 0) skewX(-0.3deg);
+    }
+    40% {
+        transform: translate3d(-0.5px, 1px, 0) skewX(0deg);
+    }
+    60% {
+        transform: translate3d(-1px, 0, 0) skewX(0.2deg);
+    }
+    80% {
+        transform: translate3d(-0.5px, -0.5px, 0) skewX(0.2deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) skewX(0deg);
+    }
+}
+@keyframes glitch-slice-a {
+    0% {
+        clip-path: inset(0 0 80% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        clip-path: inset(30% 0 40% 0);
+        transform: translate3d(3px, 0, 0);
+    }
+    50% {
+        clip-path: inset(60% 0 20% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    75% {
+        clip-path: inset(20% 0 60% 0);
+        transform: translate3d(-3px, 0, 0);
+    }
+    100% {
+        clip-path: inset(0 0 80% 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes glitch-slice-b {
+    0% {
+        clip-path: inset(85% 0 0 0);
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        clip-path: inset(50% 0 20% 0);
+        transform: translate3d(-3px, 0, 0);
+    }
+    50% {
+        clip-path: inset(25% 0 50% 0);
+        transform: translate3d(0, 0, 0);
+    }
+    75% {
+        clip-path: inset(40% 0 40% 0);
+        transform: translate3d(3px, 0, 0);
+    }
+    100% {
+        clip-path: inset(85% 0 0 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes glitch-flicker {
+    0%,
+    18%,
+    22%,
+    40%,
+    60%,
+    64%,
+    78%,
+    100% {
+        opacity: 1;
+    }
+    20%,
+    62% {
+        opacity: 0.15;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .logo,
+    .logo::before,
+    .logo::after,
+    .error__code,
+    .error__code::before,
+    .error__code::after {
+        animation: none !important;
+        filter: none !important;
+    }
+    .logo::before,
+    .logo::after {
+        opacity: 0 !important;
+    }
+    .error__code::before,
+    .error__code::after {
+        opacity: 0 !important;
+    }
+    .logo {
+        opacity: 1 !important;
+        filter: none !important;
     }
 }
