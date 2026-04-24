@@ -14,7 +14,7 @@
 }
 
 .hero__title {
-    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-size: clamp(2rem, 9vw, 8rem);
     margin-bottom: 1.5rem;
 }
 
@@ -273,6 +273,18 @@
 
     .sidebar {
         position: static;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        display: flex;
+        flex-direction: column;
     }
 }
 
