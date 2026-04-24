@@ -51,3 +51,7 @@ export const CANVAS_GUIDE_REPO_URL =
 
 /** Live: Canvas Content Styling Guide */
 export const CANVAS_GUIDE_URL = "https://canvas.karlhorning.dev";
+
+/** Repo: karlhorning.dev */
+export const KARLHORNING_DEV_REPO_URL =
+    "https://github.com/Karl-Horning/karlhorning.dev";

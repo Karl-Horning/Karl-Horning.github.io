@@ -1,7 +1,9 @@
+import { KARLHORNING_DEV_REPO_URL } from "@/lib/constants/links";
+
 export const meta = {
     title: "karlhorning.dev",
     description:
-        "This portfolio. A static Next.js site with Playwright + axe-core accessibility testing built in and perfect Lighthouse scores across mobile and desktop.",
+        "The fourth version of karlhorning.dev — a static Next.js site with a JSON-driven blog, RSS feed, and Playwright + axe-core accessibility testing across every page.",
     keywords: [
         "Next.js",
         "TypeScript",
@@ -9,6 +11,7 @@ export const meta = {
         "Playwright",
         "axe-core",
         "CSS Modules",
+        "GitHub Pages",
     ],
     role: "Developer",
     dateFrom: "04-2025",
@@ -18,14 +21,10 @@ export const meta = {
     slug: "karlhorning-dev",
     draft: false,
     stats: [
-        { value: "100", label: "Performance" },
-        { value: "100", label: "Accessibility" },
-        { value: "100", label: "Best Practices" },
-        { value: "100", label: "SEO" },
+        { value: "v4", label: "Current version" },
+        { value: "48", label: "Playwright tests" },
+        { value: "100", label: "Lighthouse performance" },
     ],
-    linksTitle: "Proof of concepts on GitHub",
-    links: [
-        { label: "Oxford Dictionaries API PoC", href: "#" },
-        { label: "Rate limiting PoC", href: "#" },
-    ],
+    linksTitle: "Source code",
+    links: [{ label: "GitHub repository", href: KARLHORNING_DEV_REPO_URL }],
 };
