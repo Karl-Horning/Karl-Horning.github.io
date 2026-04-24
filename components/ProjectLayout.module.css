@@ -67,6 +67,16 @@
     font-weight: 700;
 }
 
+.prose a {
+    color: var(--pink-text);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.prose a:hover {
+    color: var(--pink);
+}
+
 .prose figure {
     margin: 2rem 0;
 }
