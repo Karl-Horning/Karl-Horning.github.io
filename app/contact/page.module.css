@@ -130,6 +130,23 @@
     align-self: flex-start;
 }
 
+@media (max-width: 400px) {
+    .btn_linkedin__arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .btn_linkedin, .form__submit {
+        width: 100%;
+        justify-content: center;
+    }
+    .contact_grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     /* Lighten card background slightly so it reads as a distinct surface */
     .linkedin_card {
