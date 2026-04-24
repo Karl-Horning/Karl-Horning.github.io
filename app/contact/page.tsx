@@ -1,7 +1,12 @@
 import styles from "@/app/contact/page.module.css";
 import { FORMSPREE_URL, LINKEDIN_URL } from "@/lib/constants/links";
+import { Metadata } from "next";
 import { FaLinkedin } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
+
+export const metadata: Metadata = {
+    title: "Contact",
+};
 
 /**
  * Contact page offering two ways to get in touch: LinkedIn and a
