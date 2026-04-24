@@ -102,6 +102,31 @@
     color: var(--pink);
 }
 
+/* ── Display heading — large typographic title used in page headers ── */
+.display {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: var(--fg);
+}
+
+/* ── Page header — reusable banner shared across inner pages ── */
+.page-header {
+    padding-top: 68px;
+}
+.page-header__inner {
+    padding: 5rem var(--pad) 3rem;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+.page-header__eyebrow {
+    margin-bottom: 1rem;
+}
+.page-header__title {
+    font-size: clamp(4rem, 11vw, 10rem);
+}
+
 /* ── Rule ──────────────────────────────────────────── */
 .rule {
     border: none;

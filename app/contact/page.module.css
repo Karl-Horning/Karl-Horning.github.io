@@ -1,0 +1,145 @@
+/* ── Contact body ── */
+.contact_body {
+    padding: 4rem 0 6rem;
+}
+
+/* Two-column grid: LinkedIn card on the left, form on the right */
+.contact_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+/* ── LinkedIn card — dark panel promoting the preferred contact method ── */
+.linkedin_card {
+    background: var(--fg);
+    color: #fff;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* "Preferred" label rendered in pink against the dark card background */
+.linkedin_card__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pink-light);
+}
+
+.linkedin_card__heading {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: #fff;
+}
+
+.linkedin_card__text {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.75;
+}
+
+.linkedin_card__action {
+    margin-top: 0.5rem;
+}
+
+/* LinkedIn-branded button overriding the shared .btn base */
+.btn_linkedin {
+    background: #0a66c2;
+    color: #fff;
+    border-color: #0a66c2;
+}
+
+.btn_linkedin:hover {
+    background: #084d93;
+    border-color: #084d93;
+}
+
+/* ── Contact form ── */
+.form_heading {
+    font-family: var(--font-barlow-condensed);
+    font-weight: 900;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Label + input stacked vertically */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.field__label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.field__input,
+.field__textarea {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--fg);
+    padding: 0.875rem 1rem;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    border-radius: 2px;
+    width: 100%;
+    transition:
+        outline 0.1s,
+        border-color 0.1s;
+}
+
+/* Pink outline on focus replaces the default browser ring */
+.field__input:focus,
+.field__textarea:focus {
+    outline: 2px solid var(--pink);
+    outline-offset: 0;
+    border-color: transparent;
+}
+
+.field__textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.form__note {
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+/* Left-align the submit button within the full-width form column */
+.form__submit {
+    align-self: flex-start;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Lighten card background slightly so it reads as a distinct surface */
+    .linkedin_card {
+        background: #1a1522;
+        border: 1px solid var(--border);
+    }
+
+    .field__input,
+    .field__textarea {
+        background: #1a1522;
+        border-color: var(--border);
+    }
+}

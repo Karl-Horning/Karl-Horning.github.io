@@ -6,3 +6,6 @@ export const GITHUB_URL = "https://github.com/Karl-Horning";
 
 /** Karl Horning's CodePen profile URL. */
 export const CODEPEN_URL = "https://codepen.io/karlhorning";
+
+/** Karl Horning's Formspree forms URL. */
+export const FORMSPREE_URL = "https://formspree.io/f/mgvnyjyq";
