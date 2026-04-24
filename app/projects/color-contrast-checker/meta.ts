@@ -13,10 +13,9 @@ export const meta = {
     slug: "color-contrast-checker",
     draft: false,
     stats: [
-        { value: "100", label: "Performance" },
-        { value: "100", label: "Accessibility" },
-        { value: "100", label: "Best Practices" },
-        { value: "100", label: "SEO" },
+        { value: "AA & AAA", label: "WCAG levels supported" },
+        { value: "100", label: "Lighthouse performance" },
+        { value: "100", label: "Lighthouse accessibility" },
     ],
     linksTitle: "Repo on GitHub and Live Demo",
     links: [
