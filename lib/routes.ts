@@ -5,6 +5,14 @@
  * and Playwright smoke tests. Add a route here when a new page is created.
  */
 
-export const ROUTES = ["/"] as const;
+export const ROUTES = [
+    "/",
+    "/contact",
+    "/projects/learnlight-platform",
+    "/projects/karlhorning-dev",
+    "/projects/transform-text",
+    "/projects/canvas-guide",
+    "/projects/colour-contrast-checker",
+] as const;
 
 export type Route = (typeof ROUTES)[number];
