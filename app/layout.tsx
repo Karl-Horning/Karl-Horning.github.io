@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     },
     description: SITE_DESCRIPTION,
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+    alternates: {
+        canonical: SITE_URL,
+    },
     icons: {
         icon: [
             { url: "/favicons.ico/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -55,10 +58,13 @@ export const metadata: Metadata = {
         locale: "en_GB",
         type: "website",
         url: SITE_URL,
+        images: [{ url: "/og/preview-image.png" }],
     },
     twitter: {
         card: "summary_large_image",
+        images: ["/og/preview-image.png"],
     },
+    themeColor: "#cb2d6f",
 };
 
 export default function RootLayout({
@@ -68,7 +74,7 @@ export default function RootLayout({
 }>) {
     return (
         <html
-            lang="en"
+            lang="en-GB"
             className={`${inter.variable} ${barlowCondensed.variable} ${rubikGlitch.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
@@ -76,7 +82,7 @@ export default function RootLayout({
                     Skip to main content
                 </a>
                 <Nav />
-                <main id="main">{children}</main>
+                <main id="main" className="flex-1">{children}</main>
                 <Footer />
             </body>
         </html>
