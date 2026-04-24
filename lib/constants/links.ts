@@ -44,3 +44,10 @@ export const TRANSFORM_TEXT_REPO_URL =
 
 /** Live: Transform Text */
 export const TRANSFORM_TEXT_URL = "https://www.karlhorning.dev/transform-text/";
+
+/** Repo: Canvas Content Styling Guide */
+export const CANVAS_GUIDE_REPO_URL =
+    "https://github.com/Karl-Horning/canvas";
+
+/** Live: Canvas Content Styling Guide */
+export const CANVAS_GUIDE_URL = "https://canvas.karlhorning.dev";
