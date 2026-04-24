@@ -1,7 +1,7 @@
 import styles from "@/components/ProjectLayout.module.css";
 import { PROJECTS, type ProjectMeta } from "@/lib/projects";
 import Link from "next/link";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
 interface Props {
     meta: ProjectMeta;
@@ -12,8 +12,18 @@ function formatDate(raw: string): string {
     if (raw === "present") return "Present";
     const [mm, yyyy] = raw.split("-");
     const months = [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
     ];
     return `${months[parseInt(mm, 10) - 1]} ${yyyy}`;
 }
@@ -47,7 +57,8 @@ export default function ProjectLayout({ meta, children }: Props) {
                     <div className={styles.hero__meta}>
                         <span className={styles.hero__role}>{meta.role}</span>
                         <span className={styles.hero__period}>
-                            {formatDate(meta.dateFrom)} – {formatDate(meta.dateTo)}
+                            {formatDate(meta.dateFrom)} –{" "}
+                            {formatDate(meta.dateTo)}
                         </span>
                     </div>
                 </div>
@@ -76,12 +87,18 @@ export default function ProjectLayout({ meta, children }: Props) {
                                                 className={styles.link}
                                             >
                                                 <span
-                                                    className={styles.link__icon}
+                                                    className={
+                                                        styles.link__icon
+                                                    }
                                                     aria-hidden="true"
                                                 >
-                                                    <FiArrowUpRight />
+                                                    <FiArrowUpRight aria-hidden="true" />
                                                 </span>
-                                                <p className={styles.link__text}>
+                                                <p
+                                                    className={
+                                                        styles.link__text
+                                                    }
+                                                >
                                                     <a
                                                         href={link.href}
                                                         className={
@@ -116,12 +133,16 @@ export default function ProjectLayout({ meta, children }: Props) {
                                                 className={styles.stat}
                                             >
                                                 <span
-                                                    className={styles.stat__value}
+                                                    className={
+                                                        styles.stat__value
+                                                    }
                                                 >
                                                     {s.value}
                                                 </span>
                                                 <span
-                                                    className={styles.stat__label}
+                                                    className={
+                                                        styles.stat__label
+                                                    }
                                                 >
                                                     {s.label}
                                                 </span>
@@ -156,7 +177,7 @@ export default function ProjectLayout({ meta, children }: Props) {
                                 aria-label={`Previous project: ${prev.title}`}
                             >
                                 <span className={styles.nav__dir}>
-                                    ← Previous
+                                    <FiArrowLeft aria-hidden="true" /> Previous
                                 </span>
                                 <span className={styles.nav__name}>
                                     {prev.title}
@@ -167,7 +188,9 @@ export default function ProjectLayout({ meta, children }: Props) {
                                 className={`${styles.nav__link} ${styles.nav__link_next}`}
                                 aria-label={`Next project: ${next.title}`}
                             >
-                                <span className={styles.nav__dir}>Next →</span>
+                                <span className={styles.nav__dir}>
+                                    Next <FiArrowRight aria-hidden="true" />
+                                </span>
                                 <span className={styles.nav__name}>
                                     {next.title}
                                 </span>
