@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/config";
 import { ROUTES } from "@/lib/routes";
 
+export const dynamic = "force-static";
+
 /**
  * Generates the site's XML sitemap for search engine crawlers.
  *
