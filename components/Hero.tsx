@@ -26,11 +26,11 @@ export default function Hero() {
                     <div className={styles.hero__rule} aria-hidden="true"></div>
                     <div className={styles.hero__bottom}>
                         <div className={styles.hero__left}>
-                            <p className={styles.hero__tagline}>
+                            <h2 className={styles.hero__tagline}>
                                 Fast. Accessible.
                                 <br />
                                 No fluff.
-                            </p>
+                            </h2>
                             <p className={styles.hero__bio}>
                                 Web Developer at King&apos;s College London. I
                                 build things that work for everyone — fast,
