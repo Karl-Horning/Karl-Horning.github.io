@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import styles from "@/components/Nav.module.css";
@@ -34,16 +35,67 @@ const NAV_LINKS: NavLink[] = [
  */
 export default function Nav() {
     const [isOpen, setIsOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+    const hamburgerRef = useRef<HTMLButtonElement>(null);
+    const drawerRef = useRef<HTMLDivElement>(null);
 
-    // Toggles the mobile menu between open and closed states.
+    // Portal requires document.body — only render after hydration
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    useEffect(() => { setMounted(true); }, []);
+
+    useEffect(() => {
+        function onResize() {
+            if (window.innerWidth > 719) setIsOpen(false);
+        }
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "";
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (!isOpen) return;
+        function onPointerDown(e: PointerEvent) {
+            const target = e.target as Node;
+            if (
+                !hamburgerRef.current?.contains(target) &&
+                !drawerRef.current?.contains(target)
+            ) {
+                setIsOpen(false);
+            }
+        }
+        document.addEventListener("pointerdown", onPointerDown);
+        return () => document.removeEventListener("pointerdown", onPointerDown);
+    }, [isOpen]);
+
     function toggleMobileMenu() {
         setIsOpen((prev) => !prev);
     }
 
-    // Closes the mobile menu after a link is activated.
     function closeMobileMenu() {
         setIsOpen(false);
     }
+
+    const drawer = (
+        <div
+            ref={drawerRef}
+            id="mobile-nav"
+            className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}
+            role="navigation"
+            aria-label="Mobile navigation"
+        >
+            {NAV_LINKS.map(({ href, label }) => (
+                <Link key={href} href={href} onClick={closeMobileMenu}>
+                    {label}
+                </Link>
+            ))}
+        </div>
+    );
 
     return (
         <header>
@@ -60,6 +112,7 @@ export default function Nav() {
                     </ul>
 
                     <button
+                        ref={hamburgerRef}
                         type="button"
                         className={`${styles.hamburger} ${isOpen ? styles.hamburgerOpen : ""}`}
                         aria-label={
@@ -67,7 +120,7 @@ export default function Nav() {
                                 ? "Close navigation menu"
                                 : "Open navigation menu"
                         }
-                        aria-expanded={isOpen ? "true" : "false"}
+                        aria-expanded={isOpen}
                         aria-controls="mobile-nav"
                         onClick={toggleMobileMenu}
                     >
@@ -76,20 +129,9 @@ export default function Nav() {
                         <span />
                     </button>
                 </div>
-
-                <div
-                    id="mobile-nav"
-                    className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}
-                    role="navigation"
-                    aria-label="Mobile navigation"
-                >
-                    {NAV_LINKS.map(({ href, label }) => (
-                        <Link key={href} href={href} onClick={closeMobileMenu}>
-                            {label}
-                        </Link>
-                    ))}
-                </div>
             </nav>
+
+            {mounted && createPortal(drawer, document.body)}
         </header>
     );
 }
