@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "generate:posts": "tsx scripts/generate-posts-ts.ts",
+    "build:posts": "tsx scripts/build-posts-json.ts",
+    "build:rss": "tsx scripts/build-rss-from-posts.ts",
+    "prebuild": "npm run generate:posts && npm run build:posts && npm run build:rss",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -28,7 +32,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "fast-glob": "^3.3.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "zod": "^4.3.6"
   }
 }
