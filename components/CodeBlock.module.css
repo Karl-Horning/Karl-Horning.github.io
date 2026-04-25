@@ -1,0 +1,38 @@
+/* ── Wrapper ── */
+.wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.scroller {
+    overflow-x: auto;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Target the <pre> Shiki injects into .code */
+.code :global(pre) {
+    margin: 0;
+    padding: 1rem;
+    padding-right: 5rem; /* room for the copy button */
+    font-size: 0.875rem;
+    white-space: pre;
+    width: max-content;
+    min-width: 100%;
+}
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+    .scroller {
+        border-color: #374151;
+    }
+
+    .code :global(.shiki),
+    .code :global(.shiki span) {
+        color: var(--shiki-dark) !important;
+        background-color: var(--shiki-dark-bg) !important;
+        font-style: var(--shiki-dark-font-style) !important;
+        font-weight: var(--shiki-dark-font-weight) !important;
+        text-decoration: var(--shiki-dark-text-decoration) !important;
+    }
+}

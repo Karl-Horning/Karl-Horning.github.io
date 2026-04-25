@@ -1,0 +1,98 @@
+[
+    {
+        "title": "Testing My Portfolio for Accessibility: What axe-core Found (and What It Didn't)",
+        "description": "What happened when I added Playwright and axe-core to my portfolio site — the structural issues that surfaced, how I fixed them, and what automated testing still missed.",
+        "date": "2026-04-01T10:22:00Z",
+        "readingTime": 6,
+        "slug": "testing-portfolio-accessibility",
+        "thumbnail": {
+            "src": "/img/blog/testing-my-portfolio-for-accessibility.webp",
+            "alt": ""
+        },
+        "topics": [
+            "accessibility",
+            "a11y",
+            "testing",
+            "Playwright",
+            "axe-core",
+            "React"
+        ],
+        "draft": false
+    },
+    {
+        "title": "Web Accessibility Resources and Tools: Guidelines, Checklists, and Testing Solutions",
+        "description": "A reference list of web accessibility tools, guidelines, and articles — with starred items for quick starting points.",
+        "date": "2025-10-22T20:10:00Z",
+        "readingTime": 7,
+        "slug": "web-accessibility-resources-and-tools",
+        "thumbnail": {
+            "src": "/img/blog/header-computer.png",
+            "alt": "A collection of icons representing accessibility and web tools"
+        },
+        "topics": [
+            "accessibility",
+            "a11y",
+            "web-development",
+            "resources"
+        ],
+        "draft": false
+    },
+    {
+        "title": "Setting Up Prettier with Tailwind CSS in a React Project",
+        "description": "The setup I use at the start of every React project — Prettier with Tailwind CSS class sorting, for both Next.js and Vite.",
+        "date": "2025-08-04T16:03:00Z",
+        "readingTime": 4,
+        "slug": "setting-up-prettier-with-tailwind-css-in-a-react-project",
+        "thumbnail": {
+            "src": "/img/blog/prettier_tailwind.webp",
+            "alt": "The Next.js, React, Vite, Tailwind, and Prettier logos"
+        },
+        "topics": [
+            "Prettier",
+            "Tailwind CSS",
+            "React",
+            "Next.js",
+            "Vite",
+            "JavaScript"
+        ],
+        "draft": false
+    },
+    {
+        "title": "Testing LMS APIs: What an OpenAPI Spec Gives You (and What It Doesn't)",
+        "description": "What I learned building a reusable Postman testing framework across three LMS APIs — and how Blackboard, Canvas, and Brightspace each presented different challenges.",
+        "date": "2025-07-11T18:31:00Z",
+        "readingTime": 5,
+        "slug": "testing-lms-apis",
+        "thumbnail": {
+            "src": "/img/blog/testing_lms_apis.webp",
+            "alt": "The Postman and Blackboard Learn logos"
+        },
+        "topics": [
+            "API",
+            "OpenAPI",
+            "Postman",
+            "OAuth2",
+            "testing",
+            "LMS"
+        ],
+        "draft": false
+    },
+    {
+        "title": "Hello, World!",
+        "description": "An introduction to the blog and what it covers: accessibility, architecture, and lessons from real development work.",
+        "date": "2025-06-22T22:33:00Z",
+        "readingTime": 2,
+        "slug": "hello-world",
+        "thumbnail": {
+            "src": "/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp",
+            "alt": "A neon sign saying 'hello'"
+        },
+        "topics": [
+            "meta",
+            "blog",
+            "personal",
+            "technology"
+        ],
+        "draft": false
+    }
+]

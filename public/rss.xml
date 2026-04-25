@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss
+  version="2.0"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+>
+  <channel>
+    <title>Karl Horning&apos;s Blog</title>
+    <link>https://www.karlhorning.dev/blog</link>
+    <description>Notes on web development, accessibility, and learning tech</description>
+    <language>en-GB</language>
+    <generator>build-rss-from-posts.ts</generator>
+    <lastBuildDate>Sat, 25 Apr 2026 00:00:33 +0000</lastBuildDate>
+    <atom:link href="https://www.karlhorning.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing My Portfolio for Accessibility: What axe-core Found (and What It Didn&apos;t)</title>
+      <link>https://www.karlhorning.dev/blog/testing-portfolio-accessibility</link>
+      <pubDate>Wed, 01 Apr 2026 10:22:00 +0000</pubDate>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/testing-my-portfolio-for-accessibility.webp" alt="" /><br>What happened when I added Playwright and axe-core to my portfolio site — the structural issues that surfaced, how I fixed them, and what automated testing still missed.]]></description>
+      <category>accessibility</category>
+      <category>a11y</category>
+      <category>testing</category>
+      <category>Playwright</category>
+      <category>axe-core</category>
+      <category>React</category>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/testing-my-portfolio-for-accessibility.webp" />
+      <guid isPermaLink="true">https://www.karlhorning.dev/blog/testing-portfolio-accessibility</guid>
+    </item>
+    <item>
+      <title>Web Accessibility Resources and Tools: Guidelines, Checklists, and Testing Solutions</title>
+      <link>https://www.karlhorning.dev/blog/web-accessibility-resources-and-tools</link>
+      <pubDate>Wed, 22 Oct 2025 20:10:00 +0000</pubDate>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/header-computer.png" alt="A collection of icons representing accessibility and web tools" /><br>A reference list of web accessibility tools, guidelines, and articles — with starred items for quick starting points.]]></description>
+      <category>accessibility</category>
+      <category>a11y</category>
+      <category>web-development</category>
+      <category>resources</category>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/header-computer.png" />
+      <guid isPermaLink="true">https://www.karlhorning.dev/blog/web-accessibility-resources-and-tools</guid>
+    </item>
+    <item>
+      <title>Setting Up Prettier with Tailwind CSS in a React Project</title>
+      <link>https://www.karlhorning.dev/blog/setting-up-prettier-with-tailwind-css-in-a-react-project</link>
+      <pubDate>Mon, 04 Aug 2025 16:03:00 +0000</pubDate>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/prettier_tailwind.webp" alt="The Next.js, React, Vite, Tailwind, and Prettier logos" /><br>The setup I use at the start of every React project — Prettier with Tailwind CSS class sorting, for both Next.js and Vite.]]></description>
+      <category>Prettier</category>
+      <category>Tailwind CSS</category>
+      <category>React</category>
+      <category>Next.js</category>
+      <category>Vite</category>
+      <category>JavaScript</category>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/prettier_tailwind.webp" />
+      <guid isPermaLink="true">https://www.karlhorning.dev/blog/setting-up-prettier-with-tailwind-css-in-a-react-project</guid>
+    </item>
+    <item>
+      <title>Testing LMS APIs: What an OpenAPI Spec Gives You (and What It Doesn&apos;t)</title>
+      <link>https://www.karlhorning.dev/blog/testing-lms-apis</link>
+      <pubDate>Fri, 11 Jul 2025 18:31:00 +0000</pubDate>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/testing_lms_apis.webp" alt="The Postman and Blackboard Learn logos" /><br>What I learned building a reusable Postman testing framework across three LMS APIs — and how Blackboard, Canvas, and Brightspace each presented different challenges.]]></description>
+      <category>API</category>
+      <category>OpenAPI</category>
+      <category>Postman</category>
+      <category>OAuth2</category>
+      <category>testing</category>
+      <category>LMS</category>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/testing_lms_apis.webp" />
+      <guid isPermaLink="true">https://www.karlhorning.dev/blog/testing-lms-apis</guid>
+    </item>
+    <item>
+      <title>Hello, World!</title>
+      <link>https://www.karlhorning.dev/blog/hello-world</link>
+      <pubDate>Sun, 22 Jun 2025 22:33:00 +0000</pubDate>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp" alt="A neon sign saying &apos;hello&apos;" /><br>An introduction to the blog and what it covers: accessibility, architecture, and lessons from real development work.]]></description>
+      <category>meta</category>
+      <category>blog</category>
+      <category>personal</category>
+      <category>technology</category>
+      <media:thumbnail url="https://www.karlhorning.dev/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp" />
+      <guid isPermaLink="true">https://www.karlhorning.dev/blog/hello-world</guid>
+    </item>
+  </channel>
+</rss>
