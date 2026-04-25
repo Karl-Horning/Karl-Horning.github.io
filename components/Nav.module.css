@@ -5,6 +5,23 @@
     z-index: 100;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
+    transition: background 0.4s ease;
+}
+
+/* Homepage hero visible — strip chrome, keep links */
+.navTransparent {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+/* Logo wrapper — fades in once hero scrolls past */
+.logoWrapper {
+    transition: opacity 0.4s ease;
+}
+
+.logoHidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Inner flex row: logo | links | hamburger */
@@ -61,7 +78,7 @@
         opacity 0.25s;
 }
 
-/* Animate the three bars into an × when the menu is open */
+/* Animate three bars into × when open */
 .hamburgerOpen span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
@@ -75,18 +92,39 @@
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile drawer — hidden until .mobileMenuOpen is added */
+/* Mobile drawer */
 .mobileMenu {
-    display: none;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    display: flex;
     flex-direction: column;
     padding: 1.5rem var(--pad) 2rem;
     gap: 1.5rem;
-    border-top: 1px solid var(--border);
+
     background: var(--bg);
+    border-bottom: 2px solid var(--pink);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.25s;
 }
 
 .mobileMenuOpen {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .mobileMenu a {
@@ -102,7 +140,7 @@
     color: var(--pink);
 }
 
-/* Show hamburger and hide desktop links on narrow viewports */
+/* Show hamburger, hide desktop links on narrow viewports */
 @media (max-width: 719px) {
     .navLinks {
         display: none;
@@ -114,7 +152,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hamburger span {
+    .hamburger span,
+    .mobileMenu,
+    .nav,
+    .logoWrapper {
         transition: none;
     }
 }

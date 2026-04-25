@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import styles from "@/components/Nav.module.css";
@@ -27,29 +29,123 @@ const NAV_LINKS: NavLink[] = [
  *
  * Renders a fixed header containing the site {@link Logo}, desktop
  * navigation links, and a hamburger button that toggles a full-width
- * mobile drawer. All interactive elements expose appropriate ARIA
- * attributes for keyboard and screen-reader users.
+ * mobile drawer. The logo and nav chrome are hidden while the homepage
+ * hero is visible and revealed once the hero scrolls out of view.
  *
  * @return The primary site navigation element.
  */
 export default function Nav() {
-    const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+    const isHomepage = pathname === "/";
 
-    // Toggles the mobile menu between open and closed states.
+    const [isOpen, setIsOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+    const [scrolledPastHero, setScrolledPastHero] = useState(false);
+
+    // Nav chrome is fully revealed when not on the homepage, or once the
+    // hero sentinel has scrolled out of view.
+    const navRevealed = !isHomepage || scrolledPastHero;
+
+    // Logo is visible when the nav is revealed or the mobile menu is open.
+    const logoVisible = navRevealed || isOpen;
+
+    // Portal requires document.body — only render after hydration
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    useEffect(() => { setMounted(true); }, []);
+
+    useEffect(() => {
+        if (!isHomepage) return;
+        const sentinel = document.getElementById("hero-rule");
+        if (!sentinel) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setScrolledPastHero(false);
+                } else {
+                    // Only reveal when the element has scrolled past the top of the
+                    // effective root, not when it starts below the viewport on load.
+                    setScrolledPastHero(
+                        entry.boundingClientRect.top < (entry.rootBounds?.top ?? 0)
+                    );
+                }
+            },
+            { threshold: 0, rootMargin: "-68px 0px 0px 0px" }
+        );
+        observer.observe(sentinel);
+        return () => observer.disconnect();
+    }, [isHomepage]);
+
+    useEffect(() => {
+        function onResize() {
+            if (window.innerWidth > 719) setIsOpen(false);
+        }
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "";
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isOpen]);
+
+    const hamburgerRef = useRef<HTMLButtonElement>(null);
+    const drawerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!isOpen) return;
+        function onPointerDown(e: PointerEvent) {
+            const target = e.target as Node;
+            if (
+                !hamburgerRef.current?.contains(target) &&
+                !drawerRef.current?.contains(target)
+            ) {
+                setIsOpen(false);
+            }
+        }
+        document.addEventListener("pointerdown", onPointerDown);
+        return () => document.removeEventListener("pointerdown", onPointerDown);
+    }, [isOpen]);
+
     function toggleMobileMenu() {
         setIsOpen((prev) => !prev);
     }
 
-    // Closes the mobile menu after a link is activated.
     function closeMobileMenu() {
         setIsOpen(false);
     }
 
+    const drawer = (
+        <div
+            ref={drawerRef}
+            id="mobile-nav"
+            className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}
+            role="navigation"
+            aria-label="Mobile navigation"
+        >
+            {NAV_LINKS.map(({ href, label }) => (
+                <Link key={href} href={href} onClick={closeMobileMenu}>
+                    {label}
+                </Link>
+            ))}
+        </div>
+    );
+
     return (
         <header>
-            <nav className={styles.nav} aria-label="Main navigation">
+            <nav
+                className={`${styles.nav} ${!navRevealed && !isOpen ? styles.navTransparent : ""}`}
+                aria-label="Main navigation"
+            >
                 <div className={styles.navBar}>
-                    <Logo />
+                    <div
+                        className={`${styles.logoWrapper} ${!logoVisible ? styles.logoHidden : ""}`}
+                        // eslint-disable-next-line jsx-a11y/aria-proptypes
+                        aria-hidden={!logoVisible || undefined}
+                    >
+                        <Logo tabIndex={!logoVisible ? -1 : undefined} />
+                    </div>
 
                     <ul className={styles.navLinks} role="list">
                         {NAV_LINKS.map(({ href, label }) => (
@@ -60,6 +156,7 @@ export default function Nav() {
                     </ul>
 
                     <button
+                        ref={hamburgerRef}
                         type="button"
                         className={`${styles.hamburger} ${isOpen ? styles.hamburgerOpen : ""}`}
                         aria-label={
@@ -67,6 +164,7 @@ export default function Nav() {
                                 ? "Close navigation menu"
                                 : "Open navigation menu"
                         }
+                        // eslint-disable-next-line jsx-a11y/aria-proptypes
                         aria-expanded={isOpen ? "true" : "false"}
                         aria-controls="mobile-nav"
                         onClick={toggleMobileMenu}
@@ -76,20 +174,9 @@ export default function Nav() {
                         <span />
                     </button>
                 </div>
-
-                <div
-                    id="mobile-nav"
-                    className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}
-                    role="navigation"
-                    aria-label="Mobile navigation"
-                >
-                    {NAV_LINKS.map(({ href, label }) => (
-                        <Link key={href} href={href} onClick={closeMobileMenu}>
-                            {label}
-                        </Link>
-                    ))}
-                </div>
             </nav>
+
+            {mounted && createPortal(drawer, document.body)}
         </header>
     );
 }

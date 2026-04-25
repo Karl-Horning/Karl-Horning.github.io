@@ -53,7 +53,7 @@ export default function About() {
                             across 180 countries.
                         </p>
                         <p className={styles.about__location}>
-                            Based in London &middot; Open to remote
+                            Based in London &middot; Open to remote/hybrid
                         </p>
                     </div>
                 </div>

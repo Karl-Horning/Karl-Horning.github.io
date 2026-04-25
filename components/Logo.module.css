@@ -15,7 +15,7 @@
 /* Two overlaid copies of the text used to create the RGB split */
 .glitch::before,
 .glitch::after {
-    content: attr(data-text);
+    content: attr(data-text) / "";
     position: absolute;
     inset: 0;
     pointer-events: none;
