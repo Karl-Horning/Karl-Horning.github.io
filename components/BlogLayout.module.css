@@ -54,6 +54,7 @@
 /* ── Article — element selectors so post authors write plain HTML ── */
 .article {
     max-width: 70ch;
+    min-width: 0;
 }
 
 .article p {

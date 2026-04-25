@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
 import BlogLayout from "@/components/BlogLayout";
+import CodeBlock from "@/components/CodeBlock";
 import { jwtScript } from "./examples";
 
 export const metadata: Metadata = {
@@ -46,9 +47,7 @@ export default function Page() {
                 post-response script saves it to an environment variable
                 automatically, so you never copy tokens manually:
             </p>
-            <pre>
-                <code className="language-javascript">{jwtScript}</code>
-            </pre>
+            <CodeBlock lang="javascript">{jwtScript}</CodeBlock>
             <p>
                 Setting this at the collection level means all requests inherit
                 the token without any manual steps. Combined with Postman

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
 import BlogLayout from "@/components/BlogLayout";
+import CodeBlock from "@/components/CodeBlock";
 import {
     htmlExample,
     nextOptions,
@@ -36,32 +37,20 @@ export default function Page() {
                 </p>
             </blockquote>
             <h2>Next.js</h2>
-            <pre>
-                <code className="language-bash">
-                    npx create-next-app@latest .
-                </code>
-            </pre>
+            <CodeBlock lang="bash">{"npx create-next-app@latest ."}</CodeBlock>
             <p>Here are the options I usually pick:</p>
-            <pre className="overflow-x-auto">
-                <code className="language-bash whitespace-pre-wrap">
-                    {nextOptions}
-                </code>
-            </pre>
+            <CodeBlock lang="bash">{nextOptions}</CodeBlock>
             <p>
                 Once that&apos;s done, install Prettier and the Tailwind plugin:
             </p>
-            <pre>
-                <code className="language-bash">
-                    npm install -D prettier prettier-plugin-tailwindcss
-                </code>
-            </pre>
+            <CodeBlock lang="bash">
+                {"npm install -D prettier prettier-plugin-tailwindcss"}
+            </CodeBlock>
             <p>
                 Then add the following config to the bottom of your{" "}
                 <code>package.json</code>:
             </p>
-            <pre>
-                <code className="language-json">{prettierConfig}</code>
-            </pre>
+            <CodeBlock lang="json">{prettierConfig}</CodeBlock>
             <p>
                 Prettier will now sort your Tailwind classes automatically on
                 format. (<code>Option + Shift + F</code> on macOS.)
@@ -72,32 +61,22 @@ export default function Page() {
                 Tailwind is set up.
             </p>
             <p>Install Tailwind CSS and its Vite plugin:</p>
-            <pre>
-                <code className="language-bash">
-                    npm install tailwindcss @tailwindcss/vite
-                </code>
-            </pre>
+            <CodeBlock lang="bash">
+                {"npm install tailwindcss @tailwindcss/vite"}
+            </CodeBlock>
             <p>
                 Import the plugin in your <code>vite.config.ts</code>:
             </p>
-            <pre>
-                <code className="language-ts">{viteConfig}</code>
-            </pre>
+            <CodeBlock lang="typescript">{viteConfig}</CodeBlock>
             <p>
                 Import Tailwind in your main stylesheet (for example,{" "}
                 <code>src/style.css</code>):
             </p>
-            <pre>
-                <code className="language-css">
-                    @import &quot;tailwindcss&quot;;
-                </code>
-            </pre>
+            <CodeBlock lang="css">{'@import "tailwindcss";'}</CodeBlock>
             <p>
                 Make sure your compiled CSS is loaded in your HTML or app entry:
             </p>
-            <pre>
-                <code className="language-html">{htmlExample}</code>
-            </pre>
+            <CodeBlock lang="html">{htmlExample}</CodeBlock>
             <p>
                 If you&apos;re using VS Code, install the Prettier extension and
                 enable format-on-save — it will handle class sorting
