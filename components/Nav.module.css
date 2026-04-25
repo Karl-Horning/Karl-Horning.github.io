@@ -5,6 +5,23 @@
     z-index: 100;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
+    transition: background 0.4s ease;
+}
+
+/* Homepage hero visible — strip chrome, keep links */
+.navTransparent {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+/* Logo wrapper — fades in once hero scrolls past */
+.logoWrapper {
+    transition: opacity 0.4s ease;
+}
+
+.logoHidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Inner flex row: logo | links | hamburger */
@@ -136,7 +153,9 @@
 
 @media (prefers-reduced-motion: reduce) {
     .hamburger span,
-    .mobileMenu {
+    .mobileMenu,
+    .nav,
+    .logoWrapper {
         transition: none;
     }
 }

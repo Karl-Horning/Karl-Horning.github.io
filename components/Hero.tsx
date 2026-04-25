@@ -23,7 +23,7 @@ export default function Hero() {
                         <span className={styles.line1}>Karl</span>
                         <span className={styles.line2}>Horning</span>
                     </h1>
-                    <div className={styles.hero__rule} aria-hidden="true"></div>
+                    <div id="hero-rule" className={styles.hero__rule} aria-hidden="true"></div>
                     <div className={styles.hero__bottom}>
                         <div className={styles.hero__left}>
                             <h2 className={styles.hero__tagline}>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import styles from "@/components/Nav.module.css";
@@ -28,20 +29,41 @@ const NAV_LINKS: NavLink[] = [
  *
  * Renders a fixed header containing the site {@link Logo}, desktop
  * navigation links, and a hamburger button that toggles a full-width
- * mobile drawer. All interactive elements expose appropriate ARIA
- * attributes for keyboard and screen-reader users.
+ * mobile drawer. The logo and nav chrome are hidden while the homepage
+ * hero is visible and revealed once the hero scrolls out of view.
  *
  * @return The primary site navigation element.
  */
 export default function Nav() {
+    const pathname = usePathname();
+    const isHomepage = pathname === "/";
+
     const [isOpen, setIsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
-    const hamburgerRef = useRef<HTMLButtonElement>(null);
-    const drawerRef = useRef<HTMLDivElement>(null);
+    const [scrolledPastHero, setScrolledPastHero] = useState(false);
+
+    // Nav chrome is fully revealed when not on the homepage, or once the
+    // hero sentinel has scrolled out of view.
+    const navRevealed = !isHomepage || scrolledPastHero;
+
+    // Logo is visible when the nav is revealed or the mobile menu is open.
+    const logoVisible = navRevealed || isOpen;
 
     // Portal requires document.body — only render after hydration
     // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect(() => { setMounted(true); }, []);
+
+    useEffect(() => {
+        if (!isHomepage) return;
+        const sentinel = document.getElementById("hero-rule");
+        if (!sentinel) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setScrolledPastHero(!entry.isIntersecting),
+            { threshold: 0 }
+        );
+        observer.observe(sentinel);
+        return () => observer.disconnect();
+    }, [isHomepage]);
 
     useEffect(() => {
         function onResize() {
@@ -57,6 +79,9 @@ export default function Nav() {
             document.body.style.overflow = "";
         };
     }, [isOpen]);
+
+    const hamburgerRef = useRef<HTMLButtonElement>(null);
+    const drawerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (!isOpen) return;
@@ -99,9 +124,17 @@ export default function Nav() {
 
     return (
         <header>
-            <nav className={styles.nav} aria-label="Main navigation">
+            <nav
+                className={`${styles.nav} ${!navRevealed && !isOpen ? styles.navTransparent : ""}`}
+                aria-label="Main navigation"
+            >
                 <div className={styles.navBar}>
-                    <Logo />
+                    <div
+                        className={`${styles.logoWrapper} ${!logoVisible ? styles.logoHidden : ""}`}
+                        aria-hidden={!logoVisible || undefined}
+                    >
+                        <Logo />
+                    </div>
 
                     <ul className={styles.navLinks} role="list">
                         {NAV_LINKS.map(({ href, label }) => (
@@ -120,7 +153,7 @@ export default function Nav() {
                                 ? "Close navigation menu"
                                 : "Open navigation menu"
                         }
-                        aria-expanded={isOpen}
+                        aria-expanded={isOpen ? "true" : "false"}
                         aria-controls="mobile-nav"
                         onClick={toggleMobileMenu}
                     >
