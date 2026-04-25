@@ -28,12 +28,10 @@ export default function CtaStrip() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Connect on LinkedIn <FiArrowUpRight aria-hidden="true" />
+                        Connect on LinkedIn{" "}
+                        <FiArrowUpRight aria-hidden="true" />
                     </a>
-                    <a
-                        href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/contact`}
-                        className="btn btn--ghost"
-                    >
+                    <a href="contact" className="btn btn--ghost">
                         Send a message
                     </a>
                 </div>
