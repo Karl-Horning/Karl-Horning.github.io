@@ -15,17 +15,21 @@ Personal portfolio and blog — a statically exported Next.js site with Playwrig
 
 ## Notable decisions
 
-**Single source of truth for routes** — `lib/routes.ts` drives the generated sitemap and Playwright smoke tests. Add a route here when a new page is created.
+**Routes** — `lib/routes.ts` drives the sitemap and Playwright smoke tests. Add a route here when a new page is created.
 
-**Single source of truth for projects** — `lib/projects.ts` defines the `ProjectMeta` interface and exports `PROJECTS` sorted by display order. Each project has a `meta.ts` alongside its page; the shared `ProjectLayout` component derives the sidebar, links, and prev/next navigation from that data automatically.
+**Projects** — `lib/projects.ts` exports `PROJECTS`. Each project has a `meta.ts` alongside its `page.tsx`; `ProjectLayout` handles the sidebar, links, and prev/next navigation automatically.
 
-**SEO** — Each page exports typed metadata with Open Graph and Twitter cards, canonical URLs, and a default OG image. The site is registered with Google Search Console.
+**Blog pipeline** — Posts live under `app/blog/<slug>/` with a `meta.ts` and `page.tsx`. `generate:posts` regenerates `lib/posts.ts` from those files; `build:posts` produces `public/data/posts.json`; `build:rss` produces `public/rss.xml`. All three run via `prebuild` before every build.
 
-**Accessibility testing** — Playwright with `@axe-core/playwright` for automated accessibility checks on every route across desktop and mobile viewports, alongside manual screen reader and keyboard testing.
+**Syntax highlighting** — [`shiki`](https://shiki.style) server-side with dual light/dark themes via `prefers-color-scheme`.
 
-**CSS architecture** — CSS Modules for component-scoped styles; `globals.css` holds design tokens and shared utilities only.
+**SEO** — Typed metadata, Open Graph, Twitter cards, canonical URLs, Google Search Console.
 
-**CI/CD** — GitHub Actions builds and deploys to GitHub Pages on every merge to main.
+**Accessibility** — Playwright + `@axe-core/playwright` across desktop and mobile viewports, plus manual screen reader and keyboard testing.
+
+**CSS** — CSS Modules for component styles; `globals.css` for design tokens and shared utilities.
+
+**CI/CD** — GitHub Actions deploys to GitHub Pages on merge to main.
 
 ## Local development
 
@@ -41,13 +45,17 @@ Open [http://localhost:3000](http://localhost:3000).
 | Script | Description |
 | --- | --- |
 | `dev` | Start the development server |
-| `build` | Production build (static export) |
+| `build` | Production build (static export); runs `prebuild` automatically |
 | `start` | Start the Next.js server (run `build` first) |
 | `lint` | Run ESLint |
 | `test` | Run Playwright tests |
 | `test:ui` | Run Playwright tests with the interactive UI |
 | `check-links` | Check for broken links on the live site |
 | `check-links:local` | Check for broken links on the local server |
+| `generate:posts` | Regenerate `lib/posts.ts` from each post's `meta.ts` |
+| `build:posts` | Generate `public/data/posts.json` from `lib/posts.ts` |
+| `build:rss` | Generate `public/rss.xml` from `public/data/posts.json` |
+| `prebuild` | Runs `generate:posts`, `build:posts`, and `build:rss` in sequence |
 
 ## License
 
