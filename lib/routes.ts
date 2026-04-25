@@ -7,6 +7,7 @@
 
 export const ROUTES = [
     "/",
+    "/blog",
     "/contact",
     "/projects/learnlight-platform",
     "/projects/karlhorning-dev",
