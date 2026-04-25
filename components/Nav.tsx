@@ -144,7 +144,7 @@ export default function Nav() {
                         // eslint-disable-next-line jsx-a11y/aria-proptypes
                         aria-hidden={!logoVisible || undefined}
                     >
-                        <Logo />
+                        <Logo tabIndex={!logoVisible ? -1 : undefined} />
                     </div>
 
                     <ul className={styles.navLinks} role="list">
