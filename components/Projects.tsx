@@ -1,6 +1,6 @@
 import styles from "@/components/Projects.module.css";
 import { PROJECTS } from "@/lib/projects";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 
 /**
@@ -67,7 +67,7 @@ export default function Projects() {
                                 className={styles.proj__cta}
                                 aria-label={`View ${project.title} project`}
                             >
-                                View <FiArrowUpRight aria-hidden="true" />
+                                View <FiArrowRight aria-hidden="true" />
                             </Link>
                         </li>
                     ))}
