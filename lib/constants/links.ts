@@ -10,6 +10,9 @@ export const CODEPEN_URL = "https://codepen.io/karlhorning";
 /** Karl Horning's Formspree forms URL. */
 export const FORMSPREE_URL = "https://formspree.io/f/mgvnyjyq";
 
+/** Karl Horning's RSS feed URL. */
+export const RSS_FEED_URL = "https://www.karlhorning.dev/rss.xml";
+
 /** Repo: Oxford Learner's Dictionaries API PoC */
 export const OLD_API_POC_URL =
     "https://github.com/Karl-Horning/oxford-learners-dictionaries-api";

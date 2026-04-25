@@ -1,7 +1,7 @@
 import styles from "@/components/Footer.module.css";
-import { CODEPEN_URL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants/links";
+import { CODEPEN_URL, GITHUB_URL, LINKEDIN_URL, RSS_FEED_URL } from "@/lib/constants/links";
 import Link from "next/link";
-import { FaCodepen, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaCodepen, FaGithub, FaLinkedin, FaRss } from "react-icons/fa";
 
 /**
  * Site-wide footer with brand logo, navigation links, and social icons.
@@ -75,6 +75,16 @@ export default function Footer() {
                                 aria-label="Karl Horning on CodePen"
                             >
                                 <FaCodepen aria-hidden="true" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href={RSS_FEED_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Subscribe to the RSS feed"
+                            >
+                                <FaRss aria-hidden="true" />
                             </a>
                         </li>
                     </ul>
