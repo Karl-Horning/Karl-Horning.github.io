@@ -3,7 +3,8 @@ import { POSTS, type PostMeta } from "@/lib/posts";
 import { LINKEDIN_URL } from "@/lib/constants/links";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import Image from "next/image";
 
 interface Props {
     meta: PostMeta;
@@ -13,8 +14,18 @@ interface Props {
 function formatDate(iso: string): string {
     const date = new Date(iso);
     const months = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
     ];
     return `${date.getUTCDate()} ${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
 }
@@ -40,9 +51,7 @@ export default function BlogLayout({ meta, children }: Props) {
     const prev = showNav
         ? published[(idx - 1 + published.length) % published.length]
         : null;
-    const next = showNav
-        ? published[(idx + 1) % published.length]
-        : null;
+    const next = showNav ? published[(idx + 1) % published.length] : null;
 
     return (
         <>
@@ -88,7 +97,7 @@ export default function BlogLayout({ meta, children }: Props) {
                                 <p className={styles.author__eyebrow}>
                                     Written by
                                 </p>
-                                <img
+                                <Image
                                     className={styles.author__photo}
                                     src="/karl-profile-photo.png"
                                     alt="Karl Horning"
@@ -122,10 +131,7 @@ export default function BlogLayout({ meta, children }: Props) {
 
             <div className={styles.footer}>
                 <div className="wrap">
-                    <ul
-                        className={styles.footer__tags}
-                        aria-label="Topics"
-                    >
+                    <ul className={styles.footer__tags} aria-label="Topics">
                         {meta.topics.map((topic) => (
                             <li key={topic} className={styles.tag}>
                                 {topic}
@@ -142,7 +148,8 @@ export default function BlogLayout({ meta, children }: Props) {
                                     aria-label={`Previous post: ${prev.title}`}
                                 >
                                     <span className={styles.nav__dir}>
-                                        ← Previous
+                                        <FiArrowLeft aria-hidden="true" />{" "}
+                                        Previous
                                     </span>
                                     <span className={styles.nav__name}>
                                         {prev.title}
@@ -154,7 +161,7 @@ export default function BlogLayout({ meta, children }: Props) {
                                     aria-label={`Next post: ${next.title}`}
                                 >
                                     <span className={styles.nav__dir}>
-                                        Next →
+                                        Next <FiArrowRight aria-hidden="true" />
                                     </span>
                                     <span className={styles.nav__name}>
                                         {next.title}
