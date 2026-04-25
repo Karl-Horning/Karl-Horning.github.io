@@ -25,7 +25,7 @@ export default function About() {
                 <div className={styles.about__inner}>
                     <Image
                         className={styles.about__photo}
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/karl-profile-photo.png`}
+                        src="/karl-profile-photo.png"
                         alt="Karl Horning, full-stack developer"
                         width={280}
                         height={280}
