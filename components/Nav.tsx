@@ -58,8 +58,18 @@ export default function Nav() {
         const sentinel = document.getElementById("hero-rule");
         if (!sentinel) return;
         const observer = new IntersectionObserver(
-            ([entry]) => setScrolledPastHero(!entry.isIntersecting),
-            { threshold: 0 }
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setScrolledPastHero(false);
+                } else {
+                    // Only reveal when the element has scrolled past the top of the
+                    // effective root, not when it starts below the viewport on load.
+                    setScrolledPastHero(
+                        entry.boundingClientRect.top < (entry.rootBounds?.top ?? 0)
+                    );
+                }
+            },
+            { threshold: 0, rootMargin: "-68px 0px 0px 0px" }
         );
         observer.observe(sentinel);
         return () => observer.disconnect();
@@ -131,6 +141,7 @@ export default function Nav() {
                 <div className={styles.navBar}>
                     <div
                         className={`${styles.logoWrapper} ${!logoVisible ? styles.logoHidden : ""}`}
+                        // eslint-disable-next-line jsx-a11y/aria-proptypes
                         aria-hidden={!logoVisible || undefined}
                     >
                         <Logo />
@@ -153,6 +164,7 @@ export default function Nav() {
                                 ? "Close navigation menu"
                                 : "Open navigation menu"
                         }
+                        // eslint-disable-next-line jsx-a11y/aria-proptypes
                         aria-expanded={isOpen ? "true" : "false"}
                         aria-controls="mobile-nav"
                         onClick={toggleMobileMenu}
