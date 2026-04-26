@@ -3,7 +3,6 @@ import { meta as helloWorld } from "@/app/blog/hello-world/meta";
 import { meta as settingUpPrettierWithTailwindCssInAReactProject } from "@/app/blog/setting-up-prettier-with-tailwind-css-in-a-react-project/meta";
 import { meta as testingLmsApis } from "@/app/blog/testing-lms-apis/meta";
 import { meta as testingPortfolioAccessibility } from "@/app/blog/testing-portfolio-accessibility/meta";
-import { meta as testingTesting } from "@/app/blog/testing-testing/meta";
 import { meta as webAccessibilityResourcesAndTools } from "@/app/blog/web-accessibility-resources-and-tools/meta";
 
 /** Metadata for a single blog post. */
@@ -28,6 +27,5 @@ export const POSTS: PostMeta[] = [
     settingUpPrettierWithTailwindCssInAReactProject,
     testingLmsApis,
     testingPortfolioAccessibility,
-    testingTesting,
     webAccessibilityResourcesAndTools,
 ].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
